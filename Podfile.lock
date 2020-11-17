@@ -1,0 +1,20 @@
+PODS:
+  - BulletinBoard (5.0.0)
+  - DateTimePicker (2.5.2)
+
+DEPENDENCIES:
+  - BulletinBoard
+  - DateTimePicker
+
+SPEC REPOS:
+  trunk:
+    - BulletinBoard
+    - DateTimePicker
+
+SPEC CHECKSUMS:
+  BulletinBoard: dba77053c2a7b64953f63073f7534165af2edd21
+  DateTimePicker: 5b6386eb8f9839192e77748f620b9d9f12f41c28
+
+PODFILE CHECKSUM: 0eb7d99ff787cfc62f95f67afaa8b53bfd5cea30
+
+COCOAPODS: 1.9.0
