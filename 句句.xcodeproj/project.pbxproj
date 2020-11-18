@@ -25,6 +25,7 @@
 		B5517C97255FAFC600E134CC /* __UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C96255FAFC600E134CC /* __UITests.swift */; };
 		B5517CA8255FB0D500E134CC /* jf-liao-monospaced.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */; };
 		B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517CB4255FB73400E134CC /* SettingViewController.swift */; };
+		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		B5517C98255FAFC600E134CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-liao-monospaced.ttf"; sourceTree = "<group>"; };
 		B5517CB4255FB73400E134CC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C486BA49175AD0DFD2DEE931 /* Pods-句句.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.debug.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.debug.xcconfig"; sourceTree = "<group>"; };
 		C665A53A1C09E8517182D19C /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 				B5517C76255FAFC500E134CC /* SceneDelegate.swift */,
 				B5517C78255FAFC500E134CC /* ViewController.swift */,
 				B5517C7A255FAFC500E134CC /* Main.storyboard */,
+				B5E8973525655F1F00D470E2 /* ShareViewController.swift */,
 				B5517CB4255FB73400E134CC /* SettingViewController.swift */,
 				B5517C7D255FAFC500E134CC /* Assets.xcassets */,
 				B5517C7F255FAFC600E134CC /* LaunchScreen.storyboard */,
@@ -438,6 +441,7 @@
 				B5517C75255FAFC500E134CC /* AppDelegate.swift in Sources */,
 				B5517C77255FAFC500E134CC /* SceneDelegate.swift in Sources */,
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,
+				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
