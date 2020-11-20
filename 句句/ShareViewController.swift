@@ -30,7 +30,10 @@ class ShareViewController: UIViewController {
         }
     }
     
-
+    @IBAction func cancelTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -40,5 +43,6 @@ class ShareViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBOutlet weak var saveToAlbum: UIImageView!
+    
 }

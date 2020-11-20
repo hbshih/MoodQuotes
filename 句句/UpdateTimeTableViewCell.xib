@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -41,7 +40,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3ov-lx-gNW" firstAttribute="top" secondItem="uF7-4Y-RX2" secondAttribute="top" id="ayo-s2-dwx"/>
                             <constraint firstAttribute="trailing" secondItem="ZC1-x5-xsg" secondAttribute="trailing" constant="16" id="fyG-hx-SIw"/>
@@ -66,8 +64,5 @@
     </objects>
     <resources>
         <image name="icon_time" width="48" height="48"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

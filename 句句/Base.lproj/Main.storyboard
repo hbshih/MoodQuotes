@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -70,11 +69,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvF-DK-zMc">
                                                 <rect key="frame" x="0.0" y="597.5" width="414" height="298.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Au-7f-1Ra">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="1Au-7f-1Ra">
                                                         <rect key="frame" x="0.0" y="99" width="414" height="100"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57U-8w-bea">
-                                                                <rect key="frame" x="0.0" y="0.0" width="203" height="100"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57U-8w-bea">
+                                                                <rect key="frame" x="0.0" y="31.5" width="184.5" height="37"/>
                                                                 <state key="normal" image="icon_share"/>
                                                                 <connections>
                                                                     <segue destination="s5y-0N-DVP" kind="popoverPresentation" identifier="shareSegue" popoverAnchorView="57U-8w-bea" id="l8g-6D-2hU">
@@ -82,11 +81,11 @@
                                                                     </segue>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUc-uU-Tfw">
-                                                                <rect key="frame" x="211" y="0.0" width="203" height="100"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUc-uU-Tfw">
+                                                                <rect key="frame" x="229.5" y="30" width="184.5" height="40"/>
                                                                 <state key="normal" image="icon_setting"/>
                                                                 <connections>
-                                                                    <segue destination="3gg-VR-CeA" kind="show" id="Et3-eA-JVu"/>
+                                                                    <segue destination="3gg-VR-CeA" kind="presentation" modalPresentationStyle="fullScreen" id="Et3-eA-JVu"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -163,7 +162,7 @@
                                         <color key="backgroundColor" red="0.94895178079999998" green="0.92952316999999995" blue="0.92156714200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.9137254901960784" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="5TO-Ig-amh" secondAttribute="bottom" id="3Hy-xw-RES"/>
                                     <constraint firstAttribute="trailing" secondItem="5TO-Ig-amh" secondAttribute="trailing" id="8jt-X9-p9x"/>
@@ -187,6 +186,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundHideenView" destination="kgV-82-bvE" id="6DU-d0-f0L"/>
+                        <outlet property="screenView" destination="mFK-is-lcH" id="9XO-5a-BZH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -198,11 +198,11 @@
             <objects>
                 <viewController id="3gg-VR-CeA" customClass="SettingViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EU2-gz-O15">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uJy-iA-6sN">
-                                <rect key="frame" x="0.0" y="56" width="414" height="313"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="335"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BVm-5Q-WTU">
@@ -237,30 +237,110 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebx-I7-qMM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="設定" id="X5B-gG-ROJ">
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward.circle" catalog="system" style="plain" id="btw-Ge-Y41">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="backTapped:" destination="3gg-VR-CeA" id="73u-nj-WUn"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOG-qQ-5of">
+                                <rect key="frame" x="20" y="699" width="382" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o0G-bn-TwV">
+                                        <rect key="frame" x="0.0" y="5" width="382" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇顏色" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajK-Rf-aqU">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sk8-dg-2vZ">
+                                                <rect key="frame" x="0.0" y="30.5" width="382" height="39.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHz-aN-9yY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="39.5"/>
+                                                        <color key="backgroundColor" red="0.93725490196078431" green="0.9137254901960784" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="colorPicked:" destination="3gg-VR-CeA" eventType="touchUpInside" id="Zsn-Xz-Sqr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ss-oB-dpI">
+                                                        <rect key="frame" x="80.5" y="0.0" width="60.5" height="39.5"/>
+                                                        <color key="backgroundColor" red="0.60865163799999999" green="0.89006990190000002" blue="0.89020353559999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorPicked:" destination="3gg-VR-CeA" eventType="touchUpInside" id="ZiU-cS-kVF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1H1-2i-a64">
+                                                        <rect key="frame" x="161" y="0.0" width="60" height="39.5"/>
+                                                        <color key="backgroundColor" red="0.8235582709" green="0.91067165139999995" blue="0.83920770879999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorPicked:" destination="3gg-VR-CeA" eventType="touchUpInside" id="VZ3-p5-xZV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pB8-kh-go4">
+                                                        <rect key="frame" x="241" y="0.0" width="60.5" height="39.5"/>
+                                                        <color key="backgroundColor" red="0.88994616270000004" green="0.86791628600000004" blue="0.76861089469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorPicked:" destination="3gg-VR-CeA" eventType="touchUpInside" id="c2R-bf-esp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" restorationIdentifier="5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzZ-T1-XYo">
+                                                        <rect key="frame" x="321.5" y="0.0" width="60.5" height="39.5"/>
+                                                        <color key="backgroundColor" red="0.89381700750000004" green="0.74518340829999996" blue="0.74509304759999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="colorPicked:" destination="3gg-VR-CeA" eventType="touchUpInside" id="4M3-Bv-co7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ajK-Rf-aqU" firstAttribute="centerX" secondItem="o0G-bn-TwV" secondAttribute="centerX" id="C8d-qI-moi"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="o0G-bn-TwV" firstAttribute="top" secondItem="aOG-qQ-5of" secondAttribute="top" constant="5" id="GZI-Gd-Fc9"/>
+                                    <constraint firstAttribute="height" constant="80" id="JQJ-1l-7IM"/>
+                                    <constraint firstAttribute="trailing" secondItem="o0G-bn-TwV" secondAttribute="trailing" id="MS7-Q1-Yc0"/>
+                                    <constraint firstAttribute="bottom" secondItem="o0G-bn-TwV" secondAttribute="bottom" constant="5" id="WhL-rI-Fr0"/>
+                                    <constraint firstItem="o0G-bn-TwV" firstAttribute="leading" secondItem="aOG-qQ-5of" secondAttribute="leading" id="n4R-JX-WVx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Gy-5Y-Dix"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ebx-I7-qMM" firstAttribute="trailing" secondItem="5Gy-5Y-Dix" secondAttribute="trailing" id="Bd7-94-BYi"/>
-                            <constraint firstItem="uJy-iA-6sN" firstAttribute="width" secondItem="EU2-gz-O15" secondAttribute="height" multiplier="207:421" id="QAM-Yw-9wH"/>
+                            <constraint firstItem="aOG-qQ-5of" firstAttribute="leading" secondItem="5Gy-5Y-Dix" secondAttribute="leading" constant="16" id="CcL-QW-vQH"/>
                             <constraint firstItem="uJy-iA-6sN" firstAttribute="leading" secondItem="5Gy-5Y-Dix" secondAttribute="leading" id="SnU-yk-YrZ"/>
                             <constraint firstItem="uJy-iA-6sN" firstAttribute="trailing" secondItem="5Gy-5Y-Dix" secondAttribute="trailing" id="WLe-I5-RVN"/>
                             <constraint firstItem="Ebx-I7-qMM" firstAttribute="leading" secondItem="5Gy-5Y-Dix" secondAttribute="leading" id="YWX-GR-1uo"/>
+                            <constraint firstItem="5Gy-5Y-Dix" firstAttribute="trailing" secondItem="aOG-qQ-5of" secondAttribute="trailing" constant="16" id="ZQq-kI-uAk"/>
                             <constraint firstItem="5Gy-5Y-Dix" firstAttribute="bottom" secondItem="uJy-iA-6sN" secondAttribute="bottom" constant="439" id="j4h-He-sTn"/>
+                            <constraint firstItem="aOG-qQ-5of" firstAttribute="centerX" secondItem="5Gy-5Y-Dix" secondAttribute="centerX" id="l8P-pc-Zpd"/>
+                            <constraint firstItem="5Gy-5Y-Dix" firstAttribute="bottom" secondItem="aOG-qQ-5of" secondAttribute="bottom" constant="29" id="nkj-YR-KtB"/>
                             <constraint firstItem="uJy-iA-6sN" firstAttribute="top" secondItem="Ebx-I7-qMM" secondAttribute="bottom" id="zNY-RE-pf0"/>
                             <constraint firstItem="Ebx-I7-qMM" firstAttribute="top" secondItem="5Gy-5Y-Dix" secondAttribute="top" id="zfi-zg-XIW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorButton" destination="rzZ-T1-XYo" id="6SM-Am-4wp"/>
+                        <outlet property="pickColorView" destination="aOG-qQ-5of" id="6nL-dS-glq"/>
                         <outlet property="tableview" destination="uJy-iA-6sN" id="DFc-yM-YB2"/>
                     </connections>
                 </viewController>
@@ -387,6 +467,9 @@
                                                                 <state key="normal" title="不想分享了">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="cancelTapped:" destination="s5y-0N-DVP" eventType="touchUpInside" id="4cf-dz-hLC"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -435,6 +518,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="saveToAlbum" destination="Fbw-9a-uKa" id="8HB-uJ-1Tp"/>
                         <outlet property="screenshotPreview" destination="AhN-FD-EQ4" id="ztm-8r-x35"/>
                     </connections>
                 </viewController>

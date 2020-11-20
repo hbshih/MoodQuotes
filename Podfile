@@ -8,6 +8,7 @@ target '句句' do
   # Pods for 句句
   pod 'BulletinBoard'
   pod 'DateTimePicker'
+  pod 'MASegmentedControl'
 
   target '句句Tests' do
     inherit! :search_paths

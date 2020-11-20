@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-句句-句句UITests/Pods-句句-句句UITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BulletinBoard/BLTNBoard.framework
 ${BUILT_PRODUCTS_DIR}/DateTimePicker/DateTimePicker.framework
+${BUILT_PRODUCTS_DIR}/MASegmentedControl/MASegmentedControl.framework

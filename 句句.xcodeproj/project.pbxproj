@@ -25,6 +25,19 @@
 		B5517C97255FAFC600E134CC /* __UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C96255FAFC600E134CC /* __UITests.swift */; };
 		B5517CA8255FB0D500E134CC /* jf-liao-monospaced.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */; };
 		B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517CB4255FB73400E134CC /* SettingViewController.swift */; };
+		B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205425669862003A5521 /* WidgetKit.framework */; };
+		B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205625669862003A5521 /* SwiftUI.framework */; };
+		B59E20B8256698FB003A5521 /* widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E20B7256698FB003A5521 /* widget.swift */; };
+		B59E20BB256698FC003A5521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59E20BA256698FC003A5521 /* Assets.xcassets */; };
+		B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B59E20B9256698FB003A5521 /* widget.intentdefinition */; };
+		B59E20C1256698FC003A5521 /* widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B59E20B3256698FB003A5521 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E20D7256741C3003A5521 /* GeegeeWidgetView.swift */; };
+		B59E212E25674D0A003A5521 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E212D25674D0A003A5521 /* Quote.swift */; };
+		B59E213325674D13003A5521 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E212D25674D0A003A5521 /* Quote.swift */; };
+		B59E213825674E44003A5521 /* jf-liao-monospaced.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */; };
+		B59E213D256756CA003A5521 /* GeegeeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E20D7256741C3003A5521 /* GeegeeWidgetView.swift */; };
+		B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */; };
+		B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +56,28 @@
 			remoteGlobalIDString = B5517C70255FAFC500E134CC;
 			remoteInfo = "句句";
 		};
+		B59E20BF256698FC003A5521 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5517C69255FAFC400E134CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B59E20B2256698FB003A5521;
+			remoteInfo = widgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B59E206425669864003A5521 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B59E20C1256698FC003A5521 /* widgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		07AA8F8794F54DB7BACC8111 /* Pods-句句-句句UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句-句句UITests.release.xcconfig"; path = "Target Support Files/Pods-句句-句句UITests/Pods-句句-句句UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +108,18 @@
 		B5517C98255FAFC600E134CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-liao-monospaced.ttf"; sourceTree = "<group>"; };
 		B5517CB4255FB73400E134CC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B59E205425669862003A5521 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B59E205625669862003A5521 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B59E20B3256698FB003A5521 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59E20B7256698FB003A5521 /* widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widget.swift; sourceTree = "<group>"; };
+		B59E20B9256698FB003A5521 /* widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = widget.intentdefinition; sourceTree = "<group>"; };
+		B59E20BA256698FC003A5521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B59E20BC256698FC003A5521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B59E20D7256741C3003A5521 /* GeegeeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeegeeWidgetView.swift; sourceTree = "<group>"; };
+		B59E212D25674D0A003A5521 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		B59E216625675E65003A5521 /* 句句.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "句句.entitlements"; sourceTree = "<group>"; };
+		B59E216B25675F8F003A5521 /* widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetExtension.entitlements; sourceTree = "<group>"; };
+		B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtention.swift; sourceTree = "<group>"; };
 		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C486BA49175AD0DFD2DEE931 /* Pods-句句.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.debug.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +150,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B59E20B0256698FB003A5521 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */,
+				B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -113,6 +168,8 @@
 				81DA3941460AE65D43814606 /* Pods___.framework */,
 				C665A53A1C09E8517182D19C /* Pods______UITests.framework */,
 				BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */,
+				B59E205425669862003A5521 /* WidgetKit.framework */,
+				B59E205625669862003A5521 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,9 +190,11 @@
 		B5517C68255FAFC400E134CC = {
 			isa = PBXGroup;
 			children = (
+				B59E216B25675F8F003A5521 /* widgetExtension.entitlements */,
 				B5517C73255FAFC500E134CC /* 句句 */,
 				B5517C8A255FAFC600E134CC /* 句句Tests */,
 				B5517C95255FAFC600E134CC /* 句句UITests */,
+				B59E20B6256698FB003A5521 /* widget */,
 				B5517C72255FAFC500E134CC /* Products */,
 				47562C4876548C93C05848F5 /* Pods */,
 				37481A9DF41FAD063C5AF12C /* Frameworks */,
@@ -148,6 +207,7 @@
 				B5517C71255FAFC500E134CC /* 句句.app */,
 				B5517C87255FAFC600E134CC /* 句句Tests.xctest */,
 				B5517C92255FAFC600E134CC /* 句句UITests.xctest */,
+				B59E20B3256698FB003A5521 /* widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,9 +215,11 @@
 		B5517C73255FAFC500E134CC /* 句句 */ = {
 			isa = PBXGroup;
 			children = (
+				B59E216625675E65003A5521 /* 句句.entitlements */,
 				B5517C74255FAFC500E134CC /* AppDelegate.swift */,
 				B5517C76255FAFC500E134CC /* SceneDelegate.swift */,
 				B5517C78255FAFC500E134CC /* ViewController.swift */,
+				B59E212D25674D0A003A5521 /* Quote.swift */,
 				B5517C7A255FAFC500E134CC /* Main.storyboard */,
 				B5E8973525655F1F00D470E2 /* ShareViewController.swift */,
 				B5517CB4255FB73400E134CC /* SettingViewController.swift */,
@@ -171,6 +233,7 @@
 				B506EBC125622FF800372198 /* UpdateTimeTableViewCell.xib */,
 				B506EBC72562306400372198 /* UpdateBackgroundColorTableViewCell.swift */,
 				B506EBC82562306400372198 /* UpdateBackgroundColorTableViewCell.xib */,
+				B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -193,6 +256,18 @@
 			path = "句句UITests";
 			sourceTree = "<group>";
 		};
+		B59E20B6256698FB003A5521 /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				B59E20B7256698FB003A5521 /* widget.swift */,
+				B59E20B9256698FB003A5521 /* widget.intentdefinition */,
+				B59E20BA256698FC003A5521 /* Assets.xcassets */,
+				B59E20BC256698FC003A5521 /* Info.plist */,
+				B59E20D7256741C3003A5521 /* GeegeeWidgetView.swift */,
+			);
+			path = widget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,10 +280,12 @@
 				B5517C6E255FAFC500E134CC /* Frameworks */,
 				B5517C6F255FAFC500E134CC /* Resources */,
 				6B0288EBB1E5AC95FBAF5F56 /* [CP] Embed Pods Frameworks */,
+				B59E206425669864003A5521 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B59E20C0256698FC003A5521 /* PBXTargetDependency */,
 			);
 			name = "句句";
 			productName = "句句";
@@ -254,13 +331,30 @@
 			productReference = B5517C92255FAFC600E134CC /* 句句UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B59E20B2256698FB003A5521 /* widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B59E20C2256698FC003A5521 /* Build configuration list for PBXNativeTarget "widgetExtension" */;
+			buildPhases = (
+				B59E20AF256698FB003A5521 /* Sources */,
+				B59E20B0256698FB003A5521 /* Frameworks */,
+				B59E20B1256698FB003A5521 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = widgetExtension;
+			productName = widgetExtension;
+			productReference = B59E20B3256698FB003A5521 /* widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B5517C69255FAFC400E134CC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1210;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					B5517C70255FAFC500E134CC = {
@@ -273,6 +367,9 @@
 					B5517C91255FAFC600E134CC = {
 						CreatedOnToolsVersion = 12.1;
 						TestTargetID = B5517C70255FAFC500E134CC;
+					};
+					B59E20B2256698FB003A5521 = {
+						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
@@ -292,6 +389,7 @@
 				B5517C70255FAFC500E134CC /* 句句 */,
 				B5517C86255FAFC600E134CC /* 句句Tests */,
 				B5517C91255FAFC600E134CC /* 句句UITests */,
+				B59E20B2256698FB003A5521 /* widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -322,6 +420,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59E20B1256698FB003A5521 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59E213825674E44003A5521 /* jf-liao-monospaced.ttf in Resources */,
+				B59E20BB256698FC003A5521 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,11 +542,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59E213D256756CA003A5521 /* GeegeeWidgetView.swift in Sources */,
 				B5517C79255FAFC500E134CC /* ViewController.swift in Sources */,
 				B506EBC225622FF800372198 /* UpdateTimeTableViewCell.swift in Sources */,
 				B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */,
 				B5517C75255FAFC500E134CC /* AppDelegate.swift in Sources */,
+				B59E212E25674D0A003A5521 /* Quote.swift in Sources */,
 				B5517C77255FAFC500E134CC /* SceneDelegate.swift in Sources */,
+				B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
@@ -462,6 +572,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B59E20AF256698FB003A5521 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59E213325674D13003A5521 /* Quote.swift in Sources */,
+				B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */,
+				B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */,
+				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
+				B59E20B8256698FB003A5521 /* widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -474,6 +596,11 @@
 			isa = PBXTargetDependency;
 			target = B5517C70255FAFC500E134CC /* 句句 */;
 			targetProxy = B5517C93255FAFC600E134CC /* PBXContainerItemProxy */;
+		};
+		B59E20C0256698FC003A5521 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B59E20B2256698FB003A5521 /* widgetExtension */;
+			targetProxy = B59E20BF256698FC003A5521 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -548,7 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -603,7 +730,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -617,8 +744,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C486BA49175AD0DFD2DEE931 /* Pods-句句.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
@@ -626,7 +755,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "BSStudio.Geegee.--";
+				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.Geegee.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -637,8 +766,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81C9FC667386380AF8FA886C /* Pods-句句.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
@@ -646,7 +777,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "BSStudio.Geegee.--";
+				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.Geegee.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -741,6 +872,54 @@
 			};
 			name = Release;
 		};
+		B59E20C3256698FC003A5521 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64KKU33NVH;
+				INFOPLIST_FILE = widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.Geegee.ios.dev.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+			};
+			name = Debug;
+		};
+		B59E20C4256698FC003A5521 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64KKU33NVH;
+				INFOPLIST_FILE = widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.Geegee.ios.dev.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -776,6 +955,15 @@
 			buildConfigurations = (
 				B5517CA2255FAFC600E134CC /* Debug */,
 				B5517CA3255FAFC600E134CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B59E20C2256698FC003A5521 /* Build configuration list for PBXNativeTarget "widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59E20C3256698FC003A5521 /* Debug */,
+				B59E20C4256698FC003A5521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
