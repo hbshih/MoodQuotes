@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E27B22F132E9FBF095D1E4D /* Pods______UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C665A53A1C09E8517182D19C /* Pods______UITests.framework */; };
+		4A6C1653BC3CB09C66A10BF9 /* Pods_widgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3489404ED4A9259CF592B9 /* Pods_widgetExtension.framework */; };
 		93F1FAB780DCA86F976B2408 /* Pods___Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */; };
 		B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBB125622E0700372198 /* NotificationTableViewCell.swift */; };
 		B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B506EBB225622E0700372198 /* NotificationTableViewCell.xib */; };
@@ -25,6 +26,8 @@
 		B5517C97255FAFC600E134CC /* __UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C96255FAFC600E134CC /* __UITests.swift */; };
 		B5517CA8255FB0D500E134CC /* jf-liao-monospaced.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */; };
 		B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517CB4255FB73400E134CC /* SettingViewController.swift */; };
+		B5807EFD25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
+		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205425669862003A5521 /* WidgetKit.framework */; };
 		B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205625669862003A5521 /* SwiftUI.framework */; };
 		B59E20B8256698FB003A5521 /* widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E20B7256698FB003A5521 /* widget.swift */; };
@@ -38,6 +41,8 @@
 		B59E213D256756CA003A5521 /* GeegeeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E20D7256741C3003A5521 /* GeegeeWidgetView.swift */; };
 		B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */; };
 		B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */; };
+		B59E21C225676F85003A5521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59E21C125676F85003A5521 /* GoogleService-Info.plist */; };
+		B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59E21C125676F85003A5521 /* GoogleService-Info.plist */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +88,8 @@
 		07AA8F8794F54DB7BACC8111 /* Pods-句句-句句UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句-句句UITests.release.xcconfig"; path = "Target Support Files/Pods-句句-句句UITests/Pods-句句-句句UITests.release.xcconfig"; sourceTree = "<group>"; };
 		185BECDDE97B275466C2CE02 /* Pods-句句-句句UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句-句句UITests.debug.xcconfig"; path = "Target Support Files/Pods-句句-句句UITests/Pods-句句-句句UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		21EDCFB325F09B5D3F47CDE2 /* Pods-句句Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句Tests.debug.xcconfig"; path = "Target Support Files/Pods-句句Tests/Pods-句句Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		460A5C910A8BB6DE12310263 /* Pods-widgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-widgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-widgetExtension/Pods-widgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		6E3489404ED4A9259CF592B9 /* Pods_widgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_widgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C9FC667386380AF8FA886C /* Pods-句句.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.release.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.release.xcconfig"; sourceTree = "<group>"; };
 		81DA3941460AE65D43814606 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9732C71C850FB5EFC2AC7DB /* Pods-句句Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句Tests.release.xcconfig"; path = "Target Support Files/Pods-句句Tests/Pods-句句Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +115,7 @@
 		B5517C98255FAFC600E134CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-liao-monospaced.ttf"; sourceTree = "<group>"; };
 		B5517CB4255FB73400E134CC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
 		B59E205425669862003A5521 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B59E205625669862003A5521 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B59E20B3256698FB003A5521 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,10 +128,12 @@
 		B59E216625675E65003A5521 /* 句句.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "句句.entitlements"; sourceTree = "<group>"; };
 		B59E216B25675F8F003A5521 /* widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetExtension.entitlements; sourceTree = "<group>"; };
 		B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtention.swift; sourceTree = "<group>"; };
+		B59E21C125676F85003A5521 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C486BA49175AD0DFD2DEE931 /* Pods-句句.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.debug.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.debug.xcconfig"; sourceTree = "<group>"; };
 		C665A53A1C09E8517182D19C /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7FCB58DD601ED2D0C642AC4 /* Pods-widgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-widgetExtension.release.xcconfig"; path = "Target Support Files/Pods-widgetExtension/Pods-widgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +166,7 @@
 			files = (
 				B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */,
 				B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */,
+				4A6C1653BC3CB09C66A10BF9 /* Pods_widgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +181,7 @@
 				BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */,
 				B59E205425669862003A5521 /* WidgetKit.framework */,
 				B59E205625669862003A5521 /* SwiftUI.framework */,
+				6E3489404ED4A9259CF592B9 /* Pods_widgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,6 +195,8 @@
 				07AA8F8794F54DB7BACC8111 /* Pods-句句-句句UITests.release.xcconfig */,
 				21EDCFB325F09B5D3F47CDE2 /* Pods-句句Tests.debug.xcconfig */,
 				A9732C71C850FB5EFC2AC7DB /* Pods-句句Tests.release.xcconfig */,
+				460A5C910A8BB6DE12310263 /* Pods-widgetExtension.debug.xcconfig */,
+				C7FCB58DD601ED2D0C642AC4 /* Pods-widgetExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -215,6 +229,7 @@
 		B5517C73255FAFC500E134CC /* 句句 */ = {
 			isa = PBXGroup;
 			children = (
+				B59E21C125676F85003A5521 /* GoogleService-Info.plist */,
 				B59E216625675E65003A5521 /* 句句.entitlements */,
 				B5517C74255FAFC500E134CC /* AppDelegate.swift */,
 				B5517C76255FAFC500E134CC /* SceneDelegate.swift */,
@@ -264,6 +279,7 @@
 				B59E20BA256698FC003A5521 /* Assets.xcassets */,
 				B59E20BC256698FC003A5521 /* Info.plist */,
 				B59E20D7256741C3003A5521 /* GeegeeWidgetView.swift */,
+				B5807EFC25678043006052E2 /* firebaseService.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -335,6 +351,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B59E20C2256698FC003A5521 /* Build configuration list for PBXNativeTarget "widgetExtension" */;
 			buildPhases = (
+				3FC698737633410430C5DCFE /* [CP] Check Pods Manifest.lock */,
 				B59E20AF256698FB003A5521 /* Sources */,
 				B59E20B0256698FB003A5521 /* Frameworks */,
 				B59E20B1256698FB003A5521 /* Resources */,
@@ -401,6 +418,7 @@
 			files = (
 				B506EBCA2562306400372198 /* UpdateBackgroundColorTableViewCell.xib in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
+				B59E21C225676F85003A5521 /* GoogleService-Info.plist in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
 				B5517C7E255FAFC500E134CC /* Assets.xcassets in Resources */,
@@ -428,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B59E213825674E44003A5521 /* jf-liao-monospaced.ttf in Resources */,
+				B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */,
 				B59E20BB256698FC003A5521 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +470,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-句句Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FC698737633410430C5DCFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-widgetExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -552,6 +593,7 @@
 				B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
+				B5807EFD25678043006052E2 /* firebaseService.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +622,7 @@
 				B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */,
 				B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
+				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
 				B59E20B8256698FB003A5521 /* widget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,7 +798,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.Geegee.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -777,7 +820,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.Geegee.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -874,6 +917,7 @@
 		};
 		B59E20C3256698FC003A5521 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 460A5C910A8BB6DE12310263 /* Pods-widgetExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -887,7 +931,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.Geegee.ios.dev.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.dev.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -898,6 +942,7 @@
 		};
 		B59E20C4256698FC003A5521 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7FCB58DD601ED2D0C642AC4 /* Pods-widgetExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -911,7 +956,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.Geegee.ios.dev.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.dev.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

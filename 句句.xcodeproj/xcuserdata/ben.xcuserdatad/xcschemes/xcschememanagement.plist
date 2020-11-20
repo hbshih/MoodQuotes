@@ -9,10 +9,15 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>widgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>21</integer>
+		</dict>
 		<key>句句.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>20</integer>
 		</dict>
 	</dict>
 </dict>

@@ -40,7 +40,7 @@ struct GeegeeWidgetView: View {
         }
         else
         {
-            return UIColor.black
+            return UIColor.gray
         }
     }
 
@@ -49,13 +49,13 @@ struct GeegeeWidgetView: View {
       Color(backgroundColor)
       VStack {
         Text(quote.quote)
-            .font(.custom("jf-liao-monospaced", size: 28)).foregroundColor(.green)
+            .font(.custom("jf-liao-monospaced", size: 28)).foregroundColor(.black).multilineTextAlignment(.center)
         Text(quote.author)
-          .font(.headline)
+            .font(.custom("jf-liao-monospaced", size: 20))
           .multilineTextAlignment(.center)
           .padding(.top, 5)
           .padding([.leading, .trailing])
-          .foregroundColor(.white)
+            .foregroundColor(.black)
       }
     }
   }

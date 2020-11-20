@@ -9,6 +9,8 @@ target '句句' do
   pod 'BulletinBoard'
   pod 'DateTimePicker'
   pod 'MASegmentedControl'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
 
   target '句句Tests' do
     inherit! :search_paths
@@ -19,4 +21,13 @@ target '句句' do
     # Pods for testing
   end
 
+end
+
+target 'widgetExtension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
+  
 end

@@ -6,15 +6,50 @@
 //
 
 import UIKit
+import FirebaseDatabase
+
+var global_quote: String = ""
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var frontQuote: UILabel!
+    @IBOutlet weak var hiddenQuote: UILabel!
     @IBOutlet weak var screenView: UIView!
     @IBOutlet weak var backgroundHideenView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        ref = Database.database().reference()
+        
+        DispatchQueue.main.async { [self] in
+            //  let userID = Auth.auth().currentUser?.uid
+            self.ref.child("Quote of the Day").observe(.value) { (snapshot) in
+                  if let value = snapshot.value as? NSDictionary
+                  {
+                
+                      if let quote = value["Quote"] as? String
+                      {
+                          self.quote = quote
+                          if let author = value["Author"] as? String
+                          {
+                              self.author = author
+                            frontQuote.text = self.quote + "\n" + "— " + self.author
+                            hiddenQuote.text = self.quote + "\n" + "— " + self.author
+                            global_quote = frontQuote.text!
+                          }
+                      }
+                  }
+              }
+
+        }
+
     }
+    
+    var ref: DatabaseReference!
+
+    var quote: String = "今日App心情都太差了，沒有任何更新"
+    var author: String = "— 斌"
     
     override func viewDidAppear(_ animated: Bool) {
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor

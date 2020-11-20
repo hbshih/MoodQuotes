@@ -22,6 +22,10 @@
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>image</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>jf-liao-monospaced.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -63,10 +67,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>jf-liao-monospaced.ttf</string>
 	</array>
 </dict>
 </plist>
