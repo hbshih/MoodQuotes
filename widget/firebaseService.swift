@@ -33,4 +33,41 @@ class firebaseService {
             }
         }
     }
+    
+    let url = URL(string: "https://geegee-a5bfd.firebaseio.com/Quote%20of%20the%20Day.json")!
+    
+    func getQuoteApiResponse(completion: @escaping (Result<[Quote], Error>) -> Void)
+    {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard error == nil else
+            {
+                completion(.failure(error!))
+                return
+            }
+            print(data)
+            completion(.success(self.getQuoteResponse(fromData: data!)))
+        }.resume()
+    }
+    
+    private func getQuoteResponse(fromData data: Data) -> [Quote] {
+        
+        print(data)
+        
+        let Data = try? JSONDecoder().decode(QuoteResponse.self, from: data)
+        print(Data)
+        
+        
+        
+        if let quoteD = Data{
+            return [Quote(quote: quoteD.Quote, author: quoteD.Author)]
+        }
+        
+        return [Quote(quote: "Erro", author: "Error")]
+    }
+    
+}
+
+struct QuoteResponse: Codable {
+    let Quote: String
+    let Author: String
 }

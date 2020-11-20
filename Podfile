@@ -9,7 +9,7 @@ target '句句' do
   pod 'BulletinBoard'
   pod 'DateTimePicker'
   pod 'MASegmentedControl'
-  pod 'Firebase/Analytics'
+  pod 'Firebase'
   pod 'Firebase/Database'
 
   target '句句Tests' do

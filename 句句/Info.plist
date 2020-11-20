@@ -4,6 +4,12 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>instagram</string>
+        <string>instagram-stories</string>
+        <string>instagram-stories://share</string>
+    </array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

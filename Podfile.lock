@@ -1,6 +1,8 @@
 PODS:
   - BulletinBoard (5.0.0)
   - DateTimePicker (2.5.2)
+  - Firebase (7.1.0):
+    - Firebase/Core (= 7.1.0)
   - Firebase/Analytics (7.1.0):
     - Firebase/Core
   - Firebase/Core (7.1.0):
@@ -76,6 +78,7 @@ PODS:
 DEPENDENCIES:
   - BulletinBoard
   - DateTimePicker
+  - Firebase
   - Firebase/Analytics
   - Firebase/Database
   - MASegmentedControl
@@ -115,6 +118,6 @@ SPEC CHECKSUMS:
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: cb68ab9bfafec4339446286b1d38e6a43086f1b1
+PODFILE CHECKSUM: 325754888c787c43b23b331978296d5081e90a1d
 
 COCOAPODS: 1.9.0

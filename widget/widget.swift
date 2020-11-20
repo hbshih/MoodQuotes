@@ -27,7 +27,22 @@ struct Provider: TimelineProvider{
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
         
-        firebaseService().getQuoteOfTheDay { (result) in
+     /*   WeatherSevice().getWeather { (result) in
+            let weatherInfo: [Weather]
+            
+            if case .success(let fetchedData) = result {
+                weatherInfo = fetchedData
+            } else {
+                let errWeather = Weather(name: "SF", temperature: 0, unit: "F", description: "Error getting weather info")
+                weatherInfo = [errWeather, errWeather]
+            }
+            
+            let entry = WeatherEntry(date: currentDate, weatherInfo: weatherInfo)
+            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+            completion(timeline)
+        }*/
+        
+        firebaseService().getQuoteApiResponse { (result) in
             let quoteInfo: [Quote]
             if case .success(let fetchedData) = result {
                 quoteInfo = fetchedData
@@ -39,8 +54,8 @@ struct Provider: TimelineProvider{
             let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
             completion(timeline)
-            
         }
+        
     }
 }
 

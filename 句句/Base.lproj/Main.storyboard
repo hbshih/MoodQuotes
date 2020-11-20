@@ -410,13 +410,13 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="RSa-IB-Cs2">
                                                                         <rect key="frame" x="0.0" y="24" width="96.5" height="48"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noun_Save_2209758 1" translatesAutoresizingMaskIntoConstraints="NO" id="Fbw-9a-uKa">
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8M-kQ-2Mq">
                                                                                 <rect key="frame" x="31" y="0.0" width="35" height="35"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="35" id="9EM-H3-uyP"/>
-                                                                                    <constraint firstAttribute="width" constant="35" id="PVA-bF-rjf"/>
-                                                                                </constraints>
-                                                                            </imageView>
+                                                                                <state key="normal" image="noun_Save_2209758 1"/>
+                                                                                <connections>
+                                                                                    <action selector="optionTapped:" destination="s5y-0N-DVP" eventType="touchUpInside" id="jAQ-gi-Yul"/>
+                                                                                </connections>
+                                                                            </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="存入相簿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anR-i3-lTb">
                                                                                 <rect key="frame" x="28" y="36" width="41" height="12"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -425,34 +425,34 @@
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="e66-rM-k70">
-                                                                        <rect key="frame" x="126.5" y="24" width="97" height="48"/>
+                                                                    <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="e66-rM-k70">
+                                                                        <rect key="frame" x="126.5" y="26.5" width="97" height="43"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noun_instagram_3350460 (1) 1" translatesAutoresizingMaskIntoConstraints="NO" id="TlD-qc-Y5m">
-                                                                                <rect key="frame" x="31" y="0.0" width="35" height="35"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="35" id="KQm-Kd-weg"/>
-                                                                                    <constraint firstAttribute="width" constant="35" id="oJR-4l-8vW"/>
-                                                                                </constraints>
-                                                                            </imageView>
+                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikw-bP-mNB">
+                                                                                <rect key="frame" x="33.5" y="0.0" width="30" height="30"/>
+                                                                                <state key="normal" image="noun_instagram_3350460 (1) 1"/>
+                                                                                <connections>
+                                                                                    <action selector="optionTapped:" destination="s5y-0N-DVP" eventType="touchUpInside" id="96Y-sY-4Ed"/>
+                                                                                </connections>
+                                                                            </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IG分享" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dk-gS-IvQ">
-                                                                                <rect key="frame" x="33" y="36" width="31" height="12"/>
+                                                                                <rect key="frame" x="33" y="31" width="31" height="12"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                                 <color key="textColor" red="0.33725490196078434" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UGb-Zf-VRj">
+                                                                    <stackView opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UGb-Zf-VRj">
                                                                         <rect key="frame" x="253.5" y="24" width="96.5" height="48"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noun_Share_1058858 (2) 1" translatesAutoresizingMaskIntoConstraints="NO" id="af6-Qw-pq6">
+                                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjT-AO-GZy">
                                                                                 <rect key="frame" x="30.5" y="0.0" width="35" height="35"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="35" id="gqj-fH-CFB"/>
-                                                                                    <constraint firstAttribute="width" constant="35" id="lf7-o2-oSh"/>
-                                                                                </constraints>
-                                                                            </imageView>
+                                                                                <state key="normal" image="noun_Share_1058858 (2) 1"/>
+                                                                                <connections>
+                                                                                    <action selector="optionTapped:" destination="s5y-0N-DVP" eventType="touchUpInside" id="cBZ-Cc-IEE"/>
+                                                                                </connections>
+                                                                            </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其他" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1N-f3-fRL">
                                                                                 <rect key="frame" x="38" y="36" width="20.5" height="12"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -520,7 +520,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="saveToAlbum" destination="Fbw-9a-uKa" id="8HB-uJ-1Tp"/>
+                        <outlet property="moreView" destination="UGb-Zf-VRj" id="lgq-ja-LeK"/>
                         <outlet property="screenshotPreview" destination="AhN-FD-EQ4" id="ztm-8r-x35"/>
                     </connections>
                 </viewController>
