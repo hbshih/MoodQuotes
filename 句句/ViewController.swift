@@ -45,6 +45,20 @@ class ViewController: UIViewController, MessagingDelegate {
           //  self.fcmRegTokenMessage.text  = "Remote FCM registration token: \(token)"
           }
         }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "test notifaction"
+        content.body = "test notification after 5 second"
+        content.sound = UNNotificationSound.default
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 15, repeats: false)
+        let request  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request) { (error) in
+            print("error\(error )")
+
+        }
+        
         ref = Database.database().reference()
         
         DispatchQueue.main.async { [self] in
