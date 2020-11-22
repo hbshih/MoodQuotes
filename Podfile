@@ -12,6 +12,8 @@ target '句句' do
   pod 'Firebase'
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
+  pod 'Onboard'
+  
 
   target '句句Tests' do
     inherit! :search_paths

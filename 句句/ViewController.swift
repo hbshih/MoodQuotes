@@ -19,6 +19,7 @@ class ViewController: UIViewController, MessagingDelegate {
     @IBOutlet weak var hiddenQuote: UILabel!
     @IBOutlet weak var screenView: UIView!
     @IBOutlet weak var backgroundHideenView: UIStackView!
+    @IBOutlet weak var hiddenQuoteAdder: UILabel!
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
       print("Firebase registration token: \(String(describing: fcmToken))")
@@ -45,6 +46,12 @@ class ViewController: UIViewController, MessagingDelegate {
           //  self.fcmRegTokenMessage.text  = "Remote FCM registration token: \(token)"
           }
         }
+        
+        let font = Display_Font(font_size: 36).getUIFont()
+        hiddenQuote.font = font
+        hiddenQuoteAdder.font = font
+        frontQuote.font = font
+        
         
         let content = UNMutableNotificationContent()
         content.title = "test notifaction"

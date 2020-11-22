@@ -88,6 +88,7 @@ PODS:
     - nanopb/encode (= 2.30906.0)
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
+  - Onboard (2.3.3)
   - PromisesObjC (1.2.11)
 
 DEPENDENCIES:
@@ -98,6 +99,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - MASegmentedControl
+  - Onboard
 
 SPEC REPOS:
   trunk:
@@ -117,6 +119,7 @@ SPEC REPOS:
     - leveldb-library
     - MASegmentedControl
     - nanopb
+    - Onboard
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -136,8 +139,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MASegmentedControl: 9b58f9ba3a562a739b63b29e4ca2b9dc4d9c62cb
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
+  Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: 42f4b7a0d5cd5cfa80c25ddc7cb9d848d3fb46d3
+PODFILE CHECKSUM: b07dce0bee8d987504598765b2e3064cd2a25c86
 
 COCOAPODS: 1.9.0

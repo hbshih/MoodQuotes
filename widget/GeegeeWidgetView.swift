@@ -48,10 +48,9 @@ struct GeegeeWidgetView: View {
     ZStack {
       Color(backgroundColor)
       VStack {
-        Text(quote.quote)
-            .font(.custom("jf-liao-monospaced", size: 28)).foregroundColor(.black).multilineTextAlignment(.center)
+            Text(quote.quote).font(Display_Font(font_size: 28).getFont()).foregroundColor(.black).multilineTextAlignment(.center)
         Text(quote.author)
-            .font(.custom("jf-liao-monospaced", size: 20))
+            .font(Display_Font(font_size: 20).getFont())
           .multilineTextAlignment(.center)
           .padding(.top, 5)
           .padding([.leading, .trailing])

@@ -187,7 +187,8 @@
                     <connections>
                         <outlet property="backgroundHideenView" destination="kgV-82-bvE" id="6DU-d0-f0L"/>
                         <outlet property="frontQuote" destination="BPk-MP-j3O" id="kwy-pZ-ONt"/>
-                        <outlet property="hiddenQuote" destination="X0Z-Ov-Dk5" id="7oO-Ox-es7"/>
+                        <outlet property="hiddenQuote" destination="X0Z-Ov-Dk5" id="XOc-Vy-Yhg"/>
+                        <outlet property="hiddenQuoteAdder" destination="Y8l-8V-78E" id="WbO-N4-bfx"/>
                         <outlet property="screenView" destination="mFK-is-lcH" id="9XO-5a-BZH"/>
                     </connections>
                 </viewController>

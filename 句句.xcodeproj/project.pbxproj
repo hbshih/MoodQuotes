@@ -10,6 +10,7 @@
 		3E27B22F132E9FBF095D1E4D /* Pods______UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C665A53A1C09E8517182D19C /* Pods______UITests.framework */; };
 		4A6C1653BC3CB09C66A10BF9 /* Pods_widgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3489404ED4A9259CF592B9 /* Pods_widgetExtension.framework */; };
 		93F1FAB780DCA86F976B2408 /* Pods___Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */; };
+		98B6A3373DCB49A1755E608B /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DA3941460AE65D43814606 /* Pods___.framework */; };
 		B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBB125622E0700372198 /* NotificationTableViewCell.swift */; };
 		B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B506EBB225622E0700372198 /* NotificationTableViewCell.xib */; };
 		B506EBC225622FF800372198 /* UpdateTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBC025622FF800372198 /* UpdateTimeTableViewCell.swift */; };
@@ -44,6 +45,7 @@
 		B59E21C225676F85003A5521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59E21C125676F85003A5521 /* GoogleService-Info.plist */; };
 		B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59E21C125676F85003A5521 /* GoogleService-Info.plist */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
+		B5F1E784256980470020A403 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F1E783256980470020A403 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,7 @@
 		B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtention.swift; sourceTree = "<group>"; };
 		B59E21C125676F85003A5521 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		B5F1E783256980470020A403 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C486BA49175AD0DFD2DEE931 /* Pods-句句.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.debug.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.debug.xcconfig"; sourceTree = "<group>"; };
 		C665A53A1C09E8517182D19C /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98B6A3373DCB49A1755E608B /* Pods___.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +240,7 @@
 				B5517C78255FAFC500E134CC /* ViewController.swift */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
 				B5517C7A255FAFC500E134CC /* Main.storyboard */,
+				B5F1E783256980470020A403 /* OnboardingViewController.swift */,
 				B5E8973525655F1F00D470E2 /* ShareViewController.swift */,
 				B5517CB4255FB73400E134CC /* SettingViewController.swift */,
 				B5517C7D255FAFC500E134CC /* Assets.xcassets */,
@@ -583,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F1E784256980470020A403 /* OnboardingViewController.swift in Sources */,
 				B59E213D256756CA003A5521 /* GeegeeWidgetView.swift in Sources */,
 				B5517C79255FAFC500E134CC /* ViewController.swift in Sources */,
 				B506EBC225622FF800372198 /* UpdateTimeTableViewCell.swift in Sources */,
@@ -792,6 +798,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -814,6 +821,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
