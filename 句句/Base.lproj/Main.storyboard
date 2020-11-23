@@ -11,6 +11,9 @@
         <array key="jf-liao-monospaced.ttf">
             <string>jf-liao-Monospaced-Regular</string>
         </array>
+        <array key="qiji-combo.ttf">
+            <string>QIJIC</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Onboarding1 View Controller-->
@@ -78,7 +81,7 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇每日語錄更新時間" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM1-I5-pyA">
                                                                 <rect key="frame" x="16" y="0.0" width="350" height="112.5"/>
-                                                                <fontDescription key="fontDescription" name="jf-liao-Monospaced-Regular" family="jf-liao-Monospaced" pointSize="36"/>
+                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -250,7 +253,7 @@
                                                         <string key="text">人生是一場兵荒馬亂，你是我的劫後餘生。
 - 溫</string>
                                                         <fontDescription key="fontDescription" name="jf-liao-Monospaced-Regular" family="jf-liao-Monospaced" pointSize="36"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -818,13 +821,13 @@
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇背景顏色" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy8-Mh-nVr">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="130"/>
-                                                                                <fontDescription key="fontDescription" name="jf-liao-Monospaced-Regular" family="jf-liao-Monospaced" pointSize="36"/>
+                                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="（之後也可以改啦）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j35-Ca-OCM">
                                                                                 <rect key="frame" x="0.0" y="30" width="382" height="130"/>
-                                                                                <fontDescription key="fontDescription" name="jf-liao-Monospaced-Regular" family="jf-liao-Monospaced" pointSize="14"/>
+                                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="14"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -1042,9 +1045,11 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-qe-NEo">
                                                         <rect key="frame" x="16" y="204" width="382" height="200"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開始通知可以第一時間看見語錄，要開啟通知嗎？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
-                                                                <fontDescription key="fontDescription" name="jf-liao-Monospaced-Regular" family="jf-liao-Monospaced" pointSize="24"/>
+                                                                <string key="text">開始通知可以第一時間看見語錄，
+要開啟通知嗎</string>
+                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1053,7 +1058,7 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-RL-PdC">
                                                                         <rect key="frame" x="0.0" y="0.0" width="191" height="100"/>
-                                                                        <fontDescription key="fontDescription" name="jf-liao-Monospaced-Regular" family="jf-liao-Monospaced" pointSize="36"/>
+                                                                        <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
                                                                         <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         <state key="normal" title="好啊"/>
                                                                         <connections>
@@ -1061,18 +1066,11 @@
                                                                             <segue destination="BYZ-38-t0r" kind="show" id="eaM-kk-xim"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-Ya-8lD">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-Ya-8lD">
                                                                         <rect key="frame" x="191" y="0.0" width="191" height="100"/>
+                                                                        <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
                                                                         <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <state key="normal">
-                                                                            <attributedString key="attributedTitle">
-                                                                                <fragment content="不要啦">
-                                                                                    <attributes>
-                                                                                        <font key="NSFont" size="36" name="jf-liao-Monospaced-Regular"/>
-                                                                                    </attributes>
-                                                                                </fragment>
-                                                                            </attributedString>
-                                                                        </state>
+                                                                        <state key="normal" title="別"/>
                                                                         <connections>
                                                                             <segue destination="BYZ-38-t0r" kind="show" id="SBM-ti-wNy"/>
                                                                         </connections>
@@ -1191,8 +1189,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ly3-Ze-ofX"/>
-        <segue reference="iiW-8X-Mfm"/>
+        <segue reference="lk2-Vz-ikE"/>
+        <segue reference="eaM-kk-xim"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App-1" width="122" height="148"/>

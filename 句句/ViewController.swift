@@ -47,7 +47,10 @@ class ViewController: UIViewController, MessagingDelegate {
           }
         }
         
+
         let font = Display_Font(font_size: 36).getUIFont()
+        
+     //   let font = UIFont(name: "QIJIC", size: 36)
         hiddenQuote.font = font
         hiddenQuoteAdder.font = font
         frontQuote.font = font

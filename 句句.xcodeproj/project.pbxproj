@@ -24,7 +24,6 @@
 		B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5517C7F255FAFC600E134CC /* LaunchScreen.storyboard */; };
 		B5517C8C255FAFC600E134CC /* __Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C8B255FAFC600E134CC /* __Tests.swift */; };
 		B5517C97255FAFC600E134CC /* __UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C96255FAFC600E134CC /* __UITests.swift */; };
-		B5517CA8255FB0D500E134CC /* jf-liao-monospaced.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */; };
 		B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517CB4255FB73400E134CC /* SettingViewController.swift */; };
 		B5807EFD25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
@@ -39,7 +38,6 @@
 		B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E20D7256741C3003A5521 /* GeegeeWidgetView.swift */; };
 		B59E212E25674D0A003A5521 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E212D25674D0A003A5521 /* Quote.swift */; };
 		B59E213325674D13003A5521 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E212D25674D0A003A5521 /* Quote.swift */; };
-		B59E213825674E44003A5521 /* jf-liao-monospaced.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */; };
 		B59E213D256756CA003A5521 /* GeegeeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E20D7256741C3003A5521 /* GeegeeWidgetView.swift */; };
 		B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */; };
 		B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */; };
@@ -48,6 +46,8 @@
 		B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */; };
 		B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */; };
 		B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */; };
+		B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
+		B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
 		B5F1E784256980470020A403 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F1E783256980470020A403 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -119,7 +119,6 @@
 		B5517C92255FAFC600E134CC /* 句句UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "句句UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5517C96255FAFC600E134CC /* __UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __UITests.swift; sourceTree = "<group>"; };
 		B5517C98255FAFC600E134CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-liao-monospaced.ttf"; sourceTree = "<group>"; };
 		B5517CB4255FB73400E134CC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
 		B58FD31C256B737000CBDAB6 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_1ViewController.swift; sourceTree = "<group>"; };
 		B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_2ViewController.swift; sourceTree = "<group>"; };
 		B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_3ViewController.swift; sourceTree = "<group>"; };
+		B5D3845C256BED8100B1A507 /* qiji-combo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "qiji-combo.ttf"; sourceTree = "<group>"; };
 		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B5F1E783256980470020A403 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +246,7 @@
 				B5517C74255FAFC500E134CC /* AppDelegate.swift */,
 				B5517C76255FAFC500E134CC /* SceneDelegate.swift */,
 				B5517C78255FAFC500E134CC /* ViewController.swift */,
+				B5D3845C256BED8100B1A507 /* qiji-combo.ttf */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
 				B5517C7A255FAFC500E134CC /* Main.storyboard */,
 				B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */,
@@ -257,7 +258,6 @@
 				B5517C7D255FAFC500E134CC /* Assets.xcassets */,
 				B5517C7F255FAFC600E134CC /* LaunchScreen.storyboard */,
 				B5517C82255FAFC600E134CC /* Info.plist */,
-				B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */,
 				B506EBB125622E0700372198 /* NotificationTableViewCell.swift */,
 				B506EBB225622E0700372198 /* NotificationTableViewCell.xib */,
 				B506EBC025622FF800372198 /* UpdateTimeTableViewCell.swift */,
@@ -439,9 +439,9 @@
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
 				B59E21C225676F85003A5521 /* GoogleService-Info.plist in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
+				B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
 				B5517C7E255FAFC500E134CC /* Assets.xcassets in Resources */,
-				B5517CA8255FB0D500E134CC /* jf-liao-monospaced.ttf in Resources */,
 				B5517C7C255FAFC500E134CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59E213825674E44003A5521 /* jf-liao-monospaced.ttf in Resources */,
+				B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */,
 				B59E20BB256698FC003A5521 /* Assets.xcassets in Resources */,
 			);
@@ -816,7 +816,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -839,7 +839,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -949,7 +949,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -975,7 +975,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

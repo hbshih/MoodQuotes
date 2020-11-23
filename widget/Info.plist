@@ -33,6 +33,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>jf-liao-monospaced.ttf</string>
+		<string>qiji-combo.ttf</string>
 	</array>
 </dict>
 </plist>

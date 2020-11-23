@@ -17,12 +17,16 @@ struct Quote
 
 struct Display_Font
 {
-    let selected_font = "jf-liao-monospaced"
+    let selected_font = "QIJIC"
     let font_size: Int
     
     func getUIFont() -> UIFont
     {
-        return UIFont(name: selected_font, size: CGFloat(font_size))!
+       // return UIFont.systemFont(ofSize: 30)
+     //   return UIFont.systemFont(ofSize: 30)
+            
+           return UIFont(name: selected_font, size: CGFloat(font_size))!
+            //UIFont(name: sys, size: CGFloat(font_size))!
     }
     
     func getFont() -> Font
