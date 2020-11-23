@@ -20,6 +20,8 @@ class UpdateBackgroundColorTableViewCell: UITableViewCell {
         
         // Create a custom view controller
         let ratingVC = RatingViewController(nibName: "RatingViewController", bundle: nil)
+        
+        
 
         // Create the dialog
         let popup = PopupDialog(viewController: ratingVC,
@@ -31,20 +33,20 @@ class UpdateBackgroundColorTableViewCell: UITableViewCell {
         // Create second button
         let buttonTwo = DefaultButton(title: "儲存", height: 60) {
        //     self.label.text = "You rated \(ratingVC.cosmosStarRating.rating) stars"
+            
+            let defaults = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!
+            defaults.setColor(color: ratingVC.exampleBackground.backgroundColor, forKey: "BackgroundColor")
+            print("reload color")
+            if let vc = UIApplication.topViewController() as? SettingViewController
+            {
+                print("VC")
+                vc.tableview.reloadData()
+            }
         }
-
-        // Add buttons to dialog
-        popup.addButtons([buttonTwo])
-
-        // Present dialog
         
-        //self.window.viewcon
+        popup.addButtons([buttonTwo])
         
         UIApplication.topViewController()?.present(popup, animated: true, completion: nil)
-        
-     //   self.window?.rootViewController?.present(popup, animated: true, completion: nil)
-   //     present(popup, animated: true, completion: nil)
-        
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

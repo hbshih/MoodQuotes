@@ -13,14 +13,27 @@ class Onboarding_1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         self.timePIcker.layer.cornerRadius = timePIcker.layer.borderWidth / 2
+        
+        //  print(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.value(forKey: "updateTime"))
+        
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.value(forKey: "updateTime") != nil
+        {
+            performSegue(withIdentifier: "homeSegue", sender: nil)
+        }
+        
+    }
+    
+  //  view
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("will")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         //UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(timePIcker.date, forKey: "Time Picker")
-        
+        print("did")
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(timePIcker.date, forKey: "updateTime")
         
     }

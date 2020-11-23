@@ -48,7 +48,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             let cell = tableView.dequeueReusableCell(withIdentifier: "updateBackgroundTableViewCell") as! UpdateBackgroundColorTableViewCell
             
             let defaults = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!
-            let color = defaults.colorForKey(key: "BackgroundColor") as! UIColor
+            let color = defaults.colorForKey(key: "BackgroundColor")!
             print("reload color")
             print(color)
             cell.backgrundColor.backgroundColor = color
@@ -121,7 +121,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         let introPage = makeIntroPage()
         return BLTNItemManager(rootItem: introPage)
     }()*/
-    
     
     
     func makeIntroPage() -> BLTNActionItem {

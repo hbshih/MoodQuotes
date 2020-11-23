@@ -204,6 +204,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="timePIcker" destination="39S-JA-Hyg" id="36B-m4-CKa"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="homeSegue" id="iiW-8X-Mfm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psp-Kx-3lM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1190,8 +1191,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lk2-Vz-ikE"/>
-        <segue reference="eaM-kk-xim"/>
+        <segue reference="ly3-Ze-ofX"/>
+        <segue reference="iiW-8X-Mfm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App-1" width="122" height="148"/>
