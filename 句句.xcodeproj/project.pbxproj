@@ -10,7 +10,6 @@
 		3E27B22F132E9FBF095D1E4D /* Pods______UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C665A53A1C09E8517182D19C /* Pods______UITests.framework */; };
 		4A6C1653BC3CB09C66A10BF9 /* Pods_widgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3489404ED4A9259CF592B9 /* Pods_widgetExtension.framework */; };
 		93F1FAB780DCA86F976B2408 /* Pods___Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */; };
-		98B6A3373DCB49A1755E608B /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DA3941460AE65D43814606 /* Pods___.framework */; };
 		B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBB125622E0700372198 /* NotificationTableViewCell.swift */; };
 		B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B506EBB225622E0700372198 /* NotificationTableViewCell.xib */; };
 		B506EBC225622FF800372198 /* UpdateTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBC025622FF800372198 /* UpdateTimeTableViewCell.swift */; };
@@ -29,6 +28,8 @@
 		B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517CB4255FB73400E134CC /* SettingViewController.swift */; };
 		B5807EFD25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
+		B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FD31C256B737000CBDAB6 /* RatingViewController.swift */; };
+		B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58FD31D256B737100CBDAB6 /* RatingViewController.xib */; };
 		B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205425669862003A5521 /* WidgetKit.framework */; };
 		B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205625669862003A5521 /* SwiftUI.framework */; };
 		B59E20B8256698FB003A5521 /* widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E20B7256698FB003A5521 /* widget.swift */; };
@@ -44,6 +45,9 @@
 		B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */; };
 		B59E21C225676F85003A5521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59E21C125676F85003A5521 /* GoogleService-Info.plist */; };
 		B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59E21C125676F85003A5521 /* GoogleService-Info.plist */; };
+		B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */; };
+		B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */; };
+		B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
 		B5F1E784256980470020A403 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F1E783256980470020A403 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -118,6 +122,8 @@
 		B5517CA7255FB0D300E134CC /* jf-liao-monospaced.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-liao-monospaced.ttf"; sourceTree = "<group>"; };
 		B5517CB4255FB73400E134CC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
+		B58FD31C256B737000CBDAB6 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		B58FD31D256B737100CBDAB6 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
 		B59E205425669862003A5521 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B59E205625669862003A5521 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B59E20B3256698FB003A5521 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +137,9 @@
 		B59E216B25675F8F003A5521 /* widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetExtension.entitlements; sourceTree = "<group>"; };
 		B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtention.swift; sourceTree = "<group>"; };
 		B59E21C125676F85003A5521 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_1ViewController.swift; sourceTree = "<group>"; };
+		B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_2ViewController.swift; sourceTree = "<group>"; };
+		B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_3ViewController.swift; sourceTree = "<group>"; };
 		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B5F1E783256980470020A403 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,7 +153,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98B6A3373DCB49A1755E608B /* Pods___.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,9 +248,12 @@
 				B5517C78255FAFC500E134CC /* ViewController.swift */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
 				B5517C7A255FAFC500E134CC /* Main.storyboard */,
+				B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */,
 				B5F1E783256980470020A403 /* OnboardingViewController.swift */,
 				B5E8973525655F1F00D470E2 /* ShareViewController.swift */,
 				B5517CB4255FB73400E134CC /* SettingViewController.swift */,
+				B58FD31C256B737000CBDAB6 /* RatingViewController.swift */,
+				B58FD31D256B737100CBDAB6 /* RatingViewController.xib */,
 				B5517C7D255FAFC500E134CC /* Assets.xcassets */,
 				B5517C7F255FAFC600E134CC /* LaunchScreen.storyboard */,
 				B5517C82255FAFC600E134CC /* Info.plist */,
@@ -254,6 +265,8 @@
 				B506EBC72562306400372198 /* UpdateBackgroundColorTableViewCell.swift */,
 				B506EBC82562306400372198 /* UpdateBackgroundColorTableViewCell.xib */,
 				B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */,
+				B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */,
+				B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -422,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B506EBCA2562306400372198 /* UpdateBackgroundColorTableViewCell.xib in Resources */,
+				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
 				B59E21C225676F85003A5521 /* GoogleService-Info.plist in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
@@ -590,7 +604,10 @@
 			files = (
 				B5F1E784256980470020A403 /* OnboardingViewController.swift in Sources */,
 				B59E213D256756CA003A5521 /* GeegeeWidgetView.swift in Sources */,
+				B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */,
 				B5517C79255FAFC500E134CC /* ViewController.swift in Sources */,
+				B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */,
+				B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */,
 				B506EBC225622FF800372198 /* UpdateTimeTableViewCell.swift in Sources */,
 				B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */,
 				B5517C75255FAFC500E134CC /* AppDelegate.swift in Sources */,
@@ -600,6 +617,7 @@
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
 				B5807EFD25678043006052E2 /* firebaseService.swift in Sources */,
+				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -798,7 +816,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -821,7 +839,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -931,6 +949,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -939,7 +958,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.dev.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -956,6 +975,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -964,7 +984,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.dev.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

@@ -32,20 +32,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC1-x5-xsg">
-                                <rect key="frame" x="272" y="7" width="32" height="30"/>
-                                <state key="normal" title="9:00"/>
-                                <connections>
-                                    <action selector="changeTimeTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Sfh-HA-jRm"/>
-                                </connections>
-                            </button>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="wL3-zS-E65">
+                                <rect key="frame" x="227" y="0.0" width="96" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="aT6-Nd-krS"/>
+                                </constraints>
+                            </datePicker>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wL3-zS-E65" secondAttribute="trailing" id="aZU-pf-BLa"/>
                             <constraint firstItem="3ov-lx-gNW" firstAttribute="top" secondItem="uF7-4Y-RX2" secondAttribute="top" id="ayo-s2-dwx"/>
-                            <constraint firstAttribute="trailing" secondItem="ZC1-x5-xsg" secondAttribute="trailing" constant="16" id="fyG-hx-SIw"/>
+                            <constraint firstAttribute="bottom" secondItem="wL3-zS-E65" secondAttribute="bottom" id="g3z-25-MZy"/>
                             <constraint firstAttribute="bottom" secondItem="3ov-lx-gNW" secondAttribute="bottom" id="h1r-Cs-ecw"/>
                             <constraint firstItem="1AB-Aa-Nda" firstAttribute="centerY" secondItem="uF7-4Y-RX2" secondAttribute="centerY" id="iGn-8U-dFe"/>
-                            <constraint firstItem="ZC1-x5-xsg" firstAttribute="centerY" secondItem="uF7-4Y-RX2" secondAttribute="centerY" id="l5c-NC-bL4"/>
+                            <constraint firstItem="wL3-zS-E65" firstAttribute="top" secondItem="uF7-4Y-RX2" secondAttribute="top" id="qgq-zV-H12"/>
                             <constraint firstItem="3ov-lx-gNW" firstAttribute="leading" secondItem="uF7-4Y-RX2" secondAttribute="leading" constant="16" id="rgB-3G-ri4"/>
                             <constraint firstItem="1AB-Aa-Nda" firstAttribute="leading" secondItem="3ov-lx-gNW" secondAttribute="trailing" constant="8" symbolic="YES" id="wUu-PV-HrY"/>
                         </constraints>
@@ -59,6 +59,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="timePicker" destination="wL3-zS-E65" id="T91-QC-9V9"/>
+            </connections>
             <point key="canvasLocation" x="-154" y="79"/>
         </tableViewCell>
     </objects>

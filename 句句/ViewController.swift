@@ -68,6 +68,9 @@ class ViewController: UIViewController, MessagingDelegate {
         
         ref = Database.database().reference()
         
+        frontQuote.text = "語錄更新中..."
+        
+        
         DispatchQueue.main.async { [self] in
             //  let userID = Auth.auth().currentUser?.uid
             self.ref.child("Quote of the Day").observe(.value) { (snapshot) in

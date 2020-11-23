@@ -17,6 +17,13 @@ class ShareViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if imageToShow != nil
+        {
+            screenshotPreview.image = imageToShow
+        }else
+        {
+            screenshotPreview.image = UIImage(named: "icon_notification")
+        }
     }
 
     @IBAction func optionTapped(_ sender: UIButton) {
@@ -61,13 +68,7 @@ class ShareViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if imageToShow != nil
-        {
-            screenshotPreview.image = imageToShow
-        }else
-        {
-            screenshotPreview.image = UIImage(named: "icon_notification")
-        }
+
     }
     
     @IBAction func cancelTapped(_ sender: Any) {

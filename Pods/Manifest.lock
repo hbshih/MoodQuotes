@@ -1,6 +1,7 @@
 PODS:
   - BulletinBoard (5.0.0)
   - DateTimePicker (2.5.2)
+  - DynamicBlurView (4.1.0)
   - Firebase (7.1.0):
     - Firebase/Core (= 7.1.0)
   - Firebase/Analytics (7.1.0):
@@ -81,6 +82,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.1.1):
     - GoogleUtilities/Logger
+  - Hero (1.5.0)
   - leveldb-library (1.22)
   - MASegmentedControl (0.0.5)
   - nanopb (2.30906.0):
@@ -89,6 +91,8 @@ PODS:
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
   - Onboard (2.3.3)
+  - PopupDialog (1.1.1):
+    - DynamicBlurView (~> 4.0)
   - PromisesObjC (1.2.11)
 
 DEPENDENCIES:
@@ -98,13 +102,16 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Database
   - Firebase/Messaging
+  - Hero
   - MASegmentedControl
   - Onboard
+  - PopupDialog
 
 SPEC REPOS:
   trunk:
     - BulletinBoard
     - DateTimePicker
+    - DynamicBlurView
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -116,15 +123,18 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - Hero
     - leveldb-library
     - MASegmentedControl
     - nanopb
     - Onboard
+    - PopupDialog
     - PromisesObjC
 
 SPEC CHECKSUMS:
   BulletinBoard: dba77053c2a7b64953f63073f7534165af2edd21
   DateTimePicker: 5b6386eb8f9839192e77748f620b9d9f12f41c28
+  DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   Firebase: 78e8dd2e39d653de6270432ad84fe8b59f7bf4e8
   FirebaseAnalytics: 7f165a56dea86ddd5b8ce02af3bee982c683405c
   FirebaseCore: 20046127eef0fcb8fa25df7fc12f7b97d4e48611
@@ -136,12 +146,14 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 89e1a64593f968713b0506ba1b53b38a154bf9a5
   GoogleDataTransport: e4085e6762f36a6141738f46b0153473ce57fb18
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MASegmentedControl: 9b58f9ba3a562a739b63b29e4ca2b9dc4d9c62cb
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
+  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: b07dce0bee8d987504598765b2e3064cd2a25c86
+PODFILE CHECKSUM: d9d2b43bbc6634c98cb8fcf6f805c990842e9219
 
 COCOAPODS: 1.9.0
