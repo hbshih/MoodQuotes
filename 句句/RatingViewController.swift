@@ -14,7 +14,12 @@ class RatingViewController: UIViewController {
     @IBOutlet weak var exampleBackground: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        exampleFont.font = Display_Font(font_size: 18).getUIFont()
+        exampleFont.font = Display_Font(font_size: 32).getUIFont()
+        let defaults = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!
+        if let color = defaults.colorForKey(key: "BackgroundColor") as? UIColor
+        {
+            exampleBackground.backgroundColor = color
+        }
     }
 
     override func didReceiveMemoryWarning() {

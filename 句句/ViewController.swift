@@ -16,6 +16,8 @@ var global_quote: String = ""
 class ViewController: UIViewController, MessagingDelegate {
     
     @IBOutlet weak var frontQuote: UILabel!
+    @IBOutlet weak var authorName: UILabel!
+    @IBOutlet weak var hiddenAuthorName: UILabel!
     @IBOutlet weak var hiddenQuote: UILabel!
     @IBOutlet weak var screenView: UIView!
     @IBOutlet weak var backgroundHideenView: UIStackView!
@@ -48,12 +50,15 @@ class ViewController: UIViewController, MessagingDelegate {
         }
         
 
-        let font = Display_Font(font_size: 36).getUIFont()
+        var font = Display_Font(font_size: 30).getUIFont()
         
      //   let font = UIFont(name: "QIJIC", size: 36)
         hiddenQuote.font = font
         hiddenQuoteAdder.font = font
         frontQuote.font = font
+        font = Display_Font(font_size: 24).getUIFont()
+        authorName.font = font
+        hiddenAuthorName.font = font
         
         
         let content = UNMutableNotificationContent()
@@ -86,8 +91,10 @@ class ViewController: UIViewController, MessagingDelegate {
                         if let author = value["Author"] as? String
                         {
                             self.author = author
-                            frontQuote.text = self.quote + "\n" + "— " + self.author
-                            hiddenQuote.text = self.quote + "\n" + "— " + self.author
+                            frontQuote.text = self.quote
+                            authorName.text = self.author
+                            hiddenQuote.text = self.quote
+                            hiddenAuthorName.text = self.author
                             global_quote = frontQuote.text!
                         }
                     }

@@ -73,15 +73,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("2")
             bulletinManager.backgroundViewStyle = .none
             bulletinManager.backgroundColor = UIColor(red: 46/255, green: 58/255, blue: 67/255, alpha: 1.00)
-           // bulletinManager.show
-            pickColorView.isHidden = false
-            
-            self.view.bringSubviewToFront(pickColorView)
-        
-   //         bulletinManager.showBulletin(in: self, animated: true, completion: nil)
-            
-            
-            
         default:
             print("d")
         }

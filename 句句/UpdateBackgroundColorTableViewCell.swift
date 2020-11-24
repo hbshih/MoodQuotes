@@ -29,6 +29,10 @@ class UpdateBackgroundColorTableViewCell: UITableViewCell {
                                 transitionStyle: .bounceDown,
                                 tapGestureDismissal: true,
                                 panGestureDismissal: false)
+        
+        
+        
+        
     
         // Create second button
         let buttonTwo = DefaultButton(title: "儲存", height: 60) {
@@ -43,6 +47,12 @@ class UpdateBackgroundColorTableViewCell: UITableViewCell {
                 vc.tableview.reloadData()
             }
         }
+        
+        buttonTwo.backgroundColor = .systemGray6
+        buttonTwo.titleColor = .systemGray
+     //   buttonTwo.titleLabel.
+        
+        
         
         popup.addButtons([buttonTwo])
         

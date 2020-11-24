@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uF7-4Y-RX2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_time" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-lx-gNW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_time-1" translatesAutoresizingMaskIntoConstraints="NO" id="3ov-lx-gNW">
                                 <rect key="frame" x="16" y="0.0" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="bwE-T3-hPp"/>
@@ -34,6 +34,7 @@
                             </label>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="wL3-zS-E65">
                                 <rect key="frame" x="227" y="0.0" width="96" height="44"/>
+                                <color key="tintColor" red="0.89411764705882346" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="aT6-Nd-krS"/>
                                 </constraints>
@@ -66,6 +67,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_time" width="48" height="48"/>
+        <image name="icon_time-1" width="48" height="48"/>
     </resources>
 </document>
