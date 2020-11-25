@@ -30,7 +30,7 @@ func setupNotifications() {
                 content.body = quoteInfo.first!.quote
                 content.sound = UNNotificationSound.default
                 content.categoryIdentifier = "Daily Notifier"
-                content.setValue("YES", forKeyPath: "shouldAlwaysAlertWhileAppIsForeground")
+               // content.setValue("YES", forKeyPath: "shouldAlwaysAlertWhileAppIsForeground")
                 
                 if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
                 {

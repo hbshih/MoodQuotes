@@ -79,9 +79,10 @@ class ViewController: UIViewController, MessagingDelegate {
         frontQuote.text = "語錄更新中..."
         
         
+        
         DispatchQueue.main.async { [self] in
             //  let userID = Auth.auth().currentUser?.uid
-            self.ref.child("Quote of the Day").observe(.value) { (snapshot) in
+            self.ref.child("Quote of the Day").observeSingleEvent(of: .value) { (snapshot) in
                 if let value = snapshot.value as? NSDictionary
                 {
                     
@@ -100,6 +101,25 @@ class ViewController: UIViewController, MessagingDelegate {
                     }
                 }
             }
+        /*    observe(.value) { (snapshot) in
+                if let value = snapshot.value as? NSDictionary
+                {
+                    
+                    if let quote = value["Quote"] as? String
+                    {
+                        self.quote = quote
+                        if let author = value["Author"] as? String
+                        {
+                            self.author = author
+                            frontQuote.text = self.quote
+                            authorName.text = self.author
+                            hiddenQuote.text = self.quote
+                            hiddenAuthorName.text = self.author
+                            global_quote = frontQuote.text!
+                        }
+                    }
+                }
+            }*/
             
         }
         

@@ -15,7 +15,10 @@ class Onboarding_1ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.timePIcker.layer.cornerRadius = timePIcker.layer.borderWidth / 2
-        
+
+        let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
+            
+        timePIcker.setDate(date, animated: false)
         //  print(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.value(forKey: "updateTime"))
         
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") != nil
@@ -35,7 +38,7 @@ class Onboarding_1ViewController: UIViewController {
         //UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(timePIcker.date, forKey: "Time Picker")
         print("did")
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(timePIcker.date, forKey: "updateTime")
-        
+        print(timePIcker.date)
      //   setValue(timePIcker.date, forKey: "updateTime")
         
     }

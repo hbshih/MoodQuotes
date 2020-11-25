@@ -30,7 +30,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HFA-Ym-DEH">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App-1" translatesAutoresizingMaskIntoConstraints="NO" id="rgP-OY-h37">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App" translatesAutoresizingMaskIntoConstraints="NO" id="rgP-OY-h37">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVw-rU-g9V">
@@ -146,7 +146,7 @@
                                                         <rect key="frame" x="147" y="0.0" width="120" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGP-Re-m1z">
-                                                                <rect key="frame" x="37" y="12.5" width="46" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="55"/>
                                                                 <state key="normal" title="下一步">
                                                                     <color key="titleColor" red="0.33725490196078434" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
@@ -157,8 +157,12 @@
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.93725490196078431" green="0.9137254901960784" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="qGP-Re-m1z" firstAttribute="top" secondItem="xux-Aw-9xJ" secondAttribute="top" id="0Yx-hd-NCC"/>
+                                                            <constraint firstAttribute="bottom" secondItem="qGP-Re-m1z" secondAttribute="bottom" id="LaZ-Ua-iU1"/>
                                                             <constraint firstAttribute="width" constant="120" id="PyN-Cj-RqV"/>
+                                                            <constraint firstItem="qGP-Re-m1z" firstAttribute="leading" secondItem="xux-Aw-9xJ" secondAttribute="leading" id="SLO-DX-y3f"/>
                                                             <constraint firstItem="qGP-Re-m1z" firstAttribute="centerX" secondItem="xux-Aw-9xJ" secondAttribute="centerX" id="U5X-hC-xfE"/>
+                                                            <constraint firstAttribute="trailing" secondItem="qGP-Re-m1z" secondAttribute="trailing" id="XQu-kT-sse"/>
                                                             <constraint firstItem="qGP-Re-m1z" firstAttribute="centerY" secondItem="xux-Aw-9xJ" secondAttribute="centerY" id="d4H-Xc-iE0"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
@@ -231,7 +235,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgw-FN-6YY">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="298.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App-1" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-Mq-DgV">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-Mq-DgV">
                                                         <rect key="frame" x="169.5" y="75" width="75" height="148.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="75" id="jRz-r4-lTI"/>
@@ -320,7 +324,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFA-Wg-xAy">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="298.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App-1" translatesAutoresizingMaskIntoConstraints="NO" id="uZf-Qu-XFe">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App" translatesAutoresizingMaskIntoConstraints="NO" id="uZf-Qu-XFe">
                                                         <rect key="frame" x="169.5" y="75" width="75" height="148.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="75" id="8ym-Oa-ofW"/>
@@ -725,7 +729,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PB7-iz-lkK">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App-1" translatesAutoresizingMaskIntoConstraints="NO" id="e38-cV-Es9">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App" translatesAutoresizingMaskIntoConstraints="NO" id="e38-cV-Es9">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYz-ph-v2J">
@@ -892,7 +896,7 @@
                                                         <rect key="frame" x="147" y="0.0" width="120" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWs-du-I5N">
-                                                                <rect key="frame" x="37" y="12.5" width="46" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="55"/>
                                                                 <state key="normal" title="下一步">
                                                                     <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
@@ -903,9 +907,12 @@
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="GWs-du-I5N" firstAttribute="top" secondItem="PT5-OX-E2k" secondAttribute="top" id="9Ey-rM-RaR"/>
                                                             <constraint firstAttribute="width" constant="120" id="LKO-kG-zQ5"/>
                                                             <constraint firstItem="GWs-du-I5N" firstAttribute="centerY" secondItem="PT5-OX-E2k" secondAttribute="centerY" id="Rmd-Sy-EHp"/>
                                                             <constraint firstItem="GWs-du-I5N" firstAttribute="centerX" secondItem="PT5-OX-E2k" secondAttribute="centerX" id="Tyf-8B-Uep"/>
+                                                            <constraint firstAttribute="bottom" secondItem="GWs-du-I5N" secondAttribute="bottom" id="ot6-eO-PpB"/>
+                                                            <constraint firstItem="GWs-du-I5N" firstAttribute="leading" secondItem="PT5-OX-E2k" secondAttribute="leading" id="sLp-p4-dtg"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -974,7 +981,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jey-Lj-EH0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-z3-Ctd">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-z3-Ctd">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPu-4p-lF2">
@@ -1113,7 +1120,7 @@
                                                         <rect key="frame" x="147" y="0.0" width="120" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ely-jG-IgH">
-                                                                <rect key="frame" x="44.5" y="12.5" width="31" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="55"/>
                                                                 <state key="normal" title="完成">
                                                                     <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
@@ -1124,8 +1131,12 @@
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="Ely-jG-IgH" firstAttribute="leading" secondItem="QWT-M2-m2N" secondAttribute="leading" id="Pa2-Bl-hnS"/>
                                                             <constraint firstItem="Ely-jG-IgH" firstAttribute="centerY" secondItem="QWT-M2-m2N" secondAttribute="centerY" id="X7z-zC-acB"/>
                                                             <constraint firstItem="Ely-jG-IgH" firstAttribute="centerX" secondItem="QWT-M2-m2N" secondAttribute="centerX" id="jX7-L3-vzB"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ely-jG-IgH" secondAttribute="trailing" id="kRb-qy-8Ah"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Ely-jG-IgH" secondAttribute="bottom" id="nWF-St-i7T"/>
+                                                            <constraint firstItem="Ely-jG-IgH" firstAttribute="top" secondItem="QWT-M2-m2N" secondAttribute="top" id="x6d-bD-dM4"/>
                                                             <constraint firstAttribute="width" constant="120" id="ySu-sR-UuC"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
@@ -1198,7 +1209,7 @@
         <segue reference="eaM-kk-xim"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Logo_App-1" width="122" height="148"/>
+        <image name="Logo_App" width="57" height="71"/>
         <image name="icon_back" width="48" height="48"/>
         <image name="icon_setting" width="40" height="40"/>
         <image name="icon_share" width="37" height="37"/>

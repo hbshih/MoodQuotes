@@ -25,23 +25,12 @@ struct Provider: TimelineProvider{
     func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> Void) {
         
         let currentDate = Date()
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
         
-     /*   WeatherSevice().getWeather { (result) in
-            let weatherInfo: [Weather]
-            
-            if case .success(let fetchedData) = result {
-                weatherInfo = fetchedData
-            } else {
-                let errWeather = Weather(name: "SF", temperature: 0, unit: "F", description: "Error getting weather info")
-                weatherInfo = [errWeather, errWeather]
-            }
-            
-            let entry = WeatherEntry(date: currentDate, weatherInfo: weatherInfo)
-            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
-            completion(timeline)
-        }*/
+        var refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
         
+        if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+        {
+            refreshDate = Calendar.autoupdatingCurrent.date(byAdding: .day, value: 1, to: Calendar.autoupdatingCurrent.startOfDay(for: notificationDate))!        }
         firebaseService().getQuoteApiResponse { (result) in
             let quoteInfo: [Quote]
             if case .success(let fetchedData) = result {

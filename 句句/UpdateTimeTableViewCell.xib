@@ -32,12 +32,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="wL3-zS-E65">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="wL3-zS-E65">
                                 <rect key="frame" x="227" y="0.0" width="96" height="44"/>
                                 <color key="tintColor" red="0.89411764705882346" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="aT6-Nd-krS"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="timeChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="fqp-gM-yyu"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <constraints>
