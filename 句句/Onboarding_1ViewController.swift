@@ -18,9 +18,9 @@ class Onboarding_1ViewController: UIViewController {
         
         //  print(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.value(forKey: "updateTime"))
         
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.value(forKey: "updateTime") != nil
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") != nil
         {
-            performSegue(withIdentifier: "homeSegue", sender: nil)
+           // performSegue(withIdentifier: "homeSegue", sender: nil)
         }
         
     }
@@ -34,7 +34,9 @@ class Onboarding_1ViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         //UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(timePIcker.date, forKey: "Time Picker")
         print("did")
-        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(timePIcker.date, forKey: "updateTime")
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(timePIcker.date, forKey: "updateTime")
+        
+     //   setValue(timePIcker.date, forKey: "updateTime")
         
     }
     

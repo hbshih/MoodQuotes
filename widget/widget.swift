@@ -19,7 +19,7 @@ struct Provider: TimelineProvider{
     
     
     func getSnapshot(in context: Context, completion: @escaping (QuoteEntry) -> Void) {
-        let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "你是我的劫後餘生", author: "1")))
+        let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "活在當下 不求永生\n活得狂野 擁抱生命", author: "拉娜·德芮")))
         completion(quote)
     }
     func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> Void) {
@@ -63,20 +63,38 @@ struct QuoteEntry: TimelineEntry{
     var date: Date
     let quote: Quote
 }
-
+/*
 struct PlaceholderView: View
 {
     var body: some View{
-        GeegeeWidgetView(quote: Quote(quote: "1", author: "3"))
+        GeegeeWidgetView(quote: Quote(quote: "1", author: "3"), )
     }
-}
+}*/
 
 struct Emojibook_WidgetEntryView: View {
     var entry: Provider.Entry
     
-    var body: some View {
+    @Environment(\.widgetFamily) var family
+    
+  /*  var body: some View {
         GeegeeWidgetView(quote: entry.quote)
     }
+    */
+    @ViewBuilder
+        var body: some View {
+            
+            switch family {
+            case .systemSmall:
+                GeegeeWidgetView(quote: entry.quote, quoteSize: 18, authorSize: 12)
+            case .systemMedium:
+                GeegeeWidgetView(quote: entry.quote, quoteSize: 28, authorSize: 20)
+            case .systemLarge:
+                GeegeeWidgetView(quote: entry.quote, quoteSize: 32, authorSize: 24)
+            default:
+                Text("Some other WidgetFamily in the future.")
+            }
+
+        }
 }
 
 @main

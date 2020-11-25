@@ -7,6 +7,7 @@
 
 import UIKit
 import PopupDialog
+import WidgetKit
 
 class UpdateBackgroundColorTableViewCell: UITableViewCell {
     override func awakeFromNib() {
@@ -46,6 +47,7 @@ class UpdateBackgroundColorTableViewCell: UITableViewCell {
                 print("VC")
                 vc.tableview.reloadData()
             }
+            WidgetCenter.shared.reloadAllTimelines()
         }
         
         buttonTwo.backgroundColor = .systemGray6

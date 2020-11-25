@@ -16,6 +16,8 @@ struct GeegeeWidgetView: View {
     
     
     let quote: Quote
+    let quoteSize: Double
+    let authorSize: Double
   /*
     if let color = UserDefaults.standard.colorForKey(key: "BackgroundColor") as? UIColor
     {
@@ -48,12 +50,13 @@ struct GeegeeWidgetView: View {
     ZStack {
       Color(backgroundColor)
       VStack {
-            Text(quote.quote).font(Display_Font(font_size: 28).getFont()).foregroundColor(.black).multilineTextAlignment(.center)
+        Text(quote.quote).font(Display_Font(font_size: Int(quoteSize)).getFont()).foregroundColor(.black).multilineTextAlignment(.center)
         Text(quote.author)
-            .font(Display_Font(font_size: 20).getFont())
+            .font(Display_Font(font_size: Int(authorSize)).getFont())
           .multilineTextAlignment(.center)
           .padding(.top, 5)
-          .padding([.leading, .trailing])
+            .padding(.leading, 5)
+            .padding(.trailing, 5)
             .foregroundColor(.black)
       }
     }

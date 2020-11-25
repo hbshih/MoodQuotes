@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NotificationCenter
 
 class NotificationTableViewCell: UITableViewCell {
 
@@ -23,5 +24,18 @@ class NotificationTableViewCell: UITableViewCell {
     }
     
     @IBAction func notification_toggled(_ sender: Any) {
+    
+    }
+    @IBAction func notificationToggled(_ sender: UISwitch) {
+        
+        if sender.isOn
+        {
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(true, forKey: "isNotificationOn")
+        }else
+        {
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(false, forKey: "isNotificationOn")
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        }
+        
     }
 }

@@ -16,6 +16,9 @@
 		B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B506EBC125622FF800372198 /* UpdateTimeTableViewCell.xib */; };
 		B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBC72562306400372198 /* UpdateBackgroundColorTableViewCell.swift */; };
 		B506EBCA2562306400372198 /* UpdateBackgroundColorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B506EBC82562306400372198 /* UpdateBackgroundColorTableViewCell.xib */; };
+		B509566F256DDCC30075ACE9 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509566E256DDCC30075ACE9 /* DateHelper.swift */; };
+		B5095675256DDD380075ACE9 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5095674256DDD380075ACE9 /* Notification.swift */; };
+		B509567B256DDD6B0075ACE9 /* NotificationTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */; };
 		B5517C75255FAFC500E134CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C74255FAFC500E134CC /* AppDelegate.swift */; };
 		B5517C77255FAFC500E134CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C76255FAFC500E134CC /* SceneDelegate.swift */; };
 		B5517C79255FAFC500E134CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C78255FAFC500E134CC /* ViewController.swift */; };
@@ -25,6 +28,8 @@
 		B5517C8C255FAFC600E134CC /* __Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C8B255FAFC600E134CC /* __Tests.swift */; };
 		B5517C97255FAFC600E134CC /* __UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C96255FAFC600E134CC /* __UITests.swift */; };
 		B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517CB4255FB73400E134CC /* SettingViewController.swift */; };
+		B552F4DF256D0449001013BA /* SyncAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552F4DE256D0449001013BA /* SyncAppWidget.swift */; };
+		B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552F4DE256D0449001013BA /* SyncAppWidget.swift */; };
 		B5807EFD25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FD31C256B737000CBDAB6 /* RatingViewController.swift */; };
@@ -105,6 +110,9 @@
 		B506EBC125622FF800372198 /* UpdateTimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateTimeTableViewCell.xib; sourceTree = "<group>"; };
 		B506EBC72562306400372198 /* UpdateBackgroundColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBackgroundColorTableViewCell.swift; sourceTree = "<group>"; };
 		B506EBC82562306400372198 /* UpdateBackgroundColorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateBackgroundColorTableViewCell.xib; sourceTree = "<group>"; };
+		B509566E256DDCC30075ACE9 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		B5095674256DDD380075ACE9 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTrigger.swift; sourceTree = "<group>"; };
 		B5517C71255FAFC500E134CC /* 句句.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "句句.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5517C74255FAFC500E134CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5517C76255FAFC500E134CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +128,7 @@
 		B5517C96255FAFC600E134CC /* __UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __UITests.swift; sourceTree = "<group>"; };
 		B5517C98255FAFC600E134CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5517CB4255FB73400E134CC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B552F4DE256D0449001013BA /* SyncAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAppWidget.swift; sourceTree = "<group>"; };
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
 		B58FD31C256B737000CBDAB6 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		B58FD31D256B737100CBDAB6 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
@@ -267,6 +276,10 @@
 				B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */,
 				B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */,
 				B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */,
+				B5095674256DDD380075ACE9 /* Notification.swift */,
+				B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */,
+				B552F4DE256D0449001013BA /* SyncAppWidget.swift */,
+				B509566E256DDCC30075ACE9 /* DateHelper.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -611,11 +624,15 @@
 				B506EBC225622FF800372198 /* UpdateTimeTableViewCell.swift in Sources */,
 				B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */,
 				B5517C75255FAFC500E134CC /* AppDelegate.swift in Sources */,
+				B509566F256DDCC30075ACE9 /* DateHelper.swift in Sources */,
 				B59E212E25674D0A003A5521 /* Quote.swift in Sources */,
 				B5517C77255FAFC500E134CC /* SceneDelegate.swift in Sources */,
+				B509567B256DDD6B0075ACE9 /* NotificationTrigger.swift in Sources */,
 				B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */,
+				B552F4DF256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
+				B5095675256DDD380075ACE9 /* Notification.swift in Sources */,
 				B5807EFD25678043006052E2 /* firebaseService.swift in Sources */,
 				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
@@ -645,6 +662,7 @@
 				B59E213325674D13003A5521 /* Quote.swift in Sources */,
 				B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */,
 				B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */,
+				B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
 				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
 				B59E20B8256698FB003A5521 /* widget.swift in Sources */,

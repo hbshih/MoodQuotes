@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NotificationCenter
 
 class Onboarding_3ViewController: UIViewController {
 
@@ -13,7 +14,7 @@ class Onboarding_3ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
+        if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor")
         {
             print(color)
             backgroundColor.backgroundColor = color
@@ -31,6 +32,8 @@ class Onboarding_3ViewController: UIViewController {
             guard granted else { return }
             DispatchQueue.main.async {
                 UIApplication.shared.registerForRemoteNotifications()
+                let  aClass = NotificationTrigger()
+                aClass.setupNotifications()
             }
         }
     }
@@ -44,5 +47,4 @@ class Onboarding_3ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

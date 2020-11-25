@@ -10,6 +10,7 @@ import UIKit
 class Onboarding_2ViewController: UIViewController {
 
     @IBOutlet var backgroundView: UIView!
+    @IBOutlet weak var gray: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,19 +31,10 @@ class Onboarding_2ViewController: UIViewController {
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundView.backgroundColor, forKey: "BackgroundColor")
         }else
         {
-            print("default color")
+            
+            let default_color = gray.backgroundColor
+            
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: default_color, forKey: "BackgroundColor")
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

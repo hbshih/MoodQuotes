@@ -26,16 +26,17 @@
                                     <constraint firstAttribute="height" constant="44" id="yLi-U3-Q2f"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTz-Fy-tIQ">
-                                <rect key="frame" x="68" y="11.5" width="96" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTz-Fy-tIQ">
+                                <rect key="frame" x="68" y="11.5" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JgF-62-Kt5">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JgF-62-Kt5">
                                 <rect key="frame" x="255" y="6.5" width="51" height="31"/>
-                                <color key="onTintColor" red="0.93333333333333335" green="0.9137254901960784" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.64589239042294888" green="0.94472461938858032" blue="0.69501250916998103" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
+                                    <action selector="notificationToggled:" destination="KGk-i7-Jjw" eventType="valueChanged" id="nNS-Cj-dZw"/>
                                     <action selector="notification_toggled:" destination="KGk-i7-Jjw" eventType="valueChanged" id="9gy-j3-8zN"/>
                                 </connections>
                             </switch>
