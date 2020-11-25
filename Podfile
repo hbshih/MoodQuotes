@@ -12,6 +12,7 @@ target '句句' do
   pod 'Firebase'
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
+  pod 'GoogleAnalytics'
   #pod 'Onboard'
   pod 'Hero'
   pod 'PopupDialog'

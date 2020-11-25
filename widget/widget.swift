@@ -22,6 +22,7 @@ struct Provider: TimelineProvider{
         let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "活在當下 不求永生\n活得狂野 擁抱生命", author: "拉娜·德芮")))
         completion(quote)
     }
+    
     func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> Void) {
         
         let currentDate = Date()

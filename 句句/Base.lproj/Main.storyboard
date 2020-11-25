@@ -1209,7 +1209,7 @@
         <segue reference="eaM-kk-xim"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Logo_App" width="57" height="71"/>
+        <image name="Logo_App" width="57" height="70.5"/>
         <image name="icon_back" width="48" height="48"/>
         <image name="icon_setting" width="40" height="40"/>
         <image name="icon_share" width="37" height="37"/>

@@ -19,6 +19,9 @@
 		B509566F256DDCC30075ACE9 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509566E256DDCC30075ACE9 /* DateHelper.swift */; };
 		B5095675256DDD380075ACE9 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5095674256DDD380075ACE9 /* Notification.swift */; };
 		B509567B256DDD6B0075ACE9 /* NotificationTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */; };
+		B50956AA256DED9B0075ACE9 /* SplashScreen_.png in Resources */ = {isa = PBXBuildFile; fileRef = B50956A7256DED9B0075ACE9 /* SplashScreen_.png */; };
+		B50956AB256DED9B0075ACE9 /* SplashScreen_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B50956A8256DED9B0075ACE9 /* SplashScreen_@3x.png */; };
+		B50956AC256DED9B0075ACE9 /* SplashScreen_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */; };
 		B5517C75255FAFC500E134CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C74255FAFC500E134CC /* AppDelegate.swift */; };
 		B5517C77255FAFC500E134CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C76255FAFC500E134CC /* SceneDelegate.swift */; };
 		B5517C79255FAFC500E134CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517C78255FAFC500E134CC /* ViewController.swift */; };
@@ -54,7 +57,6 @@
 		B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
 		B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
-		B5F1E784256980470020A403 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F1E783256980470020A403 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,9 @@
 		B509566E256DDCC30075ACE9 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		B5095674256DDD380075ACE9 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTrigger.swift; sourceTree = "<group>"; };
+		B50956A7256DED9B0075ACE9 /* SplashScreen_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen_.png; sourceTree = "<group>"; };
+		B50956A8256DED9B0075ACE9 /* SplashScreen_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@3x.png"; sourceTree = "<group>"; };
+		B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@2x.png"; sourceTree = "<group>"; };
 		B5517C71255FAFC500E134CC /* 句句.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "句句.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5517C74255FAFC500E134CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5517C76255FAFC500E134CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,7 +155,6 @@
 		B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_3ViewController.swift; sourceTree = "<group>"; };
 		B5D3845C256BED8100B1A507 /* qiji-combo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "qiji-combo.ttf"; sourceTree = "<group>"; };
 		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
-		B5F1E783256980470020A403 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C486BA49175AD0DFD2DEE931 /* Pods-句句.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.debug.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.debug.xcconfig"; sourceTree = "<group>"; };
 		C665A53A1C09E8517182D19C /* Pods______UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,12 +263,14 @@
 				B59E212D25674D0A003A5521 /* Quote.swift */,
 				B5517C7A255FAFC500E134CC /* Main.storyboard */,
 				B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */,
-				B5F1E783256980470020A403 /* OnboardingViewController.swift */,
 				B5E8973525655F1F00D470E2 /* ShareViewController.swift */,
 				B5517CB4255FB73400E134CC /* SettingViewController.swift */,
 				B58FD31C256B737000CBDAB6 /* RatingViewController.swift */,
 				B58FD31D256B737100CBDAB6 /* RatingViewController.xib */,
 				B5517C7D255FAFC500E134CC /* Assets.xcassets */,
+				B50956A7256DED9B0075ACE9 /* SplashScreen_.png */,
+				B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */,
+				B50956A8256DED9B0075ACE9 /* SplashScreen_@3x.png */,
 				B5517C7F255FAFC600E134CC /* LaunchScreen.storyboard */,
 				B5517C82255FAFC600E134CC /* Info.plist */,
 				B506EBB125622E0700372198 /* NotificationTableViewCell.swift */,
@@ -449,10 +455,13 @@
 			files = (
 				B506EBCA2562306400372198 /* UpdateBackgroundColorTableViewCell.xib in Resources */,
 				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
+				B50956AA256DED9B0075ACE9 /* SplashScreen_.png in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
 				B59E21C225676F85003A5521 /* GoogleService-Info.plist in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
 				B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */,
+				B50956AC256DED9B0075ACE9 /* SplashScreen_@2x.png in Resources */,
+				B50956AB256DED9B0075ACE9 /* SplashScreen_@3x.png in Resources */,
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
 				B5517C7E255FAFC500E134CC /* Assets.xcassets in Resources */,
 				B5517C7C255FAFC500E134CC /* Main.storyboard in Resources */,
@@ -615,7 +624,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5F1E784256980470020A403 /* OnboardingViewController.swift in Sources */,
 				B59E213D256756CA003A5521 /* GeegeeWidgetView.swift in Sources */,
 				B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */,
 				B5517C79255FAFC500E134CC /* ViewController.swift in Sources */,
@@ -834,13 +842,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -857,13 +866,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -967,7 +977,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -976,6 +986,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -993,7 +1004,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1002,6 +1013,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

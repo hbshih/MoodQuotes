@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="9wg-5V-Zy4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen_.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hbv-OS-JdN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9wg-5V-Zy4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="REr-42-dum"/>
-                            <constraint firstItem="9wg-5V-Zy4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aC3-0l-MSY"/>
-                            <constraint firstAttribute="bottom" secondItem="9wg-5V-Zy4" secondAttribute="bottom" id="hJa-VO-SoO"/>
-                            <constraint firstItem="9wg-5V-Zy4" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="vcZ-AF-6pj"/>
+                            <constraint firstAttribute="bottom" secondItem="Hbv-OS-JdN" secondAttribute="bottom" id="E6N-aq-K4i"/>
+                            <constraint firstAttribute="trailing" secondItem="Hbv-OS-JdN" secondAttribute="trailing" id="bIO-pN-01z"/>
+                            <constraint firstItem="Hbv-OS-JdN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="fr4-JS-feL"/>
+                            <constraint firstItem="Hbv-OS-JdN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lyk-52-NI1"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +36,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SplashScreen" width="375" height="812"/>
+        <image name="SplashScreen_.png" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -55,6 +55,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Reachability (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
+  - GoogleAnalytics (3.17.0)
   - GoogleAppMeasurement (7.1.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
     - GoogleUtilities/MethodSwizzler (~> 7.0)
@@ -90,7 +91,6 @@ PODS:
     - nanopb/encode (= 2.30906.0)
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
-  - Onboard (2.3.3)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
   - PromisesObjC (1.2.11)
@@ -102,9 +102,9 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Database
   - Firebase/Messaging
+  - GoogleAnalytics
   - Hero
   - MASegmentedControl
-  - Onboard
   - PopupDialog
 
 SPEC REPOS:
@@ -120,6 +120,7 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
+    - GoogleAnalytics
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
@@ -127,7 +128,6 @@ SPEC REPOS:
     - leveldb-library
     - MASegmentedControl
     - nanopb
-    - Onboard
     - PopupDialog
     - PromisesObjC
 
@@ -143,6 +143,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 3de38553e86171b5f81d83cdeef63473d37bfdb0
   FirebaseInstanceID: 61e8d10a4192a582c6239378169d10e504ca8d91
   FirebaseMessaging: 076054895c9260f82c7304cc7709dbf19b8f3e4a
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAppMeasurement: 89e1a64593f968713b0506ba1b53b38a154bf9a5
   GoogleDataTransport: e4085e6762f36a6141738f46b0153473ce57fb18
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
@@ -150,10 +151,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MASegmentedControl: 9b58f9ba3a562a739b63b29e4ca2b9dc4d9c62cb
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
-  Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: d9d2b43bbc6634c98cb8fcf6f805c990842e9219
+PODFILE CHECKSUM: ee420f7392c5a7b359b98bfb0ac2d6f5ebb32d1e
 
 COCOAPODS: 1.9.0

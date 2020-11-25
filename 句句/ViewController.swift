@@ -78,11 +78,14 @@ class ViewController: UIViewController, MessagingDelegate {
         
         frontQuote.text = "語錄更新中..."
         
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         
+        let date_today = dateFormatter.string(from: Date())
         
         DispatchQueue.main.async { [self] in
             //  let userID = Auth.auth().currentUser?.uid
-            self.ref.child("Quote of the Day").observeSingleEvent(of: .value) { (snapshot) in
+            self.ref.child("Quote of the Day").child("\(date_today)").observeSingleEvent(of: .value) { (snapshot) in
                 if let value = snapshot.value as? NSDictionary
                 {
                     
