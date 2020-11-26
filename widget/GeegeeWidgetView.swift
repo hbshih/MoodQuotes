@@ -50,6 +50,7 @@ struct GeegeeWidgetView: View {
     ZStack {
       Color(backgroundColor)
       VStack {
+       // Text(Date_Manager().getWidgetDisplayDate()).font(Display_Font(font_size: Int(authorSize)).getFont()).multilineTextAlignment(.center)
         Text(quote.quote).font(Display_Font(font_size: Int(quoteSize)).getFont()).foregroundColor(.black).multilineTextAlignment(.center)
         Text(quote.author)
             .font(Display_Font(font_size: Int(authorSize)).getFont())

@@ -31,7 +31,8 @@ struct Provider: TimelineProvider{
         
         if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
         {
-            refreshDate = Calendar.autoupdatingCurrent.date(byAdding: .day, value: 1, to: Calendar.autoupdatingCurrent.startOfDay(for: notificationDate))!        }
+            refreshDate = Calendar.autoupdatingCurrent.date(byAdding: .day, value: 1, to: Calendar.autoupdatingCurrent.startOfDay(for: notificationDate))!
+        }
         firebaseService().getQuoteApiResponse { (result) in
             let quoteInfo: [Quote]
             if case .success(let fetchedData) = result {

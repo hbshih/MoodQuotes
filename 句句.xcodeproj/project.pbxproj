@@ -56,6 +56,8 @@
 		B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */; };
 		B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
 		B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
+		B5DF562E256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
+		B5DF562F256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -154,6 +156,7 @@
 		B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_2ViewController.swift; sourceTree = "<group>"; };
 		B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_3ViewController.swift; sourceTree = "<group>"; };
 		B5D3845C256BED8100B1A507 /* qiji-combo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "qiji-combo.ttf"; sourceTree = "<group>"; };
+		B5DF562D256F2C01004A24D8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C486BA49175AD0DFD2DEE931 /* Pods-句句.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.debug.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.debug.xcconfig"; sourceTree = "<group>"; };
@@ -317,6 +320,7 @@
 				B59E20BC256698FC003A5521 /* Info.plist */,
 				B59E20D7256741C3003A5521 /* GeegeeWidgetView.swift */,
 				B5807EFC25678043006052E2 /* firebaseService.swift */,
+				B5DF562D256F2C01004A24D8 /* Date.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -640,6 +644,7 @@
 				B552F4DF256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
+				B5DF562E256F2C01004A24D8 /* Date.swift in Sources */,
 				B5095675256DDD380075ACE9 /* Notification.swift in Sources */,
 				B5807EFD25678043006052E2 /* firebaseService.swift in Sources */,
 				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
@@ -670,6 +675,7 @@
 				B59E213325674D13003A5521 /* Quote.swift in Sources */,
 				B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */,
 				B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */,
+				B5DF562F256F2C01004A24D8 /* Date.swift in Sources */,
 				B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
 				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
