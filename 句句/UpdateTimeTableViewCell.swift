@@ -25,10 +25,17 @@ class UpdateTimeTableViewCell: UITableViewCell {
     
     @IBAction func timeChanged(_ sender: UIDatePicker) {
         
-        let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
-            
-        timePicker.setDate(date, animated: false)
+        timePicker.setDate(sender.date, animated: true)
         
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(sender.date, forKey: "updateTime")
+        
+        print(sender.date)
+        
+        
+        
+        
+        
     }
+    
+    
 }

@@ -33,6 +33,16 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "updateTimeTableViewCell") as! UpdateTimeTableViewCell
+            if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+            {
+                cell.timePicker.date = notificationDate
+                let date = Calendar.current.date(bySettingHour: notificationDate.hour, minute: notificationDate.minute, second: 0, of: notificationDate)!
+                cell.timePicker.setDate(date, animated: false)
+            }else
+            {
+                let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
+                cell.timePicker.setDate(date, animated: false)
+            }
           // cell.timePicker.
             return cell
         case 2:

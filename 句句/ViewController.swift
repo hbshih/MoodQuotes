@@ -60,7 +60,7 @@ class ViewController: UIViewController, MessagingDelegate {
         authorName.font = font
         hiddenAuthorName.font = font
         
-        
+        /*
         let content = UNMutableNotificationContent()
         content.title = "test notifaction"
         content.body = "test notification after 5 second"
@@ -72,7 +72,7 @@ class ViewController: UIViewController, MessagingDelegate {
         UNUserNotificationCenter.current().add(request) { (error) in
             print("error\(error )")
 
-        }
+        }*/
         
         ref = Database.database().reference()
         

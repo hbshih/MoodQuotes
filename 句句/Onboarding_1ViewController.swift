@@ -23,7 +23,7 @@ class Onboarding_1ViewController: UIViewController {
         
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") != nil
         {
-           // performSegue(withIdentifier: "homeSegue", sender: nil)
+            performSegue(withIdentifier: "homeSegue", sender: nil)
         }
         
     }
