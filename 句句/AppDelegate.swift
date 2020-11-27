@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import UserNotifications
 import FirebaseMessaging
+import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,13 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         UIApplication.shared.setMinimumBackgroundFetchInterval(86400)
        // self.navigationController.navigationBar.isHidden = true
-        
+
         // get quotes of the day
-        
+        let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return ApplicationDelegate.shared.application(app, open: url, options: options)
+    }
+    
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
          // FETCH DATA and REFRESH NOTIFICATIONS
