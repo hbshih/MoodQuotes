@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // We need to do this to ensure the current week value is updated to either 1 or 0
         // You will need to delete all notifications with same same category first else your going to be getting both weeks notifications
         
+        
+        
         if let isNoti = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.bool(forKey: "isNotificationOn")
         {
             if isNoti

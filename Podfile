@@ -16,6 +16,9 @@ target '句句' do
   #pod 'Onboard'
   pod 'Hero'
   pod 'PopupDialog'
+#  pod 'FacebookCore'
+#  pod 'FacebookLogin'
+#  pod 'FacebookShare'
   
 
   target '句句Tests' do

@@ -55,6 +55,7 @@
 		B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */; };
 		B59E21C225676F85003A5521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59E21C125676F85003A5521 /* GoogleService-Info.plist */; };
 		B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59E21C125676F85003A5521 /* GoogleService-Info.plist */; };
+		B5AF873A2571209C008A3BBC /* videoTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF87392571209C008A3BBC /* videoTutorialViewController.swift */; };
 		B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */; };
 		B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */; };
 		B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */; };
@@ -159,6 +160,7 @@
 		B59E216B25675F8F003A5521 /* widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetExtension.entitlements; sourceTree = "<group>"; };
 		B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtention.swift; sourceTree = "<group>"; };
 		B59E21C125676F85003A5521 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B5AF87392571209C008A3BBC /* videoTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoTutorialViewController.swift; sourceTree = "<group>"; };
 		B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_1ViewController.swift; sourceTree = "<group>"; };
 		B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_2ViewController.swift; sourceTree = "<group>"; };
 		B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_3ViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				B5D3845C256BED8100B1A507 /* qiji-combo.ttf */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
 				B5517C7A255FAFC500E134CC /* Main.storyboard */,
+				B5AF87392571209C008A3BBC /* videoTutorialViewController.swift */,
 				B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */,
 				B5E8973525655F1F00D470E2 /* ShareViewController.swift */,
 				B5517CB4255FB73400E134CC /* SettingViewController.swift */,
@@ -657,6 +660,7 @@
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
 				B5DF562E256F2C01004A24D8 /* Date.swift in Sources */,
+				B5AF873A2571209C008A3BBC /* videoTutorialViewController.swift in Sources */,
 				B5095675256DDD380075ACE9 /* Notification.swift in Sources */,
 				B5807EFD25678043006052E2 /* firebaseService.swift in Sources */,
 				B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */,
@@ -862,14 +866,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -886,14 +890,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -997,7 +1001,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1006,7 +1010,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1024,7 +1028,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1033,7 +1037,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

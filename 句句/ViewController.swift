@@ -10,6 +10,7 @@ import FirebaseDatabase
 import UserNotifications
 import Firebase
 import FirebaseMessaging
+import WidgetKit
 
 var global_quote: String = ""
 
@@ -44,7 +45,16 @@ class ViewController: UIViewController, MessagingDelegate {
                 print("pending")
                 print(request)
             }
+         
+         
+         
         })*/
+        let center = UNUserNotificationCenter.current()
+        center.getPendingNotificationRequests(completionHandler: { requests in
+            print(requests)
+        })
+        
+        WidgetCenter.shared.reloadAllTimelines()
         
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self

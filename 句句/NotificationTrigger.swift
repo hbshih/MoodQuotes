@@ -20,7 +20,10 @@ class NotificationTrigger : NSObject {
         center.getPendingNotificationRequests(completionHandler: { requests in
             if requests.count > 0
             {
-                hasPendingNoti = true
+                if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isNotificationOn")
+                {
+                    hasPendingNoti = true
+                }
             }
         })
         

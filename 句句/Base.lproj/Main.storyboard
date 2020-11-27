@@ -146,12 +146,12 @@
                                                         <rect key="frame" x="147" y="0.0" width="120" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGP-Re-m1z">
-                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="55"/>
+                                                                <rect key="frame" x="37" y="0.0" width="46" height="55"/>
                                                                 <state key="normal" title="下一步">
                                                                     <color key="titleColor" red="0.33725490196078434" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <segue destination="M2B-Qb-JNt" kind="push" id="NAu-Sc-kBv"/>
+                                                                    <segue destination="M2B-Qb-JNt" kind="show" id="NAu-Sc-kBv"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -160,9 +160,7 @@
                                                             <constraint firstItem="qGP-Re-m1z" firstAttribute="top" secondItem="xux-Aw-9xJ" secondAttribute="top" id="0Yx-hd-NCC"/>
                                                             <constraint firstAttribute="bottom" secondItem="qGP-Re-m1z" secondAttribute="bottom" id="LaZ-Ua-iU1"/>
                                                             <constraint firstAttribute="width" constant="120" id="PyN-Cj-RqV"/>
-                                                            <constraint firstItem="qGP-Re-m1z" firstAttribute="leading" secondItem="xux-Aw-9xJ" secondAttribute="leading" id="SLO-DX-y3f"/>
                                                             <constraint firstItem="qGP-Re-m1z" firstAttribute="centerX" secondItem="xux-Aw-9xJ" secondAttribute="centerX" id="U5X-hC-xfE"/>
-                                                            <constraint firstAttribute="trailing" secondItem="qGP-Re-m1z" secondAttribute="trailing" id="XQu-kT-sse"/>
                                                             <constraint firstItem="qGP-Re-m1z" firstAttribute="centerY" secondItem="xux-Aw-9xJ" secondAttribute="centerY" id="d4H-Xc-iE0"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
@@ -373,18 +371,27 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64v-JA-4Ui">
                                                 <rect key="frame" x="0.0" y="597.5" width="414" height="298.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="共勉之。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8l-8V-78E">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共勉之。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8l-8V-78E">
+                                                        <rect key="frame" x="143" y="130.5" width="128" height="37.5"/>
                                                         <fontDescription key="fontDescription" name="jf-liao-Monospaced-Regular" family="jf-liao-Monospaced" pointSize="32"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Y8l-8V-78E" firstAttribute="centerY" secondItem="64v-JA-4Ui" secondAttribute="centerY" id="5r3-eH-UVQ"/>
+                                                    <constraint firstItem="Y8l-8V-78E" firstAttribute="centerX" secondItem="64v-JA-4Ui" secondAttribute="centerX" id="AUK-XH-t9L"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94895178079999998" green="0.92952316999999995" blue="0.92156714200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="64v-JA-4Ui" firstAttribute="leading" secondItem="kgV-82-bvE" secondAttribute="leading" id="FDb-jg-7wH"/>
+                                            <constraint firstItem="64v-JA-4Ui" firstAttribute="top" secondItem="Mj4-uS-dYQ" secondAttribute="bottom" id="Hqi-a5-oUe"/>
+                                            <constraint firstAttribute="trailing" secondItem="64v-JA-4Ui" secondAttribute="trailing" id="Pdu-2R-E4x"/>
+                                            <constraint firstAttribute="bottom" secondItem="64v-JA-4Ui" secondAttribute="bottom" id="xcu-va-2nY"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -432,7 +439,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uJy-iA-6sN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uJy-iA-6sN">
                                 <rect key="frame" x="0.0" y="88" width="414" height="335"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -472,10 +479,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="aIn-NT-5LB"/>
                                 </constraints>
-                                <string key="text">安裝教學
+                                <string key="text">小工具安裝教學（須更新至iOS 14）
 
 1. 回到桌面，在主畫面上，觸碰並按住小工具或空白區域，直到 App 開始晃動。 
-2. 點一下左上角的 [+] 按鈕。 
+2. 點一下上方的 [+] 按鈕。 
 3. 找到句句。 
 4. 點一下「完成」。</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
@@ -494,7 +501,7 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUH-Tm-0Ui">
                                         <rect key="frame" x="16" y="5" width="34" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="34" id="NV3-D7-G6W"/>
+                                            <constraint firstAttribute="width" secondItem="HUH-Tm-0Ui" secondAttribute="height" multiplier="1:1" id="Vcs-Bg-al8"/>
                                             <constraint firstAttribute="height" constant="34" id="W1f-0p-aKr"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="icon_back"/>
@@ -516,7 +523,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RE0-8a-AwB">
                                 <rect key="frame" x="16" y="812" width="382" height="30"/>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="影片教學">
+                                <state key="normal" title="小工具安裝教學">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -952,6 +959,7 @@
                                                     <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="skip:" destination="M2B-Qb-JNt" eventType="touchUpInside" id="Z9L-QS-Phc"/>
                                                     <segue destination="vdU-3q-1DX" kind="show" id="hS7-Sl-5ah"/>
                                                 </connections>
                                             </button>
@@ -964,7 +972,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y45-iq-1d7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="y45-iq-1d7" firstAttribute="bottom" secondItem="oSo-lx-APs" secondAttribute="bottom" id="0ev-9C-UuG"/>
                             <constraint firstItem="oSo-lx-APs" firstAttribute="top" secondItem="y45-iq-1d7" secondAttribute="top" id="CEw-pM-fv1"/>
@@ -1076,7 +1084,6 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                                 <connections>
                                                                                     <action selector="AcceptedNotification:" destination="vdU-3q-1DX" eventType="touchUpInside" id="JMw-M6-u5d"/>
-                                                                                    <segue destination="BYZ-38-t0r" kind="show" id="eaM-kk-xim"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jY-Y9-wOZ">
@@ -1094,7 +1101,7 @@
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                                 <connections>
-                                                                                    <segue destination="BYZ-38-t0r" kind="show" id="SBM-ti-wNy"/>
+                                                                                    <action selector="FinishProcessTapped:" destination="vdU-3q-1DX" eventType="touchUpInside" id="dC8-rJ-sTV"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -1144,16 +1151,16 @@
                                                                     <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <segue destination="BYZ-38-t0r" kind="show" id="yTQ-x1-xg7"/>
+                                                                    <action selector="FinishProcessTapped:" destination="vdU-3q-1DX" eventType="touchUpInside" id="6wQ-Zv-liF"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstItem="Ely-jG-IgH" firstAttribute="leading" secondItem="QWT-M2-m2N" secondAttribute="leading" id="Pa2-Bl-hnS"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ely-jG-IgH" secondAttribute="trailing" id="6ng-8b-rMr"/>
                                                             <constraint firstItem="Ely-jG-IgH" firstAttribute="centerY" secondItem="QWT-M2-m2N" secondAttribute="centerY" id="X7z-zC-acB"/>
+                                                            <constraint firstItem="Ely-jG-IgH" firstAttribute="leading" secondItem="QWT-M2-m2N" secondAttribute="leading" id="YKe-po-tkB"/>
                                                             <constraint firstItem="Ely-jG-IgH" firstAttribute="centerX" secondItem="QWT-M2-m2N" secondAttribute="centerX" id="jX7-L3-vzB"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Ely-jG-IgH" secondAttribute="trailing" id="kRb-qy-8Ah"/>
                                                             <constraint firstAttribute="bottom" secondItem="Ely-jG-IgH" secondAttribute="bottom" id="nWF-St-i7T"/>
                                                             <constraint firstItem="Ely-jG-IgH" firstAttribute="top" secondItem="QWT-M2-m2N" secondAttribute="top" id="x6d-bD-dM4"/>
                                                             <constraint firstAttribute="width" constant="120" id="ySu-sR-UuC"/>
@@ -1198,11 +1205,63 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="backgroundColor" destination="bgs-v7-4eZ" id="IxL-hN-Z1O"/>
+                        <segue destination="HQ8-wu-bYF" kind="show" identifier="showTutorialSegue" id="yOU-kD-IAZ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="homeSegue" id="ow3-cU-GNT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="727-9b-62p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2144.927536231884" y="114.50892857142857"/>
+        </scene>
+        <!--Video Tutorial View Controller-->
+        <scene sceneID="xJ4-oC-r7f">
+            <objects>
+                <viewController id="HQ8-wu-bYF" customClass="videoTutorialViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KX0-Oj-90P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oN8-Ug-nEA">
+                                <rect key="frame" x="132" y="775" width="150" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIJ-or-5WP">
+                                        <rect key="frame" x="13.5" y="0.0" width="123" height="55"/>
+                                        <state key="normal" title="我會安裝小工具了">
+                                            <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Done:" destination="HQ8-wu-bYF" eventType="touchUpInside" id="Dhp-uo-1Ac"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="0dK-dS-duZ"/>
+                                    <constraint firstItem="dIJ-or-5WP" firstAttribute="centerY" secondItem="oN8-Ug-nEA" secondAttribute="centerY" id="377-ak-l2O"/>
+                                    <constraint firstAttribute="bottom" secondItem="dIJ-or-5WP" secondAttribute="bottom" id="Bay-ub-4pk"/>
+                                    <constraint firstAttribute="width" constant="150" id="RJ2-Pu-2gl"/>
+                                    <constraint firstItem="dIJ-or-5WP" firstAttribute="top" secondItem="oN8-Ug-nEA" secondAttribute="top" id="U5e-6n-Ksd"/>
+                                    <constraint firstItem="dIJ-or-5WP" firstAttribute="centerX" secondItem="oN8-Ug-nEA" secondAttribute="centerX" id="W49-ot-2Pe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UBR-94-Pmd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UBR-94-Pmd" firstAttribute="bottom" secondItem="oN8-Ug-nEA" secondAttribute="bottom" constant="32" id="4Ym-ce-DKi"/>
+                            <constraint firstItem="oN8-Ug-nEA" firstAttribute="centerX" secondItem="UBR-94-Pmd" secondAttribute="centerX" id="99A-dF-3LU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="h7b-Et-oh9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KNg-CG-MQE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-814.49275362318849" y="646.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6yZ-0w-TJO">
@@ -1244,8 +1303,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ly3-Ze-ofX"/>
-        <segue reference="iiW-8X-Mfm"/>
+        <segue reference="lk2-Vz-ikE"/>
+        <segue reference="ow3-cU-GNT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App" width="57" height="70.5"/>
@@ -1257,6 +1316,9 @@
         <image name="noun_instagram_3350460 (1) 1" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -146,8 +146,8 @@ struct widget: Widget{
         ) { entry in
             Emojibook_WidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("句句")
-        .description("See the latest video tutorials.")
+        .configurationDisplayName("句句 每日語錄")
+        .description("記得分享")
     }
     
 }

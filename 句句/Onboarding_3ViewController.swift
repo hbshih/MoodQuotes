@@ -18,9 +18,20 @@ class Onboarding_3ViewController: UIViewController {
         {
             print(color)
             backgroundColor.backgroundColor = color
+        }else
+        {
+        
+            backgroundColor.backgroundColor = UIColor(red: 239/255, green: 233/255, blue: 230/255, alpha: 1.0)
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundColor.backgroundColor, forKey: "BackgroundColor")
+            
         }
-
+            
         // Do any additional setup after loading the view.
+    }
+    @IBAction func FinishProcessTapped(_ sender: Any) {
+        
+        
+        
     }
     
     @IBAction func AcceptedNotification(_ sender: Any) {
@@ -47,4 +58,14 @@ class Onboarding_3ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func checkSegue()
+    {
+        if #available(iOS 14.0, *) {
+           performSegue(withIdentifier: "showTutorialSegue", sender: nil)
+        } else {
+            performSegue(withIdentifier: "homeSegue", sender: nil)
+        }
+    }
+    
 }
