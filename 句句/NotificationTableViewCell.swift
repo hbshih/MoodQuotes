@@ -12,9 +12,19 @@ class NotificationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var notification: UILabel!
+    @IBOutlet weak var `switch`: UISwitch!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isNotificationOn")
+        {
+            `switch`.isOn = true
+        }else
+        {
+            `switch`.isOn = false
+            
+        }
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,7 +40,18 @@ class NotificationTableViewCell: UITableViewCell {
         
         if sender.isOn
         {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+                (granted, error) in
+                guard granted else { return }
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                    let  aClass = NotificationTrigger()
+                    aClass.setupNotifications()
+                }
+            }
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(true, forKey: "isNotificationOn")
+        //    let  aClass = NotificationTrigger()
+          //  aClass.setupNotifications()
         }else
         {
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(false, forKey: "isNotificationOn")

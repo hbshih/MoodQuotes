@@ -37,6 +37,10 @@
 		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FD31C256B737000CBDAB6 /* RatingViewController.swift */; };
 		B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58FD31D256B737100CBDAB6 /* RatingViewController.xib */; };
+		B591B179257087A400C389D9 /* ezgif-3-d2dbde6ebf9a.gif in Resources */ = {isa = PBXBuildFile; fileRef = B591B178257087A400C389D9 /* ezgif-3-d2dbde6ebf9a.gif */; };
+		B591B17F2570A0C100C389D9 /* SyncAppQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */; };
+		B591B1802570A0C100C389D9 /* SyncAppQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */; };
+		B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */; };
 		B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205425669862003A5521 /* WidgetKit.framework */; };
 		B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205625669862003A5521 /* SwiftUI.framework */; };
 		B59E20B8256698FB003A5521 /* widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E20B7256698FB003A5521 /* widget.swift */; };
@@ -139,6 +143,9 @@
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
 		B58FD31C256B737000CBDAB6 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		B58FD31D256B737100CBDAB6 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
+		B591B178257087A400C389D9 /* ezgif-3-d2dbde6ebf9a.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ezgif-3-d2dbde6ebf9a.gif"; sourceTree = "<group>"; };
+		B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAppQuotes.swift; sourceTree = "<group>"; };
+		B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleNewUserViewController.swift; sourceTree = "<group>"; };
 		B59E205425669862003A5521 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B59E205625669862003A5521 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B59E20B3256698FB003A5521 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,12 +272,13 @@
 				B5D3845C256BED8100B1A507 /* qiji-combo.ttf */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
 				B5517C7A255FAFC500E134CC /* Main.storyboard */,
-				B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */,
+				B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */,
 				B5E8973525655F1F00D470E2 /* ShareViewController.swift */,
 				B5517CB4255FB73400E134CC /* SettingViewController.swift */,
 				B58FD31C256B737000CBDAB6 /* RatingViewController.swift */,
 				B58FD31D256B737100CBDAB6 /* RatingViewController.xib */,
 				B5517C7D255FAFC500E134CC /* Assets.xcassets */,
+				B591B178257087A400C389D9 /* ezgif-3-d2dbde6ebf9a.gif */,
 				B50956A7256DED9B0075ACE9 /* SplashScreen_.png */,
 				B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */,
 				B50956A8256DED9B0075ACE9 /* SplashScreen_@3x.png */,
@@ -283,12 +291,14 @@
 				B506EBC72562306400372198 /* UpdateBackgroundColorTableViewCell.swift */,
 				B506EBC82562306400372198 /* UpdateBackgroundColorTableViewCell.xib */,
 				B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */,
+				B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */,
 				B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */,
 				B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */,
 				B5095674256DDD380075ACE9 /* Notification.swift */,
 				B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */,
 				B552F4DE256D0449001013BA /* SyncAppWidget.swift */,
 				B509566E256DDCC30075ACE9 /* DateHelper.swift */,
+				B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -457,6 +467,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B591B179257087A400C389D9 /* ezgif-3-d2dbde6ebf9a.gif in Resources */,
 				B506EBCA2562306400372198 /* UpdateBackgroundColorTableViewCell.xib in Resources */,
 				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
 				B50956AA256DED9B0075ACE9 /* SplashScreen_.png in Resources */,
@@ -641,12 +652,14 @@
 				B5517C77255FAFC500E134CC /* SceneDelegate.swift in Sources */,
 				B509567B256DDD6B0075ACE9 /* NotificationTrigger.swift in Sources */,
 				B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */,
+				B591B17F2570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
 				B552F4DF256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
 				B5DF562E256F2C01004A24D8 /* Date.swift in Sources */,
 				B5095675256DDD380075ACE9 /* Notification.swift in Sources */,
 				B5807EFD25678043006052E2 /* firebaseService.swift in Sources */,
+				B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */,
 				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
 			);
@@ -676,6 +689,7 @@
 				B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */,
 				B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B5DF562F256F2C01004A24D8 /* Date.swift in Sources */,
+				B591B1802570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
 				B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
 				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
@@ -848,7 +862,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -872,7 +886,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -983,7 +997,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1010,7 +1024,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

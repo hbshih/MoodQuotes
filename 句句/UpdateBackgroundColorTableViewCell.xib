@@ -33,11 +33,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6Y-UM-GBW">
-                                <rect key="frame" x="274" y="7" width="30" height="30"/>
+                                <rect key="frame" x="224" y="7" width="91" height="30"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.91764705882352937" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="K3X-Jy-15C"/>
-                                    <constraint firstAttribute="width" constant="30" id="SC5-Ei-WPL"/>
+                                    <constraint firstAttribute="width" constant="91" id="SC5-Ei-WPL"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -50,7 +50,7 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="s6Y-UM-GBW" secondAttribute="trailing" constant="16" id="48V-ai-DK0"/>
+                            <constraint firstAttribute="trailing" secondItem="s6Y-UM-GBW" secondAttribute="trailing" constant="5" id="48V-ai-DK0"/>
                             <constraint firstItem="gh6-Eg-Zuu" firstAttribute="leading" secondItem="LXe-nK-LUZ" secondAttribute="trailing" constant="8" symbolic="YES" id="6Xi-7t-gBM"/>
                             <constraint firstAttribute="bottom" secondItem="LXe-nK-LUZ" secondAttribute="bottom" id="GJC-nK-OaU"/>
                             <constraint firstItem="LXe-nK-LUZ" firstAttribute="leading" secondItem="tEN-fO-G56" secondAttribute="leading" constant="16" id="axj-yy-3vw"/>

@@ -63,6 +63,7 @@
             <connections>
                 <outlet property="icon" destination="cWK-Yl-hdk" id="9nj-6r-UWc"/>
                 <outlet property="notification" destination="cTz-Fy-tIQ" id="qKq-Wq-Q5I"/>
+                <outlet property="switch" destination="JgF-62-Kt5" id="fGH-uD-o4h"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
         </tableViewCell>

@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.setMinimumBackgroundFetchInterval(86400)
        // self.navigationController.navigationBar.isHidden = true
         
+        // get quotes of the day
+        
+        
+        
         return true
     }
     

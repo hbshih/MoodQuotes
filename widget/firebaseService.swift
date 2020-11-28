@@ -73,17 +73,26 @@ class firebaseService {
         print(Data)
         
         
-        
         if let quoteD = Data{
-            return [Quote(quote: quoteD.Quote, author: quoteD.Author)]
+            
+            if quoteD.Author.count == quoteD.Quote.count
+            {
+                let random_number = Int.random(in: 0..<quoteD.Author.count)
+                
+                print(Quote(quote: quoteD.Quote[random_number], author: quoteD.Author[random_number]))
+                
+                return [Quote(quote: quoteD.Quote[random_number], author: quoteD.Author[random_number])]
+            }
+            
         }
         
-        return [Quote(quote: "Erro", author: "Error")]
+        return [Quote(quote: "今天沒有更新", author: "休息一下")]
     }
     
 }
 
 struct QuoteResponse: Codable {
-    let Quote: String
-    let Author: String
+
+    let Quote: [String]
+    let Author: [String]
 }

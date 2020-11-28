@@ -19,12 +19,6 @@ class Onboarding_1ViewController: UIViewController {
         let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
             
         timePIcker.setDate(date, animated: false)
-        //  print(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.value(forKey: "updateTime"))
-        
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") != nil
-        {
-            performSegue(withIdentifier: "homeSegue", sender: nil)
-        }
         
     }
     
@@ -37,10 +31,12 @@ class Onboarding_1ViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         //UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(timePIcker.date, forKey: "Time Picker")
         print("did")
-        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(timePIcker.date, forKey: "updateTime")
-        print(timePIcker.date)
-     //   setValue(timePIcker.date, forKey: "updateTime")
         
+        // Add next update date to user defaults
+        let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: timePIcker.date)
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(timePIcker.date, forKey: "updateTime")
+        print("current date \(timePIcker.date)")
+        print("update date \(updateTime)")
     }
     
 

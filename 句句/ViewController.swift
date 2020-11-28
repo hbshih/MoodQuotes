@@ -36,6 +36,15 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        /*
+        let center = UNUserNotificationCenter.current()
+        center.getPendingNotificationRequests(completionHandler: { requests in
+            print("pending")
+            for request in requests {
+                print("pending")
+                print(request)
+            }
+        })*/
         
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
@@ -74,58 +83,95 @@ class ViewController: UIViewController, MessagingDelegate {
 
         }*/
         
+        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
+            {
+            
+            if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+            {
+                let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: notificationDate)
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
+                
+            }
+            
+            
+            DispatchQueue.main.async {
+                firebaseService().getQuoteApiResponse { [self] (result) in
+                    let quoteInfo: [Quote]
+                    if case .success(let fetchedData) = result {
+                        quoteInfo = fetchedData
+                        self.quote = quoteInfo.first!.quote
+                        self.author = quoteInfo.first!.author
+                        
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.quote, forKey: "Quote")
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.author, forKey: "Author")
+
+                        
+                        DispatchQueue.main.async { [self] in
+                        self.frontQuote.text = self.quote
+                        self.authorName.text = self.author
+                        self.hiddenQuote.text = self.quote
+                        self.hiddenAuthorName.text = self.author
+                        global_quote = frontQuote.text!
+                        
+                        }
+
+                        
+                        
+                    } else {
+                        let errQuote = Quote(quote: "App當機拉", author: "By Me")
+                        quoteInfo = [errQuote,errQuote]
+                    }
+                }
+            }
+            }else
+        {
+            
+            print("load from local")
+            let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
+            let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
+
+            DispatchQueue.main.async { [self] in
+                self.frontQuote.text = Q
+                self.authorName.text = A
+                self.hiddenQuote.text = Q
+                self.hiddenAuthorName.text = A
+                global_quote = frontQuote.text!
+            
+            }
+        }
         ref = Database.database().reference()
         
-        frontQuote.text = "語錄更新中..."
         
+        frontQuote.text = "語錄更新中..."
+        authorName.text = "更新中"
         var dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
         let date_today = dateFormatter.string(from: Date())
         
-        DispatchQueue.main.async { [self] in
-            //  let userID = Auth.auth().currentUser?.uid
-            self.ref.child("Quote of the Day").child("\(date_today)").observeSingleEvent(of: .value) { (snapshot) in
-                if let value = snapshot.value as? NSDictionary
-                {
-                    
-                    if let quote = value["Quote"] as? String
-                    {
-                        self.quote = quote
-                        if let author = value["Author"] as? String
-                        {
-                            self.author = author
-                            frontQuote.text = self.quote
-                            authorName.text = self.author
-                            hiddenQuote.text = self.quote
-                            hiddenAuthorName.text = self.author
-                            global_quote = frontQuote.text!
-                        }
-                    }
-                }
-            }
-        /*    observe(.value) { (snapshot) in
-                if let value = snapshot.value as? NSDictionary
-                {
-                    
-                    if let quote = value["Quote"] as? String
-                    {
-                        self.quote = quote
-                        if let author = value["Author"] as? String
-                        {
-                            self.author = author
-                            frontQuote.text = self.quote
-                            authorName.text = self.author
-                            hiddenQuote.text = self.quote
-                            hiddenAuthorName.text = self.author
-                            global_quote = frontQuote.text!
-                        }
-                    }
-                }
-            }*/
-            
-        }
-        
+//        DispatchQueue.main.async { [self] in
+//            //  let userID = Auth.auth().currentUser?.uid
+//            self.ref.child("Quote of the Day").child("\(date_today)").observeSingleEvent(of: .value) { (snapshot) in
+//                if let value = snapshot.value as? NSDictionary
+//                {
+//
+//                    if let quote = value["Quote"] as? String
+//                    {
+//                        self.quote = quote
+//                        if let author = value["Author"] as? String
+//                        {
+//                            self.author = author
+//                            frontQuote.text = self.quote
+//                            authorName.text = self.author
+//                            hiddenQuote.text = self.quote
+//                            hiddenAuthorName.text = self.author
+//                            global_quote = frontQuote.text!
+//                        }
+//                    }
+//                }
+//            }
+//        }
+     
     }
     
     var ref: DatabaseReference!
