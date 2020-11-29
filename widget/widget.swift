@@ -14,19 +14,23 @@ import Firebase
 struct Provider: TimelineProvider{
     
     func placeholder(in context: Context) -> QuoteEntry {
+        print("Widget got loaded")
         return (QuoteEntry(date: Date(), quote: Quote(quote: "asdf", author: "adsf")))
     }
     
     
     func getSnapshot(in context: Context, completion: @escaping (QuoteEntry) -> Void) {
+        print("Widget got loaded")
         let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "活在當下 不求永生\n活得狂野 擁抱生命", author: "拉娜·德芮")))
         completion(quote)
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> Void) {
+        
+        print("Widget got loaded")
         let currentDate = Date()
         
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
+        let refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
         
         /*
         if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
@@ -48,8 +52,11 @@ struct Provider: TimelineProvider{
             completion(timeline)
         }*/
         
+        print("Widget Refreshing")
+        
         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
             {
+            print("Should Update")
             
             if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
             {
@@ -81,7 +88,13 @@ struct Provider: TimelineProvider{
             }
             }else
         {
-            print("load from local")
+            if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+            {
+                print("Remain Local, the update time is \(notificationDate)")
+
+            }
+            
+                        print("load from local")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
             let entry = QuoteEntry(date: Date(), quote: Quote(quote: Q, author: A))

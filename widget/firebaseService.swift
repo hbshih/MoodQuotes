@@ -65,6 +65,28 @@ class firebaseService {
         }.resume()
     }
     
+    func getTomorrowQuoteApiResponse(completion: @escaping (Result<[Quote], Error>) -> Void)
+    {
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let date_tomorrow = dateFormatter.string(from: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)
+        print("tomorrow date \(date_tomorrow)")
+      //  string(from: Calendar.current.date(byAdding: .day, value: 1, to: Date()))
+        
+        let url = URL(string: "https://geegee-a5bfd.firebaseio.com/Quote%20of%20the%20Day/\(date_tomorrow).json")!
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard error == nil else
+            {
+                completion(.failure(error!))
+                return
+            }
+            print(data)
+            completion(.success(self.getQuoteResponse(fromData: data!)))
+        }.resume()
+    }
+    
     private func getQuoteResponse(fromData data: Data) -> [Quote] {
         
         print(data)

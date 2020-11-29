@@ -1101,7 +1101,8 @@
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                                 <connections>
-                                                                                    <action selector="FinishProcessTapped:" destination="vdU-3q-1DX" eventType="touchUpInside" id="dC8-rJ-sTV"/>
+                                                                                    <action selector="FinishProcessTapped:" destination="vdU-3q-1DX" eventType="touchUpInside" id="i78-dK-6fg"/>
+                                                                                    <action selector="noTapped:" destination="vdU-3q-1DX" eventType="touchUpInside" id="TsJ-5H-ce8"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -1231,6 +1232,7 @@
                                         </state>
                                         <connections>
                                             <action selector="Done:" destination="HQ8-wu-bYF" eventType="touchUpInside" id="Dhp-uo-1Ac"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="kt7-Uw-zi2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1249,15 +1251,25 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ezgif-3-d2dbde6ebf9a.gif" translatesAutoresizingMaskIntoConstraints="NO" id="UvQ-hn-o65">
+                                <rect key="frame" x="0.0" y="44" width="414" height="723"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UBR-94-Pmd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UBR-94-Pmd" firstAttribute="bottom" secondItem="oN8-Ug-nEA" secondAttribute="bottom" constant="32" id="4Ym-ce-DKi"/>
+                            <constraint firstItem="UvQ-hn-o65" firstAttribute="leading" secondItem="UBR-94-Pmd" secondAttribute="leading" id="8Ek-W0-E4a"/>
                             <constraint firstItem="oN8-Ug-nEA" firstAttribute="centerX" secondItem="UBR-94-Pmd" secondAttribute="centerX" id="99A-dF-3LU"/>
+                            <constraint firstItem="dIJ-or-5WP" firstAttribute="top" secondItem="UvQ-hn-o65" secondAttribute="bottom" constant="8" symbolic="YES" id="Jnh-oU-FXg"/>
+                            <constraint firstItem="UvQ-hn-o65" firstAttribute="top" secondItem="UBR-94-Pmd" secondAttribute="top" id="TV3-jp-KZF"/>
+                            <constraint firstItem="UvQ-hn-o65" firstAttribute="trailing" secondItem="UBR-94-Pmd" secondAttribute="trailing" id="wxj-Nx-8u1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h7b-Et-oh9"/>
+                    <connections>
+                        <outlet property="imageView" destination="UvQ-hn-o65" id="5np-UJ-pMY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNg-CG-MQE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1308,6 +1320,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App" width="57" height="70.5"/>
+        <image name="ezgif-3-d2dbde6ebf9a.gif" width="600" height="1298"/>
         <image name="icon_back" width="48" height="48"/>
         <image name="icon_setting" width="40" height="40"/>
         <image name="icon_share" width="37" height="37"/>

@@ -30,10 +30,13 @@ class Onboarding_3ViewController: UIViewController {
     }
     @IBAction func FinishProcessTapped(_ sender: Any) {
         
-        
+        checkSegue()
         
     }
     
+    @IBAction func noTapped(_ sender: Any) {
+        checkSegue()
+    }
     @IBAction func AcceptedNotification(_ sender: Any) {
         
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(true, forKey: "isNotificationOn")
@@ -47,6 +50,7 @@ class Onboarding_3ViewController: UIViewController {
                 aClass.setupNotifications()
             }
         }
+        checkSegue()
     }
     
     /*

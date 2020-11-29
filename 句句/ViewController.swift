@@ -96,6 +96,8 @@ class ViewController: UIViewController, MessagingDelegate {
         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
             {
             
+            print("Should update \(SyncAppQuotes().checkIfUpdate())")
+            
             if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
             {
                 let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: notificationDate)
