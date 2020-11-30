@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyGif
 
 class videoTutorialViewController: UIViewController {
 
@@ -25,6 +26,15 @@ class videoTutorialViewController: UIViewController {
             view.backgroundColor = UIColor(red: 239/255, green: 233/255, blue: 230/255, alpha: 1.0)
            // UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundColor.backgroundColor, forKey: "BackgroundColor")
             
+        }
+        
+        do {
+            
+            let gif = try UIImage(gifName: "ezgif-3-d2dbde6ebf9a.gif")
+         //       UIImage(gifName: "ezgif-3-d2dbde6ebf9a.gif")
+            self.gifLoader.setGifImage(gif, loopCount: -1) // Will loop forever
+        } catch {
+            print(error)
         }
         
       //  gifLoader.loadGif(name: "ezgif-3-d2dbde6ebf9a")

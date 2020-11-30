@@ -21,16 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         /*
-        UIApplication.shared.backgroundTimeRemaining
+         UIApplication.shared.backgroundTimeRemaining
+         UIApplication.shared.setMinimumBackgroundFetchInterval(1800)
+         */
         UIApplication.shared.setMinimumBackgroundFetchInterval(1800)
-        */
         registerBackgroundTasks()
-
+        
         // Facebook Required
         let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-
+        
         NotificationCenter.default.addObserver(forName:UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { (_) in
-               // Your Code here
+            // Your Code here
             print("in background")
             self.submitBackgroundTasks()
         }
@@ -40,40 +41,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func registerBackgroundTasks() {
         // Declared at the "Permitted background task scheduler identifiers" in info.plist
         let backgroundAppRefreshTaskSchedulerIdentifier = "com.example.MyID"
-   //     let backgroundProcessingTaskSchedulerIdentifier = "com.example.fooBackgroundProcessingIdentifier"
-
+        //     let backgroundProcessingTaskSchedulerIdentifier = "com.example.fooBackgroundProcessingIdentifier"
+        
         // Use the identifier which represents your needs
         BGTaskScheduler.shared.register(forTaskWithIdentifier: backgroundAppRefreshTaskSchedulerIdentifier, using: nil) { (task) in
             
-            SyncAppQuotes().handleLocalUpdate()
+            print("BackgroundAppRefreshTaskScheduler is executed NOW!")
+            print("Background time remaining: \(UIApplication.shared.backgroundTimeRemaining)s")
+            task.expirationHandler = {
+                task.setTaskCompleted(success: false)
+            }
             
-           print("BackgroundAppRefreshTaskScheduler is executed NOW!")
-           print("Background time remaining: \(UIApplication.shared.backgroundTimeRemaining)s")
-           task.expirationHandler = {
-             task.setTaskCompleted(success: false)
-           }
-
-           // Do some data fetching and call setTaskCompleted(success:) asap!
-           let isFetchingSuccess = true
-           task.setTaskCompleted(success: isFetchingSuccess)
-         }
-       }
+            // Do some data fetching and call setTaskCompleted(success:) asap!
+            let isFetchingSuccess = true
+            task.setTaskCompleted(success: isFetchingSuccess)
+            
+            DispatchQueue.main.async{
+                SyncAppQuotes().handleLocalUpdate { (result) in
+                    NotificationTrigger().getNotified()
+                }
+            }
+        }
+    }
     
     func submitBackgroundTasks() {
-       // Declared at the "Permitted background task scheduler identifiers" in info.plist
+        // Declared at the "Permitted background task scheduler identifiers" in info.plist
         if #available(iOS 13.0, *) {
-                    do {
-                        let request = BGAppRefreshTaskRequest(identifier: "com.example.MyID")
-                        request.earliestBeginDate = Calendar.current.date(byAdding: .minute, value: 30, to: Date())
-                        try BGTaskScheduler.shared.submit(request)
-
-                        print("Submitted task request")
-                    } catch {
-                        print("Failed to submit BGTask")
-                    }
-                }
-     }
-  
+            do {
+                let request = BGAppRefreshTaskRequest(identifier: "com.example.MyID")
+                request.earliestBeginDate = Calendar.current.date(byAdding: .minute, value: 30, to: Date())
+                try BGTaskScheduler.shared.submit(request)
+                
+                print("Submitted task request")
+            } catch {
+                print("Failed to submit BGTask")
+            }
+        }
+    }
+    
     
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -82,13 +87,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-         // FETCH DATA and REFRESH NOTIFICATIONS
+        // FETCH DATA and REFRESH NOTIFICATIONS
         // We need to do this to ensure the current week value is updated to either 1 or 0
         // You will need to delete all notifications with same same category first else your going to be getting both weeks notifications
         
+        print("fetch for something")
+        
+        DispatchQueue.main.async{
+            SyncAppQuotes().handleLocalUpdate { (result) in
+                NotificationTrigger().getNotified()
+            }
+        }
+
+        /*For Testing*/
+        let content = UNMutableNotificationContent()
+        content.title = "test notifaction"
+        content.body = "Background Fetch Performing"
+        content.sound = UNNotificationSound.default
+
+        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let req  = UNNotificationRequest(identifier: "test_background", content: content, trigger: tri)
+
+        UNUserNotificationCenter.current().add(req) { (error) in
+            print("error\(error )")
+        }
+        /*Testing Ends*/
+        
     }
     
-   // background
+    // background
     
     // MARK: UISceneSession Lifecycle
     
@@ -107,40 +134,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let gcmMessageIDKey = "gcm.message_id"
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
-      // If you are receiving a notification message while your app is in the background,
-      // this callback will not be fired till the user taps on the notification launching the application.
-      // TODO: Handle data of notification
-
-      // With swizzling disabled you must let Messaging know about the message, for Analytics
-      // Messaging.messaging().appDidReceiveMessage(userInfo)
-
-      // Print message ID.
-      if let messageID = userInfo[gcmMessageIDKey] {
-        print("Message ID: \(messageID)")
-      }
-
-      // Print full message.
-      print(userInfo)
+        // If you are receiving a notification message while your app is in the background,
+        // this callback will not be fired till the user taps on the notification launching the application.
+        // TODO: Handle data of notification
+        
+        // With swizzling disabled you must let Messaging know about the message, for Analytics
+        // Messaging.messaging().appDidReceiveMessage(userInfo)
+        
+        // Print message ID.
+        if let messageID = userInfo[gcmMessageIDKey] {
+            print("Message ID: \(messageID)")
+        }
+        
+        // Print full message.
+        print(userInfo)
     }
-
+    
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-      // If you are receiving a notification message while your app is in the background,
-      // this callback will not be fired till the user taps on the notification launching the application.
-      // TODO: Handle data of notification
-
-      // With swizzling disabled you must let Messaging know about the message, for Analytics
-      // Messaging.messaging().appDidReceiveMessage(userInfo)
-
-      // Print message ID.
-      if let messageID = userInfo[gcmMessageIDKey] {
-        print("Message ID: \(messageID)")
-      }
-
-      // Print full message.
-      print(userInfo)
-
-      completionHandler(UIBackgroundFetchResult.newData)
+        // If you are receiving a notification message while your app is in the background,
+        // this callback will not be fired till the user taps on the notification launching the application.
+        // TODO: Handle data of notification
+        
+        // With swizzling disabled you must let Messaging know about the message, for Analytics
+        // Messaging.messaging().appDidReceiveMessage(userInfo)
+        
+        // Print message ID.
+        if let messageID = userInfo[gcmMessageIDKey] {
+            print("Message ID: \(messageID)")
+        }
+        
+        // Print full message.
+        print(userInfo)
+        
+        completionHandler(UIBackgroundFetchResult.newData)
     }
 }
 

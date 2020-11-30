@@ -31,11 +31,10 @@ class UpdateTimeTableViewCell: UITableViewCell {
         
         
         // 更新時間
-        var components = Calendar.current.dateComponents([.hour, .minute], from: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)
-        components.hour = sender.date.hour
-        components.minute = sender.date.minute
-        print("New Update Time \(components.date!)")
-        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(components.date, forKey: "updateTime")
+        let date = Calendar.current.date(bySettingHour: sender.date.hour, minute: sender.date.minute, second: 0, of: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)!
+
+        print("New Update Time \(date)")
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(date, forKey: "updateTime")
         
         // Reset Notification Time
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()

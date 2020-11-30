@@ -16,6 +16,7 @@ target '句句' do
   #pod 'Onboard'
   pod 'Hero'
   pod 'PopupDialog'
+  pod 'SwiftyGif'
 #  pod 'FacebookCore'
 #  pod 'FacebookLogin'
 #  pod 'FacebookShare'
