@@ -13,9 +13,6 @@ class UpdateTimeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        print(timePicker.date)
-        
     }
     
 
@@ -29,30 +26,21 @@ class UpdateTimeTableViewCell: UITableViewCell {
     
     @IBAction func timeChanged(_ sender: UIDatePicker) {
         
+        //更新TimePicker
         timePicker.setDate(sender.date, animated: true)
         
-       // print("set date \(sender.date)")
         
+        // 更新時間
         var components = Calendar.current.dateComponents([.hour, .minute], from: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)
         components.hour = sender.date.hour
         components.minute = sender.date.minute
-        
-        let dateTomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
-        
-        print(Calendar.current.date(bySettingHour: sender.date.hour, minute: sender.date.minute, second: 0, of: dateTomorrow ))
-        
-       // print("update time \(components.date ?? <#default value#>)")
-        
+        print("New Update Time \(components.date!)")
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(components.date, forKey: "updateTime")
         
-        //print(sender.date)
-        
+        // Reset Notification Time
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         let  aClass = NotificationTrigger()
         aClass.setupNotifications()
-        
-        
-        
     }
     
     

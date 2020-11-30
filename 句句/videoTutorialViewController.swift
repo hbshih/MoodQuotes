@@ -10,6 +10,8 @@ import UIKit
 class videoTutorialViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var gifLoader: UIImageView!
+    @IBOutlet weak var gifView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,12 +26,19 @@ class videoTutorialViewController: UIViewController {
            // UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundColor.backgroundColor, forKey: "BackgroundColor")
             
         }
-
+        
+        gifLoader.loadGif(name: "ezgif-3-d2dbde6ebf9a")
+/*
         // Do any additional setup after loading the view.
-      //  imageView = UIImageView(image: jeremyGif)
-        //imageView.tag = 100
-        //imageView.frame = CGRect(x: view.frame.width/4, y: 50.0, width: self.view.frame.size.width/1.2, height: self.view.frame.size.height/1.2)
-        //view.addSubview(imageView)
+        let imageView = UIImageView(image: jeremyGif)
+        imageView.tag = 100
+        imageView.contentMode = .center
+        imageView.contentMode = .scaleAspectFit
+        
+        imageView.frame.size = CGSize(width: gifView.frame.width, height: gifView.frame.height)
+     //   imageView.frame = CGRect(x: 0, y: 0, width: gifView.frame.width, height: gifView.frame.height)
+     //   imageView.frame = CGRect(
+        gifView.addSubview(imageView)*/
     }
     
     var isVideoOpen = false

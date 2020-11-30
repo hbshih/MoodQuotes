@@ -25,53 +25,35 @@ class ViewController: UIViewController, MessagingDelegate {
     @IBOutlet weak var hiddenQuoteAdder: UILabel!
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-      print("Firebase registration token: \(String(describing: fcmToken))")
-
-      let dataDict:[String: String] = ["token": fcmToken ?? ""]
-      NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
-      // TODO: If necessary send token to application server.
-      // Note: This callback is fired at each app startup and whenever a new token is generated.
+        print("Firebase registration token: \(String(describing: fcmToken))")
+        
+        let dataDict:[String: String] = ["token": fcmToken ?? ""]
+        NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        /*
+        
+        // print all notification that are requested now
         let center = UNUserNotificationCenter.current()
         center.getPendingNotificationRequests(completionHandler: { requests in
-            print("pending")
-            for request in requests {
-                print("pending")
-                print(request)
-            }
-         
-         
-         
-        })*/
-        let center = UNUserNotificationCenter.current()
-        center.getPendingNotificationRequests(completionHandler: { requests in
-            print(requests)
+            print("The following notifications are queued: \n \(requests)")
         })
         
-        WidgetCenter.shared.reloadAllTimelines()
-        
+        //Notifications
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
         Messaging.messaging().token { token, error in
-          if let error = error {
-            print("Error fetching FCM registration token: \(error)")
-          } else if let token = token {
-            print("FCM registration token: \(token)")
-            
-          //  self.fcmRegTokenMessage.text  = "Remote FCM registration token: \(token)"
-          }
+            if let error = error {
+                print("Error fetching FCM registration token: \(error)")
+            } else if let token = token {
+                print("FCM registration token: \(token)")
+            }
         }
         
-
+        //UI
         var font = Display_Font(font_size: 30).getUIFont()
-        
-     //   let font = UIFont(name: "QIJIC", size: 36)
         hiddenQuote.font = font
         hiddenQuoteAdder.font = font
         frontQuote.font = font
@@ -79,33 +61,10 @@ class ViewController: UIViewController, MessagingDelegate {
         authorName.font = font
         hiddenAuthorName.font = font
         
-        /*
-        let content = UNMutableNotificationContent()
-        content.title = "test notifaction"
-        content.body = "test notification after 5 second"
-        content.sound = UNNotificationSound.default
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 15, repeats: false)
-        let request  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: trigger)
-
-        UNUserNotificationCenter.current().add(request) { (error) in
-            print("error\(error )")
-
-        }*/
-        
+        //If no quote saved in local & time now >= update time
         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
-            {
-            
-            print("Should update \(SyncAppQuotes().checkIfUpdate())")
-            
-            if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
-            {
-                let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: notificationDate)
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
-                
-            }
-            
-            
+        {
+            // Get From API
             DispatchQueue.main.async {
                 firebaseService().getQuoteApiResponse { [self] (result) in
                     let quoteInfo: [Quote]
@@ -114,76 +73,88 @@ class ViewController: UIViewController, MessagingDelegate {
                         self.quote = quoteInfo.first!.quote
                         self.author = quoteInfo.first!.author
                         
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.quote, forKey: "Quote")
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.author, forKey: "Author")
 
+                        
                         
                         DispatchQueue.main.async { [self] in
-                        self.frontQuote.text = self.quote
-                        self.authorName.text = self.author
-                        self.hiddenQuote.text = self.quote
-                        self.hiddenAuthorName.text = self.author
-                        global_quote = frontQuote.text!
-                        
+                            // Update Local Data
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.quote, forKey: "Quote")
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.author, forKey: "Author")
+                            self.frontQuote.text = self.quote
+                            self.authorName.text = self.author
+                            self.hiddenQuote.text = self.quote
+                            self.hiddenAuthorName.text = self.author
+                            global_quote = frontQuote.text!
+                            //更新Widget
+                            WidgetCenter.shared.reloadAllTimelines()
                         }
-
-                        
-                        
                     } else {
                         let errQuote = Quote(quote: "App當機拉", author: "By Me")
                         quoteInfo = [errQuote,errQuote]
                     }
                 }
             }
-            }else
-        {
             
-            print("load from local")
+            //update [UpdateTime]
+            SyncAppQuotes().updateTime()
+        }else
+        {
+            print("Load Quotes and Author From Local")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
-
             DispatchQueue.main.async { [self] in
                 self.frontQuote.text = Q
                 self.authorName.text = A
                 self.hiddenQuote.text = Q
                 self.hiddenAuthorName.text = A
                 global_quote = frontQuote.text!
-            
             }
         }
-        ref = Database.database().reference()
+        
+       // ref = Database.database().reference()
         
         
         frontQuote.text = "語錄更新中..."
         authorName.text = "更新中"
+        
+        //If Screenshot get to share screen
+        NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+        
+        /*
+        
         var dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
         let date_today = dateFormatter.string(from: Date())
+        */
+        //        DispatchQueue.main.async { [self] in
+        //            //  let userID = Auth.auth().currentUser?.uid
+        //            self.ref.child("Quote of the Day").child("\(date_today)").observeSingleEvent(of: .value) { (snapshot) in
+        //                if let value = snapshot.value as? NSDictionary
+        //                {
+        //
+        //                    if let quote = value["Quote"] as? String
+        //                    {
+        //                        self.quote = quote
+        //                        if let author = value["Author"] as? String
+        //                        {
+        //                            self.author = author
+        //                            frontQuote.text = self.quote
+        //                            authorName.text = self.author
+        //                            hiddenQuote.text = self.quote
+        //                            hiddenAuthorName.text = self.author
+        //                            global_quote = frontQuote.text!
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
         
-//        DispatchQueue.main.async { [self] in
-//            //  let userID = Auth.auth().currentUser?.uid
-//            self.ref.child("Quote of the Day").child("\(date_today)").observeSingleEvent(of: .value) { (snapshot) in
-//                if let value = snapshot.value as? NSDictionary
-//                {
-//
-//                    if let quote = value["Quote"] as? String
-//                    {
-//                        self.quote = quote
-//                        if let author = value["Author"] as? String
-//                        {
-//                            self.author = author
-//                            frontQuote.text = self.quote
-//                            authorName.text = self.author
-//                            hiddenQuote.text = self.quote
-//                            hiddenAuthorName.text = self.author
-//                            global_quote = frontQuote.text!
-//                        }
-//                    }
-//                }
-//            }
-//        }
-     
+    }
+    
+    @objc func screenshotTaken()
+    {
+        performSegue(withIdentifier: "shareSegue", sender: nil)
     }
     
     var ref: DatabaseReference!
@@ -192,14 +163,12 @@ class ViewController: UIViewController, MessagingDelegate {
     var author: String = "— 斌"
     
     override func viewDidAppear(_ animated: Bool) {
+        //check Color
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
         {
             screenView.backgroundColor = color
             backgroundHideenView.backgroundColor =  color
         }
-        
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -255,6 +224,8 @@ class ViewController: UIViewController, MessagingDelegate {
     @objc func actionButtonTapped() {
         takeScreenshot(of: backgroundHideenView)
     }
+    
+    
     
 }
 

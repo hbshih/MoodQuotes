@@ -16,27 +16,23 @@ class Onboarding_3ViewController: UIViewController {
         
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor")
         {
-            print(color)
             backgroundColor.backgroundColor = color
         }else
         {
-        
             backgroundColor.backgroundColor = UIColor(red: 239/255, green: 233/255, blue: 230/255, alpha: 1.0)
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundColor.backgroundColor, forKey: "BackgroundColor")
-            
         }
             
         // Do any additional setup after loading the view.
     }
     @IBAction func FinishProcessTapped(_ sender: Any) {
-        
         checkSegue()
-        
     }
     
     @IBAction func noTapped(_ sender: Any) {
         checkSegue()
     }
+    
     @IBAction func AcceptedNotification(_ sender: Any) {
         
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(true, forKey: "isNotificationOn")
@@ -45,6 +41,7 @@ class Onboarding_3ViewController: UIViewController {
             (granted, error) in
             guard granted else { return }
             DispatchQueue.main.async {
+                // Register for notification
                 UIApplication.shared.registerForRemoteNotifications()
                 let  aClass = NotificationTrigger()
                 aClass.setupNotifications()
@@ -52,17 +49,6 @@ class Onboarding_3ViewController: UIViewController {
         }
         checkSegue()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     func checkSegue()
     {
         if #available(iOS 14.0, *) {

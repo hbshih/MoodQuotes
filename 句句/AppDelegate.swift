@@ -10,6 +10,7 @@ import Firebase
 import UserNotifications
 import FirebaseMessaging
 import FBSDKCoreKit
+import BackgroundTasks
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,15 +20,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        UIApplication.shared.setMinimumBackgroundFetchInterval(86400)
-       // self.navigationController.navigationBar.isHidden = true
+        /*
+        UIApplication.shared.backgroundTimeRemaining
+        UIApplication.shared.setMinimumBackgroundFetchInterval(1800)
+        */
+        registerBackgroundTasks()
 
-        // get quotes of the day
+        // Facebook Required
         let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        
+
+        NotificationCenter.default.addObserver(forName:UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { (_) in
+               // Your Code here
+            print("in background")
+            self.submitBackgroundTasks()
+        }
         return true
     }
+    
+    func registerBackgroundTasks() {
+        // Declared at the "Permitted background task scheduler identifiers" in info.plist
+        let backgroundAppRefreshTaskSchedulerIdentifier = "com.example.MyID"
+   //     let backgroundProcessingTaskSchedulerIdentifier = "com.example.fooBackgroundProcessingIdentifier"
+
+        // Use the identifier which represents your needs
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: backgroundAppRefreshTaskSchedulerIdentifier, using: nil) { (task) in
+            
+            SyncAppQuotes().handleLocalUpdate()
+            
+           print("BackgroundAppRefreshTaskScheduler is executed NOW!")
+           print("Background time remaining: \(UIApplication.shared.backgroundTimeRemaining)s")
+           task.expirationHandler = {
+             task.setTaskCompleted(success: false)
+           }
+
+           // Do some data fetching and call setTaskCompleted(success:) asap!
+           let isFetchingSuccess = true
+           task.setTaskCompleted(success: isFetchingSuccess)
+         }
+       }
+    
+    func submitBackgroundTasks() {
+       // Declared at the "Permitted background task scheduler identifiers" in info.plist
+        if #available(iOS 13.0, *) {
+                    do {
+                        let request = BGAppRefreshTaskRequest(identifier: "com.example.MyID")
+                        request.earliestBeginDate = Calendar.current.date(byAdding: .minute, value: 30, to: Date())
+                        try BGTaskScheduler.shared.submit(request)
+
+                        print("Submitted task request")
+                    } catch {
+                        print("Failed to submit BGTask")
+                    }
+                }
+     }
+  
+    
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return ApplicationDelegate.shared.application(app, open: url, options: options)
@@ -38,17 +85,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          // FETCH DATA and REFRESH NOTIFICATIONS
         // We need to do this to ensure the current week value is updated to either 1 or 0
         // You will need to delete all notifications with same same category first else your going to be getting both weeks notifications
-        
-        
-        
-        if let isNoti = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.bool(forKey: "isNotificationOn")
-        {
-            if isNoti
-            {
-                let  aClass = NotificationTrigger()
-                aClass.setupNotifications()
-            }
-        }
         
     }
     

@@ -13,8 +13,6 @@ import BLTNBoard
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableview: UITableView!
-    
-    @IBOutlet weak var pickColorView: UIView!
     @IBOutlet weak var videoTutorialLabel: UIButton!
     
     
@@ -36,24 +34,23 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             let cell = tableView.dequeueReusableCell(withIdentifier: "updateTimeTableViewCell") as! UpdateTimeTableViewCell
             if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
             {
+                // Set Notification Date
                 cell.timePicker.date = notificationDate
-                let date = Calendar.current.date(bySettingHour: notificationDate.hour, minute: notificationDate.minute, second: 0, of: notificationDate)!
+                let date = Calendar.current.date(bySettingHour: notificationDate.hour, minute: notificationDate.minute, second: 0, of: Date())!
                 cell.timePicker.setDate(date, animated: false)
             }else
             {
                 let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
                 cell.timePicker.setDate(date, animated: false)
             }
-          // cell.timePicker.
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "updateBackgroundTableViewCell") as! UpdateBackgroundColorTableViewCell
             let defaults = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!
-            if let color = defaults.colorForKey(key: "BackgroundColor") as? UIColor
+            if let color = defaults.colorForKey(key: "BackgroundColor")
             {
                 cell.backgrundColor.backgroundColor = color
             }
-            print("reload color")
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "updateBackgroundTableViewCell") as! UpdateBackgroundColorTableViewCell
@@ -72,9 +69,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBAction func tutorialVideoTapped(_ sender: Any) {
-        
-        
-        
         if !isVideoOpen
         {
             let imageView = UIImageView(image: jeremyGif)
@@ -88,15 +82,13 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             if let viewWithTag = self.view.viewWithTag(100) {
                 viewWithTag.removeFromSuperview()
             }else{
-                print("No!")
             }
             isVideoOpen = false
             videoTutorialLabel.setTitle("影片教學", for: .normal)
         }
         
-        
     }
-    
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.item {
         case 0:
@@ -117,8 +109,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         default:
             print("d")
         }
-    }
-    
+    }*/
+    /*
     let page = BLTNPageItem(title: "STATS")
     
     let pag = BLTNActionItem()
@@ -195,23 +187,18 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         return page
 
-    }
+    }*/
     
+    /*
     @IBAction func colorPicked(_ sender: UIButton) {
         
         print(sender.backgroundColor)
-        
         let color = sender.backgroundColor!
-        
-        
-        
-        
-        
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: color, forKey: "BackgroundColor")
         tableview.reloadData()
         pickColorView.isHidden = true
         
-    }
+    }*/
     @IBOutlet weak var colorButton: UIButton!
     
     
@@ -227,18 +214,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view.
           
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension UIImage {

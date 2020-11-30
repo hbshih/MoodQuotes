@@ -146,11 +146,12 @@
                                                         <rect key="frame" x="147" y="0.0" width="120" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGP-Re-m1z">
-                                                                <rect key="frame" x="37" y="0.0" width="46" height="55"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="55"/>
                                                                 <state key="normal" title="下一步">
                                                                     <color key="titleColor" red="0.33725490196078434" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
+                                                                    <action selector="nextTapped:" destination="875-bS-vea" eventType="touchUpInside" id="Llu-Tv-erC"/>
                                                                     <segue destination="M2B-Qb-JNt" kind="show" id="NAu-Sc-kBv"/>
                                                                 </connections>
                                                             </button>
@@ -158,10 +159,12 @@
                                                         <color key="backgroundColor" red="0.93725490196078431" green="0.9137254901960784" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="qGP-Re-m1z" firstAttribute="top" secondItem="xux-Aw-9xJ" secondAttribute="top" id="0Yx-hd-NCC"/>
+                                                            <constraint firstItem="qGP-Re-m1z" firstAttribute="leading" secondItem="xux-Aw-9xJ" secondAttribute="leading" id="IDV-0j-W5X"/>
                                                             <constraint firstAttribute="bottom" secondItem="qGP-Re-m1z" secondAttribute="bottom" id="LaZ-Ua-iU1"/>
                                                             <constraint firstAttribute="width" constant="120" id="PyN-Cj-RqV"/>
                                                             <constraint firstItem="qGP-Re-m1z" firstAttribute="centerX" secondItem="xux-Aw-9xJ" secondAttribute="centerX" id="U5X-hC-xfE"/>
                                                             <constraint firstItem="qGP-Re-m1z" firstAttribute="centerY" secondItem="xux-Aw-9xJ" secondAttribute="centerY" id="d4H-Xc-iE0"/>
+                                                            <constraint firstAttribute="trailing" secondItem="qGP-Re-m1z" secondAttribute="trailing" id="utO-Y3-YgA"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -182,6 +185,7 @@
                                                     <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="skipTapped:" destination="875-bS-vea" eventType="touchUpInside" id="7XZ-MO-Y1F"/>
                                                     <segue destination="vdU-3q-1DX" kind="show" id="ly3-Ze-ofX"/>
                                                 </connections>
                                             </button>
@@ -1251,24 +1255,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ezgif-3-d2dbde6ebf9a.gif" translatesAutoresizingMaskIntoConstraints="NO" id="UvQ-hn-o65">
-                                <rect key="frame" x="0.0" y="44" width="414" height="723"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzS-Qn-et4">
+                                <rect key="frame" x="0.0" y="104" width="414" height="611"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dle-fR-JZU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="611"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dle-fR-JZU" firstAttribute="top" secondItem="MzS-Qn-et4" secondAttribute="top" id="TWL-yS-OCD"/>
+                                    <constraint firstAttribute="trailing" secondItem="dle-fR-JZU" secondAttribute="trailing" id="Xse-Ql-R1H"/>
+                                    <constraint firstAttribute="bottom" secondItem="dle-fR-JZU" secondAttribute="bottom" id="aTu-Yp-VV0"/>
+                                    <constraint firstItem="dle-fR-JZU" firstAttribute="leading" secondItem="MzS-Qn-et4" secondAttribute="leading" id="eQO-gd-GC8"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9u-SN-mQn">
+                                <rect key="frame" x="146" y="44" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UBR-94-Pmd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UBR-94-Pmd" firstAttribute="bottom" secondItem="oN8-Ug-nEA" secondAttribute="bottom" constant="32" id="4Ym-ce-DKi"/>
-                            <constraint firstItem="UvQ-hn-o65" firstAttribute="leading" secondItem="UBR-94-Pmd" secondAttribute="leading" id="8Ek-W0-E4a"/>
+                            <constraint firstItem="oN8-Ug-nEA" firstAttribute="top" secondItem="MzS-Qn-et4" secondAttribute="bottom" constant="60" id="5cB-V5-MgE"/>
+                            <constraint firstItem="MzS-Qn-et4" firstAttribute="leading" secondItem="UBR-94-Pmd" secondAttribute="leading" id="8XM-Ug-Tlg"/>
                             <constraint firstItem="oN8-Ug-nEA" firstAttribute="centerX" secondItem="UBR-94-Pmd" secondAttribute="centerX" id="99A-dF-3LU"/>
-                            <constraint firstItem="dIJ-or-5WP" firstAttribute="top" secondItem="UvQ-hn-o65" secondAttribute="bottom" constant="8" symbolic="YES" id="Jnh-oU-FXg"/>
-                            <constraint firstItem="UvQ-hn-o65" firstAttribute="top" secondItem="UBR-94-Pmd" secondAttribute="top" id="TV3-jp-KZF"/>
-                            <constraint firstItem="UvQ-hn-o65" firstAttribute="trailing" secondItem="UBR-94-Pmd" secondAttribute="trailing" id="wxj-Nx-8u1"/>
+                            <constraint firstItem="MzS-Qn-et4" firstAttribute="top" secondItem="h9u-SN-mQn" secondAttribute="bottom" constant="39" id="E2A-Zj-tiz"/>
+                            <constraint firstItem="h9u-SN-mQn" firstAttribute="top" secondItem="UBR-94-Pmd" secondAttribute="top" id="lT1-CL-vAs"/>
+                            <constraint firstItem="h9u-SN-mQn" firstAttribute="centerX" secondItem="UBR-94-Pmd" secondAttribute="centerX" id="o1U-uw-06B"/>
+                            <constraint firstItem="UBR-94-Pmd" firstAttribute="trailing" secondItem="MzS-Qn-et4" secondAttribute="trailing" id="rCf-hc-gmD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h7b-Et-oh9"/>
                     <connections>
-                        <outlet property="imageView" destination="UvQ-hn-o65" id="5np-UJ-pMY"/>
+                        <outlet property="gifLoader" destination="dle-fR-JZU" id="poC-Da-DAk"/>
+                        <outlet property="gifView" destination="MzS-Qn-et4" id="vWu-s2-P61"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNg-CG-MQE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1315,12 +1339,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lk2-Vz-ikE"/>
-        <segue reference="ow3-cU-GNT"/>
+        <segue reference="ly3-Ze-ofX"/>
+        <segue reference="kt7-Uw-zi2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App" width="57" height="70.5"/>
-        <image name="ezgif-3-d2dbde6ebf9a.gif" width="600" height="1298"/>
         <image name="icon_back" width="48" height="48"/>
         <image name="icon_setting" width="40" height="40"/>
         <image name="icon_share" width="37" height="37"/>

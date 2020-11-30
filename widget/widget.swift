@@ -29,42 +29,13 @@ struct Provider: TimelineProvider{
         
         print("Widget got loaded")
         let currentDate = Date()
-        
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
-        
-        /*
-        if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
-        {
-            refreshDate = Calendar.autoupdatingCurrent.date(byAdding: .day, value: 1, to: Calendar.autoupdatingCurrent.startOfDay(for: notificationDate))!
-        }*/
-        /**
-        firebaseService().getQuoteApiResponse { (result) in
-            let quoteInfo: [Quote]
-            if case .success(let fetchedData) = result {
-                quoteInfo = fetchedData
-            } else {
-                let errQuote = Quote(quote: "App當機拉", author: "By Me")
-                quoteInfo = [errQuote,errQuote]
-            }
-            
-            let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!)
-            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
-            completion(timeline)
-        }*/
-        
+        let refreshDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
         print("Widget Refreshing")
         
         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
             {
             print("Should Update")
-            
-            if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
-            {
-                let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: notificationDate)
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
-                
-            }
-            
+            SyncAppQuotes().updateTime()
             
             DispatchQueue.main.async {
                 firebaseService().getQuoteApiResponse {(result) in
@@ -79,6 +50,20 @@ struct Provider: TimelineProvider{
                         let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
                         completion(timeline)
                         
+                        /*For Testing*/
+                        let content = UNMutableNotificationContent()
+                        content.title = "test notifaction"
+                        content.body = "Widget is updating content, new content is \(quoteInfo.first!.quote)"
+                        content.sound = UNNotificationSound.default
+
+                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                        let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
+
+                        UNUserNotificationCenter.current().add(req) { (error) in
+                            print("error\(error )")
+                        }
+                        /*Testing Ends*/
+                        
                         
                     } else {
                         let errQuote = Quote(quote: "App當機拉", author: "By Me")
@@ -91,10 +76,23 @@ struct Provider: TimelineProvider{
             if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
             {
                 print("Remain Local, the update time is \(notificationDate)")
-
             }
             
-                        print("load from local")
+            /*For Testing*/
+            let content = UNMutableNotificationContent()
+            content.title = "test notifaction"
+            content.body = "Widget is remain local data"
+            content.sound = UNNotificationSound.default
+
+            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
+
+            UNUserNotificationCenter.current().add(req) { (error) in
+                print("error\(error )")
+            }
+            /*Testing Ends*/
+            
+            print("load from local")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
             let entry = QuoteEntry(date: Date(), quote: Quote(quote: Q, author: A))
@@ -110,13 +108,6 @@ struct QuoteEntry: TimelineEntry{
     var date: Date
     let quote: Quote
 }
-/*
-struct PlaceholderView: View
-{
-    var body: some View{
-        GeegeeWidgetView(quote: Quote(quote: "1", author: "3"), )
-    }
-}*/
 
 struct Emojibook_WidgetEntryView: View {
     var entry: Provider.Entry

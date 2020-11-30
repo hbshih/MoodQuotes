@@ -10,6 +10,7 @@
 		3E27B22F132E9FBF095D1E4D /* Pods______UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C665A53A1C09E8517182D19C /* Pods______UITests.framework */; };
 		4A6C1653BC3CB09C66A10BF9 /* Pods_widgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3489404ED4A9259CF592B9 /* Pods_widgetExtension.framework */; };
 		93F1FAB780DCA86F976B2408 /* Pods___Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9EF931FD9B5D263A10A544 /* Pods___Tests.framework */; };
+		B5056D8C2573DCB300A8E79B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509566E256DDCC30075ACE9 /* DateHelper.swift */; };
 		B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBB125622E0700372198 /* NotificationTableViewCell.swift */; };
 		B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B506EBB225622E0700372198 /* NotificationTableViewCell.xib */; };
 		B506EBC225622FF800372198 /* UpdateTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBC025622FF800372198 /* UpdateTimeTableViewCell.swift */; };
@@ -708,6 +709,7 @@
 				B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B5DF562F256F2C01004A24D8 /* Date.swift in Sources */,
 				B591B1802570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
+				B5056D8C2573DCB300A8E79B /* DateHelper.swift in Sources */,
 				B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
 				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
@@ -882,13 +884,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/句句",
 				);
 				INFOPLIST_FILE = "句句/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -910,13 +913,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/句句",
 				);
 				INFOPLIST_FILE = "句句/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1025,7 +1029,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1056,7 +1060,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
