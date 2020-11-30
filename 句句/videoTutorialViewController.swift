@@ -27,7 +27,7 @@ class videoTutorialViewController: UIViewController {
             
         }
         
-        gifLoader.loadGif(name: "ezgif-3-d2dbde6ebf9a")
+      //  gifLoader.loadGif(name: "ezgif-3-d2dbde6ebf9a")
 /*
         // Do any additional setup after loading the view.
         let imageView = UIImageView(image: jeremyGif)
