@@ -152,6 +152,30 @@ class ViewController: UIViewController, MessagingDelegate {
         
     }
     
+    
+    func registerForNotifications() {
+      NotificationCenter.default.addObserver(
+        forName: .newPokemonFetched,
+        object: nil,
+        queue: nil) { (notification) in
+          print("notification received")
+        /*For Testing*/
+        let content = UNMutableNotificationContent()
+        content.title = "test notifaction"
+        content.body = "VC GOT notified!"
+        content.sound = UNNotificationSound.default
+
+        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let req  = UNNotificationRequest(identifier: "VC_Notified", content: content, trigger: tri)
+
+        UNUserNotificationCenter.current().add(req) { (error) in
+            print("error\(error )")
+        }
+        /*Testing Ends*/
+      }
+    }
+
+    
     @objc func screenshotTaken()
     {
         performSegue(withIdentifier: "shareSegue", sender: nil)

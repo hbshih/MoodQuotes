@@ -1256,10 +1256,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzS-Qn-et4">
-                                <rect key="frame" x="0.0" y="104" width="414" height="611"/>
+                                <rect key="frame" x="0.0" y="97.5" width="414" height="617.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dle-fR-JZU">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="611"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="617.5"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -1270,9 +1270,9 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9u-SN-mQn">
-                                <rect key="frame" x="146" y="44" width="122" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="143" y="60" width="128.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1283,8 +1283,8 @@
                             <constraint firstItem="oN8-Ug-nEA" firstAttribute="top" secondItem="MzS-Qn-et4" secondAttribute="bottom" constant="60" id="5cB-V5-MgE"/>
                             <constraint firstItem="MzS-Qn-et4" firstAttribute="leading" secondItem="UBR-94-Pmd" secondAttribute="leading" id="8XM-Ug-Tlg"/>
                             <constraint firstItem="oN8-Ug-nEA" firstAttribute="centerX" secondItem="UBR-94-Pmd" secondAttribute="centerX" id="99A-dF-3LU"/>
-                            <constraint firstItem="MzS-Qn-et4" firstAttribute="top" secondItem="h9u-SN-mQn" secondAttribute="bottom" constant="39" id="E2A-Zj-tiz"/>
-                            <constraint firstItem="h9u-SN-mQn" firstAttribute="top" secondItem="UBR-94-Pmd" secondAttribute="top" id="lT1-CL-vAs"/>
+                            <constraint firstItem="MzS-Qn-et4" firstAttribute="top" secondItem="h9u-SN-mQn" secondAttribute="bottom" constant="16" id="E2A-Zj-tiz"/>
+                            <constraint firstItem="h9u-SN-mQn" firstAttribute="top" secondItem="UBR-94-Pmd" secondAttribute="top" constant="16" id="lT1-CL-vAs"/>
                             <constraint firstItem="h9u-SN-mQn" firstAttribute="centerX" secondItem="UBR-94-Pmd" secondAttribute="centerX" id="o1U-uw-06B"/>
                             <constraint firstItem="UBR-94-Pmd" firstAttribute="trailing" secondItem="MzS-Qn-et4" secondAttribute="trailing" id="rCf-hc-gmD"/>
                         </constraints>

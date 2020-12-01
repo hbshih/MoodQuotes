@@ -12,6 +12,7 @@ import Firebase
 
 class firebaseService {
     let ref = Database.database().reference()
+//    let urlSession = URLSession(configuration: .default)
 
     
     func getQuoteOfTheDay(completion: @escaping (Result<[Quote], Error>) -> Void) {
@@ -64,6 +65,11 @@ class firebaseService {
             completion(.success(self.getQuoteResponse(fromData: data!)))
         }.resume()
     }
+    
+  /*  func invalidateAndCancel()
+    {
+        
+    }*/
     
     func getTomorrowQuoteApiResponse(completion: @escaping (Result<[Quote], Error>) -> Void)
     {

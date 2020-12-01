@@ -18,66 +18,66 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        /*
-         UIApplication.shared.backgroundTimeRemaining
-         UIApplication.shared.setMinimumBackgroundFetchInterval(1800)
-         */
-        UIApplication.shared.setMinimumBackgroundFetchInterval(1800)
-        registerBackgroundTasks()
+
+        // Fetch data once an hour.
+        UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
+        
+        
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.moodquotes.fetchQuotes",
+                                        using: nil) { (task) in
+          // ...
+            self.handleAppRefreshTask(task: task as! BGAppRefreshTask)
+        }
+        
+        //registerBackgroundTasks()
         
         // Facebook Required
         let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        /*
         NotificationCenter.default.addObserver(forName:UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { (_) in
             // Your Code here
             print("in background")
-            self.submitBackgroundTasks()
-        }
+            //self.submitBackgroundTasks()
+            
+        }*/
         return true
     }
     
-    func registerBackgroundTasks() {
-        // Declared at the "Permitted background task scheduler identifiers" in info.plist
-        let backgroundAppRefreshTaskSchedulerIdentifier = "com.example.MyID"
-        //     let backgroundProcessingTaskSchedulerIdentifier = "com.example.fooBackgroundProcessingIdentifier"
-        
-        // Use the identifier which represents your needs
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: backgroundAppRefreshTaskSchedulerIdentifier, using: nil) { (task) in
-            
-            print("BackgroundAppRefreshTaskScheduler is executed NOW!")
-            print("Background time remaining: \(UIApplication.shared.backgroundTimeRemaining)s")
-            task.expirationHandler = {
-                task.setTaskCompleted(success: false)
-            }
-            
-            // Do some data fetching and call setTaskCompleted(success:) asap!
-            let isFetchingSuccess = true
-            task.setTaskCompleted(success: isFetchingSuccess)
-            
-            DispatchQueue.main.async{
-                SyncAppQuotes().handleLocalUpdate { (result) in
-                    NotificationTrigger().getNotified()
-                }
-            }
+    
+    
+    func scheduleBackgroundPokemonFetch() {
+        let pokemonFetchTask = BGAppRefreshTaskRequest(identifier: "com.moodquotes.fetchQuotes")
+        pokemonFetchTask.earliestBeginDate = Date(timeIntervalSinceNow: 60)
+        do {
+          try BGTaskScheduler.shared.submit(pokemonFetchTask)
+        } catch {
+          print("Unable to submit task: \(error.localizedDescription)")
         }
     }
     
-    func submitBackgroundTasks() {
-        // Declared at the "Permitted background task scheduler identifiers" in info.plist
-        if #available(iOS 13.0, *) {
-            do {
-                let request = BGAppRefreshTaskRequest(identifier: "com.example.MyID")
-                request.earliestBeginDate = Calendar.current.date(byAdding: .minute, value: 30, to: Date())
-                try BGTaskScheduler.shared.submit(request)
-                
-                print("Submitted task request")
-            } catch {
-                print("Failed to submit BGTask")
+    func handleAppRefreshTask(task: BGAppRefreshTask) {
+        
+        task.expirationHandler = {
+            //  PokeManager.urlSession.invalidateAndCancel()
+                URLSession().invalidateAndCancel()
+            }
+        
+        DispatchQueue.main.async{
+            SyncAppQuotes().handleLocalUpdate { (result) in
+                NotificationTrigger().getNotified()
+                task.setTaskCompleted(success: true)
             }
         }
+        
+        scheduleBackgroundPokemonFetch()
     }
+    
     
     
     
@@ -91,27 +91,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // We need to do this to ensure the current week value is updated to either 1 or 0
         // You will need to delete all notifications with same same category first else your going to be getting both weeks notifications
         
-        print("fetch for something")
+       // print("fetch for something")
+        NSLog("fetch for something", String())
         
         DispatchQueue.main.async{
             SyncAppQuotes().handleLocalUpdate { (result) in
                 NotificationTrigger().getNotified()
+ /*               /*For Testing*/
+                let content = UNMutableNotificationContent()
+                content.title = "test notifaction"
+                content.body = "Background Fetch Performing"
+                content.sound = UNNotificationSound.default
+
+                let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                let req  = UNNotificationRequest(identifier: "test_background", content: content, trigger: tri)
+
+                UNUserNotificationCenter.current().add(req) { (error) in
+                    print("error\(error.debugDescription)")
+                    completionHandler(.failed)
+                }
+                /*Testing Ends*/*/
+                completionHandler(.newData)
             }
         }
+        
+        
 
-        /*For Testing*/
-        let content = UNMutableNotificationContent()
-        content.title = "test notifaction"
-        content.body = "Background Fetch Performing"
-        content.sound = UNNotificationSound.default
 
-        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        let req  = UNNotificationRequest(identifier: "test_background", content: content, trigger: tri)
-
-        UNUserNotificationCenter.current().add(req) { (error) in
-            print("error\(error )")
-        }
-        /*Testing Ends*/
         
     }
     
@@ -180,4 +186,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound])// Will present an alert and will play a sound when a notification arrives
     }
+}
+
+extension Notification.Name {
+  static let newPokemonFetched = Notification.Name("com.moodquotes.fetchQuotes")
 }
