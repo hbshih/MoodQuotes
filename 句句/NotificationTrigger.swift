@@ -8,9 +8,16 @@ class NotificationTrigger : NSObject {
     
     func setupNotifications() {
         
+        
+        
+        
+        
         // Has Notification Turned On
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isNotificationOn")
         {
+            notifyQuoteHasChanged()
+
+            /*
             center.getPendingNotificationRequests { (results) in
                 print("### \n pending notifications \(results) \n###")
             }
@@ -28,7 +35,7 @@ class NotificationTrigger : NSObject {
                 self.getNotified()
             }
             
-            
+            */
         }else
         {
             center.removeAllPendingNotificationRequests()
@@ -136,7 +143,7 @@ class NotificationTrigger : NSObject {
     
     func getNotified()
     {
-        testing()
+      //  testing()
         
         let identifier = "dailyNotifier"
         let content = UNMutableNotificationContent()
@@ -186,6 +193,51 @@ class NotificationTrigger : NSObject {
         /*Testing Ends*/
         
     }
+    
+    // Notify Tomorrow
+    func notifyQuoteHasChanged()
+    {
+        let identifier = "dailyNotifier"
+        let content = UNMutableNotificationContent()
+        content.title = "每天進步一點點"
+        let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
+        let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
+        content.body = "語錄已經更新囉！打開看看吧！"
+        content.sound = UNNotificationSound.default
+        content.categoryIdentifier = "Notify Quote Has Changed"
+        
+        if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+        {
+            var components = cal.dateComponents([.hour, .minute], from: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)
+            components.hour = notificationDate.hour
+            components.minute = notificationDate.minute
+          //  print("n")
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
+            let request = UNNotificationRequest(identifier: identifier,
+                                                content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { [self] (error) in
+                if let error = error {
+                    // Something went wrong
+                    print("ERROR ADDING NOTIFICATION TO CENTER \(error.localizedDescription)")
+                } else
+                {
+                    print("ADDING NOTIFCIATION \(content.categoryIdentifier) \n \(content.body) \(request.content)")
+                    center.getPendingNotificationRequests { (results) in
+                        print("### \n pending notifications \(results) \n###")
+                    }
+                }
+            })
+            
+        }
+    }
+    
+    func checkIfPushTodayNotification()
+    {
+        
+        
+        
+    }
+    
 }
 
 

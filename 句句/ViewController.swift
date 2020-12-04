@@ -34,6 +34,7 @@ class ViewController: UIViewController, MessagingDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         // print all notification that are requested now
         let center = UNUserNotificationCenter.current()
@@ -111,6 +112,8 @@ class ViewController: UIViewController, MessagingDelegate {
             }
         }
         
+        WidgetCenter.shared.reloadAllTimelines()
+        
        // ref = Database.database().reference()
         
         
@@ -119,37 +122,6 @@ class ViewController: UIViewController, MessagingDelegate {
         
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
-        
-        /*
-        
-        var dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        
-        let date_today = dateFormatter.string(from: Date())
-        */
-        //        DispatchQueue.main.async { [self] in
-        //            //  let userID = Auth.auth().currentUser?.uid
-        //            self.ref.child("Quote of the Day").child("\(date_today)").observeSingleEvent(of: .value) { (snapshot) in
-        //                if let value = snapshot.value as? NSDictionary
-        //                {
-        //
-        //                    if let quote = value["Quote"] as? String
-        //                    {
-        //                        self.quote = quote
-        //                        if let author = value["Author"] as? String
-        //                        {
-        //                            self.author = author
-        //                            frontQuote.text = self.quote
-        //                            authorName.text = self.author
-        //                            hiddenQuote.text = self.quote
-        //                            hiddenAuthorName.text = self.author
-        //                            global_quote = frontQuote.text!
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
-        
     }
     
     
@@ -159,7 +131,7 @@ class ViewController: UIViewController, MessagingDelegate {
         object: nil,
         queue: nil) { (notification) in
           print("notification received")
-        /*For Testing*/
+/*        /*For Testing*/
         let content = UNMutableNotificationContent()
         content.title = "test notifaction"
         content.body = "VC GOT notified!"
@@ -171,7 +143,7 @@ class ViewController: UIViewController, MessagingDelegate {
         UNUserNotificationCenter.current().add(req) { (error) in
             print("error\(error )")
         }
-        /*Testing Ends*/
+        /*Testing Ends*/*/
       }
     }
 

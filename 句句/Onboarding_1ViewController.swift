@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class Onboarding_1ViewController: UIViewController {
 
@@ -19,14 +20,25 @@ class Onboarding_1ViewController: UIViewController {
         // Set date to today's date
         let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
         timePIcker.setDate(date, animated: false)
+        
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
     }
     @IBAction func nextTapped(_ sender: Any) {
+        Analytics.logEvent("onboarding_1_time_selection", parameters: [
+            "time": timePIcker.date as NSObject
+          ])
+        Analytics.logEvent("onboarding_1_time_selection", parameters: [
+            "time": timePIcker.date as NSObject
+          ])
         saveTime()
     }
     @IBAction func skipTapped(_ sender: Any) {
+        Analytics.logEvent("onboarding_1_skip_tapped", parameters: [
+            "time": timePIcker.date as NSObject
+          ])
         saveTime()
     }
     

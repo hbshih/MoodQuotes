@@ -44,7 +44,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>image</string>
+	<string>我們需要權限才能將截圖放入您的手機中</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>jf-liao-monospaced.ttf</string>

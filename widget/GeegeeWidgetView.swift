@@ -56,8 +56,6 @@ struct GeegeeWidgetView: View {
             .font(Display_Font(font_size: Int(authorSize)).getFont())
           .multilineTextAlignment(.center)
           .padding(.top, 5)
-            .padding(.leading, 5)
-            .padding(.trailing, 5)
             .foregroundColor(.black)
       }
     }

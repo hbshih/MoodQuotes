@@ -29,7 +29,7 @@ struct Provider: TimelineProvider{
         
         print("Widget got loaded")
         let currentDate = Date()
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
+        let refreshDate = Calendar.current.date(byAdding: .minute, value: 60, to: currentDate)!
         print("Widget Refreshing")
         
         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
@@ -46,23 +46,28 @@ struct Provider: TimelineProvider{
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.quote, forKey: "Quote")
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.author, forKey: "Author")
                         
-                        let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!)
-                        let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
-                        completion(timeline)
-                        
-                        /*For Testing*/
-                        let content = UNMutableNotificationContent()
-                        content.title = "test notifaction"
-                        content.body = "Widget is updating content, new content is \(quoteInfo.first!.quote)"
-                        content.sound = UNNotificationSound.default
-
-                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-                        let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
-
-                        UNUserNotificationCenter.current().add(req) { (error) in
-                            print("error\(error )")
+                        DispatchQueue.main.async {
+                            let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!)
+                            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+                            WidgetCenter.shared.reloadAllTimelines()
+                            completion(timeline)
                         }
-                        /*Testing Ends*/
+                        
+
+                        
+//                        /*For Testing*/
+//                        let content = UNMutableNotificationContent()
+//                        content.title = "test notifaction"
+//                        content.body = "Widget is updating content, new content is \(quoteInfo.first!.quote)"
+//                        content.sound = UNNotificationSound.default
+//
+//                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//                        let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
+//
+//                        UNUserNotificationCenter.current().add(req) { (error) in
+//                            print("error\(error )")
+//                        }
+//                        /*Testing Ends*/
                         
                         
                     } else {
@@ -78,20 +83,20 @@ struct Provider: TimelineProvider{
                 print("Remain Local, the update time is \(notificationDate)")
             }
             
-            /*For Testing*/
-            let content = UNMutableNotificationContent()
-            content.title = "test notifaction"
-            content.body = "Widget is remain local data"
-            content.sound = UNNotificationSound.default
-
-            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
-
-            UNUserNotificationCenter.current().add(req) { (error) in
-                print("error\(error )")
-            }
-            /*Testing Ends*/
-            
+//            /*For Testing*/
+//            let content = UNMutableNotificationContent()
+//            content.title = "test notifaction"
+//            content.body = "Widget is remain local data"
+//            content.sound = UNNotificationSound.default
+//
+//            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//            let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
+//
+//            UNUserNotificationCenter.current().add(req) { (error) in
+//                print("error\(error )")
+//            }
+//            /*Testing Ends*/
+//            
             print("load from local")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!

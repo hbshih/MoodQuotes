@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+      //  handleNotificationUpdate()
 
         // Fetch data once an hour.
         UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
@@ -53,9 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func scheduleBackgroundPokemonFetch() {
         let pokemonFetchTask = BGAppRefreshTaskRequest(identifier: "com.moodquotes.fetchQuotes")
-        pokemonFetchTask.earliestBeginDate = Date(timeIntervalSinceNow: 60)
+        pokemonFetchTask.earliestBeginDate = Date(timeIntervalSinceNow: 1800)
         do {
           try BGTaskScheduler.shared.submit(pokemonFetchTask)
+            print("submitted task")
         } catch {
           print("Unable to submit task: \(error.localizedDescription)")
         }
@@ -63,21 +66,95 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func handleAppRefreshTask(task: BGAppRefreshTask) {
         
+        handleNotificationUpdate()
+        
+        task.setTaskCompleted(success: true)
+        
+        /*
         task.expirationHandler = {
             //  PokeManager.urlSession.invalidateAndCancel()
                 URLSession().invalidateAndCancel()
             }
         
-        DispatchQueue.main.async{
-            SyncAppQuotes().handleLocalUpdate { (result) in
-                NotificationTrigger().getNotified()
-                task.setTaskCompleted(success: true)
-            }
-        }
-        
+        SyncAppQuotes().handleLocalUpdate { (result) in
+            NotificationTrigger().getNotified()
+            task.setTaskCompleted(success: true)
+        }        */
         scheduleBackgroundPokemonFetch()
     }
     
+    func handleNotificationUpdate()
+    {
+        if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+        {
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date1String = dateFormatter.string(from: notificationDate)
+            let date2String = dateFormatter.string(from: Date())
+            
+            let upd_date = dateFormatter.date(from: date1String)
+            let cur_date = dateFormatter.date(from: date2String)
+            
+            if upd_date! >= cur_date!
+            {
+                // 更新Data
+                
+                
+                
+                // Get From API
+                DispatchQueue.main.async {
+                    firebaseService().getQuoteApiResponse { [self] (result) in
+                        let quoteInfo: [Quote]
+                        if case .success(let fetchedData) = result {
+                            quoteInfo = fetchedData
+                            DispatchQueue.main.async { [self] in
+                                
+                                let identifier = "daily quotes"
+                                let content = UNMutableNotificationContent()
+                                content.title = "每天進步一點點"
+                                content.body = "\(quoteInfo.first?.quote ?? "語錄已經更新啦") \n —\(quoteInfo.first?.author ?? "去看看吧")"
+                                content.sound = UNNotificationSound.default
+                                content.categoryIdentifier = "daily quotes"
+                                
+                                // Update Local Data
+                                let cal = Calendar.current
+                                var components = cal.dateComponents([.day,.hour, .minute], from: Date())
+                                components.weekday = Date().weekday
+                                components.hour = notificationDate.hour
+                                components.minute = notificationDate.minute
+                                let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+                                let request = UNNotificationRequest(identifier: identifier,
+                                                                    content: content, trigger: trigger)
+                                let center = UNUserNotificationCenter.current()
+                                center.removeAllPendingNotificationRequests()
+                                center.add(request, withCompletionHandler: { [self] (error) in
+                                    if let error = error {
+                                        // Something went wrong
+                                        print("ERROR ADDING NOTIFICATION TO CENTER \(error.localizedDescription)")
+                                    } else
+                                    {
+                                        print("ADDING NOTIFCIATION \(content.categoryIdentifier) \n \(content.body) \(request.content)")
+                                        center.getPendingNotificationRequests { (results) in
+                                            print("### \n pending notifications \(results) \n###")
+                                        }
+                                    }
+                                })
+
+                            }
+                        } else {
+                            let errQuote = Quote(quote: "App當機拉", author: "By Me")
+                            quoteInfo = [errQuote,errQuote]
+                        }
+                    }
+                }
+                
+                
+                // Add Notification
+                NotificationTrigger().notifyQuoteHasChanged()
+            }
+        }
+    }
     
     
     
@@ -91,9 +168,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // We need to do this to ensure the current week value is updated to either 1 or 0
         // You will need to delete all notifications with same same category first else your going to be getting both weeks notifications
         
+        //task.setTaskCompleted(success: true)
+        
+        handleNotificationUpdate()
+        
        // print("fetch for something")
         NSLog("fetch for something", String())
-        
+        /*
         DispatchQueue.main.async{
             SyncAppQuotes().handleLocalUpdate { (result) in
                 NotificationTrigger().getNotified()
@@ -116,7 +197,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
-
+*/
 
         
     }

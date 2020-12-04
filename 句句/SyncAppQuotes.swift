@@ -44,19 +44,19 @@ struct SyncAppQuotes {
             print("New Update Time \(date)")
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(date, forKey: "updateTime")
             
-            /*For Testing*/
-            let content = UNMutableNotificationContent()
-            content.title = "test notifaction"
-            content.body = "Update Time Info, New Time \(date)"
-            content.sound = UNNotificationSound.default
-
-            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
-
-            UNUserNotificationCenter.current().add(req) { (error) in
-                print("error\(error )")
-            }
-            /*Testing Ends*/
+//            /*For Testing*/
+//            let content = UNMutableNotificationContent()
+//            content.title = "test notifaction"
+//            content.body = "Update Time Info, New Time \(date)"
+//            content.sound = UNNotificationSound.default
+//
+//            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//            let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
+//
+//            UNUserNotificationCenter.current().add(req) { (error) in
+//                print("error\(error )")
+//            }
+//            /*Testing Ends*/
         }
     }
     
@@ -67,19 +67,19 @@ struct SyncAppQuotes {
         {
             print("update Local")
             
-            /*For Testing*/
-            let content = UNMutableNotificationContent()
-            content.title = "test notifaction"
-            content.body = "Routine Check, Will Update"
-            content.sound = UNNotificationSound.default
-
-            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let req  = UNNotificationRequest(identifier: "testidentifire_", content: content, trigger: tri)
-
-            UNUserNotificationCenter.current().add(req) { (error) in
-                print("error\(error )")
-            }
-            /*Testing Ends*/
+//            /*For Testing*/
+//            let content = UNMutableNotificationContent()
+//            content.title = "test notifaction"
+//            content.body = "Routine Check, Will Update"
+//            content.sound = UNNotificationSound.default
+//
+//            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//            let req  = UNNotificationRequest(identifier: "testidentifire_", content: content, trigger: tri)
+//
+//            UNUserNotificationCenter.current().add(req) { (error) in
+//                print("error\(error )")
+//            }
+//            /*Testing Ends*/
             
             // Get From API
             DispatchQueue.main.async {
@@ -107,19 +107,19 @@ struct SyncAppQuotes {
             updateTime()
         }else
         {
-            /*For Testing*/
-            let content = UNMutableNotificationContent()
-            content.title = "test notifaction"
-            content.body = "Routine Check, Will Not Update"
-            content.sound = UNNotificationSound.default
-
-            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let req  = UNNotificationRequest(identifier: "testidentifire_", content: content, trigger: tri)
-
-            UNUserNotificationCenter.current().add(req) { (error) in
-                print("error\(error )")
-            }
-            /*Testing Ends*/
+//            /*For Testing*/
+//            let content = UNMutableNotificationContent()
+//            content.title = "test notifaction"
+//            content.body = "Routine Check, Will Not Update"
+//            content.sound = UNNotificationSound.default
+//
+//            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//            let req  = UNNotificationRequest(identifier: "testidentifire_", content: content, trigger: tri)
+//
+//            UNUserNotificationCenter.current().add(req) { (error) in
+//                print("error\(error )")
+//            }
+//            /*Testing Ends*/
         }
     }
     
@@ -130,19 +130,19 @@ struct SyncAppQuotes {
         {
             print("update Local")
             
-            /*For Testing*/
-            let content = UNMutableNotificationContent()
-            content.title = "test notifaction"
-            content.body = "Routine Check, Will Update"
-            content.sound = UNNotificationSound.default
-
-            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let req  = UNNotificationRequest(identifier: "testidentifire_", content: content, trigger: tri)
-
-            UNUserNotificationCenter.current().add(req) { (error) in
-                print("error\(error )")
-            }
-            /*Testing Ends*/
+//            /*For Testing*/
+//            let content = UNMutableNotificationContent()
+//            content.title = "test notifaction"
+//            content.body = "Routine Check, Will Update"
+//            content.sound = UNNotificationSound.default
+//
+//            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//            let req  = UNNotificationRequest(identifier: "testidentifire_", content: content, trigger: tri)
+//
+//            UNUserNotificationCenter.current().add(req) { (error) in
+//                print("error\(error )")
+//            }
+//            /*Testing Ends*/
             
             // Get From API
             DispatchQueue.main.async {
@@ -168,19 +168,19 @@ struct SyncAppQuotes {
             updateTime()
         }else
         {
-            /*For Testing*/
-            let content = UNMutableNotificationContent()
-            content.title = "test notifaction"
-            content.body = "Routine Check, Will Not Update"
-            content.sound = UNNotificationSound.default
-
-            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let req  = UNNotificationRequest(identifier: "testidentifire_", content: content, trigger: tri)
-
-            UNUserNotificationCenter.current().add(req) { (error) in
-                print("error\(error )")
-            }
-            /*Testing Ends*/
+//            /*For Testing*/
+//            let content = UNMutableNotificationContent()
+//            content.title = "test notifaction"
+//            content.body = "Routine Check, Will Not Update"
+//            content.sound = UNNotificationSound.default
+//
+//            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+//            let req  = UNNotificationRequest(identifier: "testidentifire_", content: content, trigger: tri)
+//
+//            UNUserNotificationCenter.current().add(req) { (error) in
+//                print("error\(error )")
+//            }
+//            /*Testing Ends*/
         }
     }
     
