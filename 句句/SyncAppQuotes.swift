@@ -91,7 +91,10 @@ struct SyncAppQuotes {
                             // Update Local Data
                             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.quote, forKey: "Quote")
                             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.author, forKey: "Author")
-                            WidgetCenter.shared.reloadAllTimelines()
+                            if #available(iOS 14.0, *)
+                            {
+                                WidgetCenter.shared.reloadAllTimelines()
+                            }
                             let data = Quote(quote: quoteInfo.first!.quote, author: quoteInfo.first!.author)
                             completion(.success([data]))
                         }
@@ -154,7 +157,10 @@ struct SyncAppQuotes {
                             // Update Local Data
                             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.quote, forKey: "Quote")
                             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.author, forKey: "Author")
-                            WidgetCenter.shared.reloadAllTimelines()
+                            if #available(iOS 14.0, *)
+                            {
+                                WidgetCenter.shared.reloadAllTimelines()
+                            }
                         }
                     } else {
                         let errQuote = Quote(quote: "App當機拉", author: "By Me")

@@ -47,7 +47,10 @@ class UpdateBackgroundColorTableViewCell: UITableViewCell {
                 print("VC")
                 vc.tableview.reloadData()
             }
-            WidgetCenter.shared.reloadAllTimelines()
+            if #available(iOS 14.0, *)
+            {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
         
         buttonTwo.backgroundColor = .systemGray6

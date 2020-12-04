@@ -87,7 +87,11 @@ class ViewController: UIViewController, MessagingDelegate {
                             self.hiddenAuthorName.text = self.author
                             global_quote = frontQuote.text!
                             //更新Widget
-                            WidgetCenter.shared.reloadAllTimelines()
+                            if #available(iOS 14.0, *) {
+                                WidgetCenter.shared.reloadAllTimelines()
+                            } else {
+                                // Fallback on earlier versions
+                            }
                         }
                     } else {
                         let errQuote = Quote(quote: "App當機拉", author: "By Me")
@@ -112,7 +116,10 @@ class ViewController: UIViewController, MessagingDelegate {
             }
         }
         
-        WidgetCenter.shared.reloadAllTimelines()
+        if #available(iOS 14.0, *)
+        {
+            WidgetCenter.shared.reloadAllTimelines()
+        }
         
        // ref = Database.database().reference()
         

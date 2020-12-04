@@ -200,8 +200,8 @@ class NotificationTrigger : NSObject {
         let identifier = "dailyNotifier"
         let content = UNMutableNotificationContent()
         content.title = "每天進步一點點"
-        let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
-        let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
+    //    let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
+   //     let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
         content.body = "語錄已經更新囉！打開看看吧！"
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = "Notify Quote Has Changed"

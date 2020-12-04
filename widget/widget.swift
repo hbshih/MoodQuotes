@@ -46,6 +46,8 @@ struct Provider: TimelineProvider{
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.quote, forKey: "Quote")
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.author, forKey: "Author")
                         
+                        
+                        
                         DispatchQueue.main.async {
                             let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!)
                             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
@@ -55,19 +57,19 @@ struct Provider: TimelineProvider{
                         
 
                         
-//                        /*For Testing*/
-//                        let content = UNMutableNotificationContent()
-//                        content.title = "test notifaction"
-//                        content.body = "Widget is updating content, new content is \(quoteInfo.first!.quote)"
-//                        content.sound = UNNotificationSound.default
-//
-//                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-//                        let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
-//
-//                        UNUserNotificationCenter.current().add(req) { (error) in
-//                            print("error\(error )")
-//                        }
-//                        /*Testing Ends*/
+
+                        let content = UNMutableNotificationContent()
+                        content.title = "每天都更喜歡自己一點"
+                        content.body = "\(quoteInfo.first?.quote)\n—\(quoteInfo.first?.author)"
+                        content.sound = UNNotificationSound.default
+
+                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                        let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
+
+                        UNUserNotificationCenter.current().add(req) { (error) in
+                            print("error\(error )")
+                        }
+
                         
                         
                     } else {
