@@ -18,9 +18,25 @@ struct SyncAppQuotes {
             print("Date now \(Date())")
             print("Update date \(updateDate)")
             
+            /* TESTING */
+            let content = UNMutableNotificationContent()
+            content.title = "檢查是否該更新"
+            content.body = "現在時間\(Date()), 預計更新時間 \(updateDate)"
+            content.sound = UNNotificationSound.default
+
+            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let req  = UNNotificationRequest(identifier: "check_2", content: content, trigger: tri)
+
+            UNUserNotificationCenter.current().add(req) { (error) in
+                print("error\(error )")
+            }
+            
+            /*TESTING**/
+            
             
             if Date() >= updateDate
             {
+                updateTime()
                 return true
             }else
             {
@@ -43,6 +59,22 @@ struct SyncAppQuotes {
             
             print("New Update Time \(date)")
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(date, forKey: "updateTime")
+            
+            
+            /* TESTING */
+            let content = UNMutableNotificationContent()
+            content.title = "我在更新下次更新時間"
+            content.body = "現在時間\(notificationDate), 預計更新時間 \(date)"
+            content.sound = UNNotificationSound.default
+
+            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let req  = UNNotificationRequest(identifier: "check_3", content: content, trigger: tri)
+
+            UNUserNotificationCenter.current().add(req) { (error) in
+                print("error\(error )")
+            }
+            
+            /*TESTING**/
             
 //            /*For Testing*/
 //            let content = UNMutableNotificationContent()

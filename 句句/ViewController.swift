@@ -35,13 +35,6 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        // print all notification that are requested now
-        let center = UNUserNotificationCenter.current()
-        center.getPendingNotificationRequests(completionHandler: { requests in
-            print("The following notifications are queued: \n \(requests)")
-        })
-        
         //Notifications
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
@@ -61,66 +54,6 @@ class ViewController: UIViewController, MessagingDelegate {
         font = Display_Font(font_size: 24).getUIFont()
         authorName.font = font
         hiddenAuthorName.font = font
-        
-        //If no quote saved in local & time now >= update time
-        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
-        {
-            // Get From API
-            DispatchQueue.main.async {
-                firebaseService().getQuoteApiResponse { [self] (result) in
-                    let quoteInfo: [Quote]
-                    if case .success(let fetchedData) = result {
-                        quoteInfo = fetchedData
-                        self.quote = quoteInfo.first!.quote
-                        self.author = quoteInfo.first!.author
-                        
-
-                        
-                        
-                        DispatchQueue.main.async { [self] in
-                            // Update Local Data
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.quote, forKey: "Quote")
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.author, forKey: "Author")
-                            self.frontQuote.text = self.quote
-                            self.authorName.text = self.author
-                            self.hiddenQuote.text = self.quote
-                            self.hiddenAuthorName.text = self.author
-                            global_quote = frontQuote.text!
-                            //更新Widget
-                            if #available(iOS 14.0, *) {
-                                WidgetCenter.shared.reloadAllTimelines()
-                            } else {
-                                // Fallback on earlier versions
-                            }
-                        }
-                    } else {
-                        let errQuote = Quote(quote: "App當機拉", author: "By Me")
-                        quoteInfo = [errQuote,errQuote]
-                    }
-                }
-            }
-            
-            //update [UpdateTime]
-            SyncAppQuotes().updateTime()
-        }else
-        {
-            print("Load Quotes and Author From Local")
-            let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
-            let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
-            DispatchQueue.main.async { [self] in
-                self.frontQuote.text = Q
-                self.authorName.text = A
-                self.hiddenQuote.text = Q
-                self.hiddenAuthorName.text = A
-                global_quote = frontQuote.text!
-            }
-        }
-        
-        if #available(iOS 14.0, *)
-        {
-            WidgetCenter.shared.reloadAllTimelines()
-        }
-        
        // ref = Database.database().reference()
         
         
@@ -172,6 +105,61 @@ class ViewController: UIViewController, MessagingDelegate {
             screenView.backgroundColor = color
             backgroundHideenView.backgroundColor =  color
         }
+        
+        //If no quote saved in local & time now >= update time
+        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
+        {
+            // Get From API
+            DispatchQueue.main.async {
+                firebaseService().getQuoteApiResponse { [self] (result) in
+                    let quoteInfo: [Quote]
+                    if case .success(let fetchedData) = result {
+                        quoteInfo = fetchedData
+                        self.quote = quoteInfo.first!.quote
+                        self.author = quoteInfo.first!.author
+                        DispatchQueue.main.async { [self] in
+                            // Update Local Data
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.quote, forKey: "Quote")
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.author, forKey: "Author")
+                            self.frontQuote.text = self.quote
+                            self.authorName.text = self.author
+                            self.hiddenQuote.text = self.quote
+                            self.hiddenAuthorName.text = self.author
+                            global_quote = frontQuote.text!
+                            //更新Widget
+                            if #available(iOS 14.0, *) {
+                                WidgetCenter.shared.reloadAllTimelines()
+                            } else {
+                                // Fallback on earlier versions
+                            }
+                        }
+                    } else {
+                        let errQuote = Quote(quote: "App當機拉", author: "By Me")
+                        quoteInfo = [errQuote,errQuote]
+                    }
+                }
+            }
+            
+        }else
+        {
+            print("Load Quotes and Author From Local")
+            let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
+            let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
+            DispatchQueue.main.async { [self] in
+                self.frontQuote.text = Q
+                self.authorName.text = A
+                self.hiddenQuote.text = Q
+                self.hiddenAuthorName.text = A
+                global_quote = frontQuote.text!
+            }
+        }
+        
+        if #available(iOS 14.0, *)
+        {
+            WidgetCenter.shared.reloadAllTimelines()
+        }
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

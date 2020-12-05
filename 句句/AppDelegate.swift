@@ -87,6 +87,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
         {
+            /* TESTING */
+            let content = UNMutableNotificationContent()
+            content.title = "每天都更喜歡自己一點"
+            content.body = "下個更新時間 \(notificationDate)"
+            content.sound = UNNotificationSound.default
+
+            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let req  = UNNotificationRequest(identifier: "daily update_", content: content, trigger: tri)
+
+            UNUserNotificationCenter.current().add(req) { (error) in
+                print("error\(error )")
+            }
+            
+            /*TESTING**/
+            
             
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -96,11 +111,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let upd_date = dateFormatter.date(from: date1String)
             let cur_date = dateFormatter.date(from: date2String)
             
-            if upd_date! >= cur_date!
+            if cur_date! >= upd_date!
             {
                 // 更新Data
-                
-                
                 
                 // Get From API
                 DispatchQueue.main.async {
@@ -112,35 +125,69 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                 
                                 let identifier = "daily quotes"
                                 let content = UNMutableNotificationContent()
-                                content.title = "每天進步一點點"
+                                content.title = "今天想要和你說"
                                 content.body = "\(quoteInfo.first?.quote ?? "語錄已經更新啦") \n —\(quoteInfo.first?.author ?? "去看看吧")"
                                 content.sound = UNNotificationSound.default
-                                content.categoryIdentifier = "daily quotes"
-                                
+                                content.categoryIdentifier = "quotes_notification"
+                           /*
                                 // Update Local Data
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.quote, forKey: "Quote")
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.author, forKey: "Author")*/
                                 let cal = Calendar.current
-                                var components = cal.dateComponents([.day,.hour, .minute], from: Date())
-                                components.weekday = Date().weekday
+                                var components = cal.dateComponents([.hour, .minute], from: Date())
                                 components.hour = notificationDate.hour
                                 components.minute = notificationDate.minute
+                                
+                                if (Date() > components.date!)
+                                {
+                                    components = cal.dateComponents([.hour, .minute], from: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)
+                                    components.hour = notificationDate.hour
+                                    components.minute = notificationDate.minute
+                                }
+                                
                                 let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
                                 let request = UNNotificationRequest(identifier: identifier,
                                                                     content: content, trigger: trigger)
                                 let center = UNUserNotificationCenter.current()
-                                center.removeAllPendingNotificationRequests()
+                                
+                                center.removePendingNotificationRequests(withIdentifiers: ["Daily Notifier"])
                                 center.add(request, withCompletionHandler: { [self] (error) in
                                     if let error = error {
                                         // Something went wrong
+                                        
+
+                                        
                                         print("ERROR ADDING NOTIFICATION TO CENTER \(error.localizedDescription)")
                                     } else
                                     {
+                                        
+                                        NotificationTrigger().notifyQuoteHasChanged(from: components.date!)
+                                        
+                                        /* TESTING */
+                                        let content = UNMutableNotificationContent()
+                                        content.title = "新增了一個更新語錄的通知"
+                                        content.body = "下個更新時間會是\(components.date)"
+                                        content.sound = UNNotificationSound.default
+
+                                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                                        let req  = UNNotificationRequest(identifier: "check_1", content: content, trigger: tri)
+
+                                        UNUserNotificationCenter.current().add(req) { (error) in
+                                            print("error\(error )")
+                                        }
+                                        
+                                        /*TESTING**/
+                                        
                                         print("ADDING NOTIFCIATION \(content.categoryIdentifier) \n \(content.body) \(request.content)")
                                         center.getPendingNotificationRequests { (results) in
                                             print("### \n pending notifications \(results) \n###")
                                         }
                                     }
                                 })
-
+                                
+                                
+                                
+                                
                             }
                         } else {
                             let errQuote = Quote(quote: "App當機拉", author: "By Me")
@@ -150,8 +197,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 
                 
-                // Add Notification
-                NotificationTrigger().notifyQuoteHasChanged()
+            /*    // Add Notification
+                NotificationTrigger().notifyQuoteHasChanged()*/
             }
         }
     }

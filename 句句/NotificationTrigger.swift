@@ -10,8 +10,6 @@ class NotificationTrigger : NSObject {
         
         
         
-        
-        
         // Has Notification Turned On
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isNotificationOn")
         {
@@ -147,7 +145,7 @@ class NotificationTrigger : NSObject {
         
         let identifier = "dailyNotifier"
         let content = UNMutableNotificationContent()
-        content.title = "每天進步一點點"
+        content.title = "我說啊"
         let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
         let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
         content.body = "\(Q) \n —\(A)"
@@ -192,6 +190,8 @@ class NotificationTrigger : NSObject {
         }
         /*Testing Ends*/
         
+        
+        
     }
     
     // Notify Tomorrow
@@ -199,19 +199,50 @@ class NotificationTrigger : NSObject {
     {
         let identifier = "dailyNotifier"
         let content = UNMutableNotificationContent()
-        content.title = "每天進步一點點"
-    //    let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
-   //     let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
+        content.title = "每天進步一點點吧"
         content.body = "語錄已經更新囉！打開看看吧！"
         content.sound = UNNotificationSound.default
-        content.categoryIdentifier = "Notify Quote Has Changed"
+        content.categoryIdentifier = "defaultNotifier"
         
         if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
         {
-            var components = cal.dateComponents([.hour, .minute], from: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)
+            var components = cal.dateComponents([.hour, .minute], from: notificationDate)
             components.hour = notificationDate.hour
             components.minute = notificationDate.minute
-          //  print("n")
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
+            let request = UNNotificationRequest(identifier: identifier,
+                                                content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { [self] (error) in
+                if let error = error {
+                    // Something went wrong
+                    print("ERROR ADDING NOTIFICATION TO CENTER \(error.localizedDescription)")
+                } else
+                {
+                    print("ADDING NOTIFCIATION \(content.categoryIdentifier) \n \(content.body) \(request.content)")
+                    center.getPendingNotificationRequests { (results) in
+                        print("### \n pending notifications \(results) \n###")
+                    }
+                }
+            })
+            
+        }
+    }
+    
+    // Notify Tomorrow
+    func notifyQuoteHasChanged(from: Date)
+    {
+        let identifier = "dailyNotifier"
+        let content = UNMutableNotificationContent()
+        content.title = "每天進步一點點吧"
+        content.body = "語錄已經更新囉！打開看看吧！"
+        content.sound = UNNotificationSound.default
+        content.categoryIdentifier = "defaultNotifier"
+        
+        if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+        {
+            var components = cal.dateComponents([.hour, .minute], from: Calendar.current.date(byAdding: .day, value: 1, to: from)!)
+            components.hour = notificationDate.hour
+            components.minute = notificationDate.minute
             let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
             let request = UNNotificationRequest(identifier: identifier,
                                                 content: content, trigger: trigger)

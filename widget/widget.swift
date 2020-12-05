@@ -34,8 +34,6 @@ struct Provider: TimelineProvider{
         
         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
             {
-            print("Should Update")
-            SyncAppQuotes().updateTime()
             
             DispatchQueue.main.async {
                 firebaseService().getQuoteApiResponse {(result) in
@@ -52,25 +50,22 @@ struct Provider: TimelineProvider{
                             let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!)
                             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
                             WidgetCenter.shared.reloadAllTimelines()
+                            
+                            let content = UNMutableNotificationContent()
+                            content.title = "每天都更喜歡自己一點"
+                            content.body = "\(quoteInfo.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo.first?.author ?? "")"
+                            content.sound = UNNotificationSound.default
+
+                            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                            let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
+
+                            UNUserNotificationCenter.current().add(req) { (error) in
+                                print("error\(error )")
+                                
+                            }
+                            
                             completion(timeline)
                         }
-                        
-
-                        
-
-                        let content = UNMutableNotificationContent()
-                        content.title = "每天都更喜歡自己一點"
-                        content.body = "\(quoteInfo.first?.quote)\n—\(quoteInfo.first?.author)"
-                        content.sound = UNNotificationSound.default
-
-                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-                        let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
-
-                        UNUserNotificationCenter.current().add(req) { (error) in
-                            print("error\(error )")
-                        }
-
-                        
                         
                     } else {
                         let errQuote = Quote(quote: "App當機拉", author: "By Me")

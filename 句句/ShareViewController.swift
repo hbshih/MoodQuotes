@@ -8,6 +8,7 @@
 import UIKit
 import AVKit
 import Photos
+import StoreKit
 
 class ShareViewController: UIViewController {
 
@@ -24,6 +25,8 @@ class ShareViewController: UIViewController {
         {
             screenshotPreview.image = UIImage(named: "icon_notification")
         }
+        //StoreKit().requ
+        SKStoreReviewController.requestReview()
     }
 
     @IBAction func optionTapped(_ sender: UIButton) {
