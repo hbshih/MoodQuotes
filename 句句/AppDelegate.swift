@@ -87,6 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
         {
+            /*
             /* TESTING */
             let content = UNMutableNotificationContent()
             content.title = "每天都更喜歡自己一點"
@@ -99,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UNUserNotificationCenter.current().add(req) { (error) in
                 print("error\(error )")
             }
-            
+            */
             /*TESTING**/
             
             
@@ -162,7 +163,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                     {
                                         
                                         NotificationTrigger().notifyQuoteHasChanged(from: components.date!)
-                                        
+                                        /*
                                         /* TESTING */
                                         let content = UNMutableNotificationContent()
                                         content.title = "新增了一個更新語錄的通知"
@@ -174,7 +175,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
                                         UNUserNotificationCenter.current().add(req) { (error) in
                                             print("error\(error )")
-                                        }
+                                        }*/
                                         
                                         /*TESTING**/
                                         

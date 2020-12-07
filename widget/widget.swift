@@ -29,7 +29,7 @@ struct Provider: TimelineProvider{
         
         print("Widget got loaded")
         let currentDate = Date()
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 60, to: currentDate)!
+        let refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
         print("Widget Refreshing")
         
         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()

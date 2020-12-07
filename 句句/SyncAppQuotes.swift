@@ -18,6 +18,7 @@ struct SyncAppQuotes {
             print("Date now \(Date())")
             print("Update date \(updateDate)")
             
+            /*
             /* TESTING */
             let content = UNMutableNotificationContent()
             content.title = "檢查是否該更新"
@@ -29,7 +30,7 @@ struct SyncAppQuotes {
 
             UNUserNotificationCenter.current().add(req) { (error) in
                 print("error\(error )")
-            }
+            }*/
             
             /*TESTING**/
             
@@ -60,7 +61,7 @@ struct SyncAppQuotes {
             print("New Update Time \(date)")
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(date, forKey: "updateTime")
             
-            
+            /*
             /* TESTING */
             let content = UNMutableNotificationContent()
             content.title = "我在更新下次更新時間"
@@ -73,7 +74,7 @@ struct SyncAppQuotes {
             UNUserNotificationCenter.current().add(req) { (error) in
                 print("error\(error )")
             }
-            
+            */
             /*TESTING**/
             
 //            /*For Testing*/
