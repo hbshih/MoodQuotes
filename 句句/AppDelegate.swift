@@ -12,6 +12,7 @@ import FirebaseMessaging
 import FBSDKCoreKit
 import BackgroundTasks
 
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -41,6 +42,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Facebook Required
         let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        
+        Analytics.setUserID(UIDevice.current.identifierForVendor?.uuidString)
+        // GA
+        /*
+        guard let gai = GAI.sharedInstance() else {
+          assert(false, "Google Analytics not configured correctly")
+        }
+        gai.tracker(withTrackingId: "YOUR_TRACKING_ID")
+        // Optional: automatically report uncaught exceptions.
+        gai.trackUncaughtExceptions = true
+
+        // Optional: set Logger to VERBOSE for debug information.
+        // Remove before app release.
+        gai.logger.logLevel = .verbose;
+        */
         /*
         NotificationCenter.default.addObserver(forName:UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { (_) in
             // Your Code here

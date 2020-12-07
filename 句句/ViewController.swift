@@ -167,6 +167,9 @@ class ViewController: UIViewController, MessagingDelegate {
         {
             if let VC = segue.destination as? ShareViewController
             {
+                
+                Analytics.logEvent("home_vc_share_tapped", parameters: ["Quote": frontQuote.text, "Author": authorName.text])
+                
                 backgroundHideenView.isHidden = false
                 let image = takeScreenshot(of: backgroundHideenView)
                 
@@ -177,6 +180,9 @@ class ViewController: UIViewController, MessagingDelegate {
                 
                 //  VC.screenshotPreview.image = UIImage(named: "icon_notification")
             }
+        }else
+        {
+            Analytics.logEvent("home_vc_settings_tapped", parameters: nil)
         }
     }
     

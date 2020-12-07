@@ -9,6 +9,7 @@ import UIKit
 import AVKit
 import Photos
 import StoreKit
+import FirebaseAnalytics
 
 class ShareViewController: UIViewController {
 
@@ -32,12 +33,17 @@ class ShareViewController: UIViewController {
     @IBAction func optionTapped(_ sender: UIButton) {
         switch sender.tag {
         case 0:
+            
+            Analytics.logEvent("share_vc_album", parameters: nil)
+            
             print("save to album")
             
             UIImageWriteToSavedPhotosAlbum(screenshotPreview.image!, self, #selector(imageWasSaved), nil)
             
         case 1:
             print("save to ig")
+            
+            Analytics.logEvent("share_vc_IG", parameters: nil)
             
             guard let imagePNGData = screenshotPreview.image?.pngData() else { return }
                guard let instagramStoryUrl = URL(string: "instagram-stories://share") else { return }
@@ -50,6 +56,8 @@ class ShareViewController: UIViewController {
             
         case 2:
             print("more")
+            
+            Analytics.logEvent("share_vc_more", parameters: nil)
             
             let items = [screenshotPreview.image]
             let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)

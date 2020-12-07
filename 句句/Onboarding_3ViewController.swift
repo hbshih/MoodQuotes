@@ -7,6 +7,7 @@
 
 import UIKit
 import NotificationCenter
+import FirebaseAnalytics
 
 class Onboarding_3ViewController: UIViewController {
 
@@ -30,10 +31,15 @@ class Onboarding_3ViewController: UIViewController {
     }
     
     @IBAction func noTapped(_ sender: Any) {
+        
+        Analytics.logEvent("onboarding_3_declined_notification", parameters: nil)
+        
         checkSegue()
     }
     
     @IBAction func AcceptedNotification(_ sender: Any) {
+        
+        Analytics.logEvent("onboarding_3_accepted_notification", parameters: nil)
         
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(true, forKey: "isNotificationOn")
         

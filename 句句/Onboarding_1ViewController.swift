@@ -25,20 +25,22 @@ class Onboarding_1ViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh-mm"
+        let date_today = dateFormatter.string(from: timePIcker.date)
+        Analytics.logEvent("onboarding_1_saved_time", parameters: ["noti_time": "\(date_today)"])
+        
     }
     @IBAction func nextTapped(_ sender: Any) {
-        Analytics.logEvent("onboarding_1_time_selection", parameters: [
-            "time": timePIcker.date as NSObject
-          ])
-        Analytics.logEvent("onboarding_1_time_selection", parameters: [
-            "time": timePIcker.date as NSObject
-          ])
+        
+        
+        Analytics.logEvent("onboarding_1_next_tapped", parameters: nil)
+        
         saveTime()
     }
     @IBAction func skipTapped(_ sender: Any) {
-        Analytics.logEvent("onboarding_1_skip_tapped", parameters: [
-            "time": timePIcker.date as NSObject
-          ])
+        Analytics.logEvent("onboarding_1_skip_tapped", parameters: nil)
         saveTime()
     }
     
