@@ -48,8 +48,10 @@ class NotificationTableViewCell: UITableViewCell {
                 guard granted else { return }
                 DispatchQueue.main.async {
                     UIApplication.shared.registerForRemoteNotifications()
-                    let  aClass = NotificationTrigger()
-                    aClass.setupNotifications()
+                  //  let  aClass = NotificationTrigger()
+                  //  aClass.setupNotifications()
+                    
+                    NotificationTrigger().notifyQuoteHasChanged()
                 }
             }
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(true, forKey: "isNotificationOn")
