@@ -45,8 +45,7 @@ class UpdateTimeTableViewCell: UITableViewCell {
         
         // Reset Notification Time
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-        let  aClass = NotificationTrigger()
-        aClass.setupNotifications()
+        NotificationTrigger().notifyQuoteHasChanged()
     }
     
     

@@ -101,6 +101,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func handleNotificationUpdate()
     {
+        
+        
+        
         if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
         {
             /*
