@@ -15,8 +15,20 @@ class Onboarding_1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.timePIcker.layer.cornerRadius = timePIcker.layer.borderWidth / 2
         
+        
+        if #available(iOS 14, *) {
+            self.timePIcker.preferredDatePickerStyle = .inline
+            self.timePIcker.layer.cornerRadius = timePIcker.layer.borderWidth / 2
+            
+        }else
+        {
+           // self.timePIcker.frame = CGRect(
+        //    timePIcker.constraints.append(timePIcker.centerYAnchor.constraint(equalTo: self.view.centerYAnchor))
+            timePIcker.datePickerMode = .time
+        }
+        
+
         // Set date to today's date
         let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
         timePIcker.setDate(date, animated: false)

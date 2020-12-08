@@ -23,6 +23,7 @@ class ViewController: UIViewController, MessagingDelegate {
     @IBOutlet weak var screenView: UIView!
     @IBOutlet weak var backgroundHideenView: UIStackView!
     @IBOutlet weak var hiddenQuoteAdder: UILabel!
+    @IBOutlet weak var stack_action_controller: UIStackView!
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         print("Firebase registration token: \(String(describing: fcmToken))")
@@ -34,6 +35,8 @@ class ViewController: UIViewController, MessagingDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         //Notifications
         UNUserNotificationCenter.current().delegate = self
@@ -170,13 +173,28 @@ class ViewController: UIViewController, MessagingDelegate {
                 
                 Analytics.logEvent("home_vc_share_tapped", parameters: ["Quote": frontQuote.text, "Author": authorName.text])
                 
+                
+                
                 backgroundHideenView.isHidden = false
-                let image = takeScreenshot(of: backgroundHideenView)
+
+                
+                if #available(iOS 14.0, *)
+                {
+                    let image = takeScreenshot(of: backgroundHideenView)
+                    VC.imageToShow = image
+                }else
+                {
+                    stack_action_controller.isHidden = true
+                    let image = screenView.takeScreenShot()
+                    VC.imageToShow = image
+                }
+                
                 
                 backgroundHideenView.isHidden = true
+                stack_action_controller.isHidden = false
                 //   VC.screenshotPreview.image = image
                 
-                VC.imageToShow = image
+                
                 
                 //  VC.screenshotPreview.image = UIImage(named: "icon_notification")
             }
@@ -232,3 +250,16 @@ extension ViewController: UNUserNotificationCenterDelegate {
         completionHandler([.alert, .sound])
     }}
 
+
+extension UIView {
+
+    func takeScreenShot() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
+
+        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
+    }
+}

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Krk-l6-7pi">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -85,14 +86,14 @@
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poJ-EG-VSE">
+                                                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="poJ-EG-VSE">
                                                                 <rect key="frame" x="0.0" y="87.5" width="343" height="112.5"/>
                                                                 <subviews>
-                                                                    <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39S-JA-Hyg">
-                                                                        <rect key="frame" x="126.5" y="23" width="90" height="67"/>
+                                                                    <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="inline" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39S-JA-Hyg">
+                                                                        <rect key="frame" x="96.5" y="23" width="150" height="67"/>
                                                                         <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="90" id="naV-ws-bvn"/>
+                                                                            <constraint firstAttribute="width" constant="150" id="naV-ws-bvn"/>
                                                                             <constraint firstAttribute="height" constant="67" id="wUS-QR-4Er"/>
                                                                         </constraints>
                                                                         <date key="date" timeIntervalSinceReferenceDate="627699600.53817499">
@@ -218,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psp-Kx-3lM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3853.6231884057975" y="114.50892857142857"/>
+            <point key="canvasLocation" x="-3855.1999999999998" y="113.79310344827587"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -429,6 +430,7 @@
                         <outlet property="hiddenQuote" destination="X0Z-Ov-Dk5" id="XOc-Vy-Yhg"/>
                         <outlet property="hiddenQuoteAdder" destination="Y8l-8V-78E" id="WbO-N4-bfx"/>
                         <outlet property="screenView" destination="mFK-is-lcH" id="9XO-5a-BZH"/>
+                        <outlet property="stack_action_controller" destination="1Au-7f-1Ra" id="B2e-1K-LAn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -1,0 +1,95 @@
+/* Class = "UILabel"; text = "IG分享"; ObjectID = "5dk-gS-IvQ"; */
+"5dk-gS-IvQ.text" = "IG分享";
+
+/* Class = "UIButton"; normalTitle = "跳过"; ObjectID = "83e-0V-Wka"; */
+"83e-0V-Wka.normalTitle" = "跳过";
+
+/* Class = "UILabel"; text = "人生是一场兵荒马乱，你是我的劫后余生。"; ObjectID = "BPk-MP-j3O"; */
+"BPk-MP-j3O.text" = "人生是一场兵荒马乱，你是我的劫后余生。";
+
+/* Class = "UIButton"; normalTitle = "蓝"; ObjectID = "CmK-px-ma3"; */
+"CmK-px-ma3.normalTitle" = "蓝";
+
+/* Class = "UIButton"; normalTitle = "不想分享了"; ObjectID = "E3i-hJ-mUm"; */
+"E3i-hJ-mUm.normalTitle" = "不想分享了";
+
+/* Class = "UIButton"; normalTitle = "完成"; ObjectID = "Ely-jG-IgH"; */
+"Ely-jG-IgH.normalTitle" = "完成";
+
+/* Class = "UIButton"; normalTitle = "下一步"; ObjectID = "GWs-du-I5N"; */
+"GWs-du-I5N.normalTitle" = "下一步";
+
+/* Class = "UILabel"; text = "选择背景颜色"; ObjectID = "Gy8-Mh-nVr"; */
+"Gy8-Mh-nVr.text" = "选择背景颜色";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HUH-Tm-0Ui"; */
+"HUH-Tm-0Ui.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "别"; ObjectID = "HVe-Ya-8lD"; */
+"HVe-Ya-8lD.normalTitle" = "别";
+
+/* Class = "UILabel"; text = "其他"; ObjectID = "O1N-f3-fRL"; */
+"O1N-f3-fRL.text" = "其他";
+
+/* Class = "UIButton"; normalTitle = "小工具安装教学"; ObjectID = "RE0-8a-AwB"; */
+"RE0-8a-AwB.normalTitle" = "小工具安装教学";
+
+/* Class = "UIButton"; normalTitle = "粉"; ObjectID = "RUM-cO-hh8"; */
+"RUM-cO-hh8.normalTitle" = "粉";
+
+/* Class = "UILabel"; text = "小工具安装教学（须更新至iOS 14）\n\n1. 回到桌面，在主画面上，触碰并按住小工具或空白区域，直到App 开始晃动。 \n2. 点一下上方的[+] 按钮。 \n3. 找到句句。 \n4. 点一下「完成」。 "; ObjectID = "ShK-fU-n2U"; */
+"ShK-fU-n2U.text" = "小工具安装教学（须更新至iOS 14）\n\n1. 回到桌面，在主画面上，触碰并按住小工具或空白区域，直到App 开始晃动。 \n2. 点一下上方的[+] 按钮。 \n3. 找到句句。 \n4. 点一下「完成」。 ";
+
+/* Class = "UILabel"; text = "开始通知可以第一时间看见语录，\n要开启通知吗"; ObjectID = "TOc-jC-067"; */
+"TOc-jC-067.text" = "开始通知可以第一时间看见语录，\n要开启通知吗";
+
+/* Class = "UILabel"; text = "分享给朋友吧"; ObjectID = "Uaz-RM-0sK"; */
+"Uaz-RM-0sK.text" = "分享给朋友吧";
+
+/* Class = "UILabel"; text = "人生是一场兵荒马乱，你是我的劫后余生。"; ObjectID = "X0Z-Ov-Dk5"; */
+"X0Z-Ov-Dk5.text" = "人生是一场兵荒马乱，你是我的劫后余生。";
+
+/* Class = "UILabel"; text = "共勉之。"; ObjectID = "Y8l-8V-78E"; */
+"Y8l-8V-78E.text" = "共勉之。";
+
+/* Class = "UIButton"; normalTitle = "黄"; ObjectID = "aFA-80-tvJ"; */
+"aFA-80-tvJ.normalTitle" = "黄";
+
+/* Class = "UILabel"; text = "存入相簿"; ObjectID = "anR-i3-lTb"; */
+"anR-i3-lTb.text" = "存入相簿";
+
+/* Class = "UILabel"; text = "调调设定啦"; ObjectID = "b3J-kL-OCS"; */
+"b3J-kL-OCS.text" = "调调设定啦";
+
+/* Class = "UIButton"; normalTitle = "我会安装小工具了"; ObjectID = "dIJ-or-5WP"; */
+"dIJ-or-5WP.normalTitle" = "我会安装小工具了";
+
+/* Class = "UILabel"; text = "小工具安装教学"; ObjectID = "h9u-SN-mQn"; */
+"h9u-SN-mQn.text" = "小工具安装教学";
+
+/* Class = "UILabel"; text = "（之后也可以改啦）"; ObjectID = "j35-Ca-OCM"; */
+"j35-Ca-OCM.text" = "（之后也可以改啦）";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nzE-5V-zvv"; */
+"nzE-5V-zvv.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "灰"; ObjectID = "obi-Ke-f0X"; */
+"obi-Ke-f0X.normalTitle" = "灰";
+
+/* Class = "UIButton"; normalTitle = "下一步"; ObjectID = "qGP-Re-m1z"; */
+"qGP-Re-m1z.normalTitle" = "下一步";
+
+/* Class = "UIButton"; normalTitle = "跳过"; ObjectID = "tHY-fT-v8q"; */
+"tHY-fT-v8q.normalTitle" = "跳过";
+
+/* Class = "UIButton"; normalTitle = "好"; ObjectID = "u9h-RL-PdC"; */
+"u9h-RL-PdC.normalTitle" = "好";
+
+/* Class = "UILabel"; text = "选择每日语录更新时间"; ObjectID = "uM1-I5-pyA"; */
+"uM1-I5-pyA.text" = "选择每日语录更新时间";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uRv-ar-rFw"; */
+"uRv-ar-rFw.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "绿"; ObjectID = "yhi-ss-YZG"; */
+"yhi-ss-YZG.normalTitle" = "绿";

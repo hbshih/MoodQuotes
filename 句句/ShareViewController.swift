@@ -46,9 +46,22 @@ class ShareViewController: UIViewController {
             Analytics.logEvent("share_vc_IG", parameters: nil)
             
             guard let imagePNGData = screenshotPreview.image?.pngData() else { return }
-               guard let instagramStoryUrl = URL(string: "instagram-stories://share") else { return }
-               guard UIApplication.shared.canOpenURL(instagramStoryUrl) else { return }
-
+               guard let instagramStoryUrl = URL(string: "instagram-stories://share") else {
+            
+                return
+               }
+            
+            if UIApplication.shared.canOpenURL(instagramStoryUrl)
+            {
+                
+            }else
+            {
+                let controller = UIAlertController(title: "打不開IG", message: "建議您直接存入相簿後再分享", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "好", style: .default, handler: nil)
+                controller.addAction(okAction)
+                present(controller, animated: true, completion: nil)
+            }
+            
                let itemsToShare: [[String: Any]] = [["com.instagram.sharedSticker.backgroundImage": imagePNGData]]
                let pasteboardOptions: [UIPasteboard.OptionsKey: Any] = [.expirationDate: Date().addingTimeInterval(60 * 5)]
                UIPasteboard.general.setItems(itemsToShare, options: pasteboardOptions)
