@@ -95,6 +95,7 @@ PODS:
     - DynamicBlurView (~> 4.0)
   - PromisesObjC (1.2.11)
   - SwiftyGif (5.3.0)
+  - UXCam (3.3.0)
 
 DEPENDENCIES:
   - BulletinBoard
@@ -108,6 +109,7 @@ DEPENDENCIES:
   - MASegmentedControl
   - PopupDialog
   - SwiftyGif
+  - UXCam
 
 SPEC REPOS:
   trunk:
@@ -133,6 +135,7 @@ SPEC REPOS:
     - PopupDialog
     - PromisesObjC
     - SwiftyGif
+    - UXCam
 
 SPEC CHECKSUMS:
   BulletinBoard: dba77053c2a7b64953f63073f7534165af2edd21
@@ -157,7 +160,8 @@ SPEC CHECKSUMS:
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
+  UXCam: a5bbbc5e4352059104654ef4af304da329b1e22a
 
-PODFILE CHECKSUM: c45b9a40ad00695e73ae77537c2eb9a8408e7601
+PODFILE CHECKSUM: 49a0c6e1356edaf12bfd211a263d209ca1e75b21
 
 COCOAPODS: 1.9.0

@@ -11,9 +11,21 @@ import FirebaseAnalytics
 class UpdateTimeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var timePicker: UIDatePicker!
+    @IBOutlet weak var timePickeriOS13: UIDatePicker!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if #available(iOS 14.0, *) {
+            timePicker.isHidden = false
+            timePickeriOS13.isHidden = true
+        } else {
+            timePicker.sizeToFit()
+            timePicker.isHidden = true
+            timePickeriOS13.isHidden = false
+        }
+        
+        
+        
     }
     
 
@@ -29,6 +41,13 @@ class UpdateTimeTableViewCell: UITableViewCell {
         
         //更新TimePicker
         timePicker.setDate(sender.date, animated: true)
+        
+        if #available(iOS 14.0, *) {
+            timePicker.setDate(sender.date, animated: true)
+        } else {
+            timePickeriOS13.setDate(sender.date, animated: true)
+        }
+        
         
         var dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh-mm"

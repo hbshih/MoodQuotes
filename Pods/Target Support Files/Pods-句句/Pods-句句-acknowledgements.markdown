@@ -2295,6 +2295,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+## UXCam
+
+Copyright (c) 2013-2020, UXCam Inc.
+All rights reserved.
+
+
 ## leveldb-library
 
 Copyright (c) 2011 The LevelDB Authors. All rights reserved.

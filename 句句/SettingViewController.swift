@@ -37,12 +37,18 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             {
                 // Set Notification Date
                 cell.timePicker.date = notificationDate
+                cell.timePickeriOS13.date = notificationDate
                 let date = Calendar.current.date(bySettingHour: notificationDate.hour, minute: notificationDate.minute, second: 0, of: Date())!
                 cell.timePicker.setDate(date, animated: false)
+                cell.timePickeriOS13.setDate(date, animated: false)
+                
+                
+                
             }else
             {
                 let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
                 cell.timePicker.setDate(date, animated: false)
+                cell.timePickeriOS13.setDate(date, animated: false)
             }
             return cell
         case 2:

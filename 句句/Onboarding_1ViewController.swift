@@ -11,6 +11,7 @@ import FirebaseAnalytics
 class Onboarding_1ViewController: UIViewController {
 
     @IBOutlet weak var timePIcker: UIDatePicker!
+    @IBOutlet weak var pickeriOS14: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,17 +32,40 @@ class Onboarding_1ViewController: UIViewController {
 
         // Set date to today's date
         let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
+        
+        if #available(iOS 14.0, *) {
+            timePIcker.isHidden = true
+            pickeriOS14.isHidden = false
+        } else {
+            // Fallback on earlier versions
+            timePIcker.isHidden = false
+            pickeriOS14.isHidden = true
+        }
+        
         timePIcker.setDate(date, animated: false)
+        pickeriOS14.setDate(date, animated: false)
+        
+        
         
         
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         
-        var dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh-mm"
-        let date_today = dateFormatter.string(from: timePIcker.date)
-        Analytics.logEvent("onboarding_1_saved_time", parameters: ["noti_time": "\(date_today)"])
+        if #available(iOS 14.0, *) {
+            var dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "hh-mm"
+            let date_today = dateFormatter.string(from: pickeriOS14.date)
+            Analytics.logEvent("onboarding_1_saved_time", parameters: ["noti_time": "\(date_today)"])
+        } else {
+            var dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "hh-mm"
+            let date_today = dateFormatter.string(from: timePIcker.date)
+            Analytics.logEvent("onboarding_1_saved_time", parameters: ["noti_time": "\(date_today)"])
+        }
+        
+        
+
         
     }
     @IBAction func nextTapped(_ sender: Any) {
@@ -58,9 +82,21 @@ class Onboarding_1ViewController: UIViewController {
     
     func saveTime()
     {
-        // Add next update date to user defaults
-        let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: timePIcker.date)
-        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(timePIcker.date, forKey: "updateTime")
-        print("Next update date \(updateTime)")
+
+        
+        
+        
+        if #available(iOS 14.0, *) {
+            // Add next update date to user defaults
+            let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: pickeriOS14.date)
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(pickeriOS14.date, forKey: "updateTime")
+            print("Next update date \(updateTime)")
+        } else {
+            // Add next update date to user defaults
+            let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: timePIcker.date)
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(timePIcker.date, forKey: "updateTime")
+            print("Next update date \(updateTime)")
+        }
+        
     }
 }

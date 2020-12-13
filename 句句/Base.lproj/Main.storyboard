@@ -91,7 +91,7 @@
                                                                 <subviews>
                                                                     <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="inline" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39S-JA-Hyg">
                                                                         <rect key="frame" x="96.5" y="23" width="150" height="67"/>
-                                                                        <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="150" id="naV-ws-bvn"/>
                                                                             <constraint firstAttribute="height" constant="67" id="wUS-QR-4Er"/>
@@ -105,10 +105,20 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </datePicker>
+                                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-32-dNf">
+                                                                        <rect key="frame" x="126" y="41" width="90" height="30"/>
+                                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="90" id="DEz-LB-BQM"/>
+                                                                            <constraint firstAttribute="height" constant="30" id="JEd-3P-MRr"/>
+                                                                        </constraints>
+                                                                    </datePicker>
                                                                 </subviews>
                                                                 <constraints>
+                                                                    <constraint firstItem="3ed-32-dNf" firstAttribute="centerX" secondItem="poJ-EG-VSE" secondAttribute="centerX" id="RwC-af-Lr5"/>
                                                                     <constraint firstItem="39S-JA-Hyg" firstAttribute="centerX" secondItem="poJ-EG-VSE" secondAttribute="centerX" id="YQi-yf-QbB"/>
                                                                     <constraint firstItem="39S-JA-Hyg" firstAttribute="centerY" secondItem="poJ-EG-VSE" secondAttribute="centerY" id="wqk-WW-p5G"/>
+                                                                    <constraint firstItem="3ed-32-dNf" firstAttribute="centerY" secondItem="poJ-EG-VSE" secondAttribute="centerY" id="yNN-Vt-fvT"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -213,6 +223,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="pickeriOS14" destination="3ed-32-dNf" id="abL-Hb-Igc"/>
                         <outlet property="timePIcker" destination="39S-JA-Hyg" id="36B-m4-CKa"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="homeSegue" id="iiW-8X-Mfm"/>
                     </connections>

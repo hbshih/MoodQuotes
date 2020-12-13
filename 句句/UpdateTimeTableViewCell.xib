@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,23 +33,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="wL3-zS-E65">
-                                <rect key="frame" x="227" y="0.0" width="96" height="44"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="wL3-zS-E65">
+                                <rect key="frame" x="224" y="0.0" width="96" height="44"/>
                                 <color key="tintColor" red="0.89411764705882346" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="aT6-Nd-krS"/>
+                                    <constraint firstAttribute="width" constant="96" id="BJf-3T-tar"/>
                                 </constraints>
                                 <connections>
                                     <action selector="timeChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="fqp-gM-yyu"/>
                                 </connections>
                             </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="kDS-MW-yY0">
+                                <rect key="frame" x="180" y="0.0" width="140" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="7zd-bY-CJy"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="timeChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="P1G-CQ-RfO"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kDS-MW-yY0" secondAttribute="bottom" id="Mpg-mu-oaG"/>
+                            <constraint firstItem="kDS-MW-yY0" firstAttribute="top" secondItem="uF7-4Y-RX2" secondAttribute="top" id="Wvg-TE-YSi"/>
                             <constraint firstAttribute="trailing" secondItem="wL3-zS-E65" secondAttribute="trailing" id="aZU-pf-BLa"/>
                             <constraint firstItem="3ov-lx-gNW" firstAttribute="top" secondItem="uF7-4Y-RX2" secondAttribute="top" id="ayo-s2-dwx"/>
                             <constraint firstAttribute="bottom" secondItem="wL3-zS-E65" secondAttribute="bottom" id="g3z-25-MZy"/>
                             <constraint firstAttribute="bottom" secondItem="3ov-lx-gNW" secondAttribute="bottom" id="h1r-Cs-ecw"/>
                             <constraint firstItem="1AB-Aa-Nda" firstAttribute="centerY" secondItem="uF7-4Y-RX2" secondAttribute="centerY" id="iGn-8U-dFe"/>
+                            <constraint firstAttribute="trailing" secondItem="kDS-MW-yY0" secondAttribute="trailing" id="ndk-XP-Y7E"/>
                             <constraint firstItem="wL3-zS-E65" firstAttribute="top" secondItem="uF7-4Y-RX2" secondAttribute="top" id="qgq-zV-H12"/>
                             <constraint firstItem="3ov-lx-gNW" firstAttribute="leading" secondItem="uF7-4Y-RX2" secondAttribute="leading" constant="16" id="rgB-3G-ri4"/>
                             <constraint firstItem="1AB-Aa-Nda" firstAttribute="leading" secondItem="3ov-lx-gNW" secondAttribute="trailing" constant="8" symbolic="YES" id="wUu-PV-HrY"/>
@@ -65,6 +78,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="timePicker" destination="wL3-zS-E65" id="T91-QC-9V9"/>
+                <outlet property="timePickeriOS13" destination="kDS-MW-yY0" id="f85-NR-ego"/>
             </connections>
             <point key="canvasLocation" x="-154" y="79"/>
         </tableViewCell>
