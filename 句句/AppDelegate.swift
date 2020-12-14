@@ -8,8 +8,7 @@
 import UIKit
 import Firebase
 import UserNotifications
-import FirebaseMessaging
-import FBSDKCoreKit
+
 import BackgroundTasks
 import UXCam
 
@@ -44,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //registerBackgroundTasks()
         
         // Facebook Required
-        let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+      //  let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         
         Analytics.setUserID(UIDevice.current.identifierForVendor?.uuidString)
@@ -228,10 +227,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    
+    /*
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return ApplicationDelegate.shared.application(app, open: url, options: options)
-    }
+    }*/
     
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {

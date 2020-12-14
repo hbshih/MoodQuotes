@@ -18,9 +18,9 @@ target '句句' do
   pod 'PopupDialog'
   pod 'SwiftyGif'
   pod 'UXCam'
-#  pod 'FacebookCore'
-#  pod 'FacebookLogin'
-#  pod 'FacebookShare'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
   
 
   target '句句Tests' do

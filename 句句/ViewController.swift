@@ -9,7 +9,6 @@ import UIKit
 import FirebaseDatabase
 import UserNotifications
 import Firebase
-import FirebaseMessaging
 import WidgetKit
 
 var global_quote: String = ""
