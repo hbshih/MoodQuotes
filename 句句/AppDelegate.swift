@@ -10,6 +10,7 @@ import Firebase
 import UserNotifications
 import BackgroundTasks
 import UXCam
+import WidgetKit
 //import UXCam
 
 
@@ -17,7 +18,7 @@ import UXCam
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
-    
+ 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
