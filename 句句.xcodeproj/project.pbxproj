@@ -53,6 +53,7 @@
 		B591B17F2570A0C100C389D9 /* SyncAppQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */; };
 		B591B1802570A0C100C389D9 /* SyncAppQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */; };
 		B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */; };
+		B59C53692622F1C5008BFB0A /* OnboardingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */; };
 		B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205425669862003A5521 /* WidgetKit.framework */; };
 		B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205625669862003A5521 /* SwiftUI.framework */; };
 		B59E20B8256698FB003A5521 /* widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E20B7256698FB003A5521 /* widget.swift */; };
@@ -172,6 +173,7 @@
 		B591B178257087A400C389D9 /* ezgif-3-d2dbde6ebf9a.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ezgif-3-d2dbde6ebf9a.gif"; sourceTree = "<group>"; };
 		B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAppQuotes.swift; sourceTree = "<group>"; };
 		B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleNewUserViewController.swift; sourceTree = "<group>"; };
+		B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStoryViewController.swift; sourceTree = "<group>"; };
 		B59E205425669862003A5521 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B59E205625669862003A5521 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B59E20B3256698FB003A5521 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +351,7 @@
 				B552F4DE256D0449001013BA /* SyncAppWidget.swift */,
 				B509566E256DDCC30075ACE9 /* DateHelper.swift */,
 				B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */,
+				B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -480,11 +483,9 @@
 					};
 					B5517C86255FAFC600E134CC = {
 						CreatedOnToolsVersion = 12.1;
-						TestTargetID = B5517C70255FAFC500E134CC;
 					};
 					B5517C91255FAFC600E134CC = {
 						CreatedOnToolsVersion = 12.1;
-						TestTargetID = B5517C70255FAFC500E134CC;
 					};
 					B59E20B2256698FB003A5521 = {
 						CreatedOnToolsVersion = 12.2;
@@ -706,6 +707,7 @@
 				B591B17F2570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
 				B552F4DF256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,
+				B59C53692622F1C5008BFB0A /* OnboardingStoryViewController.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
 				B5DF562E256F2C01004A24D8 /* Date.swift in Sources */,
 				B5AF873A2571209C008A3BBC /* videoTutorialViewController.swift in Sources */,
@@ -1219,7 +1221,6 @@
 			baseConfigurationReference = E397A54294B3BE2C22FCEFEF /* Pods-句句Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句Tests/Info.plist";
@@ -1233,7 +1234,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/句句.app/句句";
 			};
 			name = Debug;
 		};
@@ -1242,7 +1242,6 @@
 			baseConfigurationReference = DCF7186A53EBC6D09E4851D9 /* Pods-句句Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				INFOPLIST_FILE = "句句Tests/Info.plist";
@@ -1256,7 +1255,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/句句.app/句句";
 			};
 			name = Release;
 		};
@@ -1275,9 +1273,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BSStudio.Geegee.--UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "句句";
 			};
 			name = Debug;
 		};
@@ -1296,9 +1294,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BSStudio.Geegee.--UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "句句";
 			};
 			name = Release;
 		};
