@@ -155,8 +155,15 @@ struct widget: Widget{
         ) { entry in
             Emojibook_WidgetEntryView(entry: entry)
         }
+        .supportedFamilies([.systemMedium])
         .configurationDisplayName("句句 每日語錄")
         .description("記得分享")
     }
     
+}
+
+struct widget_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
 }

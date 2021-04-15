@@ -47,4 +47,14 @@ public var minute: Int {
         }
     }
 }
+
+    public var getTodayDate: String
+    {
+        let formatter3 = DateFormatter()
+        formatter3.dateFormat = "yyyy年MM月dd日"
+        return formatter3.string(from: Date())
+       // print(formatter3.string(from: today))
+    }
+    
 }
+
