@@ -600,6 +600,9 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tutorialVideoTapped:" destination="3gg-VR-CeA" eventType="touchUpInside" id="9ID-XL-0vW"/>
+                                    <segue destination="vyl-c7-Mf0" kind="popoverPresentation" popoverAnchorView="RE0-8a-AwB" id="Uxh-iH-9fq">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -1474,16 +1477,16 @@
             </objects>
             <point key="canvasLocation" x="-4931" y="-593"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="jLN-jQ-4yw">
             <objects>
-                <viewController id="vyl-c7-Mf0" sceneMemberID="viewController">
+                <viewController id="vyl-c7-Mf0" customClass="TutorialViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owX-6V-3AJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1446"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtw-l1-1Wq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1412"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-Np-Gnd">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1527.3333333333333"/>
@@ -1494,21 +1497,21 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzp-e3-txs">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="調調設定啦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-8z-dal">
-                                                                <rect key="frame" x="135" y="7" width="112.33333333333331" height="30"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-8z-dal">
+                                                                <rect key="frame" x="112.66666666666666" y="7" width="156.99999999999997" height="30"/>
                                                                 <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="28"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ5-C5-c7B">
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ5-C5-c7B">
                                                                 <rect key="frame" x="16" y="5" width="34" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="bJ5-C5-c7B" secondAttribute="height" multiplier="1:1" id="4gI-8p-Fdj"/>
                                                                     <constraint firstAttribute="height" constant="34" id="kC2-V7-Tno"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Button" image="icon_back"/>
                                                                 <connections>
                                                                     <action selector="backTapped:" destination="3gg-VR-CeA" eventType="touchUpInside" id="i2f-vB-2xq"/>
+                                                                    <action selector="closePopUp:" destination="vyl-c7-Mf0" eventType="touchUpInside" id="yCv-Pd-oh4"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1580,7 +1583,7 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYx-71-sSi">
-                                                        <rect key="frame" x="0.0" y="977.33333333333326" width="382" height="38.333333333333371"/>
+                                                        <rect key="frame" x="0.0" y="977.33333333333337" width="382" height="38.333333333333371"/>
                                                         <string key="text">5. 您可以隨意拖動小工具到任何位置，
 完成後請點選右上方「完成」。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -1605,6 +1608,9 @@ App們將會開始抖動。</string>
                                                                         <state key="normal" title="完成">
                                                                             <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="closePopUp:" destination="vyl-c7-Mf0" eventType="touchUpInside" id="8po-ZR-vcN"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -1618,7 +1624,7 @@ App們將會開始抖動。</string>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <integer key="value" value="30"/>
+                                                                        <integer key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>

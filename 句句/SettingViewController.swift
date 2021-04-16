@@ -79,6 +79,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         Analytics.logEvent("set_vc_how_to_install", parameters: nil)
         
+        /*
         if !isVideoOpen
         {
             let imageView = UIImageView(image: jeremyGif)
@@ -96,7 +97,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             isVideoOpen = false
             videoTutorialLabel.setTitle("影片教學", for: .normal)
         }
-        
+        */
     }
     /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
