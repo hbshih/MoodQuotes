@@ -265,7 +265,7 @@
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mX6-BM-Jzw">
                                                         <rect key="frame" x="59" y="14" width="296" height="100"/>
                                                         <subviews>
-                                                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="example_plant" translatesAutoresizingMaskIntoConstraints="NO" id="ItI-5R-e6Z">
+                                                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abution" translatesAutoresizingMaskIntoConstraints="NO" id="ItI-5R-e6Z">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="100" id="2Js-OL-aQF"/>
@@ -560,7 +560,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="調調設定啦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-kL-OCS">
-                                        <rect key="frame" x="150.66666666666666" y="7" width="112.66666666666666" height="30"/>
+                                        <rect key="frame" x="137" y="5.6666666666666643" width="140" height="32.666666666666664"/>
                                         <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="28"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -1498,7 +1498,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-8z-dal">
-                                                                <rect key="frame" x="112.66666666666666" y="7" width="156.99999999999997" height="30"/>
+                                                                <rect key="frame" x="93" y="5.6666666666666679" width="196" height="32.666666666666657"/>
                                                                 <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="28"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1675,8 +1675,8 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lk2-Vz-ikE"/>
-        <segue reference="ow3-cU-GNT"/>
+        <segue reference="ly3-Ze-ofX"/>
+        <segue reference="iiW-8X-Mfm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App" width="57" height="70.333335876464844"/>
@@ -1685,7 +1685,7 @@ App們將會開始抖動。</string>
         <image name="Tutorial_Step 3" width="313" height="132"/>
         <image name="Tutorial_Step 4" width="313" height="128"/>
         <image name="Tutorial_Step 5" width="313" height="209"/>
-        <image name="example_plant" width="201" height="252"/>
+        <image name="abution" width="5000" height="5000"/>
         <image name="icon_back" width="48" height="48"/>
         <image name="icon_setting" width="40" height="40"/>
         <image name="icon_share" width="37" height="37"/>
