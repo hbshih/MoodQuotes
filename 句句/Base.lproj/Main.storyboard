@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Co0-l8-F4A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vyl-c7-Mf0">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -1424,13 +1424,211 @@
             </objects>
             <point key="canvasLocation" x="-4931" y="-593"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jLN-jQ-4yw">
+            <objects>
+                <viewController id="vyl-c7-Mf0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="owX-6V-3AJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtw-l1-1Wq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-Np-Gnd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1527.3333333333333"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="9rW-Mh-55K">
+                                                <rect key="frame" x="16" y="16" width="382" height="1338.6666666666667"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzp-e3-txs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="調調設定啦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-8z-dal">
+                                                                <rect key="frame" x="135" y="7" width="112.33333333333331" height="30"/>
+                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="28"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ5-C5-c7B">
+                                                                <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="bJ5-C5-c7B" secondAttribute="height" multiplier="1:1" id="4gI-8p-Fdj"/>
+                                                                    <constraint firstAttribute="height" constant="34" id="kC2-V7-Tno"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="icon_back"/>
+                                                                <connections>
+                                                                    <action selector="backTapped:" destination="3gg-VR-CeA" eventType="touchUpInside" id="i2f-vB-2xq"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="3iN-Kj-SE0"/>
+                                                            <constraint firstItem="bJ5-C5-c7B" firstAttribute="leading" secondItem="Nzp-e3-txs" secondAttribute="leading" constant="16" id="8oO-Vl-G2D"/>
+                                                            <constraint firstItem="X2a-8z-dal" firstAttribute="centerY" secondItem="Nzp-e3-txs" secondAttribute="centerY" id="Dt3-01-5zn"/>
+                                                            <constraint firstItem="X2a-8z-dal" firstAttribute="centerX" secondItem="Nzp-e3-txs" secondAttribute="centerX" id="HTL-Gg-pAt"/>
+                                                            <constraint firstItem="bJ5-C5-c7B" firstAttribute="top" secondItem="Nzp-e3-txs" secondAttribute="top" constant="5" id="Kdw-mS-qQJ"/>
+                                                            <constraint firstItem="X2a-8z-dal" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bJ5-C5-c7B" secondAttribute="trailing" constant="8" symbolic="YES" id="N8n-5H-i06"/>
+                                                            <constraint firstAttribute="bottom" secondItem="bJ5-C5-c7B" secondAttribute="bottom" constant="5" id="QZA-dL-BDG"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVQ-tP-kZ7">
+                                                        <rect key="frame" x="0.0" y="76" width="382" height="38.333333333333343"/>
+                                                        <string key="text">1. 回到主頁面後，選個空白的地方長按。
+App們將會開始抖動。</string>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 1" translatesAutoresizingMaskIntoConstraints="NO" id="bpK-XX-bzw">
+                                                        <rect key="frame" x="0.0" y="146.33333333333334" width="382" height="137.00000000000003"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 點選螢幕左上角的 + 字" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnA-0d-Vru">
+                                                        <rect key="frame" x="0.0" y="315.33333333333331" width="382" height="19.333333333333314"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 2" translatesAutoresizingMaskIntoConstraints="NO" id="559-20-7I7">
+                                                        <rect key="frame" x="0.0" y="366.66666666666669" width="382" height="133"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fto-LE-hwf">
+                                                        <rect key="frame" x="0.0" y="531.66666666666663" width="382" height="38.333333333333371"/>
+                                                        <string key="text">3. 在搜尋的地方搜尋「句句」，
+並點選句句。</string>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 3" translatesAutoresizingMaskIntoConstraints="NO" id="07a-VG-8qF">
+                                                        <rect key="frame" x="0.0" y="602" width="382" height="132"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. 選擇適當的小工具大小後，點選「加入小工具」。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V3-aE-aCo">
+                                                        <rect key="frame" x="0.0" y="766" width="382" height="19.333333333333371"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 4" translatesAutoresizingMaskIntoConstraints="NO" id="3zW-xf-dtR">
+                                                        <rect key="frame" x="0.0" y="817.33333333333337" width="382" height="128"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYx-71-sSi">
+                                                        <rect key="frame" x="0.0" y="977.33333333333326" width="382" height="38.333333333333371"/>
+                                                        <string key="text">5. 您可以隨意拖動小工具到任何位置，
+完成後請點選右上方「完成」。</string>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 5" translatesAutoresizingMaskIntoConstraints="NO" id="R87-mN-qAL">
+                                                        <rect key="frame" x="0.0" y="1047.6666666666667" width="382" height="209"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eA-ph-1Nd">
+                                                        <rect key="frame" x="0.0" y="1288.6666666666667" width="382" height="50"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IzG-dl-Gov">
+                                                                <rect key="frame" x="131" y="0.0" width="120" height="50"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ0-Mf-bhi">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                                                        <state key="normal" title="完成">
+                                                                            <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="mQ0-Mf-bhi" firstAttribute="top" secondItem="IzG-dl-Gov" secondAttribute="top" id="6hO-6f-gL5"/>
+                                                                    <constraint firstItem="mQ0-Mf-bhi" firstAttribute="leading" secondItem="IzG-dl-Gov" secondAttribute="leading" id="9c2-aq-H3u"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="mQ0-Mf-bhi" secondAttribute="bottom" id="DR9-qi-jbP"/>
+                                                                    <constraint firstItem="mQ0-Mf-bhi" firstAttribute="centerX" secondItem="IzG-dl-Gov" secondAttribute="centerX" id="Ry7-Vj-2ev"/>
+                                                                    <constraint firstItem="mQ0-Mf-bhi" firstAttribute="centerY" secondItem="IzG-dl-Gov" secondAttribute="centerY" id="pZI-vT-brg"/>
+                                                                    <constraint firstAttribute="width" constant="120" id="xZ5-aL-m4g"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <integer key="value" value="30"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="IzG-dl-Gov" firstAttribute="centerX" secondItem="8eA-ph-1Nd" secondAttribute="centerX" id="B8n-Dv-cFf"/>
+                                                            <constraint firstItem="IzG-dl-Gov" firstAttribute="top" secondItem="8eA-ph-1Nd" secondAttribute="top" id="YpZ-3q-6tD"/>
+                                                            <constraint firstAttribute="bottom" secondItem="IzG-dl-Gov" secondAttribute="bottom" id="mTM-aK-oBV"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="9rW-Mh-55K" firstAttribute="height" secondItem="WwB-Np-Gnd" secondAttribute="height" multiplier="0.876465" id="IrC-kg-yFf"/>
+                                            <constraint firstItem="9rW-Mh-55K" firstAttribute="leading" secondItem="WwB-Np-Gnd" secondAttribute="leading" constant="16" id="UPH-hC-JSF"/>
+                                            <constraint firstItem="9rW-Mh-55K" firstAttribute="top" secondItem="WwB-Np-Gnd" secondAttribute="top" constant="16" id="czZ-3h-4AS"/>
+                                            <constraint firstAttribute="trailing" secondItem="9rW-Mh-55K" secondAttribute="trailing" constant="16" id="ySZ-K2-w1y"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.76470588240000004" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WwB-Np-Gnd" secondAttribute="trailing" id="4pL-fC-QDE"/>
+                                    <constraint firstAttribute="bottom" secondItem="WwB-Np-Gnd" secondAttribute="bottom" id="amx-4h-014"/>
+                                    <constraint firstItem="WwB-Np-Gnd" firstAttribute="height" secondItem="xtw-l1-1Wq" secondAttribute="height" priority="250" id="hoO-Sf-9pk"/>
+                                    <constraint firstItem="WwB-Np-Gnd" firstAttribute="top" secondItem="xtw-l1-1Wq" secondAttribute="top" id="kct-7j-XVS"/>
+                                    <constraint firstItem="WwB-Np-Gnd" firstAttribute="leading" secondItem="xtw-l1-1Wq" secondAttribute="leading" id="vqS-y4-UAd"/>
+                                    <constraint firstItem="WwB-Np-Gnd" firstAttribute="width" secondItem="xtw-l1-1Wq" secondAttribute="width" id="zRc-B3-ksC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KUe-mD-XgQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xtw-l1-1Wq" firstAttribute="leading" secondItem="KUe-mD-XgQ" secondAttribute="leading" id="IWm-lI-mN3"/>
+                            <constraint firstItem="xtw-l1-1Wq" firstAttribute="bottom" secondItem="KUe-mD-XgQ" secondAttribute="bottom" id="QgQ-0e-hgp"/>
+                            <constraint firstItem="xtw-l1-1Wq" firstAttribute="top" secondItem="KUe-mD-XgQ" secondAttribute="top" id="aRW-pK-8ei"/>
+                            <constraint firstItem="xtw-l1-1Wq" firstAttribute="trailing" secondItem="KUe-mD-XgQ" secondAttribute="trailing" id="kiN-xH-Jgn"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HEe-9W-nDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2784.057971014493" y="-1204.0178571428571"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ly3-Ze-ofX"/>
-        <segue reference="iiW-8X-Mfm"/>
+        <segue reference="lk2-Vz-ikE"/>
+        <segue reference="ow3-cU-GNT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App" width="57" height="70.333335876464844"/>
+        <image name="Tutorial_Step 1" width="313" height="137"/>
+        <image name="Tutorial_Step 2" width="313" height="133"/>
+        <image name="Tutorial_Step 3" width="313" height="132"/>
+        <image name="Tutorial_Step 4" width="313" height="128"/>
+        <image name="Tutorial_Step 5" width="313" height="209"/>
         <image name="icon_back" width="48" height="48"/>
         <image name="icon_setting" width="40" height="40"/>
         <image name="icon_share" width="37" height="37"/>
