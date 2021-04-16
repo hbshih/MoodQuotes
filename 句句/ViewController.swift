@@ -15,8 +15,10 @@ var global_quote: String = ""
 
 class ViewController: UIViewController, MessagingDelegate {
     
+    @IBOutlet weak var frontStackView: UIStackView!
     @IBOutlet weak var frontQuote: UILabel!
     @IBOutlet weak var authorName: UILabel!
+    @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var hiddenAuthorName: UILabel!
     @IBOutlet weak var hiddenQuote: UILabel!
     @IBOutlet weak var screenView: UIView!
@@ -178,6 +180,7 @@ class ViewController: UIViewController, MessagingDelegate {
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
         {
             screenView.backgroundColor = color
+            frontStackView.backgroundColor = color
             backgroundHideenView.backgroundColor =  color
         }
         
@@ -252,8 +255,11 @@ class ViewController: UIViewController, MessagingDelegate {
                 
                 if #available(iOS 14.0, *)
                 {
-                    let image = takeScreenshot(of: backgroundHideenView)
+                   // frontStackView.backgroundColor = .blue
+                    buttonView.isHidden = true
+                    let image = takeScreenshot(of: frontStackView)
                     VC.imageToShow = image
+                    buttonView.isHidden = false
                 }else
                 {
                     stack_action_controller.isHidden = true
