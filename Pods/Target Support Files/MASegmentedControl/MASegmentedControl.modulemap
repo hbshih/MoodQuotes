@@ -1,0 +1,6 @@
+framework module MASegmentedControl {
+  umbrella header "MASegmentedControl-umbrella.h"
+
+  export *
+  module * { export * }
+}
