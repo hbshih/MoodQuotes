@@ -59,11 +59,23 @@ class OnboardingStoryViewController: UIViewController {
                 let defaultAuthor = "小王子"
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(defaultQuote, forKey: "Quote")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(defaultAuthor, forKey: "Author")
-          //      VC.frontQuote.text = defaultQuote
-           //     VC.authorName.text = defaultAuthor
-            //    global_quote = VC.frontQuote.text!
                 VC.defaultQuote = defaultQuote
                 VC.defaultAuthor = defaultAuthor
+                
+                let defaultFlowerImage = UIImage(named: "default_flower")
+                let defaultFlowerName = "滿天星"
+                
+                flowerHandler().storeImage(image: defaultFlowerImage!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(defaultFlowerName, forKey: "FlowerName")
+                
+                VC.defaultFlowerImage = defaultFlowerImage
+                VC.defaultFlowerImageName = defaultFlowerName
+                
+                // Set date to today's date
+                let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
+                let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: date)
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
+                print("Next update date \(updateTime)")
                 
                 //更新Widget
                 if #available(iOS 14.0, *) {

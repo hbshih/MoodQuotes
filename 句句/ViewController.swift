@@ -47,6 +47,7 @@ class ViewController: UIViewController, MessagingDelegate {
         //If no quote saved in local & time now >= update time
         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
         {
+            print("loading new screen")
             // Get From API
             DispatchQueue.main.async {
                 firebaseService().getQuoteApiResponse { [self] (result) in
@@ -64,6 +65,9 @@ class ViewController: UIViewController, MessagingDelegate {
                             self.hiddenQuote.text = self.quote
                             self.hiddenAuthorName.text = self.author
                             global_quote = frontQuote.text!
+                            
+                            // Update Flower
+                            downloadFlowerImage()
                             
                             //更新Widget
                             if #available(iOS 14.0, *) {
@@ -84,9 +88,14 @@ class ViewController: UIViewController, MessagingDelegate {
             print("Load Quotes and Author From Local")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
+            let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults)!
+            let FlowerName: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName")!
             DispatchQueue.main.async { [self] in
                 self.frontQuote.text = Q
                 self.authorName.text = A
+                self.ImageOfFlower.setImage(FlowerImage)
+                self.nameOfFlower.text = FlowerName
+                
                 self.hiddenQuote.text = Q
                 self.hiddenAuthorName.text = A
                 global_quote = frontQuote.text!
@@ -100,8 +109,10 @@ class ViewController: UIViewController, MessagingDelegate {
     }
     
     @IBOutlet weak var ImageOfFlower: UIImageView!
-    var defaultQuote = ""
-    var defaultAuthor = ""
+    var defaultQuote = "正在載入中"
+    var defaultAuthor = "正在載入中"
+    var defaultFlowerImage = UIImage(named: "noun_seeds_184642")
+    var defaultFlowerImageName = "正在載入中"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,6 +145,8 @@ class ViewController: UIViewController, MessagingDelegate {
         
         frontQuote.text = defaultQuote
         authorName.text = defaultAuthor
+        ImageOfFlower.setImage(defaultFlowerImage!)
+        nameOfFlower.text = defaultFlowerImageName
         
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
@@ -194,7 +207,10 @@ class ViewController: UIViewController, MessagingDelegate {
                 
 
                 // Load the image using SDWebImage
-                self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage)
+                self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+                    flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                }
                 self.nameOfFlower.text = name
             }
         }
