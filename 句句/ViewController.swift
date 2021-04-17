@@ -198,6 +198,7 @@ class ViewController: UIViewController, MessagingDelegate {
     var ref: DatabaseReference!
     
     var quote: String = "今日App心情都太差了，沒有任何更新"
+    @IBOutlet weak var nameOfFlower: UILabel!
     var author: String = "— 斌"
     
     override func viewDidAppear(_ animated: Bool) {
@@ -217,10 +218,11 @@ class ViewController: UIViewController, MessagingDelegate {
 
                 // Placeholder image
                 let placeholderImage = UIImage(named: "placeholder.jpg")
+                
 
                 // Load the image using SDWebImage
                 self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage)
-            
+                self.nameOfFlower.text = name
             }
         }
         
