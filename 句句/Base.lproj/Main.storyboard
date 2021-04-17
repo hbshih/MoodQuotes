@@ -250,7 +250,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-Mq-DgV">
-                                                        <rect key="frame" x="178.66666666666666" y="52.666666666666664" width="57" height="70.666666666666686"/>
+                                                        <rect key="frame" x="178.66666666666666" y="52.999999999999993" width="57" height="70.333333333333314"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -387,7 +387,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="298.66666666666669"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App" translatesAutoresizingMaskIntoConstraints="NO" id="uZf-Qu-XFe">
-                                                        <rect key="frame" x="169.66666666666666" y="75" width="75" height="70.666666666666686"/>
+                                                        <rect key="frame" x="169.66666666666666" y="75" width="75" height="70.333333333333314"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="75" id="8ym-Oa-ofW"/>
                                                         </constraints>
@@ -1128,10 +1128,8 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-qe-NEo">
                                                         <rect key="frame" x="16" y="254" width="382" height="100"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開啟通知可以第一時間收到最新句子" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
-                                                                <string key="text">開始通知可以第一時間看見語錄，
-要開啟通知嗎</string>
                                                                 <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="24"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1142,30 +1140,12 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="I27-eA-JuC">
                                                                         <rect key="frame" x="32" y="0.0" width="318" height="35"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-RL-PdC">
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-Ya-8lD">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="35"/>
                                                                                 <color key="backgroundColor" red="0.7568050623" green="0.74128681419999998" blue="0.73333191870000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
                                                                                 <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <state key="normal" title="好"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                        <integer key="value" value="10"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                </userDefinedRuntimeAttributes>
-                                                                                <connections>
-                                                                                    <action selector="AcceptedNotification:" destination="vdU-3q-1DX" eventType="touchUpInside" id="JMw-M6-u5d"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jY-Y9-wOZ">
-                                                                                <rect key="frame" x="106" y="0.0" width="106" height="35"/>
-                                                                            </view>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-Ya-8lD">
-                                                                                <rect key="frame" x="212" y="0.0" width="106" height="35"/>
-                                                                                <color key="backgroundColor" red="0.7568050623" green="0.74128681419999998" blue="0.73333191870000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
-                                                                                <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <state key="normal" title="別"/>
+                                                                                <state key="normal" title="拒絕"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                         <integer key="value" value="10"/>
@@ -1174,6 +1154,24 @@
                                                                                 <connections>
                                                                                     <action selector="FinishProcessTapped:" destination="vdU-3q-1DX" eventType="touchUpInside" id="i78-dK-6fg"/>
                                                                                     <action selector="noTapped:" destination="vdU-3q-1DX" eventType="touchUpInside" id="TsJ-5H-ce8"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jY-Y9-wOZ">
+                                                                                <rect key="frame" x="106" y="0.0" width="106" height="35"/>
+                                                                            </view>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-RL-PdC">
+                                                                                <rect key="frame" x="212" y="0.0" width="106" height="35"/>
+                                                                                <color key="backgroundColor" red="0.7568050623" green="0.74128681419999998" blue="0.73333191870000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
+                                                                                <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <state key="normal" title="開啟"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                        <integer key="value" value="10"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="AcceptedNotification:" destination="vdU-3q-1DX" eventType="touchUpInside" id="JMw-M6-u5d"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -1678,7 +1676,7 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ly3-Ze-ofX"/>
-        <segue reference="iiW-8X-Mfm"/>
+        <segue reference="htk-Qi-2dc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App" width="57" height="70.333335876464844"/>

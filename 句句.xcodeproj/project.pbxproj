@@ -9,76 +9,6 @@
 /* Begin PBXBuildFile section */
 		72F3AD242D3D44083A9E8D87 /* Pods___Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0CDD0A5499360F957B3670 /* Pods___Tests.framework */; };
 		A0E4F96D7CD6E92B33D952B5 /* Pods_widgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3267DB66BA5758043C3B4D /* Pods_widgetExtension.framework */; };
-		B5023868262A6FFD00CA20A1 /* flower_27_chamelaucium_風蠟花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023845262A6FFB00CA20A1 /* flower_27_chamelaucium_風蠟花.png */; };
-		B5023869262A6FFD00CA20A1 /* flower_27_chamelaucium_風蠟花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023845262A6FFB00CA20A1 /* flower_27_chamelaucium_風蠟花.png */; };
-		B502386A262A6FFD00CA20A1 /* flower_23_camellia_山茶花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023846262A6FFB00CA20A1 /* flower_23_camellia_山茶花.png */; };
-		B502386B262A6FFD00CA20A1 /* flower_23_camellia_山茶花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023846262A6FFB00CA20A1 /* flower_23_camellia_山茶花.png */; };
-		B502386C262A6FFD00CA20A1 /* flower_11_banksia_班庫山花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023847262A6FFB00CA20A1 /* flower_11_banksia_班庫山花.png */; };
-		B502386D262A6FFD00CA20A1 /* flower_11_banksia_班庫山花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023847262A6FFB00CA20A1 /* flower_11_banksia_班庫山花.png */; };
-		B502386E262A6FFD00CA20A1 /* flower_20_cactus_仙人掌花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023848262A6FFB00CA20A1 /* flower_20_cactus_仙人掌花.png */; };
-		B502386F262A6FFD00CA20A1 /* flower_20_cactus_仙人掌花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023848262A6FFB00CA20A1 /* flower_20_cactus_仙人掌花.png */; };
-		B5023870262A6FFD00CA20A1 /* flower_30_chrysanthemum_菊花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023849262A6FFB00CA20A1 /* flower_30_chrysanthemum_菊花.png */; };
-		B5023871262A6FFD00CA20A1 /* flower_30_chrysanthemum_菊花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023849262A6FFB00CA20A1 /* flower_30_chrysanthemum_菊花.png */; };
-		B5023872262A6FFD00CA20A1 /* flower_31_clematis (2)_鐵線蓮.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384A262A6FFB00CA20A1 /* flower_31_clematis (2)_鐵線蓮.png */; };
-		B5023873262A6FFD00CA20A1 /* flower_31_clematis (2)_鐵線蓮.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384A262A6FFB00CA20A1 /* flower_31_clematis (2)_鐵線蓮.png */; };
-		B5023874262A6FFD00CA20A1 /* flower_15_bupleurum_阿勒泰柴胡.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384B262A6FFB00CA20A1 /* flower_15_bupleurum_阿勒泰柴胡.png */; };
-		B5023875262A6FFD00CA20A1 /* flower_15_bupleurum_阿勒泰柴胡.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384B262A6FFB00CA20A1 /* flower_15_bupleurum_阿勒泰柴胡.png */; };
-		B5023876262A6FFD00CA20A1 /* flower_24_camphor branch_樟樹花.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384C262A6FFB00CA20A1 /* flower_24_camphor branch_樟樹花.png */; };
-		B5023877262A6FFD00CA20A1 /* flower_24_camphor branch_樟樹花.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384C262A6FFB00CA20A1 /* flower_24_camphor branch_樟樹花.png */; };
-		B5023878262A6FFD00CA20A1 /* flower_13_bleeding hearts_荷包牡丹.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384D262A6FFC00CA20A1 /* flower_13_bleeding hearts_荷包牡丹.png */; };
-		B5023879262A6FFD00CA20A1 /* flower_13_bleeding hearts_荷包牡丹.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384D262A6FFC00CA20A1 /* flower_13_bleeding hearts_荷包牡丹.png */; };
-		B502387A262A6FFD00CA20A1 /* flower_35_cosmos_可思莫思花.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384E262A6FFC00CA20A1 /* flower_35_cosmos_可思莫思花.png */; };
-		B502387B262A6FFD00CA20A1 /* flower_35_cosmos_可思莫思花.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384E262A6FFC00CA20A1 /* flower_35_cosmos_可思莫思花.png */; };
-		B502387C262A6FFD00CA20A1 /* flower_25_campion_蠅子草.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384F262A6FFC00CA20A1 /* flower_25_campion_蠅子草.png */; };
-		B502387D262A6FFD00CA20A1 /* flower_25_campion_蠅子草.png in Resources */ = {isa = PBXBuildFile; fileRef = B502384F262A6FFC00CA20A1 /* flower_25_campion_蠅子草.png */; };
-		B502387E262A6FFD00CA20A1 /* flower_16_cactus (2)_仙人掌花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023850262A6FFC00CA20A1 /* flower_16_cactus (2)_仙人掌花.png */; };
-		B502387F262A6FFD00CA20A1 /* flower_16_cactus (2)_仙人掌花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023850262A6FFC00CA20A1 /* flower_16_cactus (2)_仙人掌花.png */; };
-		B5023880262A6FFD00CA20A1 /* flower_17_cactus (3)_仙人掌花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023851262A6FFC00CA20A1 /* flower_17_cactus (3)_仙人掌花.png */; };
-		B5023881262A6FFD00CA20A1 /* flower_17_cactus (3)_仙人掌花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023851262A6FFC00CA20A1 /* flower_17_cactus (3)_仙人掌花.png */; };
-		B5023882262A6FFD00CA20A1 /* flower_7_aquilegia_夢幻草.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023852262A6FFC00CA20A1 /* flower_7_aquilegia_夢幻草.png */; };
-		B5023883262A6FFD00CA20A1 /* flower_7_aquilegia_夢幻草.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023852262A6FFC00CA20A1 /* flower_7_aquilegia_夢幻草.png */; };
-		B5023884262A6FFD00CA20A1 /* flower_19_cactus flower_仙人掌花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023853262A6FFC00CA20A1 /* flower_19_cactus flower_仙人掌花.png */; };
-		B5023885262A6FFD00CA20A1 /* flower_19_cactus flower_仙人掌花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023853262A6FFC00CA20A1 /* flower_19_cactus flower_仙人掌花.png */; };
-		B5023886262A6FFD00CA20A1 /* flower_3_alocasia_姑婆芋.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023854262A6FFC00CA20A1 /* flower_3_alocasia_姑婆芋.png */; };
-		B5023887262A6FFD00CA20A1 /* flower_3_alocasia_姑婆芋.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023854262A6FFC00CA20A1 /* flower_3_alocasia_姑婆芋.png */; };
-		B5023888262A6FFD00CA20A1 /* flower_1_abution_風鈴花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023855262A6FFC00CA20A1 /* flower_1_abution_風鈴花.png */; };
-		B5023889262A6FFD00CA20A1 /* flower_1_abution_風鈴花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023855262A6FFC00CA20A1 /* flower_1_abution_風鈴花.png */; };
-		B502388A262A6FFD00CA20A1 /* flower_12_bird of paradise_天堂鳥花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023856262A6FFC00CA20A1 /* flower_12_bird of paradise_天堂鳥花.png */; };
-		B502388B262A6FFD00CA20A1 /* flower_12_bird of paradise_天堂鳥花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023856262A6FFC00CA20A1 /* flower_12_bird of paradise_天堂鳥花.png */; };
-		B502388C262A6FFD00CA20A1 /* flower_26_carnation_康乃馨.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023857262A6FFC00CA20A1 /* flower_26_carnation_康乃馨.png */; };
-		B502388D262A6FFD00CA20A1 /* flower_26_carnation_康乃馨.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023857262A6FFC00CA20A1 /* flower_26_carnation_康乃馨.png */; };
-		B502388E262A6FFD00CA20A1 /* flower_28_cherry_櫻花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023858262A6FFC00CA20A1 /* flower_28_cherry_櫻花.png */; };
-		B502388F262A6FFD00CA20A1 /* flower_28_cherry_櫻花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023858262A6FFC00CA20A1 /* flower_28_cherry_櫻花.png */; };
-		B5023890262A6FFD00CA20A1 /* flower_33_clivia_君子蘭.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023859262A6FFC00CA20A1 /* flower_33_clivia_君子蘭.png */; };
-		B5023891262A6FFD00CA20A1 /* flower_33_clivia_君子蘭.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023859262A6FFC00CA20A1 /* flower_33_clivia_君子蘭.png */; };
-		B5023892262A6FFD00CA20A1 /* flower_21_calendula_金盞菊.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385A262A6FFC00CA20A1 /* flower_21_calendula_金盞菊.png */; };
-		B5023893262A6FFD00CA20A1 /* flower_21_calendula_金盞菊.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385A262A6FFC00CA20A1 /* flower_21_calendula_金盞菊.png */; };
-		B5023894262A6FFD00CA20A1 /* flower_14_bottlebrush_串錢柳.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385B262A6FFC00CA20A1 /* flower_14_bottlebrush_串錢柳.png */; };
-		B5023895262A6FFD00CA20A1 /* flower_14_bottlebrush_串錢柳.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385B262A6FFC00CA20A1 /* flower_14_bottlebrush_串錢柳.png */; };
-		B5023896262A6FFD00CA20A1 /* flower_4_angel trompet_大花曼陀羅.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385C262A6FFC00CA20A1 /* flower_4_angel trompet_大花曼陀羅.png */; };
-		B5023897262A6FFD00CA20A1 /* flower_4_angel trompet_大花曼陀羅.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385C262A6FFC00CA20A1 /* flower_4_angel trompet_大花曼陀羅.png */; };
-		B5023898262A6FFD00CA20A1 /* flower_5_apple_蘋果花.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385D262A6FFC00CA20A1 /* flower_5_apple_蘋果花.png */; };
-		B5023899262A6FFD00CA20A1 /* flower_5_apple_蘋果花.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385D262A6FFC00CA20A1 /* flower_5_apple_蘋果花.png */; };
-		B502389A262A6FFD00CA20A1 /* flower_9_astrantia_紫苑.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385E262A6FFC00CA20A1 /* flower_9_astrantia_紫苑.png */; };
-		B502389B262A6FFD00CA20A1 /* flower_9_astrantia_紫苑.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385E262A6FFC00CA20A1 /* flower_9_astrantia_紫苑.png */; };
-		B502389C262A6FFD00CA20A1 /* flower_34_cosmea_大波斯菊.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385F262A6FFC00CA20A1 /* flower_34_cosmea_大波斯菊.png */; };
-		B502389D262A6FFD00CA20A1 /* flower_34_cosmea_大波斯菊.png in Resources */ = {isa = PBXBuildFile; fileRef = B502385F262A6FFC00CA20A1 /* flower_34_cosmea_大波斯菊.png */; };
-		B502389E262A6FFD00CA20A1 /* flower_22_camelia_山茶花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023860262A6FFD00CA20A1 /* flower_22_camelia_山茶花.png */; };
-		B502389F262A6FFD00CA20A1 /* flower_22_camelia_山茶花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023860262A6FFD00CA20A1 /* flower_22_camelia_山茶花.png */; };
-		B50238A0262A6FFD00CA20A1 /* flower_18_cactus (4)_仙人掌花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023861262A6FFD00CA20A1 /* flower_18_cactus (4)_仙人掌花.png */; };
-		B50238A1262A6FFD00CA20A1 /* flower_18_cactus (4)_仙人掌花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023861262A6FFD00CA20A1 /* flower_18_cactus (4)_仙人掌花.png */; };
-		B50238A2262A6FFD00CA20A1 /* flower_6_aquilegia clementine_夢幻草.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023862262A6FFD00CA20A1 /* flower_6_aquilegia clementine_夢幻草.png */; };
-		B50238A3262A6FFD00CA20A1 /* flower_6_aquilegia clementine_夢幻草.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023862262A6FFD00CA20A1 /* flower_6_aquilegia clementine_夢幻草.png */; };
-		B50238A4262A6FFD00CA20A1 /* flower_10_babys breath_滿天星.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023863262A6FFD00CA20A1 /* flower_10_babys breath_滿天星.png */; };
-		B50238A5262A6FFD00CA20A1 /* flower_10_babys breath_滿天星.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023863262A6FFD00CA20A1 /* flower_10_babys breath_滿天星.png */; };
-		B50238A6262A6FFD00CA20A1 /* flower_2_allium bulbs_大花蔥.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023864262A6FFD00CA20A1 /* flower_2_allium bulbs_大花蔥.png */; };
-		B50238A7262A6FFD00CA20A1 /* flower_2_allium bulbs_大花蔥.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023864262A6FFD00CA20A1 /* flower_2_allium bulbs_大花蔥.png */; };
-		B50238A8262A6FFD00CA20A1 /* flower_32_clematis_鐵線蓮.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023865262A6FFD00CA20A1 /* flower_32_clematis_鐵線蓮.png */; };
-		B50238A9262A6FFD00CA20A1 /* flower_32_clematis_鐵線蓮.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023865262A6FFD00CA20A1 /* flower_32_clematis_鐵線蓮.png */; };
-		B50238AA262A6FFD00CA20A1 /* flower_29_christia obcordidata_舖地蝙蝠草.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023866262A6FFD00CA20A1 /* flower_29_christia obcordidata_舖地蝙蝠草.png */; };
-		B50238AB262A6FFD00CA20A1 /* flower_29_christia obcordidata_舖地蝙蝠草.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023866262A6FFD00CA20A1 /* flower_29_christia obcordidata_舖地蝙蝠草.png */; };
-		B50238AC262A6FFD00CA20A1 /* flower_8_astrantia roma_小蓮花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023867262A6FFD00CA20A1 /* flower_8_astrantia roma_小蓮花.png */; };
-		B50238AD262A6FFD00CA20A1 /* flower_8_astrantia roma_小蓮花.png in Resources */ = {isa = PBXBuildFile; fileRef = B5023867262A6FFD00CA20A1 /* flower_8_astrantia roma_小蓮花.png */; };
 		B5056D8C2573DCB300A8E79B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509566E256DDCC30075ACE9 /* DateHelper.swift */; };
 		B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBB125622E0700372198 /* NotificationTableViewCell.swift */; };
 		B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B506EBB225622E0700372198 /* NotificationTableViewCell.xib */; };
@@ -200,41 +130,6 @@
 		93E7B2345F025ABE51C1F834 /* Pods-widgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-widgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-widgetExtension/Pods-widgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		AC0CDD0A5499360F957B3670 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2EE0894DBCDBF3D0343BEB /* Pods-widgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-widgetExtension.release.xcconfig"; path = "Target Support Files/Pods-widgetExtension/Pods-widgetExtension.release.xcconfig"; sourceTree = "<group>"; };
-		B5023845262A6FFB00CA20A1 /* flower_27_chamelaucium_風蠟花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_27_chamelaucium_風蠟花.png"; sourceTree = "<group>"; };
-		B5023846262A6FFB00CA20A1 /* flower_23_camellia_山茶花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_23_camellia_山茶花.png"; sourceTree = "<group>"; };
-		B5023847262A6FFB00CA20A1 /* flower_11_banksia_班庫山花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_11_banksia_班庫山花.png"; sourceTree = "<group>"; };
-		B5023848262A6FFB00CA20A1 /* flower_20_cactus_仙人掌花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_20_cactus_仙人掌花.png"; sourceTree = "<group>"; };
-		B5023849262A6FFB00CA20A1 /* flower_30_chrysanthemum_菊花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_30_chrysanthemum_菊花.png"; sourceTree = "<group>"; };
-		B502384A262A6FFB00CA20A1 /* flower_31_clematis (2)_鐵線蓮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_31_clematis (2)_鐵線蓮.png"; sourceTree = "<group>"; };
-		B502384B262A6FFB00CA20A1 /* flower_15_bupleurum_阿勒泰柴胡.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_15_bupleurum_阿勒泰柴胡.png"; sourceTree = "<group>"; };
-		B502384C262A6FFB00CA20A1 /* flower_24_camphor branch_樟樹花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_24_camphor branch_樟樹花.png"; sourceTree = "<group>"; };
-		B502384D262A6FFC00CA20A1 /* flower_13_bleeding hearts_荷包牡丹.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_13_bleeding hearts_荷包牡丹.png"; sourceTree = "<group>"; };
-		B502384E262A6FFC00CA20A1 /* flower_35_cosmos_可思莫思花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_35_cosmos_可思莫思花.png"; sourceTree = "<group>"; };
-		B502384F262A6FFC00CA20A1 /* flower_25_campion_蠅子草.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_25_campion_蠅子草.png"; sourceTree = "<group>"; };
-		B5023850262A6FFC00CA20A1 /* flower_16_cactus (2)_仙人掌花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_16_cactus (2)_仙人掌花.png"; sourceTree = "<group>"; };
-		B5023851262A6FFC00CA20A1 /* flower_17_cactus (3)_仙人掌花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_17_cactus (3)_仙人掌花.png"; sourceTree = "<group>"; };
-		B5023852262A6FFC00CA20A1 /* flower_7_aquilegia_夢幻草.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_7_aquilegia_夢幻草.png"; sourceTree = "<group>"; };
-		B5023853262A6FFC00CA20A1 /* flower_19_cactus flower_仙人掌花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_19_cactus flower_仙人掌花.png"; sourceTree = "<group>"; };
-		B5023854262A6FFC00CA20A1 /* flower_3_alocasia_姑婆芋.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_3_alocasia_姑婆芋.png"; sourceTree = "<group>"; };
-		B5023855262A6FFC00CA20A1 /* flower_1_abution_風鈴花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_1_abution_風鈴花.png"; sourceTree = "<group>"; };
-		B5023856262A6FFC00CA20A1 /* flower_12_bird of paradise_天堂鳥花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_12_bird of paradise_天堂鳥花.png"; sourceTree = "<group>"; };
-		B5023857262A6FFC00CA20A1 /* flower_26_carnation_康乃馨.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_26_carnation_康乃馨.png"; sourceTree = "<group>"; };
-		B5023858262A6FFC00CA20A1 /* flower_28_cherry_櫻花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_28_cherry_櫻花.png"; sourceTree = "<group>"; };
-		B5023859262A6FFC00CA20A1 /* flower_33_clivia_君子蘭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_33_clivia_君子蘭.png"; sourceTree = "<group>"; };
-		B502385A262A6FFC00CA20A1 /* flower_21_calendula_金盞菊.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_21_calendula_金盞菊.png"; sourceTree = "<group>"; };
-		B502385B262A6FFC00CA20A1 /* flower_14_bottlebrush_串錢柳.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_14_bottlebrush_串錢柳.png"; sourceTree = "<group>"; };
-		B502385C262A6FFC00CA20A1 /* flower_4_angel trompet_大花曼陀羅.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_4_angel trompet_大花曼陀羅.png"; sourceTree = "<group>"; };
-		B502385D262A6FFC00CA20A1 /* flower_5_apple_蘋果花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_5_apple_蘋果花.png"; sourceTree = "<group>"; };
-		B502385E262A6FFC00CA20A1 /* flower_9_astrantia_紫苑.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_9_astrantia_紫苑.png"; sourceTree = "<group>"; };
-		B502385F262A6FFC00CA20A1 /* flower_34_cosmea_大波斯菊.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_34_cosmea_大波斯菊.png"; sourceTree = "<group>"; };
-		B5023860262A6FFD00CA20A1 /* flower_22_camelia_山茶花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_22_camelia_山茶花.png"; sourceTree = "<group>"; };
-		B5023861262A6FFD00CA20A1 /* flower_18_cactus (4)_仙人掌花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_18_cactus (4)_仙人掌花.png"; sourceTree = "<group>"; };
-		B5023862262A6FFD00CA20A1 /* flower_6_aquilegia clementine_夢幻草.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_6_aquilegia clementine_夢幻草.png"; sourceTree = "<group>"; };
-		B5023863262A6FFD00CA20A1 /* flower_10_babys breath_滿天星.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_10_babys breath_滿天星.png"; sourceTree = "<group>"; };
-		B5023864262A6FFD00CA20A1 /* flower_2_allium bulbs_大花蔥.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_2_allium bulbs_大花蔥.png"; sourceTree = "<group>"; };
-		B5023865262A6FFD00CA20A1 /* flower_32_clematis_鐵線蓮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_32_clematis_鐵線蓮.png"; sourceTree = "<group>"; };
-		B5023866262A6FFD00CA20A1 /* flower_29_christia obcordidata_舖地蝙蝠草.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_29_christia obcordidata_舖地蝙蝠草.png"; sourceTree = "<group>"; };
-		B5023867262A6FFD00CA20A1 /* flower_8_astrantia roma_小蓮花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower_8_astrantia roma_小蓮花.png"; sourceTree = "<group>"; };
 		B506EBB125622E0700372198 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		B506EBB225622E0700372198 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		B506EBC025622FF800372198 /* UpdateTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTimeTableViewCell.swift; sourceTree = "<group>"; };
@@ -422,7 +317,6 @@
 		B5517C73255FAFC500E134CC /* 句句 */ = {
 			isa = PBXGroup;
 			children = (
-				B58E55062629B9DA009657E0 /* flowers */,
 				B59E21C125676F85003A5521 /* GoogleService-Info.plist */,
 				B59E216625675E65003A5521 /* 句句.entitlements */,
 				B5517C74255FAFC500E134CC /* AppDelegate.swift */,
@@ -481,48 +375,6 @@
 				B5517C98255FAFC600E134CC /* Info.plist */,
 			);
 			path = "句句UITests";
-			sourceTree = "<group>";
-		};
-		B58E55062629B9DA009657E0 /* flowers */ = {
-			isa = PBXGroup;
-			children = (
-				B5023855262A6FFC00CA20A1 /* flower_1_abution_風鈴花.png */,
-				B5023864262A6FFD00CA20A1 /* flower_2_allium bulbs_大花蔥.png */,
-				B5023854262A6FFC00CA20A1 /* flower_3_alocasia_姑婆芋.png */,
-				B502385C262A6FFC00CA20A1 /* flower_4_angel trompet_大花曼陀羅.png */,
-				B502385D262A6FFC00CA20A1 /* flower_5_apple_蘋果花.png */,
-				B5023862262A6FFD00CA20A1 /* flower_6_aquilegia clementine_夢幻草.png */,
-				B5023852262A6FFC00CA20A1 /* flower_7_aquilegia_夢幻草.png */,
-				B5023867262A6FFD00CA20A1 /* flower_8_astrantia roma_小蓮花.png */,
-				B502385E262A6FFC00CA20A1 /* flower_9_astrantia_紫苑.png */,
-				B5023863262A6FFD00CA20A1 /* flower_10_babys breath_滿天星.png */,
-				B5023847262A6FFB00CA20A1 /* flower_11_banksia_班庫山花.png */,
-				B5023856262A6FFC00CA20A1 /* flower_12_bird of paradise_天堂鳥花.png */,
-				B502384D262A6FFC00CA20A1 /* flower_13_bleeding hearts_荷包牡丹.png */,
-				B502385B262A6FFC00CA20A1 /* flower_14_bottlebrush_串錢柳.png */,
-				B502384B262A6FFB00CA20A1 /* flower_15_bupleurum_阿勒泰柴胡.png */,
-				B5023850262A6FFC00CA20A1 /* flower_16_cactus (2)_仙人掌花.png */,
-				B5023851262A6FFC00CA20A1 /* flower_17_cactus (3)_仙人掌花.png */,
-				B5023861262A6FFD00CA20A1 /* flower_18_cactus (4)_仙人掌花.png */,
-				B5023853262A6FFC00CA20A1 /* flower_19_cactus flower_仙人掌花.png */,
-				B5023848262A6FFB00CA20A1 /* flower_20_cactus_仙人掌花.png */,
-				B502385A262A6FFC00CA20A1 /* flower_21_calendula_金盞菊.png */,
-				B5023860262A6FFD00CA20A1 /* flower_22_camelia_山茶花.png */,
-				B5023846262A6FFB00CA20A1 /* flower_23_camellia_山茶花.png */,
-				B502384C262A6FFB00CA20A1 /* flower_24_camphor branch_樟樹花.png */,
-				B502384F262A6FFC00CA20A1 /* flower_25_campion_蠅子草.png */,
-				B5023857262A6FFC00CA20A1 /* flower_26_carnation_康乃馨.png */,
-				B5023845262A6FFB00CA20A1 /* flower_27_chamelaucium_風蠟花.png */,
-				B5023858262A6FFC00CA20A1 /* flower_28_cherry_櫻花.png */,
-				B5023866262A6FFD00CA20A1 /* flower_29_christia obcordidata_舖地蝙蝠草.png */,
-				B5023849262A6FFB00CA20A1 /* flower_30_chrysanthemum_菊花.png */,
-				B502384A262A6FFB00CA20A1 /* flower_31_clematis (2)_鐵線蓮.png */,
-				B5023865262A6FFD00CA20A1 /* flower_32_clematis_鐵線蓮.png */,
-				B5023859262A6FFC00CA20A1 /* flower_33_clivia_君子蘭.png */,
-				B502385F262A6FFC00CA20A1 /* flower_34_cosmea_大波斯菊.png */,
-				B502384E262A6FFC00CA20A1 /* flower_35_cosmos_可思莫思花.png */,
-			);
-			name = flowers;
 			sourceTree = "<group>";
 		};
 		B59E20B6256698FB003A5521 /* widget */ = {
@@ -671,52 +523,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54E7F4B2587000D00F56C60 /* UpdateBackgroundColorTableViewCell.xib in Resources */,
-				B50238AC262A6FFD00CA20A1 /* flower_8_astrantia roma_小蓮花.png in Resources */,
-				B5023868262A6FFD00CA20A1 /* flower_27_chamelaucium_風蠟花.png in Resources */,
 				B54E7F462587000800F56C60 /* GoogleService-Info.plist in Resources */,
-				B5023880262A6FFD00CA20A1 /* flower_17_cactus (3)_仙人掌花.png in Resources */,
-				B5023882262A6FFD00CA20A1 /* flower_7_aquilegia_夢幻草.png in Resources */,
 				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
 				B50956AA256DED9B0075ACE9 /* SplashScreen_.png in Resources */,
-				B5023894262A6FFD00CA20A1 /* flower_14_bottlebrush_串錢柳.png in Resources */,
-				B5023870262A6FFD00CA20A1 /* flower_30_chrysanthemum_菊花.png in Resources */,
-				B50238A4262A6FFD00CA20A1 /* flower_10_babys breath_滿天星.png in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
-				B5023884262A6FFD00CA20A1 /* flower_19_cactus flower_仙人掌花.png in Resources */,
-				B5023886262A6FFD00CA20A1 /* flower_3_alocasia_姑婆芋.png in Resources */,
-				B5023888262A6FFD00CA20A1 /* flower_1_abution_風鈴花.png in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
-				B502388A262A6FFD00CA20A1 /* flower_12_bird of paradise_天堂鳥花.png in Resources */,
 				B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */,
-				B502387E262A6FFD00CA20A1 /* flower_16_cactus (2)_仙人掌花.png in Resources */,
 				B50956AC256DED9B0075ACE9 /* SplashScreen_@2x.png in Resources */,
 				B50956AB256DED9B0075ACE9 /* SplashScreen_@3x.png in Resources */,
-				B5023898262A6FFD00CA20A1 /* flower_5_apple_蘋果花.png in Resources */,
-				B5023878262A6FFD00CA20A1 /* flower_13_bleeding hearts_荷包牡丹.png in Resources */,
-				B502386C262A6FFD00CA20A1 /* flower_11_banksia_班庫山花.png in Resources */,
-				B50238A6262A6FFD00CA20A1 /* flower_2_allium bulbs_大花蔥.png in Resources */,
-				B50238A8262A6FFD00CA20A1 /* flower_32_clematis_鐵線蓮.png in Resources */,
-				B502387C262A6FFD00CA20A1 /* flower_25_campion_蠅子草.png in Resources */,
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
-				B502389E262A6FFD00CA20A1 /* flower_22_camelia_山茶花.png in Resources */,
-				B5023874262A6FFD00CA20A1 /* flower_15_bupleurum_阿勒泰柴胡.png in Resources */,
-				B5023890262A6FFD00CA20A1 /* flower_33_clivia_君子蘭.png in Resources */,
 				B5517C7E255FAFC500E134CC /* Assets.xcassets in Resources */,
-				B502386E262A6FFD00CA20A1 /* flower_20_cactus_仙人掌花.png in Resources */,
-				B502389A262A6FFD00CA20A1 /* flower_9_astrantia_紫苑.png in Resources */,
-				B50238A0262A6FFD00CA20A1 /* flower_18_cactus (4)_仙人掌花.png in Resources */,
-				B502388E262A6FFD00CA20A1 /* flower_28_cherry_櫻花.png in Resources */,
-				B5023896262A6FFD00CA20A1 /* flower_4_angel trompet_大花曼陀羅.png in Resources */,
-				B502389C262A6FFD00CA20A1 /* flower_34_cosmea_大波斯菊.png in Resources */,
-				B50238AA262A6FFD00CA20A1 /* flower_29_christia obcordidata_舖地蝙蝠草.png in Resources */,
-				B502388C262A6FFD00CA20A1 /* flower_26_carnation_康乃馨.png in Resources */,
-				B5023876262A6FFD00CA20A1 /* flower_24_camphor branch_樟樹花.png in Resources */,
-				B5023892262A6FFD00CA20A1 /* flower_21_calendula_金盞菊.png in Resources */,
-				B502386A262A6FFD00CA20A1 /* flower_23_camellia_山茶花.png in Resources */,
 				B5517C7C255FAFC500E134CC /* Main.storyboard in Resources */,
-				B502387A262A6FFD00CA20A1 /* flower_35_cosmos_可思莫思花.png in Resources */,
-				B50238A2262A6FFD00CA20A1 /* flower_6_aquilegia clementine_夢幻草.png in Resources */,
-				B5023872262A6FFD00CA20A1 /* flower_31_clematis (2)_鐵線蓮.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,45 +555,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B502389F262A6FFD00CA20A1 /* flower_22_camelia_山茶花.png in Resources */,
-				B50238A9262A6FFD00CA20A1 /* flower_32_clematis_鐵線蓮.png in Resources */,
 				B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */,
-				B502387B262A6FFD00CA20A1 /* flower_35_cosmos_可思莫思花.png in Resources */,
 				B58E54FA2629AEE9009657E0 /* Assets.xcassets in Resources */,
-				B502387D262A6FFD00CA20A1 /* flower_25_campion_蠅子草.png in Resources */,
-				B5023879262A6FFD00CA20A1 /* flower_13_bleeding hearts_荷包牡丹.png in Resources */,
-				B5023875262A6FFD00CA20A1 /* flower_15_bupleurum_阿勒泰柴胡.png in Resources */,
-				B50238A5262A6FFD00CA20A1 /* flower_10_babys breath_滿天星.png in Resources */,
-				B502388B262A6FFD00CA20A1 /* flower_12_bird of paradise_天堂鳥花.png in Resources */,
-				B5023869262A6FFD00CA20A1 /* flower_27_chamelaucium_風蠟花.png in Resources */,
-				B5023893262A6FFD00CA20A1 /* flower_21_calendula_金盞菊.png in Resources */,
-				B502386D262A6FFD00CA20A1 /* flower_11_banksia_班庫山花.png in Resources */,
-				B502387F262A6FFD00CA20A1 /* flower_16_cactus (2)_仙人掌花.png in Resources */,
-				B5023891262A6FFD00CA20A1 /* flower_33_clivia_君子蘭.png in Resources */,
-				B50238A7262A6FFD00CA20A1 /* flower_2_allium bulbs_大花蔥.png in Resources */,
-				B50238A1262A6FFD00CA20A1 /* flower_18_cactus (4)_仙人掌花.png in Resources */,
-				B502386F262A6FFD00CA20A1 /* flower_20_cactus_仙人掌花.png in Resources */,
-				B50238A3262A6FFD00CA20A1 /* flower_6_aquilegia clementine_夢幻草.png in Resources */,
-				B502389D262A6FFD00CA20A1 /* flower_34_cosmea_大波斯菊.png in Resources */,
-				B5023885262A6FFD00CA20A1 /* flower_19_cactus flower_仙人掌花.png in Resources */,
-				B50238AD262A6FFD00CA20A1 /* flower_8_astrantia roma_小蓮花.png in Resources */,
-				B502386B262A6FFD00CA20A1 /* flower_23_camellia_山茶花.png in Resources */,
-				B5023883262A6FFD00CA20A1 /* flower_7_aquilegia_夢幻草.png in Resources */,
-				B5023889262A6FFD00CA20A1 /* flower_1_abution_風鈴花.png in Resources */,
-				B5023877262A6FFD00CA20A1 /* flower_24_camphor branch_樟樹花.png in Resources */,
-				B502388F262A6FFD00CA20A1 /* flower_28_cherry_櫻花.png in Resources */,
-				B5023897262A6FFD00CA20A1 /* flower_4_angel trompet_大花曼陀羅.png in Resources */,
-				B5023899262A6FFD00CA20A1 /* flower_5_apple_蘋果花.png in Resources */,
-				B50238AB262A6FFD00CA20A1 /* flower_29_christia obcordidata_舖地蝙蝠草.png in Resources */,
 				B59E20BB256698FC003A5521 /* Assets.xcassets in Resources */,
-				B5023895262A6FFD00CA20A1 /* flower_14_bottlebrush_串錢柳.png in Resources */,
-				B502389B262A6FFD00CA20A1 /* flower_9_astrantia_紫苑.png in Resources */,
-				B502388D262A6FFD00CA20A1 /* flower_26_carnation_康乃馨.png in Resources */,
-				B5023871262A6FFD00CA20A1 /* flower_30_chrysanthemum_菊花.png in Resources */,
-				B5023881262A6FFD00CA20A1 /* flower_17_cactus (3)_仙人掌花.png in Resources */,
-				B5023887262A6FFD00CA20A1 /* flower_3_alocasia_姑婆芋.png in Resources */,
-				B5023873262A6FFD00CA20A1 /* flower_31_clematis (2)_鐵線蓮.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
