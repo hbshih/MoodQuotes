@@ -148,6 +148,8 @@ class ViewController: UIViewController, MessagingDelegate {
         ImageOfFlower.setImage(defaultFlowerImage!)
         nameOfFlower.text = defaultFlowerImageName
         
+        loadNewQuotes()
+        
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
     }
@@ -216,8 +218,8 @@ class ViewController: UIViewController, MessagingDelegate {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
+    override func viewWillAppear(_ animated: Bool) {
+
         //check Color
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
         {
@@ -225,6 +227,12 @@ class ViewController: UIViewController, MessagingDelegate {
             frontStackView.backgroundColor = color
             backgroundHideenView.backgroundColor =  color
         }
+       // loadNewQuotes()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+
         
     /* Comment for now --- 4/17/2021
         //If no quote saved in local & time now >= update time
