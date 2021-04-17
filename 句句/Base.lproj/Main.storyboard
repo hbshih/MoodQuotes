@@ -1673,6 +1673,9 @@ App們將會開始抖動。</string>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1500"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="homepageSegue" modalPresentationStyle="fullScreen" id="1Hd-WS-sjP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEe-9W-nDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1682,7 +1685,7 @@ App們將會開始抖動。</string>
     <inferredMetricsTieBreakers>
         <segue reference="7fH-0S-a6S"/>
         <segue reference="ly3-Ze-ofX"/>
-        <segue reference="iiW-8X-Mfm"/>
+        <segue reference="1Hd-WS-sjP"/>
         <segue reference="yaR-jS-V4z"/>
     </inferredMetricsTieBreakers>
     <resources>

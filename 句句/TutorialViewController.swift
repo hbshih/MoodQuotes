@@ -8,6 +8,8 @@
 import UIKit
 
 class TutorialViewController: UIViewController {
+    
+    var navigateToHomeAfterDismiss = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +18,15 @@ class TutorialViewController: UIViewController {
     }
     
     @IBAction func closePopUp(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        
+        if navigateToHomeAfterDismiss
+        {
+            self.performSegue(withIdentifier: "homepageSegue", sender: nil)
+        }
+        else
+        {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     /*

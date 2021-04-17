@@ -64,4 +64,14 @@ class Onboarding_3ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showTutorialSegue"
+        {
+            if let VC = segue.destination as? TutorialViewController
+            {
+                VC.navigateToHomeAfterDismiss = true
+            }
+        }
+    }
+    
 }
