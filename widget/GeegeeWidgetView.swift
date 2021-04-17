@@ -54,7 +54,7 @@ struct GeegeeWidgetView: View {
         HStack{
             VStack{
                 VStack{
-                    Image(uiImage: UIImage(named: "allium bulbs")!).resizable().frame(width: 60, height: 60, alignment: .center)
+                    Image(uiImage: UIImage(named: "flower_1_abution,風鈴花")!).resizable().frame(width: 60, height: 60, alignment: .center)
                     Text("罌粟花").font(Display_Font(font_size: Int(12)).getFont()).multilineTextAlignment(.center)
                     Text(Date().getTodayDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center)
                 }

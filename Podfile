@@ -17,10 +17,11 @@ target '句句' do
   pod 'Hero'
   pod 'PopupDialog'
   pod 'SwiftyGif'
-  pod 'UXCam'
+  #pod 'UXCam'
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
+  pod 'Firebase/Storage'
   
 
   target '句句Tests' do

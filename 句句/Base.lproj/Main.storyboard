@@ -482,6 +482,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VK4-l7-MkZ"/>
                     <connections>
+                        <outlet property="ImageOfFlower" destination="ItI-5R-e6Z" id="9fY-A2-uPw"/>
                         <outlet property="authorName" destination="nzE-5V-zvv" id="Cqe-hA-1sP"/>
                         <outlet property="backgroundHideenView" destination="kgV-82-bvE" id="6DU-d0-f0L"/>
                         <outlet property="buttonView" destination="bvF-DK-zMc" id="VjG-Ll-5rM"/>

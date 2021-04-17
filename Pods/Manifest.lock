@@ -41,6 +41,9 @@ PODS:
   - Firebase/Messaging (7.3.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 7.3.0)
+  - Firebase/Storage (7.3.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 7.3.0)
   - FirebaseAnalytics (7.3.0):
     - FirebaseCore (~> 7.0)
     - FirebaseInstallations (~> 7.0)
@@ -79,6 +82,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Reachability (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
+  - FirebaseStorage (7.3.0):
+    - FirebaseCore (~> 7.0)
+    - GTMSessionFetcher/Core (~> 1.4)
   - GoogleAnalytics (3.17.0)
   - GoogleAppMeasurement (7.3.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
@@ -107,6 +113,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.1.1):
     - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.5.0)
   - Hero (1.5.0)
   - leveldb-library (1.22)
   - MASegmentedControl (0.0.5)
@@ -119,7 +126,6 @@ PODS:
     - DynamicBlurView (~> 4.0)
   - PromisesObjC (1.2.11)
   - SwiftyGif (5.3.0)
-  - UXCam (3.3.0)
 
 DEPENDENCIES:
   - BulletinBoard
@@ -131,12 +137,12 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Database
   - Firebase/Messaging
+  - Firebase/Storage
   - GoogleAnalytics
   - Hero
   - MASegmentedControl
   - PopupDialog
   - SwiftyGif
-  - UXCam
 
 SPEC REPOS:
   trunk:
@@ -157,10 +163,12 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
+    - FirebaseStorage
     - GoogleAnalytics
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - GTMSessionFetcher
     - Hero
     - leveldb-library
     - MASegmentedControl
@@ -168,7 +176,6 @@ SPEC REPOS:
     - PopupDialog
     - PromisesObjC
     - SwiftyGif
-    - UXCam
 
 SPEC CHECKSUMS:
   BulletinBoard: dba77053c2a7b64953f63073f7534165af2edd21
@@ -188,10 +195,12 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 971df89b48ae5ee4cc2bf6935f3857a525d28550
   FirebaseInstanceID: 5ccdee6a84e6b4bb5316de0a8cd88bc749ba490d
   FirebaseMessaging: 68d1bcb14880189558a8ae57167abe0b7e417232
+  FirebaseStorage: 5002b1895bfe74a5ce92ad54f966e6162d0da2e5
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAppMeasurement: 8d3c0aeede16ab7764144b5a4ca8e1d4323841b7
   GoogleDataTransport: 116c84c4bdeb76be2a7a46de51244368f9794eab
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
+  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MASegmentedControl: 9b58f9ba3a562a739b63b29e4ca2b9dc4d9c62cb
@@ -199,8 +208,7 @@ SPEC CHECKSUMS:
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
-  UXCam: a5bbbc5e4352059104654ef4af304da329b1e22a
 
-PODFILE CHECKSUM: eda01df858a33f056bef4d93b7517cfbaeed541d
+PODFILE CHECKSUM: 8b345ebb657ec7ba5472f764f04768a44122bcdb
 
 COCOAPODS: 1.10.0

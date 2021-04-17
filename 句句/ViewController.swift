@@ -102,8 +102,13 @@ class ViewController: UIViewController, MessagingDelegate {
        
     }
     
+    @IBOutlet weak var ImageOfFlower: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       // ImageOfFlower.image = flowerHandler().getFlowerOfTheDay()
+        flowerHandler().getFlowerOfTheDay()
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(yourMethod), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(yourMethod), name: UIApplication.willResignActiveNotification, object: nil)
