@@ -80,7 +80,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="Qoo-5U-Tjv">
                                                         <rect key="frame" x="16" y="204" width="382" height="200"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇每日語錄更新時間" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM1-I5-pyA">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="先來調整設定吧，選擇每日想要更新句子的時間" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM1-I5-pyA">
                                                                 <rect key="frame" x="16" y="0.0" width="350" height="112.66666666666667"/>
                                                                 <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -563,7 +563,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="調調設定啦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-kL-OCS">
-                                        <rect key="frame" x="151" y="7" width="112.33333333333331" height="30"/>
+                                        <rect key="frame" x="137" y="5.6666666666666643" width="140" height="32.666666666666664"/>
                                         <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="28"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -1376,7 +1376,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="u8y-ga-YrT" kind="relationship" relationship="rootViewController" id="HRA-iA-UZ5"/>
+                        <segue destination="875-bS-vea" kind="relationship" relationship="rootViewController" id="yaR-jS-V4z"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWx-MH-nhT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1499,7 +1499,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-8z-dal">
-                                                                <rect key="frame" x="112.66666666666666" y="7" width="156.99999999999997" height="30"/>
+                                                                <rect key="frame" x="93" y="5.6666666666666714" width="196" height="32.666666666666664"/>
                                                                 <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="28"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1659,14 +1659,20 @@ App們將會開始抖動。</string>
                                     <constraint firstItem="WwB-Np-Gnd" firstAttribute="width" secondItem="xtw-l1-1Wq" secondAttribute="width" id="zRc-B3-ksC"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMo-yd-2qX">
+                                <rect key="frame" x="184" y="1404" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KUe-mD-XgQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xtw-l1-1Wq" firstAttribute="leading" secondItem="KUe-mD-XgQ" secondAttribute="leading" id="IWm-lI-mN3"/>
                             <constraint firstItem="xtw-l1-1Wq" firstAttribute="bottom" secondItem="KUe-mD-XgQ" secondAttribute="bottom" id="QgQ-0e-hgp"/>
+                            <constraint firstItem="KUe-mD-XgQ" firstAttribute="bottom" secondItem="UMo-yd-2qX" secondAttribute="bottom" constant="32" id="Xug-rq-WuX"/>
                             <constraint firstItem="xtw-l1-1Wq" firstAttribute="top" secondItem="KUe-mD-XgQ" secondAttribute="top" id="aRW-pK-8ei"/>
                             <constraint firstItem="xtw-l1-1Wq" firstAttribute="trailing" secondItem="KUe-mD-XgQ" secondAttribute="trailing" id="kiN-xH-Jgn"/>
+                            <constraint firstItem="UMo-yd-2qX" firstAttribute="centerX" secondItem="KUe-mD-XgQ" secondAttribute="centerX" id="pcT-8L-17f"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1500"/>
@@ -1677,10 +1683,10 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SFC-mq-IwF"/>
         <segue reference="7fH-0S-a6S"/>
         <segue reference="ly3-Ze-ofX"/>
         <segue reference="iiW-8X-Mfm"/>
+        <segue reference="yaR-jS-V4z"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App" width="57" height="70.333335876464844"/>

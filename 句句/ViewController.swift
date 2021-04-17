@@ -100,6 +100,9 @@ class ViewController: UIViewController, MessagingDelegate {
     }
     
     @IBOutlet weak var ImageOfFlower: UIImageView!
+    var defaultQuote = ""
+    var defaultAuthor = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -129,8 +132,8 @@ class ViewController: UIViewController, MessagingDelegate {
        // ref = Database.database().reference()
         
         
-        frontQuote.text = "語錄更新中..."
-        authorName.text = "更新中"
+        frontQuote.text = defaultQuote
+        authorName.text = defaultAuthor
         
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
@@ -207,7 +210,7 @@ class ViewController: UIViewController, MessagingDelegate {
             backgroundHideenView.backgroundColor =  color
         }
         
-    /* Comment for now
+    /* Comment for now --- 4/17/2021
         //If no quote saved in local & time now >= update time
         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
         {

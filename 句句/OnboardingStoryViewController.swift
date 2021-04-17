@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import WidgetKit
 
 class OnboardingStoryViewController: UIViewController {
 
@@ -32,7 +33,7 @@ class OnboardingStoryViewController: UIViewController {
                 self.explationMessage.alpha = 0.0
             }, completion: { (true) in
                 UIView.animate(withDuration: 0.5, delay: 1.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
-                    self.imageView.image = UIImage(named: "example_plant")
+                    self.imageView.image = UIImage(named: "default_flower")
                     self.imageView.alpha = 1.0
                 }) { (true) in
                     UIView.animate(withDuration: 0.5, delay: 1.0, options: UIView.AnimationOptions.curveEaseIn) {
@@ -46,6 +47,32 @@ class OnboardingStoryViewController: UIViewController {
                 }
             })
             
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homepageSegue"
+        {
+            if let VC = segue.destination as? ViewController
+            {
+                let defaultQuote = "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星"
+                let defaultAuthor = "小王子"
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(defaultQuote, forKey: "Quote")
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(defaultAuthor, forKey: "Author")
+          //      VC.frontQuote.text = defaultQuote
+           //     VC.authorName.text = defaultAuthor
+            //    global_quote = VC.frontQuote.text!
+                VC.defaultQuote = defaultQuote
+                VC.defaultAuthor = defaultAuthor
+                
+                //更新Widget
+                if #available(iOS 14.0, *) {
+                    WidgetCenter.shared.reloadAllTimelines()
+                } else {
+                    // Fallback on earlier versions
+                }
+              //  let defaultFlowerName = ""
+            }
         }
     }
     
