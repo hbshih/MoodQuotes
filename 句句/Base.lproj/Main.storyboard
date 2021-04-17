@@ -563,7 +563,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="調調設定啦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-kL-OCS">
-                                        <rect key="frame" x="137" y="5.6666666666666643" width="140" height="32.666666666666664"/>
+                                        <rect key="frame" x="151" y="7" width="112.33333333333331" height="30"/>
                                         <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="28"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -1490,16 +1490,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-Np-Gnd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1527.3333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1433.6666666666667"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="9rW-Mh-55K">
-                                                <rect key="frame" x="16" y="16" width="382" height="1338.6666666666667"/>
+                                                <rect key="frame" x="16" y="16" width="382" height="1256.6666666666667"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzp-e3-txs">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-8z-dal">
-                                                                <rect key="frame" x="93" y="5.6666666666666714" width="196" height="32.666666666666664"/>
+                                                                <rect key="frame" x="112.66666666666666" y="7" width="156.99999999999997" height="30"/>
                                                                 <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="28"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1598,45 +1598,6 @@ App們將會開始抖動。</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eA-ph-1Nd">
-                                                        <rect key="frame" x="0.0" y="1288.6666666666667" width="382" height="50"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IzG-dl-Gov">
-                                                                <rect key="frame" x="131" y="0.0" width="120" height="50"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ0-Mf-bhi">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
-                                                                        <state key="normal" title="完成">
-                                                                            <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="closePopUp:" destination="vyl-c7-Mf0" eventType="touchUpInside" id="8po-ZR-vcN"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="mQ0-Mf-bhi" firstAttribute="top" secondItem="IzG-dl-Gov" secondAttribute="top" id="6hO-6f-gL5"/>
-                                                                    <constraint firstItem="mQ0-Mf-bhi" firstAttribute="leading" secondItem="IzG-dl-Gov" secondAttribute="leading" id="9c2-aq-H3u"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="mQ0-Mf-bhi" secondAttribute="bottom" id="DR9-qi-jbP"/>
-                                                                    <constraint firstItem="mQ0-Mf-bhi" firstAttribute="centerX" secondItem="IzG-dl-Gov" secondAttribute="centerX" id="Ry7-Vj-2ev"/>
-                                                                    <constraint firstItem="mQ0-Mf-bhi" firstAttribute="centerY" secondItem="IzG-dl-Gov" secondAttribute="centerY" id="pZI-vT-brg"/>
-                                                                    <constraint firstAttribute="width" constant="120" id="xZ5-aL-m4g"/>
-                                                                </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <integer key="value" value="15"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </view>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="IzG-dl-Gov" firstAttribute="centerX" secondItem="8eA-ph-1Nd" secondAttribute="centerX" id="B8n-Dv-cFf"/>
-                                                            <constraint firstItem="IzG-dl-Gov" firstAttribute="top" secondItem="8eA-ph-1Nd" secondAttribute="top" id="YpZ-3q-6tD"/>
-                                                            <constraint firstAttribute="width" constant="382" id="eJE-DW-6ny"/>
-                                                            <constraint firstAttribute="bottom" secondItem="IzG-dl-Gov" secondAttribute="bottom" id="mTM-aK-oBV"/>
-                                                        </constraints>
-                                                    </view>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -1659,20 +1620,56 @@ App們將會開始抖動。</string>
                                     <constraint firstItem="WwB-Np-Gnd" firstAttribute="width" secondItem="xtw-l1-1Wq" secondAttribute="width" id="zRc-B3-ksC"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMo-yd-2qX">
-                                <rect key="frame" x="184" y="1404" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eA-ph-1Nd">
+                                <rect key="frame" x="16" y="1390" width="382" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IzG-dl-Gov">
+                                        <rect key="frame" x="131" y="0.0" width="120" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ0-Mf-bhi">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
+                                                <state key="normal" title="完成">
+                                                    <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="closePopUp:" destination="vyl-c7-Mf0" eventType="touchUpInside" id="8po-ZR-vcN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="mQ0-Mf-bhi" firstAttribute="top" secondItem="IzG-dl-Gov" secondAttribute="top" id="6hO-6f-gL5"/>
+                                            <constraint firstItem="mQ0-Mf-bhi" firstAttribute="leading" secondItem="IzG-dl-Gov" secondAttribute="leading" id="9c2-aq-H3u"/>
+                                            <constraint firstAttribute="bottom" secondItem="mQ0-Mf-bhi" secondAttribute="bottom" id="DR9-qi-jbP"/>
+                                            <constraint firstItem="mQ0-Mf-bhi" firstAttribute="centerX" secondItem="IzG-dl-Gov" secondAttribute="centerX" id="Ry7-Vj-2ev"/>
+                                            <constraint firstItem="mQ0-Mf-bhi" firstAttribute="centerY" secondItem="IzG-dl-Gov" secondAttribute="centerY" id="pZI-vT-brg"/>
+                                            <constraint firstAttribute="width" constant="120" id="xZ5-aL-m4g"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IzG-dl-Gov" firstAttribute="centerX" secondItem="8eA-ph-1Nd" secondAttribute="centerX" id="B8n-Dv-cFf"/>
+                                    <constraint firstItem="IzG-dl-Gov" firstAttribute="top" secondItem="8eA-ph-1Nd" secondAttribute="top" id="YpZ-3q-6tD"/>
+                                    <constraint firstAttribute="height" constant="44" id="eho-63-fBM"/>
+                                    <constraint firstAttribute="bottom" secondItem="IzG-dl-Gov" secondAttribute="bottom" id="mTM-aK-oBV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KUe-mD-XgQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xtw-l1-1Wq" firstAttribute="leading" secondItem="KUe-mD-XgQ" secondAttribute="leading" id="IWm-lI-mN3"/>
+                            <constraint firstItem="KUe-mD-XgQ" firstAttribute="trailing" secondItem="8eA-ph-1Nd" secondAttribute="trailing" constant="16" id="Jc7-Sk-IiG"/>
+                            <constraint firstItem="8eA-ph-1Nd" firstAttribute="leading" secondItem="KUe-mD-XgQ" secondAttribute="leading" constant="16" id="Pu7-oZ-JpE"/>
                             <constraint firstItem="xtw-l1-1Wq" firstAttribute="bottom" secondItem="KUe-mD-XgQ" secondAttribute="bottom" id="QgQ-0e-hgp"/>
-                            <constraint firstItem="KUe-mD-XgQ" firstAttribute="bottom" secondItem="UMo-yd-2qX" secondAttribute="bottom" constant="32" id="Xug-rq-WuX"/>
                             <constraint firstItem="xtw-l1-1Wq" firstAttribute="top" secondItem="KUe-mD-XgQ" secondAttribute="top" id="aRW-pK-8ei"/>
                             <constraint firstItem="xtw-l1-1Wq" firstAttribute="trailing" secondItem="KUe-mD-XgQ" secondAttribute="trailing" id="kiN-xH-Jgn"/>
-                            <constraint firstItem="UMo-yd-2qX" firstAttribute="centerX" secondItem="KUe-mD-XgQ" secondAttribute="centerX" id="pcT-8L-17f"/>
+                            <constraint firstItem="KUe-mD-XgQ" firstAttribute="bottom" secondItem="8eA-ph-1Nd" secondAttribute="bottom" constant="32" id="ySs-nD-ROI"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1500"/>
