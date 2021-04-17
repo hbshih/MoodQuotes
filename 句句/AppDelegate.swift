@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import UserNotifications
 import BackgroundTasks
-import UXCam
+//import UXCam
 import WidgetKit
 //import UXCam
 
@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Fetch data once an hour.
         UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
       
-        UXCam.optIntoSchematicRecordings()
-        UXCam.start(withKey:"6ffyck6abrvtjx0")
+       // UXCam.optIntoSchematicRecordings()
+        //UXCam.start(withKey:"6ffyck6abrvtjx0")
 //
         
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.moodquotes.fetchQuotes",

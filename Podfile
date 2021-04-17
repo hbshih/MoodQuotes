@@ -22,6 +22,8 @@ target '句句' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
+  pod 'SDWebImageSwiftUI'
   
 
   target '句句Tests' do
@@ -41,5 +43,8 @@ target 'widgetExtension' do
 
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
+  pod 'SDWebImageSwiftUI'
   
 end

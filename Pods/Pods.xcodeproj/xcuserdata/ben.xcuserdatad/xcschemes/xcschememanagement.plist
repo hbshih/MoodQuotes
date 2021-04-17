@@ -54,7 +54,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Firebase-Analytics-Core-CoreOnly-Database.xcscheme</key>
+		<key>Firebase-Analytics-Core-CoreOnly-Database-Storage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -124,12 +124,32 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FirebaseStorage.xcscheme</key>
+		<key>FirebaseStorage-iOS13.0.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GTMSessionFetcher.xcscheme</key>
+		<key>FirebaseStorage-iOS14.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FirebaseUI-iOS13.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FirebaseUI-iOS14.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GTMSessionFetcher-iOS13.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GTMSessionFetcher-iOS14.0.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -210,6 +230,26 @@
 			<false/>
 		</dict>
 		<key>PromisesObjC-iOS14.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage-iOS13.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage-iOS14.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImageSwiftUI-iOS13.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImageSwiftUI-iOS14.0.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

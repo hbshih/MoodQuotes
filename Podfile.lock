@@ -85,6 +85,9 @@ PODS:
   - FirebaseStorage (7.3.0):
     - FirebaseCore (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
+  - FirebaseUI/Storage (9.0.0):
+    - Firebase/Storage
+    - SDWebImage (~> 5.6)
   - GoogleAnalytics (3.17.0)
   - GoogleAppMeasurement (7.3.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
@@ -125,6 +128,11 @@ PODS:
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
   - PromisesObjC (1.2.11)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
+  - SDWebImageSwiftUI (2.0.2):
+    - SDWebImage (~> 5.10)
   - SwiftyGif (5.3.0)
 
 DEPENDENCIES:
@@ -138,10 +146,12 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
+  - FirebaseUI/Storage
   - GoogleAnalytics
   - Hero
   - MASegmentedControl
   - PopupDialog
+  - SDWebImageSwiftUI
   - SwiftyGif
 
 SPEC REPOS:
@@ -164,6 +174,7 @@ SPEC REPOS:
     - FirebaseInstanceID
     - FirebaseMessaging
     - FirebaseStorage
+    - FirebaseUI
     - GoogleAnalytics
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -175,6 +186,8 @@ SPEC REPOS:
     - nanopb
     - PopupDialog
     - PromisesObjC
+    - SDWebImage
+    - SDWebImageSwiftUI
     - SwiftyGif
 
 SPEC CHECKSUMS:
@@ -196,6 +209,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 5ccdee6a84e6b4bb5316de0a8cd88bc749ba490d
   FirebaseMessaging: 68d1bcb14880189558a8ae57167abe0b7e417232
   FirebaseStorage: 5002b1895bfe74a5ce92ad54f966e6162d0da2e5
+  FirebaseUI: f0677a1cc235f6da602cbd5c9b5fbbd24544a6b3
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAppMeasurement: 8d3c0aeede16ab7764144b5a4ca8e1d4323841b7
   GoogleDataTransport: 116c84c4bdeb76be2a7a46de51244368f9794eab
@@ -207,8 +221,10 @@ SPEC CHECKSUMS:
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
+  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
   SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
 
-PODFILE CHECKSUM: 8b345ebb657ec7ba5472f764f04768a44122bcdb
+PODFILE CHECKSUM: d1e803c55b9a63db8433e75cc56be5f21714ec6a
 
 COCOAPODS: 1.10.0

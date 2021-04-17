@@ -10,6 +10,7 @@ import FirebaseDatabase
 import UserNotifications
 import Firebase
 import WidgetKit
+import FirebaseUI
 
 var global_quote: String = ""
 
@@ -107,7 +108,29 @@ class ViewController: UIViewController, MessagingDelegate {
         super.viewDidLoad()
         
        // ImageOfFlower.image = flowerHandler().getFlowerOfTheDay()
-        flowerHandler().getFlowerOfTheDay()
+       // flowerHandler().getFlowerOfTheDay()
+      //  DispatchQueue.main.async {
+      /*      flowerHandler().getFlowerOfTheDay { (imageView) in
+             //   self.ImageOfFlower = imageView
+                self.ImageOfFlower.setImage(imageView)
+            }
+//        }*/
+        
+
+        
+
+
+      /*  flowerHandler().getFlowerOfTheDay { (image) in
+            Dispatch.
+        }
+        
+        flowerHandler().getFlowerOfTheDay { (image) in
+            self.ImageOfFlower.image = image
+        }*/
+        /*
+        ImageOfFlower.sd_setImage(with: URL(string: "https://firebasestorage.googleapis.com/v0/b/geegee-a5bfd.appspot.com/o/flowers%2Fflower_16_cactus%20(2)_%E4%BB%99%E4%BA%BA%E6%8E%8C%E8%8A%B1.png?alt=media&token=cbafb77c-baa0-47b5-9a52-ff0e7073c078"), placeholderImage: UIImage(named: "example_plant"), options: .continueInBackground, completed: nil)
+*/
+     //   ImageOfFlower = flowerHandler().ge
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(yourMethod), name: UIApplication.willEnterForegroundNotification, object: nil)
@@ -178,6 +201,28 @@ class ViewController: UIViewController, MessagingDelegate {
     var author: String = "— 斌"
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        flowerHandler().getImageFromServerById(imageId: "") { (name, image_url) in
+            DispatchQueue.main.async { [self] in
+                
+                // Get a reference to the storage service using the default Firebase App
+                let storage = Storage.storage()
+
+                // Create a storage reference from our storage service
+                let storageRef = storage.reference()
+                
+                print("get url \(image_url)")
+                // Reference to an image file in Firebase Storage
+                 let reference = storageRef.child("\(image_url)")
+
+                // Placeholder image
+                let placeholderImage = UIImage(named: "placeholder.jpg")
+
+                // Load the image using SDWebImage
+                self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage)
+            
+            }
+        }
         
         print("view did appear called")
         
