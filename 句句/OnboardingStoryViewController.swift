@@ -19,7 +19,8 @@ class OnboardingStoryViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         imageView.image = UIImage(named: "icon_gesture")
-        explationMessage.text = "看看今日的句子與植物吧，請搖搖手機。"
+        explationMessage.text = "嗨，看看今日的句子與植物吧，請搖搖手機。"
+        
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -32,10 +33,17 @@ class OnboardingStoryViewController: UIViewController {
             }, completion: { (true) in
                 UIView.animate(withDuration: 0.5, delay: 1.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
                     self.imageView.image = UIImage(named: "example_plant")
-                    self.explationMessage.text = "這是屬於您今日的盆栽，\n它想告訴您"
                     self.imageView.alpha = 1.0
-                    self.explationMessage.alpha = 1.0
-                }, completion: nil)
+                }) { (true) in
+                    UIView.animate(withDuration: 0.5, delay: 1.0, options: UIView.AnimationOptions.curveEaseIn) {
+                        self.explationMessage.text = "這是屬於您今日的盆栽，\n它想告訴您"
+                        self.explationMessage.alpha = 1.0
+                    } completion: { (true) in
+                        sleep(2)
+                            self.performSegue(withIdentifier: "homepageSegue", sender: nil)
+                    }
+
+                }
             })
             
         }

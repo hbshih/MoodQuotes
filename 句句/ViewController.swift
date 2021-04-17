@@ -34,8 +34,13 @@ class ViewController: UIViewController, MessagingDelegate {
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touched")
+        performSegue(withIdentifier: "firstTimeSettingSegue", sender: nil)
+    }
     
-    @objc func yourMethod() {
+    
+    @objc func loadNewQuotes() {
         
         print("enter foreground now")
        // your code
@@ -94,48 +99,13 @@ class ViewController: UIViewController, MessagingDelegate {
         }
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("APPEAR VIEW")
-        
-
-        
-       
-    }
-    
     @IBOutlet weak var ImageOfFlower: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // ImageOfFlower.image = flowerHandler().getFlowerOfTheDay()
-       // flowerHandler().getFlowerOfTheDay()
-      //  DispatchQueue.main.async {
-      /*      flowerHandler().getFlowerOfTheDay { (imageView) in
-             //   self.ImageOfFlower = imageView
-                self.ImageOfFlower.setImage(imageView)
-            }
-//        }*/
-        
-
-        
-
-
-      /*  flowerHandler().getFlowerOfTheDay { (image) in
-            Dispatch.
-        }
-        
-        flowerHandler().getFlowerOfTheDay { (image) in
-            self.ImageOfFlower.image = image
-        }*/
-        /*
-        ImageOfFlower.sd_setImage(with: URL(string: "https://firebasestorage.googleapis.com/v0/b/geegee-a5bfd.appspot.com/o/flowers%2Fflower_16_cactus%20(2)_%E4%BB%99%E4%BA%BA%E6%8E%8C%E8%8A%B1.png?alt=media&token=cbafb77c-baa0-47b5-9a52-ff0e7073c078"), placeholderImage: UIImage(named: "example_plant"), options: .continueInBackground, completed: nil)
-*/
-     //   ImageOfFlower = flowerHandler().ge
-        
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(yourMethod), name: UIApplication.willEnterForegroundNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(yourMethod), name: UIApplication.willResignActiveNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(yourMethod), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.didBecomeActiveNotification, object: nil)
 
         //Notifications
         UNUserNotificationCenter.current().delegate = self
@@ -201,9 +171,9 @@ class ViewController: UIViewController, MessagingDelegate {
     @IBOutlet weak var nameOfFlower: UILabel!
     var author: String = "— 斌"
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        flowerHandler().getImageFromServerById(imageId: "") { (name, image_url) in
+    func downloadFlowerImage()
+    {
+        flowerHandler().getFlowerImageURL { (name, image_url) in
             DispatchQueue.main.async { [self] in
                 
                 // Get a reference to the storage service using the default Firebase App
@@ -225,8 +195,9 @@ class ViewController: UIViewController, MessagingDelegate {
                 self.nameOfFlower.text = name
             }
         }
-        
-        print("view did appear called")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
         //check Color
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
@@ -236,6 +207,7 @@ class ViewController: UIViewController, MessagingDelegate {
             backgroundHideenView.backgroundColor =  color
         }
         
+    /* Comment for now
         //If no quote saved in local & time now >= update time
         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
         {
@@ -288,7 +260,7 @@ class ViewController: UIViewController, MessagingDelegate {
         {
             WidgetCenter.shared.reloadAllTimelines()
         }
-        
+        */
         
     }
     
