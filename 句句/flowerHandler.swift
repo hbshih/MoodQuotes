@@ -14,26 +14,46 @@ import SDWebImage
 
 struct flowerHandler{
     
-    let numberOfImages = 35
+    
+    func countFirebaseRows(completion: @escaping ((_ count: Int) -> Void))
+    {
+        var count = 0
+        Database.database().reference().child("Flower").observe(DataEventType.value) { (snapshot) in
+            count = Int(snapshot.childrenCount)
+            completion(count)
+        }
+    }
     
     func getImageFromServerById(imageId: String, completion: @escaping ((_ name: String, _ imageurl: String) -> Void)) {
         
-        if let url = URL(string: "https://geegee-a5bfd.firebaseio.com/Flower/2.json") {
-           URLSession.shared.dataTask(with: url) { data, response, error in
-              if let data = data {
-                  do {
-                    print("url session ehre")
-                     let res = try JSONDecoder().decode(Response.self, from: data)
-                    print(res.name)
-                    print(res.url)
-                    completion(res.name, res.url)
-                  } catch let error {
-                    print("url session ehre")
-                     print(error)
-                  }
-               }
-           }.resume()
+        var numberOfImages = 0
+        
+        countFirebaseRows { (count) in
+            numberOfImages = count
+            
+            var randomImageNumber = Int.random(in: 1..<numberOfImages+1)
+            
+            if let url = URL(string: "https://geegee-a5bfd.firebaseio.com/Flower/\(randomImageNumber).json") {
+               URLSession.shared.dataTask(with: url) { data, response, error in
+                  if let data = data {
+                      do {
+                        print("url session ehre")
+                         let res = try JSONDecoder().decode(Response.self, from: data)
+                        print(res.name)
+                        print(res.fileName)
+                        completion(res.name, res.fileName)
+                      } catch let error {
+                        print("url session ehre")
+                         print(error)
+                      }
+                   }
+               }.resume()
+            }
+            
         }
+   //     print(numberOfImage)
+        
+
         /*
         DispatchQueue.main.async {
             let url = URL(string: "https://geegee-a5bfd.firebaseio.com/Flower/2/url.json")!
@@ -120,5 +140,5 @@ extension String
 
 struct Response: Codable { // or Decodable
     let name: String
-    let url: String
+    let fileName: String
 }

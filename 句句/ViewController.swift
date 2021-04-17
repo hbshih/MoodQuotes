@@ -214,7 +214,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 
                 print("get url \(image_url)")
                 // Reference to an image file in Firebase Storage
-                 let reference = storageRef.child("\(image_url)")
+                 let reference = storageRef.child("flowers/\(image_url).png")
 
                 // Placeholder image
                 let placeholderImage = UIImage(named: "placeholder.jpg")
