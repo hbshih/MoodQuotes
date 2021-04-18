@@ -406,10 +406,17 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-oX-Uda">
                                                         <rect key="frame" x="16" y="0.0" width="382" height="298.66666666666669"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人生是一場兵荒馬亂，你是我的劫後餘生。" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0Z-Ov-Dk5">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0Z-Ov-Dk5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="258.66666666666669"/>
-                                                                <fontDescription key="fontDescription" name="jf-liao-Monospaced-Regular" family="jf-liao-Monospaced" pointSize="36"/>
-                                                                <color key="textColor" systemColor="systemGray2Color"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="人生是一場兵荒馬亂，你是我的劫後餘生。">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGray2Color"/>
+                                                                            <font key="NSFont" size="36" name="jf-liao-Monospaced-Regular"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRv-ar-rFw">

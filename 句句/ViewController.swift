@@ -11,6 +11,7 @@ import UserNotifications
 import Firebase
 import WidgetKit
 import FirebaseUI
+import CoreText
 
 var global_quote: String = ""
 
@@ -147,7 +148,17 @@ class ViewController: UIViewController, MessagingDelegate {
         authorName.text = defaultAuthor
         ImageOfFlower.setImage(defaultFlowerImage!)
         nameOfFlower.text = defaultFlowerImageName
+        /*
+        rubyLabel.text = "｜成功《せいこう》するかどうかは、きみの｜努力《どりょく》に｜係《かか》る。｜人々《ひとびと》の｜生死《せいし》に｜係《かか》る。"  //2
+        //3
+        rubyLabel.textAlignment = .left
+        rubyLabel.font = .systemFont(ofSize: 20.0)
+        rubyLabel.orientation = .horizontal
+        rubyLabel.lineBreakMode = .byCharWrapping
         
+        frontQuote.textAlignment = .left
+        frontQuote.lineBreakMode = .byCharWrapping
+        */
         loadNewQuotes()
         
         //If Screenshot get to share screen
@@ -392,3 +403,4 @@ extension UIView {
         return image
     }
 }
+

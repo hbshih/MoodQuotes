@@ -23,6 +23,8 @@
 		B50956AC256DED9B0075ACE9 /* SplashScreen_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */; };
 		B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
 		B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
+		B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */; };
+		B51C61A4262C001800B5C6E8 /* textDirectionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */; };
 		B547A82D25870AD100938A09 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B547A82C25870AD100938A09 /* AVFoundation.framework */; };
 		B547A82F25870ADC00938A09 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B547A82E25870ADC00938A09 /* Security.framework */; };
 		B547A83525870AE300938A09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B547A83425870AE300938A09 /* CoreGraphics.framework */; };
@@ -145,6 +147,7 @@
 		B50956A8256DED9B0075ACE9 /* SplashScreen_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@3x.png"; sourceTree = "<group>"; };
 		B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@2x.png"; sourceTree = "<group>"; };
 		B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = I.Ngaan.ttf; sourceTree = "<group>"; };
+		B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textDirectionModifier.swift; sourceTree = "<group>"; };
 		B547A82625870AC300938A09 /* UXCam.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = UXCam.xcframework; sourceTree = "<group>"; };
 		B547A82C25870AD100938A09 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B547A82E25870ADC00938A09 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -325,6 +328,7 @@
 				B5517C74255FAFC500E134CC /* AppDelegate.swift */,
 				B5517C76255FAFC500E134CC /* SceneDelegate.swift */,
 				B5517C78255FAFC500E134CC /* ViewController.swift */,
+				B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */,
 				B5D3845C256BED8100B1A507 /* qiji-combo.ttf */,
 				B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
@@ -727,6 +731,7 @@
 				B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */,
 				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
+				B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +766,7 @@
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
 				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
 				B59E20B8256698FB003A5521 /* widget.swift in Sources */,
+				B51C61A4262C001800B5C6E8 /* textDirectionModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
