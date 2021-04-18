@@ -115,6 +115,11 @@ struct Response: Codable { // or Decodable
     let fileName: String
 }
 
+struct FlowerImage{
+    let image: UIImage
+    let fileName: String
+}
+
 enum StorageType {
     case userDefaults
     case fileSystem

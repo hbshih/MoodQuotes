@@ -10,12 +10,13 @@ import SwiftUI
 import Intents
 import Foundation
 import Firebase
+import FirebaseUI
 
 struct Provider: TimelineProvider{
     
     func placeholder(in context: Context) -> QuoteEntry {
         print("Widget got loaded")
-        return (QuoteEntry(date: Date(), quote: Quote(quote: "asdf", author: "adsf")))
+        return (QuoteEntry(date: Date(), quote: Quote(quote: "asdf", author: "adsf"), flowerImage: UIImage(named: "default_flower")!, flowerName: "asfd"))
     }
     
     
@@ -24,7 +25,7 @@ struct Provider: TimelineProvider{
         Analytics.logEvent("widget_got_installed", parameters: nil)
         
         print("Widget got loaded")
-        let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "活在當下 不求永生\n活得狂野 擁抱生命", author: "拉娜·德芮")))
+        let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "活在當下 不求永生\n活得狂野 擁抱生命", author: "拉娜·德芮"), flowerImage: UIImage(named: "default_flower")!, flowerName: "滿天星"))
         completion(quote)
     }
     
@@ -47,28 +48,73 @@ struct Provider: TimelineProvider{
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.quote, forKey: "Quote")
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.author, forKey: "Author")
                         
+                        //downloadFlowerImage()
                         
+
                         
-                        DispatchQueue.main.async {
-                            let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!)
-                            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
-                            WidgetCenter.shared.reloadAllTimelines()
-                            
-                            let content = UNMutableNotificationContent()
-                            content.title = "每天都更喜歡自己一點"
-                            content.body = "\(quoteInfo.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo.first?.author ?? "")"
-                            content.sound = UNNotificationSound.default
-
-                            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-                            let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
-
-                            UNUserNotificationCenter.current().add(req) { (error) in
-                                print("error\(error )")
+                        flowerHandler().getFlowerImageURL { (name, image_url) in
+                            DispatchQueue.main.async { [self] in
                                 
+
+                                // Get a reference to the storage service using the default Firebase App
+                                let storage = Storage.storage()
+
+                                // Create a storage reference from our storage service
+                                let storageRef = storage.reference()
+                                
+                                var imageView = UIImageView(image: UIImage(named: "default_flower"))
+                                
+                                print("get url \(image_url)")
+                                // Reference to an image file in Firebase Storage
+                                 let reference = storageRef.child("flowers/\(image_url).png")
+
+                                // Placeholder image
+                                let placeholderImage = UIImage(named: "placeholder.jpg")
+                                
+                                // Load the image using SDWebImage
+                                imageView.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+                                    var flowerImage: UIImage
+                                    var flowerName: String
+                                    if error != nil
+                                    {
+                                        print("unable to load new image \(error)")
+                                        flowerHandler().storeImage(image: UIImage(named: "default_flower")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                                        flowerName = "滿天星"
+                                        flowerImage = UIImage(named: "default_flower")!
+                                    }else
+                                    {
+                                        flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                                        flowerName = name
+                                        flowerImage = image!
+                                    }
+                                    
+                                    DispatchQueue.main.async {
+                                        let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!, flowerImage: flowerImage, flowerName: flowerName)
+                                     //   (date: Date(), quote: quoteInfo.first!)
+                                        let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+                                        WidgetCenter.shared.reloadAllTimelines()
+                                        
+                                        let content = UNMutableNotificationContent()
+                                        content.title = "每天都更喜歡自己一點"
+                                        content.body = "\(quoteInfo.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo.first?.author ?? "")"
+                                        content.sound = UNNotificationSound.default
+
+                                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                                        let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
+
+                                        UNUserNotificationCenter.current().add(req) { (error) in
+                                            print("error\(error )")
+                                            
+                                        }
+                                        
+                                        completion(timeline)
+                                    }
+                                }
                             }
-                            
-                            completion(timeline)
                         }
+                        
                         
                     } else {
                         let errQuote = Quote(quote: "App當機拉", author: "By Me")
@@ -82,36 +128,26 @@ struct Provider: TimelineProvider{
             {
                 print("Remain Local, the update time is \(notificationDate)")
             }
-            
-//            /*For Testing*/
-//            let content = UNMutableNotificationContent()
-//            content.title = "test notifaction"
-//            content.body = "Widget is remain local data"
-//            content.sound = UNNotificationSound.default
-//
-//            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-//            let req  = UNNotificationRequest(identifier: "testidentifire", content: content, trigger: tri)
-//
-//            UNUserNotificationCenter.current().add(req) { (error) in
-//                print("error\(error )")
-//            }
-//            /*Testing Ends*/
-//            
             print("load from local")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
-            let entry = QuoteEntry(date: Date(), quote: Quote(quote: Q, author: A))
+            let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults)!
+            let FlowerName: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName")!
+            let entry = QuoteEntry(date: Date(), quote: Quote(quote: Q, author: A), flowerImage: FlowerImage, flowerName: FlowerName)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
             completion(timeline)
         }
         
         
     }
+    
 }
 
 struct QuoteEntry: TimelineEntry{
     var date: Date
     let quote: Quote
+    let flowerImage: UIImage
+    let flowerName: String
 }
 
 struct Emojibook_WidgetEntryView: View {
@@ -127,12 +163,12 @@ struct Emojibook_WidgetEntryView: View {
         var body: some View {
             
             switch family {
-            case .systemSmall:
-                GeegeeWidgetView(quote: entry.quote, quoteSize: 18, authorSize: 12)
+          /*  case .systemSmall:
+                GeegeeWidgetView(quote: entry.quote, quoteSize: 18, authorSize: 12)*/
             case .systemMedium:
-                GeegeeWidgetView(quote: entry.quote, quoteSize: 28, authorSize: 20)
-            case .systemLarge:
-                GeegeeWidgetView(quote: entry.quote, quoteSize: 32, authorSize: 24)
+                GeegeeWidgetView(quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 28, authorSize: 20)
+         /*   case .systemLarge:
+                GeegeeWidgetView(quote: entry.quote, quoteSize: 32, authorSize: 24)*/
             default:
                 Text("Some other WidgetFamily in the future.")
             }

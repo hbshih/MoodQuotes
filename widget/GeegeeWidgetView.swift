@@ -16,6 +16,8 @@ struct GeegeeWidgetView: View {
     
     
     let quote: Quote
+    let flowerImage: UIImage
+    let flowerName: String
     let quoteSize: Double
     let authorSize: Double
     
@@ -58,8 +60,8 @@ struct GeegeeWidgetView: View {
         HStack{
             VStack{
                 VStack{
-                    Image(uiImage: UIImage(named: "Webp.net-compress-image-removebg-preview")!).resizable().frame(width: 60, height: 60, alignment: .center)
-                    Text("罌粟花").font(Display_Font(font_size: Int(12)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
+                    Image(uiImage: flowerImage).resizable().frame(width: 60, height: 60, alignment: .center)
+                    Text(flowerName).font(Display_Font(font_size: Int(12)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
                     Text(Date().getTodayDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
                 }
             }
