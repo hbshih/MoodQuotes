@@ -20,6 +20,7 @@ class Onboarding_2ViewController: UIViewController {
     
     @IBAction func ColorPicked(_ sender: UIButton) {
         
+        print(backgroundView.backgroundColor)
         backgroundView.backgroundColor = sender.backgroundColor
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundView.backgroundColor, forKey: "BackgroundColor")
     }
@@ -32,7 +33,7 @@ class Onboarding_2ViewController: UIViewController {
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundView.backgroundColor, forKey: "BackgroundColor")
         }else
         {
-            let default_color = gray.backgroundColor
+            let default_color = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: default_color, forKey: "BackgroundColor")
         }
     }

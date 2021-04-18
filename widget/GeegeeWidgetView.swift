@@ -50,7 +50,11 @@ struct GeegeeWidgetView: View {
     var body: some View {
         
     ZStack {
-       // Color(backgroundColor)
+        if #available(iOS 14.0, *) {
+            Color(backgroundColor).ignoresSafeArea(.all).edgesIgnoringSafeArea(.all)
+        } else {
+            // Fallback on earlier versions
+        }
         HStack{
             VStack{
                 VStack{

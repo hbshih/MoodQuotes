@@ -148,12 +148,27 @@ struct widget: Widget{
         FirebaseApp.configure()
     }
     
+    var backgroundColor: UIColor{
+        if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.colorForKey(key: "BackgroundColor")
+        {
+            print(color)
+            return color
+        }
+        else
+        {
+            return UIColor.gray
+        }
+    }
+    
+    
     public var body: some WidgetConfiguration {
         StaticConfiguration(
             kind: kind,
             provider: Provider()
         ) { entry in
             Emojibook_WidgetEntryView(entry: entry)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)    // << here !!
+                       .background(Color(backgroundColor))
         }
         .supportedFamilies([.systemMedium])
         .configurationDisplayName("句句 每日語錄")

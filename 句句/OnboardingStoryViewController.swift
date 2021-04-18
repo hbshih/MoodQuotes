@@ -17,10 +17,36 @@ class OnboardingStoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        backgroundView.backgroundColor = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)
         // Do any additional setup after loading the view.
         
+        self.imageView.alpha = 0.0
+        self.explationMessage.alpha = 0.0
+        
+        UIView.animate(withDuration: 2.0, delay: 0.5, options: .curveLinear) {
+           // imageView.image = UIImage(named: "icon_gesture")
+            self.explationMessage.text = "嗨，\n從今天起，你每天將會得到一種植物和一句溫暖的生活語錄。"
+            self.explationMessage.alpha = 1.0
+        } completion: { (true) in
+            UIView.animate(withDuration: 0.5, delay: 4.0) {
+                self.explationMessage.alpha = 0.0
+            } completion: { (true) in
+                UIView.animate(withDuration: 3.0) {
+                    self.explationMessage.text = "看看屬於你今日的植物和橘子吧!\n\n請搖搖手機。"
+                    self.imageView.alpha = 1.0
+                    self.explationMessage.alpha = 1.0
+                } completion: { (true) in
+                    //
+                }
+
+            }
+
+        }
+
+        
+        
         imageView.image = UIImage(named: "icon_gesture")
-        explationMessage.text = "嗨，看看今日的句子與植物吧，請搖搖手機。"
+        
         
         UIView.animate(withDuration: 0.5, delay: 0.5, options: [.repeat, .autoreverse]) { [self] in
             self.imageView.transform = imageView.transform.rotated(by: .pi/6)
@@ -28,6 +54,13 @@ class OnboardingStoryViewController: UIViewController {
             self.imageView.transform = self.imageView.transform.rotated(by: -(.pi/6))
         }
 
+        let default_color = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: default_color, forKey: "BackgroundColor")
+        
+        if #available(iOS 14.0, *)
+        {
+            WidgetCenter.shared.reloadAllTimelines()
+        }
         
         
     }
