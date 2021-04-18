@@ -71,11 +71,26 @@ struct Provider: TimelineProvider{
                                 // Placeholder image
                                 let placeholderImage = UIImage(named: "placeholder.jpg")
                                 
+                                var flowerImage: UIImage
+                                var flowerName: String
+                            //    print("image retrived \(image?.size)")
+                                
+                                flowerImage = UIImage(named: "default_flower_2")!
+                                flowerName = "滿天星"
+                                
+                                imageView.sd_setImage(with: reference, placeholderImage: flowerImage) { (image, error, cache, urls) in
+                                   // print("image downloaded \(image?.size)")
+                                    flowerImage = image!
+                                    flowerName = name
+                                }
+                                
+
+                                
                                 // Load the image using SDWebImage
-                                imageView.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
-                                    var flowerImage: UIImage
-                                    var flowerName: String
-                                    if error != nil
+                            //    imageView.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+
+                                    
+                             /*       if error != nil
                                     {
                                         print("unable to load new image \(error)")
                                         flowerHandler().storeImage(image: UIImage(named: "default_flower")!, forKey: "FlowerImage", withStorageType: .userDefaults)
@@ -88,13 +103,13 @@ struct Provider: TimelineProvider{
                                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
                                         flowerName = name
                                         flowerImage = image!
-                                    }
+                                    }*/
                                     
                                     DispatchQueue.main.async {
                                         let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!, flowerImage: flowerImage, flowerName: flowerName)
                                      //   (date: Date(), quote: quoteInfo.first!)
                                         let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
-                                        WidgetCenter.shared.reloadAllTimelines()
+                                   //     WidgetCenter.shared.reloadAllTimelines()
                                         
                                         let content = UNMutableNotificationContent()
                                         content.title = "每天都更喜歡自己一點"
@@ -110,7 +125,7 @@ struct Provider: TimelineProvider{
                                         }
                                         
                                         completion(timeline)
-                                    }
+                                 //   }
                                 }
                             }
                         }
@@ -131,8 +146,18 @@ struct Provider: TimelineProvider{
             print("load from local")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
-            let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults)!
-            let FlowerName: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName")!
+            
+            var FlowerImage: UIImage
+            var FlowerName: String
+            if let newImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults)
+            {
+                FlowerImage = newImage.resized(withPercentage: 0.1)!
+                FlowerName = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName")!
+            }else
+            {
+                FlowerImage = UIImage(named: "default_flower_2")!
+                FlowerName = "滿天星"
+            }
             let entry = QuoteEntry(date: Date(), quote: Quote(quote: Q, author: A), flowerImage: FlowerImage, flowerName: FlowerName)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
             completion(timeline)
@@ -216,5 +241,24 @@ struct widget: Widget{
 struct widget_Previews: PreviewProvider {
     static var previews: some View {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
+
+extension UIImage {
+    func resized(withPercentage percentage: CGFloat, isOpaque: Bool = true) -> UIImage? {
+        let canvas = CGSize(width: size.width * percentage, height: size.height * percentage)
+        let format = imageRendererFormat
+        format.opaque = isOpaque
+        return UIGraphicsImageRenderer(size: canvas, format: format).image {
+            _ in draw(in: CGRect(origin: .zero, size: canvas))
+        }
+    }
+    func resized(toWidth width: CGFloat, isOpaque: Bool = true) -> UIImage? {
+        let canvas = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        let format = imageRendererFormat
+        format.opaque = isOpaque
+        return UIGraphicsImageRenderer(size: canvas, format: format).image {
+            _ in draw(in: CGRect(origin: .zero, size: canvas))
+        }
     }
 }
