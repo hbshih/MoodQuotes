@@ -21,6 +21,8 @@
 		B50956AA256DED9B0075ACE9 /* SplashScreen_.png in Resources */ = {isa = PBXBuildFile; fileRef = B50956A7256DED9B0075ACE9 /* SplashScreen_.png */; };
 		B50956AB256DED9B0075ACE9 /* SplashScreen_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B50956A8256DED9B0075ACE9 /* SplashScreen_@3x.png */; };
 		B50956AC256DED9B0075ACE9 /* SplashScreen_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */; };
+		B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
+		B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
 		B547A82D25870AD100938A09 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B547A82C25870AD100938A09 /* AVFoundation.framework */; };
 		B547A82F25870ADC00938A09 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B547A82E25870ADC00938A09 /* Security.framework */; };
 		B547A83525870AE300938A09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B547A83425870AE300938A09 /* CoreGraphics.framework */; };
@@ -142,6 +144,7 @@
 		B50956A7256DED9B0075ACE9 /* SplashScreen_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen_.png; sourceTree = "<group>"; };
 		B50956A8256DED9B0075ACE9 /* SplashScreen_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@3x.png"; sourceTree = "<group>"; };
 		B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@2x.png"; sourceTree = "<group>"; };
+		B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = I.Ngaan.ttf; sourceTree = "<group>"; };
 		B547A82625870AC300938A09 /* UXCam.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = UXCam.xcframework; sourceTree = "<group>"; };
 		B547A82C25870AD100938A09 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B547A82E25870ADC00938A09 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -323,6 +326,7 @@
 				B5517C76255FAFC500E134CC /* SceneDelegate.swift */,
 				B5517C78255FAFC500E134CC /* ViewController.swift */,
 				B5D3845C256BED8100B1A507 /* qiji-combo.ttf */,
+				B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
 				B5517C7A255FAFC500E134CC /* Main.storyboard */,
 				B5AF87392571209C008A3BBC /* videoTutorialViewController.swift */,
@@ -531,6 +535,7 @@
 				B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B50956AC256DED9B0075ACE9 /* SplashScreen_@2x.png in Resources */,
 				B50956AB256DED9B0075ACE9 /* SplashScreen_@3x.png in Resources */,
+				B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
 				B5517C7E255FAFC500E134CC /* Assets.xcassets in Resources */,
 				B5517C7C255FAFC500E134CC /* Main.storyboard in Resources */,
@@ -556,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */,
+				B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
 				B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */,
 				B58E54FA2629AEE9009657E0 /* Assets.xcassets in Resources */,
 				B59E20BB256698FC003A5521 /* Assets.xcassets in Resources */,

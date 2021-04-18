@@ -18,7 +18,7 @@ class HandleNewUserViewController: UIViewController {
             performSegue(withIdentifier: "homeSegue", sender: nil)
         }else
         {
-            performSegue(withIdentifier: "onboardingSegue", sender: nil)
+            performSegue(withIdentifier: "onboardSegue", sender: nil)
         }
     }
 }

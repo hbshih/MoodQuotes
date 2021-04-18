@@ -22,11 +22,11 @@
             <objects>
                 <viewController id="875-bS-vea" customClass="Onboarding_1ViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4c4-BQ-VrV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qPV-02-AxK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HFA-Ym-DEH">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -72,17 +72,17 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ic0-6n-IU2">
-                                        <rect key="frame" x="0.0" y="100" width="414" height="608"/>
+                                        <rect key="frame" x="0.0" y="100" width="414" height="598"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhh-qR-KzE">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="598"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="Qoo-5U-Tjv">
-                                                        <rect key="frame" x="16" y="204" width="382" height="200"/>
+                                                        <rect key="frame" x="16" y="199" width="382" height="200"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="先來調整設定吧，選擇每日想要更新句子的時間" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM1-I5-pyA">
                                                                 <rect key="frame" x="16" y="0.0" width="350" height="112.66666666666667"/>
-                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
+                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="36"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -148,7 +148,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="so0-UE-QiP">
-                                        <rect key="frame" x="0.0" y="708" width="414" height="110"/>
+                                        <rect key="frame" x="0.0" y="698" width="414" height="110"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CC9-az-PAE">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
@@ -283,7 +283,7 @@
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="罌粟花" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGM-a8-dbm">
                                                                         <rect key="frame" x="0.0" y="40.000000000000014" width="180" height="25.666666666666671"/>
-                                                                        <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="24"/>
+                                                                        <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="24"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -564,7 +564,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="調調設定啦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-kL-OCS">
                                         <rect key="frame" x="151" y="7" width="112.33333333333331" height="30"/>
-                                        <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="28"/>
+                                        <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="28"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -818,11 +818,11 @@
             <objects>
                 <viewController id="M2B-Qb-JNt" customClass="Onboarding_2ViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Bh-95-d0d">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oSo-lx-APs">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PB7-iz-lkK">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -869,13 +869,13 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HWg-GT-Uqi">
-                                        <rect key="frame" x="0.0" y="100" width="414" height="608"/>
+                                        <rect key="frame" x="0.0" y="100" width="414" height="598"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wex-Ed-GMu">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="598"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XTF-jW-SM9">
-                                                        <rect key="frame" x="20" y="204" width="374" height="200"/>
+                                                        <rect key="frame" x="20" y="199" width="374" height="200"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSj-Vc-sNf">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
@@ -885,13 +885,13 @@
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇背景顏色" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy8-Mh-nVr">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
-                                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
+                                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="36"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="（之後也可以改啦）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j35-Ca-OCM">
                                                                                 <rect key="frame" x="0.0" y="30" width="374" height="130"/>
-                                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="14"/>
+                                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="14"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -985,7 +985,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gPg-PJ-IGH">
-                                        <rect key="frame" x="0.0" y="708" width="414" height="110"/>
+                                        <rect key="frame" x="0.0" y="698" width="414" height="110"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZc-Bb-CHB">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
@@ -1071,11 +1071,11 @@
             <objects>
                 <viewController id="vdU-3q-1DX" customClass="Onboarding_3ViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bgs-v7-4eZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9nY-Ak-5Er">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jey-Lj-EH0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -1121,17 +1121,17 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-W2-441">
-                                        <rect key="frame" x="0.0" y="100" width="414" height="608"/>
+                                        <rect key="frame" x="0.0" y="100" width="414" height="598"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMB-Q6-V7d">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="598"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-qe-NEo">
-                                                        <rect key="frame" x="16" y="254" width="382" height="100"/>
+                                                        <rect key="frame" x="16" y="249" width="382" height="100"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開啟通知可以第一時間收到最新句子" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
-                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="24"/>
+                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="24"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1144,7 +1144,7 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-Ya-8lD">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="35"/>
                                                                                 <color key="backgroundColor" red="0.7568050623" green="0.74128681419999998" blue="0.73333191870000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
+                                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="36"/>
                                                                                 <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <state key="normal" title="拒絕"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -1163,7 +1163,7 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-RL-PdC">
                                                                                 <rect key="frame" x="212" y="0.0" width="106" height="35"/>
                                                                                 <color key="backgroundColor" red="0.7568050623" green="0.74128681419999998" blue="0.73333191870000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="36"/>
+                                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="36"/>
                                                                                 <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <state key="normal" title="開啟"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -1208,7 +1208,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a57-e8-jtd">
-                                        <rect key="frame" x="0.0" y="708" width="414" height="110"/>
+                                        <rect key="frame" x="0.0" y="698" width="414" height="110"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UR0-hP-5Vw">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
@@ -1388,14 +1388,14 @@
             <objects>
                 <viewController id="Co0-l8-F4A" customClass="OnboardingStoryViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lh8-FB-PNB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqR-dP-uzr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="cB3-ij-gdY">
-                                        <rect key="frame" x="16" y="298" width="382" height="300"/>
+                                        <rect key="frame" x="16" y="271" width="382" height="300"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5bj-L8-faE">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="300"/>
@@ -1409,7 +1409,7 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QA-KT-nGc">
                                                         <rect key="frame" x="32" y="150" width="318" height="150"/>
-                                                        <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1447,6 +1447,7 @@
                             <constraint firstItem="pqR-dP-uzr" firstAttribute="trailing" secondItem="BOt-ob-br3" secondAttribute="trailing" id="jBv-4T-wuh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JVl-Gn-YIz"/>
                     <connections>
                         <outlet property="backgroundView" destination="pqR-dP-uzr" id="tPc-UN-JLA"/>
                         <outlet property="explationMessage" destination="1QA-KT-nGc" id="cZO-gd-dFg"/>
@@ -1472,11 +1473,12 @@
                     <connections>
                         <segue destination="875-bS-vea" kind="show" identifier="onboardingSegue" id="9CO-rk-QmR"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="homeSegue" id="htk-Qi-2dc"/>
+                        <segue destination="Co0-l8-F4A" kind="show" identifier="onboardSegue" id="KId-aa-FVe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxo-Pz-jCN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4931" y="-593"/>
+            <point key="canvasLocation" x="-5561" y="-1406"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="jLN-jQ-4yw">
@@ -1500,7 +1502,7 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-8z-dal">
                                                                 <rect key="frame" x="112.66666666666666" y="7" width="156.99999999999997" height="30"/>
-                                                                <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="28"/>
+                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="28"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1685,8 +1687,8 @@ App們將會開始抖動。</string>
     <inferredMetricsTieBreakers>
         <segue reference="7fH-0S-a6S"/>
         <segue reference="ly3-Ze-ofX"/>
-        <segue reference="1Hd-WS-sjP"/>
-        <segue reference="yaR-jS-V4z"/>
+        <segue reference="l2z-i9-8zM"/>
+        <segue reference="9CO-rk-QmR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App" width="57" height="70.333335876464844"/>

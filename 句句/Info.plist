@@ -49,8 +49,8 @@
 	<string>我們需要權限才能將截圖放入您的手機中</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>jf-liao-monospaced.ttf</string>
 		<string>qiji-combo.ttf</string>
+		<string>I.Ngaan.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
