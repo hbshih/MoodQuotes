@@ -51,9 +51,11 @@ class Onboarding_3ViewController: UIViewController {
                 UIApplication.shared.registerForRemoteNotifications()
                 let  aClass = NotificationTrigger()
                 aClass.setupNotifications()
+                
+                self.checkSegue()
             }
         }
-        checkSegue()
+        
     }
     func checkSegue()
     {

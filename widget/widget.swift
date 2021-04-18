@@ -50,8 +50,29 @@ struct Provider: TimelineProvider{
                         
                         //downloadFlowerImage()
                         
+                        DispatchQueue.main.async {
+                            let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!, flowerImage: UIImage(named: "default_flower")!, flowerName: "adf")
+                         //   (date: Date(), quote: quoteInfo.first!)
+                            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+                       //     WidgetCenter.shared.reloadAllTimelines()
+                            
+                            let content = UNMutableNotificationContent()
+                            content.title = "每天都更喜歡自己一點"
+                            content.body = "\(quoteInfo.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo.first?.author ?? "")"
+                            content.sound = UNNotificationSound.default
 
-                        
+                            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                            let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
+
+                            UNUserNotificationCenter.current().add(req) { (error) in
+                                print("error\(error )")
+                                
+                            }
+                            
+                            completion(timeline)
+                     //   }
+                    
+                     /*
                         flowerHandler().getFlowerImageURL { (name, image_url) in
                             DispatchQueue.main.async { [self] in
                                 
@@ -127,7 +148,7 @@ struct Provider: TimelineProvider{
                                         completion(timeline)
                                  //   }
                                 }
-                            }
+                            }*/
                         }
                         
                         
@@ -191,7 +212,7 @@ struct Emojibook_WidgetEntryView: View {
           /*  case .systemSmall:
                 GeegeeWidgetView(quote: entry.quote, quoteSize: 18, authorSize: 12)*/
             case .systemMedium:
-                GeegeeWidgetView(quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 28, authorSize: 20)
+                GeegeeWidgetView(quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
          /*   case .systemLarge:
                 GeegeeWidgetView(quote: entry.quote, quoteSize: 32, authorSize: 24)*/
             default:

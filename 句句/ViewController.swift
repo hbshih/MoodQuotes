@@ -58,7 +58,7 @@ class ViewController: UIViewController, MessagingDelegate {
         print("enter foreground now")
        // your code
         //If no quote saved in local & time now >= update time
-        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
+        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) != nil || SyncAppQuotes().checkIfUpdate()
         {
             print("loading new screen")
             // Get From API
