@@ -55,19 +55,19 @@ struct GeegeeWidgetView: View {
             VStack{
                 VStack{
                     Image(uiImage: UIImage(named: "Webp.net-compress-image-removebg-preview")!).resizable().frame(width: 60, height: 60, alignment: .center)
-                    Text("罌粟花").font(Display_Font(font_size: Int(12)).getFont()).multilineTextAlignment(.center)
-                    Text(Date().getTodayDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center)
+                    Text("罌粟花").font(Display_Font(font_size: Int(12)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
+                    Text(Date().getTodayDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
                 }
             }
             
             VStack{
                 VStack{
-                    Text(quote.quote).font(Display_Font(font_size: Int(18)).getFont()).foregroundColor(.black).multilineTextAlignment(.center).padding(.leading,8).padding(.trailing,8).minimumScaleFactor(0.5)
+                    Text(quote.quote).font(Display_Font(font_size: Int(18)).getFont()).foregroundColor(.gray).multilineTextAlignment(.center).padding(.leading,8).padding(.trailing,8).minimumScaleFactor(0.5)
                     Text(quote.author)
                         .font(Display_Font(font_size: Int(12)).getFont())
                       .multilineTextAlignment(.center)
                       .padding(.top, 5)
-                        .foregroundColor(.black)
+                        .foregroundColor(.gray)
                 }
             }
         }

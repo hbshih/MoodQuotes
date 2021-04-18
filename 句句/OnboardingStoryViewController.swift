@@ -22,25 +22,41 @@ class OnboardingStoryViewController: UIViewController {
         imageView.image = UIImage(named: "icon_gesture")
         explationMessage.text = "嗨，看看今日的句子與植物吧，請搖搖手機。"
         
+        UIView.animate(withDuration: 0.5, delay: 0.5, options: [.repeat, .autoreverse]) { [self] in
+            self.imageView.transform = imageView.transform.rotated(by: .pi/6)
+        } completion: { (true) in
+            self.imageView.transform = self.imageView.transform.rotated(by: -(.pi/6))
+        }
+
+        
+        
     }
     
-    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+    
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        
+        imageView.layer.removeAllAnimations()
+
         if motion == .motionShake
         {
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             UIView.animate(withDuration: 0.5, delay: 1.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
                 self.imageView.alpha = 0.0
                 self.explationMessage.alpha = 0.0
+            
+                
+                
             }, completion: { (true) in
-                UIView.animate(withDuration: 0.5, delay: 1.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+                UIView.animate(withDuration: 0.5, delay: 1.5, options: UIView.AnimationOptions.curveEaseIn, animations: {
                     self.imageView.image = UIImage(named: "default_flower")
                     self.imageView.alpha = 1.0
                 }) { (true) in
-                    UIView.animate(withDuration: 0.5, delay: 1.0, options: UIView.AnimationOptions.curveEaseIn) {
+                    UIView.animate(withDuration: 0.5, delay: 2.0, options: UIView.AnimationOptions.curveEaseIn) {
                         self.explationMessage.text = "這是屬於您今日的盆栽，\n它想告訴您"
                         self.explationMessage.alpha = 1.0
                     } completion: { (true) in
-                        sleep(2)
+                        sleep(4)
                             self.performSegue(withIdentifier: "homepageSegue", sender: nil)
                     }
 
@@ -99,4 +115,27 @@ class OnboardingStoryViewController: UIViewController {
     }
     */
 
+}
+
+extension UIImage {
+    func rotate(radians: CGFloat) -> UIImage {
+        let rotatedSize = CGRect(origin: .zero, size: size)
+            .applying(CGAffineTransform(rotationAngle: CGFloat(radians)))
+            .integral.size
+        UIGraphicsBeginImageContext(rotatedSize)
+        if let context = UIGraphicsGetCurrentContext() {
+            let origin = CGPoint(x: rotatedSize.width / 2.0,
+                                 y: rotatedSize.height / 2.0)
+            context.translateBy(x: origin.x, y: origin.y)
+            context.rotate(by: radians)
+            draw(in: CGRect(x: -origin.y, y: -origin.x,
+                            width: size.width, height: size.height))
+            let rotatedImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+
+            return rotatedImage ?? self
+        }
+
+        return self
+    }
 }
