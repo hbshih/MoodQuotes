@@ -125,6 +125,12 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for fontFamily in UIFont.familyNames {
+            for fontName in UIFont.fontNames(forFamilyName: fontFamily) {
+                print("\(fontName)")
+            }
+        }
+        
         //onboardingTouchIcon.isHidden = true
         self.onboardingTouchIcon.alpha = 0.0
         Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)

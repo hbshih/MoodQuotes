@@ -9,8 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="I.Ngaan.ttf">
-            <string>I.Ngaan</string>
+        <array key="I-PenCrane-B-2.ttf">
+            <string>I.PenCrane-B</string>
+        </array>
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-Regular</string>
         </array>
         <array key="jf-liao-monospaced.ttf">
             <string>jf-liao-Monospaced-Regular</string>
@@ -82,7 +85,7 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="先來調整設定吧，選擇每日想要更新句子的時間" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM1-I5-pyA">
                                                                 <rect key="frame" x="16" y="0.0" width="350" height="112.66666666666667"/>
-                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="36"/>
+                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="36"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -273,7 +276,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-Dr-KMM">
-                                                                <rect key="frame" x="116" y="18" width="180" height="64"/>
+                                                                <rect key="frame" x="116" y="16" width="180" height="68"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020年4月15日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcO-Lc-4ct">
                                                                         <rect key="frame" x="0.0" y="0.0" width="180" height="24"/>
@@ -282,8 +285,8 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="罌粟花" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGM-a8-dbm">
-                                                                        <rect key="frame" x="0.0" y="40" width="180" height="24"/>
-                                                                        <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="24"/>
+                                                                        <rect key="frame" x="0.0" y="40" width="180" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -312,7 +315,7 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人生是一場兵荒馬亂，你是我的劫後餘生。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-MP-j3O">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="354"/>
-                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="36"/>
+                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="36"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -408,7 +411,7 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人生是一場兵荒馬亂，你是我的劫後餘生。" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0Z-Ov-Dk5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="258.66666666666669"/>
-                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="32"/>
+                                                                <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="32"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -573,8 +576,8 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="調調設定啦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-kL-OCS">
-                                        <rect key="frame" x="137" y="8.3333333333333375" width="140" height="27.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="28"/>
+                                        <rect key="frame" x="137" y="5.6666666666666643" width="140" height="32.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="28"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -895,13 +898,13 @@
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇背景顏色" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy8-Mh-nVr">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
-                                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="36"/>
+                                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="36"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="（之後也可以改啦）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j35-Ca-OCM">
                                                                                 <rect key="frame" x="0.0" y="30" width="374" height="130"/>
-                                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="14"/>
+                                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="14"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -1141,7 +1144,7 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開啟通知可以第一時間收到最新句子" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
-                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="24"/>
+                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1154,7 +1157,7 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-Ya-8lD">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="35"/>
                                                                                 <color key="backgroundColor" red="0.7568050623" green="0.74128681419999998" blue="0.73333191870000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="36"/>
+                                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="36"/>
                                                                                 <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <state key="normal" title="拒絕"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -1173,7 +1176,7 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-RL-PdC">
                                                                                 <rect key="frame" x="212" y="0.0" width="106" height="35"/>
                                                                                 <color key="backgroundColor" red="0.7568050623" green="0.74128681419999998" blue="0.73333191870000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="36"/>
+                                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="36"/>
                                                                                 <color key="tintColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <state key="normal" title="開啟"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -1419,7 +1422,7 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QA-KT-nGc">
                                                         <rect key="frame" x="16" y="150" width="350" height="150"/>
-                                                        <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="24"/>
+                                                        <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1511,8 +1514,8 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-8z-dal">
-                                                                <rect key="frame" x="93" y="8.3333333333333304" width="196" height="27.666666666666671"/>
-                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="28"/>
+                                                                <rect key="frame" x="93" y="5.6666666666666714" width="196" height="32.666666666666664"/>
+                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="28"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>

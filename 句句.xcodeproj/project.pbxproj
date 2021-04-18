@@ -72,6 +72,8 @@
 		B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */; };
 		B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */; };
 		B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59E21C125676F85003A5521 /* GoogleService-Info.plist */; };
+		B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5A32A24262C1F590057454E /* I-PenCrane-B-2.ttf */; };
+		B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5A32A24262C1F590057454E /* I-PenCrane-B-2.ttf */; };
 		B5AF873A2571209C008A3BBC /* videoTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF87392571209C008A3BBC /* videoTutorialViewController.swift */; };
 		B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */; };
 		B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */; };
@@ -195,6 +197,7 @@
 		B59E216B25675F8F003A5521 /* widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetExtension.entitlements; sourceTree = "<group>"; };
 		B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtention.swift; sourceTree = "<group>"; };
 		B59E21C125676F85003A5521 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B5A32A24262C1F590057454E /* I-PenCrane-B-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "I-PenCrane-B-2.ttf"; sourceTree = "<group>"; };
 		B5AF87392571209C008A3BBC /* videoTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoTutorialViewController.swift; sourceTree = "<group>"; };
 		B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_1ViewController.swift; sourceTree = "<group>"; };
 		B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_2ViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +326,7 @@
 		B5517C73255FAFC500E134CC /* 句句 */ = {
 			isa = PBXGroup;
 			children = (
+				B5A32A24262C1F590057454E /* I-PenCrane-B-2.ttf */,
 				B59E21C125676F85003A5521 /* GoogleService-Info.plist */,
 				B59E216625675E65003A5521 /* 句句.entitlements */,
 				B5517C74255FAFC500E134CC /* AppDelegate.swift */,
@@ -534,6 +538,7 @@
 				B54E7F462587000800F56C60 /* GoogleService-Info.plist in Resources */,
 				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
 				B50956AA256DED9B0075ACE9 /* SplashScreen_.png in Resources */,
+				B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
 				B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */,
@@ -564,6 +569,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
 				B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */,
