@@ -27,6 +27,7 @@ class ViewController: UIViewController, MessagingDelegate {
     @IBOutlet weak var backgroundHideenView: UIStackView!
     @IBOutlet weak var hiddenQuoteAdder: UILabel!
     @IBOutlet weak var stack_action_controller: UIStackView!
+    @IBOutlet weak var onboardingTouchIcon: UIImageView!
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         print("Firebase registration token: \(String(describing: fcmToken))")
@@ -115,8 +116,18 @@ class ViewController: UIViewController, MessagingDelegate {
     var defaultFlowerImage = UIImage(named: "noun_seeds_184642")
     var defaultFlowerImageName = "正在載入中"
     
+    @objc func flashImageActive(){
+        UIView.animate(withDuration: 0.7) {
+            self.onboardingTouchIcon.alpha = self.onboardingTouchIcon.alpha == 1.0 ? 0.0 : 1.0
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //onboardingTouchIcon.isHidden = true
+        self.onboardingTouchIcon.alpha = 0.0
+        Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willResignActiveNotification, object: nil)
@@ -404,3 +415,16 @@ extension UIView {
     }
 }
 
+
+extension UIImageView {
+        func flash(numberOfFlashes: Float) {
+           let flash = CABasicAnimation(keyPath: "opacity")
+           flash.duration = 0.2
+           flash.fromValue = 1
+           flash.toValue = 0.1
+           flash.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+           flash.autoreverses = true
+           flash.repeatCount = numberOfFlashes
+           layer.add(flash, forKey: nil)
+       }
+ }

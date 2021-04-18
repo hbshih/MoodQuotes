@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Co0-l8-F4A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -408,7 +408,7 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人生是一場兵荒馬亂，你是我的劫後餘生。" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0Z-Ov-Dk5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="258.66666666666669"/>
-                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="36"/>
+                                                                <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="32"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -470,11 +470,20 @@
                                     <constraint firstItem="kgV-82-bvE" firstAttribute="top" secondItem="mFK-is-lcH" secondAttribute="top" id="xig-Qo-V43"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_touch" translatesAutoresizingMaskIntoConstraints="NO" id="Bzx-W5-zIZ">
+                                <rect key="frame" x="207" y="503" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="miO-Ps-jFC"/>
+                                    <constraint firstAttribute="width" constant="100" id="ztO-fK-3Vi"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.93717068429999995" green="0.91389209029999996" blue="0.90195858480000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="mFK-is-lcH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="17P-zB-E6P"/>
+                            <constraint firstItem="Bzx-W5-zIZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="50" id="4j5-PO-Yfl"/>
+                            <constraint firstItem="Bzx-W5-zIZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="100" id="H8y-zD-UBS"/>
                             <constraint firstItem="mFK-is-lcH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MOr-ig-ose"/>
                             <constraint firstAttribute="bottom" secondItem="mFK-is-lcH" secondAttribute="bottom" id="V7o-xM-g3j"/>
                             <constraint firstItem="mFK-is-lcH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gbf-0F-vR6"/>
@@ -492,6 +501,7 @@
                         <outlet property="hiddenQuote" destination="X0Z-Ov-Dk5" id="XOc-Vy-Yhg"/>
                         <outlet property="hiddenQuoteAdder" destination="Y8l-8V-78E" id="WbO-N4-bfx"/>
                         <outlet property="nameOfFlower" destination="zGM-a8-dbm" id="qkP-7s-0G0"/>
+                        <outlet property="onboardingTouchIcon" destination="Bzx-W5-zIZ" id="grl-na-vFh"/>
                         <outlet property="screenView" destination="mFK-is-lcH" id="9XO-5a-BZH"/>
                         <outlet property="stack_action_controller" destination="1Au-7f-1Ra" id="B2e-1K-LAn"/>
                         <segue destination="Krk-l6-7pi" kind="presentation" identifier="firstTimeSettingSegue" modalPresentationStyle="fullScreen" id="SFC-mq-IwF"/>
@@ -1701,6 +1711,7 @@ App們將會開始抖動。</string>
         <image name="icon_back" width="48" height="48"/>
         <image name="icon_setting" width="40" height="40"/>
         <image name="icon_share" width="37" height="37"/>
+        <image name="icon_touch" width="100" height="100"/>
         <image name="noun_Save_2209758 1" width="35" height="35"/>
         <image name="noun_Share_1058858 (2) 1" width="35" height="35"/>
         <image name="noun_instagram_3350460 (1) 1" width="30" height="30"/>
