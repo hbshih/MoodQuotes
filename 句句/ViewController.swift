@@ -28,6 +28,7 @@ class ViewController: UIViewController, MessagingDelegate {
     @IBOutlet weak var hiddenQuoteAdder: UILabel!
     @IBOutlet weak var stack_action_controller: UIStackView!
     @IBOutlet weak var onboardingTouchIcon: UIImageView!
+    @IBOutlet weak var todayDateLabel: UILabel!
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         print("Firebase registration token: \(String(describing: fcmToken))")
@@ -37,8 +38,18 @@ class ViewController: UIViewController, MessagingDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touched")
-        performSegue(withIdentifier: "firstTimeSettingSegue", sender: nil)
+        
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet") != nil
+        {
+        
+        }else
+        {
+            print("touched")
+            onboardingTouchIcon.isHidden = true
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet")
+            performSegue(withIdentifier: "firstTimeSettingSegue", sender: nil)
+            
+        }
     }
     
     
@@ -125,15 +136,17 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for fontFamily in UIFont.familyNames {
-            for fontName in UIFont.fontNames(forFamilyName: fontFamily) {
-                print("\(fontName)")
-            }
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet") != nil
+        {
+            self.onboardingTouchIcon.alpha = 0.0
+            self.onboardingTouchIcon.isHidden = true
+            // Existing User
+        } else
+        {
+            // New User
+            self.onboardingTouchIcon.alpha = 0.0
+            Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)
         }
-        
-        //onboardingTouchIcon.isHidden = true
-        self.onboardingTouchIcon.alpha = 0.0
-        Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willResignActiveNotification, object: nil)
@@ -160,7 +173,7 @@ class ViewController: UIViewController, MessagingDelegate {
         hiddenAuthorName.font = font
        // ref = Database.database().reference()
         
-        
+        todayDateLabel.text = Date().getTodayDate
         frontQuote.text = defaultQuote
         authorName.text = defaultAuthor
         ImageOfFlower.setImage(defaultFlowerImage!)
@@ -238,8 +251,16 @@ class ViewController: UIViewController, MessagingDelegate {
 
                 // Load the image using SDWebImage
                 self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
-                    flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                    if error != nil
+                    {
+                        print("unable to load new image \(error)")
+                        flowerHandler().storeImage(image: UIImage(named: "default_flower")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                    }else
+                    {
+                        flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                    }
                 }
                 self.nameOfFlower.text = name
             }

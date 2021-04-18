@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u8y-ga-YrT">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -84,9 +84,10 @@
                                                         <rect key="frame" x="16" y="199" width="382" height="200"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM1-I5-pyA">
-                                                                <rect key="frame" x="16" y="0.0" width="350" height="112.66666666666667"/>
-                                                                <string key="text">先來調整設定吧！
-選擇每日想要更新句子的時間</string>
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="112.66666666666667"/>
+                                                                <string key="text">先來客製你的句句吧！
+
+選擇每日句子更新的時間</string>
                                                                 <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -129,8 +130,8 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="5qE-yj-g9W"/>
-                                                            <constraint firstAttribute="trailing" secondItem="uM1-I5-pyA" secondAttribute="trailing" constant="16" id="J3w-Wl-Eb5"/>
-                                                            <constraint firstItem="uM1-I5-pyA" firstAttribute="leading" secondItem="Qoo-5U-Tjv" secondAttribute="leading" constant="16" id="NNZ-Qc-IVW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="uM1-I5-pyA" secondAttribute="trailing" id="J3w-Wl-Eb5"/>
+                                                            <constraint firstItem="uM1-I5-pyA" firstAttribute="leading" secondItem="Qoo-5U-Tjv" secondAttribute="leading" id="NNZ-Qc-IVW"/>
                                                             <constraint firstAttribute="bottom" secondItem="poJ-EG-VSE" secondAttribute="bottom" id="OjH-T6-yh3"/>
                                                             <constraint firstItem="poJ-EG-VSE" firstAttribute="leading" secondItem="Qoo-5U-Tjv" secondAttribute="leading" id="aEu-8G-jiu"/>
                                                             <constraint firstAttribute="trailing" secondItem="poJ-EG-VSE" secondAttribute="trailing" id="vbl-3m-eeS"/>
@@ -249,23 +250,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5TO-Ig-amh">
-                                        <rect key="frame" x="0.0" y="480" width="414" height="400"/>
+                                        <rect key="frame" x="0.0" y="40" width="414" height="840"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgw-FN-6YY">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-Mq-DgV">
-                                                        <rect key="frame" x="178.66666666666666" y="5" width="57" height="70.333333333333329"/>
-                                                    </imageView>
-                                                </subviews>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="xOS-Mq-DgV" firstAttribute="centerX" secondItem="hgw-FN-6YY" secondAttribute="centerX" id="Jnw-HO-niY"/>
-                                                    <constraint firstItem="xOS-Mq-DgV" firstAttribute="centerY" secondItem="hgw-FN-6YY" secondAttribute="centerY" id="xKT-3t-rfi"/>
-                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BV5-jq-qJv">
-                                                <rect key="frame" x="0.0" y="80" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="42" width="414" height="100"/>
                                                 <subviews>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mX6-BM-Jzw">
                                                         <rect key="frame" x="59" y="14" width="296" height="100"/>
@@ -310,19 +302,19 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDV-Nz-3He">
-                                                <rect key="frame" x="0.0" y="180" width="414" height="160"/>
+                                                <rect key="frame" x="0.0" y="142" width="414" height="572"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Wg-gp-si8">
-                                                        <rect key="frame" x="16" y="0.0" width="382" height="160"/>
+                                                        <rect key="frame" x="16" y="0.0" width="382" height="572"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人生是一場兵荒馬亂，你是我的劫後餘生。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-MP-j3O">
-                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="120"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="532"/>
                                                                 <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="36"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzE-5V-zvv">
-                                                                <rect key="frame" x="0.0" y="120" width="382" height="40"/>
+                                                                <rect key="frame" x="0.0" y="532" width="382" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="kzE-H1-iAJ"/>
                                                                 </constraints>
@@ -331,9 +323,6 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="nzE-5V-zvv" firstAttribute="height" secondItem="9Wg-gp-si8" secondAttribute="height" multiplier="0.25" id="sHS-oY-nkA"/>
-                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -345,10 +334,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvF-DK-zMc">
-                                                <rect key="frame" x="0.0" y="340" width="414" height="60"/>
+                                                <rect key="frame" x="0.0" y="714" width="414" height="126"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="1Au-7f-1Ra">
-                                                        <rect key="frame" x="0.0" y="-20" width="414" height="100"/>
+                                                        <rect key="frame" x="0.0" y="13" width="414" height="100"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57U-8w-bea">
                                                                 <rect key="frame" x="0.0" y="31.666666666666629" width="184.66666666666666" height="37"/>
@@ -382,7 +371,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="bvF-DK-zMc" firstAttribute="height" secondItem="5TO-Ig-amh" secondAttribute="height" multiplier="0.15" id="lBE-KL-ijN"/>
-                                            <constraint firstItem="hgw-FN-6YY" firstAttribute="height" secondItem="5TO-Ig-amh" secondAttribute="height" multiplier="0.2" id="ywh-bU-4Gh"/>
+                                            <constraint firstItem="hgw-FN-6YY" firstAttribute="height" secondItem="5TO-Ig-amh" secondAttribute="height" multiplier="0.05" id="ywh-bU-4Gh"/>
                                         </constraints>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kgV-82-bvE">
@@ -509,6 +498,7 @@
                         <outlet property="onboardingTouchIcon" destination="Bzx-W5-zIZ" id="grl-na-vFh"/>
                         <outlet property="screenView" destination="mFK-is-lcH" id="9XO-5a-BZH"/>
                         <outlet property="stack_action_controller" destination="1Au-7f-1Ra" id="B2e-1K-LAn"/>
+                        <outlet property="todayDateLabel" destination="pcO-Lc-4ct" id="MwI-tn-mr3"/>
                         <segue destination="Krk-l6-7pi" kind="presentation" identifier="firstTimeSettingSegue" modalPresentationStyle="fullScreen" id="SFC-mq-IwF"/>
                     </connections>
                 </viewController>
@@ -1397,14 +1387,14 @@
             <objects>
                 <viewController id="Co0-l8-F4A" customClass="OnboardingStoryViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lh8-FB-PNB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqR-dP-uzr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="cB3-ij-gdY">
-                                        <rect key="frame" x="16" y="271" width="382" height="300"/>
+                                        <rect key="frame" x="16" y="298" width="382" height="300"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5bj-L8-faE">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="300"/>
@@ -1456,7 +1446,7 @@
                             <constraint firstItem="pqR-dP-uzr" firstAttribute="trailing" secondItem="BOt-ob-br3" secondAttribute="trailing" id="jBv-4T-wuh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JVl-Gn-YIz"/>
+                    <navigationItem key="navigationItem" id="5Dl-4B-swF"/>
                     <connections>
                         <outlet property="backgroundView" destination="pqR-dP-uzr" id="tPc-UN-JLA"/>
                         <outlet property="explationMessage" destination="1QA-KT-nGc" id="cZO-gd-dFg"/>
@@ -1475,19 +1465,30 @@
                     <view key="view" contentMode="scaleToFill" id="AuG-zW-xiT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen_.png" translatesAutoresizingMaskIntoConstraints="NO" id="wIJ-sR-hWA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ftV-m0-4wb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wIJ-sR-hWA" secondAttribute="bottom" id="10U-WZ-oNy"/>
+                            <constraint firstItem="wIJ-sR-hWA" firstAttribute="top" secondItem="AuG-zW-xiT" secondAttribute="top" id="Ak4-bH-hOk"/>
+                            <constraint firstItem="wIJ-sR-hWA" firstAttribute="leading" secondItem="ftV-m0-4wb" secondAttribute="leading" id="iul-YV-Bma"/>
+                            <constraint firstItem="wIJ-sR-hWA" firstAttribute="trailing" secondItem="ftV-m0-4wb" secondAttribute="trailing" id="j0g-a1-LJk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nwh-Ml-hTt"/>
                     <connections>
                         <segue destination="875-bS-vea" kind="show" identifier="onboardingSegue" id="9CO-rk-QmR"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="homeSegue" id="htk-Qi-2dc"/>
-                        <segue destination="Co0-l8-F4A" kind="show" identifier="onboardSegue" id="KId-aa-FVe"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="homeSegue" modalPresentationStyle="fullScreen" id="htk-Qi-2dc"/>
+                        <segue destination="Co0-l8-F4A" kind="presentation" identifier="onboardSegue" modalPresentationStyle="fullScreen" id="mTw-Mw-H14"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxo-Pz-jCN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5561" y="-1406"/>
+            <point key="canvasLocation" x="-6414.4927536231889" y="-1826.1160714285713"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="jLN-jQ-4yw">
@@ -1512,7 +1513,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-8z-dal">
                                                                 <rect key="frame" x="93" y="8" width="196" height="28"/>
                                                                 <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="28"/>
-                                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ5-C5-c7B">
@@ -1542,6 +1543,7 @@
                                                         <string key="text">1. 回到主頁面後，選個空白的地方長按。
 App們將會開始抖動。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 1" translatesAutoresizingMaskIntoConstraints="NO" id="bpK-XX-bzw">
@@ -1555,6 +1557,7 @@ App們將會開始抖動。</string>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 點選螢幕左上角的 + 字" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnA-0d-Vru">
                                                         <rect key="frame" x="0.0" y="315.33333333333331" width="382" height="19.333333333333314"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 2" translatesAutoresizingMaskIntoConstraints="NO" id="559-20-7I7">
@@ -1570,6 +1573,7 @@ App們將會開始抖動。</string>
                                                         <string key="text">3. 在搜尋的地方搜尋「句句」，
 並點選句句。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 3" translatesAutoresizingMaskIntoConstraints="NO" id="07a-VG-8qF">
@@ -1583,6 +1587,7 @@ App們將會開始抖動。</string>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. 選擇適當的小工具大小後，點選「加入小工具」。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V3-aE-aCo">
                                                         <rect key="frame" x="0.0" y="766" width="382" height="19.333333333333371"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 4" translatesAutoresizingMaskIntoConstraints="NO" id="3zW-xf-dtR">
@@ -1598,6 +1603,7 @@ App們將會開始抖動。</string>
                                                         <string key="text">5. 您可以隨意拖動小工具到任何位置，
 完成後請點選右上方「完成」。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 5" translatesAutoresizingMaskIntoConstraints="NO" id="R87-mN-qAL">
@@ -1636,7 +1642,7 @@ App們將會開始抖動。</string>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ0-Mf-bhi">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
-                                                <state key="normal" title="完成">
+                                                <state key="normal" title="我會安裝小工具">
                                                     <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
@@ -1692,12 +1698,13 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="7fH-0S-a6S"/>
-        <segue reference="hS7-Sl-5ah"/>
-        <segue reference="1Hd-WS-sjP"/>
+        <segue reference="ly3-Ze-ofX"/>
+        <segue reference="htk-Qi-2dc"/>
         <segue reference="9CO-rk-QmR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_App" width="57" height="70.333335876464844"/>
+        <image name="SplashScreen_.png" width="375" height="812"/>
         <image name="Tutorial_Step 1" width="313" height="137"/>
         <image name="Tutorial_Step 2" width="313" height="133"/>
         <image name="Tutorial_Step 3" width="313" height="132"/>

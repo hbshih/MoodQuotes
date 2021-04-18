@@ -16,19 +16,24 @@ class OnboardingStoryViewController: UIViewController {
     @IBOutlet weak var explationMessage: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        backgroundView.backgroundColor = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)
-        // Do any additional setup after loading the view.
         
+       // imageView.alpha = 0.0
+            
+        backgroundView.backgroundColor = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)  
         self.imageView.alpha = 0.0
         self.explationMessage.alpha = 0.0
         
+    
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 2.0, delay: 0.5, options: .curveLinear) {
            // imageView.image = UIImage(named: "icon_gesture")
             self.explationMessage.text = "嗨，\n從今天起，你每天將會得到一種植物和一句溫暖的生活語錄。"
             self.explationMessage.alpha = 1.0
         } completion: { (true) in
-            UIView.animate(withDuration: 0.5, delay: 4.0) {
+            UIView.animate(withDuration: 0.5, delay: 2.0) {
                 self.explationMessage.alpha = 0.0
             } completion: { (true) in
                 UIView.animate(withDuration: 3.0) {
@@ -54,7 +59,7 @@ class OnboardingStoryViewController: UIViewController {
             self.imageView.transform = self.imageView.transform.rotated(by: -(.pi/6))
         }
 
-        let default_color = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)
+        let default_color = UIColor(red: 239/255, green: 216/255, blue: 216/255, alpha: 1.0)
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: default_color, forKey: "BackgroundColor")
         
         if #available(iOS 14.0, *)
@@ -65,8 +70,6 @@ class OnboardingStoryViewController: UIViewController {
         
     }
     
-    
-    
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
         imageView.layer.removeAllAnimations()
@@ -74,7 +77,7 @@ class OnboardingStoryViewController: UIViewController {
         if motion == .motionShake
         {
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-            UIView.animate(withDuration: 0.5, delay: 1.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0.1, options: UIView.AnimationOptions.curveEaseIn, animations: {
                 self.imageView.alpha = 0.0
                 self.explationMessage.alpha = 0.0
             
@@ -86,7 +89,7 @@ class OnboardingStoryViewController: UIViewController {
                     self.imageView.alpha = 1.0
                 }) { (true) in
                     UIView.animate(withDuration: 0.5, delay: 2.0, options: UIView.AnimationOptions.curveEaseIn) {
-                        self.explationMessage.text = "這是屬於您今日的盆栽，\n它想告訴您"
+                        self.explationMessage.text = "這是屬於您今日的植物，\n它想告訴您"
                         self.explationMessage.alpha = 1.0
                     } completion: { (true) in
                         sleep(4)
