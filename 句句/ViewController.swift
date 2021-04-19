@@ -189,6 +189,11 @@ class ViewController: UIViewController, MessagingDelegate {
         authorName.text = defaultAuthor
         ImageOfFlower.setImage(defaultFlowerImage!)
         nameOfFlower.text = defaultFlowerImageName
+        
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil
+        {
+            onboardingTouchIcon.image = UIImage(named: "icon_touch_tutorial")
+        }
         /*
         rubyLabel.text = "｜成功《せいこう》するかどうかは、きみの｜努力《どりょく》に｜係《かか》る。｜人々《ひとびと》の｜生死《せいし》に｜係《かか》る。"  //2
         //3
