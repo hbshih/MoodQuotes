@@ -7,7 +7,7 @@
 
 import UIKit
 import NotificationCenter
-import FirebaseAnalytics
+//import FirebaseAnalytics
 
 class NotificationTableViewCell: UITableViewCell {
 
@@ -39,7 +39,7 @@ class NotificationTableViewCell: UITableViewCell {
     }
     @IBAction func notificationToggled(_ sender: UISwitch) {
         
-        Analytics.logEvent("set_vc_adjust_noti", parameters: ["notification_on": "\(sender.isOn)"])
+        //Analytics.logEvent("set_vc_adjust_noti", parameters: ["notification_on": "\(sender.isOn)"])
         
         if sender.isOn
         {

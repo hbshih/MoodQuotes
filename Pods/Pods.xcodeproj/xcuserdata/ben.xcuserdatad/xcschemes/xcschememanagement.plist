@@ -54,22 +54,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Firebase-Analytics-Core-CoreOnly-Database-Storage.xcscheme</key>
+		<key>Firebase-CoreOnly-Database-Messaging-Storage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Firebase.default-CoreOnly-Database-Messaging-Storage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FirebaseAnalytics-iOS13.0.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FirebaseAnalytics-iOS14.0.xcscheme</key>
+		<key>Firebase-CoreOnly-Database-Storage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -104,12 +94,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FirebaseInstallations-iOS13.0.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FirebaseInstallations-iOS14.0.xcscheme</key>
+		<key>FirebaseInstallations.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -154,21 +139,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GoogleAnalytics.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>GoogleAppMeasurement-iOS13.0.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>GoogleAppMeasurement-iOS14.0.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>GoogleDataTransport-iOS13.0.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -179,12 +149,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GoogleUtilities-iOS13.0.xcscheme</key>
+		<key>GoogleUtilities-54e75ca4.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GoogleUtilities-iOS14.0.xcscheme</key>
+		<key>GoogleUtilities-Environment-Logger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

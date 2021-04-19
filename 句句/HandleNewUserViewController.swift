@@ -25,7 +25,7 @@ class HandleNewUserViewController: UIViewController {
         }
         
         //check if have data before
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet") != nil &&  (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) != nil 
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet") != nil ||  (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) != nil 
         {
             print("old user")
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet")

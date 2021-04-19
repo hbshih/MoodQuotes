@@ -58,7 +58,10 @@ class ViewController: UIViewController, MessagingDelegate {
         print("enter foreground now")
        // your code
         //If no quote saved in local & time now >= update time
-        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) != nil || SyncAppQuotes().checkIfUpdate()
+        
+        print("check if update: \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) + \(SyncAppQuotes().checkIfUpdate())")
+        
+        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
         {
             print("loading new screen")
             // Get From API
@@ -346,7 +349,7 @@ class ViewController: UIViewController, MessagingDelegate {
             if let VC = segue.destination as? ShareViewController
             {
                 
-                Analytics.logEvent("home_vc_share_tapped", parameters: ["Quote": frontQuote.text, "Author": authorName.text])
+               // Analytics.logEvent("home_vc_share_tapped", parameters: ["Quote": frontQuote.text, "Author": authorName.text])
                 
                 
                 
@@ -378,7 +381,7 @@ class ViewController: UIViewController, MessagingDelegate {
             }
         }else
         {
-            Analytics.logEvent("home_vc_settings_tapped", parameters: nil)
+           // Analytics.logEvent("home_vc_settings_tapped", parameters: nil)
         }
     }
     

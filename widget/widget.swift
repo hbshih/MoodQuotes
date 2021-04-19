@@ -22,7 +22,7 @@ struct Provider: TimelineProvider{
     
     func getSnapshot(in context: Context, completion: @escaping (QuoteEntry) -> Void) {
         
-        Analytics.logEvent("widget_got_installed", parameters: nil)
+      //  Analytics.logEvent("widget_got_installed", parameters: nil)
         
         print("Widget got loaded")
         let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "活在當下 不求永生\n活得狂野 擁抱生命", author: "拉娜·德芮"), flowerImage: UIImage(named: "default_flower")!, flowerName: "滿天星"))

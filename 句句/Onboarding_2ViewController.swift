@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FirebaseAnalytics
+//import FirebaseAnalytics
 
 class Onboarding_2ViewController: UIViewController {
 
@@ -26,7 +26,7 @@ class Onboarding_2ViewController: UIViewController {
     }
     @IBAction func skip(_ sender: Any) {
         
-        Analytics.logEvent("onboarding_2_skip_tapped", parameters: nil)
+        //Analytics.logEvent("onboarding_2_skip_tapped", parameters: nil)
         
         if backgroundView.backgroundColor != .systemBackground
         {
@@ -39,7 +39,7 @@ class Onboarding_2ViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        Analytics.logEvent("onboarding_2_color_selected", parameters: ["color": "\(backgroundView.backgroundColor)"])
+        //  Analytics.logEvent("onboarding_2_color_selected", parameters: ["color": "\(backgroundView.backgroundColor)"])
     }
     
 }

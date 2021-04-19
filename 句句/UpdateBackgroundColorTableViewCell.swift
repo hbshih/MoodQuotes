@@ -8,7 +8,7 @@
 import UIKit
 import PopupDialog
 import WidgetKit
-import FirebaseAnalytics
+//import FirebaseAnalytics
 
 class UpdateBackgroundColorTableViewCell: UITableViewCell {
     override func awakeFromNib() {
@@ -43,7 +43,7 @@ class UpdateBackgroundColorTableViewCell: UITableViewCell {
             let defaults = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!
             defaults.setColor(color: ratingVC.exampleBackground.backgroundColor, forKey: "BackgroundColor")
             
-            Analytics.logEvent("set_vc_update_color", parameters: ["updated_color": "\(ratingVC.exampleBackground.backgroundColor)"])
+            //Analytics.logEvent("set_vc_update_color", parameters: ["updated_color": "\(ratingVC.exampleBackground.backgroundColor)"])
             
             print("reload color")
             if let vc = UIApplication.topViewController() as? SettingViewController
