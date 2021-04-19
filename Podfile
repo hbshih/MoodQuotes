@@ -24,6 +24,7 @@ target '句句' do
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
   pod 'SDWebImageSwiftUI'
+  pod 'GoogleUtilities'
   
 
   target '句句Tests' do
@@ -46,5 +47,6 @@ target 'widgetExtension' do
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
   pod 'SDWebImageSwiftUI'
+  pod 'GoogleUtilities' 
   
 end
