@@ -39,15 +39,21 @@ class ViewController: UIViewController, MessagingDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet") != nil
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
         {
         
         }else
         {
             print("touched")
             onboardingTouchIcon.isHidden = true
-            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet")
-            performSegue(withIdentifier: "firstTimeSettingSegue", sender: nil)
+            if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil
+            {
+                // existing users
+                performSegue(withIdentifier: "showTutorialSegue", sender: nil)
+            }else
+            {
+                performSegue(withIdentifier: "firstTimeSettingSegue", sender: nil)
+            }
             
         }
     }
@@ -59,9 +65,9 @@ class ViewController: UIViewController, MessagingDelegate {
        // your code
         //If no quote saved in local & time now >= update time
         
-        print("check if update: \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) + \(SyncAppQuotes().checkIfUpdate())")
+        print("check if update: \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) + \(SyncAppQuotes().checkIfUpdate()) + \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0")) + \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn"))")
         
-        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
+        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate() || UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") == nil
         {
             print("loading new screen")
             // Get From API
@@ -136,10 +142,12 @@ class ViewController: UIViewController, MessagingDelegate {
         }
     }
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet") != nil
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
         {
             self.onboardingTouchIcon.alpha = 0.0
             self.onboardingTouchIcon.isHidden = true
@@ -379,9 +387,15 @@ class ViewController: UIViewController, MessagingDelegate {
                 
                 //  VC.screenshotPreview.image = UIImage(named: "icon_notification")
             }
+        }else if segue.identifier == "showTutorialSegue"
+        {
+            if let VC = segue.destination as? TutorialViewController
+            {
+                VC.navigateToHomeAfterDismiss = true
+            }
         }else
         {
-           // Analytics.logEvent("home_vc_settings_tapped", parameters: nil)
+            
         }
     }
     

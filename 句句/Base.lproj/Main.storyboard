@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u8y-ga-YrT">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -500,6 +499,7 @@
                         <outlet property="stack_action_controller" destination="1Au-7f-1Ra" id="B2e-1K-LAn"/>
                         <outlet property="todayDateLabel" destination="pcO-Lc-4ct" id="MwI-tn-mr3"/>
                         <segue destination="Krk-l6-7pi" kind="presentation" identifier="firstTimeSettingSegue" modalPresentationStyle="fullScreen" id="SFC-mq-IwF"/>
+                        <segue destination="vyl-c7-Mf0" kind="show" identifier="showTutorialSegue" id="pIM-gP-oXb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1495,11 +1495,11 @@
             <objects>
                 <viewController id="vyl-c7-Mf0" customClass="TutorialViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owX-6V-3AJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1446"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtw-l1-1Wq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1412"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-Np-Gnd">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1433.6666666666667"/>
@@ -1599,7 +1599,7 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYx-71-sSi">
-                                                        <rect key="frame" x="0.0" y="977.33333333333326" width="382" height="38.333333333333371"/>
+                                                        <rect key="frame" x="0.0" y="977.33333333333337" width="382" height="38.333333333333371"/>
                                                         <string key="text">5. 您可以隨意拖動小工具到任何位置，
 完成後請點選右上方「完成」。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -1635,7 +1635,7 @@ App們將會開始抖動。</string>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eA-ph-1Nd">
-                                <rect key="frame" x="16" y="1390" width="382" height="44"/>
+                                <rect key="frame" x="16" y="1336" width="382" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IzG-dl-Gov">
                                         <rect key="frame" x="131" y="0.0" width="120" height="44"/>
@@ -1686,6 +1686,7 @@ App們將會開始抖動。</string>
                             <constraint firstItem="KUe-mD-XgQ" firstAttribute="bottom" secondItem="8eA-ph-1Nd" secondAttribute="bottom" constant="32" id="ySs-nD-ROI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="MiC-TX-9Mb"/>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="homepageSegue" modalPresentationStyle="fullScreen" id="1Hd-WS-sjP"/>
@@ -1697,7 +1698,7 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7fH-0S-a6S"/>
+        <segue reference="pIM-gP-oXb"/>
         <segue reference="ly3-Ze-ofX"/>
         <segue reference="htk-Qi-2dc"/>
         <segue reference="9CO-rk-QmR"/>

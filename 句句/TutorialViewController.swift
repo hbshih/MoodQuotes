@@ -19,9 +19,12 @@ class TutorialViewController: UIViewController {
     
     @IBAction func closePopUp(_ sender: Any) {
         
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet_Ver 3.0")
+        
         if navigateToHomeAfterDismiss
         {
             self.performSegue(withIdentifier: "homepageSegue", sender: nil)
+           // navigationController?.popViewController(animated: true)
         }
         else
         {

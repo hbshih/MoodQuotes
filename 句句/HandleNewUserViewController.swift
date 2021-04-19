@@ -25,10 +25,10 @@ class HandleNewUserViewController: UIViewController {
         }
         
         //check if have data before
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet") != nil ||  (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) != nil 
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil ||  (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) != nil
         {
             print("old user")
-            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet")
+          //  UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet_Ver 3.0")
             performSegue(withIdentifier: "homeSegue", sender: nil)
             
         }else
@@ -42,6 +42,8 @@ class HandleNewUserViewController: UIViewController {
         var bundleInfo = Bundle.main.infoDictionary!
         if let currentVersion = bundleInfo["CFBundleShortVersionString"] as? String {
             let userDefaults = UserDefaults.standard
+            
+            print("current version \(currentVersion)")
 
             if userDefaults.string(forKey: "currentVersion") == (currentVersion) {
                 return false
