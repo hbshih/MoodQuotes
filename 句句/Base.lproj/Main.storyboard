@@ -515,7 +515,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uJy-iA-6sN">
-                                <rect key="frame" x="0.0" y="88" width="414" height="335"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="474"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BVm-5Q-WTU">
@@ -549,26 +549,11 @@
                                     <outlet property="delegate" destination="3gg-VR-CeA" id="h1G-hf-bpP"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShK-fU-n2U">
-                                <rect key="frame" x="16" y="439" width="382" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="aIn-NT-5LB"/>
-                                </constraints>
-                                <string key="text">小工具安裝教學（須更新至iOS 14）
-
-1. 回到桌面，在主畫面上，觸碰並按住小工具或空白區域，直到 App 開始晃動。 
-2. 點一下上方的 [+] 按鈕。 
-3. 找到句句。 
-4. 點一下「完成」。</string>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYL-ak-AnI">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="調調設定啦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-kL-OCS">
-                                        <rect key="frame" x="137" y="8" width="140" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-kL-OCS">
+                                        <rect key="frame" x="179" y="8" width="56" height="28"/>
                                         <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="28"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -619,15 +604,12 @@
                         <constraints>
                             <constraint firstItem="5Gy-5Y-Dix" firstAttribute="bottom" secondItem="RE0-8a-AwB" secondAttribute="bottom" constant="20" id="BZK-UX-Dy3"/>
                             <constraint firstItem="fYL-ak-AnI" firstAttribute="trailing" secondItem="5Gy-5Y-Dix" secondAttribute="trailing" id="CBI-82-yze"/>
-                            <constraint firstItem="ShK-fU-n2U" firstAttribute="leading" secondItem="5Gy-5Y-Dix" secondAttribute="leading" constant="16" id="Jam-je-2ps"/>
                             <constraint firstItem="uJy-iA-6sN" firstAttribute="leading" secondItem="5Gy-5Y-Dix" secondAttribute="leading" id="SnU-yk-YrZ"/>
-                            <constraint firstItem="5Gy-5Y-Dix" firstAttribute="trailing" secondItem="ShK-fU-n2U" secondAttribute="trailing" constant="16" id="VDf-P9-E88"/>
                             <constraint firstItem="5Gy-5Y-Dix" firstAttribute="top" secondItem="fYL-ak-AnI" secondAttribute="top" id="VkU-UI-KLj"/>
                             <constraint firstItem="uJy-iA-6sN" firstAttribute="trailing" secondItem="5Gy-5Y-Dix" secondAttribute="trailing" id="WLe-I5-RVN"/>
                             <constraint firstItem="RE0-8a-AwB" firstAttribute="leading" secondItem="5Gy-5Y-Dix" secondAttribute="leading" constant="16" id="YUB-iO-40C"/>
-                            <constraint firstItem="ShK-fU-n2U" firstAttribute="top" secondItem="uJy-iA-6sN" secondAttribute="bottom" constant="16" id="ZcU-WJ-tts"/>
                             <constraint firstItem="5Gy-5Y-Dix" firstAttribute="trailing" secondItem="RE0-8a-AwB" secondAttribute="trailing" constant="16" id="iZ2-he-J4n"/>
-                            <constraint firstItem="5Gy-5Y-Dix" firstAttribute="bottom" secondItem="uJy-iA-6sN" secondAttribute="bottom" constant="439" id="j4h-He-sTn"/>
+                            <constraint firstItem="5Gy-5Y-Dix" firstAttribute="bottom" secondItem="uJy-iA-6sN" secondAttribute="bottom" constant="300" id="j4h-He-sTn"/>
                             <constraint firstItem="fYL-ak-AnI" firstAttribute="leading" secondItem="5Gy-5Y-Dix" secondAttribute="leading" id="kzd-Dv-Mij"/>
                             <constraint firstItem="uJy-iA-6sN" firstAttribute="top" secondItem="fYL-ak-AnI" secondAttribute="bottom" id="u5O-zR-fhA"/>
                         </constraints>
@@ -1466,7 +1448,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen_.png" translatesAutoresizingMaskIntoConstraints="NO" id="wIJ-sR-hWA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen_.png" translatesAutoresizingMaskIntoConstraints="NO" id="wIJ-sR-hWA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
@@ -1698,9 +1680,9 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pIM-gP-oXb"/>
+        <segue reference="Uxh-iH-9fq"/>
         <segue reference="ly3-Ze-ofX"/>
-        <segue reference="l2z-i9-8zM"/>
+        <segue reference="htk-Qi-2dc"/>
         <segue reference="9CO-rk-QmR"/>
     </inferredMetricsTieBreakers>
     <resources>
