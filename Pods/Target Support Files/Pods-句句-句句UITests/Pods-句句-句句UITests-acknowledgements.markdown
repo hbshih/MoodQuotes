@@ -2271,6 +2271,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
    limitations under the License.
 
 
+## GoogleAnalytics
+
+Copyright 2016 Google
+
 ## GoogleDataTransport
 
 

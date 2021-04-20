@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class HandleNewUserViewController: UIViewController {
 
@@ -30,11 +31,13 @@ class HandleNewUserViewController: UIViewController {
             print("old user")
           //  UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet_Ver 3.0")
             performSegue(withIdentifier: "homeSegue", sender: nil)
+            Analytics.logEvent("handleNewUser_VC_old_user", parameters: nil)
             
         }else
         {
             print("new user")
             performSegue(withIdentifier: "onboardSegue", sender: nil)
+            Analytics.logEvent("handleNewUser_VC_new_user", parameters: nil)
         }
     }
     

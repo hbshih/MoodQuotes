@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 import WidgetKit
+import FirebaseAnalytics
 
 class OnboardingStoryViewController: UIViewController {
 

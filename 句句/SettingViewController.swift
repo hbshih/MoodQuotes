@@ -9,7 +9,7 @@ import UIKit
 import DateTimePicker
 import BLTNBoard
 //import CustomBulletins
-//import FirebaseAnalytics
+import FirebaseAnalytics
 
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -77,7 +77,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func tutorialVideoTapped(_ sender: Any) {
         
-        //  Analytics.logEvent("set_vc_how_to_install", parameters: nil)
+          Analytics.logEvent("set_vc_how_to_install", parameters: nil)
         
         /*
         if !isVideoOpen

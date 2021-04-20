@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import FirebaseAnalytics
+import FirebaseAnalytics
 
 class Onboarding_1ViewController: UIViewController {
 
@@ -56,12 +56,12 @@ class Onboarding_1ViewController: UIViewController {
             var dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "hh-mm"
             let date_today = dateFormatter.string(from: pickeriOS14.date)
-            //Analytics.logEvent("onboarding_1_saved_time", parameters: ["noti_time": "\(date_today)"])
+            Analytics.logEvent("onboarding_1_saved_time", parameters: ["noti_time": "\(date_today)"])
         } else {
             var dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "hh-mm"
             let date_today = dateFormatter.string(from: timePIcker.date)
-            //Analytics.logEvent("onboarding_1_saved_time", parameters: ["noti_time": "\(date_today)"])
+            Analytics.logEvent("onboarding_1_saved_time", parameters: ["noti_time": "\(date_today)"])
         }
         
         
@@ -71,12 +71,12 @@ class Onboarding_1ViewController: UIViewController {
     @IBAction func nextTapped(_ sender: Any) {
         
         
-        //Analytics.logEvent("onboarding_1_next_tapped", parameters: nil)
+        Analytics.logEvent("onboarding_1_next_tapped", parameters: nil)
         
         saveTime()
     }
     @IBAction func skipTapped(_ sender: Any) {
-        // Analytics.logEvent("onboarding_1_skip_tapped", parameters: nil)
+         Analytics.logEvent("onboarding_1_skip_tapped", parameters: nil)
         saveTime()
     }
     

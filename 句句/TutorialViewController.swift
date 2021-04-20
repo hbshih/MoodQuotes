@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class TutorialViewController: UIViewController {
     
@@ -18,6 +19,8 @@ class TutorialViewController: UIViewController {
     }
     
     @IBAction func closePopUp(_ sender: Any) {
+        
+        Analytics.logEvent("tutorial_VC_closed", parameters: nil)
         
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet_Ver 3.0")
         

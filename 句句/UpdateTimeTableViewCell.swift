@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import FirebaseAnalytics
+import FirebaseAnalytics
 
 class UpdateTimeTableViewCell: UITableViewCell {
 
@@ -53,7 +53,7 @@ class UpdateTimeTableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "hh-mm"
         let date_today = dateFormatter.string(from: sender.date)
         
-        // Analytics.logEvent("set_vc_update_time", parameters: ["updated_time": "\(date_today)"])
+        Analytics.logEvent("set_vc_update_time", parameters: ["updated_time": "\(date_today)"])
         
         
         // 更新時間
