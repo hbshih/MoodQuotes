@@ -27,7 +27,10 @@ class ShareViewController: UIViewController {
             screenshotPreview.image = UIImage(named: "icon_notification")
         }
         //StoreKit().requ
-        SKStoreReviewController.requestReview()
+      //  SKStoreReviewController.requestReview()
+        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: scene)
+        }
     }
 
     @IBAction func optionTapped(_ sender: UIButton) {

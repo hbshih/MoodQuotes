@@ -12,6 +12,8 @@ import Firebase
 import WidgetKit
 import FirebaseUI
 import CoreText
+import StoreKit
+import FirebaseAnalytics
 
 var global_quote: String = ""
 
@@ -147,6 +149,33 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // user open app count
+        if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
+        {
+            if counter != nil
+            {
+                //old user
+                print("counter is \(counter)")
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set((counter + 1), forKey: "open_app_count")
+                Analytics.logEvent("counter", parameters: ["counter": counter])
+                
+                if counter > 5
+                {
+                    Analytics.logEvent("requested_review", parameters: nil)
+                    if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                        SKStoreReviewController.requestReview(in: scene)
+                    }
+                }
+                
+            }else
+            {
+                //new user
+                print("counter is nil")
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(1, forKey: "open_app_count")
+            }
+        }
+        
+        
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
         {
             self.onboardingTouchIcon.alpha = 0.0
@@ -175,11 +204,11 @@ class ViewController: UIViewController, MessagingDelegate {
         }
         
         //UI
-        var font = Display_Font(font_size: 30).getUIFont()
+        var font = Display_Font(font_size: 24).getUIFont()
         hiddenQuote.font = font
         hiddenQuoteAdder.font = font
         frontQuote.font = font
-        font = Display_Font(font_size: 24).getUIFont()
+        font = Display_Font(font_size: 18).getUIFont()
         authorName.font = font
         hiddenAuthorName.font = font
        // ref = Database.database().reference()
@@ -362,7 +391,7 @@ class ViewController: UIViewController, MessagingDelegate {
             if let VC = segue.destination as? ShareViewController
             {
                 
-                Analytics.logEvent("home_vc_share_tapped", parameters: ["Quote": frontQuote.text, "Author": authorName.text])
+                Analytics.logEvent("home_vc_share_tapped", parameters: ["Quote": frontQuote.text as Any, "Author": authorName.text as Any])
                 
                 
                 
