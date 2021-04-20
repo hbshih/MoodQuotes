@@ -36,8 +36,10 @@ struct Provider: TimelineProvider{
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
         print("Widget Refreshing")
         
-        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
+        if SyncAppQuotes().checkIfUpdate()
             {
+            
+            
             
             DispatchQueue.main.async {
                 firebaseService().getQuoteApiResponse {(result) in
@@ -165,8 +167,8 @@ struct Provider: TimelineProvider{
                 print("Remain Local, the update time is \(notificationDate)")
             }
             print("load from local")
-            let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
-            let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
+            let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote") ?? "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星"
+            let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author") ?? "小王子"
             
             var FlowerImage: UIImage
             var FlowerName: String

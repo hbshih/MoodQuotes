@@ -1408,7 +1408,7 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QA-KT-nGc">
                                                         <rect key="frame" x="16" y="150" width="350" height="150"/>
-                                                        <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
+                                                        <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="20"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1700,7 +1700,7 @@ App們將會開始抖動。</string>
     <inferredMetricsTieBreakers>
         <segue reference="pIM-gP-oXb"/>
         <segue reference="ly3-Ze-ofX"/>
-        <segue reference="htk-Qi-2dc"/>
+        <segue reference="l2z-i9-8zM"/>
         <segue reference="9CO-rk-QmR"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -69,7 +69,7 @@ class ViewController: UIViewController, MessagingDelegate {
         
         print("check if update: \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) + \(SyncAppQuotes().checkIfUpdate()) + \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0")) + \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn"))")
         
-        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate() || UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") == nil
+        if  SyncAppQuotes().checkIfUpdate() /*|| UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil*/
         {
             print("loading new screen")
             // Get From API
@@ -112,8 +112,8 @@ class ViewController: UIViewController, MessagingDelegate {
             print("Load Quotes and Author From Local")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
-            let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults)!
-            let FlowerName: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName")!
+            let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "default_flower") as! UIImage
+            let FlowerName: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName") ?? "滿天星"
             DispatchQueue.main.async { [self] in
                 self.frontQuote.text = Q
                 self.authorName.text = A

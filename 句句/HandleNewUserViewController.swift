@@ -13,17 +13,15 @@ class HandleNewUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Running Version: \(UIApplication.version())")
+      //  print("Running Version: \(UIApplication.version())")
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print("loading")
         
-        if hasAppBeenUpdatedSinceLastRun()
-        {
-            //
-        }
+        print(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0"))
+        print((UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")))
         
         //check if have data before
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil ||  (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) != nil
@@ -33,12 +31,24 @@ class HandleNewUserViewController: UIViewController {
             performSegue(withIdentifier: "homeSegue", sender: nil)
             Analytics.logEvent("handleNewUser_VC_old_user", parameters: nil)
             
+            if hasAppBeenUpdatedSinceLastRun()
+            {
+                //
+            }
+            
         }else
         {
             print("new user")
             performSegue(withIdentifier: "onboardSegue", sender: nil)
             Analytics.logEvent("handleNewUser_VC_new_user", parameters: nil)
+            
+            if hasAppBeenUpdatedSinceLastRun()
+            {
+                //
+            }
         }
+        
+        
     }
     
     func hasAppBeenUpdatedSinceLastRun() -> Bool {

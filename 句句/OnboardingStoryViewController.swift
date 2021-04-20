@@ -24,6 +24,13 @@ class OnboardingStoryViewController: UIViewController {
         self.imageView.alpha = 0.0
         self.explationMessage.alpha = 0.0
         
+        
+        // Set date to today's date
+        let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
+        let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: date)
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
+        print("Next update date \(updateTime)")
+        
     
     }
     
@@ -38,7 +45,7 @@ class OnboardingStoryViewController: UIViewController {
                 self.explationMessage.alpha = 0.0
             } completion: { (true) in
                 UIView.animate(withDuration: 3.0) {
-                    self.explationMessage.text = "看看屬於你今日的植物和橘子吧!\n\n請搖搖手機。"
+                    self.explationMessage.text = "看看屬於你今日的植物和句子吧!\n\n請搖搖手機。"
                     self.imageView.alpha = 1.0
                     self.explationMessage.alpha = 1.0
                 } completion: { (true) in
@@ -124,11 +131,7 @@ class OnboardingStoryViewController: UIViewController {
                 VC.defaultFlowerImage = defaultFlowerImage
                 VC.defaultFlowerImageName = defaultFlowerName
                 
-                // Set date to today's date
-                let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
-                let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: date)
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
-                print("Next update date \(updateTime)")
+
                 
                 //更新Widget
                 if #available(iOS 14.0, *) {

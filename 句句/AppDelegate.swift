@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.moodquotes.fetchQuotes",
                                         using: nil) { (task) in
           // ...
+            print("Register for Background")
             self.handleAppRefreshTask(task: task as! BGAppRefreshTask)
         }
         
@@ -86,47 +87,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func handleAppRefreshTask(task: BGAppRefreshTask) {
         
-        handleNotificationUpdate()
-        
-        task.setTaskCompleted(success: true)
-        
-        /*
-        task.expirationHandler = {
-            //  PokeManager.urlSession.invalidateAndCancel()
-                URLSession().invalidateAndCancel()
-            }
-        
-        SyncAppQuotes().handleLocalUpdate { (result) in
-            NotificationTrigger().getNotified()
-            task.setTaskCompleted(success: true)
-        }        */
-        scheduleBackgroundPokemonFetch()
+      //  handleNotificationUpdate()
+      //  task.setTaskCompleted(success: true)
+       // scheduleBackgroundPokemonFetch()
     }
     
     func handleNotificationUpdate()
     {
         
-        
-        
         if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
         {
-            /*
-            /* TESTING */
-            let content = UNMutableNotificationContent()
-            content.title = "每天都更喜歡自己一點"
-            content.body = "下個更新時間 \(notificationDate)"
-            content.sound = UNNotificationSound.default
-
-            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let req  = UNNotificationRequest(identifier: "daily update_", content: content, trigger: tri)
-
-            UNUserNotificationCenter.current().add(req) { (error) in
-                print("error\(error )")
-            }
-            */
-            /*TESTING**/
-            
-            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             let date1String = dateFormatter.string(from: notificationDate)
