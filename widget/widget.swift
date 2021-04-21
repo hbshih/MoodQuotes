@@ -39,10 +39,15 @@ struct Provider: TimelineProvider{
         if SyncAppQuotes().checkIfUpdate()
             {
             
-            
+
+        //    print("image retrived \(image?.size)")
             
             DispatchQueue.main.async {
                 firebaseService().getQuoteApiResponse {(result) in
+                    
+                    var flowerImage: UIImage = UIImage(named: "default_flower")!
+                    var flowerName: String = "adsf"
+                    
                     let quoteInfo: [Quote]
                     if case .success(let fetchedData) = result {
                         quoteInfo = fetchedData
@@ -52,8 +57,61 @@ struct Provider: TimelineProvider{
                         
                         //downloadFlowerImage()
                         
+                        
+                           flowerHandler().getFlowerImageURL { (name, image_url) in
+                               DispatchQueue.main.async { [self] in
+                                   
+
+                                   // Get a reference to the storage service using the default Firebase App
+                                   let storage = Storage.storage()
+
+                                   // Create a storage reference from our storage service
+                                   let storageRef = storage.reference()
+                                   
+                                   var imageView = UIImageView(image: UIImage(named: "default_flower"))
+                                   
+                                   print("get url \(image_url)")
+                                   // Reference to an image file in Firebase Storage
+                                    let reference = storageRef.child("flowers/\(image_url).png")
+
+                                   // Placeholder image
+                                   let placeholderImage = UIImage(named: "placeholder.jpg")
+                                   
+                                   flowerImage = UIImage(named: "default_flower_2")!
+                                   flowerName = "滿天星"
+                                   
+                                   imageView.sd_setImage(with: reference, placeholderImage: flowerImage) { (image, error, cache, urls) in
+                                      // print("image downloaded \(image?.size)")
+                                       flowerImage = image!
+                                       flowerName = name
+                                   }
+                                   
+
+                                   
+                                   // Load the image using SDWebImage
+                                   imageView.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+
+                                       
+                                      if error != nil
+                                       {
+                                           print("unable to load new image \(error)")
+                                           flowerHandler().storeImage(image: UIImage(named: "default_flower")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                           UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                                           flowerName = "滿天星"
+                                           flowerImage = UIImage(named: "default_flower")!
+                                       }else
+                                       {
+                                           flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                           UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                                           flowerName = name
+                                           flowerImage = image!
+                                       }
+                                   }
+                               }
+                           }
+                        
                         DispatchQueue.main.async {
-                            let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!, flowerImage: UIImage(named: "default_flower")!, flowerName: "adf")
+                            let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!, flowerImage: flowerImage, flowerName: flowerName)
                          //   (date: Date(), quote: quoteInfo.first!)
                             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
                        //     WidgetCenter.shared.reloadAllTimelines()
@@ -73,84 +131,6 @@ struct Provider: TimelineProvider{
                             
                             completion(timeline)
                      //   }
-                    
-                     /*
-                        flowerHandler().getFlowerImageURL { (name, image_url) in
-                            DispatchQueue.main.async { [self] in
-                                
-
-                                // Get a reference to the storage service using the default Firebase App
-                                let storage = Storage.storage()
-
-                                // Create a storage reference from our storage service
-                                let storageRef = storage.reference()
-                                
-                                var imageView = UIImageView(image: UIImage(named: "default_flower"))
-                                
-                                print("get url \(image_url)")
-                                // Reference to an image file in Firebase Storage
-                                 let reference = storageRef.child("flowers/\(image_url).png")
-
-                                // Placeholder image
-                                let placeholderImage = UIImage(named: "placeholder.jpg")
-                                
-                                var flowerImage: UIImage
-                                var flowerName: String
-                            //    print("image retrived \(image?.size)")
-                                
-                                flowerImage = UIImage(named: "default_flower_2")!
-                                flowerName = "滿天星"
-                                
-                                imageView.sd_setImage(with: reference, placeholderImage: flowerImage) { (image, error, cache, urls) in
-                                   // print("image downloaded \(image?.size)")
-                                    flowerImage = image!
-                                    flowerName = name
-                                }
-                                
-
-                                
-                                // Load the image using SDWebImage
-                            //    imageView.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
-
-                                    
-                             /*       if error != nil
-                                    {
-                                        print("unable to load new image \(error)")
-                                        flowerHandler().storeImage(image: UIImage(named: "default_flower")!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
-                                        flowerName = "滿天星"
-                                        flowerImage = UIImage(named: "default_flower")!
-                                    }else
-                                    {
-                                        flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
-                                        flowerName = name
-                                        flowerImage = image!
-                                    }*/
-                                    
-                                    DispatchQueue.main.async {
-                                        let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!, flowerImage: flowerImage, flowerName: flowerName)
-                                     //   (date: Date(), quote: quoteInfo.first!)
-                                        let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
-                                   //     WidgetCenter.shared.reloadAllTimelines()
-                                        
-                                        let content = UNMutableNotificationContent()
-                                        content.title = "每天都更喜歡自己一點"
-                                        content.body = "\(quoteInfo.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo.first?.author ?? "")"
-                                        content.sound = UNNotificationSound.default
-
-                                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-                                        let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
-
-                                        UNUserNotificationCenter.current().add(req) { (error) in
-                                            print("error\(error )")
-                                            
-                                        }
-                                        
-                                        completion(timeline)
-                                 //   }
-                                }
-                            }*/
                         }
                         
                         
@@ -189,6 +169,10 @@ struct Provider: TimelineProvider{
         
     }
     
+    func downloadFlowerImage()
+    {
+    }
+    
 }
 
 struct QuoteEntry: TimelineEntry{
@@ -214,7 +198,7 @@ struct Emojibook_WidgetEntryView: View {
           /*  case .systemSmall:
                 GeegeeWidgetView(quote: entry.quote, quoteSize: 18, authorSize: 12)*/
             case .systemMedium:
-                GeegeeWidgetView(quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
+                GeegeeWidgetView(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
          /*   case .systemLarge:
                 GeegeeWidgetView(quote: entry.quote, quoteSize: 32, authorSize: 24)*/
             default:

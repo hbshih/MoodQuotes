@@ -14,7 +14,7 @@ struct GeegeeWidgetView: View {
   //let emojiDetails: EmojiDetails
     
     
-    
+    let date: Date
     let quote: Quote
     let flowerImage: UIImage
     let flowerName: String
@@ -57,12 +57,12 @@ struct GeegeeWidgetView: View {
         } else {
             // Fallback on earlier versions
         }
-     /*   HStack{
+        HStack{
             VStack{
                 VStack{
                     Image(uiImage: flowerImage).resizable().frame(width: 60, height: 60, alignment: .center)
                     Text(flowerName).font(Display_Font(font_size: Int(12)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
-                    Text(Date().getTodayDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+                    Text(date.getTodayDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
                 }
             }
             
@@ -76,7 +76,7 @@ struct GeegeeWidgetView: View {
                         .foregroundColor(.gray)
                 }
             }
-        }*/
+        }
         /*
         HStack(spacing: 0) {
             Text("Left")
@@ -90,7 +90,7 @@ struct GeegeeWidgetView: View {
                 .frame(width: geometry.size.width * 0.67)
                 .background(Color.orange)
         }*/
-      VStack {
+     /* VStack {
         
        // Text(Date_Manager().getWidgetDisplayDate()).font(Display_Font(font_size: Int(authorSize)).getFont()).multilineTextAlignment(.center)
         Text(quote.quote).font(Display_Font(font_size: Int(quoteSize)).getFont()).foregroundColor(.gray).multilineTextAlignment(.center).minimumScaleFactor(0.5)
@@ -100,7 +100,7 @@ struct GeegeeWidgetView: View {
           .padding(.top, 5)
             .foregroundColor(.gray)
             .minimumScaleFactor(0.5)
-      }
+      }*/
     }
     .padding(.vertical, 2.5).padding(.horizontal, 16)
     }

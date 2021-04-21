@@ -300,10 +300,22 @@ class ViewController: UIViewController, MessagingDelegate {
                         print("unable to load new image \(error)")
                         flowerHandler().storeImage(image: UIImage(named: "default_flower")!, forKey: "FlowerImage", withStorageType: .userDefaults)
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                        //更新Widget
+                        if #available(iOS 14.0, *) {
+                            WidgetCenter.shared.reloadAllTimelines()
+                        } else {
+                            // Fallback on earlier versions
+                        }
                     }else
                     {
                         flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                        //更新Widget
+                        if #available(iOS 14.0, *) {
+                            WidgetCenter.shared.reloadAllTimelines()
+                        } else {
+                            // Fallback on earlier versions
+                        }
                     }
                 }
                 self.nameOfFlower.text = name
