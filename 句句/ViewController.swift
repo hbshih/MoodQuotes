@@ -62,7 +62,6 @@ class ViewController: UIViewController, MessagingDelegate {
     
     
     @objc func loadNewQuotes() {
-        
         print("enter foreground now")
        // your code
         //If no quote saved in local & time now >= update time
