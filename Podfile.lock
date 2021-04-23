@@ -86,6 +86,9 @@ PODS:
   - FirebaseUI/Storage (10.0.2):
     - Firebase/Storage
     - SDWebImage (~> 5.6)
+  - Google-Mobile-Ads-SDK (8.4.0):
+    - GoogleAppMeasurement (~> 7.0)
+    - GoogleUserMessagingPlatform (>= 1.1)
   - GoogleAnalytics (3.17.0)
   - GoogleAppMeasurement (7.10.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
@@ -97,6 +100,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
     - PromisesObjC (~> 1.2)
+  - GoogleUserMessagingPlatform (2.0.0)
   - GoogleUtilities (7.3.1):
     - GoogleUtilities/AppDelegateSwizzler (= 7.3.1)
     - GoogleUtilities/Environment (= 7.3.1)
@@ -161,6 +165,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - FirebaseUI/Storage
+  - Google-Mobile-Ads-SDK
   - GoogleAnalytics
   - GoogleUtilities
   - Hero
@@ -190,9 +195,11 @@ SPEC REPOS:
     - FirebaseMessaging
     - FirebaseStorage
     - FirebaseUI
+    - Google-Mobile-Ads-SDK
     - GoogleAnalytics
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleUserMessagingPlatform
     - GoogleUtilities
     - GTMSessionFetcher
     - Hero
@@ -225,9 +232,11 @@ SPEC CHECKSUMS:
   FirebaseMessaging: 76b3058cef7f339cf10db196e03bbbb2165fb5d7
   FirebaseStorage: d88ef8e9f152c6a17e44540ae2b93c3be74e9b60
   FirebaseUI: 59db3d833773f985550897d54ceb811ba37fb9a5
+  Google-Mobile-Ads-SDK: 093c3bf0aed3b7d1b8707221a15e3b6634f92dec
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAppMeasurement: 1c863b1161fc3c8cf614a7460d1be6a7c262aab3
   GoogleDataTransport: cd9db2180fcecd8da1b561aea31e3e56cf834aa7
+  GoogleUserMessagingPlatform: ab890ce5f6620f293a21b6bdd82e416a2c73aeca
   GoogleUtilities: e1d9ed4e544fc32a93e00e721400cbc3f377200d
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
@@ -240,6 +249,6 @@ SPEC CHECKSUMS:
   SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
   SwiftyGif: 5d4af95df24caf1c570dbbcb32a3b8a0763bc6d7
 
-PODFILE CHECKSUM: 5cc8f6b1673acbc80cc36720595c0ca4f11f8510
+PODFILE CHECKSUM: b550da9537f2be61319b1fdd02ca9db39aa5ff9c
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

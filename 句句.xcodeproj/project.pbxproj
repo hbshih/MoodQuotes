@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		032217D055C93B60BF00706A /* Pods___Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D96199F7016054F573B667A8 /* Pods___Tests.framework */; };
+		B50374CD263310B5004E2F86 /* AdMobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50374CC263310B5004E2F86 /* AdMobsViewController.swift */; };
+		B503750026331882004E2F86 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50374FF26331882004E2F86 /* NativeAdView.xib */; };
 		B5056D8C2573DCB300A8E79B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509566E256DDCC30075ACE9 /* DateHelper.swift */; };
 		B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBB125622E0700372198 /* NotificationTableViewCell.swift */; };
 		B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B506EBB225622E0700372198 /* NotificationTableViewCell.xib */; };
@@ -134,6 +136,8 @@
 		61E06AB724CA22796CB17DF1 /* Pods-句句Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句Tests.release.xcconfig"; path = "Target Support Files/Pods-句句Tests/Pods-句句Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6487A873A421906BE5C4D53C /* Pods-句句.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.release.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.release.xcconfig"; sourceTree = "<group>"; };
 		AF3507748D56C8ABB370227B /* Pods_widgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_widgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B50374CC263310B5004E2F86 /* AdMobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobsViewController.swift; sourceTree = "<group>"; };
+		B50374FF26331882004E2F86 /* NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
 		B506EBB125622E0700372198 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		B506EBB225622E0700372198 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		B506EBC025622FF800372198 /* UpdateTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTimeTableViewCell.swift; sourceTree = "<group>"; };
@@ -365,6 +369,8 @@
 				B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */,
 				B5C321D82629685D00CB530C /* TutorialViewController.swift */,
 				B58E55332629BD9E009657E0 /* flowerHandler.swift */,
+				B50374FF26331882004E2F86 /* NativeAdView.xib */,
+				B50374CC263310B5004E2F86 /* AdMobsViewController.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -539,6 +545,7 @@
 				B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
+				B503750026331882004E2F86 /* NativeAdView.xib in Resources */,
 				B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B50956AC256DED9B0075ACE9 /* SplashScreen_@2x.png in Resources */,
 				B50956AB256DED9B0075ACE9 /* SplashScreen_@3x.png in Resources */,
@@ -733,6 +740,7 @@
 				B5095675256DDD380075ACE9 /* Notification.swift in Sources */,
 				B5807EFD25678043006052E2 /* firebaseService.swift in Sources */,
 				B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */,
+				B50374CD263310B5004E2F86 /* AdMobsViewController.swift in Sources */,
 				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
 				B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */,

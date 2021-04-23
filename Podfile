@@ -26,6 +26,7 @@ target '句句' do
   pod 'SDWebImageSwiftUI'
   pod 'GoogleUtilities'
   pod 'Firebase/CoreOnly'
+  pod 'Google-Mobile-Ads-SDK'
   
 
   target '句句Tests' do
@@ -48,6 +49,7 @@ target 'widgetExtension' do
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
   pod 'SDWebImageSwiftUI'
-  pod 'GoogleUtilities' 
+  pod 'GoogleUtilities'
+  pod 'Google-Mobile-Ads-SDK'
   
 end
