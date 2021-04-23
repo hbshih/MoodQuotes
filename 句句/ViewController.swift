@@ -147,6 +147,8 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      //  print(flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults))
+        
         // user open app count
         if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
         {
