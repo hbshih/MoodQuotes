@@ -64,7 +64,7 @@ struct flowerHandler{
                     }
                 }
             case .userDefaults:
-                UserDefaults.standard.set(pngRepresentation,
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(pngRepresentation,
                                             forKey: key)
             }
         }
@@ -80,7 +80,7 @@ struct flowerHandler{
                 return image
             }
         case .userDefaults:
-            if let imageData = UserDefaults.standard.object(forKey: key) as? Data,
+            if let imageData = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: key) as? Data,
                 let image = UIImage(data: imageData) {
                 return image
             }

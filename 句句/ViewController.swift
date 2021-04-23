@@ -62,7 +62,6 @@ class ViewController: UIViewController, MessagingDelegate {
     
     
     @objc func loadNewQuotes() {
-        
         print("enter foreground now")
        // your code
         //If no quote saved in local & time now >= update time
@@ -80,6 +79,8 @@ class ViewController: UIViewController, MessagingDelegate {
                         self.quote = quoteInfo.first!.quote
                         self.author = quoteInfo.first!.author
                         DispatchQueue.main.async { [self] in
+                            
+                            print("getting new flower")
                             // Update Local Data
                             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.quote, forKey: "Quote")
                             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.author, forKey: "Author")
@@ -111,7 +112,7 @@ class ViewController: UIViewController, MessagingDelegate {
             print("Load Quotes and Author From Local")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
-            let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "default_flower") as! UIImage
+            let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "default_flower_2") as! UIImage
             let FlowerName: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName") ?? "滿天星"
             DispatchQueue.main.async { [self] in
                 self.frontQuote.text = Q
@@ -147,6 +148,8 @@ class ViewController: UIViewController, MessagingDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      //  print(flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults))
         
         // user open app count
         if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
@@ -298,7 +301,7 @@ class ViewController: UIViewController, MessagingDelegate {
                     if error != nil
                     {
                         print("unable to load new image \(error)")
-                        flowerHandler().storeImage(image: UIImage(named: "default_flower")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                        flowerHandler().storeImage(image: UIImage(named: "default_flower_2")!, forKey: "FlowerImage", withStorageType: .userDefaults)
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
                         //更新Widget
                         if #available(iOS 14.0, *) {
