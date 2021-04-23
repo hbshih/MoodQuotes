@@ -16,7 +16,7 @@ struct Provider: TimelineProvider{
     
     func placeholder(in context: Context) -> QuoteEntry {
         print("Widget got loaded")
-        return (QuoteEntry(date: Date(), quote: Quote(quote: "asdf", author: "adsf"), flowerImage: UIImage(named: "default_flower")!, flowerName: "asfd"))
+        return (QuoteEntry(date: Date(), quote: Quote(quote: "asdf", author: "adsf"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "asfd"))
     }
     
     
@@ -25,14 +25,72 @@ struct Provider: TimelineProvider{
         Analytics.logEvent("widget_got_installed", parameters: nil)
         
         print("Widget got loaded")
-        let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "活在當下 不求永生\n活得狂野 擁抱生命", author: "拉娜·德芮"), flowerImage: UIImage(named: "default_flower")!, flowerName: "滿天星"))
+        let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "活在當下 不求永生\n活得狂野 擁抱生命", author: "拉娜·德芮"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "滿天星"))
         completion(quote)
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> Void) {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
+        var quoteInfo: [Quote]?
         
+        if SyncAppQuotes().checkIfUpdate()
+        {
+            flowerHandler().getFlowerImageURL { (name, imageurl) in
+                let url_image = URL(string: imageurl)
+                
+                let storage = Storage.storage()
+                let storageRef = storage.reference().child("flowers/flower_11_banksia_班庫山花.png").downloadURL { (url, error) in
+                    let url_image = url
+                    
+                    if let url = url_image, let imageData = try? Data(contentsOf: url),
+                        let uiImage = UIImage(data: imageData) {
+                        firebaseService().getQuoteApiResponse { (result) in
+                            if case .success(let fetchedData) = result {
+                                quoteInfo = fetchedData
+                                let entry = QuoteEntry(date: Date(), quote: quoteInfo?.first ?? Quote(quote: "adf", author: "dsf"), flowerImage: uiImage, flowerName: name)
+                                
+                                let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+                                
+                                flowerHandler().storeImage(image: uiImage, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo?.first!.quote, forKey: "Quote")
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo?.first!.author, forKey: "Author")
+                                
+                                completion(timeline)
+                            }
+                        }
+                     }
+                     else {
+                         // Image("placeholder-image")
+                     }
+                }
+            }
+        }else
+        {
+            print("keep local data")
+            let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote") ?? "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星"
+            let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author") ?? "小王子"
+            
+            var FlowerImage: UIImage = UIImage(named: "flower_10_babys breath_滿天星")!
+            var FlowerName: String
+            
+            FlowerImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "flower_10_babys breath_滿天星")!
+            FlowerName = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName") ?? "滿天星"
+            let entry = QuoteEntry(date: Date(), quote: Quote(quote: Q, author: A), flowerImage: FlowerImage, flowerName: FlowerName)
+            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+            completion(timeline)
+        }
+        
+
+        
+        
+        
+        
+
+        
+        
+        /*
         if SyncAppQuotes().checkIfUpdate()
         {
             DispatchQueue.main.async {
@@ -45,21 +103,25 @@ struct Provider: TimelineProvider{
                     if case .success(let fetchedData) = result {
                         quoteInfo = fetchedData
                         
+                        print("fetching new data \(fetchedData)")
+                        
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.quote, forKey: "Quote")
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.author, forKey: "Author")
                         
-                        flowerHandler().getFlowerImageURL { (name, image_url) in
-                            DispatchQueue.main.async { [self] in
+                     //   flowerHandler().getFlowerImageURL { (name, image_url) in
+                      //      DispatchQueue.main.async { [self] in
                                 
-                                
-                                let storage = Storage.storage()
-                                let storageRef = storage.reference().child("flowers/\(image_url).png")
-                                storageRef.downloadURL { (url, error) in
-                                    if let url = url, let imageData = try? Data(contentsOf: url),
+                          //      print("fetching new flower \(name)")
+                           
+                       //         let storage = Storage.storage()
+                       //         let storageRef = storage.reference().child("flowers/\(image_url).png")
+                       //         storageRef.downloadURL { (url, error) in
+                                   /* if let url = url, let imageData = try? Data(contentsOf: url),
                                        let uiImage = UIImage(data: imageData) {
                                         
                                         print("downloaded \(imageData)")
                                         flowerImage = uiImage
+                                        flowerName = name
                                         
                                         flowerHandler().storeImage(image: uiImage, forKey: "FlowerImage", withStorageType: .userDefaults)
                                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
@@ -67,7 +129,10 @@ struct Provider: TimelineProvider{
                                     }
                                     else {
                                         // Image("placeholder-image")
-                                    }
+                                    }*/
+                                    
+                                    
+                                    
                                     
                                     let entry = QuoteEntry(date: Date(), quote: quoteInfo.first!, flowerImage: (flowerImage ?? UIImage(named: "default_flower"))!, flowerName: flowerName ?? "滿天星")
                                     
@@ -87,12 +152,12 @@ struct Provider: TimelineProvider{
                                     }
                                     
                                     completion(timeline)
-                                }
+                              //  }
                                 
                                 
                                 
-                            }
-                        }
+                            //}
+                        //}
                     } else {
                         let errQuote = Quote(quote: "App當機拉", author: "By Me")
                         quoteInfo = [errQuote,errQuote]
@@ -119,7 +184,7 @@ struct Provider: TimelineProvider{
             completion(timeline)
         }
         
-        
+        */
     }
     
     func downloadFlowerImage()
@@ -127,28 +192,6 @@ struct Provider: TimelineProvider{
     }
     
     
-    
-}
-
-struct NetworkImage: View {
-    
-    let url: URL?
-    
-    var body: some View {
-        
-        Group {
-            if let url = url, let imageData = try? Data(contentsOf: url),
-               let uiImage = UIImage(data: imageData) {
-                
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            }
-            else {
-                Image("placeholder-image")
-            }
-        }
-    }
     
 }
 
