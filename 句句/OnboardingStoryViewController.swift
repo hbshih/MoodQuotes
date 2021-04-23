@@ -93,7 +93,7 @@ class OnboardingStoryViewController: UIViewController {
                 
             }, completion: { (true) in
                 UIView.animate(withDuration: 0.5, delay: 1.5, options: UIView.AnimationOptions.curveEaseIn, animations: {
-                    self.imageView.image = UIImage(named: "default_flower_2")
+                    self.imageView.image = UIImage(named: "flower_10_babys breath_滿天星")
                     self.imageView.alpha = 1.0
                 }) { (true) in
                     UIView.animate(withDuration: 0.5, delay: 2.0, options: UIView.AnimationOptions.curveEaseIn) {
@@ -122,7 +122,7 @@ class OnboardingStoryViewController: UIViewController {
                 VC.defaultQuote = defaultQuote
                 VC.defaultAuthor = defaultAuthor
                 
-                let defaultFlowerImage = UIImage(named: "default_flower_2")
+                let defaultFlowerImage = UIImage(named: "flower_10_babys breath_滿天星")
                 let defaultFlowerName = "滿天星"
                 
                 flowerHandler().storeImage(image: defaultFlowerImage!, forKey: "FlowerImage", withStorageType: .userDefaults)

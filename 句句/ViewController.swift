@@ -112,7 +112,7 @@ class ViewController: UIViewController, MessagingDelegate {
             print("Load Quotes and Author From Local")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
-            let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "default_flower_2") as! UIImage
+            let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "flower_10_babys breath_滿天星") as! UIImage
             let FlowerName: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName") ?? "滿天星"
             DispatchQueue.main.async { [self] in
                 self.frontQuote.text = Q
@@ -301,7 +301,7 @@ class ViewController: UIViewController, MessagingDelegate {
                     if error != nil
                     {
                         print("unable to load new image \(error)")
-                        flowerHandler().storeImage(image: UIImage(named: "default_flower_2")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                        flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
                         //更新Widget
                         if #available(iOS 14.0, *) {
