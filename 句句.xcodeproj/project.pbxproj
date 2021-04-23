@@ -148,7 +148,6 @@
 		B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@2x.png"; sourceTree = "<group>"; };
 		B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = I.Ngaan.ttf; sourceTree = "<group>"; };
 		B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textDirectionModifier.swift; sourceTree = "<group>"; };
-		B547A82625870AC300938A09 /* UXCam.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = UXCam.xcframework; sourceTree = "<group>"; };
 		B547A82C25870AD100938A09 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B547A82E25870ADC00938A09 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B547A83425870AE300938A09 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -301,7 +300,6 @@
 			isa = PBXGroup;
 			children = (
 				B59E216B25675F8F003A5521 /* widgetExtension.entitlements */,
-				B547A82625870AC300938A09 /* UXCam.xcframework */,
 				B5517C73255FAFC500E134CC /* 句句 */,
 				B5517C8A255FAFC600E134CC /* 句句Tests */,
 				B5517C95255FAFC600E134CC /* 句句UITests */,
