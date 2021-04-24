@@ -159,15 +159,16 @@ class ViewController: UIViewController, MessagingDelegate {
                 //old user
                 print("counter is \(counter)")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set((counter + 1), forKey: "open_app_count")
-                Analytics.logEvent("counter", parameters: ["counter": counter])
+                Analytics.logEvent("counter", parameters: ["counter": "\(counter)"])
                 
-                if counter > 5
+                if counter > 3
                 {
                     Analytics.logEvent("requested_review", parameters: nil)
                     if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                         SKStoreReviewController.requestReview(in: scene)
                     }
                 }
+                
                 
             }else
             {
