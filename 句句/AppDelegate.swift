@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       //  let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         
-      //  Analytics.setUserID(UIDevice.current.identifierForVendor?.uuidString)
+        Analytics.setUserID(UIDevice.current.identifierForVendor?.uuidString)
         // GA
         /*
         guard let gai = GAI.sharedInstance() else {

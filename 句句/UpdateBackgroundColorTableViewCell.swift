@@ -41,6 +41,7 @@ class UpdateBackgroundColorTableViewCell: UITableViewCell {
        //     self.label.text = "You rated \(ratingVC.cosmosStarRating.rating) stars"
             
             let defaults = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!
+            
             defaults.setColor(color: ratingVC.exampleBackground.backgroundColor, forKey: "BackgroundColor")
             
             Analytics.logEvent("set_vc_update_color", parameters: ["updated_color": "\(ratingVC.exampleBackground.backgroundColor)"])

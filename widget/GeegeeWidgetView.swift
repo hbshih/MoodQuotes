@@ -21,22 +21,6 @@ struct GeegeeWidgetView: View {
     let quoteSize: Double
     let authorSize: Double
     
-  /*
-    if let color = UserDefaults.standard.colorForKey(key: "BackgroundColor") as? UIColor
-    {
-        screenView.backgroundColor = color
-        backgroundHideenView.backgroundColor =  color
-    }*/
-    
-   // @AppStorage("BackgroundColor") var color: UIColor = 5
-    
- /*   @AppStorage("BackgroundColor", store: UserDefaults(suiteName: "group.BSStudio.Geegee.ios"))
-    var value: Any = "5"
-   */
-    
-    
-//    UserDefaults(suiteName: "group.BSStudio.Geegee.ios"). as? Int ?? 0
-    
     var backgroundColor: UIColor{
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.colorForKey(key: "BackgroundColor")
         {
@@ -57,6 +41,8 @@ struct GeegeeWidgetView: View {
         } else {
             // Fallback on earlier versions
         }
+        // Widget Background Image
+      //  Image(uiImage: #imageLiteral(resourceName: "Webp.net-compress-image-removebg-preview.png"))
         HStack{
             VStack{
                 VStack{
