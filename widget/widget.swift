@@ -34,17 +34,56 @@ struct Provider: TimelineProvider{
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
         var quoteInfo: [Quote]?
         
-        if SyncAppQuotes().checkIfUpdate()
+        if SyncAppQuotes().checkIfUpdate_widget()
         {
+            
             flowerHandler().getFlowerImageURL { (name, imageurl) in
-                let url_image = URL(string: imageurl)
+                firebaseService().getQuoteApiResponse { (result) in
+                    if case .success(let fetchedData) = result {
+                        quoteInfo = fetchedData
+                        
+                        DispatchQueue.main.async {
+                            let entry = QuoteEntry(date: Date(), quote: Quote(quote: "點開查看今日給你的話吧", author: "點開查看"), flowerImage: UIImage(named: "noun_seeds_184642")!, flowerName: "我是種子")
+                            
+                            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+                            
+                            // Push Notification
+                            let content = UNMutableNotificationContent()
+                            content.title = "看看屬於你今日的植物是什麼吧！"
+                            content.body = "\(quoteInfo?.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo?.first?.author ?? "")"
+                            content.sound = UNNotificationSound.default
+                            
+                            
+                            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                            let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
+                            
+                            UNUserNotificationCenter.current().add(req) { (error) in
+                                print("error\(error )")
+                                
+                            }
+                            
+                            completion(timeline)
+                        }
+
+                        /*
+                        flowerHandler().storeImage(image: uiImage, forKey: "FlowerImage", withStorageType: .userDefaults)
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo?.first!.quote, forKey: "Quote")
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo?.first!.author, forKey: "Author")*/
+                        
+
+                    }
+                }
                 
+                
+                /*
+                let url_image = URL(string: imageurl)
                 let storage = Storage.storage()
-                let storageRef = storage.reference().child("flowers/flower_11_banksia_班庫山花.png").downloadURL { (url, error) in
+                let storageRef = storage.reference().child("flowers/\(imageurl).png").downloadURL { (url, error) in
                     let url_image = url
                     
                     if let url = url_image, let imageData = try? Data(contentsOf: url),
-                        let uiImage = UIImage(data: imageData) {
+                       let uiImage = UIImage(data: imageData) {
                         firebaseService().getQuoteApiResponse { (result) in
                             if case .success(let fetchedData) = result {
                                 quoteInfo = fetchedData
@@ -57,14 +96,30 @@ struct Provider: TimelineProvider{
                                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo?.first!.quote, forKey: "Quote")
                                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo?.first!.author, forKey: "Author")
                                 
+                                // Push Notification
+                                let content = UNMutableNotificationContent()
+                                content.title = "今天屬於你的花是：\(name)"
+                                content.body = "\(quoteInfo?.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo?.first?.author ?? "")"
+                                content.sound = UNNotificationSound.default
+                                
+                                
+                                let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                                let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
+                                
+                                UNUserNotificationCenter.current().add(req) { (error) in
+                                    print("error\(error )")
+                                    
+                                }
+                                
                                 completion(timeline)
                             }
                         }
-                     }
-                     else {
-                         // Image("placeholder-image")
-                     }
+                    }
+                    else {
+                        // Image("placeholder-image")
+                    }
                 }
+                */
             }
         }else
         {
@@ -82,7 +137,7 @@ struct Provider: TimelineProvider{
             completion(timeline)
         }
         
-
+        
     }
     
     func downloadFlowerImage()

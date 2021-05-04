@@ -13,6 +13,7 @@ import BackgroundTasks
 import WidgetKit
 //import UXCam
 //import GoogleMobileAds
+import AppTrackingTransparency
 
 
 @main
@@ -27,6 +28,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        if NSClassFromString("ATTrackingManager") == nil {
+          // Avoid showing the App Tracking Transparency explainer if the
+          // framework is not linked.
+          //InAppMessaging.inAppMessaging().messageDisplaySuppressed = true
+        }else
+        {
+            ATTrackingManager.requestTrackingAuthorization { status in
+              switch status {
+              case .authorized:
+                // Optionally, log an event when the user accepts.
+                Analytics.setUserID(UIDevice.current.identifierForVendor?.uuidString)
+                Analytics.logEvent("tracking_authorized", parameters: nil)
+              case _: break
+                
+                // Optionally, log an event here with the rejected value.
+              }
+            }
+
+        }
+        
+        
         
       //  handleNotificationUpdate()
 
@@ -50,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       //  let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         
-        Analytics.setUserID(UIDevice.current.identifierForVendor?.uuidString)
+        
         // GA
         /*
         guard let gai = GAI.sharedInstance() else {
@@ -74,6 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+
     
     
     func scheduleBackgroundPokemonFetch() {

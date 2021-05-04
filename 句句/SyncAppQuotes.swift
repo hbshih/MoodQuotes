@@ -49,6 +49,62 @@ struct SyncAppQuotes {
         }
     }
     
+    func checkIfUpdate_widget() -> Bool
+    {
+        if let updateDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+        {
+            print("Date now \(Date())")
+            print("Update date \(updateDate)")
+            
+            /*
+            /* TESTING */
+            let content = UNMutableNotificationContent()
+            content.title = "檢查是否該更新"
+            content.body = "現在時間\(Date()), 預計更新時間 \(updateDate)"
+            content.sound = UNNotificationSound.default
+
+            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let req  = UNNotificationRequest(identifier: "check_2", content: content, trigger: tri)
+
+            UNUserNotificationCenter.current().add(req) { (error) in
+                print("error\(error )")
+            }*/
+            
+            /*TESTING**/
+            
+            
+            if Date() >= updateDate
+            {
+                updateTime_widget()
+                return true
+            }else
+            {
+                return false
+            }
+        }else
+        {
+            return true
+        }
+    }
+    
+    func updateTime_widget()
+    {
+        if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTimeForWidget") as? Date
+        {
+            print("Original Update Time \(notificationDate) ")
+
+            let date = Calendar.current.date(bySettingHour: notificationDate.hour, minute: notificationDate.minute, second: 0, of: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)!
+            print("New Update Time \(date)")
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(date, forKey: "updateTimeForWidget")
+        }else
+        {
+            if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+            {
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(notificationDate, forKey: "updateTimeForWidget")
+            }
+        }
+    }
+    
     func updateTime()
     {
         if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date

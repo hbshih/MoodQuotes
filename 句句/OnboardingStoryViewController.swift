@@ -36,7 +36,7 @@ class OnboardingStoryViewController: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 2.0, delay: 0.5, options: .curveLinear) {
+        UIView.animate(withDuration: 2.0, delay: 1.5, options: .curveLinear) {
            // imageView.image = UIImage(named: "icon_gesture")
             self.explationMessage.text = "嗨，\n從今天起，你每天將會得到一種植物和一句溫暖的生活語錄。"
             self.explationMessage.alpha = 1.0

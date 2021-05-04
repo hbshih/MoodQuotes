@@ -47,6 +47,8 @@
 	<string>我們需要權限才能將截圖放入您的手機中</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>我們需要權限才能將截圖放入您的手機中</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>我們需要權限才能推薦給您適合您的句子</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>qiji-combo.ttf</string>
