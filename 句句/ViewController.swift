@@ -336,7 +336,7 @@ class ViewController: UIViewController, MessagingDelegate {
             frontStackView.backgroundColor = color
             backgroundHideenView.backgroundColor =  color
         }
-       // loadNewQuotes()
+        loadNewQuotes()
         todayDateLabel.text = Date().getTodayDate
     }
     

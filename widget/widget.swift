@@ -31,7 +31,7 @@ struct Provider: TimelineProvider{
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> Void) {
         let currentDate = Date()
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
+        var refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
         var quoteInfo: [Quote]?
         
         if SyncAppQuotes().checkIfUpdate_widget()
@@ -45,6 +45,7 @@ struct Provider: TimelineProvider{
                         DispatchQueue.main.async {
                             let entry = QuoteEntry(date: Date(), quote: Quote(quote: "點開查看今日給你的話吧", author: "點開查看"), flowerImage: UIImage(named: "noun_seeds_184642")!, flowerName: "我是種子")
                             
+                        //    refreshDate  = Calendar.current.date(byAdding: .hour, value: 8, to: currentDate)!
                             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
                             
                             // Push Notification
@@ -65,11 +66,11 @@ struct Provider: TimelineProvider{
                             completion(timeline)
                         }
 
-                        /*
-                        flowerHandler().storeImage(image: uiImage, forKey: "FlowerImage", withStorageType: .userDefaults)
+                        
+                        flowerHandler().storeImage(image: UIImage(named: "noun_seeds_184642")!, forKey: "FlowerImage", withStorageType: .userDefaults)
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo?.first!.quote, forKey: "Quote")
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo?.first!.author, forKey: "Author")*/
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo?.first!.author, forKey: "Author")
                         
 
                     }
@@ -123,6 +124,8 @@ struct Provider: TimelineProvider{
             }
         }else
         {
+        //    if !SyncAppQuotes().checkIfUpdate()
+            
             print("keep local data")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote") ?? "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星"
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author") ?? "小王子"

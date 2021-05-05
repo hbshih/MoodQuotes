@@ -29,6 +29,7 @@ class OnboardingStoryViewController: UIViewController {
         let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
         let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: date)
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTimeForWidget")
         print("Next update date \(updateTime)")
         
     

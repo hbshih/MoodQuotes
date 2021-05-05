@@ -51,27 +51,10 @@ struct SyncAppQuotes {
     
     func checkIfUpdate_widget() -> Bool
     {
-        if let updateDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+        if let updateDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTimeForWidget") as? Date
         {
             print("Date now \(Date())")
             print("Update date \(updateDate)")
-            
-            /*
-            /* TESTING */
-            let content = UNMutableNotificationContent()
-            content.title = "檢查是否該更新"
-            content.body = "現在時間\(Date()), 預計更新時間 \(updateDate)"
-            content.sound = UNNotificationSound.default
-
-            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let req  = UNNotificationRequest(identifier: "check_2", content: content, trigger: tri)
-
-            UNUserNotificationCenter.current().add(req) { (error) in
-                print("error\(error )")
-            }*/
-            
-            /*TESTING**/
-            
             
             if Date() >= updateDate
             {
@@ -83,6 +66,10 @@ struct SyncAppQuotes {
             }
         }else
         {
+            if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+            {
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(notificationDate, forKey: "updateTimeForWidget")
+            }
             return true
         }
     }

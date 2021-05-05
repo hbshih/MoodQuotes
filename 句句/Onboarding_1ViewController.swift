@@ -90,12 +90,14 @@ class Onboarding_1ViewController: UIViewController {
             // Add next update date to user defaults
             let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: pickeriOS14.date)
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTimeForWidget")
             print("Next update date \(pickeriOS14.date)")
             print("Next update date \(updateTime)")
         } else {
             // Add next update date to user defaults
             let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: timePIcker.date)
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTimeForWidget")
             print("Next update date \(timePIcker.date)")
             print("Next update date \(updateTime)")
         }
