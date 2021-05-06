@@ -237,9 +237,9 @@ class ViewController: UIViewController, MessagingDelegate {
         frontQuote.textAlignment = .left
         frontQuote.lineBreakMode = .byCharWrapping
         */
-        DispatchQueue.main.async {
+    /*    DispatchQueue.main.async {
             self.loadNewQuotes()
-        }
+        }*/
       //  loadNewQuotes()
         
         //If Screenshot get to share screen
@@ -351,7 +351,6 @@ class ViewController: UIViewController, MessagingDelegate {
         DispatchQueue.main.async {
             self.loadNewQuotes()
         }
-
         
     /* Comment for now --- 4/17/2021
         //If no quote saved in local & time now >= update time
