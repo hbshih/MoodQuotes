@@ -31,12 +31,12 @@ struct Provider: TimelineProvider{
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> Void) {
         let currentDate = Date()
-        var refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
+        var refreshDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
         var quoteInfo: [Quote]?
         
         if SyncAppQuotes().checkIfUpdate_widget()
         {
-            
+         print("update widget")
             flowerHandler().getFlowerImageURL { (name, imageurl) in
                 firebaseService().getQuoteApiResponse { (result) in
                     if case .success(let fetchedData) = result {
@@ -124,8 +124,6 @@ struct Provider: TimelineProvider{
             }
         }else
         {
-        //    if !SyncAppQuotes().checkIfUpdate()
-            
             print("keep local data")
             let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote") ?? "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星"
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author") ?? "小王子"

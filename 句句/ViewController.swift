@@ -216,7 +216,7 @@ class ViewController: UIViewController, MessagingDelegate {
         hiddenAuthorName.font = font
        // ref = Database.database().reference()
         
-        todayDateLabel.text = Date().getTodayDate
+        //todayDateLabel.text = Date().getTodayDate
         frontQuote.text = defaultQuote
         authorName.text = defaultAuthor
         ImageOfFlower.setImage(defaultFlowerImage!)
@@ -237,7 +237,10 @@ class ViewController: UIViewController, MessagingDelegate {
         frontQuote.textAlignment = .left
         frontQuote.lineBreakMode = .byCharWrapping
         */
-        loadNewQuotes()
+        DispatchQueue.main.async {
+            self.loadNewQuotes()
+        }
+      //  loadNewQuotes()
         
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
@@ -336,12 +339,18 @@ class ViewController: UIViewController, MessagingDelegate {
             frontStackView.backgroundColor = color
             backgroundHideenView.backgroundColor =  color
         }
-        loadNewQuotes()
+
+       // loadNewQuotes()
         todayDateLabel.text = Date().getTodayDate
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
+        todayDateLabel.text = Date().getTodayDate
+        
+        DispatchQueue.main.async {
+            self.loadNewQuotes()
+        }
 
         
     /* Comment for now --- 4/17/2021
