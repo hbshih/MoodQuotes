@@ -41,6 +41,10 @@ struct SyncAppQuotes {
                 return true
             }else
             {
+                if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote") == "點開查看今日給你的話吧"
+                {
+                    return true
+                }
                 return false
             }
         }else

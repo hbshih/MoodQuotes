@@ -31,7 +31,7 @@ struct Provider: TimelineProvider{
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> Void) {
         let currentDate = Date()
-        var refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
+        var refreshDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
         var quoteInfo: [Quote]?
         
         if SyncAppQuotes().checkIfUpdate_widget()
@@ -46,29 +46,27 @@ struct Provider: TimelineProvider{
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.quote.quote, forKey: "Quote")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.quote.author, forKey: "Author")
                 
-                flowerHandler().getFlowerImageURL { (name, imageurl) in
-                    firebaseService().getQuoteApiResponse { (result) in
-                        if case .success(let fetchedData) = result {
-                            quoteInfo = fetchedData
-                            
-                            
-                            // Push Notification
-                            let content = UNMutableNotificationContent()
-                            content.title = "看看屬於你今日的植物是什麼吧！"
-                            content.body = "\(quoteInfo?.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo?.first?.author ?? "")"
-                            content.sound = UNNotificationSound.default
-                            
-                            
-                            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-                            let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
-                            
-                            UNUserNotificationCenter.current().add(req) { (error) in
-                                print("error\(error )")
-                            }
-                            
-                            completion(timeline)
-                            
+                firebaseService().getQuoteApiResponse { (result) in
+                    if case .success(let fetchedData) = result {
+                        quoteInfo = fetchedData
+                        
+                        
+                        // Push Notification
+                        let content = UNMutableNotificationContent()
+                        content.title = "看看屬於你今日的植物是什麼吧！"
+                        content.body = "\(quoteInfo?.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo?.first?.author ?? "")"
+                        content.sound = UNNotificationSound.default
+                        
+                        
+                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                        let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
+                        
+                        UNUserNotificationCenter.current().add(req) { (error) in
+                            print("error\(error )")
                         }
+                        
+                        completion(timeline)
+                        
                     }
                 }
             }
