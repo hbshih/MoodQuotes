@@ -19,6 +19,7 @@ var global_quote: String = ""
 
 class ViewController: UIViewController, MessagingDelegate {
     
+    @IBOutlet weak var ratingView: UIStackView!
     @IBOutlet weak var frontStackView: UIStackView!
     @IBOutlet weak var frontQuote: UILabel!
     @IBOutlet weak var authorName: UILabel!
@@ -60,6 +61,36 @@ class ViewController: UIViewController, MessagingDelegate {
         }
     }
     
+    @IBAction func like_tapped(_ sender: Any) {
+        Analytics.logEvent("like", parameters: ["author": author])
+        
+        if var liked_array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "Liked_Array") as? [String]
+        {
+            let today_quote = "\(self.quote),\(self.author)"
+            liked_array.append(today_quote)
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(liked_array, forKey: "Liked_Array")
+        }else
+        {
+            let today_quote = "\(self.quote),\(self.author)"
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(today_quote, forKey: "Liked_Array")
+        }
+        hideRatingView()
+    }
+    @IBAction func dislike_tapped(_ sender: Any) {
+        Analytics.logEvent("dislike", parameters: ["author": author])
+        hideRatingView()
+    }
+    
+    func hideRatingView()
+    {
+        //hide
+        ratingView.isHidden = true
+    }
+    
+    func showRatingview()
+    {
+        ratingView.isHidden = false
+    }
     
     @objc func loadNewQuotes() {
         print("enter foreground now")
@@ -93,12 +124,16 @@ class ViewController: UIViewController, MessagingDelegate {
                             // Update Flower
                             downloadFlowerImage()
                             
+                            // show rating
+                            showRatingview()
+                            
                             //更新Widget
                             if #available(iOS 14.0, *) {
                                 WidgetCenter.shared.reloadAllTimelines()
                             } else {
                                 // Fallback on earlier versions
                             }
+                            
                         }
                     } else {
                         let errQuote = Quote(quote: "App當機拉", author: "By Me")
