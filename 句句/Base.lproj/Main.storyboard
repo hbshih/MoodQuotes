@@ -288,6 +288,13 @@
                                                                     <constraint firstAttribute="width" constant="180" id="2Xw-dC-mXL"/>
                                                                 </constraints>
                                                             </stackView>
+                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noun_bookmark_4007674" translatesAutoresizingMaskIntoConstraints="NO" id="mBZ-74-k1w">
+                                                                <rect key="frame" x="296" y="34" width="32" height="32"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="32" id="7zm-U6-DmT"/>
+                                                                    <constraint firstAttribute="height" constant="32" id="S7w-wZ-hra"/>
+                                                                </constraints>
+                                                            </imageView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="Cf7-08-dKH"/>
@@ -307,13 +314,13 @@
                                                         <rect key="frame" x="16" y="0.0" width="382" height="572"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人生是一場兵荒馬亂，你是我的劫後餘生。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-MP-j3O">
-                                                                <rect key="frame" x="11" y="0.0" width="360" height="492"/>
+                                                                <rect key="frame" x="11" y="0.0" width="360" height="532"/>
                                                                 <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="36"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzE-5V-zvv">
-                                                                <rect key="frame" x="170.33333333333334" y="492" width="41.333333333333343" height="40"/>
+                                                                <rect key="frame" x="170.33333333333334" y="532" width="41.333333333333343" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="kzE-H1-iAJ"/>
                                                                 </constraints>
@@ -321,8 +328,8 @@
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="HmO-3i-GlA">
-                                                                <rect key="frame" x="139" y="532" width="104" height="40"/>
+                                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="HmO-3i-GlA">
+                                                                <rect key="frame" x="139" y="572" width="104" height="40"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dr6-hG-opL">
                                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -523,6 +530,7 @@
                         <outlet property="hiddenQuoteAdder" destination="Y8l-8V-78E" id="WbO-N4-bfx"/>
                         <outlet property="nameOfFlower" destination="zGM-a8-dbm" id="qkP-7s-0G0"/>
                         <outlet property="onboardingTouchIcon" destination="Bzx-W5-zIZ" id="grl-na-vFh"/>
+                        <outlet property="quoteAndAuthorStackView" destination="9Wg-gp-si8" id="sJj-dI-XCo"/>
                         <outlet property="ratingView" destination="HmO-3i-GlA" id="6dl-wm-voO"/>
                         <outlet property="screenView" destination="mFK-is-lcH" id="9XO-5a-BZH"/>
                         <outlet property="stack_action_controller" destination="1Au-7f-1Ra" id="B2e-1K-LAn"/>
@@ -1792,6 +1800,7 @@ App們將會開始抖動。</string>
         <image name="noun_Love_3860852 1" width="40" height="40"/>
         <image name="noun_Save_2209758 1" width="35" height="35"/>
         <image name="noun_Share_1058858 (2) 1" width="35" height="35"/>
+        <image name="noun_bookmark_4007674" width="100" height="100"/>
         <image name="noun_instagram_3350460 (1) 1" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

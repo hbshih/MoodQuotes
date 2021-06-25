@@ -19,6 +19,7 @@ var global_quote: String = ""
 
 class ViewController: UIViewController, MessagingDelegate {
     
+    @IBOutlet weak var quoteAndAuthorStackView: UIStackView!
     @IBOutlet weak var ratingView: UIStackView!
     @IBOutlet weak var frontStackView: UIStackView!
     @IBOutlet weak var frontQuote: UILabel!
@@ -125,7 +126,7 @@ class ViewController: UIViewController, MessagingDelegate {
                             downloadFlowerImage()
                             
                             // show rating
-                            showRatingview()
+                          //  showRatingview()
                             
                             //更新Widget
                             if #available(iOS 14.0, *) {
@@ -307,6 +308,7 @@ class ViewController: UIViewController, MessagingDelegate {
     
     @objc func screenshotTaken()
     {
+        Analytics.logEvent("Screenshot Taken", parameters: nil)
         performSegue(withIdentifier: "shareSegue", sender: nil)
     }
     
@@ -373,6 +375,8 @@ class ViewController: UIViewController, MessagingDelegate {
             screenView.backgroundColor = color
             frontStackView.backgroundColor = color
             backgroundHideenView.backgroundColor =  color
+           // quoteAndAuthorStackView.backgroundColor = color
+            quoteAndAuthorStackView.customize(backgroundColor: color, radiusSize: 20)
         }
 
        // loadNewQuotes()
@@ -461,7 +465,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 {
                    // frontStackView.backgroundColor = .blue
                     buttonView.isHidden = true
-                    let image = takeScreenshot(of: frontStackView)
+                    let image = takeScreenshot(of: quoteAndAuthorStackView)
                     VC.imageToShow = image
                     buttonView.isHidden = false
                 }else
@@ -565,3 +569,16 @@ extension UIImageView {
            layer.add(flash, forKey: nil)
        }
  }
+
+extension UIStackView {
+    func customize(backgroundColor: UIColor = .clear, radiusSize: CGFloat = 0) {
+        let subView = UIView(frame: bounds)
+        subView.backgroundColor = backgroundColor
+        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subView, at: 0)
+
+        subView.layer.cornerRadius = radiusSize
+        subView.layer.masksToBounds = true
+        subView.clipsToBounds = true
+    }
+}
