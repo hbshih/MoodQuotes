@@ -258,19 +258,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BV5-jq-qJv">
                                                 <rect key="frame" x="0.0" y="42" width="414" height="100"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RN-ST-2TO">
-                                                        <rect key="frame" x="358" y="30" width="40" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="40" id="LRy-yF-Png"/>
-                                                            <constraint firstAttribute="height" constant="40" id="q35-Wq-P6t"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button" image="icon_unBookmarked"/>
-                                                        <connections>
-                                                            <action selector="bookmark_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EWU-v0-JA5"/>
-                                                        </connections>
-                                                    </button>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mX6-BM-Jzw">
-                                                        <rect key="frame" x="59" y="14" width="296" height="100"/>
+                                                        <rect key="frame" x="31" y="14" width="352" height="100"/>
                                                         <subviews>
                                                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abution" translatesAutoresizingMaskIntoConstraints="NO" id="ItI-5R-e6Z">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -280,7 +269,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-Dr-KMM">
-                                                                <rect key="frame" x="116" y="18" width="180" height="64"/>
+                                                                <rect key="frame" x="116" y="16" width="180" height="68"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020年4月15日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcO-Lc-4ct">
                                                                         <rect key="frame" x="0.0" y="0.0" width="180" height="24"/>
@@ -289,7 +278,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="罌粟花" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGM-a8-dbm">
-                                                                        <rect key="frame" x="0.0" y="40" width="180" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="40" width="180" height="28"/>
                                                                         <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -299,6 +288,17 @@
                                                                     <constraint firstAttribute="width" constant="180" id="2Xw-dC-mXL"/>
                                                                 </constraints>
                                                             </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RN-ST-2TO">
+                                                                <rect key="frame" x="312" y="30" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="LRy-yF-Png"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="q35-Wq-P6t"/>
+                                                                </constraints>
+                                                                <state key="normal" image="icon_unBookmarked"/>
+                                                                <connections>
+                                                                    <action selector="bookmark_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EWU-v0-JA5"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="Cf7-08-dKH"/>
@@ -306,11 +306,9 @@
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="8RN-ST-2TO" firstAttribute="centerY" secondItem="BV5-jq-qJv" secondAttribute="centerY" id="5II-pA-SHM"/>
                                                     <constraint firstItem="mX6-BM-Jzw" firstAttribute="centerX" secondItem="BV5-jq-qJv" secondAttribute="centerX" id="A8p-aB-VrU"/>
                                                     <constraint firstAttribute="height" constant="100" id="EAD-6h-tf9"/>
                                                     <constraint firstItem="mX6-BM-Jzw" firstAttribute="top" secondItem="BV5-jq-qJv" secondAttribute="top" constant="14" id="SmP-5P-18F"/>
-                                                    <constraint firstAttribute="trailing" secondItem="8RN-ST-2TO" secondAttribute="trailing" constant="16" id="vcs-3c-JkG"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDV-Nz-3He">
@@ -610,12 +608,11 @@
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bl-DH-pBH">
                                                             <rect key="frame" x="314" y="9.6666666666666679" width="80" height="29.000000000000004"/>
-                                                            <color key="backgroundColor" red="0.89411764709999997" green="0.94509803920000002" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="80" id="OUK-XI-PTb"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <state key="normal" title="查看">
+                                                            <state key="normal" title="查看收藏">
                                                                 <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
@@ -738,21 +735,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedQuoteCell" textLabel="R76-T7-bFQ" detailTextLabel="TfX-5v-HaR" style="IBUITableViewCellStyleSubtitle" id="iaP-92-cxO" customClass="CollectedQuoteTableViewCell" customModule="句句" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="54.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="60.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iaP-92-cxO" id="gwY-hk-gR3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R76-T7-bFQ">
-                                            <rect key="frame" x="20" y="10" width="25" height="17"/>
+                                            <rect key="frame" x="20" y="11" width="25" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfX-5v-HaR">
-                                            <rect key="frame" x="20.000000000000004" y="28" width="40.333333333333336" height="17"/>
+                                            <rect key="frame" x="20.000000000000004" y="31" width="40.333333333333336" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>

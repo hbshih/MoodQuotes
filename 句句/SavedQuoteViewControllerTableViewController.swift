@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class SavedQuoteViewControllerTableViewController: UITableViewController {
 
@@ -16,6 +17,7 @@ class SavedQuoteViewControllerTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 80
+        Analytics.logEvent("saved_quotes_opened", parameters: nil)
     }
 
     // MARK: - Table view data source

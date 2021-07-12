@@ -69,6 +69,7 @@ class ViewController: UIViewController, MessagingDelegate {
         
         if bookmark_saved == false
         {
+            Analytics.logEvent("Bookmarked_Quote", parameters: nil)
             bookmark_saved = true
             print("tapped")
             
@@ -101,6 +102,7 @@ class ViewController: UIViewController, MessagingDelegate {
             Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
         }else
         {
+            Analytics.logEvent("Unbookmarked_Quote", parameters: nil)
             bookmark_saved = false
             if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
             {
@@ -396,7 +398,7 @@ class ViewController: UIViewController, MessagingDelegate {
     
     @objc func screenshotTaken()
     {
-        Analytics.logEvent("Screenshot Taken", parameters: nil)
+        Analytics.logEvent("Screenshot_Taken", parameters: nil)
         performSegue(withIdentifier: "shareSegue", sender: nil)
     }
     
@@ -557,9 +559,11 @@ class ViewController: UIViewController, MessagingDelegate {
                 {
                     // frontStackView.backgroundColor = .blue
                     buttonView.isHidden = true
+                    Button_bookmark.isHidden = true
                     let image = takeScreenshot(of: frontStackView)
                     VC.imageToShow = image
                     buttonView.isHidden = false
+                    Button_bookmark.isHidden = false
                 }else
                 {
                     stack_action_controller.isHidden = true
