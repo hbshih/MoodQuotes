@@ -18,7 +18,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     @IBAction func backTapped(_ sender: Any) {
@@ -60,13 +60,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             return cell
         default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "updateBackgroundTableViewCell") as! UpdateBackgroundColorTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "checkBookmarkCell") as! SettingBookmarkTableViewCell
             
-            let defaults = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!
-            let color = defaults.colorForKey(key: "BackgroundColor")!
-            print("reload color")
-            print(color)
-            cell.backgrundColor.backgroundColor = color
             return cell
         }
     }

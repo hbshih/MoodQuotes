@@ -49,6 +49,10 @@
 		B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517CB4255FB73400E134CC /* SettingViewController.swift */; };
 		B552F4DF256D0449001013BA /* SyncAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552F4DE256D0449001013BA /* SyncAppWidget.swift */; };
 		B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552F4DE256D0449001013BA /* SyncAppWidget.swift */; };
+		B5613EC1269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5613EC0269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift */; };
+		B5613EC7269BCBF6002EE2F4 /* SavedQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5613EC6269BCBF6002EE2F4 /* SavedQuoteViewController.swift */; };
+		B5613ED1269BCC0F002EE2F4 /* SavedQuoteViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5613ED0269BCC0F002EE2F4 /* SavedQuoteViewControllerTableViewController.swift */; };
+		B5613ED7269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5613ED6269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift */; };
 		B5807EFD25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B58E54FA2629AEE9009657E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5517C7D255FAFC500E134CC /* Assets.xcassets */; };
@@ -178,6 +182,10 @@
 		B5517C98255FAFC600E134CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5517CB4255FB73400E134CC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B552F4DE256D0449001013BA /* SyncAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAppWidget.swift; sourceTree = "<group>"; };
+		B5613EC0269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedQuoteTableViewCell.swift; sourceTree = "<group>"; };
+		B5613EC6269BCBF6002EE2F4 /* SavedQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuoteViewController.swift; sourceTree = "<group>"; };
+		B5613ED0269BCC0F002EE2F4 /* SavedQuoteViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuoteViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		B5613ED6269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
 		B58E55332629BD9E009657E0 /* flowerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowerHandler.swift; sourceTree = "<group>"; };
 		B58FD31C256B737000CBDAB6 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +336,7 @@
 		B5517C73255FAFC500E134CC /* 句句 */ = {
 			isa = PBXGroup;
 			children = (
+				B5613EC6269BCBF6002EE2F4 /* SavedQuoteViewController.swift */,
 				B5A32A24262C1F590057454E /* I-PenCrane-B-2.ttf */,
 				B59E21C125676F85003A5521 /* GoogleService-Info.plist */,
 				B59E216625675E65003A5521 /* 句句.entitlements */,
@@ -371,6 +380,9 @@
 				B58E55332629BD9E009657E0 /* flowerHandler.swift */,
 				B50374FF26331882004E2F86 /* NativeAdView.xib */,
 				B50374CC263310B5004E2F86 /* AdMobsViewController.swift */,
+				B5613EC0269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift */,
+				B5613ED0269BCC0F002EE2F4 /* SavedQuoteViewControllerTableViewController.swift */,
+				B5613ED6269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -731,8 +743,11 @@
 				B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B591B17F2570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
 				B552F4DF256D0449001013BA /* SyncAppWidget.swift in Sources */,
+				B5613EC7269BCBF6002EE2F4 /* SavedQuoteViewController.swift in Sources */,
+				B5613ED7269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift in Sources */,
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,
 				B58E55342629BD9E009657E0 /* flowerHandler.swift in Sources */,
+				B5613ED1269BCC0F002EE2F4 /* SavedQuoteViewControllerTableViewController.swift in Sources */,
 				B59C53692622F1C5008BFB0A /* OnboardingStoryViewController.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
 				B5DF562E256F2C01004A24D8 /* Date.swift in Sources */,
@@ -743,6 +758,7 @@
 				B50374CD263310B5004E2F86 /* AdMobsViewController.swift in Sources */,
 				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
+				B5613EC1269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift in Sources */,
 				B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -959,7 +975,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 43;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -971,7 +987,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.9;
+				MARKETING_VERSION = 5.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1100,7 +1116,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 43;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1112,7 +1128,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.9;
+				MARKETING_VERSION = 5.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1324,7 +1340,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1337,7 +1353,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 4.9;
+				MARKETING_VERSION = 5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1355,7 +1371,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1368,7 +1384,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 4.9;
+				MARKETING_VERSION = 5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

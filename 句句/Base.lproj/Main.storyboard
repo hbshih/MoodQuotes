@@ -258,6 +258,17 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BV5-jq-qJv">
                                                 <rect key="frame" x="0.0" y="42" width="414" height="100"/>
                                                 <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RN-ST-2TO">
+                                                        <rect key="frame" x="358" y="30" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="LRy-yF-Png"/>
+                                                            <constraint firstAttribute="height" constant="40" id="q35-Wq-P6t"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="icon_unBookmarked"/>
+                                                        <connections>
+                                                            <action selector="bookmark_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EWU-v0-JA5"/>
+                                                        </connections>
+                                                    </button>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mX6-BM-Jzw">
                                                         <rect key="frame" x="59" y="14" width="296" height="100"/>
                                                         <subviews>
@@ -288,13 +299,6 @@
                                                                     <constraint firstAttribute="width" constant="180" id="2Xw-dC-mXL"/>
                                                                 </constraints>
                                                             </stackView>
-                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noun_bookmark_4007674" translatesAutoresizingMaskIntoConstraints="NO" id="mBZ-74-k1w">
-                                                                <rect key="frame" x="296" y="34" width="32" height="32"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="32" id="7zm-U6-DmT"/>
-                                                                    <constraint firstAttribute="height" constant="32" id="S7w-wZ-hra"/>
-                                                                </constraints>
-                                                            </imageView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="Cf7-08-dKH"/>
@@ -302,9 +306,11 @@
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="8RN-ST-2TO" firstAttribute="centerY" secondItem="BV5-jq-qJv" secondAttribute="centerY" id="5II-pA-SHM"/>
                                                     <constraint firstItem="mX6-BM-Jzw" firstAttribute="centerX" secondItem="BV5-jq-qJv" secondAttribute="centerX" id="A8p-aB-VrU"/>
                                                     <constraint firstAttribute="height" constant="100" id="EAD-6h-tf9"/>
                                                     <constraint firstItem="mX6-BM-Jzw" firstAttribute="top" secondItem="BV5-jq-qJv" secondAttribute="top" constant="14" id="SmP-5P-18F"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8RN-ST-2TO" secondAttribute="trailing" constant="16" id="vcs-3c-JkG"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDV-Nz-3He">
@@ -359,7 +365,6 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="9Wg-gp-si8" firstAttribute="top" secondItem="vDV-Nz-3He" secondAttribute="top" id="1EH-Rs-KmY"/>
                                                     <constraint firstItem="9Wg-gp-si8" firstAttribute="leading" secondItem="vDV-Nz-3He" secondAttribute="leading" constant="16" id="OBa-iR-mLW"/>
@@ -519,6 +524,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VK4-l7-MkZ"/>
                     <connections>
+                        <outlet property="Button_bookmark" destination="8RN-ST-2TO" id="ztD-cb-I88"/>
                         <outlet property="ImageOfFlower" destination="ItI-5R-e6Z" id="9fY-A2-uPw"/>
                         <outlet property="authorName" destination="nzE-5V-zvv" id="Cqe-hA-1sP"/>
                         <outlet property="backgroundHideenView" destination="kgV-82-bvE" id="6DU-d0-f0L"/>
@@ -577,6 +583,68 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="puX-Ta-Pxk" id="hGj-Dd-0Rr">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="checkBookmarkCell" id="d9b-KS-iDp" customClass="SettingBookmarkTableViewCell" customModule="句句" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="238" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d9b-KS-iDp" id="cW5-9b-qve">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZF1-fH-bjO">
+                                                    <rect key="frame" x="16" y="11" width="394" height="48"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bookmark" translatesAutoresizingMaskIntoConstraints="NO" id="LrX-JS-F5Z">
+                                                            <rect key="frame" x="0.0" y="0.0" width="44" height="48"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="44" id="52E-Xa-IeH"/>
+                                                                <constraint firstAttribute="width" constant="44" id="acO-cE-T9x"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已儲存的語錄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ege-lJ-s7j">
+                                                            <rect key="frame" x="52" y="13.666666666666668" width="104" height="21.000000000000004"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bl-DH-pBH">
+                                                            <rect key="frame" x="314" y="9.6666666666666679" width="80" height="29.000000000000004"/>
+                                                            <color key="backgroundColor" red="0.89411764709999997" green="0.94509803920000002" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="OUK-XI-PTb"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="查看">
+                                                                <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <integer key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <segue destination="gcp-eo-gRK" kind="show" id="Zb5-2g-vHl"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="LrX-JS-F5Z" firstAttribute="leading" secondItem="ZF1-fH-bjO" secondAttribute="leading" id="LSF-cg-LSJ"/>
+                                                        <constraint firstItem="Ege-lJ-s7j" firstAttribute="leading" secondItem="LrX-JS-F5Z" secondAttribute="trailing" constant="8" symbolic="YES" id="SZt-fA-bkk"/>
+                                                        <constraint firstItem="Ege-lJ-s7j" firstAttribute="centerY" secondItem="ZF1-fH-bjO" secondAttribute="centerY" id="XPw-yV-Ep3"/>
+                                                        <constraint firstItem="8Bl-DH-pBH" firstAttribute="centerY" secondItem="ZF1-fH-bjO" secondAttribute="centerY" id="bR0-gr-c1c"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8Bl-DH-pBH" secondAttribute="trailing" id="smh-P4-xQS"/>
+                                                        <constraint firstAttribute="bottom" secondItem="LrX-JS-F5Z" secondAttribute="bottom" id="xRj-qF-fBQ"/>
+                                                        <constraint firstItem="LrX-JS-F5Z" firstAttribute="top" secondItem="ZF1-fH-bjO" secondAttribute="top" id="zlC-YS-qhD"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZF1-fH-bjO" firstAttribute="top" secondItem="cW5-9b-qve" secondAttribute="topMargin" id="MCK-kl-FH7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZF1-fH-bjO" secondAttribute="bottom" id="WJr-pH-MN1"/>
+                                                <constraint firstItem="ZF1-fH-bjO" firstAttribute="leading" secondItem="cW5-9b-qve" secondAttribute="leadingMargin" constant="-4" id="bgd-WC-Xj0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZF1-fH-bjO" secondAttribute="trailing" constant="-16" id="rKR-ic-FxF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -659,6 +727,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGC-u8-SHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1992.753623188406" y="-323.4375"/>
+        </scene>
+        <!--Saved Quote View Controller Table View Controller-->
+        <scene sceneID="gS8-g3-VXp">
+            <objects>
+                <tableViewController id="gcp-eo-gRK" customClass="SavedQuoteViewControllerTableViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="62Y-RG-jv7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedQuoteCell" textLabel="R76-T7-bFQ" detailTextLabel="TfX-5v-HaR" style="IBUITableViewCellStyleSubtitle" id="iaP-92-cxO" customClass="CollectedQuoteTableViewCell" customModule="句句" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="54.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iaP-92-cxO" id="gwY-hk-gR3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R76-T7-bFQ">
+                                            <rect key="frame" x="20" y="10" width="25" height="17"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfX-5v-HaR">
+                                            <rect key="frame" x="20.000000000000004" y="28" width="40.333333333333336" height="17"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="author" destination="TfX-5v-HaR" id="Kf5-CT-0Rm"/>
+                                    <outlet property="quote" destination="R76-T7-bFQ" id="BQd-sh-2lP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gcp-eo-gRK" id="jf8-LF-eEo"/>
+                            <outlet property="delegate" destination="gcp-eo-gRK" id="nTi-GG-3SF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="R1F-XF-DSj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4K-kN-brs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3500" y="-315"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="0vy-Gz-1w9">
@@ -1778,7 +1895,7 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pIM-gP-oXb"/>
+        <segue reference="Uxh-iH-9fq"/>
         <segue reference="ly3-Ze-ofX"/>
         <segue reference="htk-Qi-2dc"/>
         <segue reference="9CO-rk-QmR"/>
@@ -1793,14 +1910,15 @@ App們將會開始抖動。</string>
         <image name="Tutorial_Step 5" width="313" height="209"/>
         <image name="abution" width="5000" height="5000"/>
         <image name="icon_back" width="48" height="48"/>
+        <image name="icon_bookmark" width="48" height="48"/>
         <image name="icon_setting" width="40" height="40"/>
         <image name="icon_share" width="37" height="37"/>
         <image name="icon_touch" width="100" height="100"/>
+        <image name="icon_unBookmarked" width="100" height="100"/>
         <image name="noun_Cross_1776318 1" width="40" height="40"/>
         <image name="noun_Love_3860852 1" width="40" height="40"/>
         <image name="noun_Save_2209758 1" width="35" height="35"/>
         <image name="noun_Share_1058858 (2) 1" width="35" height="35"/>
-        <image name="noun_bookmark_4007674" width="100" height="100"/>
         <image name="noun_instagram_3350460 (1) 1" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

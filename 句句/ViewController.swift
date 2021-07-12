@@ -19,6 +19,7 @@ var global_quote: String = ""
 
 class ViewController: UIViewController, MessagingDelegate {
     
+    @IBOutlet weak var Button_bookmark: UIButton!
     @IBOutlet weak var quoteAndAuthorStackView: UIStackView!
     @IBOutlet weak var ratingView: UIStackView!
     @IBOutlet weak var frontStackView: UIStackView!
@@ -45,7 +46,7 @@ class ViewController: UIViewController, MessagingDelegate {
         
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
         {
-        
+            
         }else
         {
             print("touched")
@@ -60,6 +61,62 @@ class ViewController: UIViewController, MessagingDelegate {
             }
             
         }
+    }
+    
+    var bookmark_saved = false
+    
+    @IBAction func bookmark_tapped(_ sender: Any) {
+        
+        if bookmark_saved == false
+        {
+            bookmark_saved = true
+            print("tapped")
+            
+            if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+            {
+                print("saved quote \(quoteArray)")
+                quoteArray.append(frontQuote.text!)
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
+            }else
+            {
+                print("saved quote is empty")
+                var quoteArray = [String]()
+                quoteArray.append(frontQuote.text!)
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
+            }
+            
+            if var authorArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
+            {
+                print("saved author \(authorArray)")
+                authorArray.append(authorName.text!)
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
+            }else
+            {
+                print("saved author is empty")
+                var authorArray = [String]()
+                authorArray.append(authorName.text!)
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
+            }
+            
+            Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
+        }else
+        {
+            bookmark_saved = false
+            if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+            {
+                // print(frontQuote.text!)
+                quoteArray.removeLast()
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
+            }
+            
+            if var authorArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
+            {
+                authorArray.removeLast()
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
+            }
+            Button_bookmark.setBackgroundImage(UIImage(named: "icon_unBookmarked"), for: .normal)
+        }
+        
     }
     
     @IBAction func like_tapped(_ sender: Any) {
@@ -95,7 +152,7 @@ class ViewController: UIViewController, MessagingDelegate {
     
     @objc func loadNewQuotes() {
         print("enter foreground now")
-       // your code
+        // your code
         //If no quote saved in local & time now >= update time
         /*|| UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil*/
         
@@ -126,7 +183,7 @@ class ViewController: UIViewController, MessagingDelegate {
                             downloadFlowerImage()
                             
                             // show rating
-                          //  showRatingview()
+                            //  showRatingview()
                             
                             //更新Widget
                             if #available(iOS 14.0, *) {
@@ -134,7 +191,7 @@ class ViewController: UIViewController, MessagingDelegate {
                             } else {
                                 // Fallback on earlier versions
                             }
-                            
+                            checkIfBookmarked()
                         }
                     } else {
                         let errQuote = Quote(quote: "App當機拉", author: "By Me")
@@ -159,6 +216,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 self.hiddenQuote.text = Q
                 self.hiddenAuthorName.text = A
                 global_quote = frontQuote.text!
+                checkIfBookmarked()
             }
         }
         
@@ -166,6 +224,7 @@ class ViewController: UIViewController, MessagingDelegate {
         {
             WidgetCenter.shared.reloadAllTimelines()
         }
+
     }
     
     @IBOutlet weak var ImageOfFlower: UIImageView!
@@ -180,12 +239,34 @@ class ViewController: UIViewController, MessagingDelegate {
         }
     }
     
-
+    func checkIfBookmarked()
+    {
+        if let array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+        {
+            if array.contains(self.frontQuote.text!)
+            {
+                self.bookmark_saved = true
+                self.Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
+            }else
+            {
+                print("quote today \(self.frontQuote.text)")
+                print("quote array \(array)")
+            }
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      //  print(flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults))
+        if let arr = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+        {
+            print("saved quotes")
+            print(arr)
+        }
+        
+        //  print(flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults))
         
         // user open app count
         if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
@@ -227,10 +308,15 @@ class ViewController: UIViewController, MessagingDelegate {
             Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)
         }
         
+        if var author = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
+        {
+            print("author \(author)")
+        }
+        
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.didBecomeActiveNotification, object: nil)
-
+        
         //Notifications
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
@@ -250,7 +336,7 @@ class ViewController: UIViewController, MessagingDelegate {
         font = Display_Font(font_size: 18).getUIFont()
         authorName.font = font
         hiddenAuthorName.font = font
-       // ref = Database.database().reference()
+        // ref = Database.database().reference()
         
         //todayDateLabel.text = Date().getTodayDate
         frontQuote.text = defaultQuote
@@ -258,25 +344,27 @@ class ViewController: UIViewController, MessagingDelegate {
         ImageOfFlower.setImage(defaultFlowerImage!)
         nameOfFlower.text = defaultFlowerImageName
         
+        
+        
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil
         {
             onboardingTouchIcon.image = UIImage(named: "icon_touch_tutorial")
         }
         /*
-        rubyLabel.text = "｜成功《せいこう》するかどうかは、きみの｜努力《どりょく》に｜係《かか》る。｜人々《ひとびと》の｜生死《せいし》に｜係《かか》る。"  //2
-        //3
-        rubyLabel.textAlignment = .left
-        rubyLabel.font = .systemFont(ofSize: 20.0)
-        rubyLabel.orientation = .horizontal
-        rubyLabel.lineBreakMode = .byCharWrapping
-        
-        frontQuote.textAlignment = .left
-        frontQuote.lineBreakMode = .byCharWrapping
-        */
-    /*    DispatchQueue.main.async {
-            self.loadNewQuotes()
-        }*/
-      //  loadNewQuotes()
+         rubyLabel.text = "｜成功《せいこう》するかどうかは、きみの｜努力《どりょく》に｜係《かか》る。｜人々《ひとびと》の｜生死《せいし》に｜係《かか》る。"  //2
+         //3
+         rubyLabel.textAlignment = .left
+         rubyLabel.font = .systemFont(ofSize: 20.0)
+         rubyLabel.orientation = .horizontal
+         rubyLabel.lineBreakMode = .byCharWrapping
+         
+         frontQuote.textAlignment = .left
+         frontQuote.lineBreakMode = .byCharWrapping
+         */
+        /*    DispatchQueue.main.async {
+         self.loadNewQuotes()
+         }*/
+        //  loadNewQuotes()
         
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
@@ -284,27 +372,27 @@ class ViewController: UIViewController, MessagingDelegate {
     
     
     func registerForNotifications() {
-      NotificationCenter.default.addObserver(
-        forName: .newPokemonFetched,
-        object: nil,
-        queue: nil) { (notification) in
-          print("notification received")
-/*        /*For Testing*/
-        let content = UNMutableNotificationContent()
-        content.title = "test notifaction"
-        content.body = "VC GOT notified!"
-        content.sound = UNNotificationSound.default
-
-        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        let req  = UNNotificationRequest(identifier: "VC_Notified", content: content, trigger: tri)
-
-        UNUserNotificationCenter.current().add(req) { (error) in
-            print("error\(error )")
+        NotificationCenter.default.addObserver(
+            forName: .newPokemonFetched,
+            object: nil,
+            queue: nil) { (notification) in
+            print("notification received")
+            /*        /*For Testing*/
+             let content = UNMutableNotificationContent()
+             content.title = "test notifaction"
+             content.body = "VC GOT notified!"
+             content.sound = UNNotificationSound.default
+             
+             let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+             let req  = UNNotificationRequest(identifier: "VC_Notified", content: content, trigger: tri)
+             
+             UNUserNotificationCenter.current().add(req) { (error) in
+             print("error\(error )")
+             }
+             /*Testing Ends*/*/
         }
-        /*Testing Ends*/*/
-      }
     }
-
+    
     
     @objc func screenshotTaken()
     {
@@ -325,18 +413,18 @@ class ViewController: UIViewController, MessagingDelegate {
                 
                 // Get a reference to the storage service using the default Firebase App
                 let storage = Storage.storage()
-
+                
                 // Create a storage reference from our storage service
                 let storageRef = storage.reference()
                 
                 print("get url \(image_url)")
                 // Reference to an image file in Firebase Storage
-                 let reference = storageRef.child("flowers/\(image_url).png")
-
+                let reference = storageRef.child("flowers/\(image_url).png")
+                
                 // Placeholder image
                 let placeholderImage = UIImage(named: "placeholder.jpg")
                 
-
+                
                 // Load the image using SDWebImage
                 self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
                     if error != nil
@@ -368,18 +456,18 @@ class ViewController: UIViewController, MessagingDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
+        
         //check Color
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
         {
             screenView.backgroundColor = color
             frontStackView.backgroundColor = color
             backgroundHideenView.backgroundColor =  color
-           // quoteAndAuthorStackView.backgroundColor = color
-            quoteAndAuthorStackView.customize(backgroundColor: color, radiusSize: 20)
+            // quoteAndAuthorStackView.backgroundColor = color
+            // quoteAndAuthorStackView.customize(backgroundColor: color, radiusSize: 20)
         }
-
-       // loadNewQuotes()
+        
+        // loadNewQuotes()
         todayDateLabel.text = Date().getTodayDate
     }
     
@@ -389,62 +477,66 @@ class ViewController: UIViewController, MessagingDelegate {
         
         DispatchQueue.main.async {
             self.loadNewQuotes()
-        }
-        
-    /* Comment for now --- 4/17/2021
-        //If no quote saved in local & time now >= update time
-        if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
-        {
-            // Get From API
-            DispatchQueue.main.async {
-                firebaseService().getQuoteApiResponse { [self] (result) in
-                    let quoteInfo: [Quote]
-                    if case .success(let fetchedData) = result {
-                        quoteInfo = fetchedData
-                        self.quote = quoteInfo.first!.quote
-                        self.author = quoteInfo.first!.author
-                        DispatchQueue.main.async { [self] in
-                            // Update Local Data
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.quote, forKey: "Quote")
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.author, forKey: "Author")
-                            self.frontQuote.text = self.quote
-                            self.authorName.text = self.author
-                            self.hiddenQuote.text = self.quote
-                            self.hiddenAuthorName.text = self.author
-                            global_quote = frontQuote.text!
-                            //更新Widget
-                            if #available(iOS 14.0, *) {
-                                WidgetCenter.shared.reloadAllTimelines()
-                            } else {
-                                // Fallback on earlier versions
-                            }
-                        }
-                    } else {
-                        let errQuote = Quote(quote: "App當機拉", author: "By Me")
-                        quoteInfo = [errQuote,errQuote]
-                    }
-                }
-            }
             
-        }else
-        {
-            print("Load Quotes and Author From Local")
-            let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
-            let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
-            DispatchQueue.main.async { [self] in
-                self.frontQuote.text = Q
-                self.authorName.text = A
-                self.hiddenQuote.text = Q
-                self.hiddenAuthorName.text = A
-                global_quote = frontQuote.text!
-            }
+            
+
+            
         }
         
-        if #available(iOS 14.0, *)
-        {
-            WidgetCenter.shared.reloadAllTimelines()
-        }
-        */
+        /* Comment for now --- 4/17/2021
+         //If no quote saved in local & time now >= update time
+         if (UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")) == nil || SyncAppQuotes().checkIfUpdate()
+         {
+         // Get From API
+         DispatchQueue.main.async {
+         firebaseService().getQuoteApiResponse { [self] (result) in
+         let quoteInfo: [Quote]
+         if case .success(let fetchedData) = result {
+         quoteInfo = fetchedData
+         self.quote = quoteInfo.first!.quote
+         self.author = quoteInfo.first!.author
+         DispatchQueue.main.async { [self] in
+         // Update Local Data
+         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.quote, forKey: "Quote")
+         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.author, forKey: "Author")
+         self.frontQuote.text = self.quote
+         self.authorName.text = self.author
+         self.hiddenQuote.text = self.quote
+         self.hiddenAuthorName.text = self.author
+         global_quote = frontQuote.text!
+         //更新Widget
+         if #available(iOS 14.0, *) {
+         WidgetCenter.shared.reloadAllTimelines()
+         } else {
+         // Fallback on earlier versions
+         }
+         }
+         } else {
+         let errQuote = Quote(quote: "App當機拉", author: "By Me")
+         quoteInfo = [errQuote,errQuote]
+         }
+         }
+         }
+         
+         }else
+         {
+         print("Load Quotes and Author From Local")
+         let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote")!
+         let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
+         DispatchQueue.main.async { [self] in
+         self.frontQuote.text = Q
+         self.authorName.text = A
+         self.hiddenQuote.text = Q
+         self.hiddenAuthorName.text = A
+         global_quote = frontQuote.text!
+         }
+         }
+         
+         if #available(iOS 14.0, *)
+         {
+         WidgetCenter.shared.reloadAllTimelines()
+         }
+         */
         
     }
     
@@ -459,13 +551,13 @@ class ViewController: UIViewController, MessagingDelegate {
                 
                 
                 backgroundHideenView.isHidden = false
-
+                
                 
                 if #available(iOS 14.0, *)
                 {
-                   // frontStackView.backgroundColor = .blue
+                    // frontStackView.backgroundColor = .blue
                     buttonView.isHidden = true
-                    let image = takeScreenshot(of: quoteAndAuthorStackView)
+                    let image = takeScreenshot(of: frontStackView)
                     VC.imageToShow = image
                     buttonView.isHidden = false
                 }else
@@ -544,12 +636,12 @@ extension ViewController: UNUserNotificationCenterDelegate {
 
 
 extension UIView {
-
+    
     func takeScreenShot() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
-
+        
         drawHierarchy(in: self.bounds, afterScreenUpdates: true)
-
+        
         let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return image
@@ -558,17 +650,17 @@ extension UIView {
 
 
 extension UIImageView {
-        func flash(numberOfFlashes: Float) {
-           let flash = CABasicAnimation(keyPath: "opacity")
-           flash.duration = 0.2
-           flash.fromValue = 1
-           flash.toValue = 0.1
-           flash.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-           flash.autoreverses = true
-           flash.repeatCount = numberOfFlashes
-           layer.add(flash, forKey: nil)
-       }
- }
+    func flash(numberOfFlashes: Float) {
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 0.2
+        flash.fromValue = 1
+        flash.toValue = 0.1
+        flash.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        flash.autoreverses = true
+        flash.repeatCount = numberOfFlashes
+        layer.add(flash, forKey: nil)
+    }
+}
 
 extension UIStackView {
     func customize(backgroundColor: UIColor = .clear, radiusSize: CGFloat = 0) {
@@ -576,7 +668,7 @@ extension UIStackView {
         subView.backgroundColor = backgroundColor
         subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         insertSubview(subView, at: 0)
-
+        
         subView.layer.cornerRadius = radiusSize
         subView.layer.masksToBounds = true
         subView.clipsToBounds = true
