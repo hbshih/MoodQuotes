@@ -19,6 +19,7 @@ var global_quote: String = ""
 
 class ViewController: UIViewController, MessagingDelegate {
     
+    @IBOutlet weak var bookmarkNotification: UILabel!
     @IBOutlet weak var Button_bookmark: UIButton!
     @IBOutlet weak var quoteAndAuthorStackView: UIStackView!
     @IBOutlet weak var ratingView: UIStackView!
@@ -69,6 +70,10 @@ class ViewController: UIViewController, MessagingDelegate {
         
         if bookmark_saved == false
         {
+            self.bookmarkNotification.fadeIn(completion: {
+                    (finished: Bool) -> Void in
+                    self.bookmarkNotification.fadeOut()
+                    })
             Analytics.logEvent("Bookmarked_Quote", parameters: nil)
             bookmark_saved = true
             print("tapped")
@@ -261,6 +266,9 @@ class ViewController: UIViewController, MessagingDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.bookmarkNotification.alpha = 0
+        self.bookmarkNotification.text = "語錄已儲存！"
         
         if let arr = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
         {
@@ -471,6 +479,7 @@ class ViewController: UIViewController, MessagingDelegate {
         
         // loadNewQuotes()
         todayDateLabel.text = Date().getTodayDate
+        checkIfBookmarked()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -677,4 +686,20 @@ extension UIStackView {
         subView.layer.masksToBounds = true
         subView.clipsToBounds = true
     }
+}
+
+extension UIView {
+
+
+    func fadeIn(duration: TimeInterval = 0.3, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
+        UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
+        self.alpha = 1.0
+        }, completion: completion)  }
+
+    func fadeOut(duration: TimeInterval = 0.3, delay: TimeInterval = 0.5, completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in}) {
+        UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
+        self.alpha = 0.0
+        }, completion: completion)
+}
+
 }

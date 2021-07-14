@@ -269,7 +269,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-Dr-KMM">
-                                                                <rect key="frame" x="116" y="16" width="180" height="68"/>
+                                                                <rect key="frame" x="116" y="18" width="180" height="64"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020年4月15日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcO-Lc-4ct">
                                                                         <rect key="frame" x="0.0" y="0.0" width="180" height="24"/>
@@ -278,7 +278,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="罌粟花" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGM-a8-dbm">
-                                                                        <rect key="frame" x="0.0" y="40" width="180" height="28"/>
+                                                                        <rect key="frame" x="0.0" y="40" width="180" height="24"/>
                                                                         <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -488,14 +488,22 @@
                                             <constraint firstAttribute="bottom" secondItem="64v-JA-4Ui" secondAttribute="bottom" id="xcu-va-2nY"/>
                                         </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="語錄已儲存！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MD-HH-x5Y">
+                                        <rect key="frame" x="155" y="214" width="104" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="5TO-Ig-amh" secondAttribute="bottom" constant="16" id="3Hy-xw-RES"/>
+                                    <constraint firstItem="4MD-HH-x5Y" firstAttribute="top" secondItem="BV5-jq-qJv" secondAttribute="bottom" constant="32" id="7Bd-26-0UY"/>
                                     <constraint firstAttribute="trailing" secondItem="5TO-Ig-amh" secondAttribute="trailing" id="8jt-X9-p9x"/>
                                     <constraint firstAttribute="trailing" secondItem="kgV-82-bvE" secondAttribute="trailing" id="Gd4-Vg-9rU"/>
                                     <constraint firstAttribute="bottom" secondItem="kgV-82-bvE" secondAttribute="bottom" id="HEL-dx-G4h"/>
                                     <constraint firstItem="kgV-82-bvE" firstAttribute="leading" secondItem="mFK-is-lcH" secondAttribute="leading" id="LmT-f1-HIP"/>
+                                    <constraint firstItem="4MD-HH-x5Y" firstAttribute="centerX" secondItem="mFK-is-lcH" secondAttribute="centerX" id="k2i-PK-2oj"/>
                                     <constraint firstItem="5TO-Ig-amh" firstAttribute="leading" secondItem="mFK-is-lcH" secondAttribute="leading" id="pbr-cg-nTG"/>
                                     <constraint firstItem="kgV-82-bvE" firstAttribute="top" secondItem="mFK-is-lcH" secondAttribute="top" id="xig-Qo-V43"/>
                                 </constraints>
@@ -526,6 +534,7 @@
                         <outlet property="ImageOfFlower" destination="ItI-5R-e6Z" id="9fY-A2-uPw"/>
                         <outlet property="authorName" destination="nzE-5V-zvv" id="Cqe-hA-1sP"/>
                         <outlet property="backgroundHideenView" destination="kgV-82-bvE" id="6DU-d0-f0L"/>
+                        <outlet property="bookmarkNotification" destination="4MD-HH-x5Y" id="RMD-ya-kqr"/>
                         <outlet property="buttonView" destination="bvF-DK-zMc" id="VjG-Ll-5rM"/>
                         <outlet property="frontQuote" destination="BPk-MP-j3O" id="kwy-pZ-ONt"/>
                         <outlet property="frontStackView" destination="5TO-Ig-amh" id="NjM-gZ-sjJ"/>
@@ -735,21 +744,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedQuoteCell" textLabel="R76-T7-bFQ" detailTextLabel="TfX-5v-HaR" style="IBUITableViewCellStyleSubtitle" id="iaP-92-cxO" customClass="CollectedQuoteTableViewCell" customModule="句句" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="60.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="54.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iaP-92-cxO" id="gwY-hk-gR3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R76-T7-bFQ">
-                                            <rect key="frame" x="20" y="11" width="25" height="17"/>
+                                            <rect key="frame" x="20" y="10" width="25" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfX-5v-HaR">
-                                            <rect key="frame" x="20.000000000000004" y="31" width="40.333333333333336" height="17"/>
+                                            <rect key="frame" x="20.000000000000004" y="28" width="40.333333333333336" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -1892,7 +1901,7 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Uxh-iH-9fq"/>
+        <segue reference="pIM-gP-oXb"/>
         <segue reference="ly3-Ze-ofX"/>
         <segue reference="htk-Qi-2dc"/>
         <segue reference="9CO-rk-QmR"/>
