@@ -56,5 +56,32 @@ public var minute: Int {
        // print(formatter3.string(from: today))
     }
     
+    public var getDateDayOnly: String
+    {
+        let formatter3 = DateFormatter()
+        formatter3.dateFormat = "dd"
+        return formatter3.string(from: Date())
+       // print(formatter3.string(from: today))
+    }
+    
+    public var getDate: String
+    {
+        let formatter3 = DateFormatter()
+        formatter3.dateFormat = "yyyy年MM月"
+        return formatter3.string(from: Date())
+       // print(formatter3.string(from: today))
+    }
+    
+    public var getTWday: String
+    {
+        let formatter3 = DateFormatter()
+       // let weekday = Calendar.current.component(.weekday, from: Date())
+        formatter3.locale = Locale(identifier: "zh_Hant_TW")
+        formatter3.dateFormat = "EEEE"
+       // formatter3.weekdaySymbols
+        return formatter3.string(from: Date())
+       // print(formatter3.string(from: today))
+    }
+    
 }
 

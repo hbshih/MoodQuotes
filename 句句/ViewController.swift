@@ -19,6 +19,14 @@ var global_quote: String = ""
 
 class ViewController: UIViewController, MessagingDelegate {
     
+    @IBOutlet weak var hiddenQuoteView: UIStackView!
+    @IBOutlet weak var hiddenQuoteViewFlowerImage: UIImageView!
+    @IBOutlet weak var hiddenQuoteViewAuthor: UILabel!
+    @IBOutlet weak var hiddenQuoteViewQuote: UILabel!
+    @IBOutlet weak var hiddenQuoteViewFlower: UILabel!
+    @IBOutlet weak var quoteView: UIView!
+    @IBOutlet weak var twDayLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var bookmarkNotification: UILabel!
     @IBOutlet weak var Button_bookmark: UIButton!
     @IBOutlet weak var quoteAndAuthorStackView: UIStackView!
@@ -235,6 +243,7 @@ class ViewController: UIViewController, MessagingDelegate {
         {
             WidgetCenter.shared.reloadAllTimelines()
         }
+        
 
     }
     
@@ -343,11 +352,11 @@ class ViewController: UIViewController, MessagingDelegate {
         }
         
         //UI
-        var font = Display_Font(font_size: 24).getUIFont()
+        var font = Display_Font(font_size: 18).getUIFont()
    //     hiddenQuote.font = font
      //   hiddenQuoteAdder.font = font
         frontQuote.font = font
-        font = Display_Font(font_size: 18).getUIFont()
+        font = Display_Font(font_size: 16).getUIFont()
         authorName.font = font
     //    hiddenAuthorName.font = font
         // ref = Database.database().reference()
@@ -469,26 +478,35 @@ class ViewController: UIViewController, MessagingDelegate {
         }
     }
     
+    var backgroundColor = UIColor.white
+    
     override func viewWillAppear(_ animated: Bool) {
         
         //check Color
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
         {
+            backgroundColor = color
             screenView.backgroundColor = color
             frontStackView.backgroundColor = color
+            hiddenQuoteView.backgroundColor = color
            // backgroundHideenView.backgroundColor =  color
             // quoteAndAuthorStackView.backgroundColor = color
             // quoteAndAuthorStackView.customize(backgroundColor: color, radiusSize: 20)
         }
         
         // loadNewQuotes()
-        todayDateLabel.text = Date().getTodayDate
+        todayDateLabel.text = Date().getDateDayOnly
+        twDayLabel.text = Date().getTWday
+        dateLabel.text = Date().getDate
+        
         //checkIfBookmarked()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
-        todayDateLabel.text = Date().getTodayDate
+        todayDateLabel.text = Date().getDateDayOnly
+        twDayLabel.text = Date().getTWday
+        dateLabel.text = Date().getDate
         
         checkIfBookmarked()
         
@@ -563,6 +581,11 @@ class ViewController: UIViewController, MessagingDelegate {
             if let VC = segue.destination as? ShareViewController
             {
                 
+                hiddenQuoteViewQuote.text = self.frontQuote.text
+                hiddenQuoteViewAuthor.text = self.authorName.text
+                hiddenQuoteViewFlower.text = self.nameOfFlower.text
+                hiddenQuoteViewFlowerImage.setImage(ImageOfFlower.image!)
+                
                 Analytics.logEvent("home_vc_share_tapped", parameters: ["Quote": frontQuote.text as Any, "Author": authorName.text as Any])
                 
                 
@@ -575,8 +598,10 @@ class ViewController: UIViewController, MessagingDelegate {
                     // frontStackView.backgroundColor = .blue
                     buttonView.isHidden = true
                     Button_bookmark.isHidden = true
-                    let image = takeScreenshot(of: frontStackView)
+                    quoteAndAuthorStackView.backgroundColor = backgroundColor
+                    let image = takeScreenshot(of: quoteAndAuthorStackView)
                     VC.imageToShow = image
+                    quoteAndAuthorStackView.backgroundColor = .white
                     buttonView.isHidden = false
                     Button_bookmark.isHidden = false
                 }else
