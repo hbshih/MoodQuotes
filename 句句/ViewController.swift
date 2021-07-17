@@ -186,8 +186,8 @@ class ViewController: UIViewController, MessagingDelegate {
                             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.author, forKey: "Author")
                             self.frontQuote.text = self.quote
                             self.authorName.text = self.author
-                            self.hiddenQuote.text = self.quote
-                            self.hiddenAuthorName.text = self.author
+                           // self.hiddenQuote.text = self.quote
+                           // self.hiddenAuthorName.text = self.author
                             global_quote = frontQuote.text!
                             
                             // Update Flower
@@ -224,8 +224,8 @@ class ViewController: UIViewController, MessagingDelegate {
                 self.ImageOfFlower.setImage(FlowerImage)
                 self.nameOfFlower.text = FlowerName
                 
-                self.hiddenQuote.text = Q
-                self.hiddenAuthorName.text = A
+             //   self.hiddenQuote.text = Q
+             //   self.hiddenAuthorName.text = A
                 global_quote = frontQuote.text!
                 checkIfBookmarked()
             }
@@ -344,12 +344,12 @@ class ViewController: UIViewController, MessagingDelegate {
         
         //UI
         var font = Display_Font(font_size: 24).getUIFont()
-        hiddenQuote.font = font
-        hiddenQuoteAdder.font = font
+   //     hiddenQuote.font = font
+     //   hiddenQuoteAdder.font = font
         frontQuote.font = font
         font = Display_Font(font_size: 18).getUIFont()
         authorName.font = font
-        hiddenAuthorName.font = font
+    //    hiddenAuthorName.font = font
         // ref = Database.database().reference()
         
         //todayDateLabel.text = Date().getTodayDate
@@ -476,7 +476,7 @@ class ViewController: UIViewController, MessagingDelegate {
         {
             screenView.backgroundColor = color
             frontStackView.backgroundColor = color
-            backgroundHideenView.backgroundColor =  color
+           // backgroundHideenView.backgroundColor =  color
             // quoteAndAuthorStackView.backgroundColor = color
             // quoteAndAuthorStackView.customize(backgroundColor: color, radiusSize: 20)
         }
@@ -567,7 +567,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 
                 
                 
-                backgroundHideenView.isHidden = false
+             //   backgroundHideenView.isHidden = false
                 
                 
                 if #available(iOS 14.0, *)
@@ -587,7 +587,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 }
                 
                 
-                backgroundHideenView.isHidden = true
+               // backgroundHideenView.isHidden = true
                 stack_action_controller.isHidden = false
                 //   VC.screenshotPreview.image = image
                 
@@ -638,10 +638,10 @@ class ViewController: UIViewController, MessagingDelegate {
         //   UIImageWriteToSavedPhotosAlbum(screenshot, self, #selector(imageWasSaved), nil)
         return screenshot
     }
-    
+    /*
     @objc func actionButtonTapped() {
         takeScreenshot(of: backgroundHideenView)
-    }
+    }*/
     
     
     

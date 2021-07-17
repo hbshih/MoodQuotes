@@ -11,12 +11,6 @@
         <array key="I-PenCrane-B-2.ttf">
             <string>I.PenCrane-B</string>
         </array>
-        <array key="TimesNewRoman.ttf">
-            <string>.SFUI-Regular</string>
-        </array>
-        <array key="jf-liao-monospaced.ttf">
-            <string>jf-liao-Monospaced-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Onboarding1 View Controller-->
@@ -411,83 +405,6 @@
                                             <constraint firstItem="hgw-FN-6YY" firstAttribute="height" secondItem="5TO-Ig-amh" secondAttribute="height" multiplier="0.05" id="ywh-bU-4Gh"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kgV-82-bvE">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFA-Wg-xAy">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="298.66666666666669"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_App" translatesAutoresizingMaskIntoConstraints="NO" id="uZf-Qu-XFe">
-                                                        <rect key="frame" x="169.66666666666666" y="74.999999999999986" width="75" height="148.66666666666663"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="75" id="8ym-Oa-ofW"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="uZf-Qu-XFe" firstAttribute="centerX" secondItem="lFA-Wg-xAy" secondAttribute="centerX" id="6zU-4S-wjF"/>
-                                                    <constraint firstItem="uZf-Qu-XFe" firstAttribute="centerY" secondItem="lFA-Wg-xAy" secondAttribute="centerY" id="Cxe-Jh-U6C"/>
-                                                    <constraint firstItem="uZf-Qu-XFe" firstAttribute="top" secondItem="lFA-Wg-xAy" secondAttribute="top" constant="75" id="QQi-bS-AcA"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mj4-uS-dYQ">
-                                                <rect key="frame" x="0.0" y="298.66666666666663" width="414" height="298.66666666666663"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E3x-oX-Uda">
-                                                        <rect key="frame" x="16" y="0.0" width="382" height="298.66666666666669"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人生是一場兵荒馬亂，你是我的劫後餘生。" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0Z-Ov-Dk5">
-                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="258.66666666666669"/>
-                                                                <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="32"/>
-                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRv-ar-rFw">
-                                                                <rect key="frame" x="0.0" y="258.66666666666669" width="382" height="40"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="hC9-2a-lN3"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="E3x-oX-Uda" firstAttribute="leading" secondItem="Mj4-uS-dYQ" secondAttribute="leading" constant="16" id="A9r-9R-FHv"/>
-                                                    <constraint firstAttribute="bottom" secondItem="E3x-oX-Uda" secondAttribute="bottom" id="T8e-pK-uYx"/>
-                                                    <constraint firstAttribute="trailing" secondItem="E3x-oX-Uda" secondAttribute="trailing" constant="16" id="q2f-AV-mbt"/>
-                                                    <constraint firstItem="E3x-oX-Uda" firstAttribute="top" secondItem="Mj4-uS-dYQ" secondAttribute="top" id="qBE-Dc-wtu"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64v-JA-4Ui">
-                                                <rect key="frame" x="0.0" y="597.33333333333337" width="414" height="298.66666666666663"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共勉之。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8l-8V-78E">
-                                                        <rect key="frame" x="143" y="130.66666666666663" width="128" height="37.333333333333343"/>
-                                                        <fontDescription key="fontDescription" name="jf-liao-Monospaced-Regular" family="jf-liao-Monospaced" pointSize="32"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="Y8l-8V-78E" firstAttribute="centerY" secondItem="64v-JA-4Ui" secondAttribute="centerY" id="5r3-eH-UVQ"/>
-                                                    <constraint firstItem="Y8l-8V-78E" firstAttribute="centerX" secondItem="64v-JA-4Ui" secondAttribute="centerX" id="AUK-XH-t9L"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.94895178079999998" green="0.92952316999999995" blue="0.92156714200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstItem="64v-JA-4Ui" firstAttribute="leading" secondItem="kgV-82-bvE" secondAttribute="leading" id="FDb-jg-7wH"/>
-                                            <constraint firstItem="64v-JA-4Ui" firstAttribute="top" secondItem="Mj4-uS-dYQ" secondAttribute="bottom" id="Hqi-a5-oUe"/>
-                                            <constraint firstAttribute="trailing" secondItem="64v-JA-4Ui" secondAttribute="trailing" id="Pdu-2R-E4x"/>
-                                            <constraint firstAttribute="bottom" secondItem="64v-JA-4Ui" secondAttribute="bottom" id="xcu-va-2nY"/>
-                                        </constraints>
-                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="語錄已儲存！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MD-HH-x5Y">
                                         <rect key="frame" x="287" y="190" width="104" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -499,12 +416,8 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="5TO-Ig-amh" secondAttribute="bottom" constant="16" id="3Hy-xw-RES"/>
                                     <constraint firstAttribute="trailing" secondItem="5TO-Ig-amh" secondAttribute="trailing" id="8jt-X9-p9x"/>
-                                    <constraint firstAttribute="trailing" secondItem="kgV-82-bvE" secondAttribute="trailing" id="Gd4-Vg-9rU"/>
-                                    <constraint firstAttribute="bottom" secondItem="kgV-82-bvE" secondAttribute="bottom" id="HEL-dx-G4h"/>
-                                    <constraint firstItem="kgV-82-bvE" firstAttribute="leading" secondItem="mFK-is-lcH" secondAttribute="leading" id="LmT-f1-HIP"/>
                                     <constraint firstItem="4MD-HH-x5Y" firstAttribute="top" secondItem="8RN-ST-2TO" secondAttribute="bottom" constant="24" id="emT-Tc-U8p"/>
                                     <constraint firstItem="5TO-Ig-amh" firstAttribute="leading" secondItem="mFK-is-lcH" secondAttribute="leading" id="pbr-cg-nTG"/>
-                                    <constraint firstItem="kgV-82-bvE" firstAttribute="top" secondItem="mFK-is-lcH" secondAttribute="top" id="xig-Qo-V43"/>
                                     <constraint firstItem="4MD-HH-x5Y" firstAttribute="centerX" secondItem="8RN-ST-2TO" secondAttribute="centerX" constant="-24" id="z9f-Lu-utA"/>
                                 </constraints>
                             </view>
@@ -533,14 +446,10 @@
                         <outlet property="Button_bookmark" destination="8RN-ST-2TO" id="ztD-cb-I88"/>
                         <outlet property="ImageOfFlower" destination="ItI-5R-e6Z" id="9fY-A2-uPw"/>
                         <outlet property="authorName" destination="nzE-5V-zvv" id="Cqe-hA-1sP"/>
-                        <outlet property="backgroundHideenView" destination="kgV-82-bvE" id="6DU-d0-f0L"/>
                         <outlet property="bookmarkNotification" destination="4MD-HH-x5Y" id="RMD-ya-kqr"/>
                         <outlet property="buttonView" destination="bvF-DK-zMc" id="VjG-Ll-5rM"/>
                         <outlet property="frontQuote" destination="BPk-MP-j3O" id="kwy-pZ-ONt"/>
                         <outlet property="frontStackView" destination="5TO-Ig-amh" id="NjM-gZ-sjJ"/>
-                        <outlet property="hiddenAuthorName" destination="uRv-ar-rFw" id="BYX-1j-9CQ"/>
-                        <outlet property="hiddenQuote" destination="X0Z-Ov-Dk5" id="XOc-Vy-Yhg"/>
-                        <outlet property="hiddenQuoteAdder" destination="Y8l-8V-78E" id="WbO-N4-bfx"/>
                         <outlet property="nameOfFlower" destination="zGM-a8-dbm" id="qkP-7s-0G0"/>
                         <outlet property="onboardingTouchIcon" destination="Bzx-W5-zIZ" id="grl-na-vFh"/>
                         <outlet property="quoteAndAuthorStackView" destination="9Wg-gp-si8" id="sJj-dI-XCo"/>
