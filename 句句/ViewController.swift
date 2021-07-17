@@ -112,8 +112,12 @@ class ViewController: UIViewController, MessagingDelegate {
             if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
             {
                 // print(frontQuote.text!)
-                quoteArray.removeLast()
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
+                // in case remove other than today
+                if quoteArray.last == frontQuote.text!
+                {
+                    quoteArray.removeLast()
+                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
+                }
             }
             
             if var authorArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
@@ -479,12 +483,14 @@ class ViewController: UIViewController, MessagingDelegate {
         
         // loadNewQuotes()
         todayDateLabel.text = Date().getTodayDate
-        checkIfBookmarked()
+        //checkIfBookmarked()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
         todayDateLabel.text = Date().getTodayDate
+        
+        checkIfBookmarked()
         
         DispatchQueue.main.async {
             self.loadNewQuotes()
