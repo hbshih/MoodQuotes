@@ -25,7 +25,7 @@ struct Provider: TimelineProvider{
         Analytics.logEvent("widget_got_installed", parameters: nil)
         
         print("Widget got loaded")
-        let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "活在當下 不求永生\n活得狂野 擁抱生命", author: "拉娜·德芮"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "滿天星"))
+        let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星", author: "小王子"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "滿天星"))
         completion(quote)
     }
     
@@ -119,8 +119,15 @@ struct Emojibook_WidgetEntryView: View {
         switch family {
         /*  case .systemSmall:
          GeegeeWidgetView(quote: entry.quote, quoteSize: 18, authorSize: 12)*/
+        
+        case .systemLarge:
+            GeegeeWidgetView_Large(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
+        
         case .systemMedium:
             GeegeeWidgetView(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
+            
+        case .systemSmall:
+            GeegeeWidgetView_small(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
         /*   case .systemLarge:
          GeegeeWidgetView(quote: entry.quote, quoteSize: 32, authorSize: 24)*/
         default:
@@ -160,7 +167,7 @@ struct widget: Widget{
                 .frame(maxWidth: .infinity, maxHeight: .infinity)    // << here !!
                 .background(Color(backgroundColor))
         }
-        .supportedFamilies([.systemMedium])
+        .supportedFamilies([.systemMedium, .systemLarge, .systemSmall])
         .configurationDisplayName("句句 每日語錄")
         .description("記得分享")
     }
