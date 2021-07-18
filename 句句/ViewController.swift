@@ -497,7 +497,7 @@ class ViewController: UIViewController, MessagingDelegate {
         // loadNewQuotes()
         todayDateLabel.text = Date().getDateDayOnly
         twDayLabel.text = Date().getTWday
-        dateLabel.text = Date().getDate
+        dateLabel.text = Date().getLunarDate
         
         //checkIfBookmarked()
     }
@@ -506,7 +506,7 @@ class ViewController: UIViewController, MessagingDelegate {
         
         todayDateLabel.text = Date().getDateDayOnly
         twDayLabel.text = Date().getTWday
-        dateLabel.text = Date().getDate
+        dateLabel.text = Date().getLunarDate
         
         checkIfBookmarked()
         
@@ -599,9 +599,9 @@ class ViewController: UIViewController, MessagingDelegate {
                     buttonView.isHidden = true
                     Button_bookmark.isHidden = true
                     quoteAndAuthorStackView.backgroundColor = backgroundColor
-                    let image = takeScreenshot(of: quoteAndAuthorStackView)
+                    let image = takeScreenshot(of: hiddenQuoteView)
                     VC.imageToShow = image
-                    quoteAndAuthorStackView.backgroundColor = .white
+                    quoteAndAuthorStackView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.85)
                     buttonView.isHidden = false
                     Button_bookmark.isHidden = false
                 }else

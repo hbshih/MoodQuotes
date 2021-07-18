@@ -19,9 +19,6 @@
 		B509566F256DDCC30075ACE9 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509566E256DDCC30075ACE9 /* DateHelper.swift */; };
 		B5095675256DDD380075ACE9 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5095674256DDD380075ACE9 /* Notification.swift */; };
 		B509567B256DDD6B0075ACE9 /* NotificationTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */; };
-		B50956AA256DED9B0075ACE9 /* SplashScreen_.png in Resources */ = {isa = PBXBuildFile; fileRef = B50956A7256DED9B0075ACE9 /* SplashScreen_.png */; };
-		B50956AB256DED9B0075ACE9 /* SplashScreen_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B50956A8256DED9B0075ACE9 /* SplashScreen_@3x.png */; };
-		B50956AC256DED9B0075ACE9 /* SplashScreen_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */; };
 		B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
 		B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
 		B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */; };
@@ -88,6 +85,9 @@
 		B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
 		B5DF562E256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5DF562F256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
+		B5E35F2626A33517005EBD71 /* SplashScreen_.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E35F2326A33517005EBD71 /* SplashScreen_.png */; };
+		B5E35F2726A33517005EBD71 /* SplashScreen_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E35F2426A33517005EBD71 /* SplashScreen_@2x.png */; };
+		B5E35F2826A33517005EBD71 /* SplashScreen_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E35F2526A33517005EBD71 /* SplashScreen_@3x.png */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
 		BC58CA65A3C6C736913C09FC /* Pods______UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFD2C2C730397F8655D027A /* Pods______UITests.framework */; };
 		D73E671B225CA3AE85BB2AF6 /* Pods_widgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3507748D56C8ABB370227B /* Pods_widgetExtension.framework */; };
@@ -151,9 +151,6 @@
 		B509566E256DDCC30075ACE9 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		B5095674256DDD380075ACE9 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTrigger.swift; sourceTree = "<group>"; };
-		B50956A7256DED9B0075ACE9 /* SplashScreen_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen_.png; sourceTree = "<group>"; };
-		B50956A8256DED9B0075ACE9 /* SplashScreen_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@3x.png"; sourceTree = "<group>"; };
-		B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@2x.png"; sourceTree = "<group>"; };
 		B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = I.Ngaan.ttf; sourceTree = "<group>"; };
 		B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textDirectionModifier.swift; sourceTree = "<group>"; };
 		B547A82C25870AD100938A09 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -216,6 +213,9 @@
 		B5DF1B36257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B5DF1B3B257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B5DF562D256F2C01004A24D8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		B5E35F2326A33517005EBD71 /* SplashScreen_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen_.png; sourceTree = "<group>"; };
+		B5E35F2426A33517005EBD71 /* SplashScreen_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@2x.png"; sourceTree = "<group>"; };
+		B5E35F2526A33517005EBD71 /* SplashScreen_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@3x.png"; sourceTree = "<group>"; };
 		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		C5A97FF5AD77BFDE853E4C05 /* Pods-句句.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.debug.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.debug.xcconfig"; sourceTree = "<group>"; };
 		D96199F7016054F573B667A8 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,9 +355,9 @@
 				B58FD31C256B737000CBDAB6 /* RatingViewController.swift */,
 				B58FD31D256B737100CBDAB6 /* RatingViewController.xib */,
 				B5517C7D255FAFC500E134CC /* Assets.xcassets */,
-				B50956A7256DED9B0075ACE9 /* SplashScreen_.png */,
-				B50956A9256DED9B0075ACE9 /* SplashScreen_@2x.png */,
-				B50956A8256DED9B0075ACE9 /* SplashScreen_@3x.png */,
+				B5E35F2326A33517005EBD71 /* SplashScreen_.png */,
+				B5E35F2426A33517005EBD71 /* SplashScreen_@2x.png */,
+				B5E35F2526A33517005EBD71 /* SplashScreen_@3x.png */,
 				B5517C7F255FAFC600E134CC /* LaunchScreen.storyboard */,
 				B5517C82255FAFC600E134CC /* Info.plist */,
 				B506EBB125622E0700372198 /* NotificationTableViewCell.swift */,
@@ -553,17 +553,17 @@
 				B54E7F4B2587000D00F56C60 /* UpdateBackgroundColorTableViewCell.xib in Resources */,
 				B54E7F462587000800F56C60 /* GoogleService-Info.plist in Resources */,
 				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
-				B50956AA256DED9B0075ACE9 /* SplashScreen_.png in Resources */,
 				B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
 				B503750026331882004E2F86 /* NativeAdView.xib in Resources */,
 				B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */,
-				B50956AC256DED9B0075ACE9 /* SplashScreen_@2x.png in Resources */,
-				B50956AB256DED9B0075ACE9 /* SplashScreen_@3x.png in Resources */,
+				B5E35F2826A33517005EBD71 /* SplashScreen_@3x.png in Resources */,
+				B5E35F2726A33517005EBD71 /* SplashScreen_@2x.png in Resources */,
 				B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
 				B5517C7E255FAFC500E134CC /* Assets.xcassets in Resources */,
+				B5E35F2626A33517005EBD71 /* SplashScreen_.png in Resources */,
 				B5517C7C255FAFC500E134CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -975,7 +975,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 58;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1116,7 +1116,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 58;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1340,7 +1340,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 58;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1371,7 +1371,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 58;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

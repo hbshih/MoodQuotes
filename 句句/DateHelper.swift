@@ -82,6 +82,20 @@ public var minute: Int {
         return formatter3.string(from: Date())
        // print(formatter3.string(from: today))
     }
+
+    public var getLunarDate: String
+    {
+        let formatter3 = DateFormatter()
+       // let weekday = Calendar.current.component(.weekday, from: Date())
+        formatter3.dateStyle = .long
+        formatter3.timeStyle = .none
+        formatter3.locale = Locale.init(identifier: "zh_Hant_TW")
+        formatter3.calendar = Calendar.init(identifier: .chinese)
+       // formatter3.dateFormat = "M月dd"
+       // formatter3.weekdaySymbols
+        return String((formatter3.string(from: Date())).suffix(4))
+       // print(formatter3.string(from: today))
+    }
     
 }
 
