@@ -167,7 +167,7 @@ struct widget: Widget{
                 .frame(maxWidth: .infinity, maxHeight: .infinity)    // << here !!
                 .background(Color(backgroundColor))
         }
-        .supportedFamilies([.systemMedium, .systemLarge, .systemSmall])
+        .supportedFamilies([.systemMedium, .systemLarge])
         .configurationDisplayName("句句 每日語錄")
         .description("記得分享")
     }
