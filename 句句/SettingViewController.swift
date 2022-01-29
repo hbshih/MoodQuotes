@@ -18,7 +18,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     @IBAction func backTapped(_ sender: Any) {
@@ -41,9 +41,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let date = Calendar.current.date(bySettingHour: notificationDate.hour, minute: notificationDate.minute, second: 0, of: Date())!
                 cell.timePicker.setDate(date, animated: false)
                 cell.timePickeriOS13.setDate(date, animated: false)
-                
-                
-                
             }else
             {
                 let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
@@ -58,6 +55,13 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             {
                 cell.backgrundColor.backgroundColor = color
             }
+            return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "updateFontTableViewCell") as! UpdateFontTableViewCell
+            
+          //  cell.fontPicker.sho
+            
+            let defaults = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "checkBookmarkCell") as! SettingBookmarkTableViewCell
@@ -217,6 +221,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableview.register(UINib(nibName: "NotificationTableViewCell", bundle: nil), forCellReuseIdentifier: "notificationTableCell")
         self.tableview.register(UINib(nibName: "UpdateTimeTableViewCell", bundle: nil), forCellReuseIdentifier: "updateTimeTableViewCell")
         self.tableview.register(UINib(nibName: "UpdateBackgroundColorTableViewCell", bundle: nil), forCellReuseIdentifier: "updateBackgroundTableViewCell")
+        self.tableview.register(UINib(nibName: "UpdateFontTableViewCell", bundle: nil), forCellReuseIdentifier: "updateFontTableViewCell")
         // Do any additional setup after loading the view.
           
     }
