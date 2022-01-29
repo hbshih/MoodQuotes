@@ -55,13 +55,15 @@ class firebaseService {
         
         let url = URL(string: "https://geegee-a5bfd.firebaseio.com/Quote%20of%20the%20Day/\(date_today).json")!
         
+        print("#####")
+        
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else
             {
                 completion(.failure(error!))
                 return
             }
-            print(data)
+            print("Quote of the day \(data)")
             completion(.success(self.getQuoteResponse(fromData: data!)))
         }.resume()
     }
@@ -98,13 +100,14 @@ class firebaseService {
         print(data)
         
         let Data = try? JSONDecoder().decode(QuoteResponse.self, from: data)
-        print(Data)
+        print("Decoded data \(Data)")
         
         
         if let quoteD = Data{
             
             if quoteD.Author.count == quoteD.Quote.count
             {
+                print("quote 被解讀")
                 let random_number = Int.random(in: 0..<quoteD.Author.count)
                 
                 print(Quote(quote: quoteD.Quote[random_number], author: quoteD.Author[random_number]))

@@ -46,6 +46,14 @@
 		B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517CB4255FB73400E134CC /* SettingViewController.swift */; };
 		B552F4DF256D0449001013BA /* SyncAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552F4DE256D0449001013BA /* SyncAppWidget.swift */; };
 		B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552F4DE256D0449001013BA /* SyncAppWidget.swift */; };
+		B5582D3F27A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3B27A59A6800D9F0E0 /* 匯文明朝体.otf */; };
+		B5582D4027A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3B27A59A6800D9F0E0 /* 匯文明朝体.otf */; };
+		B5582D4127A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3C27A59A6900D9F0E0 /* Iansui0.92-Regular.ttf */; };
+		B5582D4227A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3C27A59A6900D9F0E0 /* Iansui0.92-Regular.ttf */; };
+		B5582D4327A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3D27A59A6900D9F0E0 /* JasonHandwriting5.ttf */; };
+		B5582D4427A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3D27A59A6900D9F0E0 /* JasonHandwriting5.ttf */; };
+		B5582D4527A59A6A00D9F0E0 /* GenRyuMin-M.ttc in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3E27A59A6A00D9F0E0 /* GenRyuMin-M.ttc */; };
+		B5582D4627A59A6A00D9F0E0 /* GenRyuMin-M.ttc in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3E27A59A6A00D9F0E0 /* GenRyuMin-M.ttc */; };
 		B5613EC1269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5613EC0269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift */; };
 		B5613EC7269BCBF6002EE2F4 /* SavedQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5613EC6269BCBF6002EE2F4 /* SavedQuoteViewController.swift */; };
 		B5613ED1269BCC0F002EE2F4 /* SavedQuoteViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5613ED0269BCC0F002EE2F4 /* SavedQuoteViewControllerTableViewController.swift */; };
@@ -179,6 +187,10 @@
 		B5517C98255FAFC600E134CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5517CB4255FB73400E134CC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B552F4DE256D0449001013BA /* SyncAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAppWidget.swift; sourceTree = "<group>"; };
+		B5582D3B27A59A6800D9F0E0 /* 匯文明朝体.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "匯文明朝体.otf"; sourceTree = "<group>"; };
+		B5582D3C27A59A6900D9F0E0 /* Iansui0.92-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Iansui0.92-Regular.ttf"; sourceTree = "<group>"; };
+		B5582D3D27A59A6900D9F0E0 /* JasonHandwriting5.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JasonHandwriting5.ttf; sourceTree = "<group>"; };
+		B5582D3E27A59A6A00D9F0E0 /* GenRyuMin-M.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenRyuMin-M.ttc"; sourceTree = "<group>"; };
 		B5613EC0269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedQuoteTableViewCell.swift; sourceTree = "<group>"; };
 		B5613EC6269BCBF6002EE2F4 /* SavedQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuoteViewController.swift; sourceTree = "<group>"; };
 		B5613ED0269BCC0F002EE2F4 /* SavedQuoteViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuoteViewControllerTableViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +356,10 @@
 				B5517C76255FAFC500E134CC /* SceneDelegate.swift */,
 				B5517C78255FAFC500E134CC /* ViewController.swift */,
 				B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */,
+				B5582D3E27A59A6A00D9F0E0 /* GenRyuMin-M.ttc */,
+				B5582D3C27A59A6900D9F0E0 /* Iansui0.92-Regular.ttf */,
+				B5582D3D27A59A6900D9F0E0 /* JasonHandwriting5.ttf */,
+				B5582D3B27A59A6800D9F0E0 /* 匯文明朝体.otf */,
 				B5D3845C256BED8100B1A507 /* qiji-combo.ttf */,
 				B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
@@ -554,13 +570,17 @@
 				B54E7F462587000800F56C60 /* GoogleService-Info.plist in Resources */,
 				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
 				B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
+				B5582D3F27A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
+				B5582D4327A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
 				B503750026331882004E2F86 /* NativeAdView.xib in Resources */,
 				B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B5E35F2826A33517005EBD71 /* SplashScreen_@3x.png in Resources */,
+				B5582D4127A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */,
 				B5E35F2726A33517005EBD71 /* SplashScreen_@2x.png in Resources */,
 				B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
+				B5582D4527A59A6A00D9F0E0 /* GenRyuMin-M.ttc in Resources */,
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
 				B5517C7E255FAFC500E134CC /* Assets.xcassets in Resources */,
 				B5E35F2626A33517005EBD71 /* SplashScreen_.png in Resources */,
@@ -586,10 +606,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5582D4027A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
 				B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */,
+				B5582D4227A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */,
 				B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
 				B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */,
+				B5582D4627A59A6A00D9F0E0 /* GenRyuMin-M.ttc in Resources */,
+				B5582D4427A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */,
 				B58E54FA2629AEE9009657E0 /* Assets.xcassets in Resources */,
 				B59E20BB256698FC003A5521 /* Assets.xcassets in Resources */,
 			);
@@ -975,7 +999,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 60;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1116,7 +1140,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 60;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1340,7 +1364,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 60;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1371,7 +1395,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 60;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

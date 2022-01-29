@@ -175,7 +175,7 @@ class ViewController: UIViewController, MessagingDelegate {
         //If no quote saved in local & time now >= update time
         /*|| UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil*/
         
-        if SyncAppQuotes().checkIfUpdate()
+        if !SyncAppQuotes().checkIfUpdate()
         {
             print("loading new screen")
             // Get From API

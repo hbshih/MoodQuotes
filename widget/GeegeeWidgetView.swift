@@ -48,7 +48,7 @@ struct GeegeeWidgetView: View {
                 VStack{
                     Image(uiImage: flowerImage).resizable().frame(width: 60, height: 60, alignment: .center)
                     Text(flowerName).font(Display_Font(font_size: Int(12)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
-                    Text(date.getLunarDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+                    Text(date.getTodayDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
                 }
             }
             
