@@ -73,6 +73,10 @@
 		B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */; };
 		B594C19B27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */; };
 		B594C19C27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */; };
+		B594C1A227EC5617009895D7 /* Sambucus nigra.png in Resources */ = {isa = PBXBuildFile; fileRef = B594C1A127EC5617009895D7 /* Sambucus nigra.png */; };
+		B594C1A327EC5617009895D7 /* Sambucus nigra.png in Resources */ = {isa = PBXBuildFile; fileRef = B594C1A127EC5617009895D7 /* Sambucus nigra.png */; };
+		B594C1A927EC5665009895D7 /* Vernonia amygdalina.png in Resources */ = {isa = PBXBuildFile; fileRef = B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */; };
+		B594C1AA27EC5665009895D7 /* Vernonia amygdalina.png in Resources */ = {isa = PBXBuildFile; fileRef = B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */; };
 		B59C53692622F1C5008BFB0A /* OnboardingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */; };
 		B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205425669862003A5521 /* WidgetKit.framework */; };
 		B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205625669862003A5521 /* SwiftUI.framework */; };
@@ -209,6 +213,8 @@
 		B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAppQuotes.swift; sourceTree = "<group>"; };
 		B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleNewUserViewController.swift; sourceTree = "<group>"; };
 		B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-openhuninn-1.1.ttf"; sourceTree = "<group>"; };
+		B594C1A127EC5617009895D7 /* Sambucus nigra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sambucus nigra.png"; sourceTree = "<group>"; };
+		B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vernonia amygdalina.png"; sourceTree = "<group>"; };
 		B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStoryViewController.swift; sourceTree = "<group>"; };
 		B59E205425669862003A5521 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B59E205625669862003A5521 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -393,6 +399,8 @@
 				B506EBC025622FF800372198 /* UpdateTimeTableViewCell.swift */,
 				B506EBC125622FF800372198 /* UpdateTimeTableViewCell.xib */,
 				B506EBC72562306400372198 /* UpdateBackgroundColorTableViewCell.swift */,
+				B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */,
+				B594C1A127EC5617009895D7 /* Sambucus nigra.png */,
 				B506EBC82562306400372198 /* UpdateBackgroundColorTableViewCell.xib */,
 				B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */,
 				B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */,
@@ -586,9 +594,11 @@
 			files = (
 				B54E7F4B2587000D00F56C60 /* UpdateBackgroundColorTableViewCell.xib in Resources */,
 				B54E7F462587000800F56C60 /* GoogleService-Info.plist in Resources */,
+				B594C1A927EC5665009895D7 /* Vernonia amygdalina.png in Resources */,
 				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
 				B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B5582D3F27A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
+				B594C1A227EC5617009895D7 /* Sambucus nigra.png in Resources */,
 				B5582D7227A59FFD00D9F0E0 /* UpdateFontTableViewCell.xib in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
 				B5582D4327A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */,
@@ -627,6 +637,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5582D4027A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
+				B594C1A327EC5617009895D7 /* Sambucus nigra.png in Resources */,
+				B594C1AA27EC5665009895D7 /* Vernonia amygdalina.png in Resources */,
 				B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B594C19C27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */,
