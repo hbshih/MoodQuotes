@@ -71,6 +71,8 @@
 		B591B17F2570A0C100C389D9 /* SyncAppQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */; };
 		B591B1802570A0C100C389D9 /* SyncAppQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */; };
 		B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */; };
+		B594C19B27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */; };
+		B594C19C27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */; };
 		B59C53692622F1C5008BFB0A /* OnboardingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */; };
 		B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205425669862003A5521 /* WidgetKit.framework */; };
 		B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205625669862003A5521 /* SwiftUI.framework */; };
@@ -206,6 +208,7 @@
 		B58FD31D256B737100CBDAB6 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
 		B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAppQuotes.swift; sourceTree = "<group>"; };
 		B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleNewUserViewController.swift; sourceTree = "<group>"; };
+		B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-openhuninn-1.1.ttf"; sourceTree = "<group>"; };
 		B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStoryViewController.swift; sourceTree = "<group>"; };
 		B59E205425669862003A5521 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B59E205625669862003A5521 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -364,6 +367,7 @@
 				B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */,
 				B5582D3E27A59A6A00D9F0E0 /* GenRyuMin-M.ttc */,
 				B5582D3C27A59A6900D9F0E0 /* Iansui0.92-Regular.ttf */,
+				B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */,
 				B5582D3D27A59A6900D9F0E0 /* JasonHandwriting5.ttf */,
 				B5582D3B27A59A6800D9F0E0 /* 匯文明朝体.otf */,
 				B5D3845C256BED8100B1A507 /* qiji-combo.ttf */,
@@ -599,6 +603,7 @@
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
 				B5517C7E255FAFC500E134CC /* Assets.xcassets in Resources */,
 				B5E35F2626A33517005EBD71 /* SplashScreen_.png in Resources */,
+				B594C19B27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */,
 				B5517C7C255FAFC500E134CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +629,7 @@
 				B5582D4027A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
 				B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */,
+				B594C19C27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */,
 				B5582D4227A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */,
 				B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
 				B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */,
