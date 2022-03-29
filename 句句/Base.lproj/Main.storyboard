@@ -676,7 +676,7 @@
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="jYg-TR-ck8">
                                                 <rect key="frame" x="286" y="5" width="96" height="50"/>
-                                                <color key="tintColor" red="0.89411764709999997" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="BvE-Zi-tLw"/>
                                                     <constraint firstAttribute="width" constant="96" id="JPq-gc-EwC"/>
