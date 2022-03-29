@@ -7,21 +7,22 @@
 //
 
 import UIKit
+import FSCalendar
 
 class InterfaceBuilderViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
     
     @IBOutlet
     weak var calendar: FSCalendar!
     
-    @IBOutlet
-    weak var calendarHeightConstraint: NSLayoutConstraint!
+  //  @IBOutlet
+   // weak var calendarHeightConstraint: NSLayoutConstraint!
     
     fileprivate var lunar: Bool = false {
         didSet {
             self.calendar.reloadData()
         }
     }
-    fileprivate let lunarFormatter = LunarFormatter()
+ //   fileprivate let lunarFormatter = LunarFormatter()
     fileprivate var theme: Int = 0 {
         didSet {
             switch (theme) {
@@ -76,7 +77,7 @@ class InterfaceBuilderViewController: UIViewController, FSCalendarDataSource, FS
         super.viewDidLoad()
         
         if UIDevice.current.model.hasPrefix("iPad") {
-            self.calendarHeightConstraint.constant = 400
+            //self.calendarHeightConstraint.constant = 400
         }
         
         self.calendar.appearance.caseOptions = [.headerUsesUpperCase,.weekdayUsesUpperCase]
@@ -100,7 +101,8 @@ class InterfaceBuilderViewController: UIViewController, FSCalendarDataSource, FS
         guard self.lunar else {
             return nil
         }
-        return self.lunarFormatter.string(from: date)
+        return Date().getLunarDate
+        //self.lunarFormatter.string(from: date)
     }
     
     func maximumDate(for calendar: FSCalendar) -> Date {
@@ -114,7 +116,7 @@ class InterfaceBuilderViewController: UIViewController, FSCalendarDataSource, FS
     
     func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
         let day: Int! = self.gregorian.component(.day, from: date)
-        return [13,24].contains(day) ? UIImage(named: "icon_cat") : nil
+        return [13,24].contains(day) ? UIImage(named: "noun_Love_3860852") : nil
     }
     
     // MARK:- FSCalendarDelegate
@@ -131,36 +133,10 @@ class InterfaceBuilderViewController: UIViewController, FSCalendarDataSource, FS
     }
     
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-        self.calendarHeightConstraint.constant = bounds.height
+      //  self.calendarHeightConstraint.constant = bounds.height
         self.view.layoutIfNeeded()
     }
     
-    // MARK:- Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let config = segue.destination as? CalendarConfigViewController {
-            config.lunar = self.lunar
-            config.theme = self.theme
-            config.selectedDate = self.calendar.selectedDate
-            config.firstWeekday = self.calendar.firstWeekday
-            config.scrollDirection = self.calendar.scrollDirection
-        }
-    }
-    
-    @IBAction
-    func unwind2InterfaceBuilder(segue: UIStoryboardSegue) {
-        if let config = segue.source as? CalendarConfigViewController {
-            self.lunar = config.lunar
-            self.theme = config.theme
-            self.calendar.select(config.selectedDate, scrollToDate: false)
-            if self.calendar.firstWeekday != config.firstWeekday {
-                self.calendar.firstWeekday = config.firstWeekday
-            }
-            if self.calendar.scrollDirection != config.scrollDirection {
-                self.calendar.scrollDirection = config.scrollDirection
-            }
-        }
-    }
     
     
 }
