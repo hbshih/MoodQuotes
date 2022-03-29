@@ -536,10 +536,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--New Setting View Controller-->
         <scene sceneID="9gB-1K-Wsl">
             <objects>
-                <viewController id="MY9-5J-sNZ" sceneMemberID="viewController">
+                <viewController id="MY9-5J-sNZ" customClass="NewSettingViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NhR-U3-p4p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -645,34 +645,17 @@
                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUY-ns-2E5">
-                                                <rect key="frame" x="316" y="18" width="50" height="24"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4E-JD-Sxh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
-                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
-                                                        <state key="normal" title="分享">
-                                                            <color key="titleColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="hL2-fg-yeS"/>
-                                                    <constraint firstAttribute="bottom" secondItem="v4E-JD-Sxh" secondAttribute="bottom" id="pdH-ch-C3v"/>
-                                                    <constraint firstAttribute="width" constant="50" id="rD3-Zx-o9j"/>
-                                                    <constraint firstAttribute="trailing" secondItem="v4E-JD-Sxh" secondAttribute="trailing" id="s4m-t4-big"/>
-                                                    <constraint firstItem="v4E-JD-Sxh" firstAttribute="leading" secondItem="NUY-ns-2E5" secondAttribute="leading" id="td0-Ya-sww"/>
-                                                    <constraint firstItem="v4E-JD-Sxh" firstAttribute="top" secondItem="NUY-ns-2E5" secondAttribute="top" id="vyq-Jy-MNE"/>
-                                                </constraints>
-                                            </view>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zX-vq-5UR">
+                                                <rect key="frame" x="317" y="14.666666666666686" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.64589239040000002" green="0.94472461939999997" blue="0.69501250920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </switch>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96470588235294119" green="0.88627450980392153" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="NUY-ns-2E5" firstAttribute="centerY" secondItem="uHX-KQ-2lG" secondAttribute="centerY" id="6Oa-XX-BdW"/>
                                             <constraint firstItem="9hQ-ZT-Mjk" firstAttribute="centerX" secondItem="uHX-KQ-2lG" secondAttribute="centerX" id="HUA-hK-NNQ"/>
                                             <constraint firstAttribute="height" constant="60" id="OEt-Xr-svk"/>
-                                            <constraint firstAttribute="trailing" secondItem="NUY-ns-2E5" secondAttribute="trailing" constant="16" id="avO-xL-Fpm"/>
+                                            <constraint firstAttribute="trailing" secondItem="2zX-vq-5UR" secondAttribute="trailing" constant="16" id="WjS-Fo-8q8"/>
+                                            <constraint firstItem="2zX-vq-5UR" firstAttribute="centerY" secondItem="uHX-KQ-2lG" secondAttribute="centerY" id="kYZ-tS-U2k"/>
                                             <constraint firstItem="9hQ-ZT-Mjk" firstAttribute="centerY" secondItem="uHX-KQ-2lG" secondAttribute="centerY" id="p2t-qW-zcD"/>
                                             <constraint firstItem="9hQ-ZT-Mjk" firstAttribute="leading" secondItem="uHX-KQ-2lG" secondAttribute="leading" constant="16" id="vfJ-ut-PNa"/>
                                         </constraints>
@@ -691,34 +674,24 @@
                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Dw-wu-Do4">
-                                                <rect key="frame" x="316" y="18" width="50" height="24"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ka-vf-06r">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
-                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
-                                                        <state key="normal" title="分享">
-                                                            <color key="titleColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="jYg-TR-ck8">
+                                                <rect key="frame" x="286" y="5" width="96" height="50"/>
+                                                <color key="tintColor" red="0.89411764709999997" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="ML8-h8-BdW"/>
-                                                    <constraint firstAttribute="trailing" secondItem="7Ka-vf-06r" secondAttribute="trailing" id="XmX-br-e3y"/>
-                                                    <constraint firstItem="7Ka-vf-06r" firstAttribute="leading" secondItem="2Dw-wu-Do4" secondAttribute="leading" id="j1D-cl-Y1z"/>
-                                                    <constraint firstItem="7Ka-vf-06r" firstAttribute="top" secondItem="2Dw-wu-Do4" secondAttribute="top" id="nZ7-ef-vzm"/>
-                                                    <constraint firstAttribute="height" constant="24" id="qh8-7e-gZf"/>
-                                                    <constraint firstAttribute="bottom" secondItem="7Ka-vf-06r" secondAttribute="bottom" id="xbe-8G-Z8T"/>
+                                                    <constraint firstAttribute="height" constant="50" id="BvE-Zi-tLw"/>
+                                                    <constraint firstAttribute="width" constant="96" id="JPq-gc-EwC"/>
                                                 </constraints>
-                                            </view>
+                                                <connections>
+                                                    <action selector="timeChanged:" destination="MY9-5J-sNZ" eventType="valueChanged" id="6UE-Ch-sHL"/>
+                                                </connections>
+                                            </datePicker>
                                         </subviews>
                                         <color key="backgroundColor" red="0.92941176470588238" green="0.78823529411764703" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="2Dw-wu-Do4" secondAttribute="trailing" constant="16" id="Abh-c4-LOS"/>
                                             <constraint firstItem="c9J-IF-dB5" firstAttribute="leading" secondItem="fjp-D9-5uk" secondAttribute="leading" constant="16" id="BWX-9t-RqQ"/>
-                                            <constraint firstItem="2Dw-wu-Do4" firstAttribute="centerY" secondItem="fjp-D9-5uk" secondAttribute="centerY" id="Wbl-lC-BG2"/>
+                                            <constraint firstAttribute="trailing" secondItem="jYg-TR-ck8" secondAttribute="trailing" id="LjA-cW-EIj"/>
                                             <constraint firstItem="c9J-IF-dB5" firstAttribute="centerY" secondItem="fjp-D9-5uk" secondAttribute="centerY" id="aXz-oc-bnC"/>
+                                            <constraint firstItem="jYg-TR-ck8" firstAttribute="centerY" secondItem="fjp-D9-5uk" secondAttribute="centerY" id="e92-kr-bYP"/>
                                             <constraint firstAttribute="height" constant="60" id="hRV-iD-LwK"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -745,6 +718,9 @@
                                                         <state key="normal" title="設定">
                                                             <color key="titleColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="adjustBackgroundColor:" destination="MY9-5J-sNZ" eventType="touchUpInside" id="4mE-0a-M9l"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -790,6 +766,9 @@
                                                         <state key="normal" title="圓圓">
                                                             <color key="titleColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="adjustFont:" destination="MY9-5J-sNZ" eventType="touchUpInside" id="xGE-TW-WQr"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -835,6 +814,9 @@
                                                         <state key="normal" title="查看">
                                                             <color key="titleColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="vyl-c7-Mf0" kind="show" id="OPy-tA-N0Q"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -925,6 +907,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s1p-ci-WBx"/>
+                    <connections>
+                        <outlet property="notificationToggle" destination="2zX-vq-5UR" id="TJe-wx-PaF"/>
+                        <outlet property="timePicker" destination="jYg-TR-ck8" id="fwK-KC-s7l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7L-zp-6Cv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1200,7 +1186,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-kL-OCS">
-                                        <rect key="frame" x="179" y="8" width="56" height="28"/>
+                                        <rect key="frame" x="179" y="5.6666666666666643" width="56" height="32.666666666666664"/>
                                         <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="28"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -1280,21 +1266,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedQuoteCell" textLabel="R76-T7-bFQ" detailTextLabel="TfX-5v-HaR" style="IBUITableViewCellStyleSubtitle" id="iaP-92-cxO" customClass="CollectedQuoteTableViewCell" customModule="句句" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="54.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="60.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iaP-92-cxO" id="gwY-hk-gR3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R76-T7-bFQ">
-                                            <rect key="frame" x="20" y="10" width="25" height="17"/>
+                                            <rect key="frame" x="20" y="11" width="25" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfX-5v-HaR">
-                                            <rect key="frame" x="20.000000000000004" y="28" width="40.333333333333336" height="17"/>
+                                            <rect key="frame" x="20.000000000000004" y="31" width="40.333333333333336" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -1351,7 +1337,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvY-7V-sUY">
-                                                        <rect key="frame" x="16" y="127" width="350" height="128"/>
+                                                        <rect key="frame" x="16" y="116.33333333333333" width="350" height="149.33333333333337"/>
                                                         <string key="text">人生是一場兵荒馬亂skdㄎㄨㄠklsdjㄎㄨㄜsjkld，
 你是我的劫後餘生。</string>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="32"/>
@@ -1359,13 +1345,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="林予晞" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-yL-qjM">
-                                                        <rect key="frame" x="167" y="275" width="48" height="16"/>
+                                                        <rect key="frame" x="167" y="285.66666666666669" width="48" height="18.666666666666686"/>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#句句語錄 app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-5T-G9G">
-                                                        <rect key="frame" x="157.66666666666666" y="1" width="67" height="10"/>
+                                                        <rect key="frame" x="158.33333333333334" y="1" width="65.666666666666657" height="11.666666666666666"/>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -3061,7 +3047,7 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Uxh-iH-9fq"/>
+        <segue reference="OPy-tA-N0Q"/>
         <segue reference="hS7-Sl-5ah"/>
         <segue reference="1Gl-uz-PMa"/>
         <segue reference="htk-Qi-2dc"/>
