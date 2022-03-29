@@ -26,6 +26,7 @@ target '句句' do
   pod 'SDWebImageSwiftUI'
   pod 'GoogleUtilities'
   pod 'Firebase/CoreOnly'
+  pod 'FSCalendar'
   #pod 'Google-Mobile-Ads-SDK'
   
 
