@@ -7,7 +7,50 @@
 
 import UIKit
 
-class SavedQuoteViewController: UIViewController {
+class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+        {
+            if array.count == 0
+            {
+                return 1
+            }else
+            {
+                return array.count
+            }
+        }else
+        {
+            return 1
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "quote-cell", for: indexPath) as! QuoteTableViewCell
+        
+            if let quote = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+            {
+                if quote.count > 0
+                {
+                    let author = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
+                    cell.quoteLabel.text = quote[indexPath.item]
+                    cell.authorLabel.text = author![indexPath.item]
+                }else
+                {
+                    cell.quoteLabel.text = "還沒有儲存任何語錄"
+                }
+
+            }else
+            {
+                cell.quoteLabel.text = "還沒有儲存任何語錄"
+            }
+            
+        
+
+        return cell
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

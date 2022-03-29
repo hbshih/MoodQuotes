@@ -93,6 +93,8 @@
 		B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B59E21C125676F85003A5521 /* GoogleService-Info.plist */; };
 		B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5A32A24262C1F590057454E /* I-PenCrane-B-2.ttf */; };
 		B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5A32A24262C1F590057454E /* I-PenCrane-B-2.ttf */; };
+		B5A4D14027F2EDC90093CDD6 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A4D13F27F2EDC90093CDD6 /* QuoteTableViewCell.swift */; };
+		B5A4D14D27F2F3BD0093CDD6 /* InterfaceBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A4D14C27F2F3BC0093CDD6 /* InterfaceBuilderViewController.swift */; };
 		B5AF873A2571209C008A3BBC /* videoTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF87392571209C008A3BBC /* videoTutorialViewController.swift */; };
 		B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */; };
 		B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */; };
@@ -230,6 +232,8 @@
 		B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtention.swift; sourceTree = "<group>"; };
 		B59E21C125676F85003A5521 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5A32A24262C1F590057454E /* I-PenCrane-B-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "I-PenCrane-B-2.ttf"; sourceTree = "<group>"; };
+		B5A4D13F27F2EDC90093CDD6 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
+		B5A4D14C27F2F3BC0093CDD6 /* InterfaceBuilderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceBuilderViewController.swift; sourceTree = "<group>"; };
 		B5AF87392571209C008A3BBC /* videoTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoTutorialViewController.swift; sourceTree = "<group>"; };
 		B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_1ViewController.swift; sourceTree = "<group>"; };
 		B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_2ViewController.swift; sourceTree = "<group>"; };
@@ -379,6 +383,7 @@
 				B5D3845C256BED8100B1A507 /* qiji-combo.ttf */,
 				B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
+				B5A4D14C27F2F3BC0093CDD6 /* InterfaceBuilderViewController.swift */,
 				B5517C7A255FAFC500E134CC /* Main.storyboard */,
 				B5AF87392571209C008A3BBC /* videoTutorialViewController.swift */,
 				B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */,
@@ -419,6 +424,7 @@
 				B5613EC0269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift */,
 				B5613ED0269BCC0F002EE2F4 /* SavedQuoteViewControllerTableViewController.swift */,
 				B5613ED6269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift */,
+				B5A4D13F27F2EDC90093CDD6 /* QuoteTableViewCell.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -788,6 +794,7 @@
 				B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */,
 				B5517C79255FAFC500E134CC /* ViewController.swift in Sources */,
 				B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */,
+				B5A4D14027F2EDC90093CDD6 /* QuoteTableViewCell.swift in Sources */,
 				B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */,
 				B506EBC225622FF800372198 /* UpdateTimeTableViewCell.swift in Sources */,
 				B5C321D92629685D00CB530C /* TutorialViewController.swift in Sources */,
@@ -801,6 +808,7 @@
 				B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B591B17F2570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
 				B552F4DF256D0449001013BA /* SyncAppWidget.swift in Sources */,
+				B5A4D14D27F2F3BD0093CDD6 /* InterfaceBuilderViewController.swift in Sources */,
 				B5613EC7269BCBF6002EE2F4 /* SavedQuoteViewController.swift in Sources */,
 				B5613ED7269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift in Sources */,
 				B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */,

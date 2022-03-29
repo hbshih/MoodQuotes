@@ -252,7 +252,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hci-gt-IHu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8F-UG-eR0">
                                         <rect key="frame" x="350" y="32" width="32" height="32"/>
@@ -261,6 +261,9 @@
                                             <constraint firstAttribute="height" constant="32" id="Dxt-wC-2Gf"/>
                                         </constraints>
                                         <state key="normal" image="icon_setting"/>
+                                        <connections>
+                                            <segue destination="MY9-5J-sNZ" kind="show" id="1Gl-uz-PMa"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eW8-Vf-e6m">
                                         <rect key="frame" x="32" y="96" width="350" height="237"/>
@@ -290,7 +293,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6月15日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxx-iS-jBb">
-                                                                                <rect key="frame" x="0.0" y="17.666666666666671" width="46.333333333333336" height="17.333333333333329"/>
+                                                                                <rect key="frame" x="0.0" y="17.666666666666657" width="46.333333333333336" height="17.333333333333329"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -396,7 +399,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-m2-wEF">
-                                        <rect key="frame" x="32" y="614" width="350" height="216"/>
+                                        <rect key="frame" x="32" y="570" width="350" height="216"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="9WU-5p-gF6">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="216"/>
@@ -467,6 +470,9 @@
                                                                 <rect key="frame" x="40" y="192" width="40" height="24"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
                                                                 <state key="normal" title="收藏"/>
+                                                                <connections>
+                                                                    <action selector="bookmark_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Cx-F2-AL8"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -505,15 +511,23 @@
                         <constraints>
                             <constraint firstItem="Bzx-W5-zIZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="50" id="4j5-PO-Yfl"/>
                             <constraint firstItem="hci-gt-IHu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="65p-NO-gnB"/>
-                            <constraint firstItem="hci-gt-IHu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9h1-6o-G5j"/>
                             <constraint firstItem="Bzx-W5-zIZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="150" id="H8y-zD-UBS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hci-gt-IHu" secondAttribute="bottom" id="JUl-7W-q4e"/>
+                            <constraint firstItem="hci-gt-IHu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P8R-XO-170"/>
                             <constraint firstItem="hci-gt-IHu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iN2-9b-Bxw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VK4-l7-MkZ"/>
                     <connections>
+                        <outlet property="ImageOfFlower" destination="gu2-iE-YJg" id="MxW-wO-uod"/>
+                        <outlet property="authorName" destination="OFy-hP-jeV" id="RHt-bK-Bg2"/>
+                        <outlet property="dateLabel" destination="BJT-PA-hMp" id="oNU-N3-9je"/>
+                        <outlet property="frontQuote" destination="ko1-0S-tIj" id="oW2-Er-dPy"/>
+                        <outlet property="nameOfFlower" destination="icy-av-SWs" id="2Wt-vY-426"/>
                         <outlet property="onboardingTouchIcon" destination="Bzx-W5-zIZ" id="grl-na-vFh"/>
+                        <outlet property="screenView" destination="hci-gt-IHu" id="9lw-ia-d22"/>
+                        <outlet property="todayDateLabel" destination="sAT-KL-MX8" id="asG-Yv-Rur"/>
+                        <outlet property="twDayLabel" destination="fxx-iS-jBb" id="rKx-iO-u60"/>
                         <segue destination="Krk-l6-7pi" kind="presentation" identifier="firstTimeSettingSegue" modalPresentationStyle="fullScreen" id="SFC-mq-IwF"/>
                         <segue destination="vyl-c7-Mf0" kind="show" identifier="showTutorialSegue" id="pIM-gP-oXb"/>
                     </connections>
@@ -567,7 +581,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日記" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJI-xB-dsC">
-                                                <rect key="frame" x="16" y="21.666666666666671" width="34" height="17"/>
+                                                <rect key="frame" x="16" y="20" width="34" height="20"/>
                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                 <color key="textColor" red="0.1764705882352941" green="0.19215686274509802" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -626,7 +640,7 @@
                                         <rect key="frame" x="0.0" y="28.333333333333314" width="382" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hQ-ZT-Mjk">
-                                                <rect key="frame" x="16" y="21.666666666666686" width="350" height="17"/>
+                                                <rect key="frame" x="16" y="20" width="350" height="20"/>
                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -672,7 +686,7 @@
                                         <rect key="frame" x="0.0" y="96.333333333333343" width="382" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9J-IF-dB5">
-                                                <rect key="frame" x="16" y="21.666666666666629" width="68" height="17"/>
+                                                <rect key="frame" x="16" y="20" width="68" height="20"/>
                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -717,7 +731,7 @@
                                         <rect key="frame" x="0.0" y="164.33333333333334" width="382" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="背景" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlm-Pj-HXJ">
-                                                <rect key="frame" x="16" y="21.666666666666629" width="34" height="17"/>
+                                                <rect key="frame" x="16" y="20" width="34" height="20"/>
                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -762,7 +776,7 @@
                                         <rect key="frame" x="0.0" y="232.33333333333337" width="382" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="字體" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXH-1l-sx5">
-                                                <rect key="frame" x="16" y="21.666666666666629" width="34" height="17"/>
+                                                <rect key="frame" x="16" y="20" width="34" height="20"/>
                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -807,7 +821,7 @@
                                         <rect key="frame" x="0.0" y="300.33333333333337" width="382" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8r-iy-xCP">
-                                                <rect key="frame" x="16" y="21.666666666666629" width="119" height="17"/>
+                                                <rect key="frame" x="16" y="20" width="119" height="20"/>
                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -852,7 +866,7 @@
                                         <rect key="frame" x="0.0" y="368.33333333333326" width="382" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恢復購買" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWq-lB-EKx">
-                                                <rect key="frame" x="16" y="21.666666666666742" width="68" height="17"/>
+                                                <rect key="frame" x="16" y="20" width="68" height="20"/>
                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -916,10 +930,10 @@
             </objects>
             <point key="canvasLocation" x="1908.6956521739132" y="-1257.5892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Saved Quote View Controller-->
         <scene sceneID="3gL-pX-8Uk">
             <objects>
-                <viewController id="cHC-of-i7y" sceneMemberID="viewController">
+                <viewController id="cHC-of-i7y" customClass="SavedQuoteViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OAj-UZ-9Mi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -972,7 +986,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="61u-zt-lMb" secondAttribute="bottom" constant="5" id="8wm-bU-BPd"/>
                                     <constraint firstItem="bwd-Nc-0l1" firstAttribute="centerY" secondItem="iFz-zm-aVh" secondAttribute="centerY" id="Dig-6M-fUq"/>
@@ -985,11 +998,12 @@
                                     <constraint firstItem="6fZ-Hu-RVn" firstAttribute="centerY" secondItem="iFz-zm-aVh" secondAttribute="centerY" id="zqt-9v-pVb"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VsR-1N-Uvn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VsR-1N-Uvn">
                                 <rect key="frame" x="0.0" y="44" width="414" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96470588239999999" green="0.8862745098" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="eWH-Cq-hR7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quote-cell" rowHeight="200" id="eWH-Cq-hR7" customClass="QuoteTableViewCell" customModule="句句" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eWH-Cq-hR7" id="BLR-Bv-8hf">
@@ -997,16 +1011,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ou0-f3-lDM">
-                                                    <rect key="frame" x="0.0" y="16" width="414" height="168"/>
+                                                    <rect key="frame" x="24" y="16" width="366" height="168"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reG-vf-qek">
-                                                            <rect key="frame" x="185.66666666666666" y="0.0" width="43" height="138"/>
-                                                            <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reG-vf-qek">
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="138"/>
+                                                            <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCO-Qk-k9O">
-                                                            <rect key="frame" x="188" y="138" width="38" height="30"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCO-Qk-k9O">
+                                                            <rect key="frame" x="0.0" y="138" width="366" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="ruL-hU-JBI"/>
                                                             </constraints>
@@ -1015,21 +1029,45 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="reG-vf-qek" secondAttribute="trailing" id="IQk-me-q4x"/>
+                                                        <constraint firstAttribute="height" constant="320" id="chJ-iJ-1UI"/>
+                                                        <constraint firstItem="CCO-Qk-k9O" firstAttribute="leading" secondItem="ou0-f3-lDM" secondAttribute="leading" id="hTK-aa-Jfc"/>
+                                                        <constraint firstItem="reG-vf-qek" firstAttribute="leading" secondItem="ou0-f3-lDM" secondAttribute="leading" id="kYf-DB-TCb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CCO-Qk-k9O" secondAttribute="trailing" id="sQg-9V-212"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderUIColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                            <integer key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ou0-f3-lDM" firstAttribute="leading" secondItem="BLR-Bv-8hf" secondAttribute="leading" id="QPD-zm-il7"/>
-                                                <constraint firstAttribute="trailing" secondItem="ou0-f3-lDM" secondAttribute="trailing" id="WdL-yu-Gv4"/>
+                                                <constraint firstAttribute="trailing" secondItem="ou0-f3-lDM" secondAttribute="trailing" constant="24" id="5Ie-3V-pjC"/>
+                                                <constraint firstItem="ou0-f3-lDM" firstAttribute="leading" secondItem="BLR-Bv-8hf" secondAttribute="leading" constant="24" id="EHa-Nd-XbZ"/>
                                                 <constraint firstItem="ou0-f3-lDM" firstAttribute="top" secondItem="BLR-Bv-8hf" secondAttribute="top" constant="16" id="hEy-8p-Doj"/>
                                                 <constraint firstAttribute="bottom" secondItem="ou0-f3-lDM" secondAttribute="bottom" constant="16" id="ugX-nd-AP6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="CCO-Qk-k9O" id="ZXf-QJ-Qg7"/>
+                                            <outlet property="quoteLabel" destination="reG-vf-qek" id="kUt-Xz-39T"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cHC-of-i7y" id="z8z-6K-SOa"/>
+                                    <outlet property="delegate" destination="cHC-of-i7y" id="m9a-Ju-E2i"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XQM-PU-MsL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.8862745098" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="XQM-PU-MsL" firstAttribute="trailing" secondItem="iFz-zm-aVh" secondAttribute="trailing" id="5XY-ai-UPv"/>
                             <constraint firstItem="XQM-PU-MsL" firstAttribute="bottom" secondItem="VsR-1N-Uvn" secondAttribute="bottom" id="5ej-dK-xBg"/>
@@ -1162,7 +1200,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-kL-OCS">
-                                        <rect key="frame" x="179" y="8" width="56" height="28"/>
+                                        <rect key="frame" x="179" y="5.6666666666666643" width="56" height="32.666666666666664"/>
                                         <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="28"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -1242,21 +1280,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedQuoteCell" textLabel="R76-T7-bFQ" detailTextLabel="TfX-5v-HaR" style="IBUITableViewCellStyleSubtitle" id="iaP-92-cxO" customClass="CollectedQuoteTableViewCell" customModule="句句" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="54.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="60.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iaP-92-cxO" id="gwY-hk-gR3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R76-T7-bFQ">
-                                            <rect key="frame" x="20" y="10" width="25" height="17"/>
+                                            <rect key="frame" x="20" y="11" width="25" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfX-5v-HaR">
-                                            <rect key="frame" x="20.000000000000004" y="28" width="40.333333333333336" height="17"/>
+                                            <rect key="frame" x="20.000000000000004" y="31" width="40.333333333333336" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -3020,8 +3058,9 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pIM-gP-oXb"/>
+        <segue reference="Uxh-iH-9fq"/>
         <segue reference="hS7-Sl-5ah"/>
+        <segue reference="1Gl-uz-PMa"/>
         <segue reference="htk-Qi-2dc"/>
         <segue reference="9CO-rk-QmR"/>
     </inferredMetricsTieBreakers>

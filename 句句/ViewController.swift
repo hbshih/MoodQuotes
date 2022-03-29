@@ -175,7 +175,8 @@ class ViewController: UIViewController, MessagingDelegate {
         //If no quote saved in local & time now >= update time
         /*|| UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil*/
         
-        if !SyncAppQuotes().checkIfUpdate()
+        // comment out for testing purpose
+        if SyncAppQuotes().checkIfUpdate()
         {
             print("loading new screen")
             // Get From API
@@ -280,8 +281,8 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.bookmarkNotification.alpha = 0
-        self.bookmarkNotification.text = "語錄已儲存！"
+    //    self.bookmarkNotification.alpha = 0
+    //    self.bookmarkNotification.text = "語錄已儲存！"
         
         if let arr = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
         {
@@ -487,8 +488,8 @@ class ViewController: UIViewController, MessagingDelegate {
         {
             backgroundColor = color
             screenView.backgroundColor = color
-            frontStackView.backgroundColor = color
-            hiddenQuoteView.backgroundColor = color
+         //   frontStackView.backgroundColor = color
+         //   hiddenQuoteView.backgroundColor = color
            // backgroundHideenView.backgroundColor =  color
             // quoteAndAuthorStackView.backgroundColor = color
             // quoteAndAuthorStackView.customize(backgroundColor: color, radiusSize: 20)
