@@ -23,8 +23,12 @@ enum SelectionType : Int {
 
 class DIYCalendarCell: FSCalendarCell {
     
-    weak var circleImageView: UIImageView!
-    weak var circleImageView2: UIImageView!
+    weak var superhappyImageView: UIImageView!
+    weak var happyImageView: UIImageView!
+    weak var neutralImageView: UIImageView!
+    weak var sadImageView: UIImageView!
+    weak var supersadImageView: UIImageView!
+    
     weak var selectionLayer: CAShapeLayer!
     
     var selectionType: SelectionType = .none {
@@ -40,16 +44,30 @@ class DIYCalendarCell: FSCalendarCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let circleImageView = UIImageView(image: UIImage(named: "noun_bookmark_4007674")!)
-        let circleImageView2 = UIImageView(image: UIImage(named: "noun_bookmark_4007674")!)
+        let superhappyImageView = UIImageView(image: UIImage(named: "super-happy")!)
+        let happyImageView = UIImageView(image: UIImage(named: "happy")!)
+        let neutralImageView = UIImageView(image: UIImage(named: "neutral")!)
+        let sadImageView = UIImageView(image: UIImage(named: "sad")!)
+        let supersadImageView = UIImageView(image: UIImage(named: "super-sad")!)
+       // let circleImageView2 = UIImageView(image: UIImage(named: "noun_bookmark_4007674")!)
         
-        circleImageView.contentMode = UIView.ContentMode.scaleAspectFit
-        circleImageView2.contentMode = UIView.ContentMode.scaleAspectFit
+        superhappyImageView.contentMode = UIView.ContentMode.scaleAspectFit
+        happyImageView.contentMode = UIView.ContentMode.scaleAspectFit
+        neutralImageView.contentMode = UIView.ContentMode.scaleAspectFit
+        sadImageView.contentMode = UIView.ContentMode.scaleAspectFit
+        supersadImageView.contentMode = UIView.ContentMode.scaleAspectFit
+
+        self.contentView.insertSubview(superhappyImageView, at: 0)
+        self.contentView.insertSubview(happyImageView, at: 0)
+        self.contentView.insertSubview(neutralImageView, at: 0)
+        self.contentView.insertSubview(sadImageView, at: 0)
+        self.contentView.insertSubview(supersadImageView, at: 0)
         
-        self.contentView.insertSubview(circleImageView, at: 0)
-        self.contentView.insertSubview(circleImageView2, at: 0)
-        self.circleImageView = circleImageView
-        self.circleImageView2 = circleImageView2
+        self.superhappyImageView = superhappyImageView
+        self.happyImageView = happyImageView
+        self.neutralImageView = neutralImageView
+        self.sadImageView = sadImageView
+        self.supersadImageView = supersadImageView
         
        /* let selectionLayer = CAShapeLayer()
         selectionLayer.fillColor = UIColor.black.cgColor
@@ -68,8 +86,11 @@ class DIYCalendarCell: FSCalendarCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.circleImageView.frame = self.contentView.bounds
-        self.circleImageView2.frame = self.contentView.bounds
+        self.superhappyImageView.frame = self.contentView.bounds
+        self.happyImageView.frame = self.contentView.bounds
+        self.neutralImageView.frame = self.contentView.bounds
+        self.sadImageView.frame = self.contentView.bounds
+        self.supersadImageView.frame = self.contentView.bounds
         
         /*
         self.backgroundView?.frame = self.bounds.insetBy(dx: 1, dy: 1)

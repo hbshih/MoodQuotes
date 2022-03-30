@@ -26,6 +26,19 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
     
     override func loadView() {
         super.loadView()
+        
+        if let moodList = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.dictionary(forKey: "moodList")
+        {
+            if moodList.isEmpty || moodList.count < 1
+            {
+                // default
+            }else
+            {
+                let converted = moodList.compactMapValues { $0 as? String }
+                fillSelectionColors = converted
+            //    fillSelectionColors = moodList
+            }
+        }
      /*   let view = UIView(frame: UIScreen.main.bounds)
         view.backgroundColor = UIColor.groupTableViewBackground
         self.view = view
@@ -164,7 +177,7 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         }
     }
     
-    let fillSelectionColors = ["2022-03-22": "happy", "2022-03-26": "sad"]
+    var fillSelectionColors = ["2022-03-22": "happy", "2022-03-26": "sad"]
     fileprivate lazy var dateFormatter2: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -176,8 +189,11 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         let diyCell = (cell as! DIYCalendarCell)
         // Custom today circle
      //   diyCell.circleImageView.isHidden = !self.gregorian.isDateInToday(date)
-        diyCell.circleImageView2.isHidden = true
-        diyCell.circleImageView.isHidden = true
+        diyCell.superhappyImageView.isHidden = true
+        diyCell.happyImageView.isHidden = true
+        diyCell.neutralImageView.isHidden = true
+        diyCell.sadImageView.isHidden = true
+        diyCell.supersadImageView.isHidden = true
         
         let dateString = self.dateFormatter2.string(from: date)
         
@@ -187,12 +203,16 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         if fillSelectionColors.keys.contains(dateString)
         {
             switch fillSelectionColors[dateString] {
+            case "super-happy":
+                diyCell.superhappyImageView.isHidden = false
             case "happy":
-                diyCell.circleImageView.isHidden = false
-                print("happy")
+                diyCell.happyImageView.isHidden = false
+            case "neutral":
+                diyCell.neutralImageView.isHidden = false
             case "sad":
-                diyCell.circleImageView2.isHidden = false
-                print("sad")
+                diyCell.sadImageView.isHidden = false
+            case "super-sad":
+                diyCell.supersadImageView.isHidden = false
             default:
                 print("nothing")
             }

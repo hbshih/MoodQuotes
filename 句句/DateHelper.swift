@@ -56,6 +56,14 @@ public var minute: Int {
        // print(formatter3.string(from: today))
     }
     
+    public var getFormattedDate: String
+    {
+        let formatter3 = DateFormatter()
+        formatter3.dateFormat = "yyyy-MM-dd"
+        return formatter3.string(from: Date())
+       // print(formatter3.string(from: today))
+    }
+    
     public var getDateDayOnly: String
     {
         let formatter3 = DateFormatter()

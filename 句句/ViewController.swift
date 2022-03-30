@@ -528,12 +528,14 @@ class ViewController: UIViewController, MessagingDelegate {
         // Create second button
         let buttonTwo = DefaultButton(title: "儲存", height: 60) {
             
-            self.moodButton.setBackgroundImage(UIImage(named: "noun_bookmark_809340"), for: .normal)
-            
+            let mood = ratingVC.mood
+            self.moodButton.setBackgroundImage(UIImage(named: mood), for: .normal)
+            self.moodButton.imageView?.contentMode = .scaleAspectFit
             self.moodButton.setTitle("", for: .normal)
             
+            let array = [Date().getFormattedDate:mood]
             
-
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(array, forKey: "moodList")
         }
         
         buttonTwo.backgroundColor = .systemGray6
