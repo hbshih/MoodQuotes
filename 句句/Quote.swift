@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
+
 struct Quote
 {
     let quote: String
@@ -17,11 +18,23 @@ struct Quote
 
 struct Display_Font
 {
-    let selected_font = "Iansui0.92-Regular"
+    let selected_font = "QIJIC"
     let font_size: Int
     
     func getUIFont() -> UIFont
     {
+       // if let array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+        
+        UIFont.familyNames.forEach({ familyName in
+            let fontNames = UIFont.fontNames(forFamilyName: familyName)
+            print(familyName, fontNames)
+        })
+        
+        if let font = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "userFont")
+        {
+            print("current font \(font)")
+            return UIFont(name: font, size: CGFloat(font_size)) ?? UIFont(name: selected_font, size: CGFloat(font_size))!
+        }
        // return UIFont.systemFont(ofSize: 30)
      //   return UIFont.systemFont(ofSize: 30)
             

@@ -78,6 +78,8 @@
 		B563EBC027F41E92003D0DD9 /* PurchaseKit in Resources */ = {isa = PBXBuildFile; fileRef = B563EBBE27F41E92003D0DD9 /* PurchaseKit */; };
 		B563EBC627F41ED8003D0DD9 /* PurchaseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B563EBC527F41ED8003D0DD9 /* PurchaseKit.xcframework */; };
 		B563EBC727F41ED8003D0DD9 /* PurchaseKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B563EBC527F41ED8003D0DD9 /* PurchaseKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B563EBD027F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
+		B563EBD127F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
 		B5807EFD25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B58E54FA2629AEE9009657E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5517C7D255FAFC500E134CC /* Assets.xcassets */; };
@@ -245,6 +247,7 @@
 		B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subscriptionViewController.swift; sourceTree = "<group>"; };
 		B563EBBE27F41E92003D0DD9 /* PurchaseKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PurchaseKit; sourceTree = "<group>"; };
 		B563EBC527F41ED8003D0DD9 /* PurchaseKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PurchaseKit.xcframework; path = "句句/PurchaseKit/PurchaseKit.xcframework"; sourceTree = "<group>"; };
+		B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFontViewController.swift; sourceTree = "<group>"; };
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
 		B58E55332629BD9E009657E0 /* flowerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowerHandler.swift; sourceTree = "<group>"; };
 		B58FD31C256B737000CBDAB6 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
@@ -471,6 +474,7 @@
 				B55B06B827F32CE500B7AAEC /* NewSettingViewController.swift */,
 				B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */,
 				B563EBBE27F41E92003D0DD9 /* PurchaseKit */,
+				B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -881,6 +885,7 @@
 				B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */,
 				B50374CD263310B5004E2F86 /* AdMobsViewController.swift in Sources */,
 				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
+				B563EBD027F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
 				B5613EC1269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift in Sources */,
 				B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */,
@@ -921,6 +926,7 @@
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
 				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
 				B59E20B8256698FB003A5521 /* widget.swift in Sources */,
+				B563EBD127F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */,
 				B51C61A4262C001800B5C6E8 /* textDirectionModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
