@@ -313,10 +313,13 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-Sa-4bB">
                                                         <rect key="frame" x="260" y="0.0" width="90" height="35"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-yu-1RA">
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-yu-1RA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="35"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <state key="normal" title="今日心情"/>
+                                                                <connections>
+                                                                    <action selector="updateMoodTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXl-Mb-rDR"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -523,6 +526,7 @@
                         <outlet property="authorName" destination="OFy-hP-jeV" id="RHt-bK-Bg2"/>
                         <outlet property="dateLabel" destination="BJT-PA-hMp" id="oNU-N3-9je"/>
                         <outlet property="frontQuote" destination="ko1-0S-tIj" id="oW2-Er-dPy"/>
+                        <outlet property="moodButton" destination="hN3-yu-1RA" id="o7E-7i-GWk"/>
                         <outlet property="nameOfFlower" destination="icy-av-SWs" id="2Wt-vY-426"/>
                         <outlet property="onboardingTouchIcon" destination="Bzx-W5-zIZ" id="grl-na-vFh"/>
                         <outlet property="screenView" destination="hci-gt-IHu" id="9lw-ia-d22"/>
@@ -3043,7 +3047,7 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OPy-tA-N0Q"/>
+        <segue reference="pIM-gP-oXb"/>
         <segue reference="hS7-Sl-5ah"/>
         <segue reference="1Gl-uz-PMa"/>
         <segue reference="htk-Qi-2dc"/>

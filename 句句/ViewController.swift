@@ -14,11 +14,13 @@ import FirebaseUI
 import CoreText
 import StoreKit
 import FirebaseAnalytics
+import PopupDialog
 
 var global_quote: String = ""
 
 class ViewController: UIViewController, MessagingDelegate {
     
+    @IBOutlet weak var moodButton: UIButton!
     @IBOutlet weak var hiddenQuoteView: UIStackView!
     @IBOutlet weak var hiddenQuoteViewFlowerImage: UIImageView!
     @IBOutlet weak var hiddenQuoteViewAuthor: UILabel!
@@ -503,6 +505,48 @@ class ViewController: UIViewController, MessagingDelegate {
         //checkIfBookmarked()
     }
     
+    @IBAction func updateMoodTapped(_ sender: Any) {
+        
+        // Create a custom view controller
+        let ratingVC = UpdateMood(nibName: "UpdateMoodViewController", bundle: nil)
+            
+        //    RatingViewController(nibName: "RatingViewController", bundle: nil)
+        
+        
+
+        // Create the dialog
+        let popup = PopupDialog(viewController: ratingVC,
+                                buttonAlignment: .horizontal,
+                                transitionStyle: .bounceDown,
+                                tapGestureDismissal: true,
+                                panGestureDismissal: false)
+        
+        
+        
+        
+    
+        // Create second button
+        let buttonTwo = DefaultButton(title: "儲存", height: 60) {
+            
+            self.moodButton.setBackgroundImage(UIImage(named: "noun_bookmark_809340"), for: .normal)
+            
+            self.moodButton.setTitle("", for: .normal)
+            
+            
+
+        }
+        
+        buttonTwo.backgroundColor = .systemGray6
+        buttonTwo.titleColor = .systemGray
+     //   buttonTwo.titleLabel.
+        
+        
+        
+        popup.addButtons([buttonTwo])
+        
+        UIApplication.topViewController()?.present(popup, animated: true, completion: nil)
+        
+    }
     override func viewDidAppear(_ animated: Bool) {
         
         todayDateLabel.text = Date().getDateDayOnly

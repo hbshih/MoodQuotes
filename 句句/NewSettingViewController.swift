@@ -109,6 +109,40 @@ class NewSettingViewController: UIViewController {
     }
     
     @IBAction func adjustFont(_ sender: Any) {
+        
+        // Create a custom view controller
+        let ratingVC = UpdateFontViewController(nibName: "UpdateFontViewController", bundle: nil)
+            
+        //    RatingViewController(nibName: "RatingViewController", bundle: nil)
+        
+        
+
+        // Create the dialog
+        let popup = PopupDialog(viewController: ratingVC,
+                                buttonAlignment: .horizontal,
+                                transitionStyle: .bounceDown,
+                                tapGestureDismissal: true,
+                                panGestureDismissal: false)
+        
+        
+        
+        
+    
+        // Create second button
+        let buttonTwo = DefaultButton(title: "儲存", height: 60) {
+
+        }
+        
+        buttonTwo.backgroundColor = .systemGray6
+        buttonTwo.titleColor = .systemGray
+     //   buttonTwo.titleLabel.
+        
+        
+        
+        popup.addButtons([buttonTwo])
+        
+        UIApplication.topViewController()?.present(popup, animated: true, completion: nil)
+        
     }
     /*
     // MARK: - Navigation

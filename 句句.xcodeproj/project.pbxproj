@@ -64,6 +64,14 @@
 		B5613ED7269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5613ED6269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift */; };
 		B563EB8827F3F31D003D0DD9 /* DIYExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EB8727F3F31D003D0DD9 /* DIYExampleViewController.swift */; };
 		B563EB8E27F3F325003D0DD9 /* DIYCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EB8D27F3F325003D0DD9 /* DIYCalendarCell.swift */; };
+		B563EB9927F3FFA0003D0DD9 /* UpdateFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EB9727F3FFA0003D0DD9 /* UpdateFontViewController.swift */; };
+		B563EB9A27F3FFA0003D0DD9 /* UpdateFontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EB9827F3FFA0003D0DD9 /* UpdateFontViewController.xib */; };
+		B563EB9F27F3FFA5003D0DD9 /* UpdateFontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EB9827F3FFA0003D0DD9 /* UpdateFontViewController.xib */; };
+		B563EBA027F3FFA5003D0DD9 /* UpdateFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EB9727F3FFA0003D0DD9 /* UpdateFontViewController.swift */; };
+		B563EBA727F4017A003D0DD9 /* UpdateMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBA527F4017A003D0DD9 /* UpdateMood.swift */; };
+		B563EBA827F4017A003D0DD9 /* UpdateMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBA527F4017A003D0DD9 /* UpdateMood.swift */; };
+		B563EBA927F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */; };
+		B563EBAA27F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */; };
 		B5807EFD25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B58E54FA2629AEE9009657E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5517C7D255FAFC500E134CC /* Assets.xcassets */; };
@@ -213,6 +221,10 @@
 		B5613ED6269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		B563EB8727F3F31D003D0DD9 /* DIYExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIYExampleViewController.swift; sourceTree = "<group>"; };
 		B563EB8D27F3F325003D0DD9 /* DIYCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIYCalendarCell.swift; sourceTree = "<group>"; };
+		B563EB9727F3FFA0003D0DD9 /* UpdateFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateFontViewController.swift; sourceTree = "<group>"; };
+		B563EB9827F3FFA0003D0DD9 /* UpdateFontViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateFontViewController.xib; sourceTree = "<group>"; };
+		B563EBA527F4017A003D0DD9 /* UpdateMood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateMood.swift; sourceTree = "<group>"; };
+		B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateMoodViewController.xib; sourceTree = "<group>"; };
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
 		B58E55332629BD9E009657E0 /* flowerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowerHandler.swift; sourceTree = "<group>"; };
 		B58FD31C256B737000CBDAB6 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
@@ -396,6 +408,10 @@
 				B5517CB4255FB73400E134CC /* SettingViewController.swift */,
 				B58FD31C256B737000CBDAB6 /* RatingViewController.swift */,
 				B58FD31D256B737100CBDAB6 /* RatingViewController.xib */,
+				B563EB9727F3FFA0003D0DD9 /* UpdateFontViewController.swift */,
+				B563EB9827F3FFA0003D0DD9 /* UpdateFontViewController.xib */,
+				B563EBA527F4017A003D0DD9 /* UpdateMood.swift */,
+				B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */,
 				B5517C7D255FAFC500E134CC /* Assets.xcassets */,
 				B5582D7127A59FFD00D9F0E0 /* UpdateFontTableViewCell.xib */,
 				B5582D7727A5A00300D9F0E0 /* UpdateFontTableViewCell.swift */,
@@ -610,6 +626,7 @@
 				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
 				B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B5582D3F27A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
+				B563EB9A27F3FFA0003D0DD9 /* UpdateFontViewController.xib in Resources */,
 				B594C1A227EC5617009895D7 /* Sambucus nigra.png in Resources */,
 				B5582D7227A59FFD00D9F0E0 /* UpdateFontTableViewCell.xib in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
@@ -620,6 +637,7 @@
 				B5E35F2826A33517005EBD71 /* SplashScreen_@3x.png in Resources */,
 				B5582D4127A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */,
 				B5E35F2726A33517005EBD71 /* SplashScreen_@2x.png in Resources */,
+				B563EBA927F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */,
 				B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
 				B5582D4527A59A6A00D9F0E0 /* GenRyuMin-M.ttc in Resources */,
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
@@ -650,6 +668,7 @@
 			files = (
 				B5582D4027A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
 				B594C1A327EC5617009895D7 /* Sambucus nigra.png in Resources */,
+				B563EB9F27F3FFA5003D0DD9 /* UpdateFontViewController.xib in Resources */,
 				B594C1AA27EC5665009895D7 /* Vernonia amygdalina.png in Resources */,
 				B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */,
@@ -659,6 +678,7 @@
 				B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */,
 				B5582D4627A59A6A00D9F0E0 /* GenRyuMin-M.ttc in Resources */,
 				B5582D4427A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */,
+				B563EBAA27F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */,
 				B58E54FA2629AEE9009657E0 /* Assets.xcassets in Resources */,
 				B59E20BB256698FC003A5521 /* Assets.xcassets in Resources */,
 			);
@@ -824,6 +844,8 @@
 				B59C53692622F1C5008BFB0A /* OnboardingStoryViewController.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
 				B5DF562E256F2C01004A24D8 /* Date.swift in Sources */,
+				B563EB9927F3FFA0003D0DD9 /* UpdateFontViewController.swift in Sources */,
+				B563EBA727F4017A003D0DD9 /* UpdateMood.swift in Sources */,
 				B5AF873A2571209C008A3BBC /* videoTutorialViewController.swift in Sources */,
 				B5095675256DDD380075ACE9 /* Notification.swift in Sources */,
 				B563EB8827F3F31D003D0DD9 /* DIYExampleViewController.swift in Sources */,
@@ -859,8 +881,10 @@
 			files = (
 				B59E213325674D13003A5521 /* Quote.swift in Sources */,
 				B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */,
+				B563EBA027F3FFA5003D0DD9 /* UpdateFontViewController.swift in Sources */,
 				B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B5DF562F256F2C01004A24D8 /* Date.swift in Sources */,
+				B563EBA827F4017A003D0DD9 /* UpdateMood.swift in Sources */,
 				B591B1802570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
 				B58E55352629BD9E009657E0 /* flowerHandler.swift in Sources */,
 				B5056D8C2573DCB300A8E79B /* DateHelper.swift in Sources */,
