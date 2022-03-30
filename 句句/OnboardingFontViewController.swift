@@ -13,6 +13,11 @@ class OnboardingFontViewController: UIViewController {
     @IBOutlet weak var exampleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor")
+        {
+            exampleView.backgroundColor = color
+        }
 
         // Do any additional setup after loading the view.
     }

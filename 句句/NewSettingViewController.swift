@@ -130,6 +130,8 @@ class NewSettingViewController: UIViewController {
     
         // Create second button
         let buttonTwo = DefaultButton(title: "儲存", height: 60) {
+            
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(ratingVC.selectedFont, forKey: "userFont")
 
         }
         

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,6 +27,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdateFontViewController" customModule="widgetExtension" customModuleProvider="target">
             <connections>
+                <outlet property="exampleLabel" destination="DYn-3n-nu7" id="JLH-yP-fGS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -67,35 +69,47 @@
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yBK-27-bIn">
-                                            <rect key="frame" x="119.5" y="-3" width="51" height="170"/>
+                                            <rect key="frame" x="119.5" y="2" width="51" height="160"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUi-kg-f8V">
-                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="34"/>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUi-kg-f8V">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="32"/>
                                                     <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="17"/>
                                                     <state key="normal" title="南港"/>
                                                     <connections>
                                                         <action selector="fontSelected:" destination="-1" eventType="touchUpInside" id="3s8-uj-AwG"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbJ-82-vUp">
-                                                    <rect key="frame" x="0.0" y="34" width="51" height="34"/>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbJ-82-vUp">
+                                                    <rect key="frame" x="0.0" y="32" width="51" height="32"/>
                                                     <fontDescription key="fontDescription" name="JasonHandwriting5" family="JasonHandwriting5" pointSize="17"/>
                                                     <state key="normal" title="北投"/>
+                                                    <connections>
+                                                        <action selector="fontSelected:" destination="-1" eventType="touchUpInside" id="aI9-Vz-nSC"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rb-X5-HFh">
-                                                    <rect key="frame" x="0.0" y="68" width="51" height="34"/>
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rb-X5-HFh">
+                                                    <rect key="frame" x="0.0" y="64" width="51" height="32"/>
                                                     <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                                     <state key="normal" title="便便體"/>
+                                                    <connections>
+                                                        <action selector="fontSelected:" destination="-1" eventType="touchUpInside" id="QzZ-KJ-3gH"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHq-bj-70f">
-                                                    <rect key="frame" x="0.0" y="102" width="51" height="34"/>
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHq-bj-70f">
+                                                    <rect key="frame" x="0.0" y="96" width="51" height="32"/>
                                                     <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="17"/>
                                                     <state key="normal" title="老古板"/>
+                                                    <connections>
+                                                        <action selector="fontSelected:" destination="-1" eventType="touchUpInside" id="fmY-yw-49a"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4a-4a-IOY">
-                                                    <rect key="frame" x="0.0" y="136" width="51" height="34"/>
+                                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4a-4a-IOY">
+                                                    <rect key="frame" x="0.0" y="128" width="51" height="32"/>
                                                     <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                     <state key="normal" title="圓圓"/>
+                                                    <connections>
+                                                        <action selector="fontSelected:" destination="-1" eventType="touchUpInside" id="Kmr-P8-F8B"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
