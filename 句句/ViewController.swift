@@ -619,6 +619,9 @@ class ViewController: UIViewController, MessagingDelegate {
          */
         
     }
+    @IBAction func shareTapped(_ sender: Any) {
+        performSegue(withIdentifier: "shareSegue", sender: nil)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "shareSegue"
@@ -626,6 +629,11 @@ class ViewController: UIViewController, MessagingDelegate {
             if let VC = segue.destination as? ShareViewController
             {
                 
+                VC.quoteToShow = self.frontQuote.text
+                print("pass quote to VC \(VC.quoteToShow)")
+                VC.authorToShow = self.authorName.text
+                
+                /*
                 hiddenQuoteViewQuote.text = self.frontQuote.text
                 hiddenQuoteViewAuthor.text = self.authorName.text
                 hiddenQuoteViewFlower.text = self.nameOfFlower.text
@@ -662,7 +670,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 //   VC.screenshotPreview.image = image
                 
                 
-                
+                */
                 //  VC.screenshotPreview.image = UIImage(named: "icon_notification")
             }
         }else if segue.identifier == "showTutorialSegue"

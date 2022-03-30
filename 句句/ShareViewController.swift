@@ -13,18 +13,25 @@ import FirebaseAnalytics
 
 class ShareViewController: UIViewController {
 
-    @IBOutlet weak var screenshotPreview: UIImageView!
+    //@IBOutlet weak var screenshotPreview: UIImageView!
     @IBOutlet weak var moreView: UIStackView!
+    @IBOutlet weak var quote: UILabel!
+    @IBOutlet weak var author: UILabel!
+    @IBOutlet weak var fullView: UIView!
     var imageToShow: UIImage!
+    var quoteToShow: String!
+    var authorToShow: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         if imageToShow != nil
         {
-            screenshotPreview.image = imageToShow
+         //   screenshotPreview.image = imageToShow
         }else
         {
-            screenshotPreview.image = UIImage(named: "icon_notification")
+       //     screenshotPreview.image = UIImage(named: "icon_notification")
         }
         //StoreKit().requ
       //  SKStoreReviewController.requestReview()
@@ -32,6 +39,8 @@ class ShareViewController: UIViewController {
             SKStoreReviewController.requestReview(in: scene)
         }
     }
+    
+    
 
     @IBAction func optionTapped(_ sender: UIButton) {
         switch sender.tag {
@@ -41,14 +50,16 @@ class ShareViewController: UIViewController {
             
             print("save to album")
             
-            UIImageWriteToSavedPhotosAlbum(screenshotPreview.image!, self, #selector(imageWasSaved), nil)
+            let image = takeScreenshot(of: fullView)
+            
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(imageWasSaved), nil)
             
         case 1:
             print("save to ig")
             
             Analytics.logEvent("share_vc_IG", parameters: nil)
             
-            guard let imagePNGData = screenshotPreview.image?.pngData() else { return }
+            guard let imagePNGData = takeScreenshot(of: fullView).pngData() else { return }
                guard let instagramStoryUrl = URL(string: "instagram-stories://share") else {
             
                 return
@@ -75,7 +86,7 @@ class ShareViewController: UIViewController {
             
             Analytics.logEvent("share_vc_more", parameters: nil)
             
-            let items = [screenshotPreview.image]
+            let items = [takeScreenshot(of: fullView)]
             let ac = UIActivityViewController(activityItems: items as [Any], applicationActivities: nil)
             ac.completionWithItemsHandler  = { activity, completed, items, error in
                 if !completed {
@@ -103,7 +114,9 @@ class ShareViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-
+        print(quoteToShow)
+        quote.text = quoteToShow
+        author.text = authorToShow
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
@@ -121,4 +134,24 @@ class ShareViewController: UIViewController {
     */
     @IBOutlet weak var saveToAlbum: UIImageView!
     
+    func takeScreenshot(of view: UIView) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(
+            CGSize(width: view.bounds.width, height: view.bounds.height),
+            false,
+            2
+        )
+        
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let screenshot = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        
+        
+        
+        
+        
+        
+        //   UIImageWriteToSavedPhotosAlbum(screenshot, self, #selector(imageWasSaved), nil)
+        return screenshot
+    }
 }
