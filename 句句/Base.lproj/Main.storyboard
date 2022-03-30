@@ -93,7 +93,7 @@
                                                                 <string key="text">先來客製你的句句吧！
 
 選擇每日句子更新的時間</string>
-                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
+                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -248,11 +248,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hci-gt-IHu">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8F-UG-eR0">
                                         <rect key="frame" x="350" y="32" width="32" height="32"/>
@@ -293,7 +293,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6月15日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxx-iS-jBb">
-                                                                                <rect key="frame" x="0.0" y="17.666666666666657" width="46.333333333333336" height="17.333333333333329"/>
+                                                                                <rect key="frame" x="0.0" y="17.666666666666671" width="46.333333333333336" height="17.333333333333329"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -402,7 +402,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-m2-wEF">
-                                        <rect key="frame" x="32" y="570" width="350" height="216"/>
+                                        <rect key="frame" x="32" y="560" width="350" height="216"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="9WU-5p-gF6">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="216"/>
@@ -505,7 +505,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_touch" translatesAutoresizingMaskIntoConstraints="NO" id="Bzx-W5-zIZ">
-                                <rect key="frame" x="207" y="553" width="100" height="100"/>
+                                <rect key="frame" x="207" y="504" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="miO-Ps-jFC"/>
                                     <constraint firstAttribute="width" constant="100" id="ztO-fK-3Vi"/>
@@ -1874,7 +1874,7 @@
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇背景顏色" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy8-Mh-nVr">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
-                                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
+                                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -2114,7 +2114,7 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新句子的時候需要通知你嗎？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
-                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
+                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -2540,11 +2540,11 @@
             <objects>
                 <viewController id="vyl-c7-Mf0" customClass="TutorialViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owX-6V-3AJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1446"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtw-l1-1Wq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1412"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-Np-Gnd">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1433.6666666666667"/>
@@ -2644,7 +2644,7 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYx-71-sSi">
-                                                        <rect key="frame" x="0.0" y="977.33333333333337" width="382" height="38.333333333333371"/>
+                                                        <rect key="frame" x="0.0" y="977.33333333333326" width="382" height="38.333333333333371"/>
                                                         <string key="text">5. 您可以隨意拖動小工具到任何位置，
 完成後請點選右上方「完成」。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -2680,7 +2680,7 @@ App們將會開始抖動。</string>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eA-ph-1Nd">
-                                <rect key="frame" x="16" y="1336" width="382" height="44"/>
+                                <rect key="frame" x="16" y="1390" width="382" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IzG-dl-Gov">
                                         <rect key="frame" x="131" y="0.0" width="120" height="44"/>
@@ -2740,6 +2740,99 @@ App們將會開始抖動。</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEe-9W-nDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2784.057971014493" y="-1204.0178571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NJ8-ho-7mk">
+            <objects>
+                <viewController id="ctx-cW-Iia" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hbb-hR-aV8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-0P-87E">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-Me-g3r">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPC-tb-42d">
+                                                <rect key="frame" x="109" y="8" width="196" height="28"/>
+                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="28"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pal-qx-gC2">
+                                                <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pal-qx-gC2" secondAttribute="height" multiplier="1:1" id="W5G-Vy-9Wv"/>
+                                                    <constraint firstAttribute="height" constant="34" id="Zde-iq-wAD"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="backTapped:" destination="3gg-VR-CeA" eventType="touchUpInside" id="iWj-cl-S4b"/>
+                                                    <action selector="closePopUp:" destination="vyl-c7-Mf0" eventType="touchUpInside" id="Dgj-qa-fKh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pal-qx-gC2" secondAttribute="bottom" constant="5" id="6XC-Uy-eCj"/>
+                                            <constraint firstItem="oPC-tb-42d" firstAttribute="centerX" secondItem="FQM-Me-g3r" secondAttribute="centerX" id="9VE-pm-tKW"/>
+                                            <constraint firstItem="pal-qx-gC2" firstAttribute="leading" secondItem="FQM-Me-g3r" secondAttribute="leading" constant="16" id="LJx-Yn-DtI"/>
+                                            <constraint firstAttribute="height" constant="44" id="LzM-ka-w0O"/>
+                                            <constraint firstItem="pal-qx-gC2" firstAttribute="top" secondItem="FQM-Me-g3r" secondAttribute="top" constant="5" id="jvs-MN-6vA"/>
+                                            <constraint firstItem="oPC-tb-42d" firstAttribute="centerY" secondItem="FQM-Me-g3r" secondAttribute="centerY" id="siK-uo-LMb"/>
+                                            <constraint firstItem="oPC-tb-42d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pal-qx-gC2" secondAttribute="trailing" constant="8" symbolic="YES" id="tj2-du-hBP"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qfV-lE-Jj8">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f60-NW-oy6">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="703.33333333333337"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUl-XT-5c5">
+                                                <rect key="frame" x="0.0" y="703.33333333333337" width="414" height="20.333333333333371"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwd-Rb-aIt">
+                                                <rect key="frame" x="0.0" y="723.66666666666663" width="414" height="20.333333333333371"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jp-MY-Bwq">
+                                                <rect key="frame" x="0.0" y="744" width="414" height="30"/>
+                                                <state key="normal" title="開始試用"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="qfV-lE-Jj8" firstAttribute="top" secondItem="FQM-Me-g3r" secondAttribute="bottom" id="f8c-Sa-KcJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="FQM-Me-g3r" secondAttribute="trailing" id="fA1-UV-hhz"/>
+                                    <constraint firstItem="FQM-Me-g3r" firstAttribute="top" secondItem="jaP-0P-87E" secondAttribute="top" id="hRd-mg-W3a"/>
+                                    <constraint firstItem="FQM-Me-g3r" firstAttribute="leading" secondItem="jaP-0P-87E" secondAttribute="leading" id="hvT-ak-8zV"/>
+                                    <constraint firstItem="qfV-lE-Jj8" firstAttribute="leading" secondItem="jaP-0P-87E" secondAttribute="leading" id="kqX-6f-4qB"/>
+                                    <constraint firstAttribute="trailing" secondItem="qfV-lE-Jj8" secondAttribute="trailing" id="tMo-gU-7Jh"/>
+                                    <constraint firstAttribute="bottom" secondItem="qfV-lE-Jj8" secondAttribute="bottom" id="whe-bX-eKi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lX6-yj-JJf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lX6-yj-JJf" firstAttribute="bottom" secondItem="jaP-0P-87E" secondAttribute="bottom" id="8TX-Uv-Xj6"/>
+                            <constraint firstItem="jaP-0P-87E" firstAttribute="leading" secondItem="lX6-yj-JJf" secondAttribute="leading" id="8Xb-E3-Cl7"/>
+                            <constraint firstItem="lX6-yj-JJf" firstAttribute="trailing" secondItem="jaP-0P-87E" secondAttribute="trailing" id="VJE-ZC-DT5"/>
+                            <constraint firstItem="jaP-0P-87E" firstAttribute="top" secondItem="lX6-yj-JJf" secondAttribute="top" id="z7R-jj-OgX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZk-NX-sqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4159.420289855073" y="865.84821428571422"/>
         </scene>
         <!--Onboarding2 View Controller-->
         <scene sceneID="P4e-R5-ArY">
@@ -2813,7 +2906,7 @@ App們將會開始抖動。</string>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇字體" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cda-zC-giG">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
-                                                                                <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="24"/>
+                                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -3054,10 +3147,10 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pIM-gP-oXb"/>
-        <segue reference="hS7-Sl-5ah"/>
+        <segue reference="7fH-0S-a6S"/>
+        <segue reference="ly3-Ze-ofX"/>
         <segue reference="1Gl-uz-PMa"/>
-        <segue reference="htk-Qi-2dc"/>
+        <segue reference="iiW-8X-Mfm"/>
         <segue reference="9CO-rk-QmR"/>
     </inferredMetricsTieBreakers>
     <resources>

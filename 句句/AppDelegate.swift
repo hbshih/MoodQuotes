@@ -16,6 +16,7 @@ import WidgetKit
 import AppTrackingTransparency
 //import FacebookCore
 //import FBSDKCoreKit
+import PurchaseKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        //purchasekit
+        PKManager.configure(sharedSecret: "c180acfb02ff4e39a006b23d901a315c")
+        PKManager.loadProducts(identifiers: ["monthly_purchase"])
 
         
         // Override point for customization after application launch.
