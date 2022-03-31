@@ -109,7 +109,7 @@ struct coloredflowerHandler{
         }
     }
     
-    func getFlowerImageURL(completion: @escaping ((_ name: String, _ imageurl: String) -> Void)) {
+    func getFlowerImageURL(completion: @escaping ((_ name: String, _ imageurl: String, _ meaning: String) -> Void)) {
         
         var numberOfImages = 0
         
@@ -121,10 +121,11 @@ struct coloredflowerHandler{
                URLSession.shared.dataTask(with: url) { data, response, error in
                   if let data = data {
                       do {
-                         let res = try JSONDecoder().decode(Response.self, from: data)
+                         let res = try JSONDecoder().decode(ResponseColored.self, from: data)
                         print(res.name)
                         print(res.fileName)
-                        completion(res.name, res.fileName)
+                          print(res.meaning)
+                          completion(res.name, res.fileName, res.meaning)
                       } catch let error {
                         print(error)
                       }
@@ -198,6 +199,12 @@ extension String
 struct Response: Codable { // or Decodable
     let name: String
     let fileName: String
+}
+
+struct ResponseColored: Codable { // or Decodable
+    let name: String
+    let fileName: String
+    let meaning: String
 }
 
 struct FlowerImage{

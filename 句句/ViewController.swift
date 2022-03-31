@@ -43,6 +43,7 @@ class ViewController: UIViewController, MessagingDelegate {
     @IBOutlet weak var backgroundHideenView: UIStackView!
     @IBOutlet weak var hiddenQuoteAdder: UILabel!
     @IBOutlet weak var stack_action_controller: UIStackView!
+    @IBOutlet weak var flowerMeaning: UILabel!
     @IBOutlet weak var onboardingTouchIcon: UIImageView!
     @IBOutlet weak var todayDateLabel: UILabel!
     
@@ -178,7 +179,7 @@ class ViewController: UIViewController, MessagingDelegate {
         /*|| UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil*/
         
         // comment out for testing purpose
-        if SyncAppQuotes().checkIfUpdate()
+        if !SyncAppQuotes().checkIfUpdate()
         {
             print("loading new screen")
             // Get From API
@@ -431,9 +432,61 @@ class ViewController: UIViewController, MessagingDelegate {
     var quote: String = "今日App心情都太差了，沒有任何更新"
     @IBOutlet weak var nameOfFlower: UILabel!
     var author: String = "— 斌"
+    var paid_user = false
     
     func downloadFlowerImage()
     {
+        if paid_user
+        {
+            coloredflowerHandler().getFlowerImageURL { (name, image_url, meaning) in
+                DispatchQueue.main.async { [self] in
+                    
+                    // Get a reference to the storage service using the default Firebase App
+                    let storage = Storage.storage()
+                    
+                    // Create a storage reference from our storage service
+                    let storageRef = storage.reference()
+                    
+                    print("get url \(image_url)")
+                    // Reference to an image file in Firebase Storage
+                    let reference = storageRef.child("/colored_flowers/\(image_url).png")
+                    
+                    // Placeholder image
+                    let placeholderImage = UIImage(named: "placeholder.jpg")
+                    
+                    
+                    // Load the image using SDWebImage
+                    self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+                        if error != nil
+                        {
+                            print("unable to load new image \(error)")
+                            flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                            //更新Widget
+                            if #available(iOS 14.0, *) {
+                                WidgetCenter.shared.reloadAllTimelines()
+                            } else {
+                                // Fallback on earlier versions
+                            }
+                        }else
+                        {
+                            flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                            //更新Widget
+                            if #available(iOS 14.0, *) {
+                                WidgetCenter.shared.reloadAllTimelines()
+                            } else {
+                                // Fallback on earlier versions
+                            }
+                        }
+                    }
+                    self.nameOfFlower.text = name
+                    self.flowerMeaning.text = meaning
+                }
+            }
+        }else
+        {
+        
         flowerHandler().getFlowerImageURL { (name, image_url) in
             DispatchQueue.main.async { [self] in
                 
@@ -445,7 +498,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 
                 print("get url \(image_url)")
                 // Reference to an image file in Firebase Storage
-                let reference = storageRef.child("flowers/\(image_url).png")
+                let reference = storageRef.child("/flowers/\(image_url).png")
                 
                 // Placeholder image
                 let placeholderImage = UIImage(named: "placeholder.jpg")
@@ -477,7 +530,9 @@ class ViewController: UIViewController, MessagingDelegate {
                     }
                 }
                 self.nameOfFlower.text = name
+                self.flowerMeaning.isHidden = true
             }
+        }
         }
     }
     
