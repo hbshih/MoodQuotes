@@ -155,6 +155,9 @@
                                                                     <state key="normal" title="經典">
                                                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <action selector="colorPicked:" destination="-1" eventType="touchUpInside" id="BsD-aB-W95"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVx-MM-ppe">
                                                                     <rect key="frame" x="90" y="0.0" width="60" height="40"/>
@@ -162,6 +165,9 @@
                                                                     <state key="normal" title="絢麗">
                                                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <action selector="colorPicked:" destination="-1" eventType="touchUpInside" id="RNR-xT-6vT"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMu-Gn-xCy">
                                                                     <rect key="frame" x="180" y="0.0" width="60" height="40"/>
@@ -169,6 +175,9 @@
                                                                     <state key="normal" title="防彈">
                                                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <action selector="colorPicked:" destination="-1" eventType="touchUpInside" id="Pgs-d6-Ki2"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>

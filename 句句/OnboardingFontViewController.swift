@@ -24,7 +24,7 @@ class OnboardingFontViewController: UIViewController {
     var selectedFont = "jf-openhuninn-1.1"
     
     @IBAction func fontSelected(_ sender: UIButton) {
-        exampleLabel.text = sender.currentTitle
+        exampleLabel.text = "真正重要的事物，用肉眼是看不見的。只有用心，才能看得清楚。"
         exampleLabel.font = sender.titleLabel?.font
         switch sender.tag {
         case 1:
