@@ -35,7 +35,7 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
             }else
             {
                 let converted = moodList.compactMapValues { $0 as? String }
-                fillSelectionColors = converted
+                self.moodList = converted
             //    fillSelectionColors = moodList
             }
         }
@@ -177,7 +177,7 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         }
     }
     
-    var fillSelectionColors = ["2022-03-22": "happy", "2022-03-26": "sad"]
+    var moodList = ["2022-03-22": "happy", "2022-03-26": "sad"]
     fileprivate lazy var dateFormatter2: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -197,12 +197,12 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         
         let dateString = self.dateFormatter2.string(from: date)
         
-        print(fillSelectionColors.keys)
-        print(dateString)
+            //    print(fillSelectionColors.keys)
+      //  print(dateString)
         
-        if fillSelectionColors.keys.contains(dateString)
+        if moodList.keys.contains(dateString)
         {
-            switch fillSelectionColors[dateString] {
+            switch moodList[dateString] {
             case "super-happy":
                 diyCell.superhappyImageView.isHidden = false
             case "happy":
