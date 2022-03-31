@@ -281,7 +281,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAT-KL-MX8">
                                                                         <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="35"/>
                                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="32"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gP9-Qx-Uyy">
@@ -290,13 +290,13 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週二" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJT-PA-hMp">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="17.666666666666668"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6月15日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxx-iS-jBb">
                                                                                 <rect key="frame" x="0.0" y="17.666666666666671" width="46.333333333333336" height="17.333333333333329"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -323,7 +323,6 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <color key="tintColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="4YA-uo-af0"/>
@@ -337,7 +336,7 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
@@ -355,7 +354,7 @@
                                                         <string key="text">人生是一場兵荒馬亂，
 你是我的劫後餘生。</string>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="22"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -381,7 +380,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="林予晞" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFy-hP-jeV">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="32"/>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -441,13 +440,13 @@
                                                                                     <constraint firstAttribute="height" constant="30" id="8fX-Pf-gYC"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="18"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一種生長在海拔1040公尺的花，可以很浪漫的陪你成長。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNx-6R-ayd">
                                                                                 <rect key="frame" x="0.0" y="30" width="206" height="50"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -469,7 +468,7 @@
                                                                 <rect key="frame" x="0.0" y="187" width="60" height="29"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <state key="normal" title="分享">
-                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="titleColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="shareTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7HE-qm-fjy"/>
@@ -479,7 +478,7 @@
                                                                 <rect key="frame" x="60" y="187" width="60" height="29"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <state key="normal" title="收藏">
-                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="titleColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="bookmark_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Cx-F2-AL8"/>
@@ -558,7 +557,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="P87-ma-Oso">
-                                <rect key="frame" x="16" y="59.999999999999993" width="382" height="88.333333333333314"/>
+                                <rect key="frame" x="16" y="74" width="382" height="88.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="個人紀錄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smC-ML-Xpw">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
@@ -583,7 +582,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="UQI-Ih-U6W" firstAttribute="top" secondItem="NIn-o5-9Dp" secondAttribute="top" id="FiL-cB-n71"/>
                                                     <constraint firstAttribute="width" constant="50" id="KRb-TJ-GCk"/>
@@ -592,6 +591,11 @@
                                                     <constraint firstItem="UQI-Ih-U6W" firstAttribute="leading" secondItem="NIn-o5-9Dp" secondAttribute="leading" id="eSW-kT-s3s"/>
                                                     <constraint firstAttribute="height" constant="24" id="n9p-pI-vRW"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日記" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJI-xB-dsC">
                                                 <rect key="frame" x="16" y="21.666666666666671" width="34" height="17"/>
@@ -617,10 +621,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXW-1g-7BB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="8" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvV-t3-TCZ">
-                                        <rect key="frame" x="16" y="5" width="34" height="34"/>
+                                        <rect key="frame" x="16" y="8" width="34" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="IVm-iS-CTT"/>
                                             <constraint firstAttribute="width" secondItem="RvV-t3-TCZ" secondAttribute="height" multiplier="1:1" id="g7I-nL-HSY"/>
@@ -628,20 +632,20 @@
                                         <state key="normal" title="Button" image="icon_back"/>
                                         <connections>
                                             <action selector="backTapped:" destination="3gg-VR-CeA" eventType="touchUpInside" id="y3j-un-eL5"/>
+                                            <action selector="dismissTapped:" destination="MY9-5J-sNZ" eventType="touchUpInside" id="LkA-VV-JPm"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="RvV-t3-TCZ" secondAttribute="bottom" constant="5" id="BMM-Lc-UXh"/>
-                                    <constraint firstAttribute="height" constant="44" id="O2W-t6-bdn"/>
-                                    <constraint firstItem="RvV-t3-TCZ" firstAttribute="top" secondItem="UXW-1g-7BB" secondAttribute="top" constant="5" id="bZD-OW-VMN"/>
+                                    <constraint firstAttribute="height" constant="50" id="O2W-t6-bdn"/>
+                                    <constraint firstItem="RvV-t3-TCZ" firstAttribute="centerY" secondItem="UXW-1g-7BB" secondAttribute="centerY" id="VXc-yZ-ojC"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="hM1-Sw-xV8"/>
                                     <constraint firstItem="RvV-t3-TCZ" firstAttribute="leading" secondItem="UXW-1g-7BB" secondAttribute="leading" constant="16" id="pwX-01-NXt"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6rf-WF-PpK">
-                                <rect key="frame" x="16" y="164.33333333333334" width="382" height="428.33333333333326"/>
+                                <rect key="frame" x="16" y="178.33333333333334" width="382" height="428.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJc-Pk-rda">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.333333333333332"/>
@@ -736,7 +740,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="6A4-RK-IoM"/>
                                                     <constraint firstAttribute="trailing" secondItem="y3I-Gj-sLt" secondAttribute="trailing" id="AMD-pp-X4q"/>
@@ -745,6 +749,11 @@
                                                     <constraint firstItem="y3I-Gj-sLt" firstAttribute="leading" secondItem="atq-gC-GTx" secondAttribute="leading" id="dbt-Dm-bXp"/>
                                                     <constraint firstItem="y3I-Gj-sLt" firstAttribute="top" secondItem="atq-gC-GTx" secondAttribute="top" id="foa-JS-3od"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.78823529411764703" green="0.80784313725490198" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
@@ -784,7 +793,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="qpw-bx-tI6" firstAttribute="leading" secondItem="8bB-Oh-Oz1" secondAttribute="leading" id="Gir-ox-udj"/>
                                                     <constraint firstAttribute="width" constant="50" id="J5z-t6-8zd"/>
@@ -793,6 +802,11 @@
                                                     <constraint firstAttribute="height" constant="24" id="kei-oc-Gc0"/>
                                                     <constraint firstItem="qpw-bx-tI6" firstAttribute="top" secondItem="8bB-Oh-Oz1" secondAttribute="top" id="rD7-Be-8P3"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -832,7 +846,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="DlK-BM-g6a"/>
                                                     <constraint firstAttribute="bottom" secondItem="jbn-yc-CG1" secondAttribute="bottom" id="LaX-Fm-onS"/>
@@ -841,6 +855,11 @@
                                                     <constraint firstAttribute="trailing" secondItem="jbn-yc-CG1" secondAttribute="trailing" id="bmO-9O-1Od"/>
                                                     <constraint firstItem="jbn-yc-CG1" firstAttribute="top" secondItem="ygi-C3-arY" secondAttribute="top" id="js8-D9-IPT"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9882352941176471" green="0.79607843137254897" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
@@ -877,7 +896,7 @@
                                                         </state>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="02J-yd-GZP"/>
                                                     <constraint firstAttribute="width" constant="50" id="8WB-HX-rlW"/>
@@ -886,6 +905,11 @@
                                                     <constraint firstAttribute="trailing" secondItem="K71-EG-IEs" secondAttribute="trailing" id="SHQ-jB-I80"/>
                                                     <constraint firstItem="K71-EG-IEs" firstAttribute="top" secondItem="s2m-nx-WXS" secondAttribute="top" id="hxe-AK-njf"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
@@ -912,7 +936,7 @@
                             <constraint firstItem="P87-ma-Oso" firstAttribute="leading" secondItem="9TG-Gd-7mC" secondAttribute="leading" constant="16" id="3tH-Mg-yFN"/>
                             <constraint firstItem="9TG-Gd-7mC" firstAttribute="trailing" secondItem="UXW-1g-7BB" secondAttribute="trailing" id="7RC-fj-hxD"/>
                             <constraint firstItem="9TG-Gd-7mC" firstAttribute="trailing" secondItem="6rf-WF-PpK" secondAttribute="trailing" constant="16" id="BHh-Co-xy7"/>
-                            <constraint firstItem="UXW-1g-7BB" firstAttribute="top" secondItem="9TG-Gd-7mC" secondAttribute="top" id="IOi-vS-RWi"/>
+                            <constraint firstItem="UXW-1g-7BB" firstAttribute="top" secondItem="9TG-Gd-7mC" secondAttribute="top" constant="8" id="IOi-vS-RWi"/>
                             <constraint firstItem="6rf-WF-PpK" firstAttribute="top" secondItem="P87-ma-Oso" secondAttribute="bottom" constant="16" id="h4y-gn-S0F"/>
                             <constraint firstItem="9TG-Gd-7mC" firstAttribute="trailing" secondItem="P87-ma-Oso" secondAttribute="trailing" constant="16" id="qiB-zK-P1e"/>
                             <constraint firstItem="UXW-1g-7BB" firstAttribute="leading" secondItem="9TG-Gd-7mC" secondAttribute="leading" id="rA1-1k-Zrc"/>
@@ -938,7 +962,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFz-zm-aVh">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="8" width="414" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61u-zt-lMb">
                                         <rect key="frame" x="16" y="5" width="34" height="34"/>
@@ -952,11 +976,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fZ-Hu-RVn">
-                                        <rect key="frame" x="238" y="7.6666666666666679" width="80" height="29.000000000000004"/>
+                                        <rect key="frame" x="238" y="7.6666666666666643" width="80" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Fyc-a3-RFZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <state key="normal" title="收藏語錄">
                                             <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -967,7 +991,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwd-Nc-0l1">
-                                        <rect key="frame" x="318" y="7.6666666666666679" width="80" height="29.000000000000004"/>
+                                        <rect key="frame" x="318" y="7.6666666666666643" width="80" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Kis-b2-X44"/>
                                         </constraints>
@@ -998,7 +1022,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VsR-1N-Uvn">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <rect key="frame" x="0.0" y="52" width="414" height="790"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588239999999" green="0.8862745098" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -1013,9 +1037,9 @@
                                                     <rect key="frame" x="24" y="16" width="366" height="168"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reG-vf-qek">
-                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="138"/>
+                                                            <rect key="frame" x="16" y="0.0" width="334" height="138"/>
                                                             <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCO-Qk-k9O">
@@ -1024,28 +1048,29 @@
                                                                 <constraint firstAttribute="height" constant="30" id="ruL-hU-JBI"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="15"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.79607843137254897" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="reG-vf-qek" secondAttribute="trailing" id="IQk-me-q4x"/>
-                                                        <constraint firstAttribute="height" constant="320" id="chJ-iJ-1UI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="reG-vf-qek" secondAttribute="trailing" constant="16" id="IQk-me-q4x"/>
+                                                        <constraint firstAttribute="height" constant="240" id="chJ-iJ-1UI"/>
                                                         <constraint firstItem="CCO-Qk-k9O" firstAttribute="leading" secondItem="ou0-f3-lDM" secondAttribute="leading" id="hTK-aa-Jfc"/>
-                                                        <constraint firstItem="reG-vf-qek" firstAttribute="leading" secondItem="ou0-f3-lDM" secondAttribute="leading" id="kYf-DB-TCb"/>
+                                                        <constraint firstItem="reG-vf-qek" firstAttribute="leading" secondItem="ou0-f3-lDM" secondAttribute="leading" constant="16" id="kYf-DB-TCb"/>
                                                         <constraint firstAttribute="trailing" secondItem="CCO-Qk-k9O" secondAttribute="trailing" id="sQg-9V-212"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderUIColor">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <integer key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.96470588239999999" green="0.8862745098" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="ou0-f3-lDM" secondAttribute="trailing" constant="24" id="5Ie-3V-pjC"/>
                                                 <constraint firstItem="ou0-f3-lDM" firstAttribute="leading" secondItem="BLR-Bv-8hf" secondAttribute="leading" constant="24" id="EHa-Nd-XbZ"/>
@@ -1073,7 +1098,7 @@
                             <constraint firstItem="VsR-1N-Uvn" firstAttribute="top" secondItem="iFz-zm-aVh" secondAttribute="bottom" id="Iby-cv-Cit"/>
                             <constraint firstItem="VsR-1N-Uvn" firstAttribute="leading" secondItem="XQM-PU-MsL" secondAttribute="leading" id="YZA-Eu-bYU"/>
                             <constraint firstItem="iFz-zm-aVh" firstAttribute="leading" secondItem="XQM-PU-MsL" secondAttribute="leading" id="h08-mU-oYL"/>
-                            <constraint firstItem="iFz-zm-aVh" firstAttribute="top" secondItem="XQM-PU-MsL" secondAttribute="top" id="rKZ-rY-V4G"/>
+                            <constraint firstItem="iFz-zm-aVh" firstAttribute="top" secondItem="XQM-PU-MsL" secondAttribute="top" constant="8" id="rKZ-rY-V4G"/>
                             <constraint firstItem="XQM-PU-MsL" firstAttribute="trailing" secondItem="VsR-1N-Uvn" secondAttribute="trailing" id="wxe-KP-uSp"/>
                         </constraints>
                     </view>
@@ -1364,8 +1389,8 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#句句語錄 app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-5T-G9G">
-                                                        <rect key="frame" x="157.66666666666666" y="1" width="67" height="10"/>
-                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="10"/>
+                                                        <rect key="frame" x="171" y="3" width="40.333333333333343" height="6"/>
+                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="6"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1383,7 +1408,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="EvY-7V-sUY" secondAttribute="trailing" constant="16" id="jg4-ay-MwR"/>
                                                     <constraint firstAttribute="width" secondItem="a6u-sV-Mzf" secondAttribute="height" multiplier="1:1" id="kvI-P0-46w"/>
                                                     <constraint firstItem="AhN-FD-EQ4" firstAttribute="top" secondItem="a6u-sV-Mzf" secondAttribute="top" id="pjh-3j-59U"/>
-                                                    <constraint firstItem="UBb-5T-G9G" firstAttribute="top" secondItem="a6u-sV-Mzf" secondAttribute="top" constant="1" id="qbb-Bd-X98"/>
+                                                    <constraint firstItem="UBb-5T-G9G" firstAttribute="top" secondItem="a6u-sV-Mzf" secondAttribute="top" constant="3" id="qbb-Bd-X98"/>
                                                     <constraint firstItem="AhN-FD-EQ4" firstAttribute="leading" secondItem="a6u-sV-Mzf" secondAttribute="leading" id="rXr-M0-QFQ"/>
                                                 </constraints>
                                             </view>
@@ -2382,6 +2407,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqR-dP-uzr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding-background" translatesAutoresizingMaskIntoConstraints="NO" id="hMB-Ne-vyE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="cB3-ij-gdY">
                                         <rect key="frame" x="16" y="298" width="382" height="300"/>
                                         <subviews>
@@ -2397,7 +2425,7 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QA-KT-nGc">
                                                         <rect key="frame" x="16" y="150" width="350" height="150"/>
-                                                        <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -2421,8 +2449,12 @@
                                 <constraints>
                                     <constraint firstItem="cB3-ij-gdY" firstAttribute="centerX" secondItem="pqR-dP-uzr" secondAttribute="centerX" id="3jt-6I-psi"/>
                                     <constraint firstItem="cB3-ij-gdY" firstAttribute="centerY" secondItem="pqR-dP-uzr" secondAttribute="centerY" id="9S7-dI-70m"/>
+                                    <constraint firstAttribute="bottom" secondItem="hMB-Ne-vyE" secondAttribute="bottom" id="AWj-UP-chX"/>
+                                    <constraint firstItem="hMB-Ne-vyE" firstAttribute="leading" secondItem="pqR-dP-uzr" secondAttribute="leading" id="BOR-ZF-VEW"/>
+                                    <constraint firstItem="hMB-Ne-vyE" firstAttribute="top" secondItem="pqR-dP-uzr" secondAttribute="top" id="G5I-sr-jaU"/>
                                     <constraint firstItem="cB3-ij-gdY" firstAttribute="leading" secondItem="pqR-dP-uzr" secondAttribute="leading" constant="16" id="NVX-fm-LGC"/>
                                     <constraint firstAttribute="trailing" secondItem="cB3-ij-gdY" secondAttribute="trailing" constant="16" id="QTn-Fc-EsV"/>
+                                    <constraint firstAttribute="trailing" secondItem="hMB-Ne-vyE" secondAttribute="trailing" id="UEb-Hs-Vpj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -3110,7 +3142,7 @@ App們將會開始抖動。</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krj-ci-U9F">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="8" width="414" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iI1-Ly-ycF">
                                         <rect key="frame" x="16" y="5" width="34" height="34"/>
@@ -3124,11 +3156,11 @@ App們將會開始抖動。</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjF-2Z-Wfa">
-                                        <rect key="frame" x="318" y="7.6666666666666679" width="80" height="29.000000000000004"/>
+                                        <rect key="frame" x="318" y="7.6666666666666643" width="80" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="f98-1D-dZ8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <state key="normal" title="心情紀錄">
                                             <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -3151,7 +3183,7 @@ App們將會開始抖動。</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rT-nW-QlR">
-                                <rect key="frame" x="238" y="7.6666666666666679" width="80" height="29.000000000000004"/>
+                                <rect key="frame" x="238" y="15.666666666666664" width="80" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Xwf-qs-odf"/>
                                 </constraints>
@@ -3166,7 +3198,7 @@ App們將會開始抖動。</string>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTd-HT-Jtb" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="44" width="414" height="400"/>
+                                <rect key="frame" x="0.0" y="52" width="414" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="jzg-0j-NMV"/>
@@ -3181,7 +3213,7 @@ App們將會開始抖動。</string>
                         <constraints>
                             <constraint firstItem="YTd-HT-Jtb" firstAttribute="top" secondItem="krj-ci-U9F" secondAttribute="bottom" id="2vt-qm-ebg"/>
                             <constraint firstItem="f1Z-lu-CBl" firstAttribute="trailing" secondItem="krj-ci-U9F" secondAttribute="trailing" id="6Ej-1u-MSJ"/>
-                            <constraint firstItem="krj-ci-U9F" firstAttribute="top" secondItem="f1Z-lu-CBl" secondAttribute="top" id="AgK-3c-vBe"/>
+                            <constraint firstItem="krj-ci-U9F" firstAttribute="top" secondItem="f1Z-lu-CBl" secondAttribute="top" constant="8" id="AgK-3c-vBe"/>
                             <constraint firstItem="EjF-2Z-Wfa" firstAttribute="leading" secondItem="4rT-nW-QlR" secondAttribute="trailing" id="Eo4-fd-SrH"/>
                             <constraint firstItem="f1Z-lu-CBl" firstAttribute="trailing" secondItem="YTd-HT-Jtb" secondAttribute="trailing" id="MVl-rN-cl5"/>
                             <constraint firstItem="4rT-nW-QlR" firstAttribute="centerY" secondItem="krj-ci-U9F" secondAttribute="centerY" id="WRL-OT-G4J"/>
@@ -3200,7 +3232,7 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pIM-gP-oXb"/>
+        <segue reference="OPy-tA-N0Q"/>
         <segue reference="hS7-Sl-5ah"/>
         <segue reference="1Gl-uz-PMa"/>
         <segue reference="iiW-8X-Mfm"/>
@@ -3222,6 +3254,7 @@ App們將會開始抖動。</string>
         <image name="noun_Save_2209758 1" width="35" height="35"/>
         <image name="noun_Share_1058858 (2) 1" width="35" height="35"/>
         <image name="noun_instagram_3350460 (1) 1" width="30" height="30"/>
+        <image name="onboarding-background" width="563" height="1218"/>
         <image name="share_frame" width="2343" height="2343"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

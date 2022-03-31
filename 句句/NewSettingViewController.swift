@@ -57,6 +57,9 @@ class NewSettingViewController: UIViewController {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         NotificationTrigger().notifyQuoteHasChanged()
     }
+    @IBAction func dismissTapped(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     @IBAction func adjustBackgroundColor(_ sender: Any) {
         
         // Create a custom view controller
