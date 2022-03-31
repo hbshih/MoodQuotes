@@ -104,6 +104,7 @@ struct QuoteEntry: TimelineEntry{
     let flowerName: String
 }
 
+
 struct Emojibook_WidgetEntryView: View {
     var entry: Provider.Entry
     
