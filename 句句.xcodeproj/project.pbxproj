@@ -80,6 +80,7 @@
 		B563EBC727F41ED8003D0DD9 /* PurchaseKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B563EBC527F41ED8003D0DD9 /* PurchaseKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B563EBD027F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
 		B563EBD127F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
+		B57EA6C427F5356400BAF789 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */; };
 		B5807EFD25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B58E54FA2629AEE9009657E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5517C7D255FAFC500E134CC /* Assets.xcassets */; };
@@ -248,6 +249,7 @@
 		B563EBBE27F41E92003D0DD9 /* PurchaseKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PurchaseKit; sourceTree = "<group>"; };
 		B563EBC527F41ED8003D0DD9 /* PurchaseKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PurchaseKit.xcframework; path = "句句/PurchaseKit/PurchaseKit.xcframework"; sourceTree = "<group>"; };
 		B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFontViewController.swift; sourceTree = "<group>"; };
+		B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
 		B58E55332629BD9E009657E0 /* flowerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowerHandler.swift; sourceTree = "<group>"; };
 		B58FD31C256B737000CBDAB6 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 				B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */,
 				B563EBBE27F41E92003D0DD9 /* PurchaseKit */,
 				B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */,
+				B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -864,6 +867,7 @@
 				B55B06B927F32CE500B7AAEC /* NewSettingViewController.swift in Sources */,
 				B5517C77255FAFC500E134CC /* SceneDelegate.swift in Sources */,
 				B509567B256DDD6B0075ACE9 /* NotificationTrigger.swift in Sources */,
+				B57EA6C427F5356400BAF789 /* PurchaseViewController.swift in Sources */,
 				B5582D7827A5A00300D9F0E0 /* UpdateFontTableViewCell.swift in Sources */,
 				B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B591B17F2570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
