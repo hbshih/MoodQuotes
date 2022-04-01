@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u8y-ga-YrT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -31,20 +31,20 @@
             <objects>
                 <viewController id="875-bS-vea" customClass="Onboarding_1ViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4c4-BQ-VrV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qPV-02-AxK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ic0-6n-IU2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhh-qR-KzE">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="Qoo-5U-Tjv">
-                                                        <rect key="frame" x="16" y="254" width="382" height="200"/>
+                                                        <rect key="frame" x="16" y="266" width="382" height="200"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM1-I5-pyA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="112.5"/>
@@ -117,7 +117,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="so0-UE-QiP">
-                                        <rect key="frame" x="0.0" y="708" width="414" height="110"/>
+                                        <rect key="frame" x="0.0" y="732" width="414" height="110"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CC9-az-PAE">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
@@ -578,7 +578,7 @@
             <objects>
                 <viewController id="MY9-5J-sNZ" customClass="NewSettingViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NhR-U3-p4p">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXW-1g-7BB">
@@ -605,7 +605,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-xr-fh9">
-                                <rect key="frame" x="0.0" y="116" width="414" height="780"/>
+                                <rect key="frame" x="0.0" y="116" width="414" height="726"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2K-Dp-DfY">
                                         <rect key="frame" x="0.0" y="8" width="414" height="900"/>
@@ -1172,7 +1172,7 @@
             <objects>
                 <viewController id="cHC-of-i7y" customClass="SavedQuoteViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OAj-UZ-9Mi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFz-zm-aVh">
@@ -1215,7 +1215,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VsR-1N-Uvn">
-                                <rect key="frame" x="0.0" y="96" width="414" height="766"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="746"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.88627450980392153" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96470588239999999" green="0.8862745098" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -2679,11 +2679,11 @@
             <objects>
                 <viewController id="vyl-c7-Mf0" customClass="TutorialViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owX-6V-3AJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1446"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtw-l1-1Wq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1402"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-Np-Gnd">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1434.5"/>
@@ -2819,7 +2819,7 @@ App們將會開始抖動。</string>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eA-ph-1Nd">
-                                <rect key="frame" x="16" y="1390" width="382" height="44"/>
+                                <rect key="frame" x="16" y="1370" width="382" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IzG-dl-Gov">
                                         <rect key="frame" x="131" y="0.0" width="120" height="44"/>
@@ -3374,7 +3374,7 @@ App們將會開始抖動。</string>
             <objects>
                 <viewController id="rmA-dR-6oU" customClass="DIYExampleViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rcD-sf-xi5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krj-ci-U9F">
@@ -4211,8 +4211,8 @@ App們將會開始抖動。</string>
         <segue reference="pIM-gP-oXb"/>
         <segue reference="hS7-Sl-5ah"/>
         <segue reference="1Gl-uz-PMa"/>
-        <segue reference="ow3-cU-GNT"/>
-        <segue reference="Cpd-rk-0In"/>
+        <segue reference="htk-Qi-2dc"/>
+        <segue reference="9CO-rk-QmR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Frame 2 - Copy" width="750" height="1412"/>

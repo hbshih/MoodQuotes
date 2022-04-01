@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         
-        SwiftyStoreKit.retrieveProductsInfo(["monthly_purchase"]) { result in
+    /*    SwiftyStoreKit.retrieveProductsInfo(["monthly_purchase"]) { result in
             if let product = result.retrievedProducts.first {
                 let priceString = product.localizedPrice!
                 print("Product: \(product.localizedDescription), price: \(priceString)")
@@ -95,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Receipt verification failed: \(error)")
             }
         }
-
+*/
         
         // Override point for customization after application launch.
         FirebaseApp.configure()
