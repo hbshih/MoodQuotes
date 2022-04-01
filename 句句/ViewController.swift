@@ -45,7 +45,9 @@ class ViewController: UIViewController, MessagingDelegate {
     @IBOutlet weak var stack_action_controller: UIStackView!
     @IBOutlet weak var flowerMeaning: UILabel!
     @IBOutlet weak var onboardingTouchIcon: UIImageView!
+    @IBOutlet weak var blackwhiteFlowerSectionView: UIStackView!
     @IBOutlet weak var todayDateLabel: UILabel!
+    @IBOutlet weak var coloredFlowerSectionView: UIStackView!
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         print("Firebase registration token: \(String(describing: fcmToken))")
@@ -287,6 +289,17 @@ class ViewController: UIViewController, MessagingDelegate {
     //    self.bookmarkNotification.alpha = 0
     //    self.bookmarkNotification.text = "語錄已儲存！"
         
+        //paid user
+        if !global_paid_user
+        {
+            coloredFlowerSectionView.isHidden = true
+            blackwhiteFlowerSectionView.isHidden = false
+        }else
+        {
+            coloredFlowerSectionView.isHidden = false
+            blackwhiteFlowerSectionView.isHidden = true
+        }
+        
         if let arr = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
         {
             print("saved quotes")
@@ -360,9 +373,12 @@ class ViewController: UIViewController, MessagingDelegate {
    //     hiddenQuote.font = font
      //   hiddenQuoteAdder.font = font
         frontQuote.font = font
+        nameOfFlower.font = font
         font = Display_Font(font_size: 16).getUIFont()
         authorName.font = font
         
+        font = Display_Font(font_size: 12).getUIFont()
+        flowerMeaning.font = font
     //    hiddenAuthorName.font = font
         // ref = Database.database().reference()
         

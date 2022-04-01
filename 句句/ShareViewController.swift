@@ -25,6 +25,15 @@ class ShareViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //set UI font
+        var font = Display_Font(font_size: 24).getUIFont()
+        
+        quote.font = font
+        
+        font = Display_Font(font_size: 16).getUIFont()
+        
+        author.font = font
+        
         
         if imageToShow != nil
         {
