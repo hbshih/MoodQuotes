@@ -286,6 +286,8 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        alertViewHandler().control()
+        
     //    self.bookmarkNotification.alpha = 0
     //    self.bookmarkNotification.text = "語錄已儲存！"
         

@@ -23,6 +23,7 @@
 		B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
 		B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */; };
 		B51C61A4262C001800B5C6E8 /* textDirectionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */; };
+		B54344CF27F6F2930071E367 /* alertViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54344CE27F6F2930071E367 /* alertViewHandler.swift */; };
 		B547A82D25870AD100938A09 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B547A82C25870AD100938A09 /* AVFoundation.framework */; };
 		B547A82F25870ADC00938A09 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B547A82E25870ADC00938A09 /* Security.framework */; };
 		B547A83525870AE300938A09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B547A83425870AE300938A09 /* CoreGraphics.framework */; };
@@ -203,6 +204,7 @@
 		B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTrigger.swift; sourceTree = "<group>"; };
 		B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = I.Ngaan.ttf; sourceTree = "<group>"; };
 		B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textDirectionModifier.swift; sourceTree = "<group>"; };
+		B54344CE27F6F2930071E367 /* alertViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertViewHandler.swift; sourceTree = "<group>"; };
 		B547A82C25870AD100938A09 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B547A82E25870ADC00938A09 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B547A83425870AE300938A09 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -480,6 +482,7 @@
 				B563EBBE27F41E92003D0DD9 /* PurchaseKit */,
 				B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */,
 				B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */,
+				B54344CE27F6F2930071E367 /* alertViewHandler.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -859,6 +862,7 @@
 				B5517C79255FAFC500E134CC /* ViewController.swift in Sources */,
 				B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */,
 				B563EBB827F41C85003D0DD9 /* subscriptionViewController.swift in Sources */,
+				B54344CF27F6F2930071E367 /* alertViewHandler.swift in Sources */,
 				B563EB8E27F3F325003D0DD9 /* DIYCalendarCell.swift in Sources */,
 				B5A4D14027F2EDC90093CDD6 /* QuoteTableViewCell.swift in Sources */,
 				B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */,

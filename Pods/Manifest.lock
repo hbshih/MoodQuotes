@@ -148,6 +148,9 @@ PODS:
   - SDWebImage/Core (5.11.0)
   - SDWebImageSwiftUI (2.0.2):
     - SDWebImage (~> 5.10)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
   - SwiftyGif (5.4.0)
 
 DEPENDENCIES:
@@ -169,6 +172,7 @@ DEPENDENCIES:
   - MASegmentedControl
   - PopupDialog
   - SDWebImageSwiftUI
+  - SwiftMessages
   - SwiftyGif
 
 SPEC REPOS:
@@ -206,6 +210,7 @@ SPEC REPOS:
     - PromisesObjC
     - SDWebImage
     - SDWebImageSwiftUI
+    - SwiftMessages
     - SwiftyGif
 
 SPEC CHECKSUMS:
@@ -242,8 +247,9 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
   SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftyGif: 5d4af95df24caf1c570dbbcb32a3b8a0763bc6d7
 
-PODFILE CHECKSUM: 0abf4762a58cf9444de820d3ba18b2b1d97103c1
+PODFILE CHECKSUM: e60b791b4cae7bdf53d2d4084853a1b15ad9da02
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3

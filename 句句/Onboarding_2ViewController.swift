@@ -14,7 +14,7 @@ class Onboarding_2ViewController: UIViewController {
     @IBOutlet weak var gray: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         // Do any additional setup after loading the view.
     }
     
