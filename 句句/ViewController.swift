@@ -591,7 +591,21 @@ class ViewController: UIViewController, MessagingDelegate {
             
             let array = [Date().getFormattedDate:mood]
             
-            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(array, forKey: "moodList")
+            if var moodList = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.dictionary(forKey: "moodList")
+            {
+                if moodList.isEmpty || moodList.count < 1
+                {
+                    // default
+                   // UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(array, forKey: "moodList")
+                }else
+                {
+                    moodList[Date().getFormattedDate] = mood
+                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(moodList, forKey: "moodList")
+                }
+            }else
+            {
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(array, forKey: "moodList")
+            }
         }
         
         buttonTwo.backgroundColor = .systemGray6
