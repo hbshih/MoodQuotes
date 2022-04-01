@@ -11,6 +11,7 @@ import Intents
 import Foundation
 import Firebase
 import FirebaseUI
+import FirebaseAnalytics
 
 struct Provider: TimelineProvider{
     
@@ -22,6 +23,7 @@ struct Provider: TimelineProvider{
     
     func getSnapshot(in context: Context, completion: @escaping (QuoteEntry) -> Void) {
         
+    
         Analytics.logEvent("widget_got_installed", parameters: nil)
         
         print("Widget got loaded")
@@ -126,6 +128,8 @@ struct Emojibook_WidgetEntryView: View {
         
         case .systemMedium:
             GeegeeWidgetView(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
+            
+            GeegeeWidgetView_2(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
             
         case .systemSmall:
             GeegeeWidgetView_small(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)

@@ -62,6 +62,7 @@ class NewSettingViewController: UIViewController {
     }
     @IBAction func adjustBackgroundColor(_ sender: Any) {
         
+        /*
         // Create a custom view controller
         let ratingVC = RatingViewController(nibName: "RatingViewController", bundle: nil)
         
@@ -109,10 +110,12 @@ class NewSettingViewController: UIViewController {
         popup.addButtons([buttonTwo])
         
         UIApplication.topViewController()?.present(popup, animated: true, completion: nil)
+         */
     }
     
     @IBAction func adjustFont(_ sender: Any) {
         
+        /*
         // Create a custom view controller
         let ratingVC = UpdateFontViewController(nibName: "UpdateFontViewController", bundle: nil)
             
@@ -147,6 +150,7 @@ class NewSettingViewController: UIViewController {
         popup.addButtons([buttonTwo])
         
         UIApplication.topViewController()?.present(popup, animated: true, completion: nil)
+         */
         
     }
     /*
