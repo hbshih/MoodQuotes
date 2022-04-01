@@ -212,24 +212,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hci-gt-IHu">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8F-UG-eR0">
-                                        <rect key="frame" x="350" y="32" width="32" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="Adn-jb-2in"/>
-                                            <constraint firstAttribute="height" constant="32" id="Dxt-wC-2Gf"/>
-                                        </constraints>
-                                        <state key="normal" image="noun-menu-865874-2D3142"/>
-                                        <connections>
-                                            <segue destination="MY9-5J-sNZ" kind="show" id="1Gl-uz-PMa"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9L-8y-oEM">
-                                        <rect key="frame" x="32" y="32" width="32" height="32"/>
+                                        <rect key="frame" x="32" y="36" width="24" height="24"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="A6j-4J-aNh"/>
-                                            <constraint firstAttribute="height" constant="32" id="r91-zz-k0g"/>
+                                            <constraint firstAttribute="width" constant="24" id="A6j-4J-aNh"/>
+                                            <constraint firstAttribute="height" constant="24" id="r91-zz-k0g"/>
                                         </constraints>
-                                        <state key="normal" image="noun-menu-865874-2D3142"/>
+                                        <state key="normal" image="noun-diamond-1520649-2D3142"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eW8-Vf-e6m">
                                         <rect key="frame" x="32" y="96" width="350" height="237"/>
@@ -481,10 +470,21 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiu-yk-vlS">
-                                        <rect key="frame" x="72" y="32.5" width="95.5" height="31"/>
+                                        <rect key="frame" x="56" y="32.5" width="95.5" height="31"/>
                                         <color key="tintColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="試用完整版" titleAlignment="leading"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8F-UG-eR0">
+                                        <rect key="frame" x="350" y="32" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="Adn-jb-2in"/>
+                                            <constraint firstAttribute="height" constant="32" id="Dxt-wC-2Gf"/>
+                                        </constraints>
+                                        <state key="normal" image="noun-menu-801657-2D3142"/>
+                                        <connections>
+                                            <segue destination="MY9-5J-sNZ" kind="show" id="1Gl-uz-PMa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -497,7 +497,7 @@
                                     <constraint firstItem="eW8-Vf-e6m" firstAttribute="top" secondItem="e8F-UG-eR0" secondAttribute="bottom" constant="32" id="Zfx-eG-TT6"/>
                                     <constraint firstAttribute="trailing" secondItem="hAB-m2-wEF" secondAttribute="trailing" constant="32" id="gaD-IA-nXH"/>
                                     <constraint firstItem="I9L-8y-oEM" firstAttribute="leading" secondItem="hci-gt-IHu" secondAttribute="leading" constant="32" id="u0h-dm-oD7"/>
-                                    <constraint firstItem="Wiu-yk-vlS" firstAttribute="leading" secondItem="I9L-8y-oEM" secondAttribute="trailing" constant="8" id="veK-tD-Yts"/>
+                                    <constraint firstItem="Wiu-yk-vlS" firstAttribute="leading" secondItem="I9L-8y-oEM" secondAttribute="trailing" id="veK-tD-Yts"/>
                                     <constraint firstAttribute="trailing" secondItem="eW8-Vf-e6m" secondAttribute="trailing" constant="32" id="wnM-AK-33N"/>
                                     <constraint firstItem="e8F-UG-eR0" firstAttribute="top" secondItem="hci-gt-IHu" secondAttribute="top" constant="32" id="xuG-s5-C7g"/>
                                 </constraints>
@@ -3433,7 +3433,8 @@ App們將會開始抖動。</string>
         <image name="icon_bookmark" width="48" height="48"/>
         <image name="icon_setting" width="40" height="40"/>
         <image name="icon_touch" width="100" height="100"/>
-        <image name="noun-menu-865874-2D3142" width="1200" height="1200"/>
+        <image name="noun-diamond-1520649-2D3142" width="1200" height="1200"/>
+        <image name="noun-menu-801657-2D3142" width="1200" height="1200"/>
         <image name="noun_Save_2209758 1" width="35" height="35"/>
         <image name="noun_Share_1058858 (2) 1" width="35" height="35"/>
         <image name="noun_instagram_3350460 (1) 1" width="30" height="30"/>
