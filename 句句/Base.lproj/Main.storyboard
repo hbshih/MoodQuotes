@@ -212,14 +212,45 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hci-gt-IHu">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9L-8y-oEM">
-                                        <rect key="frame" x="32" y="36" width="24" height="24"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blB-C0-HSz">
+                                        <rect key="frame" x="32" y="32" width="150" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-f1-D3E">
+                                                <rect key="frame" x="24" y="7" width="84" height="26"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="試用完整版">
+                                                    <fontDescription key="titleFontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="ctx-cW-Iia" kind="popoverPresentation" popoverAnchorView="gpI-f1-D3E" id="PWQ-xK-Ild">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9L-8y-oEM">
+                                                <rect key="frame" x="0.0" y="8" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="A6j-4J-aNh"/>
+                                                    <constraint firstAttribute="height" constant="24" id="r91-zz-k0g"/>
+                                                </constraints>
+                                                <state key="normal" image="noun-diamond-1520649-2D3142"/>
+                                                <connections>
+                                                    <segue destination="ctx-cW-Iia" kind="popoverPresentation" popoverAnchorView="I9L-8y-oEM" id="1c7-Jz-p97">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="A6j-4J-aNh"/>
-                                            <constraint firstAttribute="height" constant="24" id="r91-zz-k0g"/>
+                                            <constraint firstAttribute="width" constant="150" id="dmb-W6-gil"/>
+                                            <constraint firstItem="I9L-8y-oEM" firstAttribute="leading" secondItem="blB-C0-HSz" secondAttribute="leading" id="eOQ-ym-CkM"/>
+                                            <constraint firstItem="I9L-8y-oEM" firstAttribute="centerY" secondItem="blB-C0-HSz" secondAttribute="centerY" id="f0B-ad-7XU"/>
+                                            <constraint firstItem="gpI-f1-D3E" firstAttribute="centerY" secondItem="blB-C0-HSz" secondAttribute="centerY" id="gOD-Qh-obX"/>
+                                            <constraint firstAttribute="height" constant="40" id="gng-bO-BsQ"/>
+                                            <constraint firstItem="gpI-f1-D3E" firstAttribute="leading" secondItem="I9L-8y-oEM" secondAttribute="trailing" id="tXM-hf-6ND"/>
                                         </constraints>
-                                        <state key="normal" image="noun-diamond-1520649-2D3142"/>
-                                    </button>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eW8-Vf-e6m">
                                         <rect key="frame" x="32" y="96" width="350" height="237"/>
                                         <subviews>
@@ -268,10 +299,11 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-Sa-4bB">
                                                         <rect key="frame" x="260" y="0.0" width="90" height="35"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-yu-1RA">
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-yu-1RA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="35"/>
-                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
-                                                                <state key="normal" title="紀錄心情"/>
+                                                                <state key="normal" title="紀錄心情">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                                 <connections>
                                                                     <action selector="updateMoodTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXl-Mb-rDR"/>
                                                                 </connections>
@@ -469,12 +501,6 @@
                                             <constraint firstAttribute="height" constant="216" id="qkX-Jt-gHO"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiu-yk-vlS">
-                                        <rect key="frame" x="56" y="32.5" width="95.5" height="31"/>
-                                        <color key="tintColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="試用完整版" titleAlignment="leading"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8F-UG-eR0">
                                         <rect key="frame" x="350" y="32" width="32" height="32"/>
                                         <constraints>
@@ -490,15 +516,13 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hAB-m2-wEF" firstAttribute="leading" secondItem="hci-gt-IHu" secondAttribute="leading" constant="32" id="0fp-bI-3Xh"/>
-                                    <constraint firstItem="I9L-8y-oEM" firstAttribute="centerY" secondItem="e8F-UG-eR0" secondAttribute="centerY" id="2B9-pL-J9c"/>
-                                    <constraint firstItem="Wiu-yk-vlS" firstAttribute="centerY" secondItem="e8F-UG-eR0" secondAttribute="centerY" id="2Y9-ZK-mbq"/>
                                     <constraint firstAttribute="bottom" secondItem="hAB-m2-wEF" secondAttribute="bottom" constant="32" id="JZ9-vP-Fgw"/>
                                     <constraint firstItem="eW8-Vf-e6m" firstAttribute="leading" secondItem="hci-gt-IHu" secondAttribute="leading" constant="32" id="SHZ-Mn-7DW"/>
                                     <constraint firstAttribute="trailing" secondItem="e8F-UG-eR0" secondAttribute="trailing" constant="32" id="TjC-Ze-7h4"/>
                                     <constraint firstItem="eW8-Vf-e6m" firstAttribute="top" secondItem="e8F-UG-eR0" secondAttribute="bottom" constant="32" id="Zfx-eG-TT6"/>
+                                    <constraint firstItem="blB-C0-HSz" firstAttribute="leading" secondItem="hci-gt-IHu" secondAttribute="leading" constant="32" id="fXS-wz-PSo"/>
                                     <constraint firstAttribute="trailing" secondItem="hAB-m2-wEF" secondAttribute="trailing" constant="32" id="gaD-IA-nXH"/>
-                                    <constraint firstItem="I9L-8y-oEM" firstAttribute="leading" secondItem="hci-gt-IHu" secondAttribute="leading" constant="32" id="u0h-dm-oD7"/>
-                                    <constraint firstItem="Wiu-yk-vlS" firstAttribute="leading" secondItem="I9L-8y-oEM" secondAttribute="trailing" id="veK-tD-Yts"/>
+                                    <constraint firstItem="blB-C0-HSz" firstAttribute="firstBaseline" secondItem="e8F-UG-eR0" secondAttribute="firstBaseline" id="lxs-7x-S3m"/>
                                     <constraint firstAttribute="trailing" secondItem="eW8-Vf-e6m" secondAttribute="trailing" constant="32" id="wnM-AK-33N"/>
                                     <constraint firstItem="e8F-UG-eR0" firstAttribute="top" secondItem="hci-gt-IHu" secondAttribute="top" constant="32" id="xuG-s5-C7g"/>
                                 </constraints>
@@ -524,6 +548,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VK4-l7-MkZ"/>
                     <connections>
+                        <outlet property="Button_bookmark" destination="VYB-Ew-NPI" id="cOf-p5-Wr5"/>
                         <outlet property="ImageOfFlower" destination="gu2-iE-YJg" id="MxW-wO-uod"/>
                         <outlet property="authorName" destination="OFy-hP-jeV" id="RHt-bK-Bg2"/>
                         <outlet property="blackwhiteFlowerSectionView" destination="PD4-gn-IfJ" id="bx8-fJ-Rb7"/>
@@ -536,6 +561,7 @@
                         <outlet property="onboardingTouchIcon" destination="Bzx-W5-zIZ" id="grl-na-vFh"/>
                         <outlet property="screenView" destination="8bC-Xf-vdC" id="mEd-Oa-wt5"/>
                         <outlet property="todayDateLabel" destination="sAT-KL-MX8" id="asG-Yv-Rur"/>
+                        <outlet property="trial_Button" destination="blB-C0-HSz" id="QDM-6Y-4Sc"/>
                         <outlet property="twDayLabel" destination="fxx-iS-jBb" id="rKx-iO-u60"/>
                         <segue destination="Krk-l6-7pi" kind="presentation" identifier="firstTimeSettingSegue" modalPresentationStyle="fullScreen" id="SFC-mq-IwF"/>
                         <segue destination="vyl-c7-Mf0" kind="show" identifier="showTutorialSegue" id="pIM-gP-oXb"/>
@@ -1060,6 +1086,9 @@
                                                                         <state key="normal" title="恢復">
                                                                             <color key="titleColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="restorePurchase:" destination="MY9-5J-sNZ" eventType="touchUpInside" id="JXQ-9H-vIU"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2940,21 +2969,23 @@ App們將會開始抖動。</string>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QPd-88-czF">
                                                                 <rect key="frame" x="16" y="16" width="350" height="346"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="promo_image_big" translatesAutoresizingMaskIntoConstraints="NO" id="mjY-w6-DAv">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 2 - Copy" translatesAutoresizingMaskIntoConstraints="NO" id="mjY-w6-DAv">
                                                                         <rect key="frame" x="0.0" y="0.0" width="163" height="346"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <integer key="value" value="10"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="OPS-7b-ZXu">
                                                                         <rect key="frame" x="187" y="0.0" width="163" height="346"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMg-QF-W0f">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="163" height="144"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="163" height="72"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment>
                                                                                         <string key="content">完整版包含：
-多種小工具風格
-多種字體
-紀錄心情
-自訂語錄
+無限紀錄心情
 彩色植物和花語</string>
                                                                                         <attributes>
                                                                                             <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3014,13 +3045,13 @@ App們將會開始抖動。</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安心使用，隨時取消" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="big-1K-s2F">
-                                                                <rect key="frame" x="16" y="0.0" width="382" height="17"/>
-                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
+                                                                <rect key="frame" x="16" y="0.0" width="382" height="14"/>
+                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSf-bT-pa3">
-                                                                <rect key="frame" x="24" y="25" width="366" height="28"/>
+                                                                <rect key="frame" x="24" y="22" width="366" height="28"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                 <color key="textColor" red="0.61176470589999998" green="0.61960784310000006" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -4175,13 +4206,15 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="csP-yn-kmL"/>
         <segue reference="OPy-tA-N0Q"/>
-        <segue reference="qNS-Ny-zLV"/>
+        <segue reference="hS7-Sl-5ah"/>
         <segue reference="1Gl-uz-PMa"/>
         <segue reference="ow3-cU-GNT"/>
         <segue reference="Cpd-rk-0In"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Frame 2 - Copy" width="750" height="1412"/>
         <image name="Tutorial_Step 1" width="313" height="137"/>
         <image name="Tutorial_Step 2" width="313" height="133"/>
         <image name="Tutorial_Step 3" width="313" height="132"/>
@@ -4201,7 +4234,6 @@ App們將會開始抖動。</string>
         <image name="noun_instagram_3350460 (1) 1" width="30" height="30"/>
         <image name="onboarding-background" width="563" height="1218"/>
         <image name="promo_image" width="140" height="141"/>
-        <image name="promo_image_big" width="114" height="218"/>
         <image name="share_frame" width="2343" height="2343"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

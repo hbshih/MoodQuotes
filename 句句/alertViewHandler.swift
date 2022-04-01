@@ -12,14 +12,14 @@ import SwiftMessages
 struct alertViewHandler
 {
     
-    func alert(){
+    func alert(title: String, body: String, iconText: String){
         
         let warning = MessageView.viewFromNib(layout: .cardView)
         warning.configureTheme(.warning)
         warning.configureDropShadow()
         
         let iconText = ["🤔", "😳", "🙄", "😶"].randomElement()!
-        warning.configureContent(title: "Warning", body: "Consider yourself warned.", iconText: iconText)
+        warning.configureContent(title: title, body: body, iconText: iconText)
         warning.button?.isHidden = true
         var warningConfig = SwiftMessages.defaultConfig
         warningConfig.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
@@ -30,7 +30,7 @@ struct alertViewHandler
     func control(title: String, body: String, iconText: String){
         let messageView: MessageView = MessageView.viewFromNib(layout: .centeredView)
         messageView.configureBackgroundView(width: 250)
-        messageView.configureContent(title: "Hey There!", body: "Please try swiping to dismiss this message.", iconImage: nil, iconText: "🦄", buttonImage: nil, buttonTitle: "No Thanks") { _ in
+        messageView.configureContent(title: title, body: body, iconImage: nil, iconText: iconText, buttonImage: nil, buttonTitle: "No Thanks") { _ in
             SwiftMessages.hide()
         }
         messageView.backgroundView.backgroundColor = UIColor.init(white: 0.97, alpha: 1)

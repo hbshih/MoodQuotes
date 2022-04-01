@@ -1,13 +1,14 @@
 //
-//  OnboardingFontViewController.swift
+//  AdjustFontViewController.swift
 //  句句
 //
-//  Created by Ben on 2022/3/30.
+//  Created by Ben on 2022/4/1.
 //
 
 import UIKit
 
-class OnboardingFontViewController: UIViewController {
+class AdjustFontViewController: UIViewController {
+
 
     @IBOutlet weak var exampleView: UIView!
     @IBOutlet weak var exampleLabel: UILabel!
@@ -18,9 +19,9 @@ class OnboardingFontViewController: UIViewController {
         {
             exampleView.backgroundColor = color
         }
+
         // Do any additional setup after loading the view.
     }
-    
     var selectedFont = "jf-openhuninn-1.1"
     
     @IBAction func fontSelected(_ sender: UIButton) {
@@ -42,10 +43,16 @@ class OnboardingFontViewController: UIViewController {
         }
     }
     
+    @IBAction func dismissTapped(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     @IBAction func fontSelectedTapped(_ sender: Any) {
         
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(selectedFont, forKey: "userFont")
         
+        alertViewHandler().alert(title: "字體更新完成", body: "", iconText: "")
+        
+        self.dismiss(animated: true)
     }
     /*
     // MARK: - Navigation

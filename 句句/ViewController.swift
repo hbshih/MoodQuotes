@@ -43,6 +43,7 @@ class ViewController: UIViewController, MessagingDelegate {
     @IBOutlet weak var backgroundHideenView: UIStackView!
     @IBOutlet weak var hiddenQuoteAdder: UILabel!
     @IBOutlet weak var stack_action_controller: UIStackView!
+    @IBOutlet weak var trial_Button: UIView!
     @IBOutlet weak var flowerMeaning: UILabel!
     @IBOutlet weak var onboardingTouchIcon: UIImageView!
     @IBOutlet weak var blackwhiteFlowerSectionView: UIStackView!
@@ -76,6 +77,7 @@ class ViewController: UIViewController, MessagingDelegate {
             
         }
     }
+
     
     var bookmark_saved = false
     
@@ -83,6 +85,7 @@ class ViewController: UIViewController, MessagingDelegate {
         
         if bookmark_saved == false
         {
+            /*
             self.bookmarkNotification.fadeIn(completion: {
                     (finished: Bool) -> Void in
                     self.bookmarkNotification.fadeOut()
@@ -90,6 +93,10 @@ class ViewController: UIViewController, MessagingDelegate {
             Analytics.logEvent("Bookmarked_Quote", parameters: nil)
             bookmark_saved = true
             print("tapped")
+            */
+            
+            bookmark_saved = true
+            Button_bookmark.setTitle("已收藏", for: .normal)
             
             if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
             {
@@ -117,7 +124,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
             }
             
-            Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
+            //Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
         }else
         {
             Analytics.logEvent("Unbookmarked_Quote", parameters: nil)
@@ -138,7 +145,8 @@ class ViewController: UIViewController, MessagingDelegate {
                 authorArray.removeLast()
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
             }
-            Button_bookmark.setBackgroundImage(UIImage(named: "icon_unBookmarked"), for: .normal)
+            Button_bookmark.setTitle("收藏", for: .normal)
+           // Button_bookmark.setBackgroundImage(UIImage(named: "icon_unBookmarked"), for: .normal)
         }
         
     }
@@ -272,7 +280,8 @@ class ViewController: UIViewController, MessagingDelegate {
             if array.contains(self.frontQuote.text!)
             {
                 self.bookmark_saved = true
-                self.Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
+                Button_bookmark.setTitle("已收藏", for: .normal)
+                //self.Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
             }else
             {
                 print("quote today \(self.frontQuote.text)")
@@ -291,6 +300,8 @@ class ViewController: UIViewController, MessagingDelegate {
     //    self.bookmarkNotification.alpha = 0
     //    self.bookmarkNotification.text = "語錄已儲存！"
         
+        
+        
         //paid user
         if !global_paid_user
         {
@@ -300,6 +311,7 @@ class ViewController: UIViewController, MessagingDelegate {
         {
             coloredFlowerSectionView.isHidden = false
             blackwhiteFlowerSectionView.isHidden = true
+            trial_Button.isHidden = true
         }
         
         if let arr = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
@@ -308,6 +320,15 @@ class ViewController: UIViewController, MessagingDelegate {
             print(arr)
         }
         
+        if var moodList = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.dictionary(forKey: "moodList")
+        {
+            if let today_mood = moodList[Date().getFormattedDate] as? String
+            {
+                moodButton.contentMode = .scaleAspectFit
+                moodButton.imageView?.contentMode = .scaleAspectFit
+                moodButton.setImage(UIImage(named: today_mood), for: .normal)
+            }
+        }
         //  print(flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults))
         
         // user open app count
@@ -602,8 +623,9 @@ class ViewController: UIViewController, MessagingDelegate {
         let buttonTwo = DefaultButton(title: "儲存", height: 60) {
             
             let mood = ratingVC.mood
-            self.moodButton.setBackgroundImage(UIImage(named: mood), for: .normal)
             self.moodButton.imageView?.contentMode = .scaleAspectFit
+            self.moodButton.setImage(UIImage(named: mood), for: .normal)
+            
             self.moodButton.setTitle("", for: .normal)
             
             let array = [Date().getFormattedDate:mood]

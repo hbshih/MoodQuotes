@@ -47,6 +47,8 @@ class AdjustBackgroundColorViewController: UIViewController {
     @IBAction func saveTapped(_ sender: Any) {
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundView.backgroundColor, forKey: "BackgroundColor")
         
+        alertViewHandler().alert(title: "背景更新完成", body: "", iconText: "")
+        
         self.dismiss(animated: true)
     }
     

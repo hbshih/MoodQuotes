@@ -7,6 +7,8 @@
 
 import UIKit
 import PopupDialog
+import SwiftyStoreKit
+import SwiftMessages
 
 class NewSettingViewController: UIViewController {
 
@@ -162,5 +164,22 @@ class NewSettingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func restorePurchase(_ sender: Any) {
+        SwiftyStoreKit.restorePurchases(atomically: true) { results in
+            if results.restoreFailedPurchases.count > 0 {
+                alertViewHandler().control(title: "沒有什麼可以回復的", body: "", iconText: "")
+                print("Restore Failed: \(results.restoreFailedPurchases)")
+                global_paid_user = true
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
+            }
+            else if results.restoredPurchases.count > 0 {
+                print("Restore Success: \(results.restoredPurchases)")
+            }
+            else {
+                alertViewHandler().control(title: "沒有什麼可以回復的", body: "", iconText: "")
+                print("Nothing to Restore")
+            }
+        }
+    }
+    
 }
