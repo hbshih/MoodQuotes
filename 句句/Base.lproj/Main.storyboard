@@ -215,12 +215,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blB-C0-HSz">
                                         <rect key="frame" x="32" y="32" width="150" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-f1-D3E">
-                                                <rect key="frame" x="24" y="7" width="84" height="26"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-f1-D3E">
+                                                <rect key="frame" x="24" y="7" width="75.5" height="26"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="試用完整版">
-                                                    <fontDescription key="titleFontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="ctx-cW-Iia" kind="popoverPresentation" popoverAnchorView="gpI-f1-D3E" id="PWQ-xK-Ild">
@@ -2884,11 +2885,11 @@ App們將會開始抖動。</string>
             <objects>
                 <viewController id="ctx-cW-Iia" customClass="PurchaseViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hbb-hR-aV8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-0P-87E">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-Me-g3r">
                                         <rect key="frame" x="0.0" y="16" width="414" height="44"/>
@@ -2927,7 +2928,7 @@ App們將會開始抖動。</string>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="omB-P9-aEp">
-                                        <rect key="frame" x="0.0" y="60" width="414" height="758"/>
+                                        <rect key="frame" x="0.0" y="60" width="414" height="738"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qfV-lE-Jj8">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
@@ -2961,16 +2962,16 @@ App們將會開始抖動。</string>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Uf4-em-KD0">
-                                                <rect key="frame" x="0.0" y="180" width="414" height="410"/>
+                                                <rect key="frame" x="0.0" y="180" width="414" height="390"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-A3-1jx">
-                                                        <rect key="frame" x="16" y="16" width="382" height="378"/>
+                                                        <rect key="frame" x="16" y="16" width="382" height="358"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QPd-88-czF">
-                                                                <rect key="frame" x="16" y="16" width="350" height="346"/>
+                                                                <rect key="frame" x="16" y="16" width="350" height="326"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 2 - Copy" translatesAutoresizingMaskIntoConstraints="NO" id="mjY-w6-DAv">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="163" height="346"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="163" height="326"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <integer key="value" value="10"/>
@@ -2978,7 +2979,7 @@ App們將會開始抖動。</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="OPS-7b-ZXu">
-                                                                        <rect key="frame" x="187" y="0.0" width="163" height="346"/>
+                                                                        <rect key="frame" x="187" y="0.0" width="163" height="326"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMg-QF-W0f">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="72"/>
@@ -2997,7 +2998,7 @@ App們將會開始抖動。</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-aN-h6g">
-                                                                                <rect key="frame" x="0.0" y="306" width="163" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="286" width="163" height="40"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每月 $ 120" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-hK-P3A">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="163" height="20"/>
@@ -3039,7 +3040,7 @@ App們將會開始抖動。</string>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v73-NA-VxR">
-                                                <rect key="frame" x="0.0" y="590" width="414" height="168"/>
+                                                <rect key="frame" x="0.0" y="570" width="414" height="168"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCb-Pz-HCo">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -4206,8 +4207,8 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="csP-yn-kmL"/>
-        <segue reference="OPy-tA-N0Q"/>
+        <segue reference="PWQ-xK-Ild"/>
+        <segue reference="pIM-gP-oXb"/>
         <segue reference="hS7-Sl-5ah"/>
         <segue reference="1Gl-uz-PMa"/>
         <segue reference="ow3-cU-GNT"/>
