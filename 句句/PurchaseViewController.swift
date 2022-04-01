@@ -24,9 +24,24 @@ class PurchaseViewController: UIViewController {
     
     func showiAPScreen()
     {
-        PKManager.present(theme: AnyView(SubscriptionFlow), fromController: self)
+        PKManager.purchaseProduct(identifier: "monthly_purchase") { error, status, identifier in
+            //self.presentationMode.wrappedValue.dismiss()
+            //self.completion?((error, status, id))
+            
+            print(error)
+            print(status)
+            print(identifier)
+            
+        }
+        //PKManager.present(theme: AnyView(SubscriptionFlow), fromController: self)
+    }
+    @IBAction func dismissTapped(_ sender: Any) {
+        self.dismiss(animated: true)
     }
     
+    @IBAction func restoreSubscription(_ sender: Any) {
+        
+    }
     
 
     /*

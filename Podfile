@@ -17,6 +17,7 @@ target '句句' do
   pod 'Hero'
   pod 'PopupDialog'
   pod 'SwiftyGif'
+  #pod 'UIImageViewAlignedSwift'
   #pod 'UXCam'
   pod 'FacebookCore'
   pod 'FacebookLogin'
