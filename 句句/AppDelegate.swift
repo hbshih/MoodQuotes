@@ -17,6 +17,9 @@ import AppTrackingTransparency
 //import FacebookCore
 //import FBSDKCoreKit
 import PurchaseKit
+import SwiftyStoreKit
+
+var global_paid_user = false
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,11 +27,74 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //GADMobileAds.sharedInstance().start(completionHandler: nil)
+        global_paid_user = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isPaidUser")
         
-        //purchasekit
-        PKManager.configure(sharedSecret: "c180acfb02ff4e39a006b23d901a315c")
-        PKManager.loadProducts(identifiers: ["monthly_purchase"])
+        // see notes below for the meaning of Atomic / Non-Atomic
+            SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+                for purchase in purchases {
+                    switch purchase.transaction.transactionState {
+                    case .purchased, .restored:
+                        
+                        if purchase.needsFinishTransaction {
+                            // Deliver content from server, then:
+                            SwiftyStoreKit.finishTransaction(purchase.transaction)
+                        }
+                        // Unlock content
+                        global_paid_user = true
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
+                    case .failed, .purchasing, .deferred:
+                        print("no purchase")
+                        global_paid_user = false
+                        break // do nothing
+                    }
+                }
+            }
+        
+        SwiftyStoreKit.retrieveProductsInfo(["monthly_purchase"]) { result in
+            if let product = result.retrievedProducts.first {
+                let priceString = product.localizedPrice!
+                print("Product: \(product.localizedDescription), price: \(priceString)")
+            }
+            else if let invalidProductId = result.invalidProductIDs.first {
+                print("Invalid product identifier: \(invalidProductId)")
+            }
+            else {
+                print("Error: \(result.error)")
+            }
+        }
+        
+        let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: "c180acfb02ff4e39a006b23d901a315c")
+        SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
+            switch result {
+            case .success(let receipt):
+                let productId = "monthly_purchase"
+                // Verify the purchase of a Subscription
+                let purchaseResult = SwiftyStoreKit.verifySubscription(
+                    ofType: .autoRenewable, // or .nonRenewing (see below)
+                    productId: productId,
+                    inReceipt: receipt)
+                    
+                switch purchaseResult {
+                case .purchased(let expiryDate, let items):
+                    // Unlock content
+                    global_paid_user = true
+                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
+                    print("\(productId) is valid until \(expiryDate)\n\(items)\n")
+                case .expired(let expiryDate, let items):
+                    // Unlock content
+                    global_paid_user = false
+                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(false, forKey: "isPaidUser")
+                    print("\(productId) is expired since \(expiryDate)\n\(items)\n")
+                case .notPurchased:
+                    global_paid_user = false
+                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(false, forKey: "isPaidUser")
+                    print("The user has never purchased \(productId)")
+                }
+
+            case .error(let error):
+                print("Receipt verification failed: \(error)")
+            }
+        }
 
         
         // Override point for customization after application launch.

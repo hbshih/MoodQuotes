@@ -433,11 +433,10 @@ class ViewController: UIViewController, MessagingDelegate {
     var quote: String = "今日App心情都太差了，沒有任何更新"
     @IBOutlet weak var nameOfFlower: UILabel!
     var author: String = "— 斌"
-    var paid_user = false
-    
+
     func downloadFlowerImage()
     {
-        if paid_user
+        if global_paid_user
         {
             coloredflowerHandler().getFlowerImageURL { (name, image_url, meaning) in
                 DispatchQueue.main.async { [self] in

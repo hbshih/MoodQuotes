@@ -2803,11 +2803,24 @@ App們將會開始抖動。</string>
                                                     <action selector="dismissTapped:" destination="ctx-cW-Iia" eventType="touchUpInside" id="kmX-UF-Ywg"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeX-jG-Uhq">
+                                                <rect key="frame" x="326" y="9" width="72" height="26"/>
+                                                <color key="tintColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="折扣代碼">
+                                                    <fontDescription key="titleFontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="couponTapped:" destination="ctx-cW-Iia" eventType="touchUpInside" id="86h-rJ-hZe"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="pal-qx-gC2" secondAttribute="bottom" constant="5" id="6XC-Uy-eCj"/>
+                                            <constraint firstItem="IeX-jG-Uhq" firstAttribute="centerY" secondItem="FQM-Me-g3r" secondAttribute="centerY" id="ENa-Me-PEp"/>
                                             <constraint firstItem="pal-qx-gC2" firstAttribute="leading" secondItem="FQM-Me-g3r" secondAttribute="leading" constant="16" id="LJx-Yn-DtI"/>
                                             <constraint firstAttribute="height" constant="44" id="LzM-ka-w0O"/>
+                                            <constraint firstAttribute="trailing" secondItem="IeX-jG-Uhq" secondAttribute="trailing" constant="16" id="eb0-PZ-4jw"/>
                                             <constraint firstItem="pal-qx-gC2" firstAttribute="top" secondItem="FQM-Me-g3r" secondAttribute="top" constant="5" id="jvs-MN-6vA"/>
                                         </constraints>
                                     </view>

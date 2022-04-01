@@ -9,6 +9,7 @@ import UIKit
 import PurchaseKit
 import SwiftUI
 import StoreKit
+import SwiftyStoreKit
 
 class PurchaseViewController: UIViewController {
 
@@ -21,26 +22,57 @@ class PurchaseViewController: UIViewController {
     @IBAction func purchaseTapped(_ sender: Any) {
         showiAPScreen()
     }
+    @IBAction func couponTapped(_ sender: Any) {
+        let paymentQueue = SKPaymentQueue.default()
+            if #available(iOS 14.0, *) {
+                paymentQueue.presentCodeRedemptionSheet()
+            }
+    }
     
     func showiAPScreen()
     {
-        PKManager.purchaseProduct(identifier: "monthly_purchase") { error, status, identifier in
-            //self.presentationMode.wrappedValue.dismiss()
-            //self.completion?((error, status, id))
-            
-            print(error)
-            print(status)
-            print(identifier)
-            
+        SwiftyStoreKit.purchaseProduct("monthly_purchase", quantity: 1, atomically: true) { result in
+            switch result {
+            case .success(let purchase):
+                print("Purchase Success: \(purchase.productId)")
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
+                global_paid_user = true
+            case .error(let error):
+                switch error.code {
+                case .unknown: print("Unknown error. Please contact support")
+                case .clientInvalid: print("Not allowed to make the payment")
+                case .paymentCancelled: break
+                case .paymentInvalid: print("The purchase identifier was invalid")
+                case .paymentNotAllowed: print("The device is not allowed to make the payment")
+                case .storeProductNotAvailable: print("The product is not available in the current storefront")
+                case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
+                case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
+                case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
+                default: print((error as NSError).localizedDescription)
+                }
+            case .deferred(purchase: let purchase):
+                print("Unknown error. Please contact support")
+            }
         }
-        //PKManager.present(theme: AnyView(SubscriptionFlow), fromController: self)
     }
     @IBAction func dismissTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }
     
     @IBAction func restoreSubscription(_ sender: Any) {
-        
+        SwiftyStoreKit.restorePurchases(atomically: true) { results in
+            if results.restoreFailedPurchases.count > 0 {
+                print("Restore Failed: \(results.restoreFailedPurchases)")
+                global_paid_user = true
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
+            }
+            else if results.restoredPurchases.count > 0 {
+                print("Restore Success: \(results.restoredPurchases)")
+            }
+            else {
+                print("Nothing to Restore")
+            }
+        }
     }
     
 
