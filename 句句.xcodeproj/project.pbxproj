@@ -77,10 +77,6 @@
 		B563EBAA27F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */; };
 		B563EBB827F41C85003D0DD9 /* subscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */; };
 		B563EBB927F41C85003D0DD9 /* subscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */; };
-		B563EBBF27F41E92003D0DD9 /* PurchaseKit in Resources */ = {isa = PBXBuildFile; fileRef = B563EBBE27F41E92003D0DD9 /* PurchaseKit */; };
-		B563EBC027F41E92003D0DD9 /* PurchaseKit in Resources */ = {isa = PBXBuildFile; fileRef = B563EBBE27F41E92003D0DD9 /* PurchaseKit */; };
-		B563EBC627F41ED8003D0DD9 /* PurchaseKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B563EBC527F41ED8003D0DD9 /* PurchaseKit.xcframework */; };
-		B563EBC727F41ED8003D0DD9 /* PurchaseKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B563EBC527F41ED8003D0DD9 /* PurchaseKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B563EBD027F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
 		B563EBD127F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
 		B57EA6C427F5356400BAF789 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */; };
@@ -160,17 +156,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B563EBC827F41ED8003D0DD9 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B563EBC727F41ED8003D0DD9 /* PurchaseKit.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B59E206425669864003A5521 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,8 +238,6 @@
 		B563EBA527F4017A003D0DD9 /* UpdateMood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateMood.swift; sourceTree = "<group>"; };
 		B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateMoodViewController.xib; sourceTree = "<group>"; };
 		B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subscriptionViewController.swift; sourceTree = "<group>"; };
-		B563EBBE27F41E92003D0DD9 /* PurchaseKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PurchaseKit; sourceTree = "<group>"; };
-		B563EBC527F41ED8003D0DD9 /* PurchaseKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PurchaseKit.xcframework; path = "句句/PurchaseKit/PurchaseKit.xcframework"; sourceTree = "<group>"; };
 		B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFontViewController.swift; sourceTree = "<group>"; };
 		B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
@@ -307,7 +290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B547A84325870B1100938A09 /* libz.tbd in Frameworks */,
-				B563EBC627F41ED8003D0DD9 /* PurchaseKit.xcframework in Frameworks */,
 				B5F0D7BD27F6B8D4006C4760 /* SwiftyStoreKit in Frameworks */,
 				B547A84125870B0A00938A09 /* WebKit.framework in Frameworks */,
 				B547A83F25870B0400938A09 /* SystemConfiguration.framework in Frameworks */,
@@ -366,7 +348,6 @@
 				B547A82C25870AD100938A09 /* AVFoundation.framework */,
 				B59E205425669862003A5521 /* WidgetKit.framework */,
 				B59E205625669862003A5521 /* SwiftUI.framework */,
-				B563EBC527F41ED8003D0DD9 /* PurchaseKit.xcframework */,
 				AF3507748D56C8ABB370227B /* Pods_widgetExtension.framework */,
 				E9B345AA234CD3BE84833252 /* Pods___.framework */,
 				1DFD2C2C730397F8655D027A /* Pods______UITests.framework */,
@@ -483,7 +464,6 @@
 				B5A4D13F27F2EDC90093CDD6 /* QuoteTableViewCell.swift */,
 				B55B06B827F32CE500B7AAEC /* NewSettingViewController.swift */,
 				B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */,
-				B563EBBE27F41E92003D0DD9 /* PurchaseKit */,
 				B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */,
 				B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */,
 				B54344CE27F6F2930071E367 /* alertViewHandler.swift */,
@@ -538,7 +518,6 @@
 				B5517C6F255FAFC500E134CC /* Resources */,
 				B59E206425669864003A5521 /* Embed App Extensions */,
 				B26317B020ED59631FD6FC39 /* [CP] Embed Pods Frameworks */,
-				B563EBC827F41ED8003D0DD9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -675,7 +654,6 @@
 				B594C1A227EC5617009895D7 /* Sambucus nigra.png in Resources */,
 				B5582D7227A59FFD00D9F0E0 /* UpdateFontTableViewCell.xib in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
-				B563EBBF27F41E92003D0DD9 /* PurchaseKit in Resources */,
 				B5582D4327A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
 				B503750026331882004E2F86 /* NativeAdView.xib in Resources */,
@@ -726,7 +704,6 @@
 				B5582D4427A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */,
 				B563EBAA27F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */,
 				B58E54FA2629AEE9009657E0 /* Assets.xcassets in Resources */,
-				B563EBC027F41E92003D0DD9 /* PurchaseKit in Resources */,
 				B59E20BB256698FC003A5521 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1128,7 +1105,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1269,7 +1246,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
