@@ -75,8 +75,6 @@
 		B563EBA827F4017A003D0DD9 /* UpdateMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBA527F4017A003D0DD9 /* UpdateMood.swift */; };
 		B563EBA927F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */; };
 		B563EBAA27F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */; };
-		B563EBB827F41C85003D0DD9 /* subscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */; };
-		B563EBB927F41C85003D0DD9 /* subscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */; };
 		B563EBD027F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
 		B563EBD127F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
 		B57EA6C427F5356400BAF789 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */; };
@@ -237,7 +235,6 @@
 		B563EB9827F3FFA0003D0DD9 /* UpdateFontViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateFontViewController.xib; sourceTree = "<group>"; };
 		B563EBA527F4017A003D0DD9 /* UpdateMood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateMood.swift; sourceTree = "<group>"; };
 		B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateMoodViewController.xib; sourceTree = "<group>"; };
-		B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subscriptionViewController.swift; sourceTree = "<group>"; };
 		B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFontViewController.swift; sourceTree = "<group>"; };
 		B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
@@ -463,7 +460,6 @@
 				B5613ED6269BD0A6002EE2F4 /* SettingBookmarkTableViewCell.swift */,
 				B5A4D13F27F2EDC90093CDD6 /* QuoteTableViewCell.swift */,
 				B55B06B827F32CE500B7AAEC /* NewSettingViewController.swift */,
-				B563EBB727F41C85003D0DD9 /* subscriptionViewController.swift */,
 				B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */,
 				B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */,
 				B54344CE27F6F2930071E367 /* alertViewHandler.swift */,
@@ -844,7 +840,6 @@
 				B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */,
 				B5517C79255FAFC500E134CC /* ViewController.swift in Sources */,
 				B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */,
-				B563EBB827F41C85003D0DD9 /* subscriptionViewController.swift in Sources */,
 				B54344CF27F6F2930071E367 /* alertViewHandler.swift in Sources */,
 				B54344DC27F7056F0071E367 /* AdjustFontViewController.swift in Sources */,
 				B563EB8E27F3F325003D0DD9 /* DIYCalendarCell.swift in Sources */,
@@ -912,7 +907,6 @@
 				B59E213325674D13003A5521 /* Quote.swift in Sources */,
 				B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */,
 				B563EBA027F3FFA5003D0DD9 /* UpdateFontViewController.swift in Sources */,
-				B563EBB927F41C85003D0DD9 /* subscriptionViewController.swift in Sources */,
 				B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B5DF562F256F2C01004A24D8 /* Date.swift in Sources */,
 				B563EBA827F4017A003D0DD9 /* UpdateMood.swift in Sources */,
@@ -1105,7 +1099,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 65;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1246,7 +1240,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 64;
+				CURRENT_PROJECT_VERSION = 65;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1470,7 +1464,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 65;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1483,7 +1477,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 5.4;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1501,7 +1495,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 65;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1514,7 +1508,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 5.4;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -16,7 +16,6 @@ import WidgetKit
 import AppTrackingTransparency
 //import FacebookCore
 //import FBSDKCoreKit
-import PurchaseKit
 import SwiftyStoreKit
 
 var global_paid_user = false

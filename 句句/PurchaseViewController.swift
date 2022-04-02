@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import PurchaseKit
 import SwiftUI
 import StoreKit
 import SwiftyStoreKit
@@ -85,11 +84,4 @@ class PurchaseViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    private var SubscriptionFlow: some View {
-        PKDarkThemeView(title: "Pro", subtitle: "unlock", features: ["remove ads"], productIds: ["monthly_purchase"], completion: { error,status,identifier in
-            if status == .success || status == .restored {
-                /// If the purchase was successful or restored, unlock any content, remove ads or do anything you have to do
-            }
-        })
-    }
 }
