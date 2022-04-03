@@ -127,7 +127,7 @@ struct Emojibook_WidgetEntryView: View {
             GeegeeWidgetView_Large(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
         
         case .systemMedium:
-            GeegeeWidgetView(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
+           // GeegeeWidgetView(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
             
             GeegeeWidgetView_2(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
             
@@ -172,7 +172,7 @@ struct widget: Widget{
                 .frame(maxWidth: .infinity, maxHeight: .infinity)    // << here !!
                 .background(Color(backgroundColor))
         }
-        .supportedFamilies([.systemMedium, .systemLarge])
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
         .configurationDisplayName("句句 每日語錄")
         .description("記得分享")
     }

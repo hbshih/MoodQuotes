@@ -208,6 +208,34 @@ struct GeegeeWidgetView_Large: View {
           // Widget Background Image
         //  Image(uiImage: #imageLiteral(resourceName: "Webp.net-compress-image-removebg-preview.png"))
           VStack{
+              
+              HStack{
+                  
+                  HStack{
+                      HStack
+                      {
+                          Text(date.getDateDayOnly).font(.system(size: 16.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+                          VStack
+                          {
+                              Text(date.getFormattedDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+                              Text(date.getTWday).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+                          }
+                      }
+                      
+                      Text("今日心情").font(.system(size: 16.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+                      
+                  }
+                  
+              }
+              
+              Text(quote.quote).font(.system(size: 24.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+              
+              Text(quote.author).font(.system(size: 12.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+              
+              
+              
+              /*
+              
               HStack{
                   HStack{
                     Image(uiImage: flowerImage).resizable().frame(width: 100, height: 100, alignment: .center)
@@ -226,6 +254,8 @@ struct GeegeeWidgetView_Large: View {
                           .foregroundColor(.gray)
                   }
               }
+              
+              */
           }
 
       }
@@ -265,9 +295,7 @@ struct GeegeeWidgetView_small: View {
           }
           // Widget Background Image
         //  Image(uiImage: #imageLiteral(resourceName: "Webp.net-compress-image-removebg-preview.png"))
-          HStack{
-                      Text(quote.quote).font(Display_Font(font_size: Int(18)).getFont()).foregroundColor(.gray).multilineTextAlignment(.center).padding(.leading,8).padding(.trailing,8).minimumScaleFactor(0.5)
-          }
+          Image(uiImage: flowerImage).resizable().frame(width: 128, height: 128, alignment: .center)
 
       }
       .padding(.vertical, 2.5).padding(.horizontal, 16)
