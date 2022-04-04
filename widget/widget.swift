@@ -142,7 +142,7 @@ struct Emojibook_WidgetEntryView: View {
     }
 }
 
-@main
+@main楊
 struct widget: Widget{
     private let kind = "widget"
     
