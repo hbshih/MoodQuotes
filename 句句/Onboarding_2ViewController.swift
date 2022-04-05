@@ -49,6 +49,7 @@ class Onboarding_2ViewController: UIViewController {
                 performSegue(withIdentifier: "selectedFont_segue", sender: nil)
             }else
             {
+                alertViewHandler().alert(title: "背景更新完成", body: "", iconText: "🍻")
                 self.dismiss(animated: true)
             }
         }

@@ -9,6 +9,10 @@ import UIKit
 
 class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var dismissTapped: UIButton!
+    @IBAction func dismissTapped(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
         {

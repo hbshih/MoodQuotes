@@ -189,7 +189,7 @@ class ViewController: UIViewController, MessagingDelegate {
         /*|| UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil*/
         
         // comment out for testing purpose
-        if !SyncAppQuotes().checkIfUpdate()
+        if SyncAppQuotes().checkIfUpdate()
         {
             print("loading new screen")
             // Get From API
@@ -299,20 +299,6 @@ class ViewController: UIViewController, MessagingDelegate {
         
     //    self.bookmarkNotification.alpha = 0
     //    self.bookmarkNotification.text = "語錄已儲存！"
-        
-        trial_Button.isHidden = true
-        
-        //paid user
-        if !global_paid_user
-        {
-            coloredFlowerSectionView.isHidden = true
-            blackwhiteFlowerSectionView.isHidden = false
-        }else
-        {
-            coloredFlowerSectionView.isHidden = false
-            blackwhiteFlowerSectionView.isHidden = true
-            trial_Button.isHidden = true
-        }
         
         if let arr = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
         {
@@ -679,6 +665,20 @@ class ViewController: UIViewController, MessagingDelegate {
         
     }
     override func viewDidAppear(_ animated: Bool) {
+        
+        trial_Button.isHidden = true
+        
+        //paid user
+        if !global_paid_user
+        {
+            coloredFlowerSectionView.isHidden = true
+            blackwhiteFlowerSectionView.isHidden = false
+        }else
+        {
+            coloredFlowerSectionView.isHidden = false
+            blackwhiteFlowerSectionView.isHidden = true
+            trial_Button.isHidden = true
+        }
         
         todayDateLabel.text = Date().getDateDayOnly
         twDayLabel.text = Date().getTWday

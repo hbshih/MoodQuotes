@@ -87,6 +87,7 @@ class OnboardingFontViewController: UIViewController {
             performSegue(withIdentifier: "selectUpdateTime_segue", sender: nil)
         }else
         {
+            alertViewHandler().alert(title: "字體更新完成", body: "", iconText: "🍻")
             self.dismiss(animated: true)
         }
     }

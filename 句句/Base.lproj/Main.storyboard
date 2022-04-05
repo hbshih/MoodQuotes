@@ -550,7 +550,7 @@
                     <navigationItem key="navigationItem" id="VK4-l7-MkZ"/>
                     <connections>
                         <outlet property="Button_bookmark" destination="VYB-Ew-NPI" id="cOf-p5-Wr5"/>
-                        <outlet property="ImageOfFlower" destination="gu2-iE-YJg" id="MxW-wO-uod"/>
+                        <outlet property="ImageOfFlower" destination="EU3-lG-Cxd" id="DLO-Dp-iu5"/>
                         <outlet property="authorName" destination="OFy-hP-jeV" id="RHt-bK-Bg2"/>
                         <outlet property="blackwhiteFlowerSectionView" destination="PD4-gn-IfJ" id="bx8-fJ-Rb7"/>
                         <outlet property="coloredFlowerSectionView" destination="ubq-qe-0Jx" id="rPL-Gh-WnZ"/>

@@ -54,6 +54,7 @@ class NewSettingViewController: UIViewController {
         print("New Update Time \(date)")
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(date, forKey: "updateTime")
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(date, forKey: "updateTimeForWidget")
+        alertViewHandler().alert(title: "更新時間設定完成", body: "", iconText: "🍻")
         
         // Reset Notification Time
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
