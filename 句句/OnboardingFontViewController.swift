@@ -9,8 +9,14 @@ import UIKit
 
 class OnboardingFontViewController: UIViewController {
 
+    @IBOutlet weak var nav_view: UIView!
+    @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var exampleView: UIView!
     @IBOutlet weak var exampleLabel: UILabel!
+    
+    var fromSetting = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,8 +25,21 @@ class OnboardingFontViewController: UIViewController {
             exampleView.backgroundColor = color
         }
         // Do any additional setup after loading the view.
+        
+        if fromSetting
+        {
+            skipButton.layer.opacity = 0.0
+            nav_view.isHidden = false
+            actionButton.setTitle("儲存", for: .normal)
+        }
+        
     }
     
+    @IBAction func dismissTapped(_ sender: Any) {
+        
+        self.dismiss(animated: true)
+        
+    }
     var selectedFont = "jf-openhuninn-1.1"
     
     @IBAction func fontSelected(_ sender: UIButton) {
@@ -42,11 +61,50 @@ class OnboardingFontViewController: UIViewController {
         }
     }
     
-    @IBAction func fontSelectedTapped(_ sender: Any) {
-        
-        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(selectedFont, forKey: "userFont")
-        
+    func checkIfPayFont() -> Bool
+    {
+        if selectedFont == "jf-openhuninn-1.1" || selectedFont == "I.Ngaan"
+        {
+            return false
+        }else
+        {
+            return true
+        }
     }
+    
+    
+    
+    @IBAction func fontSelectedTapped(_ sender: Any) {
+    // need to pay
+    if checkIfPayFont() && !global_paid_user
+    {
+        performSegue(withIdentifier: "purchase_segue", sender: nil)
+    }else
+    {
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(selectedFont, forKey: "userFont")
+        if actionButton.currentTitle == "下一步"
+        {
+            performSegue(withIdentifier: "selectUpdateTime_segue", sender: nil)
+        }else
+        {
+            self.dismiss(animated: true)
+        }
+    }
+    
+}
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    if segue.identifier == "purchase_segue"
+    {
+        if let vc = segue.destination as? PurchaseViewController
+        {
+            vc.purchaseTitle = "獲得更多字體"
+            vc.purchaseDescription = "免費試用三十天，獲得更多功能"
+        }
+    }
+    
+}
     /*
     // MARK: - Navigation
 

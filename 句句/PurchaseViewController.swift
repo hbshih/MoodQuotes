@@ -12,10 +12,23 @@ import SwiftyStoreKit
 
 class PurchaseViewController: UIViewController {
 
+    @IBOutlet weak var purchasePageTitle: UILabel!
+    @IBOutlet weak var purchasePageDescription: UILabel!
+    
+    var purchaseTitle = ""
+    var purchaseDescription = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if purchaseTitle != ""
+        {
+            purchasePageTitle.text = purchaseTitle
+            purchasePageDescription.text = purchaseDescription
+        }
+        
     }
     
     @IBAction func purchaseTapped(_ sender: Any) {

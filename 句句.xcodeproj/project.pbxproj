@@ -76,7 +76,6 @@
 		B563EBA927F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */; };
 		B563EBAA27F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */; };
 		B563EBD027F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
-		B563EBD127F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
 		B57EA6C427F5356400BAF789 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */; };
 		B5807EFD25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
@@ -917,7 +916,6 @@
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
 				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
 				B59E20B8256698FB003A5521 /* widget.swift in Sources */,
-				B563EBD127F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */,
 				B51C61A4262C001800B5C6E8 /* textDirectionModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

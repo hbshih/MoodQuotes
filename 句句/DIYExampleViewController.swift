@@ -114,6 +114,9 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
     }
     
     // MARK:- FSCalendarDataSource
+    @IBAction func dismissTapped(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
     func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
         let cell = calendar.dequeueReusableCell(withIdentifier: "cell", for: date, at: position)
@@ -126,7 +129,7 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
     
     func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
         if self.gregorian.isDateInToday(date) {
-            return "今"
+            return ""
         }
         return nil
     }

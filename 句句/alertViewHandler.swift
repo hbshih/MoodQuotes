@@ -18,7 +18,7 @@ struct alertViewHandler
         warning.configureTheme(.warning)
         warning.configureDropShadow()
         
-        let iconText = ["🤔", "😳", "🙄", "😶"].randomElement()!
+        let iconText = ["🍻"].randomElement()!
         warning.configureContent(title: title, body: body, iconText: iconText)
         warning.button?.isHidden = true
         var warningConfig = SwiftMessages.defaultConfig

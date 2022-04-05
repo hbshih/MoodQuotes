@@ -182,4 +182,22 @@ class NewSettingViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "adjustBackground_segue"
+        {
+            if let vc = segue.destination as? Onboarding_2ViewController
+            {
+                vc.fromSetting = true
+            }
+        }
+        
+        if segue.identifier == "adjustText_segue"
+        {
+            if let vc = segue.destination as? OnboardingFontViewController
+            {
+                vc.fromSetting = true
+            }
+        }
+    }
+    
 }

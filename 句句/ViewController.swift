@@ -327,6 +327,11 @@ class ViewController: UIViewController, MessagingDelegate {
                 moodButton.contentMode = .scaleAspectFit
                 moodButton.imageView?.contentMode = .scaleAspectFit
                 moodButton.setImage(UIImage(named: today_mood), for: .normal)
+                //self.moodButtonHolderView
+           //     self.moodButtonHolderView.frame.size.width = 40
+            }else
+            {
+                self.moodButtonHolderView.layer.borderWidth = 0
             }
         }
         //  print(flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults))
@@ -605,6 +610,7 @@ class ViewController: UIViewController, MessagingDelegate {
         //checkIfBookmarked()
     }
     
+    @IBOutlet weak var moodButtonHolderView: UIView!
     @IBAction func updateMoodTapped(_ sender: Any) {
         
         // Create a custom view controller
@@ -631,14 +637,20 @@ class ViewController: UIViewController, MessagingDelegate {
             let mood = ratingVC.mood
             self.moodButton.imageView?.contentMode = .scaleAspectFit
             self.moodButton.setImage(UIImage(named: mood), for: .normal)
-            
+           // self.moodButton.layer.wid
             self.moodButton.setTitle("", for: .normal)
+            self.moodButtonHolderView.frame.size.width = 40
            // self.moodButton.layer.borderWidth = 0
             
             let array = [Date().getFormattedDate:mood]
             
             if var moodList = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.dictionary(forKey: "moodList")
             {
+                if moodList.count >= 7 && !global_paid_user
+                {
+                    alertViewHandler().control(title: "需要付費升級", body: "升級", iconText: "🐶")
+                }else
+                {
                 if moodList.isEmpty || moodList.count < 1
                 {
                     // default
@@ -647,6 +659,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 {
                     moodList[Date().getFormattedDate] = mood
                     UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(moodList, forKey: "moodList")
+                }
                 }
             }else
             {
