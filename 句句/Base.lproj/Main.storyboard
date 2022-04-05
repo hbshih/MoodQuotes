@@ -910,9 +910,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="adjustBackgroundColor:" destination="MY9-5J-sNZ" eventType="touchUpInside" id="4mE-0a-M9l"/>
-                                                                            <segue destination="M2B-Qb-JNt" kind="popoverPresentation" identifier="adjustBackground_segue" popoverAnchorView="y3I-Gj-sLt" id="gb2-6r-Z9B">
-                                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                                            </segue>
+                                                                            <segue destination="M2B-Qb-JNt" kind="show" identifier="adjustBackground_segue" id="gb2-6r-Z9B"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -966,9 +964,7 @@
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="adjustFont:" destination="MY9-5J-sNZ" eventType="touchUpInside" id="xGE-TW-WQr"/>
-                                                                            <segue destination="xvt-t3-Ix3" kind="popoverPresentation" identifier="adjustText_segue" popoverAnchorView="qpw-bx-tI6" id="2Md-sC-qsK">
-                                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                                            </segue>
+                                                                            <segue destination="xvt-t3-Ix3" kind="show" identifier="adjustText_segue" id="2Md-sC-qsK"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -1610,16 +1606,14 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvY-7V-sUY">
-                                                        <rect key="frame" x="24" y="155" width="310" height="72"/>
-                                                        <string key="text">人生是一場兵荒馬亂skdㄎㄨㄠklsdjㄎㄨㄜsjkld，
-你是我的劫後餘生。</string>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="語錄載入中" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvY-7V-sUY">
+                                                        <rect key="frame" x="24" y="179" width="310" height="24"/>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
                                                         <color key="textColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="林予晞" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-yL-qjM">
-                                                        <rect key="frame" x="24" y="247" width="334" height="16"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="載入中" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-yL-qjM">
+                                                        <rect key="frame" x="24" y="223" width="334" height="16"/>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="16"/>
                                                         <color key="textColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -4285,8 +4279,8 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Md-sC-qsK"/>
-        <segue reference="PWQ-xK-Ild"/>
-        <segue reference="pIM-gP-oXb"/>
+        <segue reference="csP-yn-kmL"/>
+        <segue reference="OPy-tA-N0Q"/>
         <segue reference="qNS-Ny-zLV"/>
         <segue reference="gb2-6r-Z9B"/>
         <segue reference="1Gl-uz-PMa"/>
