@@ -300,7 +300,7 @@ class ViewController: UIViewController, MessagingDelegate {
     //    self.bookmarkNotification.alpha = 0
     //    self.bookmarkNotification.text = "語錄已儲存！"
         
-        
+        trial_Button.isHidden = true
         
         //paid user
         if !global_paid_user
@@ -347,6 +347,12 @@ class ViewController: UIViewController, MessagingDelegate {
                     if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                         SKStoreReviewController.requestReview(in: scene)
                     }
+                }
+                
+                // request trial
+                if counter > 5 && !global_paid_user
+                {
+                    trial_Button.isHidden = false
                 }
                 
                 
@@ -627,6 +633,7 @@ class ViewController: UIViewController, MessagingDelegate {
             self.moodButton.setImage(UIImage(named: mood), for: .normal)
             
             self.moodButton.setTitle("", for: .normal)
+           // self.moodButton.layer.borderWidth = 0
             
             let array = [Date().getFormattedDate:mood]
             

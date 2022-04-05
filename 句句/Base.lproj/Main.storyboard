@@ -313,11 +313,11 @@
                                                         <color key="tintColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="4YA-uo-af0"/>
-                                                            <constraint firstAttribute="width" constant="90" id="5wS-cS-9xw"/>
                                                             <constraint firstAttribute="trailing" secondItem="hN3-yu-1RA" secondAttribute="trailing" id="6ve-XV-ghn"/>
                                                             <constraint firstAttribute="bottom" secondItem="hN3-yu-1RA" secondAttribute="bottom" id="9Os-L4-vOL"/>
                                                             <constraint firstItem="hN3-yu-1RA" firstAttribute="top" secondItem="LMn-Sa-4bB" secondAttribute="top" id="bAl-cW-dI9"/>
                                                             <constraint firstItem="hN3-yu-1RA" firstAttribute="leading" secondItem="LMn-Sa-4bB" secondAttribute="leading" id="gLU-fl-Pyx"/>
+                                                            <constraint firstAttribute="width" secondItem="hN3-yu-1RA" secondAttribute="width" id="iIO-9v-iw0"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -2176,7 +2176,7 @@
                                                                     <constraint firstAttribute="height" constant="40" id="8Mo-DU-Kye"/>
                                                                 </constraints>
                                                             </stackView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z2-sQ-IQc">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="試用付費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z2-sQ-IQc">
                                                                 <rect key="frame" x="0.0" y="215" width="374" height="14"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3348,7 +3348,7 @@ App們將會開始抖動。</string>
                                                                                     <constraint firstAttribute="height" constant="60" id="v20-Eq-t3e"/>
                                                                                 </constraints>
                                                                             </stackView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="升級付費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR2-4S-blz">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="試用付費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR2-4S-blz">
                                                                                 <rect key="frame" x="0.0" y="145.5" width="374" height="12.5"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
