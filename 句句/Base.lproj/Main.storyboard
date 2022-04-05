@@ -259,10 +259,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="35"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgo-Yd-YXr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="35"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9Tg-Gg-eY4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="35"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="270" height="35"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAT-KL-MX8">
                                                                         <rect key="frame" x="0.0" y="0.0" width="39.5" height="35"/>
@@ -271,7 +271,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gP9-Qx-Uyy">
-                                                                        <rect key="frame" x="55.5" y="0.0" width="254.5" height="35"/>
+                                                                        <rect key="frame" x="55.5" y="0.0" width="214.5" height="35"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週二" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJT-PA-hMp">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="17.5"/>
@@ -297,8 +297,8 @@
                                                             <constraint firstAttribute="bottom" secondItem="9Tg-Gg-eY4" secondAttribute="bottom" id="S4E-a7-eU0"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-Sa-4bB">
-                                                        <rect key="frame" x="310" y="0.0" width="40" height="35"/>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-Sa-4bB">
+                                                        <rect key="frame" x="270" y="0.0" width="40" height="35"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-yu-1RA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="35"/>
@@ -318,6 +318,40 @@
                                                             <constraint firstItem="hN3-yu-1RA" firstAttribute="top" secondItem="LMn-Sa-4bB" secondAttribute="top" id="bAl-cW-dI9"/>
                                                             <constraint firstItem="hN3-yu-1RA" firstAttribute="leading" secondItem="LMn-Sa-4bB" secondAttribute="leading" id="gLU-fl-Pyx"/>
                                                             <constraint firstAttribute="width" constant="40" id="i7o-NE-UBt"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                                                <color key="value" red="0.61176470589999998" green="0.61960784310000006" blue="0.72549019609999998" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsW-Fa-Z8V">
+                                                        <rect key="frame" x="270" y="0.0" width="80" height="35"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycq-Fi-AlT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="35"/>
+                                                                <state key="normal" title="紀錄心情">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="updateMoodTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lSn-lY-Srk"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="tintColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="ycq-Fi-AlT" firstAttribute="top" secondItem="fsW-Fa-Z8V" secondAttribute="top" id="5rg-hl-pvh"/>
+                                                            <constraint firstItem="ycq-Fi-AlT" firstAttribute="leading" secondItem="fsW-Fa-Z8V" secondAttribute="leading" id="FcQ-dG-1X9"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ycq-Fi-AlT" secondAttribute="bottom" id="Z4p-Yx-2In"/>
+                                                            <constraint firstAttribute="width" constant="80" id="aQD-hP-hOX"/>
+                                                            <constraint firstAttribute="height" constant="35" id="dBx-6z-ZUM"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ycq-Fi-AlT" secondAttribute="trailing" id="yA2-cp-r08"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -559,6 +593,7 @@
                         <outlet property="frontQuote" destination="ko1-0S-tIj" id="oW2-Er-dPy"/>
                         <outlet property="moodButton" destination="hN3-yu-1RA" id="o7E-7i-GWk"/>
                         <outlet property="moodButtonHolderView" destination="LMn-Sa-4bB" id="TBn-ZG-WNt"/>
+                        <outlet property="moodButtonHolderView_text" destination="fsW-Fa-Z8V" id="qQS-hA-txZ"/>
                         <outlet property="nameOfFlower" destination="TLQ-V7-o7B" id="42K-QW-KSS"/>
                         <outlet property="onboardingTouchIcon" destination="Bzx-W5-zIZ" id="grl-na-vFh"/>
                         <outlet property="screenView" destination="8bC-Xf-vdC" id="mEd-Oa-wt5"/>

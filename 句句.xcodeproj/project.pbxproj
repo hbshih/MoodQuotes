@@ -89,8 +89,6 @@
 		B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */; };
 		B594C19B27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */; };
 		B594C19C27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */; };
-		B594C1A227EC5617009895D7 /* Sambucus nigra.png in Resources */ = {isa = PBXBuildFile; fileRef = B594C1A127EC5617009895D7 /* Sambucus nigra.png */; };
-		B594C1A327EC5617009895D7 /* Sambucus nigra.png in Resources */ = {isa = PBXBuildFile; fileRef = B594C1A127EC5617009895D7 /* Sambucus nigra.png */; };
 		B594C1A927EC5665009895D7 /* Vernonia amygdalina.png in Resources */ = {isa = PBXBuildFile; fileRef = B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */; };
 		B594C1AA27EC5665009895D7 /* Vernonia amygdalina.png in Resources */ = {isa = PBXBuildFile; fileRef = B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */; };
 		B59C53692622F1C5008BFB0A /* OnboardingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */; };
@@ -119,9 +117,6 @@
 		B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
 		B5DF562E256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5DF562F256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
-		B5E35F2626A33517005EBD71 /* SplashScreen_.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E35F2326A33517005EBD71 /* SplashScreen_.png */; };
-		B5E35F2726A33517005EBD71 /* SplashScreen_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E35F2426A33517005EBD71 /* SplashScreen_@2x.png */; };
-		B5E35F2826A33517005EBD71 /* SplashScreen_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E35F2526A33517005EBD71 /* SplashScreen_@3x.png */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
 		B5F0D7BD27F6B8D4006C4760 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5F0D7BC27F6B8D4006C4760 /* SwiftyStoreKit */; };
 		BC58CA65A3C6C736913C09FC /* Pods______UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFD2C2C730397F8655D027A /* Pods______UITests.framework */; };
@@ -243,7 +238,6 @@
 		B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAppQuotes.swift; sourceTree = "<group>"; };
 		B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleNewUserViewController.swift; sourceTree = "<group>"; };
 		B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-openhuninn-1.1.ttf"; sourceTree = "<group>"; };
-		B594C1A127EC5617009895D7 /* Sambucus nigra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sambucus nigra.png"; sourceTree = "<group>"; };
 		B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vernonia amygdalina.png"; sourceTree = "<group>"; };
 		B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStoryViewController.swift; sourceTree = "<group>"; };
 		B59E205425669862003A5521 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -270,9 +264,6 @@
 		B5DF1B36257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B5DF1B3B257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B5DF562D256F2C01004A24D8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		B5E35F2326A33517005EBD71 /* SplashScreen_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen_.png; sourceTree = "<group>"; };
-		B5E35F2426A33517005EBD71 /* SplashScreen_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@2x.png"; sourceTree = "<group>"; };
-		B5E35F2526A33517005EBD71 /* SplashScreen_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashScreen_@3x.png"; sourceTree = "<group>"; };
 		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		C5A97FF5AD77BFDE853E4C05 /* Pods-句句.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.debug.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.debug.xcconfig"; sourceTree = "<group>"; };
 		D96199F7016054F573B667A8 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -427,9 +418,6 @@
 				B5517C7D255FAFC500E134CC /* Assets.xcassets */,
 				B5582D7127A59FFD00D9F0E0 /* UpdateFontTableViewCell.xib */,
 				B5582D7727A5A00300D9F0E0 /* UpdateFontTableViewCell.swift */,
-				B5E35F2326A33517005EBD71 /* SplashScreen_.png */,
-				B5E35F2426A33517005EBD71 /* SplashScreen_@2x.png */,
-				B5E35F2526A33517005EBD71 /* SplashScreen_@3x.png */,
 				B5517C7F255FAFC600E134CC /* LaunchScreen.storyboard */,
 				B5517C82255FAFC600E134CC /* Info.plist */,
 				B506EBB125622E0700372198 /* NotificationTableViewCell.swift */,
@@ -438,7 +426,6 @@
 				B506EBC125622FF800372198 /* UpdateTimeTableViewCell.xib */,
 				B506EBC72562306400372198 /* UpdateBackgroundColorTableViewCell.swift */,
 				B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */,
-				B594C1A127EC5617009895D7 /* Sambucus nigra.png */,
 				B506EBC82562306400372198 /* UpdateBackgroundColorTableViewCell.xib */,
 				B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */,
 				B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */,
@@ -646,22 +633,18 @@
 				B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B5582D3F27A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
 				B563EB9A27F3FFA0003D0DD9 /* UpdateFontViewController.xib in Resources */,
-				B594C1A227EC5617009895D7 /* Sambucus nigra.png in Resources */,
 				B5582D7227A59FFD00D9F0E0 /* UpdateFontTableViewCell.xib in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
 				B5582D4327A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
 				B503750026331882004E2F86 /* NativeAdView.xib in Resources */,
 				B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */,
-				B5E35F2826A33517005EBD71 /* SplashScreen_@3x.png in Resources */,
 				B5582D4127A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */,
-				B5E35F2726A33517005EBD71 /* SplashScreen_@2x.png in Resources */,
 				B563EBA927F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */,
 				B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
 				B5582D4527A59A6A00D9F0E0 /* GenRyuMin-M.ttc in Resources */,
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
 				B5517C7E255FAFC500E134CC /* Assets.xcassets in Resources */,
-				B5E35F2626A33517005EBD71 /* SplashScreen_.png in Resources */,
 				B594C19B27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */,
 				B5517C7C255FAFC500E134CC /* Main.storyboard in Resources */,
 			);
@@ -686,7 +669,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5582D4027A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
-				B594C1A327EC5617009895D7 /* Sambucus nigra.png in Resources */,
 				B563EB9F27F3FFA5003D0DD9 /* UpdateFontViewController.xib in Resources */,
 				B594C1AA27EC5665009895D7 /* Vernonia amygdalina.png in Resources */,
 				B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,

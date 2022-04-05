@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             SwiftyStoreKit.finishTransaction(purchase.transaction)
                         }
                         // Unlock content
+                        print("this is paid user")
                         global_paid_user = true
                         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
                     case .failed, .purchasing, .deferred:
@@ -61,6 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Error: \(result.error)")
             }
         }
+        */
         
         let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: "c180acfb02ff4e39a006b23d901a315c")
         SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
@@ -94,7 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Receipt verification failed: \(error)")
             }
         }
-*/
+
         
         // Override point for customization after application launch.
         FirebaseApp.configure()

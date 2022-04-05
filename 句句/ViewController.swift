@@ -97,6 +97,7 @@ class ViewController: UIViewController, MessagingDelegate {
             
             bookmark_saved = true
             Button_bookmark.setTitle("已收藏", for: .normal)
+            alertViewHandler().alert(title: "語錄已儲存", body: "", iconText: "📖")
             
             if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
             {
@@ -227,6 +228,7 @@ class ViewController: UIViewController, MessagingDelegate {
                             checkIfBookmarked()
                         }
                     } else {
+                        alertViewHandler().control(title: "無法更新語錄", body: "請確認手機是否連結到網路", iconText: "❗️")
                         let errQuote = Quote(quote: "App當機拉", author: "By Me")
                         quoteInfo = [errQuote,errQuote]
                     }
@@ -300,6 +302,7 @@ class ViewController: UIViewController, MessagingDelegate {
     //    self.bookmarkNotification.alpha = 0
     //    self.bookmarkNotification.text = "語錄已儲存！"
         
+        
         if let arr = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
         {
             print("saved quotes")
@@ -313,11 +316,15 @@ class ViewController: UIViewController, MessagingDelegate {
                 moodButton.contentMode = .scaleAspectFit
                 moodButton.imageView?.contentMode = .scaleAspectFit
                 moodButton.setImage(UIImage(named: today_mood), for: .normal)
+                self.moodButtonHolderView_text.isHidden = true
+                self.moodButtonHolderView.isHidden = false
                 //self.moodButtonHolderView
            //     self.moodButtonHolderView.frame.size.width = 40
             }else
             {
-                self.moodButtonHolderView.layer.borderWidth = 0
+                self.moodButtonHolderView_text.isHidden = false
+                self.moodButtonHolderView.isHidden = true
+                //self.moodButtonHolderView.layer.borderWidth = 0
             }
         }
         //  print(flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults))
@@ -596,6 +603,7 @@ class ViewController: UIViewController, MessagingDelegate {
         //checkIfBookmarked()
     }
     
+    @IBOutlet weak var moodButtonHolderView_text: UIView!
     @IBOutlet weak var moodButtonHolderView: UIView!
     @IBAction func updateMoodTapped(_ sender: Any) {
         
@@ -619,6 +627,10 @@ class ViewController: UIViewController, MessagingDelegate {
     
         // Create second button
         let buttonTwo = DefaultButton(title: "儲存", height: 60) {
+            
+            
+            self.moodButtonHolderView_text.isHidden = true
+            self.moodButtonHolderView.isHidden = false
             
             let mood = ratingVC.mood
             self.moodButton.imageView?.contentMode = .scaleAspectFit
@@ -679,6 +691,7 @@ class ViewController: UIViewController, MessagingDelegate {
             blackwhiteFlowerSectionView.isHidden = true
             trial_Button.isHidden = true
         }
+        
         
         todayDateLabel.text = Date().getDateDayOnly
         twDayLabel.text = Date().getTWday
