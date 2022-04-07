@@ -59,7 +59,6 @@
 		B5582D4627A59A6A00D9F0E0 /* GenRyuMin-M.ttc in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3E27A59A6A00D9F0E0 /* GenRyuMin-M.ttc */; };
 		B5582D7227A59FFD00D9F0E0 /* UpdateFontTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5582D7127A59FFD00D9F0E0 /* UpdateFontTableViewCell.xib */; };
 		B5582D7827A5A00300D9F0E0 /* UpdateFontTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5582D7727A5A00300D9F0E0 /* UpdateFontTableViewCell.swift */; };
-		B5582D9327A5AB5000D9F0E0 /* JuiceUI in Frameworks */ = {isa = PBXBuildFile; productRef = B5582D9227A5AB5000D9F0E0 /* JuiceUI */; };
 		B55B06B927F32CE500B7AAEC /* NewSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55B06B827F32CE500B7AAEC /* NewSettingViewController.swift */; };
 		B5613EC1269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5613EC0269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift */; };
 		B5613EC7269BCBF6002EE2F4 /* SavedQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5613EC6269BCBF6002EE2F4 /* SavedQuoteViewController.swift */; };
@@ -115,10 +114,14 @@
 		B5C321D92629685D00CB530C /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C321D82629685D00CB530C /* TutorialViewController.swift */; };
 		B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
 		B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
+		B5D6071E27FF2BBD008B19D9 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */; };
+		B5D6072127FF2C5E008B19D9 /* JuiceUI in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6072027FF2C5E008B19D9 /* JuiceUI */; };
+		B5D6072427FF315D008B19D9 /* WidgetGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072227FF315C008B19D9 /* WidgetGroup.swift */; };
+		B5D6072627FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */; };
+		B5D6072727FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */; };
 		B5DF562E256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5DF562F256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
-		B5F0D7BD27F6B8D4006C4760 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5F0D7BC27F6B8D4006C4760 /* SwiftyStoreKit */; };
 		BC58CA65A3C6C736913C09FC /* Pods______UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFD2C2C730397F8655D027A /* Pods______UITests.framework */; };
 		D73E671B225CA3AE85BB2AF6 /* Pods_widgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3507748D56C8ABB370227B /* Pods_widgetExtension.framework */; };
 /* End PBXBuildFile section */
@@ -261,6 +264,8 @@
 		B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_3ViewController.swift; sourceTree = "<group>"; };
 		B5C321D82629685D00CB530C /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		B5D3845C256BED8100B1A507 /* qiji-combo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "qiji-combo.ttf"; sourceTree = "<group>"; };
+		B5D6072227FF315C008B19D9 /* WidgetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGroup.swift; sourceTree = "<group>"; };
+		B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Plant.swift; sourceTree = "<group>"; };
 		B5DF1B36257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B5DF1B3B257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B5DF562D256F2C01004A24D8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -277,15 +282,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B547A84325870B1100938A09 /* libz.tbd in Frameworks */,
-				B5F0D7BD27F6B8D4006C4760 /* SwiftyStoreKit in Frameworks */,
+				B5D6071E27FF2BBD008B19D9 /* SwiftyStoreKit in Frameworks */,
 				B547A84125870B0A00938A09 /* WebKit.framework in Frameworks */,
 				B547A83F25870B0400938A09 /* SystemConfiguration.framework in Frameworks */,
-				B5582D9327A5AB5000D9F0E0 /* JuiceUI in Frameworks */,
 				B547A83D25870AFD00938A09 /* QuartzCore.framework in Frameworks */,
 				B547A83B25870AF800938A09 /* MobileCoreServices.framework in Frameworks */,
 				B547A83925870AF100938A09 /* CoreTelephony.framework in Frameworks */,
 				B547A83725870AEA00938A09 /* CoreMedia.framework in Frameworks */,
 				B547A83525870AE300938A09 /* CoreGraphics.framework in Frameworks */,
+				B5D6072127FF2C5E008B19D9 /* JuiceUI in Frameworks */,
 				B547A82F25870ADC00938A09 /* Security.framework in Frameworks */,
 				B547A82D25870AD100938A09 /* AVFoundation.framework in Frameworks */,
 			);
@@ -483,6 +488,8 @@
 				B59E20D7256741C3003A5521 /* GeegeeWidgetView.swift */,
 				B5807EFC25678043006052E2 /* firebaseService.swift */,
 				B5DF562D256F2C01004A24D8 /* Date.swift */,
+				B5D6072227FF315C008B19D9 /* WidgetGroup.swift */,
+				B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -508,8 +515,8 @@
 			);
 			name = "句句";
 			packageProductDependencies = (
-				B5582D9227A5AB5000D9F0E0 /* JuiceUI */,
-				B5F0D7BC27F6B8D4006C4760 /* SwiftyStoreKit */,
+				B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */,
+				B5D6072027FF2C5E008B19D9 /* JuiceUI */,
 			);
 			productName = "句句";
 			productReference = B5517C71255FAFC500E134CC /* 句句.app */;
@@ -606,8 +613,8 @@
 			);
 			mainGroup = B5517C68255FAFC400E134CC;
 			packageReferences = (
-				B5582D9127A5AB5000D9F0E0 /* XCRemoteSwiftPackageReference "JuiceUI" */,
-				B5F0D7BB27F6B8D4006C4760 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+				B5D6071C27FF2BBD008B19D9 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+				B5D6071F27FF2C5E008B19D9 /* XCRemoteSwiftPackageReference "JuiceUI" */,
 			);
 			productRefGroup = B5517C72255FAFC500E134CC /* Products */;
 			projectDirPath = "";
@@ -821,6 +828,7 @@
 				B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */,
 				B5517C79255FAFC500E134CC /* ViewController.swift in Sources */,
 				B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */,
+				B5D6072627FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */,
 				B54344CF27F6F2930071E367 /* alertViewHandler.swift in Sources */,
 				B54344DC27F7056F0071E367 /* AdjustFontViewController.swift in Sources */,
 				B563EB8E27F3F325003D0DD9 /* DIYCalendarCell.swift in Sources */,
@@ -894,9 +902,11 @@
 				B591B1802570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
 				B58E55352629BD9E009657E0 /* flowerHandler.swift in Sources */,
 				B5056D8C2573DCB300A8E79B /* DateHelper.swift in Sources */,
+				B5D6072427FF315D008B19D9 /* WidgetGroup.swift in Sources */,
 				B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
 				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
+				B5D6072727FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */,
 				B59E20B8256698FB003A5521 /* widget.swift in Sources */,
 				B51C61A4262C001800B5C6E8 /* textDirectionModifier.swift in Sources */,
 			);
@@ -1549,7 +1559,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B5582D9127A5AB5000D9F0E0 /* XCRemoteSwiftPackageReference "JuiceUI" */ = {
+		B5D6071C27FF2BBD008B19D9 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B5D6071F27FF2C5E008B19D9 /* XCRemoteSwiftPackageReference "JuiceUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mattwyskiel/JuiceUI.git";
 			requirement = {
@@ -1557,26 +1575,18 @@
 				kind = branch;
 			};
 		};
-		B5F0D7BB27F6B8D4006C4760 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.3;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B5582D9227A5AB5000D9F0E0 /* JuiceUI */ = {
+		B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B5582D9127A5AB5000D9F0E0 /* XCRemoteSwiftPackageReference "JuiceUI" */;
-			productName = JuiceUI;
-		};
-		B5F0D7BC27F6B8D4006C4760 /* SwiftyStoreKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B5F0D7BB27F6B8D4006C4760 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
+			package = B5D6071C27FF2BBD008B19D9 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
 			productName = SwiftyStoreKit;
+		};
+		B5D6072027FF2C5E008B19D9 /* JuiceUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5D6071F27FF2C5E008B19D9 /* XCRemoteSwiftPackageReference "JuiceUI" */;
+			productName = JuiceUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,37 +1,35 @@
 //
-//  widget.swift
-//  widget
+//  WidgetGroup.swift
+//  WidgetGroup
 //
-//  Created by Ben on 2020/11/19.
+//  Created by Tihomir RAdeff on 3.10.20.
 //
 
 import WidgetKit
 import SwiftUI
-import Intents
-import Foundation
 import Firebase
 import FirebaseUI
 import FirebaseAnalytics
 
-struct Provider: TimelineProvider{
+struct SmallWidget_PlantProvider: TimelineProvider {
     
-    func placeholder(in context: Context) -> QuoteEntry {
+    func placeholder(in context: Context) -> SmallWidget_PlantEntry {
         print("Widget got loaded")
-        return (QuoteEntry(date: Date(), quote: Quote(quote: "asdf", author: "adsf"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "asfd"))
+        return (SmallWidget_PlantEntry(date: Date(), quote: Quote(quote: "asdf", author: "adsf"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "asfd"))
     }
     
     
-    func getSnapshot(in context: Context, completion: @escaping (QuoteEntry) -> Void) {
+    func getSnapshot(in context: Context, completion: @escaping (SmallWidget_PlantEntry) -> Void) {
         
     
         Analytics.logEvent("widget_got_installed", parameters: nil)
         
         print("Widget got loaded")
-        let quote = (QuoteEntry(date: Date(), quote: Quote(quote: "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星", author: "小王子"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "滿天星"))
+        let quote = (SmallWidget_PlantEntry(date: Date(), quote: Quote(quote: "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星", author: "小王子"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "滿天星"))
         completion(quote)
     }
     
-    func getTimeline(in context: Context, completion: @escaping (Timeline<QuoteEntry>) -> Void) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<SmallWidget_PlantEntry>) -> Void) {
         let currentDate = Date()
         var refreshDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
         var quoteInfo: [Quote]?
@@ -41,7 +39,7 @@ struct Provider: TimelineProvider{
          print("update widget")
             
             DispatchQueue.main.async {
-                let entry = QuoteEntry(date: Date(), quote: Quote(quote: "點開查看今日給你的話吧", author: "點開查看"), flowerImage: UIImage(named: "noun_seeds_184642")!, flowerName: "我是種子")
+                let entry = SmallWidget_PlantEntry(date: Date(), quote: Quote(quote: "點開查看今日給你的話吧", author: "點開查看"), flowerImage: UIImage(named: "noun_seeds_184642")!, flowerName: "我是種子")
                 let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
                 flowerHandler().storeImage(image: UIImage(named: "noun_seeds_184642")!, forKey: "FlowerImage", withStorageType: .userDefaults)
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.flowerName, forKey: "FlowerName")
@@ -83,67 +81,62 @@ struct Provider: TimelineProvider{
             
             FlowerImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "flower_10_babys breath_滿天星")!
             FlowerName = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName") ?? "滿天星"
-            let entry = QuoteEntry(date: Date(), quote: Quote(quote: Q, author: A), flowerImage: FlowerImage, flowerName: FlowerName)
+            let entry = SmallWidget_PlantEntry(date: Date(), quote: Quote(quote: Q, author: A), flowerImage: FlowerImage, flowerName: FlowerName)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
             completion(timeline)
         }
         
         
     }
-    
-    func downloadFlowerImage()
-    {
-    }
-    
-    
-    
 }
 
-struct QuoteEntry: TimelineEntry{
+struct SmallWidget_PlantEntry: TimelineEntry {
     var date: Date
     let quote: Quote
     let flowerImage: UIImage
     let flowerName: String
 }
 
+struct SmallWidget_PlantEntryView : View {
+    //let emojiDetails: EmojiDetails
+      
+      let date: Date
+      let quote: Quote
+      let flowerImage: UIImage
+      let flowerName: String
+      let quoteSize: Double
+      let authorSize: Double
+      
+      var backgroundColor: UIColor{
+          if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.colorForKey(key: "BackgroundColor")
+          {
+              print(color)
+              return color
+          }
+          else
+          {
+              return UIColor.gray
+          }
+      }
 
-struct Emojibook_WidgetEntryView: View {
-    var entry: Provider.Entry
-    
-    @Environment(\.widgetFamily) var family
-    
-    /*  var body: some View {
-     GeegeeWidgetView(quote: entry.quote)
-     }
-     */
-    @ViewBuilder
-    var body: some View {
-        
-        switch family {
-        /*  case .systemSmall:
-         GeegeeWidgetView(quote: entry.quote, quoteSize: 18, authorSize: 12)*/
-        
-        case .systemLarge:
-            GeegeeWidgetView_Large(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
-        
-        case .systemMedium:
-           // GeegeeWidgetView(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
-            
-            GeegeeWidgetView_2(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
-            
-        case .systemSmall:
-            GeegeeWidgetView_small(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
-        /*   case .systemLarge:
-         GeegeeWidgetView(quote: entry.quote, quoteSize: 32, authorSize: 24)*/
-        default:
-            Text("Some other WidgetFamily in the future.")
-        }
-        
-    }
+      var body: some View {
+          
+      ZStack {
+          if #available(iOS 14.0, *) {
+              Color(backgroundColor).ignoresSafeArea(.all).edgesIgnoringSafeArea(.all)
+          } else {
+              // Fallback on earlier versions
+          }
+          // Widget Background Image
+        //  Image(uiImage: #imageLiteral(resourceName: "Webp.net-compress-image-removebg-preview.png"))
+          Image(uiImage: flowerImage).resizable().frame(width: 128, height: 128, alignment: .center)
+
+      }
+      .padding(.vertical, 2.5).padding(.horizontal, 16)
+      }
 }
 
-//@main
-struct widget: Widget{
+struct SmallWidget_Plant: Widget {
     private let kind = "widget"
     
     init() {
@@ -166,40 +159,18 @@ struct widget: Widget{
     public var body: some WidgetConfiguration {
         StaticConfiguration(
             kind: kind,
-            provider: Provider()
+            provider: SmallWidget_PlantProvider()
         ) { entry in
-            Emojibook_WidgetEntryView(entry: entry)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)    // << here !!
-                .background(Color(backgroundColor))
+            SmallWidget_PlantEntryView(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)
         }
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
         .configurationDisplayName("句句 每日語錄")
         .description("記得分享")
     }
-    
 }
 
-struct widget_Previews: PreviewProvider {
+struct SmallWidget_Plant_Previews: PreviewProvider {
     static var previews: some View {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}
-
-extension UIImage {
-    func resized(withPercentage percentage: CGFloat, isOpaque: Bool = true) -> UIImage? {
-        let canvas = CGSize(width: size.width * percentage, height: size.height * percentage)
-        let format = imageRendererFormat
-        format.opaque = isOpaque
-        return UIGraphicsImageRenderer(size: canvas, format: format).image {
-            _ in draw(in: CGRect(origin: .zero, size: canvas))
-        }
-    }
-    func resized(toWidth width: CGFloat, isOpaque: Bool = true) -> UIImage? {
-        let canvas = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
-        let format = imageRendererFormat
-        format.opaque = isOpaque
-        return UIGraphicsImageRenderer(size: canvas, format: format).image {
-            _ in draw(in: CGRect(origin: .zero, size: canvas))
-        }
     }
 }
