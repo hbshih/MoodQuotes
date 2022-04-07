@@ -207,30 +207,31 @@ struct GeegeeWidgetView_Large: View {
           }
           // Widget Background Image
         //  Image(uiImage: #imageLiteral(resourceName: "Webp.net-compress-image-removebg-preview.png"))
-          VStack{
+          VStack(alignment: .leading, spacing: 64){
               
               HStack{
                   
                   HStack{
                       HStack
                       {
-                          Text(date.getDateDayOnly).font(.system(size: 16.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+                          Text(date.getDateDayOnly).font(Display_Font(font_size: Int(24)).getFont()).fontWeight(.light).multilineTextAlignment(.leading
+                          ).foregroundColor(.gray)
                           VStack
                           {
-                              Text(date.getFormattedDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
-                              Text(date.getTWday).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+                              Text(date.getFormattedDate).font(Display_Font(font_size: Int(14)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
+                              Text(date.getTWday).font(Display_Font(font_size: Int(14)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
                           }
                       }
                       
-                      Text("今日心情").font(.system(size: 16.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+                      //Text("今日心情").font(.system(size: 16.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
                       
                   }
                   
               }
               
-              Text(quote.quote).font(.system(size: 24.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+              Text(quote.quote).font(Display_Font(font_size: Int(24)).getFont()).fontWeight(.light).multilineTextAlignment(.leading).foregroundColor(.gray)
               
-              Text(quote.author).font(.system(size: 12.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
+              Text(quote.author).font(Display_Font(font_size: Int(14)).getFont()).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
               
               
               
