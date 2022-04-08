@@ -119,6 +119,10 @@
 		B5D6072427FF315D008B19D9 /* WidgetGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072227FF315C008B19D9 /* WidgetGroup.swift */; };
 		B5D6072627FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */; };
 		B5D6072727FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */; };
+		B5D6072A27FFB7EE008B19D9 /* SmallWidget_Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072927FFB7EE008B19D9 /* SmallWidget_Date.swift */; };
+		B5D6072B27FFB7EE008B19D9 /* SmallWidget_Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072927FFB7EE008B19D9 /* SmallWidget_Date.swift */; };
+		B5D6072D27FFCAC0008B19D9 /* MediumWidget_Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072C27FFCAC0008B19D9 /* MediumWidget_Quote.swift */; };
+		B5D6072E27FFCAC0008B19D9 /* MediumWidget_Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072C27FFCAC0008B19D9 /* MediumWidget_Quote.swift */; };
 		B5DF562E256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5DF562F256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
@@ -266,6 +270,8 @@
 		B5D3845C256BED8100B1A507 /* qiji-combo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "qiji-combo.ttf"; sourceTree = "<group>"; };
 		B5D6072227FF315C008B19D9 /* WidgetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGroup.swift; sourceTree = "<group>"; };
 		B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Plant.swift; sourceTree = "<group>"; };
+		B5D6072927FFB7EE008B19D9 /* SmallWidget_Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Date.swift; sourceTree = "<group>"; };
+		B5D6072C27FFCAC0008B19D9 /* MediumWidget_Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidget_Quote.swift; sourceTree = "<group>"; };
 		B5DF1B36257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B5DF1B3B257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B5DF562D256F2C01004A24D8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -490,6 +496,8 @@
 				B5DF562D256F2C01004A24D8 /* Date.swift */,
 				B5D6072227FF315C008B19D9 /* WidgetGroup.swift */,
 				B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */,
+				B5D6072927FFB7EE008B19D9 /* SmallWidget_Date.swift */,
+				B5D6072C27FFCAC0008B19D9 /* MediumWidget_Quote.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -829,6 +837,8 @@
 				B5517C79255FAFC500E134CC /* ViewController.swift in Sources */,
 				B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */,
 				B5D6072627FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */,
+				B5D6072D27FFCAC0008B19D9 /* MediumWidget_Quote.swift in Sources */,
+				B5D6072A27FFB7EE008B19D9 /* SmallWidget_Date.swift in Sources */,
 				B54344CF27F6F2930071E367 /* alertViewHandler.swift in Sources */,
 				B54344DC27F7056F0071E367 /* AdjustFontViewController.swift in Sources */,
 				B563EB8E27F3F325003D0DD9 /* DIYCalendarCell.swift in Sources */,
@@ -905,10 +915,12 @@
 				B5D6072427FF315D008B19D9 /* WidgetGroup.swift in Sources */,
 				B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
+				B5D6072B27FFB7EE008B19D9 /* SmallWidget_Date.swift in Sources */,
 				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
 				B5D6072727FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */,
 				B59E20B8256698FB003A5521 /* widget.swift in Sources */,
 				B51C61A4262C001800B5C6E8 /* textDirectionModifier.swift in Sources */,
+				B5D6072E27FFCAC0008B19D9 /* MediumWidget_Quote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

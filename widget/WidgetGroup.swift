@@ -13,5 +13,7 @@ struct WidgetGroup: WidgetBundle {
 
     var body: some Widget {
         SmallWidget_Plant()
+        SmallWidget_Date()
+        MediumWidget_Quote()
     }
 }
