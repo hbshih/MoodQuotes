@@ -123,6 +123,12 @@
 		B5D6072B27FFB7EE008B19D9 /* SmallWidget_Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072927FFB7EE008B19D9 /* SmallWidget_Date.swift */; };
 		B5D6072D27FFCAC0008B19D9 /* MediumWidget_Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072C27FFCAC0008B19D9 /* MediumWidget_Quote.swift */; };
 		B5D6072E27FFCAC0008B19D9 /* MediumWidget_Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072C27FFCAC0008B19D9 /* MediumWidget_Quote.swift */; };
+		B5D6073127FFE45A008B19D9 /* MediumWidget_Quote_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6073027FFE45A008B19D9 /* MediumWidget_Quote_2.swift */; };
+		B5D6073227FFE45A008B19D9 /* MediumWidget_Quote_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6073027FFE45A008B19D9 /* MediumWidget_Quote_2.swift */; };
+		B5D6073427FFE8FD008B19D9 /* MediumWidget_Quote_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6073327FFE8FD008B19D9 /* MediumWidget_Quote_3.swift */; };
+		B5D6073527FFE8FD008B19D9 /* MediumWidget_Quote_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6073327FFE8FD008B19D9 /* MediumWidget_Quote_3.swift */; };
+		B5D6073727FFE93C008B19D9 /* LargeWidget_Full.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6073627FFE93C008B19D9 /* LargeWidget_Full.swift */; };
+		B5D6073827FFE93C008B19D9 /* LargeWidget_Full.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6073627FFE93C008B19D9 /* LargeWidget_Full.swift */; };
 		B5DF562E256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5DF562F256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
@@ -272,6 +278,9 @@
 		B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Plant.swift; sourceTree = "<group>"; };
 		B5D6072927FFB7EE008B19D9 /* SmallWidget_Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Date.swift; sourceTree = "<group>"; };
 		B5D6072C27FFCAC0008B19D9 /* MediumWidget_Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidget_Quote.swift; sourceTree = "<group>"; };
+		B5D6073027FFE45A008B19D9 /* MediumWidget_Quote_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidget_Quote_2.swift; sourceTree = "<group>"; };
+		B5D6073327FFE8FD008B19D9 /* MediumWidget_Quote_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidget_Quote_3.swift; sourceTree = "<group>"; };
+		B5D6073627FFE93C008B19D9 /* LargeWidget_Full.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidget_Full.swift; sourceTree = "<group>"; };
 		B5DF1B36257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B5DF1B3B257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B5DF562D256F2C01004A24D8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -498,6 +507,9 @@
 				B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */,
 				B5D6072927FFB7EE008B19D9 /* SmallWidget_Date.swift */,
 				B5D6072C27FFCAC0008B19D9 /* MediumWidget_Quote.swift */,
+				B5D6073027FFE45A008B19D9 /* MediumWidget_Quote_2.swift */,
+				B5D6073327FFE8FD008B19D9 /* MediumWidget_Quote_3.swift */,
+				B5D6073627FFE93C008B19D9 /* LargeWidget_Full.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -838,6 +850,7 @@
 				B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */,
 				B5D6072627FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */,
 				B5D6072D27FFCAC0008B19D9 /* MediumWidget_Quote.swift in Sources */,
+				B5D6073727FFE93C008B19D9 /* LargeWidget_Full.swift in Sources */,
 				B5D6072A27FFB7EE008B19D9 /* SmallWidget_Date.swift in Sources */,
 				B54344CF27F6F2930071E367 /* alertViewHandler.swift in Sources */,
 				B54344DC27F7056F0071E367 /* AdjustFontViewController.swift in Sources */,
@@ -855,6 +868,7 @@
 				B5517C77255FAFC500E134CC /* SceneDelegate.swift in Sources */,
 				B509567B256DDD6B0075ACE9 /* NotificationTrigger.swift in Sources */,
 				B57EA6C427F5356400BAF789 /* PurchaseViewController.swift in Sources */,
+				B5D6073127FFE45A008B19D9 /* MediumWidget_Quote_2.swift in Sources */,
 				B5582D7827A5A00300D9F0E0 /* UpdateFontTableViewCell.swift in Sources */,
 				B59E218F2567657F003A5521 /* UserDefaultsExtention.swift in Sources */,
 				B591B17F2570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
@@ -872,6 +886,7 @@
 				B5AF873A2571209C008A3BBC /* videoTutorialViewController.swift in Sources */,
 				B5095675256DDD380075ACE9 /* Notification.swift in Sources */,
 				B563EB8827F3F31D003D0DD9 /* DIYExampleViewController.swift in Sources */,
+				B5D6073427FFE8FD008B19D9 /* MediumWidget_Quote_3.swift in Sources */,
 				B5807EFD25678043006052E2 /* firebaseService.swift in Sources */,
 				B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */,
 				B50374CD263310B5004E2F86 /* AdMobsViewController.swift in Sources */,
@@ -903,7 +918,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D6073827FFE93C008B19D9 /* LargeWidget_Full.swift in Sources */,
 				B59E213325674D13003A5521 /* Quote.swift in Sources */,
+				B5D6073527FFE8FD008B19D9 /* MediumWidget_Quote_3.swift in Sources */,
 				B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */,
 				B563EBA027F3FFA5003D0DD9 /* UpdateFontViewController.swift in Sources */,
 				B59E219425676582003A5521 /* UserDefaultsExtention.swift in Sources */,
@@ -915,6 +932,7 @@
 				B5D6072427FF315D008B19D9 /* WidgetGroup.swift in Sources */,
 				B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */,
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
+				B5D6073227FFE45A008B19D9 /* MediumWidget_Quote_2.swift in Sources */,
 				B5D6072B27FFB7EE008B19D9 /* SmallWidget_Date.swift in Sources */,
 				B5807EFE25678043006052E2 /* firebaseService.swift in Sources */,
 				B5D6072727FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */,
