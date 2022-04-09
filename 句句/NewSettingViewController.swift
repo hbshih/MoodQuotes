@@ -9,6 +9,7 @@ import UIKit
 import PopupDialog
 import SwiftyStoreKit
 import SwiftMessages
+import UserNotifications
 
 class NewSettingViewController: UIViewController {
 
@@ -30,6 +31,46 @@ class NewSettingViewController: UIViewController {
         {
             let date = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
             timePicker.setDate(date, animated: false)
+        }
+        
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isNotificationOn")
+        {
+            notificationToggle.isOn = true
+        }else
+        {
+            notificationToggle.isOn = false
+            
+        }
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        presentingViewController?.viewWillAppear(true)
+    }
+    
+    @IBAction func notificationToggled(_ sender: UISwitch) {
+        //Analytics.logEvent("set_vc_adjust_noti", parameters: ["notification_on": "\(sender.isOn)"])
+        
+        if sender.isOn
+        {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+                (granted, error) in
+                guard granted else { return }
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                  //  let  aClass = NotificationTrigger()
+                  //  aClass.setupNotifications()
+                    
+                    NotificationTrigger().notifyQuoteHasChanged()
+                }
+            }
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(true, forKey: "isNotificationOn")
+        //    let  aClass = NotificationTrigger()
+          //  aClass.setupNotifications()
+        }else
+        {
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(false, forKey: "isNotificationOn")
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         }
     }
     
@@ -60,7 +101,30 @@ class NewSettingViewController: UIViewController {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         NotificationTrigger().notifyQuoteHasChanged()
     }
+    @IBAction func restorePurchase(_ sender: Any) {
+        
+        SwiftyStoreKit.restorePurchases(atomically: true) { results in
+            if results.restoreFailedPurchases.count > 0 {
+                print("Restore Failed: \(results.restoreFailedPurchases)")
+                alertViewHandler().control(title: "恢復購買失敗", body: "如有問題請和開發團隊聯絡", iconText: "🍻")
+            }
+            else if results.restoredPurchases.count > 0 {
+                print("Restore Success: \(results.restoredPurchases)")
+                global_paid_user = true
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
+                alertViewHandler().control(title: "恢復購買成功", body: "可以繼續使用完整版植語錄囉！", iconText: "🍻")
+            }
+            else {
+                print("Nothing to Restore")
+                alertViewHandler().control(title: "恢復購買失敗", body: "如有問題請和開發團隊聯絡", iconText: "🍻")
+            }
+        }
+        
+        
+        
+    }
     @IBAction func dismissTapped(_ sender: Any) {
+        NotificationCenter.default.post(name: Notification.Name("homepageRefresh"), object: nil)
         self.dismiss(animated: true)
     }
     @IBAction func adjustBackgroundColor(_ sender: Any) {
@@ -165,24 +229,7 @@ class NewSettingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func restorePurchase(_ sender: Any) {
-        SwiftyStoreKit.restorePurchases(atomically: true) { results in
-            if results.restoreFailedPurchases.count > 0 {
-                alertViewHandler().control(title: "沒有什麼可以回復的", body: "", iconText: "")
-                print("Restore Failed: \(results.restoreFailedPurchases)")
-                global_paid_user = true
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
-            }
-            else if results.restoredPurchases.count > 0 {
-                print("Restore Success: \(results.restoredPurchases)")
-            }
-            else {
-                alertViewHandler().control(title: "沒有什麼可以回復的", body: "", iconText: "")
-                print("Nothing to Restore")
-            }
-        }
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "adjustBackground_segue"
         {
@@ -200,5 +247,4 @@ class NewSettingViewController: UIViewController {
             }
         }
     }
-    
 }

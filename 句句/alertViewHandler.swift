@@ -18,7 +18,7 @@ struct alertViewHandler
         warning.configureTheme(.warning)
         warning.configureDropShadow()
         
-        let iconText = ["🍻"].randomElement()!
+        let iconText = iconText
         warning.configureContent(title: title, body: body, iconText: iconText)
         warning.button?.isHidden = true
         var warningConfig = SwiftMessages.defaultConfig
@@ -30,7 +30,7 @@ struct alertViewHandler
     func control(title: String, body: String, iconText: String){
         let messageView: MessageView = MessageView.viewFromNib(layout: .centeredView)
         messageView.configureBackgroundView(width: 250)
-        messageView.configureContent(title: title, body: body, iconImage: nil, iconText: iconText, buttonImage: nil, buttonTitle: "No Thanks") { _ in
+        messageView.configureContent(title: title, body: body, iconImage: nil, iconText: iconText, buttonImage: nil, buttonTitle: "關閉") { _ in
             SwiftMessages.hide()
         }
         messageView.backgroundView.backgroundColor = UIColor.init(white: 0.97, alpha: 1)

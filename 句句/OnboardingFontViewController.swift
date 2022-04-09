@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WidgetKit
 
 class OnboardingFontViewController: UIViewController {
 
@@ -81,6 +82,7 @@ class OnboardingFontViewController: UIViewController {
         performSegue(withIdentifier: "purchase_segue", sender: nil)
     }else
     {
+        WidgetCenter.shared.reloadAllTimelines()
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(selectedFont, forKey: "userFont")
         if actionButton.currentTitle == "下一步"
         {

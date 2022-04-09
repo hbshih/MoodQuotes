@@ -129,7 +129,7 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
     
     func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
         if self.gregorian.isDateInToday(date) {
-            return ""
+            return "今"
         }
         return nil
     }
@@ -205,9 +205,17 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         
         if moodList.keys.contains(dateString)
         {
+            diyCell.titleLabel.text = ""
+            cell.preferredTitleDefaultColor = UIColor(red: 96.5, green: 88.6, blue: 80.4, alpha: 1.0)
+            
+            diyCell.preferredTitleDefaultColor = UIColor(red: 96.5, green: 88.6, blue: 80.4, alpha: 1.0)
+            
             switch moodList[dateString] {
             case "super-happy":
                 diyCell.superhappyImageView.isHidden = false
+                
+                
+             //   96.5, 88.6, 80.4
             case "happy":
                 diyCell.happyImageView.isHidden = false
             case "neutral":

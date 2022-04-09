@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAnalytics
+import WidgetKit
 
 class Onboarding_2ViewController: UIViewController {
 
@@ -43,6 +44,7 @@ class Onboarding_2ViewController: UIViewController {
             performSegue(withIdentifier: "purchase_segue", sender: nil)
         }else
         {
+            WidgetCenter.shared.reloadAllTimelines()
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundView.backgroundColor, forKey: "BackgroundColor")
             if actionButton.currentTitle == "下一步"
             {

@@ -77,6 +77,8 @@ class ViewController: UIViewController, MessagingDelegate {
             
         }
     }
+    
+   
 
     
     var bookmark_saved = false
@@ -292,15 +294,28 @@ class ViewController: UIViewController, MessagingDelegate {
         }
     }
     
+    @objc func homepageRefresh()
+    {
+        prepareView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        prepareView()
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // prepareView()
+        
         //alertViewHandler().control()
         
     //    self.bookmarkNotification.alpha = 0
     //    self.bookmarkNotification.text = "語錄已儲存！"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(homepageRefresh), name: NSNotification.Name(rawValue:  "forceToLoadHomescreen"), object: nil)
+
         
         
         if let arr = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
@@ -581,7 +596,9 @@ class ViewController: UIViewController, MessagingDelegate {
     
     var backgroundColor = UIColor.white
     
-    override func viewWillAppear(_ animated: Bool) {
+    //load view
+    func prepareView()
+    {
         
         //check Color
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
@@ -595,13 +612,38 @@ class ViewController: UIViewController, MessagingDelegate {
             // quoteAndAuthorStackView.customize(backgroundColor: color, radiusSize: 20)
         }
         
-        // loadNewQuotes()
+        trial_Button.isHidden = true
+        
+        //paid user
+        if !global_paid_user
+        {
+            coloredFlowerSectionView.isHidden = true
+            blackwhiteFlowerSectionView.isHidden = false
+        }else
+        {
+            coloredFlowerSectionView.isHidden = false
+            blackwhiteFlowerSectionView.isHidden = true
+            trial_Button.isHidden = true
+        }
+        
+        //check Color
+        if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
+        {
+            backgroundColor = color
+            screenView.backgroundColor = color
+         //   frontStackView.backgroundColor = color
+         //   hiddenQuoteView.backgroundColor = color
+           // backgroundHideenView.backgroundColor =  color
+            // quoteAndAuthorStackView.backgroundColor = color
+            // quoteAndAuthorStackView.customize(backgroundColor: color, radiusSize: 20)
+        }
+        
+        
         todayDateLabel.text = Date().getDateDayOnly
         twDayLabel.text = Date().getTWday
         dateLabel.text = Date().getLunarDate
-        
-        //checkIfBookmarked()
     }
+    
     
     @IBOutlet weak var moodButtonHolderView_text: UIView!
     @IBOutlet weak var moodButtonHolderView: UIView!
@@ -677,25 +719,6 @@ class ViewController: UIViewController, MessagingDelegate {
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        
-        trial_Button.isHidden = true
-        
-        //paid user
-        if !global_paid_user
-        {
-            coloredFlowerSectionView.isHidden = true
-            blackwhiteFlowerSectionView.isHidden = false
-        }else
-        {
-            coloredFlowerSectionView.isHidden = false
-            blackwhiteFlowerSectionView.isHidden = true
-            trial_Button.isHidden = true
-        }
-        
-        
-        todayDateLabel.text = Date().getDateDayOnly
-        twDayLabel.text = Date().getTWday
-        dateLabel.text = Date().getLunarDate
         
         checkIfBookmarked()
         

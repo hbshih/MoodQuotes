@@ -838,6 +838,9 @@
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zX-vq-5UR">
                                                                 <rect key="frame" x="317" y="14.5" width="51" height="31"/>
                                                                 <color key="onTintColor" red="0.64589239040000002" green="0.94472461939999997" blue="0.69501250920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <connections>
+                                                                    <action selector="notificationToggled:" destination="MY9-5J-sNZ" eventType="valueChanged" id="T2r-td-3je"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.96470588235294119" green="0.88627450980392153" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
@@ -1123,7 +1126,7 @@
                                                                             <color key="titleColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="restorePurchase:" destination="MY9-5J-sNZ" eventType="touchUpInside" id="JXQ-9H-vIU"/>
+                                                                            <action selector="restorePurchase:" destination="MY9-5J-sNZ" eventType="touchUpInside" id="Soq-lg-Crt"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -1619,9 +1622,9 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#植語錄 app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-5T-G9G">
-                                                        <rect key="frame" x="174" y="3" width="34.5" height="6"/>
-                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="6"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="157" y="3" width="68.5" height="12"/>
+                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
+                                                        <color key="textColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -2405,7 +2408,7 @@
                                 </subviews>
                             </stackView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8Z-1T-0vX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="16" width="414" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKs-B3-IG8">
                                         <rect key="frame" x="16" y="5" width="34" height="34"/>
@@ -2431,11 +2434,11 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y45-iq-1d7"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="y45-iq-1d7" firstAttribute="bottom" secondItem="oSo-lx-APs" secondAttribute="bottom" id="0ev-9C-UuG"/>
                             <constraint firstItem="oSo-lx-APs" firstAttribute="top" secondItem="y45-iq-1d7" secondAttribute="top" id="CEw-pM-fv1"/>
-                            <constraint firstItem="N8Z-1T-0vX" firstAttribute="top" secondItem="y45-iq-1d7" secondAttribute="top" id="Lmb-RD-AZF"/>
+                            <constraint firstItem="N8Z-1T-0vX" firstAttribute="top" secondItem="y45-iq-1d7" secondAttribute="top" constant="16" id="Lmb-RD-AZF"/>
                             <constraint firstItem="N8Z-1T-0vX" firstAttribute="leading" secondItem="y45-iq-1d7" secondAttribute="leading" id="XZo-zJ-iG7"/>
                             <constraint firstItem="oSo-lx-APs" firstAttribute="leading" secondItem="y45-iq-1d7" secondAttribute="leading" id="e9f-J5-q1k"/>
                             <constraint firstItem="y45-iq-1d7" firstAttribute="trailing" secondItem="oSo-lx-APs" secondAttribute="trailing" id="fjQ-Nf-4Xd"/>
@@ -3080,7 +3083,7 @@ App們將會開始抖動。</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-0P-87E">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-Me-g3r">
                                         <rect key="frame" x="0.0" y="16" width="414" height="44"/>
@@ -3119,7 +3122,7 @@ App們將會開始抖動。</string>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="omB-P9-aEp">
-                                        <rect key="frame" x="0.0" y="60" width="414" height="738"/>
+                                        <rect key="frame" x="0.0" y="60" width="414" height="782"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qfV-lE-Jj8">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
@@ -3153,16 +3156,16 @@ App們將會開始抖動。</string>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Uf4-em-KD0">
-                                                <rect key="frame" x="0.0" y="180" width="414" height="390"/>
+                                                <rect key="frame" x="0.0" y="180" width="414" height="434"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-A3-1jx">
-                                                        <rect key="frame" x="16" y="16" width="382" height="358"/>
+                                                        <rect key="frame" x="16" y="16" width="382" height="402"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QPd-88-czF">
-                                                                <rect key="frame" x="16" y="16" width="350" height="326"/>
+                                                                <rect key="frame" x="16" y="16" width="350" height="370"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 2 - Copy" translatesAutoresizingMaskIntoConstraints="NO" id="mjY-w6-DAv">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="163" height="326"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="163" height="370"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <integer key="value" value="10"/>
@@ -3170,7 +3173,7 @@ App們將會開始抖動。</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="OPS-7b-ZXu">
-                                                                        <rect key="frame" x="187" y="0.0" width="163" height="326"/>
+                                                                        <rect key="frame" x="187" y="0.0" width="163" height="370"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMg-QF-W0f">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="72"/>
@@ -3189,7 +3192,7 @@ App們將會開始抖動。</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-aN-h6g">
-                                                                                <rect key="frame" x="0.0" y="286" width="163" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="330" width="163" height="40"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每月 $ 120" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-hK-P3A">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="163" height="20"/>
@@ -3231,7 +3234,7 @@ App們將會開始抖動。</string>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v73-NA-VxR">
-                                                <rect key="frame" x="0.0" y="570" width="414" height="168"/>
+                                                <rect key="frame" x="0.0" y="614" width="414" height="168"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCb-Pz-HCo">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -3563,7 +3566,7 @@ App們將會開始抖動。</string>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldU-Gp-Min">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="60" width="414" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STS-l9-X6E">
                                         <rect key="frame" x="16" y="5" width="34" height="34"/>
@@ -3588,11 +3591,11 @@ App們將會開始抖動。</string>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FDz-58-1yP"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FDz-58-1yP" firstAttribute="trailing" secondItem="WZH-qh-dIm" secondAttribute="trailing" id="Fgf-hN-lGH"/>
                             <constraint firstItem="WZH-qh-dIm" firstAttribute="top" secondItem="FDz-58-1yP" secondAttribute="top" id="PAj-9W-cFv"/>
-                            <constraint firstItem="ldU-Gp-Min" firstAttribute="top" secondItem="FDz-58-1yP" secondAttribute="top" id="QHV-St-Pwx"/>
+                            <constraint firstItem="ldU-Gp-Min" firstAttribute="top" secondItem="FDz-58-1yP" secondAttribute="top" constant="16" id="QHV-St-Pwx"/>
                             <constraint firstItem="ldU-Gp-Min" firstAttribute="leading" secondItem="FDz-58-1yP" secondAttribute="leading" id="UYS-73-D4k"/>
                             <constraint firstItem="FDz-58-1yP" firstAttribute="bottom" secondItem="WZH-qh-dIm" secondAttribute="bottom" id="lKP-gc-cul"/>
                             <constraint firstItem="ldU-Gp-Min" firstAttribute="trailing" secondItem="FDz-58-1yP" secondAttribute="trailing" id="nbi-YY-IpB"/>
@@ -3679,6 +3682,9 @@ App們將會開始抖動。</string>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
                                         <color key="value" red="0.24313725490196078" green="0.24313725490196078" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -4276,8 +4282,8 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jnJ-JQ-whF"/>
-        <segue reference="oS8-Nr-0LU"/>
+        <segue reference="2Md-sC-qsK"/>
+        <segue reference="csP-yn-kmL"/>
         <segue reference="OPy-tA-N0Q"/>
         <segue reference="hS7-Sl-5ah"/>
         <segue reference="gb2-6r-Z9B"/>
@@ -4309,9 +4315,6 @@ App們將會開始抖動。</string>
         <image name="share_frame" width="2343" height="2343"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
