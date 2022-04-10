@@ -30,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // see notes below for the meaning of Atomic / Non-Atomic
             SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+                
+                print("checking if user is a paid user...")
+                
                 for purchase in purchases {
                     switch purchase.transaction.transactionState {
                     case .purchased, .restored:
@@ -45,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     case .failed, .purchasing, .deferred:
                         print("no purchase")
                         global_paid_user = false
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(false, forKey: "isPaidUser")
                         break // do nothing
                     }
                 }
@@ -66,6 +70,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: "c180acfb02ff4e39a006b23d901a315c")
         SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
+            
+            print("validate purchase")
+            
             switch result {
             case .success(let receipt):
                 let productId = "monthly_purchase"
@@ -74,6 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     ofType: .autoRenewable, // or .nonRenewing (see below)
                     productId: productId,
                     inReceipt: receipt)
+                
+                print("results is \(purchaseResult)")
                     
                 switch purchaseResult {
                 case .purchased(let expiryDate, let items):

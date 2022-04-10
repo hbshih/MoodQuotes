@@ -34,7 +34,20 @@ struct SmallWidget_PlantProvider: TimelineProvider {
         var refreshDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
         var quoteInfo: [Quote]?
         
-        if SyncAppQuotes().checkIfUpdate_widget()
+        print("keep local data")
+        let Q: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Quote") ?? "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星"
+        let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author") ?? "小王子"
+        
+        var FlowerImage: UIImage = UIImage(named: "flower_10_babys breath_滿天星")!
+        var FlowerName: String
+        
+        FlowerImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "flower_10_babys breath_滿天星")!
+        FlowerName = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName") ?? "滿天星"
+        let entry = SmallWidget_PlantEntry(date: Date(), quote: Quote(quote: Q, author: A), flowerImage: FlowerImage, flowerName: FlowerName)
+        let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+        completion(timeline)
+        
+      /*  if SyncAppQuotes().checkIfUpdate_widget()
         {
          print("update widget")
             
@@ -84,7 +97,7 @@ struct SmallWidget_PlantProvider: TimelineProvider {
             let entry = SmallWidget_PlantEntry(date: Date(), quote: Quote(quote: Q, author: A), flowerImage: FlowerImage, flowerName: FlowerName)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
             completion(timeline)
-        }
+        }*/
         
         
     }

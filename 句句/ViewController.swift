@@ -244,11 +244,16 @@ class ViewController: UIViewController, MessagingDelegate {
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
             let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "flower_10_babys breath_滿天星") as! UIImage
             let FlowerName: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName") ?? "滿天星"
+            let FlowerMeaningString: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerMeaning") ?? "滿天星"
+            
+            print("flower meaning \(FlowerMeaningString)")
+        
             DispatchQueue.main.async { [self] in
                 self.frontQuote.text = Q
                 self.authorName.text = A
                 self.ImageOfFlower.setImage(FlowerImage)
                 self.nameOfFlower.text = FlowerName
+                self.flowerMeaning.text = FlowerMeaningString
                 
              //   self.hiddenQuote.text = Q
              //   self.hiddenAuthorName.text = A
@@ -301,6 +306,8 @@ class ViewController: UIViewController, MessagingDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         prepareView()
+        loadNewQuotes()
+            //downloadFlowerImage()
     }
     
     
@@ -347,6 +354,7 @@ class ViewController: UIViewController, MessagingDelegate {
         // user open app count
         if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
         {
+    
             if counter != nil
             {
                 //old user
@@ -454,6 +462,8 @@ class ViewController: UIViewController, MessagingDelegate {
         
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+        
+        
     }
     
     
@@ -530,6 +540,7 @@ class ViewController: UIViewController, MessagingDelegate {
                         {
                             flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
                             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(meaning, forKey: "FlowerMeaning")
                             //更新Widget
                             if #available(iOS 14.0, *) {
                                 WidgetCenter.shared.reloadAllTimelines()
@@ -641,7 +652,7 @@ class ViewController: UIViewController, MessagingDelegate {
         
         todayDateLabel.text = Date().getDateDayOnly
         twDayLabel.text = Date().getTWday
-        dateLabel.text = Date().getLunarDate
+        dateLabel.text = Date().getTodayDate
     }
     
     

@@ -9,10 +9,13 @@ import UIKit
 import SwiftUI
 import StoreKit
 import SwiftyStoreKit
+import FirebaseStorage
+import WidgetKit
 
 class PurchaseViewController: UIViewController {
 
     @IBOutlet weak var purchasePageTitle: UILabel!
+    @IBOutlet weak var flowerImage: UIImageView!
     @IBOutlet weak var purchasePageDescription: UILabel!
     
     var purchaseTitle = ""
@@ -49,8 +52,56 @@ class PurchaseViewController: UIViewController {
                 print("Purchase Success: \(purchase.productId)")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
                 global_paid_user = true
-                
                 alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
+                
+                coloredflowerHandler().getFlowerImageURL { (name, image_url, meaning) in
+                    DispatchQueue.main.async { [self] in
+                        
+                        // Get a reference to the storage service using the default Firebase App
+                        let storage = Storage.storage()
+                        
+                        // Create a storage reference from our storage service
+                        let storageRef = storage.reference()
+                        
+                        print("get url \(image_url)")
+                        // Reference to an image file in Firebase Storage
+                        let reference = storageRef.child("/colored_flowers/\(image_url).png")
+                        
+                        // Placeholder image
+                        let placeholderImage = UIImage(named: "placeholder.jpg")
+                        
+                        
+                        
+                        
+                        // Load the image using SDWebImage
+                        self.flowerImage.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+                            if error != nil
+                            {
+                                print("unable to load new image \(error)")
+                                flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                                //更新Widget
+                                if #available(iOS 14.0, *) {
+                                    WidgetCenter.shared.reloadAllTimelines()
+                                } else {
+                                    // Fallback on earlier versions
+                                }
+                            }else
+                            {
+                                flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(meaning, forKey: "FlowerMeaning")
+                                //更新Widget
+                                if #available(iOS 14.0, *) {
+                                    WidgetCenter.shared.reloadAllTimelines()
+                                } else {
+                                    // Fallback on earlier versions
+                                }
+                            }
+                        }
+                    }
+                }
+                
                 
             case .error(let error):
                 switch error.code {
