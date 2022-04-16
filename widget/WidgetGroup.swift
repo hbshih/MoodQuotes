@@ -13,9 +13,9 @@ import SwiftyStoreKit
 struct WidgetGroup: WidgetBundle {
 
     var body: some Widget {
-          //  SmallWidget_Plant()
+            SmallWidget_Plant()
             SmallWidget_Date()
-       // MediumWidget_Quote_3()
+        MediumWidget_Quote_3()
         LargeWidget_Full()
             WidgetGroup2().body
            // LargeWidget_Full()

@@ -21,28 +21,12 @@ var global_quote: String = ""
 class ViewController: UIViewController, MessagingDelegate {
     
     @IBOutlet weak var moodButton: UIButton!
-    @IBOutlet weak var hiddenQuoteView: UIStackView!
-    @IBOutlet weak var hiddenQuoteViewFlowerImage: UIImageView!
-    @IBOutlet weak var hiddenQuoteViewAuthor: UILabel!
-    @IBOutlet weak var hiddenQuoteViewQuote: UILabel!
-    @IBOutlet weak var hiddenQuoteViewFlower: UILabel!
-    @IBOutlet weak var quoteView: UIView!
     @IBOutlet weak var twDayLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var bookmarkNotification: UILabel!
     @IBOutlet weak var Button_bookmark: UIButton!
-    @IBOutlet weak var quoteAndAuthorStackView: UIStackView!
-    @IBOutlet weak var ratingView: UIStackView!
-    @IBOutlet weak var frontStackView: UIStackView!
     @IBOutlet weak var frontQuote: UILabel!
     @IBOutlet weak var authorName: UILabel!
-    @IBOutlet weak var buttonView: UIView!
-    @IBOutlet weak var hiddenAuthorName: UILabel!
-    @IBOutlet weak var hiddenQuote: UILabel!
     @IBOutlet weak var screenView: UIView!
-    @IBOutlet weak var backgroundHideenView: UIStackView!
-    @IBOutlet weak var hiddenQuoteAdder: UILabel!
-    @IBOutlet weak var stack_action_controller: UIStackView!
     @IBOutlet weak var trial_Button: UIView!
     @IBOutlet weak var flowerMeaning: UILabel!
     @IBOutlet weak var onboardingTouchIcon: UIImageView!
@@ -154,36 +138,6 @@ class ViewController: UIViewController, MessagingDelegate {
         
     }
     
-    @IBAction func like_tapped(_ sender: Any) {
-        Analytics.logEvent("like", parameters: ["author": author])
-        
-        if var liked_array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "Liked_Array") as? [String]
-        {
-            let today_quote = "\(self.quote),\(self.author)"
-            liked_array.append(today_quote)
-            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(liked_array, forKey: "Liked_Array")
-        }else
-        {
-            let today_quote = "\(self.quote),\(self.author)"
-            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(today_quote, forKey: "Liked_Array")
-        }
-        hideRatingView()
-    }
-    @IBAction func dislike_tapped(_ sender: Any) {
-        Analytics.logEvent("dislike", parameters: ["author": author])
-        hideRatingView()
-    }
-    
-    func hideRatingView()
-    {
-        //hide
-        ratingView.isHidden = true
-    }
-    
-    func showRatingview()
-    {
-        ratingView.isHidden = false
-    }
     
     @objc func loadNewQuotes() {
         print("enter foreground now")
@@ -252,6 +206,8 @@ class ViewController: UIViewController, MessagingDelegate {
                 self.frontQuote.text = Q
                 self.authorName.text = A
                 self.ImageOfFlower.setImage(FlowerImage)
+                self.imageOfColorFlower.setImage(FlowerImage)
+                self.nameOfColorImage.text = FlowerName
                 self.nameOfFlower.text = FlowerName
                 self.flowerMeaning.text = FlowerMeaningString
                 
@@ -271,6 +227,7 @@ class ViewController: UIViewController, MessagingDelegate {
     }
     
     @IBOutlet weak var ImageOfFlower: UIImageView!
+    @IBOutlet weak var imageOfColorFlower: UIImageView!
     var defaultQuote = "正在載入中"
     var defaultAuthor = "正在載入中"
     var defaultFlowerImage = UIImage(named: "noun_seeds_184642")
@@ -313,25 +270,8 @@ class ViewController: UIViewController, MessagingDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
-        
-       // prepareView()
-        
-        //alertViewHandler().control()
-        
-    //    self.bookmarkNotification.alpha = 0
-    //    self.bookmarkNotification.text = "語錄已儲存！"
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(homepageRefresh), name: NSNotification.Name(rawValue:  "forceToLoadHomescreen"), object: nil)
 
-        
-        
-        if let arr = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
-        {
-            print("saved quotes")
-            print(arr)
-        }
-        
+        // load moodList
         if var moodList = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.dictionary(forKey: "moodList")
         {
             if let today_mood = moodList[Date().getFormattedDate] as? String
@@ -341,16 +281,13 @@ class ViewController: UIViewController, MessagingDelegate {
                 moodButton.setImage(UIImage(named: today_mood), for: .normal)
                 self.moodButtonHolderView_text.isHidden = true
                 self.moodButtonHolderView.isHidden = false
-                //self.moodButtonHolderView
-           //     self.moodButtonHolderView.frame.size.width = 40
             }else
             {
                 self.moodButtonHolderView_text.isHidden = false
                 self.moodButtonHolderView.isHidden = true
-                //self.moodButtonHolderView.layer.borderWidth = 0
             }
         }
-        //  print(flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults))
+        
         
         // user open app count
         if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
@@ -401,21 +338,13 @@ class ViewController: UIViewController, MessagingDelegate {
                 alertViewHandler().control(title: "新版 App", body: "發佈", iconText: "😎")
                 //UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "ShowNewUIUpdate_Ver6.0")
             }
-            
-            
-            
         } else
         {
             // New User
             self.onboardingTouchIcon.alpha = 0.0
             Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)
         }
-        
-        if var author = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
-        {
-            print("author \(author)")
-        }
-        
+
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.didBecomeActiveNotification, object: nil)
@@ -433,23 +362,30 @@ class ViewController: UIViewController, MessagingDelegate {
         
         //UI
         var font = Display_Font(font_size: 18).getUIFont()
-   //     hiddenQuote.font = font
-     //   hiddenQuoteAdder.font = font
         frontQuote.font = font
         nameOfFlower.font = font
         font = Display_Font(font_size: 16).getUIFont()
         authorName.font = font
-        
         font = Display_Font(font_size: 12).getUIFont()
         flowerMeaning.font = font
-    //    hiddenAuthorName.font = font
-        // ref = Database.database().reference()
         
-        //todayDateLabel.text = Date().getTodayDate
+        if global_paid_user
+        {
+            imageOfColorFlower.setImage(defaultFlowerImage!)
+            nameOfColorImage.text = defaultFlowerImageName
+            coloredFlowerSectionView.isHidden = false
+            blackwhiteFlowerSectionView.isHidden = true
+        }else
+        {
+            ImageOfFlower.setImage(defaultFlowerImage!)
+            nameOfFlower.text = defaultFlowerImageName
+            coloredFlowerSectionView.isHidden = true
+            blackwhiteFlowerSectionView.isHidden = false
+        }
+        
+        
         frontQuote.text = defaultQuote
         authorName.text = defaultAuthor
-        ImageOfFlower.setImage(defaultFlowerImage!)
-        nameOfFlower.text = defaultFlowerImageName
         
         
         
@@ -457,26 +393,9 @@ class ViewController: UIViewController, MessagingDelegate {
         {
             onboardingTouchIcon.image = UIImage(named: "icon_touch_tutorial")
         }
-        /*
-         rubyLabel.text = "｜成功《せいこう》するかどうかは、きみの｜努力《どりょく》に｜係《かか》る。｜人々《ひとびと》の｜生死《せいし》に｜係《かか》る。"  //2
-         //3
-         rubyLabel.textAlignment = .left
-         rubyLabel.font = .systemFont(ofSize: 20.0)
-         rubyLabel.orientation = .horizontal
-         rubyLabel.lineBreakMode = .byCharWrapping
-         
-         frontQuote.textAlignment = .left
-         frontQuote.lineBreakMode = .byCharWrapping
-         */
-        /*    DispatchQueue.main.async {
-         self.loadNewQuotes()
-         }*/
-        //  loadNewQuotes()
         
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
-        
-        
     }
     
     
@@ -513,6 +432,7 @@ class ViewController: UIViewController, MessagingDelegate {
     
     var quote: String = "今日App心情都太差了，沒有任何更新"
     @IBOutlet weak var nameOfFlower: UILabel!
+    @IBOutlet weak var nameOfColorImage: UILabel!
     var author: String = "— 斌"
 
     func downloadFlowerImage()
@@ -537,7 +457,7 @@ class ViewController: UIViewController, MessagingDelegate {
                     
                     
                     // Load the image using SDWebImage
-                    self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+                    self.imageOfColorFlower.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
                         if error != nil
                         {
                             print("unable to load new image \(error)")
@@ -643,6 +563,7 @@ class ViewController: UIViewController, MessagingDelegate {
         {
             coloredFlowerSectionView.isHidden = true
             blackwhiteFlowerSectionView.isHidden = false
+            trial_Button.isHidden = false
         }else
         {
             coloredFlowerSectionView.isHidden = false

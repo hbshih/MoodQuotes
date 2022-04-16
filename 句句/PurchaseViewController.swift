@@ -47,63 +47,19 @@ class PurchaseViewController: UIViewController {
     func showiAPScreen()
     {
         SwiftyStoreKit.purchaseProduct("monthly_purchase", quantity: 1, atomically: true) { result in
+            print("purchase results \(result)")
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
                 global_paid_user = true
-                alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
-                
-                coloredflowerHandler().getFlowerImageURL { (name, image_url, meaning) in
-                    DispatchQueue.main.async { [self] in
-                        
-                        // Get a reference to the storage service using the default Firebase App
-                        let storage = Storage.storage()
-                        
-                        // Create a storage reference from our storage service
-                        let storageRef = storage.reference()
-                        
-                        print("get url \(image_url)")
-                        // Reference to an image file in Firebase Storage
-                        let reference = storageRef.child("/colored_flowers/\(image_url).png")
-                        
-                        // Placeholder image
-                        let placeholderImage = UIImage(named: "placeholder.jpg")
-                        
-                        
-                        
-                        
-                        // Load the image using SDWebImage
-                        self.flowerImage.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
-                            if error != nil
-                            {
-                                print("unable to load new image \(error)")
-                                flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
-                                //更新Widget
-                                if #available(iOS 14.0, *) {
-                                    WidgetCenter.shared.reloadAllTimelines()
-                                } else {
-                                    // Fallback on earlier versions
-                                }
-                            }else
-                            {
-                                flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
-                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(meaning, forKey: "FlowerMeaning")
-                                //更新Widget
-                                if #available(iOS 14.0, *) {
-                                    WidgetCenter.shared.reloadAllTimelines()
-                                } else {
-                                    // Fallback on earlier versions
-                                }
-                            }
-                        }
-                    }
-                }
-                
+                self.getColorImageHandler()
+                self.dismiss(animated: true)
                 
             case .error(let error):
+                
+                alertViewHandler().control(title: "發生錯誤", body: "\((error as NSError).localizedDescription)", iconText: "😅")
+                
                 switch error.code {
                 case .unknown: print("Unknown error. Please contact support")
                 case .clientInvalid: print("Not allowed to make the payment")
@@ -117,10 +73,68 @@ class PurchaseViewController: UIViewController {
                 default: print((error as NSError).localizedDescription)
                 }
             case .deferred(purchase: let purchase):
+                                            alertViewHandler().control(title: "發生錯誤", body: "發生錯誤", iconText: "😅")
                 print("Unknown error. Please contact support")
             }
         }
     }
+    
+    func getColorImageHandler()
+    {
+        coloredflowerHandler().getFlowerImageURL { (name, image_url, meaning) in
+            DispatchQueue.main.async { [self] in
+                
+                // Get a reference to the storage service using the default Firebase App
+                let storage = Storage.storage()
+                
+                // Create a storage reference from our storage service
+                let storageRef = storage.reference()
+                
+                print("get url \(image_url)")
+                // Reference to an image file in Firebase Storage
+                let reference = storageRef.child("/colored_flowers/\(image_url).png")
+                
+                // Placeholder image
+                let placeholderImage = UIImage(named: "placeholder.jpg")
+                
+                
+                
+                
+                // Load the image using SDWebImage
+                self.flowerImage.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+                    if error != nil
+                    {
+                        print("unable to load new image \(error)")
+                        flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                        //更新Widget
+                        if #available(iOS 14.0, *) {
+                            WidgetCenter.shared.reloadAllTimelines()
+                        } else {
+                            // Fallback on earlier versions
+                        }
+                    }else
+                    {
+                        
+                        print("Paid Plan updated - Get Color Image")
+                        
+                        flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(meaning, forKey: "FlowerMeaning")
+                        //更新Widget
+                        if #available(iOS 14.0, *) {
+                            WidgetCenter.shared.reloadAllTimelines()
+                        } else {
+                            // Fallback on earlier versions
+                        }
+                    }
+                }
+                
+                alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
+            }
+        }
+    }
+    
     @IBAction func dismissTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }
