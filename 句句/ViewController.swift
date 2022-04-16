@@ -313,6 +313,7 @@ class ViewController: UIViewController, MessagingDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         
         
        // prepareView()
         
@@ -391,6 +392,18 @@ class ViewController: UIViewController, MessagingDelegate {
             self.onboardingTouchIcon.alpha = 0.0
             self.onboardingTouchIcon.isHidden = true
             // Existing User
+            
+            if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "ShowNewUIUpdate_Ver6.0") != nil
+            {
+                
+            }else
+            {
+                alertViewHandler().control(title: "新版 App", body: "發佈", iconText: "😎")
+                //UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "ShowNewUIUpdate_Ver6.0")
+            }
+            
+            
+            
         } else
         {
             // New User
