@@ -18,7 +18,7 @@ struct Quote
 
 struct Display_Font
 {
-    let selected_font = "QIJIC"
+    let selected_font = "I.PenCrane-B"
     let font_size: Int
     
     func getUIFont() -> UIFont

@@ -112,6 +112,7 @@
 		B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */; };
 		B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */; };
 		B5C321D92629685D00CB530C /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C321D82629685D00CB530C /* TutorialViewController.swift */; };
+		B5D04910280C3F9B00E6B0C9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */; };
 		B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
 		B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
 		B5D6071E27FF2BBD008B19D9 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */; };
@@ -273,6 +274,7 @@
 		B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_2ViewController.swift; sourceTree = "<group>"; };
 		B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_3ViewController.swift; sourceTree = "<group>"; };
 		B5C321D82629685D00CB530C /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B5D3845C256BED8100B1A507 /* qiji-combo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "qiji-combo.ttf"; sourceTree = "<group>"; };
 		B5D6072227FF315C008B19D9 /* WidgetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGroup.swift; sourceTree = "<group>"; };
 		B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Plant.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				B547A83525870AE300938A09 /* CoreGraphics.framework in Frameworks */,
 				B5D6072127FF2C5E008B19D9 /* JuiceUI in Frameworks */,
 				B547A82F25870ADC00938A09 /* Security.framework in Frameworks */,
+				B5D04910280C3F9B00E6B0C9 /* StoreKit.framework in Frameworks */,
 				B547A82D25870AD100938A09 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +346,7 @@
 		37481A9DF41FAD063C5AF12C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */,
 				B547A84225870B1100938A09 /* libz.tbd */,
 				B547A84025870B0A00938A09 /* WebKit.framework */,
 				B547A83E25870B0400938A09 /* SystemConfiguration.framework */,

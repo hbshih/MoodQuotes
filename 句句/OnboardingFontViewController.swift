@@ -48,11 +48,11 @@ class OnboardingFontViewController: UIViewController {
         exampleLabel.font = sender.titleLabel?.font
         switch sender.tag {
         case 1:
-            selectedFont = "I.Ngaan"
+            selectedFont = "I.PenCrane-B"
         case 2:
             selectedFont = "JasonHandwriting5"
         case 3:
-            selectedFont = "I.PenCrane-B"
+            selectedFont = "I.Ngaan"
         case 4:
             selectedFont = "QIJIC"
         case 5:
@@ -64,7 +64,7 @@ class OnboardingFontViewController: UIViewController {
     
     func checkIfPayFont() -> Bool
     {
-        if selectedFont == "jf-openhuninn-1.1" || selectedFont == "I.Ngaan"
+        if selectedFont == "jf-openhuninn-1.1" || selectedFont == "I.PenCrane-B"
         {
             return false
         }else

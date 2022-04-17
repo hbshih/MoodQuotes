@@ -335,8 +335,8 @@ class ViewController: UIViewController, MessagingDelegate {
                 
             }else
             {
-                alertViewHandler().control(title: "新版 App", body: "發佈", iconText: "😎")
-                //UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "ShowNewUIUpdate_Ver6.0")
+                alertViewHandler().control(title: "歡迎使用全新介面", body: "新版介面除了讓介面更為簡潔，也增加了心情紀錄、更多字體和背景、以及付費版功能，讓你在欣賞語錄的當下可以獲得更多小知識。", iconText: "😎")
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "ShowNewUIUpdate_Ver6.0")
             }
         } else
         {
