@@ -134,11 +134,18 @@ struct MediumWidget_QuoteEntryView : View {
           HStack{
               VStack{
                   VStack{
-                      Image(uiImage: flowerImage).resizable().frame(width: 60, height: 60, alignment: .center)
+                      Image(uiImage: flowerImage)
+                          .resizable()
+                          .aspectRatio(contentMode: .fit)
+                          .frame(width: 60, height: 60)
+                          .clipped()
+                      .frame(width: 60, height: 60)
                       Text(flowerName).font(Display_Font(font_size: Int(12)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
                       Text(date.getTodayDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
                   }
               }
+              
+              
               
               VStack{
                   VStack{

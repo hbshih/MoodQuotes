@@ -142,7 +142,15 @@ struct SmallWidget_PlantEntryView : View {
           }
           // Widget Background Image
         //  Image(uiImage: #imageLiteral(resourceName: "Webp.net-compress-image-removebg-preview.png"))
-          Image(uiImage: flowerImage).resizable().frame(width: 128, height: 128, alignment: .center)
+          
+          Image(uiImage: flowerImage)
+              .resizable()
+              .aspectRatio(contentMode: .fit)
+              .frame(width: 128, height: 128)
+              .clipped()
+          .frame(width: 128, height: 128)
+          
+          //Image(uiImage: flowerImage).resizable().frame(width: 128, height: 128, alignment: .center).aspectRatio(contentMode: .fit)
 
       }
       .padding(.vertical, 2.5).padding(.horizontal, 16)

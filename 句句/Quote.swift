@@ -44,9 +44,26 @@ struct Display_Font
     
     func getFont() -> Font
     {
-        return Font.custom(selected_font, size: CGFloat(font_size))
+       // return Font.custom(selected_font, size: CGFloat(font_size))
             
-          //  Font(Font.custom(selected_font, size: CGFloat(font_size)))
+        // if let array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+         
+         UIFont.familyNames.forEach({ familyName in
+             let fontNames = UIFont.fontNames(forFamilyName: familyName)
+             print(familyName, fontNames)
+         })
+         
+         if let font = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "userFont")
+         {
+             print("current font \(font)")
+             return Font.custom(font, size: CGFloat(font_size))
+             //UIFont(name: font, size: CGFloat(font_size)) ?? UIFont(name: selected_font, size: CGFloat(font_size))!
+         }
+        // return UIFont.systemFont(ofSize: 30)
+      //   return UIFont.systemFont(ofSize: 30)
+             
+            return Font.custom(selected_font, size: CGFloat(font_size))
+             //UIFont(name: sys, size: CGFloat(font_size))!
     }
 }
 

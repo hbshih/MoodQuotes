@@ -138,7 +138,7 @@ struct LargeWidget_FullEntryView : View {
                       {
                           Text(date.getDateDayOnly).font(Display_Font(font_size: Int(24)).getFont()).fontWeight(.light).multilineTextAlignment(.leading
                           ).foregroundColor(.gray)
-                          VStack
+                          VStack(alignment: .leading)
                           {
                               Text(date.getFormattedDate).font(Display_Font(font_size: Int(14)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
                               Text(date.getTWday).font(Display_Font(font_size: Int(14)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
