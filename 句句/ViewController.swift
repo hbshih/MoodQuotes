@@ -616,26 +616,25 @@ class ViewController: UIViewController, MessagingDelegate {
         let buttonTwo = DefaultButton(title: "儲存", height: 60) {
             
             
-            self.moodButtonHolderView_text.isHidden = true
-            self.moodButtonHolderView.isHidden = false
-            
-            let mood = ratingVC.mood
-            self.moodButton.imageView?.contentMode = .scaleAspectFit
-            self.moodButton.setImage(UIImage(named: mood), for: .normal)
-           // self.moodButton.layer.wid
-            self.moodButton.setTitle("", for: .normal)
-            self.moodButtonHolderView.frame.size.width = 40
-           // self.moodButton.layer.borderWidth = 0
-            
-            let array = [Date().getFormattedDate:mood]
-            
             if var moodList = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.dictionary(forKey: "moodList")
             {
                 if moodList.count >= 7 && !global_paid_user
                 {
-                    alertViewHandler().control(title: "需要付費升級", body: "升級", iconText: "🐶")
+                    
+                    
+                    alertViewHandler().control(title: "升級完整版繼續紀錄心情", body: "免費版目前只能紀錄七天的心情，若想要繼續紀錄請升級完整版", iconText: "🎁")
                 }else
                 {
+                    self.moodButtonHolderView_text.isHidden = true
+                    self.moodButtonHolderView.isHidden = false
+                    
+                    let mood = ratingVC.mood
+                    self.moodButton.imageView?.contentMode = .scaleAspectFit
+                    self.moodButton.setImage(UIImage(named: mood), for: .normal)
+                   // self.moodButton.layer.wid
+                    self.moodButton.setTitle("", for: .normal)
+                    self.moodButtonHolderView.frame.size.width = 40
+                    let array = [Date().getFormattedDate:mood]
                 if moodList.isEmpty || moodList.count < 1
                 {
                     // default
@@ -648,16 +647,22 @@ class ViewController: UIViewController, MessagingDelegate {
                 }
             }else
             {
+                self.moodButtonHolderView_text.isHidden = true
+                self.moodButtonHolderView.isHidden = false
+                
+                let mood = ratingVC.mood
+                self.moodButton.imageView?.contentMode = .scaleAspectFit
+                self.moodButton.setImage(UIImage(named: mood), for: .normal)
+               // self.moodButton.layer.wid
+                self.moodButton.setTitle("", for: .normal)
+                self.moodButtonHolderView.frame.size.width = 40
+                let array = [Date().getFormattedDate:mood]
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(array, forKey: "moodList")
             }
         }
         
         buttonTwo.backgroundColor = .systemGray6
         buttonTwo.titleColor = .systemGray
-     //   buttonTwo.titleLabel.
-        
-        
-        
         popup.addButtons([buttonTwo])
         
         UIApplication.topViewController()?.present(popup, animated: true, completion: nil)
