@@ -151,7 +151,7 @@ struct LargeWidget_FullEntryView : View {
                   
               }
               
-              Text(quote.quote).font(Display_Font(font_size: Int(24)).getFont()).fontWeight(.light).multilineTextAlignment(.leading).foregroundColor(.gray)
+              Text(quote.quote).font(Display_Font(font_size: Int(20)).getFont()).fontWeight(.light).multilineTextAlignment(.leading).foregroundColor(.gray)
               
               Text(quote.author).font(Display_Font(font_size: Int(14)).getFont()).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
               
