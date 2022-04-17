@@ -482,7 +482,8 @@ class ViewController: UIViewController, MessagingDelegate {
                             }
                         }
                     }
-                    self.nameOfFlower.text = name
+                    //self.nameOfFlower.text = name
+                    self.nameOfColorImage.text = name
                     self.flowerMeaning.text = meaning
                 }
             }
@@ -532,6 +533,7 @@ class ViewController: UIViewController, MessagingDelegate {
                     }
                 }
                 self.nameOfFlower.text = name
+              //  self.nameOfColorImage.text = name
                 self.flowerMeaning.isHidden = true
             }
         }
