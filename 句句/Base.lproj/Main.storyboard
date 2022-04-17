@@ -3168,16 +3168,27 @@ App們將會開始抖動。</string>
                                                                         <rect key="frame" x="187" y="0.0" width="163" height="326"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMg-QF-W0f">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="163" height="72"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="163" height="144"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment>
                                                                                         <string key="content">完整版包含：
-無限紀錄心情
-彩色植物和花語</string>
+每日花語
+三種新字體
+五種新背景顏色
+</string>
                                                                                         <attributes>
                                                                                             <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <font key="NSFont" size="16" name="jf-openhuninn-1.1"/>
                                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                                                        </attributes>
+                                                                                    </fragment>
+                                                                                    <fragment>
+                                                                                        <string key="content">無限紀錄每日心情
+每日彩色手繪植物</string>
+                                                                                        <attributes>
+                                                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <font key="NSFont" size="16" name="jf-openhuninn-1.1"/>
+                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                                         </attributes>
                                                                                     </fragment>
                                                                                 </attributedString>
@@ -3186,10 +3197,17 @@ App們將會開始抖動。</string>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-aN-h6g">
                                                                                 <rect key="frame" x="0.0" y="286" width="163" height="40"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每月 $ 120" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-hK-P3A">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-hK-P3A">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="163" height="20"/>
-                                                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
-                                                                                        <color key="textColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        <attributedString key="attributedText">
+                                                                                            <fragment content="限時優惠中，每月 $ 120">
+                                                                                                <attributes>
+                                                                                                    <color key="NSColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                    <font key="NSFont" size="12" name="jf-openhuninn-1.1"/>
+                                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                                </attributes>
+                                                                                            </fragment>
+                                                                                        </attributedString>
                                                                                         <color key="highlightedColor" white="0.78000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="免費試用 30 天" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-qf-MLG">
