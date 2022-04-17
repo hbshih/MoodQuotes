@@ -124,7 +124,7 @@ class NewSettingViewController: UIViewController {
         
     }
     @IBAction func dismissTapped(_ sender: Any) {
-        NotificationCenter.default.post(name: Notification.Name("homepageRefresh"), object: nil)
+        //NotificationCenter.default.post(name: Notification.Name("homepageRefresh"), object: nil)
         self.dismiss(animated: true)
     }
     @IBAction func adjustBackgroundColor(_ sender: Any) {

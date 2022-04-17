@@ -49,8 +49,6 @@
 		B5517CB5255FB73400E134CC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5517CB4255FB73400E134CC /* SettingViewController.swift */; };
 		B552F4DF256D0449001013BA /* SyncAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552F4DE256D0449001013BA /* SyncAppWidget.swift */; };
 		B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552F4DE256D0449001013BA /* SyncAppWidget.swift */; };
-		B5582D3F27A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3B27A59A6800D9F0E0 /* 匯文明朝体.otf */; };
-		B5582D4027A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3B27A59A6800D9F0E0 /* 匯文明朝体.otf */; };
 		B5582D4127A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3C27A59A6900D9F0E0 /* Iansui0.92-Regular.ttf */; };
 		B5582D4227A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3C27A59A6900D9F0E0 /* Iansui0.92-Regular.ttf */; };
 		B5582D4327A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5582D3D27A59A6900D9F0E0 /* JasonHandwriting5.ttf */; };
@@ -226,7 +224,6 @@
 		B5517C98255FAFC600E134CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5517CB4255FB73400E134CC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B552F4DE256D0449001013BA /* SyncAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAppWidget.swift; sourceTree = "<group>"; };
-		B5582D3B27A59A6800D9F0E0 /* 匯文明朝体.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "匯文明朝体.otf"; sourceTree = "<group>"; };
 		B5582D3C27A59A6900D9F0E0 /* Iansui0.92-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Iansui0.92-Regular.ttf"; sourceTree = "<group>"; };
 		B5582D3D27A59A6900D9F0E0 /* JasonHandwriting5.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JasonHandwriting5.ttf; sourceTree = "<group>"; };
 		B5582D3E27A59A6A00D9F0E0 /* GenRyuMin-M.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenRyuMin-M.ttc"; sourceTree = "<group>"; };
@@ -422,7 +419,6 @@
 				B5582D3C27A59A6900D9F0E0 /* Iansui0.92-Regular.ttf */,
 				B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */,
 				B5582D3D27A59A6900D9F0E0 /* JasonHandwriting5.ttf */,
-				B5582D3B27A59A6800D9F0E0 /* 匯文明朝体.otf */,
 				B5D3845C256BED8100B1A507 /* qiji-combo.ttf */,
 				B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
@@ -662,7 +658,6 @@
 				B594C1A927EC5665009895D7 /* Vernonia amygdalina.png in Resources */,
 				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
 				B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
-				B5582D3F27A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
 				B563EB9A27F3FFA0003D0DD9 /* UpdateFontViewController.xib in Resources */,
 				B5582D7227A59FFD00D9F0E0 /* UpdateFontTableViewCell.xib in Resources */,
 				B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */,
@@ -699,7 +694,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5582D4027A59A6A00D9F0E0 /* 匯文明朝体.otf in Resources */,
 				B563EB9F27F3FFA5003D0DD9 /* UpdateFontViewController.xib in Resources */,
 				B594C1AA27EC5665009895D7 /* Vernonia amygdalina.png in Resources */,
 				B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,

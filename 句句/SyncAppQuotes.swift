@@ -49,7 +49,7 @@ struct SyncAppQuotes {
             }
         }else
         {
-            return true
+            return false
         }
     }
     

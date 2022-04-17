@@ -586,6 +586,14 @@ class ViewController: UIViewController, MessagingDelegate {
         }
         
         
+        var font = Display_Font(font_size: 18).getUIFont()
+        frontQuote.font = font
+        nameOfFlower.font = font
+        font = Display_Font(font_size: 16).getUIFont()
+        authorName.font = font
+        font = Display_Font(font_size: 12).getUIFont()
+        flowerMeaning.font = font
+        
         todayDateLabel.text = Date().getDateDayOnly
         twDayLabel.text = Date().getTWday
         dateLabel.text = Date().getTodayDate
@@ -622,8 +630,6 @@ class ViewController: UIViewController, MessagingDelegate {
             {
                 if moodList.count >= 7 && !global_paid_user
                 {
-                    
-                    
                     alertViewHandler().control(title: "升級完整版繼續紀錄心情", body: "免費版目前只能紀錄七天的心情，若想要繼續紀錄請升級完整版", iconText: "🎁")
                 }else
                 {
@@ -673,14 +679,6 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewDidAppear(_ animated: Bool) {
         
         checkIfBookmarked()
-        
-        DispatchQueue.main.async {
-            self.loadNewQuotes()
-            
-            
-
-            
-        }
         
         /* Comment for now --- 4/17/2021
          //If no quote saved in local & time now >= update time
