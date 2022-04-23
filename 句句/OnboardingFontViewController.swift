@@ -54,7 +54,7 @@ class OnboardingFontViewController: UIViewController {
         case 3:
             selectedFont = "I.Ngaan"
         case 4:
-            selectedFont = "QIJIC"
+            selectedFont = "GenRyuMin-M"
         case 5:
             selectedFont = "jf-openhuninn-1.1"
         default:

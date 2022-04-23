@@ -53,7 +53,6 @@
 	<string>我們需要權限才能推薦給您適合您的句子</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>qiji-combo.ttf</string>
 		<string>I.Ngaan.ttf</string>
 		<string>I-PenCrane-B-2.ttf</string>
 		<string>JasonHandwriting5.ttf</string>

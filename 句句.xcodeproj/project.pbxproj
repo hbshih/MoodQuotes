@@ -110,8 +110,6 @@
 		B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */; };
 		B5C321D92629685D00CB530C /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C321D82629685D00CB530C /* TutorialViewController.swift */; };
 		B5D04910280C3F9B00E6B0C9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */; };
-		B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
-		B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5D3845C256BED8100B1A507 /* qiji-combo.ttf */; };
 		B5D6071E27FF2BBD008B19D9 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */; };
 		B5D6072127FF2C5E008B19D9 /* JuiceUI in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6072027FF2C5E008B19D9 /* JuiceUI */; };
 		B5D6072427FF315D008B19D9 /* WidgetGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6072227FF315C008B19D9 /* WidgetGroup.swift */; };
@@ -271,7 +269,6 @@
 		B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_3ViewController.swift; sourceTree = "<group>"; };
 		B5C321D82629685D00CB530C /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		B5D3845C256BED8100B1A507 /* qiji-combo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "qiji-combo.ttf"; sourceTree = "<group>"; };
 		B5D6072227FF315C008B19D9 /* WidgetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGroup.swift; sourceTree = "<group>"; };
 		B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Plant.swift; sourceTree = "<group>"; };
 		B5D6072927FFB7EE008B19D9 /* SmallWidget_Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Date.swift; sourceTree = "<group>"; };
@@ -418,7 +415,6 @@
 				B5582D3C27A59A6900D9F0E0 /* Iansui0.92-Regular.ttf */,
 				B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */,
 				B5582D3D27A59A6900D9F0E0 /* JasonHandwriting5.ttf */,
-				B5D3845C256BED8100B1A507 /* qiji-combo.ttf */,
 				B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */,
 				B59E212D25674D0A003A5521 /* Quote.swift */,
 				B563EB8727F3F31D003D0DD9 /* DIYExampleViewController.swift */,
@@ -662,7 +658,6 @@
 				B5582D4327A59A6A00D9F0E0 /* JasonHandwriting5.ttf in Resources */,
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
 				B503750026331882004E2F86 /* NativeAdView.xib in Resources */,
-				B5D3845D256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B5582D4127A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */,
 				B563EBA927F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */,
 				B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
@@ -694,7 +689,6 @@
 			files = (
 				B563EB9F27F3FFA5003D0DD9 /* UpdateFontViewController.xib in Resources */,
 				B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
-				B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B594C19C27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */,
 				B5582D4227A59A6A00D9F0E0 /* Iansui0.92-Regular.ttf in Resources */,
 				B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,

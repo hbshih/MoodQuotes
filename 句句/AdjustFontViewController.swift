@@ -35,7 +35,7 @@ class AdjustFontViewController: UIViewController {
         case 3:
             selectedFont = "I.PenCrane-B"
         case 4:
-            selectedFont = "QIJIC"
+            selectedFont = "GenRyuMin-M"
         case 5:
             selectedFont = "jf-openhuninn-1.1"
         default:

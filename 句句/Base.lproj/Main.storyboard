@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="GenRyuMin-M.ttc">
+            <string>GenRyuMinTW-M</string>
+        </array>
         <array key="I-PenCrane-B-2.ttf">
             <string>I.PenCrane-B</string>
         </array>
@@ -3077,7 +3080,7 @@ App們將會開始抖動。</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-0P-87E">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-Me-g3r">
                                         <rect key="frame" x="0.0" y="16" width="414" height="44"/>
@@ -3116,7 +3119,7 @@ App們將會開始抖動。</string>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="omB-P9-aEp">
-                                        <rect key="frame" x="0.0" y="60" width="414" height="782"/>
+                                        <rect key="frame" x="0.0" y="60" width="414" height="738"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qfV-lE-Jj8">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
@@ -3150,16 +3153,16 @@ App們將會開始抖動。</string>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Uf4-em-KD0">
-                                                <rect key="frame" x="0.0" y="180" width="414" height="434"/>
+                                                <rect key="frame" x="0.0" y="180" width="414" height="390"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-A3-1jx">
-                                                        <rect key="frame" x="16" y="16" width="382" height="402"/>
+                                                        <rect key="frame" x="16" y="16" width="382" height="358"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QPd-88-czF">
-                                                                <rect key="frame" x="16" y="16" width="350" height="370"/>
+                                                                <rect key="frame" x="16" y="16" width="350" height="326"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 2 - Copy" translatesAutoresizingMaskIntoConstraints="NO" id="mjY-w6-DAv">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="163" height="370"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="163" height="326"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                 <integer key="value" value="10"/>
@@ -3167,7 +3170,7 @@ App們將會開始抖動。</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="OPS-7b-ZXu">
-                                                                        <rect key="frame" x="187" y="0.0" width="163" height="370"/>
+                                                                        <rect key="frame" x="187" y="0.0" width="163" height="326"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMg-QF-W0f">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="144"/>
@@ -3197,7 +3200,7 @@ App們將會開始抖動。</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-aN-h6g">
-                                                                                <rect key="frame" x="0.0" y="330" width="163" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="286" width="163" height="40"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-hK-P3A">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="163" height="20"/>
@@ -3246,7 +3249,7 @@ App們將會開始抖動。</string>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v73-NA-VxR">
-                                                <rect key="frame" x="0.0" y="614" width="414" height="168"/>
+                                                <rect key="frame" x="0.0" y="570" width="414" height="168"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCb-Pz-HCo">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -3473,7 +3476,7 @@ App們將會開始抖動。</string>
                                                                                     </button>
                                                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXA-xb-KXt">
                                                                                         <rect key="frame" x="249.5" y="0.0" width="124.5" height="60"/>
-                                                                                        <fontDescription key="fontDescription" name="QIJIC" family="QIJIC" pointSize="17"/>
+                                                                                        <fontDescription key="fontDescription" name="GenRyuMinTW-M" family="GenRyuMin TW" pointSize="17"/>
                                                                                         <state key="normal" title="安平">
                                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         </state>
@@ -4296,13 +4299,13 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Md-sC-qsK"/>
-        <segue reference="csP-yn-kmL"/>
+        <segue reference="CVp-gb-ugn"/>
         <segue reference="OPy-tA-N0Q"/>
-        <segue reference="hS7-Sl-5ah"/>
+        <segue reference="qNS-Ny-zLV"/>
         <segue reference="gb2-6r-Z9B"/>
         <segue reference="1Gl-uz-PMa"/>
         <segue reference="iiW-8X-Mfm"/>
-        <segue reference="9CO-rk-QmR"/>
+        <segue reference="iy1-p0-sRk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Frame 2 - Copy" width="750" height="1412"/>
