@@ -54,7 +54,11 @@ class PurchaseViewController: UIViewController {
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
                 global_paid_user = true
                 self.getColorImageHandler()
-                self.dismiss(animated: true)
+                
+                //Update Parent VC
+                self.dismiss(animated: true) {
+                    self.presentingViewController?.viewWillAppear(true)
+                }
                 
             case .error(let error):
                 

@@ -73,6 +73,7 @@
 		B563EBA927F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */; };
 		B563EBAA27F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */; };
 		B563EBD027F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */; };
+		B57203462813DAF100857571 /* appVersionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57203452813DAF100857571 /* appVersionNumber.swift */; };
 		B57EA6C427F5356400BAF789 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */; };
 		B5807EFD25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
 		B5807EFE25678043006052E2 /* firebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807EFC25678043006052E2 /* firebaseService.swift */; };
@@ -86,8 +87,6 @@
 		B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */; };
 		B594C19B27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */; };
 		B594C19C27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */; };
-		B594C1A927EC5665009895D7 /* Vernonia amygdalina.png in Resources */ = {isa = PBXBuildFile; fileRef = B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */; };
-		B594C1AA27EC5665009895D7 /* Vernonia amygdalina.png in Resources */ = {isa = PBXBuildFile; fileRef = B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */; };
 		B59C53692622F1C5008BFB0A /* OnboardingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */; };
 		B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205425669862003A5521 /* WidgetKit.framework */; };
 		B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205625669862003A5521 /* SwiftUI.framework */; };
@@ -241,6 +240,7 @@
 		B563EBA527F4017A003D0DD9 /* UpdateMood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateMood.swift; sourceTree = "<group>"; };
 		B563EBA627F4017A003D0DD9 /* UpdateMoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateMoodViewController.xib; sourceTree = "<group>"; };
 		B563EBCF27F42657003D0DD9 /* OnboardingFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFontViewController.swift; sourceTree = "<group>"; };
+		B57203452813DAF100857571 /* appVersionNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appVersionNumber.swift; sourceTree = "<group>"; };
 		B57EA6C327F5356400BAF789 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		B5807EFC25678043006052E2 /* firebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseService.swift; sourceTree = "<group>"; };
 		B58E55332629BD9E009657E0 /* flowerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowerHandler.swift; sourceTree = "<group>"; };
@@ -249,7 +249,6 @@
 		B591B17E2570A0C100C389D9 /* SyncAppQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAppQuotes.swift; sourceTree = "<group>"; };
 		B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleNewUserViewController.swift; sourceTree = "<group>"; };
 		B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-openhuninn-1.1.ttf"; sourceTree = "<group>"; };
-		B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vernonia amygdalina.png"; sourceTree = "<group>"; };
 		B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStoryViewController.swift; sourceTree = "<group>"; };
 		B59E205425669862003A5521 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B59E205625669862003A5521 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -445,7 +444,6 @@
 				B506EBC025622FF800372198 /* UpdateTimeTableViewCell.swift */,
 				B506EBC125622FF800372198 /* UpdateTimeTableViewCell.xib */,
 				B506EBC72562306400372198 /* UpdateBackgroundColorTableViewCell.swift */,
-				B594C1A827EC5665009895D7 /* Vernonia amygdalina.png */,
 				B506EBC82562306400372198 /* UpdateBackgroundColorTableViewCell.xib */,
 				B59E218E2567657F003A5521 /* UserDefaultsExtention.swift */,
 				B5B49785256A6B1400570D84 /* Onboarding_1ViewController.swift */,
@@ -471,6 +469,7 @@
 				B54344CE27F6F2930071E367 /* alertViewHandler.swift */,
 				B54344D927F705600071E367 /* AdjustBackgroundColorViewController.swift */,
 				B54344DB27F7056F0071E367 /* AdjustFontViewController.swift */,
+				B57203452813DAF100857571 /* appVersionNumber.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -655,7 +654,6 @@
 			files = (
 				B54E7F4B2587000D00F56C60 /* UpdateBackgroundColorTableViewCell.xib in Resources */,
 				B54E7F462587000800F56C60 /* GoogleService-Info.plist in Resources */,
-				B594C1A927EC5665009895D7 /* Vernonia amygdalina.png in Resources */,
 				B58FD31F256B737100CBDAB6 /* RatingViewController.xib in Resources */,
 				B5A32A25262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B563EB9A27F3FFA0003D0DD9 /* UpdateFontViewController.xib in Resources */,
@@ -695,7 +693,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B563EB9F27F3FFA5003D0DD9 /* UpdateFontViewController.xib in Resources */,
-				B594C1AA27EC5665009895D7 /* Vernonia amygdalina.png in Resources */,
 				B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B5D3845E256BED8200B1A507 /* qiji-combo.ttf in Resources */,
 				B594C19C27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */,
@@ -891,6 +888,7 @@
 				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
 				B563EBD027F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
+				B57203462813DAF100857571 /* appVersionNumber.swift in Sources */,
 				B5613EC1269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift in Sources */,
 				B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */,
 			);
@@ -1118,7 +1116,7 @@
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1261,7 +1259,7 @@
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1486,7 +1484,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1517,7 +1515,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 70;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

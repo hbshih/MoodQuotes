@@ -41,6 +41,7 @@ class Onboarding_2ViewController: UIViewController {
         // need to pay
         if currentSelectedTag == 1 && !global_paid_user
         {
+            print("The user has to pay")
             performSegue(withIdentifier: "purchase_segue", sender: nil)
         }else
         {
@@ -77,8 +78,8 @@ class Onboarding_2ViewController: UIViewController {
         print(backgroundView.backgroundColor)
         backgroundView.backgroundColor = sender.backgroundColor
         currentSelectedTag = sender.tag
-        
     }
+    
     @IBAction func skip(_ sender: Any) {
         
         Analytics.logEvent("onboarding_2_skip_tapped", parameters: nil)

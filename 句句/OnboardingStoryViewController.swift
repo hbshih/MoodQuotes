@@ -11,16 +11,16 @@ import WidgetKit
 import FirebaseAnalytics
 
 class OnboardingStoryViewController: UIViewController {
-
+    
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var explationMessage: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // imageView.alpha = 0.0
-            
-        backgroundView.backgroundColor = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)  
+        // imageView.alpha = 0.0
+        
+        backgroundView.backgroundColor = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)
         self.imageView.alpha = 0.0
         self.explationMessage.alpha = 0.0
         
@@ -32,13 +32,13 @@ class OnboardingStoryViewController: UIViewController {
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTimeForWidget")
         print("Next update date \(updateTime)")
         
-    
+        
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 2.0, delay: 1.5, options: .curveLinear) {
-           // imageView.image = UIImage(named: "icon_gesture")
+            // imageView.image = UIImage(named: "icon_gesture")
             self.explationMessage.text = "嗨，\n從今天起，你每天將會得到一種植物和一句溫暖的生活語錄。"
             self.explationMessage.alpha = 1.0
         } completion: { (true) in
@@ -52,11 +52,11 @@ class OnboardingStoryViewController: UIViewController {
                 } completion: { (true) in
                     //
                 }
-
+                
             }
-
+            
         }
-
+        
         
         
         imageView.image = UIImage(named: "icon_gesture")
@@ -67,7 +67,7 @@ class OnboardingStoryViewController: UIViewController {
         } completion: { (true) in
             self.imageView.transform = self.imageView.transform.rotated(by: -(.pi/6))
         }
-
+        
         let default_color = UIColor(red: 239/255, green: 216/255, blue: 216/255, alpha: 1.0)
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: default_color, forKey: "BackgroundColor")
         
@@ -82,14 +82,14 @@ class OnboardingStoryViewController: UIViewController {
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
         imageView.layer.removeAllAnimations()
-
+        
         if motion == .motionShake
         {
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             UIView.animate(withDuration: 0.5, delay: 0.1, options: UIView.AnimationOptions.curveEaseIn, animations: {
                 self.imageView.alpha = 0.0
                 self.explationMessage.alpha = 0.0
-            
+                
                 
                 
             }, completion: { (true) in
@@ -102,9 +102,9 @@ class OnboardingStoryViewController: UIViewController {
                         self.explationMessage.alpha = 1.0
                     } completion: { (true) in
                         sleep(4)
-                            self.performSegue(withIdentifier: "homepageSegue", sender: nil)
+                        self.performSegue(withIdentifier: "homepageSegue", sender: nil)
                     }
-
+                    
                 }
             })
             
@@ -132,7 +132,7 @@ class OnboardingStoryViewController: UIViewController {
                 VC.defaultFlowerImage = defaultFlowerImage
                 VC.defaultFlowerImageName = defaultFlowerName
                 
-
+                
                 
                 //更新Widget
                 if #available(iOS 14.0, *) {
@@ -140,22 +140,22 @@ class OnboardingStoryViewController: UIViewController {
                 } else {
                     // Fallback on earlier versions
                 }
-              //  let defaultFlowerName = ""
+                //  let defaultFlowerName = ""
             }
         }
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension UIImage {
@@ -173,10 +173,10 @@ extension UIImage {
                             width: size.width, height: size.height))
             let rotatedImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-
+            
             return rotatedImage ?? self
         }
-
+        
         return self
     }
 }

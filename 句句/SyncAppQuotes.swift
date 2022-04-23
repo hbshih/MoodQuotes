@@ -18,23 +18,6 @@ struct SyncAppQuotes {
             print("Date now \(Date())")
             print("Update date \(updateDate)")
             
-            /*
-            /* TESTING */
-            let content = UNMutableNotificationContent()
-            content.title = "檢查是否該更新"
-            content.body = "現在時間\(Date()), 預計更新時間 \(updateDate)"
-            content.sound = UNNotificationSound.default
-
-            let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let req  = UNNotificationRequest(identifier: "check_2", content: content, trigger: tri)
-
-            UNUserNotificationCenter.current().add(req) { (error) in
-                print("error\(error )")
-            }*/
-            
-            /*TESTING**/
-            
-            
             if Date() >= updateDate
             {
                 updateTime()
@@ -49,7 +32,7 @@ struct SyncAppQuotes {
             }
         }else
         {
-            return false
+            return true
         }
     }
     

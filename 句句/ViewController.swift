@@ -36,7 +36,6 @@ class ViewController: UIViewController, MessagingDelegate {
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         print("Firebase registration token: \(String(describing: fcmToken))")
-        
         let dataDict:[String: String] = ["token": fcmToken ?? ""]
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
     }
@@ -140,15 +139,9 @@ class ViewController: UIViewController, MessagingDelegate {
     
     
     @objc func loadNewQuotes() {
-        print("enter foreground now")
-        // your code
-        //If no quote saved in local & time now >= update time
-        /*|| UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil*/
-        
         // comment out for testing purpose
         if SyncAppQuotes().checkIfUpdate()
         {
-            print("loading new screen")
             // Get From API
             DispatchQueue.main.async {
                 firebaseService().getQuoteApiResponse { [self] (result) in
@@ -267,10 +260,8 @@ class ViewController: UIViewController, MessagingDelegate {
             //downloadFlowerImage()
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    func setupMoodButton()
+    {
         // load moodList
         if var moodList = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.dictionary(forKey: "moodList")
         {
@@ -287,9 +278,10 @@ class ViewController: UIViewController, MessagingDelegate {
                 self.moodButtonHolderView.isHidden = true
             }
         }
-        
-        
-        // user open app count
+    }
+    
+    func trackAppOpenCount()
+    {
         if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
         {
     
@@ -311,6 +303,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 // request trial
                 if counter > 5 && !global_paid_user
                 {
+                    
                     trial_Button.isHidden = false
                 }
                 
@@ -320,30 +313,48 @@ class ViewController: UIViewController, MessagingDelegate {
                 //new user
                 print("counter is nil")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(1, forKey: "open_app_count")
+                
+                //handle new user
+                
             }
         }
-        
-        
+    }
+    
+    func displayOnboardTips()
+    {
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
         {
             self.onboardingTouchIcon.alpha = 0.0
             self.onboardingTouchIcon.isHidden = true
             // Existing User
             
-            if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "ShowNewUIUpdate_Ver6.0") != nil
+         /*   if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "ShowNewUIUpdate_Ver6.0") != nil
             {
                 
             }else
             {
                 alertViewHandler().control(title: "歡迎使用全新介面", body: "新版介面除了讓介面更為簡潔，也增加了心情紀錄、更多字體和背景、以及付費版功能，讓你在欣賞語錄的當下可以獲得更多小知識。", iconText: "😎")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "ShowNewUIUpdate_Ver6.0")
-            }
+            }*/
         } else
         {
             // New User
             self.onboardingTouchIcon.alpha = 0.0
             Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)
         }
+    }
+    
+    func appVersionUpdateHandler()
+    {
+        if appVersionNumberHandler().hasUpdatedSinceLastRun()
+        {
+            alertViewHandler().control(title: "歡迎使用全新介面", body: "新版介面除了讓介面更為簡潔，也增加了心情紀錄、更多字體和背景、以及付費版功能，讓你在欣賞語錄的當下可以獲得更多小知識。", iconText: "😎")
+            //UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "ShowNewUIUpdate_Ver6.0")
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willResignActiveNotification, object: nil)
@@ -360,6 +371,12 @@ class ViewController: UIViewController, MessagingDelegate {
             }
         }
         
+        // Handle UI
+        trackAppOpenCount()
+        setupMoodButton()
+        displayOnboardTips()
+        appVersionUpdateHandler()
+        
         //UI
         var font = Display_Font(font_size: 18).getUIFont()
         frontQuote.font = font
@@ -368,6 +385,10 @@ class ViewController: UIViewController, MessagingDelegate {
         authorName.font = font
         font = Display_Font(font_size: 12).getUIFont()
         flowerMeaning.font = font
+        todayDateLabel.text = Date().getDateDayOnly
+        twDayLabel.text = Date().getTWday
+        dateLabel.text = Date().getTodayDate
+        
         
         if global_paid_user
         {
@@ -388,11 +409,12 @@ class ViewController: UIViewController, MessagingDelegate {
         authorName.text = defaultAuthor
         
         
-        
+        /*
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil
         {
             onboardingTouchIcon.image = UIImage(named: "icon_touch_tutorial")
         }
+        */
         
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
@@ -545,58 +567,24 @@ class ViewController: UIViewController, MessagingDelegate {
     //load view
     func prepareView()
     {
-        
-        //check Color
+        // Get Background Color
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
         {
             backgroundColor = color
             screenView.backgroundColor = color
-         //   frontStackView.backgroundColor = color
-         //   hiddenQuoteView.backgroundColor = color
-           // backgroundHideenView.backgroundColor =  color
-            // quoteAndAuthorStackView.backgroundColor = color
-            // quoteAndAuthorStackView.customize(backgroundColor: color, radiusSize: 20)
         }
-        
-        trial_Button.isHidden = true
-        
-        //paid user
+
+        // Check if user is a paid user
         if !global_paid_user
         {
             coloredFlowerSectionView.isHidden = true
             blackwhiteFlowerSectionView.isHidden = false
-            trial_Button.isHidden = false
         }else
         {
             coloredFlowerSectionView.isHidden = false
             blackwhiteFlowerSectionView.isHidden = true
             trial_Button.isHidden = true
         }
-        
-        //check Color
-        if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
-        {
-            backgroundColor = color
-            screenView.backgroundColor = color
-         //   frontStackView.backgroundColor = color
-         //   hiddenQuoteView.backgroundColor = color
-           // backgroundHideenView.backgroundColor =  color
-            // quoteAndAuthorStackView.backgroundColor = color
-            // quoteAndAuthorStackView.customize(backgroundColor: color, radiusSize: 20)
-        }
-        
-        
-        var font = Display_Font(font_size: 18).getUIFont()
-        frontQuote.font = font
-        nameOfFlower.font = font
-        font = Display_Font(font_size: 16).getUIFont()
-        authorName.font = font
-        font = Display_Font(font_size: 12).getUIFont()
-        flowerMeaning.font = font
-        
-        todayDateLabel.text = Date().getDateDayOnly
-        twDayLabel.text = Date().getTWday
-        dateLabel.text = Date().getTodayDate
     }
     
     

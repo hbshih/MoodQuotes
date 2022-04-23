@@ -13,8 +13,10 @@ import UserNotifications
 
 class NewSettingViewController: UIViewController {
 
+    @IBOutlet weak var purchaseCell: UIView!
     @IBOutlet weak var notificationToggle: UISwitch!
     @IBOutlet weak var timePicker: UIDatePicker!
+    @IBOutlet weak var fontAppearanceButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +44,15 @@ class NewSettingViewController: UIViewController {
             
         }
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fontAppearanceButton.titleLabel?.font = Display_Font(font_size: 12).getUIFont()
+        
+        if global_paid_user
+        {
+            purchaseCell.isHidden = true
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
