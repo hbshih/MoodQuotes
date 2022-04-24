@@ -19,6 +19,7 @@ import AppTrackingTransparency
 import SwiftyStoreKit
 
 var global_paid_user = false
+var global_paid_price = "$120"
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -54,9 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         
-    /*    SwiftyStoreKit.retrieveProductsInfo(["monthly_purchase"]) { result in
+        SwiftyStoreKit.retrieveProductsInfo(["monthly_purchase"]) { result in
             if let product = result.retrievedProducts.first {
                 let priceString = product.localizedPrice!
+                global_paid_price = product.localizedPrice!
                 print("Product: \(product.localizedDescription), price: \(priceString)")
             }
             else if let invalidProductId = result.invalidProductIDs.first {
@@ -66,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Error: \(result.error)")
             }
         }
-        */
+        
         
         let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: "c180acfb02ff4e39a006b23d901a315c")
         SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in

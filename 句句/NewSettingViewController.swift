@@ -44,15 +44,15 @@ class NewSettingViewController: UIViewController {
             
         }
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         fontAppearanceButton.titleLabel?.font = Display_Font(font_size: 12).getUIFont()
         
         if global_paid_user
         {
             purchaseCell.isHidden = true
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
     }
     
     override func viewWillDisappear(_ animated: Bool) {

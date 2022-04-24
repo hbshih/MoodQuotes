@@ -140,7 +140,7 @@ class ViewController: UIViewController, MessagingDelegate {
     
     @objc func loadNewQuotes() {
         // comment out for testing purpose
-        if SyncAppQuotes().checkIfUpdate()
+        if SyncAppQuotes().checkIfUpdate() || self.frontQuote.text == "點開查看今日給你的話吧"
         {
             // Get From API
             DispatchQueue.main.async {
@@ -158,16 +158,11 @@ class ViewController: UIViewController, MessagingDelegate {
                             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(self.author, forKey: "Author")
                             self.frontQuote.text = self.quote
                             self.authorName.text = self.author
-                           // self.hiddenQuote.text = self.quote
-                           // self.hiddenAuthorName.text = self.author
                             global_quote = frontQuote.text!
                             
                             // Update Flower
                             downloadFlowerImage()
-                            
-                            // show rating
-                            //  showRatingview()
-                            
+               
                             //更新Widget
                             if #available(iOS 14.0, *) {
                                 WidgetCenter.shared.reloadAllTimelines()
@@ -258,6 +253,17 @@ class ViewController: UIViewController, MessagingDelegate {
         prepareView()
         loadNewQuotes()
             //downloadFlowerImage()
+        //UI
+        var font = Display_Font(font_size: 18).getUIFont()
+        frontQuote.font = font
+        nameOfFlower.font = font
+        font = Display_Font(font_size: 16).getUIFont()
+        authorName.font = font
+        font = Display_Font(font_size: 12).getUIFont()
+        flowerMeaning.font = font
+        todayDateLabel.text = Date().getDateDayOnly
+        twDayLabel.text = Date().getTWday
+        dateLabel.text = Date().getTodayDate
     }
     
     func setupMoodButton()
@@ -376,18 +382,6 @@ class ViewController: UIViewController, MessagingDelegate {
         setupMoodButton()
         displayOnboardTips()
         appVersionUpdateHandler()
-        
-        //UI
-        var font = Display_Font(font_size: 18).getUIFont()
-        frontQuote.font = font
-        nameOfFlower.font = font
-        font = Display_Font(font_size: 16).getUIFont()
-        authorName.font = font
-        font = Display_Font(font_size: 12).getUIFont()
-        flowerMeaning.font = font
-        todayDateLabel.text = Date().getDateDayOnly
-        twDayLabel.text = Date().getTWday
-        dateLabel.text = Date().getTodayDate
         
         
         if global_paid_user

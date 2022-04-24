@@ -3221,7 +3221,7 @@ App們將會開始抖動。</string>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-hK-P3A">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="163" height="20"/>
                                                                                         <attributedString key="attributedText">
-                                                                                            <fragment content="限時優惠中，每月 $ 120">
+                                                                                            <fragment content="免費試用 30 天">
                                                                                                 <attributes>
                                                                                                     <color key="NSColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                     <font key="NSFont" size="12" name="jf-openhuninn-1.1"/>
@@ -3231,7 +3231,7 @@ App們將會開始抖動。</string>
                                                                                         </attributedString>
                                                                                         <color key="highlightedColor" white="0.78000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="免費試用 30 天" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-qf-MLG">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="月付方案 $120 / 月" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-qf-MLG">
                                                                                         <rect key="frame" x="0.0" y="20" width="163" height="20"/>
                                                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="16"/>
                                                                                         <color key="textColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -3276,22 +3276,24 @@ App們將會開始抖動。</string>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSf-bT-pa3">
-                                                                <rect key="frame" x="24" y="22" width="366" height="28"/>
-                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
-                                                                <color key="textColor" red="0.61176470589999998" green="0.61960784310000006" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。條款及細則" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3EX-f5-qz0">
+                                                                <rect key="frame" x="24" y="14" width="366" height="42"/>
+                                                                <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                            </textView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="BSf-bT-pa3" firstAttribute="top" secondItem="big-1K-s2F" secondAttribute="bottom" constant="8" id="9RH-3v-Dcj"/>
+                                                            <constraint firstItem="3EX-f5-qz0" firstAttribute="top" secondItem="big-1K-s2F" secondAttribute="bottom" id="90k-mu-9hX"/>
                                                             <constraint firstItem="big-1K-s2F" firstAttribute="leading" secondItem="lCb-Pz-HCo" secondAttribute="leading" constant="16" id="ALY-ta-Qcq"/>
-                                                            <constraint firstAttribute="trailing" secondItem="BSf-bT-pa3" secondAttribute="trailing" constant="24" id="Cih-W1-cx6"/>
                                                             <constraint firstAttribute="height" constant="56" id="H98-8d-21p"/>
-                                                            <constraint firstItem="BSf-bT-pa3" firstAttribute="leading" secondItem="lCb-Pz-HCo" secondAttribute="leading" constant="24" id="PZr-ez-ptE"/>
                                                             <constraint firstAttribute="trailing" secondItem="big-1K-s2F" secondAttribute="trailing" constant="16" id="a6K-j7-YqA"/>
                                                             <constraint firstItem="big-1K-s2F" firstAttribute="top" secondItem="lCb-Pz-HCo" secondAttribute="top" id="bBU-VF-E1Z"/>
                                                             <constraint firstAttribute="trailing" secondItem="big-1K-s2F" secondAttribute="trailing" constant="16" id="bKp-MJ-NPV"/>
+                                                            <constraint firstAttribute="bottom" secondItem="3EX-f5-qz0" secondAttribute="bottom" id="hhe-1H-FzF"/>
+                                                            <constraint firstItem="3EX-f5-qz0" firstAttribute="leading" secondItem="lCb-Pz-HCo" secondAttribute="leading" constant="24" id="mvW-dt-Cap"/>
+                                                            <constraint firstAttribute="trailing" secondItem="3EX-f5-qz0" secondAttribute="trailing" constant="24" id="nea-8U-iBA"/>
                                                             <constraint firstItem="big-1K-s2F" firstAttribute="leading" secondItem="lCb-Pz-HCo" secondAttribute="leading" constant="16" id="oAE-dh-ZZH"/>
                                                         </constraints>
                                                     </view>
@@ -3305,9 +3307,9 @@ App們將會開始抖動。</string>
                                                                     <constraint firstAttribute="width" priority="250" constant="320" id="wyt-GT-zxm"/>
                                                                     <constraint firstAttribute="height" constant="60" id="zK7-F9-0Qd"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="18"/>
+                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title="開始試用 30 天"/>
+                                                                <state key="normal" title="免費試用 30 天"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <integer key="value" value="15"/>
@@ -3317,6 +3319,12 @@ App們將會開始抖動。</string>
                                                                     <action selector="purchaseTapped:" destination="ctx-cW-Iia" eventType="touchUpInside" id="c1b-rT-O90"/>
                                                                 </connections>
                                                             </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="後續每月只要 $120.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oE-y9-xZe">
+                                                                <rect key="frame" x="156" y="61" width="102.5" height="10"/>
+                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="10"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJS-iI-eIS">
                                                                 <rect key="frame" x="176" y="84" width="62" height="30"/>
                                                                 <state key="normal" title="恢復購買">
@@ -3333,6 +3341,8 @@ App們將會開始抖動。</string>
                                                             <constraint firstItem="9jp-MY-Bwq" firstAttribute="centerX" secondItem="AHR-0x-j62" secondAttribute="centerX" id="E4j-mT-gxG"/>
                                                             <constraint firstItem="dJS-iI-eIS" firstAttribute="centerX" secondItem="AHR-0x-j62" secondAttribute="centerX" id="GPP-dL-Ktb"/>
                                                             <constraint firstItem="9jp-MY-Bwq" firstAttribute="top" secondItem="AHR-0x-j62" secondAttribute="top" constant="16" id="Wy0-at-DDR"/>
+                                                            <constraint firstItem="9oE-y9-xZe" firstAttribute="centerY" secondItem="9jp-MY-Bwq" secondAttribute="centerY" constant="20" id="c0e-SC-7qo"/>
+                                                            <constraint firstItem="9oE-y9-xZe" firstAttribute="centerX" secondItem="9jp-MY-Bwq" secondAttribute="centerX" id="z2h-Kk-cW4"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -3365,7 +3375,10 @@ App們將會開始抖動。</string>
                     </view>
                     <navigationItem key="navigationItem" id="nVe-df-RBU"/>
                     <connections>
+                        <outlet property="buttonPricingDetail" destination="9oE-y9-xZe" id="icu-aT-Jox"/>
                         <outlet property="flowerImage" destination="f60-NW-oy6" id="Pub-en-S6z"/>
+                        <outlet property="policyDescription" destination="3EX-f5-qz0" id="NEQ-Yv-lBk"/>
+                        <outlet property="promoPricingDetail" destination="2aW-qf-MLG" id="qiR-Jw-dpZ"/>
                         <outlet property="purchasePageDescription" destination="Dwd-Rb-aIt" id="BJe-tW-kbp"/>
                         <outlet property="purchasePageTitle" destination="jUl-XT-5c5" id="2qK-wU-XW9"/>
                     </connections>
