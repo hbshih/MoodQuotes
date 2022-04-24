@@ -340,7 +340,7 @@
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycq-Fi-AlT">
                                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="35"/>
                                                                 <state key="normal" title="紀錄心情">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="titleColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="updateMoodTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lSn-lY-Srk"/>
@@ -364,7 +364,7 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
-                                                                <color key="value" red="0.61176470589999998" green="0.61960784310000006" blue="0.72549019609999998" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <color key="value" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="0.5" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -479,7 +479,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05F-DL-76N">
                                                                 <rect key="frame" x="0.0" y="0.0" width="206" height="190"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="Vernonia amygdalina.png" translatesAutoresizingMaskIntoConstraints="NO" id="EU3-lG-Cxd">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="Vernonia amygdalina" translatesAutoresizingMaskIntoConstraints="NO" id="EU3-lG-Cxd">
                                                                         <rect key="frame" x="0.0" y="31" width="100" height="128"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="128" id="ANL-Y1-Awr"/>
@@ -1698,7 +1698,8 @@
                                                                         <subviews>
                                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikw-bP-mNB">
                                                                                 <rect key="frame" x="33.5" y="0.0" width="30" height="30"/>
-                                                                                <state key="normal" image="noun_instagram_3350460 (1) 1"/>
+                                                                                <color key="tintColor" red="0.92156862750000001" green="0.71483190720000001" blue="0.89072653580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <state key="normal" image="noun_instagram_3350460 (1) 1-1"/>
                                                                                 <connections>
                                                                                     <action selector="optionTapped:" destination="s5y-0N-DVP" eventType="touchUpInside" id="96Y-sY-4Ed"/>
                                                                                 </connections>
@@ -2213,7 +2214,7 @@
                                                                     <constraint firstAttribute="height" constant="40" id="8Mo-DU-Kye"/>
                                                                 </constraints>
                                                             </stackView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="試用付費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z2-sQ-IQc">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z2-sQ-IQc">
                                                                 <rect key="frame" x="0.0" y="215" width="374" height="14"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3178,8 +3179,6 @@ App們將會開始抖動。</string>
                                                                                     <fragment>
                                                                                         <string key="content">完整版包含：
 每日花語
-三種新字體
-五種新背景顏色
 </string>
                                                                                         <attributes>
                                                                                             <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3188,8 +3187,25 @@ App們將會開始抖動。</string>
                                                                                         </attributes>
                                                                                     </fragment>
                                                                                     <fragment>
-                                                                                        <string key="content">無限紀錄每日心情
-每日彩色手繪植物</string>
+                                                                                        <string key="content">每日彩色手繪植物
+</string>
+                                                                                        <attributes>
+                                                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <font key="NSFont" size="16" name="jf-openhuninn-1.1"/>
+                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                                        </attributes>
+                                                                                    </fragment>
+                                                                                    <fragment>
+                                                                                        <string key="content">多種新字體
+多種背景顏色
+</string>
+                                                                                        <attributes>
+                                                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <font key="NSFont" size="16" name="jf-openhuninn-1.1"/>
+                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                                                        </attributes>
+                                                                                    </fragment>
+                                                                                    <fragment content="無限紀錄每日心情">
                                                                                         <attributes>
                                                                                             <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <font key="NSFont" size="16" name="jf-openhuninn-1.1"/>
@@ -3445,7 +3461,7 @@ App們將會開始抖動。</string>
                                                                                     <constraint firstAttribute="height" constant="60" id="v20-Eq-t3e"/>
                                                                                 </constraints>
                                                                             </stackView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="試用付費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR2-4S-blz">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR2-4S-blz">
                                                                                 <rect key="frame" x="0.0" y="145.5" width="374" height="12.5"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3687,7 +3703,7 @@ App們將會開始抖動。</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTd-HT-Jtb" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="60" width="414" height="500"/>
+                                <rect key="frame" x="16" y="60" width="382" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="jzg-0j-NMV"/>
                                 </constraints>
@@ -3711,9 +3727,9 @@ App們將會開始抖動。</string>
                             <constraint firstItem="YTd-HT-Jtb" firstAttribute="top" secondItem="krj-ci-U9F" secondAttribute="bottom" constant="8" id="2vt-qm-ebg"/>
                             <constraint firstItem="f1Z-lu-CBl" firstAttribute="trailing" secondItem="krj-ci-U9F" secondAttribute="trailing" id="6Ej-1u-MSJ"/>
                             <constraint firstItem="krj-ci-U9F" firstAttribute="top" secondItem="f1Z-lu-CBl" secondAttribute="top" constant="8" id="AgK-3c-vBe"/>
-                            <constraint firstItem="f1Z-lu-CBl" firstAttribute="trailing" secondItem="YTd-HT-Jtb" secondAttribute="trailing" id="MVl-rN-cl5"/>
+                            <constraint firstItem="f1Z-lu-CBl" firstAttribute="trailing" secondItem="YTd-HT-Jtb" secondAttribute="trailing" constant="16" id="MVl-rN-cl5"/>
                             <constraint firstItem="krj-ci-U9F" firstAttribute="leading" secondItem="f1Z-lu-CBl" secondAttribute="leading" id="fRi-61-N3Q"/>
-                            <constraint firstItem="YTd-HT-Jtb" firstAttribute="leading" secondItem="f1Z-lu-CBl" secondAttribute="leading" id="vNA-FD-CwB"/>
+                            <constraint firstItem="YTd-HT-Jtb" firstAttribute="leading" secondItem="f1Z-lu-CBl" secondAttribute="leading" constant="16" id="vNA-FD-CwB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7VB-aw-tFd"/>
@@ -4298,10 +4314,10 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Md-sC-qsK"/>
-        <segue reference="CVp-gb-ugn"/>
-        <segue reference="OPy-tA-N0Q"/>
-        <segue reference="qNS-Ny-zLV"/>
+        <segue reference="jnJ-JQ-whF"/>
+        <segue reference="oS8-Nr-0LU"/>
+        <segue reference="pIM-gP-oXb"/>
+        <segue reference="hS7-Sl-5ah"/>
         <segue reference="gb2-6r-Z9B"/>
         <segue reference="1Gl-uz-PMa"/>
         <segue reference="iiW-8X-Mfm"/>
@@ -4314,6 +4330,7 @@ App們將會開始抖動。</string>
         <image name="Tutorial_Step 3" width="313" height="132"/>
         <image name="Tutorial_Step 4" width="313" height="128"/>
         <image name="Tutorial_Step 5" width="313" height="209"/>
+        <image name="Vernonia amygdalina" width="256" height="427"/>
         <image name="Vernonia amygdalina.png" width="2340" height="3900"/>
         <image name="background-2022" width="563" height="1218"/>
         <image name="icon_back" width="48" height="48"/>
@@ -4325,7 +4342,7 @@ App們將會開始抖動。</string>
         <image name="noun-menu-801657-2D3142" width="1200" height="1200"/>
         <image name="noun_Save_2209758 1" width="35" height="35"/>
         <image name="noun_Share_1058858 (2) 1" width="35" height="35"/>
-        <image name="noun_instagram_3350460 (1) 1" width="30" height="30"/>
+        <image name="noun_instagram_3350460 (1) 1-1" width="30" height="30"/>
         <image name="onboarding-background" width="563" height="1218"/>
         <image name="promo_image" width="140" height="141"/>
         <image name="share_frame" width="2343" height="2343"/>

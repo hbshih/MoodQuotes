@@ -117,7 +117,8 @@ class DIYCalendarCell: FSCalendarCell {
         if self.isPlaceholder {
             self.eventIndicator.isHidden = true
             self.titleLabel.textColor = UIColor.lightGray
-            //self.appearance.todayColor = UIColor.green
+          // self.appearance.todayColor = UIColor.lightGray
+            self.appearance.titleTodayColor = UIColor.lightGray
             //self.preferredTitleDefaultColor = UIColor.blue
             //self.title
         }
