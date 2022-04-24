@@ -39,24 +39,9 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
             //    fillSelectionColors = moodList
             }
         }
-     /*   let view = UIView(frame: UIScreen.main.bounds)
-        view.backgroundColor = UIColor.groupTableViewBackground
-        self.view = view
-       */
-      //  let height: CGFloat = UIDevice.current.model.hasPrefix("iPad") ? 400 : 300UI
-        
-    //    UIView.
-      //  UIViewController.loadViewIfNeeded()
-     //   var v = DIYExampleViewController.view
-     /*
-        let calendar = FSCalendar(frame: CGRect(x: 0, y: 44, width: calendarView.frame.size.width, height: 400))*/
         calendar.dataSource = self
         calendar.delegate = self
         calendar.allowsMultipleSelection = false
-        
-   //]     calendarView.addSubview(calendar)
-    //    self.calendar = calendar
-        
         calendar.calendarHeaderView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         calendar.calendarWeekdayView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         calendar.appearance.eventSelectionColor = UIColor.black
@@ -64,44 +49,16 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
         calendar.appearance.eventOffset = CGPoint(x: 0, y: -7)
         calendar.today = nil // Hide the today circle
         calendar.register(DIYCalendarCell.self, forCellReuseIdentifier: "cell")
-//        calendar.clipsToBounds = true // Remove top/bottom line
-        
         calendar.swipeToChooseGesture.isEnabled = true // Swipe-To-Choose
         
         let scopeGesture = UIPanGestureRecognizer(target: calendar, action: #selector(calendar.handleScopeGesture(_:)));
         calendar.addGestureRecognizer(scopeGesture)
-        
-        /*
-        let label = UILabel(frame: CGRect(x: 0, y: calendar.frame.maxY + 10, width: self.view.frame.size.width, height: 50))
-        label.textAlignment = .center
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        self.view.addSubview(label)
-        self.eventLabel = label
-        
-        let attributedText = NSMutableAttributedString(string: "")
-        let attatchment = NSTextAttachment()
-        attatchment.image = UIImage(named: "icon_cat")!
-        attatchment.bounds = CGRect(x: 0, y: -3, width: attatchment.image!.size.width, height: attatchment.image!.size.height)
-        attributedText.append(NSAttributedString(attachment: attatchment))
-        attributedText.append(NSAttributedString(string: "  Hey Daily Event  "))
-        attributedText.append(NSAttributedString(attachment: attatchment))
-        self.eventLabel.attributedText = attributedText*/
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "FSCalendar"
-        // Uncomment this to perform an 'initial-week-scope'
-        // self.calendar.scope = FSCalendarScopeWeek;
-        
-/*        let dates = [
-            self.gregorian.date(byAdding: .day, value: -1, to: Date()),
-            Date(),
-            self.gregorian.date(byAdding: .day, value: 1, to: Date())
-        ]
- */
         let dates = [
             Date()
         ]
@@ -129,6 +86,7 @@ class DIYExampleViewController: UIViewController, FSCalendarDataSource, FSCalend
     
     func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
         if self.gregorian.isDateInToday(date) {
+            calendar.appearance.titleTodayColor = UIColor.black
             return "今"
         }
         return nil

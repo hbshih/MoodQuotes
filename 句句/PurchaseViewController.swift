@@ -173,9 +173,15 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
             }
             else if results.restoredPurchases.count > 0 {
                 print("Restore Success: \(results.restoredPurchases)")
-                global_paid_user = true
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
                 alertViewHandler().control(title: "恢復購買成功", body: "可以繼續使用完整版植語錄囉！", iconText: "🍻")
+                
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
+                global_paid_user = true
+                self.getColorImageHandler()
+                
+                self.dismiss(animated: true) {
+                    self.presentingViewController?.viewWillAppear(true)
+                }
             }
             else {
                 print("Nothing to Restore")

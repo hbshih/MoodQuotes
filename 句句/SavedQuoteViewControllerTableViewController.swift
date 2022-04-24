@@ -47,8 +47,6 @@ class SavedQuoteViewControllerTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var testArray = ["ajdkflads","ajsdfklsaj"]
-        
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "savedQuoteCell")
         
         cell.textLabel?.numberOfLines = 0
@@ -70,8 +68,6 @@ class SavedQuoteViewControllerTableViewController: UITableViewController {
         {
             cell.textLabel!.text = "還沒有儲存任何語錄"
         }
-        
-
         return cell
     }
     
