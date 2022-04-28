@@ -117,7 +117,7 @@ struct coloredflowerHandler{
             numberOfImages = count
             var randomImageNumber = Int.random(in: 1..<numberOfImages+1)
             
-            if let url = URL(string: "https://geegee-a5bfd.firebaseio.com/Colored_Flower/2.json") {
+            if let url = URL(string: "https://geegee-a5bfd.firebaseio.com/Colored_Flower/\(randomImageNumber).json") {
                URLSession.shared.dataTask(with: url) { data, response, error in
                   if let data = data {
                       do {

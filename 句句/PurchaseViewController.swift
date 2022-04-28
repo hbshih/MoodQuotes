@@ -40,7 +40,7 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
         buttonPricingDetail.text = "後續只要 \(global_paid_price) / 月"
         
         policyDescription.delegate = self
-        policyDescription.buildLink(originalText: "為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。條款及細則 隱私條款", hyperLinks: ["AppStore":"itms-apps://apps.apple.com/account/subscriptions", "條款及細則":"https://pages.flycricket.io/moodquotes/terms.html", "隱私條款": "https://pages.flycricket.io/ju-ju-moodquotes/privacy.html"])
+        policyDescription.buildLink(originalText: "為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。條款及細則 隱私條款", hyperLinks: ["AppStore":"itms-apps://apps.apple.com/account/subscriptions", "條款及細則":"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/", "隱私條款": "https://pages.flycricket.io/ju-ju-moodquotes/privacy.html"])
         
         /*policyDescription.addHyperLinksToText(originalText: "為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。條款及細則 隱私條款", hyperLinks: ["條款及細則":"https://pages.flycricket.io/moodquotes/terms.html", "隱私條款": "https://pages.flycricket.io/ju-ju-moodquotes/privacy.html"])*/
         
