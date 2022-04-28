@@ -134,9 +134,9 @@ struct MediumWidget_Quote_2EntryView : View {
           
           VStack{
               //quote
-              Text(quote.quote).font(Display_Font(font_size: Int(22)).getFont()).foregroundColor(Color(#colorLiteral(red: 0.36, green: 0.36, blue: 0.47, alpha: 1))).tracking(0.22).multilineTextAlignment(.center).minimumScaleFactor(0.5)
+              Text(quote.quote).font(Display_Font(font_size: Int(18)).getFont()).foregroundColor(Color(#colorLiteral(red: 0.36, green: 0.36, blue: 0.47, alpha: 1))).tracking(0.22).multilineTextAlignment(.center).minimumScaleFactor(0.5)
               //author
-              Text(quote.author).font(Display_Font(font_size: Int(14)).getFont()).foregroundColor(Color(#colorLiteral(red: 0.59, green: 0.59, blue: 0.59, alpha: 1))).tracking(0.84)
+              Text(quote.author).font(Display_Font(font_size: Int(14)).getFont()).foregroundColor(Color(#colorLiteral(red: 0.59, green: 0.59, blue: 0.59, alpha: 1))).tracking(0.84).padding(.top, 5)
           }
       }
       .padding(.vertical, 2.5).padding(.horizontal, 16)
