@@ -62,6 +62,10 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        presentingViewController?.viewWillAppear(true)
+    }
+    
     func showiAPScreen()
     {
         SwiftyStoreKit.purchaseProduct("monthly_purchase", quantity: 1, atomically: true) { result in
@@ -131,8 +135,9 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
                     if error != nil
                     {
                         print("unable to load new image \(error)")
-                        flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                        flowerHandler().storeImage(image: UIImage(named: "Vernonia amygdalina")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("三色菫", forKey: "FlowerName")
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("沉思，快樂，請思念我，白日夢，思慕，快樂，讓我們交往。", forKey: "FlowerMeaning")
                         //更新Widget
                         if #available(iOS 14.0, *) {
                             WidgetCenter.shared.reloadAllTimelines()
@@ -201,7 +206,7 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
      }
      */
     func apploader() -> UIAlertController {
-        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: "努力載入中⋯", preferredStyle: .alert)
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.style = UIActivityIndicatorView.Style.large
