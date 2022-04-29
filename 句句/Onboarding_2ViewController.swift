@@ -22,6 +22,8 @@ class Onboarding_2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Analytics.logEvent("view_background_page", parameters: nil)
+        
         nav_view.isHidden = true
         
         if fromSetting
@@ -95,7 +97,7 @@ class Onboarding_2ViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-          Analytics.logEvent("onboarding_2_color_selected", parameters: ["color": "\(backgroundView.backgroundColor)"])
+          Analytics.logEvent("color_selected", parameters: ["color": "\(backgroundView.backgroundColor)"])
     }
     
 }

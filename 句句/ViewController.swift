@@ -110,6 +110,8 @@ class ViewController: UIViewController, MessagingDelegate {
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
             }
             
+            Analytics.logEvent("Bookmarked_Quote", parameters: nil)
+            
             //Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
         }else
         {
@@ -477,8 +479,9 @@ class ViewController: UIViewController, MessagingDelegate {
                         if error != nil
                         {
                             print("unable to load new image \(error)")
-                            flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                            flowerHandler().storeImage(image: UIImage(named: "Vernonia amygdalina")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("三色菫", forKey: "FlowerName")
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("沉思，快樂，請思念我，白日夢，思慕，快樂，讓我們交往。", forKey: "FlowerMeaning")
                             //更新Widget
                             if #available(iOS 14.0, *) {
                                 WidgetCenter.shared.reloadAllTimelines()
@@ -632,6 +635,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 }else
                 {
                     moodList[Date().getFormattedDate] = mood
+                    Analytics.logEvent("Daily_mood", parameters: ["mood": mood])
                     UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(moodList, forKey: "moodList")
                 }
                 }

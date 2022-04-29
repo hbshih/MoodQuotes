@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class AdjustFontViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class AdjustFontViewController: UIViewController {
     @IBOutlet weak var exampleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Analytics.logEvent("view_font_page", parameters: nil)
         
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor")
         {
@@ -49,6 +52,7 @@ class AdjustFontViewController: UIViewController {
     @IBAction func fontSelectedTapped(_ sender: Any) {
         
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(selectedFont, forKey: "userFont")
+        Analytics.logEvent("font_selected", parameters: ["font": selectedFont])
         
         alertViewHandler().alert(title: "字體更新完成", body: "", iconText: "")
         

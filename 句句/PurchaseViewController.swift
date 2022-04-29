@@ -12,6 +12,7 @@ import SwiftyStoreKit
 import FirebaseStorage
 import WidgetKit
 import AVFoundation
+import FirebaseAnalytics
 
 class PurchaseViewController: UIViewController, UITextViewDelegate {
     
@@ -27,6 +28,8 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Analytics.logEvent("view_purchase_page", parameters: nil)
         
         // Do any additional setup after loading the view.
         
@@ -51,7 +54,7 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
     @IBAction func purchaseTapped(_ sender: Any) {
         
         //load new ui and show loading indicator
-        
+        Analytics.logEvent("clicked_purchase", parameters: nil)
         loader = self.apploader()
         showiAPScreen()
     }
@@ -74,6 +77,8 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
             print("purchase results \(result)")
             switch result {
             case .success(let purchase):
+                
+                Analytics.logEvent("purchased_item", parameters: ["product": "monthly_purchase"])
                 
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
                 global_paid_user = true

@@ -49,6 +49,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             return cell
         case 2:
+            Analytics.logEvent("setting_clicked_adjustBackground", parameters: nil)
             let cell = tableView.dequeueReusableCell(withIdentifier: "updateBackgroundTableViewCell") as! UpdateBackgroundColorTableViewCell
             let defaults = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!
             if let color = defaults.colorForKey(key: "BackgroundColor")
@@ -57,6 +58,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
             return cell
         case 3:
+            Analytics.logEvent("setting_clicked_adjustFont", parameters: nil)
             let cell = tableView.dequeueReusableCell(withIdentifier: "updateFontTableViewCell") as! UpdateFontTableViewCell
             
           //  cell.fontPicker.sho
