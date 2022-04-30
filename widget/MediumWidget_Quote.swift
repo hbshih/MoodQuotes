@@ -193,8 +193,8 @@ struct MediumWidget_Quote: Widget {
                 .background(Color(backgroundColor))
         }
         .supportedFamilies([.systemMedium])
-        .configurationDisplayName("句句 每日語錄")
-        .description("記得分享")
+        .configurationDisplayName("有植物也有語錄")
+        .description("存在桌面上")
     }
 }
 

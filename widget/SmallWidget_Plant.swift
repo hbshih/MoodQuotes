@@ -186,8 +186,8 @@ struct SmallWidget_Plant: Widget {
                 .background(Color(backgroundColor))
         }
         .supportedFamilies([.systemSmall])
-        .configurationDisplayName("句句 每日語錄")
-        .description("記得分享")
+        .configurationDisplayName("植物小視窗")
+        .description("每天更新一株新的植物")
     }
 }
 

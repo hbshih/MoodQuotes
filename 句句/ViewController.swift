@@ -61,8 +61,8 @@ class ViewController: UIViewController, MessagingDelegate {
         }
     }
     
-   
-
+    
+    
     
     var bookmark_saved = false
     
@@ -71,14 +71,14 @@ class ViewController: UIViewController, MessagingDelegate {
         if bookmark_saved == false
         {
             /*
-            self.bookmarkNotification.fadeIn(completion: {
-                    (finished: Bool) -> Void in
-                    self.bookmarkNotification.fadeOut()
-                    })
-            Analytics.logEvent("Bookmarked_Quote", parameters: nil)
-            bookmark_saved = true
-            print("tapped")
-            */
+             self.bookmarkNotification.fadeIn(completion: {
+             (finished: Bool) -> Void in
+             self.bookmarkNotification.fadeOut()
+             })
+             Analytics.logEvent("Bookmarked_Quote", parameters: nil)
+             bookmark_saved = true
+             print("tapped")
+             */
             
             bookmark_saved = true
             Button_bookmark.setTitle("已收藏", for: .normal)
@@ -134,7 +134,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
             }
             Button_bookmark.setTitle("收藏", for: .normal)
-           // Button_bookmark.setBackgroundImage(UIImage(named: "icon_unBookmarked"), for: .normal)
+            // Button_bookmark.setBackgroundImage(UIImage(named: "icon_unBookmarked"), for: .normal)
         }
         
     }
@@ -164,7 +164,7 @@ class ViewController: UIViewController, MessagingDelegate {
                             
                             // Update Flower
                             downloadFlowerImage()
-               
+                            
                             //更新Widget
                             if #available(iOS 14.0, *) {
                                 WidgetCenter.shared.reloadAllTimelines()
@@ -191,7 +191,7 @@ class ViewController: UIViewController, MessagingDelegate {
             let FlowerMeaningString: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerMeaning") ?? "滿天星"
             
             print("flower meaning \(FlowerMeaningString)")
-        
+            
             DispatchQueue.main.async { [self] in
                 self.frontQuote.text = Q
                 self.authorName.text = A
@@ -201,8 +201,8 @@ class ViewController: UIViewController, MessagingDelegate {
                 self.nameOfFlower.text = FlowerName
                 self.flowerMeaning.text = FlowerMeaningString
                 
-             //   self.hiddenQuote.text = Q
-             //   self.hiddenAuthorName.text = A
+                //   self.hiddenQuote.text = Q
+                //   self.hiddenAuthorName.text = A
                 global_quote = frontQuote.text!
                 checkIfBookmarked()
             }
@@ -213,7 +213,7 @@ class ViewController: UIViewController, MessagingDelegate {
             WidgetCenter.shared.reloadAllTimelines()
         }
         
-
+        
     }
     
     @IBOutlet weak var ImageOfFlower: UIImageView!
@@ -254,7 +254,7 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewWillAppear(_ animated: Bool) {
         prepareView()
         loadNewQuotes()
-            //downloadFlowerImage()
+        //downloadFlowerImage()
         //UI
         var font = Display_Font(font_size: 18).getUIFont()
         frontQuote.font = font
@@ -292,7 +292,7 @@ class ViewController: UIViewController, MessagingDelegate {
     {
         if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
         {
-    
+            
             if counter != nil
             {
                 //old user
@@ -336,14 +336,14 @@ class ViewController: UIViewController, MessagingDelegate {
             self.onboardingTouchIcon.isHidden = true
             // Existing User
             
-         /*   if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "ShowNewUIUpdate_Ver6.0") != nil
-            {
-                
-            }else
-            {
-                alertViewHandler().control(title: "歡迎使用全新介面", body: "新版介面除了讓介面更為簡潔，也增加了心情紀錄、更多字體和背景、以及付費版功能，讓你在欣賞語錄的當下可以獲得更多小知識。", iconText: "😎")
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "ShowNewUIUpdate_Ver6.0")
-            }*/
+            /*   if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "ShowNewUIUpdate_Ver6.0") != nil
+             {
+             
+             }else
+             {
+             alertViewHandler().control(title: "歡迎使用全新介面", body: "新版介面除了讓介面更為簡潔，也增加了心情紀錄、更多字體和背景、以及付費版功能，讓你在欣賞語錄的當下可以獲得更多小知識。", iconText: "😎")
+             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "ShowNewUIUpdate_Ver6.0")
+             }*/
         } else
         {
             // New User
@@ -363,7 +363,7 @@ class ViewController: UIViewController, MessagingDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.didBecomeActiveNotification, object: nil)
@@ -406,11 +406,11 @@ class ViewController: UIViewController, MessagingDelegate {
         
         
         /*
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil
-        {
-            onboardingTouchIcon.image = UIImage(named: "icon_touch_tutorial")
-        }
-        */
+         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil
+         {
+         onboardingTouchIcon.image = UIImage(named: "icon_touch_tutorial")
+         }
+         */
         
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
@@ -422,21 +422,21 @@ class ViewController: UIViewController, MessagingDelegate {
             forName: .newPokemonFetched,
             object: nil,
             queue: nil) { (notification) in
-            print("notification received")
-            /*        /*For Testing*/
-             let content = UNMutableNotificationContent()
-             content.title = "test notifaction"
-             content.body = "VC GOT notified!"
-             content.sound = UNNotificationSound.default
-             
-             let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-             let req  = UNNotificationRequest(identifier: "VC_Notified", content: content, trigger: tri)
-             
-             UNUserNotificationCenter.current().add(req) { (error) in
-             print("error\(error )")
-             }
-             /*Testing Ends*/*/
-        }
+                print("notification received")
+                /*        /*For Testing*/
+                 let content = UNMutableNotificationContent()
+                 content.title = "test notifaction"
+                 content.body = "VC GOT notified!"
+                 content.sound = UNNotificationSound.default
+                 
+                 let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                 let req  = UNNotificationRequest(identifier: "VC_Notified", content: content, trigger: tri)
+                 
+                 UNUserNotificationCenter.current().add(req) { (error) in
+                 print("error\(error )")
+                 }
+                 /*Testing Ends*/*/
+            }
     }
     
     
@@ -452,7 +452,7 @@ class ViewController: UIViewController, MessagingDelegate {
     @IBOutlet weak var nameOfFlower: UILabel!
     @IBOutlet weak var nameOfColorImage: UILabel!
     var author: String = "— 斌"
-
+    
     func downloadFlowerImage()
     {
         if global_paid_user
@@ -508,54 +508,54 @@ class ViewController: UIViewController, MessagingDelegate {
             }
         }else
         {
-        
-        flowerHandler().getFlowerImageURL { (name, image_url) in
-            DispatchQueue.main.async { [self] in
-                
-                // Get a reference to the storage service using the default Firebase App
-                let storage = Storage.storage()
-                
-                // Create a storage reference from our storage service
-                let storageRef = storage.reference()
-                
-                print("get url \(image_url)")
-                // Reference to an image file in Firebase Storage
-                let reference = storageRef.child("/flowers/\(image_url).png")
-                
-                // Placeholder image
-                let placeholderImage = UIImage(named: "placeholder.jpg")
-                
-                
-                // Load the image using SDWebImage
-                self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
-                    if error != nil
-                    {
-                        print("unable to load new image \(error)")
-                        flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
-                        //更新Widget
-                        if #available(iOS 14.0, *) {
-                            WidgetCenter.shared.reloadAllTimelines()
-                        } else {
-                            // Fallback on earlier versions
-                        }
-                    }else
-                    {
-                        flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
-                        //更新Widget
-                        if #available(iOS 14.0, *) {
-                            WidgetCenter.shared.reloadAllTimelines()
-                        } else {
-                            // Fallback on earlier versions
+            
+            flowerHandler().getFlowerImageURL { (name, image_url) in
+                DispatchQueue.main.async { [self] in
+                    
+                    // Get a reference to the storage service using the default Firebase App
+                    let storage = Storage.storage()
+                    
+                    // Create a storage reference from our storage service
+                    let storageRef = storage.reference()
+                    
+                    print("get url \(image_url)")
+                    // Reference to an image file in Firebase Storage
+                    let reference = storageRef.child("/flowers/\(image_url).png")
+                    
+                    // Placeholder image
+                    let placeholderImage = UIImage(named: "placeholder.jpg")
+                    
+                    
+                    // Load the image using SDWebImage
+                    self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+                        if error != nil
+                        {
+                            print("unable to load new image \(error)")
+                            flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                            //更新Widget
+                            if #available(iOS 14.0, *) {
+                                WidgetCenter.shared.reloadAllTimelines()
+                            } else {
+                                // Fallback on earlier versions
+                            }
+                        }else
+                        {
+                            flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                            //更新Widget
+                            if #available(iOS 14.0, *) {
+                                WidgetCenter.shared.reloadAllTimelines()
+                            } else {
+                                // Fallback on earlier versions
+                            }
                         }
                     }
+                    self.nameOfFlower.text = name
+                    //  self.nameOfColorImage.text = name
+                    self.flowerMeaning.isHidden = true
                 }
-                self.nameOfFlower.text = name
-              //  self.nameOfColorImage.text = name
-                self.flowerMeaning.isHidden = true
             }
-        }
         }
     }
     
@@ -570,7 +570,7 @@ class ViewController: UIViewController, MessagingDelegate {
             backgroundColor = color
             screenView.backgroundColor = color
         }
-
+        
         // Check if user is a paid user
         if !global_paid_user
         {
@@ -591,11 +591,11 @@ class ViewController: UIViewController, MessagingDelegate {
         
         // Create a custom view controller
         let ratingVC = UpdateMood(nibName: "UpdateMoodViewController", bundle: nil)
-            
+        
         //    RatingViewController(nibName: "RatingViewController", bundle: nil)
         
         
-
+        
         // Create the dialog
         let popup = PopupDialog(viewController: ratingVC,
                                 buttonAlignment: .horizontal,
@@ -606,16 +606,41 @@ class ViewController: UIViewController, MessagingDelegate {
         
         
         
-    
+        
         // Create second button
         let buttonTwo = DefaultButton(title: "儲存", height: 60) {
             
-            
-            if var moodList = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.dictionary(forKey: "moodList")
+            if ratingVC.mood != "default"
             {
-                if moodList.count >= 7 && !global_paid_user
+                
+                if var moodList = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.dictionary(forKey: "moodList")
                 {
-                    alertViewHandler().control(title: "升級完整版繼續紀錄心情", body: "免費版目前只能紀錄七天的心情，若想要繼續紀錄請升級完整版", iconText: "🎁")
+                    if moodList.count >= 7 && !global_paid_user
+                    {
+                        alertViewHandler().control(title: "升級完整版繼續紀錄心情", body: "免費版目前只能紀錄七天的心情，若想要繼續紀錄請升級完整版", iconText: "🎁")
+                    }else
+                    {
+                        self.moodButtonHolderView_text.isHidden = true
+                        self.moodButtonHolderView.isHidden = false
+                        
+                        let mood = ratingVC.mood
+                        self.moodButton.imageView?.contentMode = .scaleAspectFit
+                        self.moodButton.setImage(UIImage(named: mood), for: .normal)
+                        // self.moodButton.layer.wid
+                        self.moodButton.setTitle("", for: .normal)
+                        self.moodButtonHolderView.frame.size.width = 40
+                        let array = [Date().getFormattedDate:mood]
+                        if moodList.isEmpty || moodList.count < 1
+                        {
+                            // default
+                            // UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(array, forKey: "moodList")
+                        }else
+                        {
+                            moodList[Date().getFormattedDate] = mood
+                            Analytics.logEvent("Daily_mood", parameters: ["mood": mood])
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(moodList, forKey: "moodList")
+                        }
+                    }
                 }else
                 {
                     self.moodButtonHolderView_text.isHidden = true
@@ -624,34 +649,12 @@ class ViewController: UIViewController, MessagingDelegate {
                     let mood = ratingVC.mood
                     self.moodButton.imageView?.contentMode = .scaleAspectFit
                     self.moodButton.setImage(UIImage(named: mood), for: .normal)
-                   // self.moodButton.layer.wid
+                    // self.moodButton.layer.wid
                     self.moodButton.setTitle("", for: .normal)
                     self.moodButtonHolderView.frame.size.width = 40
                     let array = [Date().getFormattedDate:mood]
-                if moodList.isEmpty || moodList.count < 1
-                {
-                    // default
-                   // UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(array, forKey: "moodList")
-                }else
-                {
-                    moodList[Date().getFormattedDate] = mood
-                    Analytics.logEvent("Daily_mood", parameters: ["mood": mood])
-                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(moodList, forKey: "moodList")
+                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(array, forKey: "moodList")
                 }
-                }
-            }else
-            {
-                self.moodButtonHolderView_text.isHidden = true
-                self.moodButtonHolderView.isHidden = false
-                
-                let mood = ratingVC.mood
-                self.moodButton.imageView?.contentMode = .scaleAspectFit
-                self.moodButton.setImage(UIImage(named: mood), for: .normal)
-               // self.moodButton.layer.wid
-                self.moodButton.setTitle("", for: .normal)
-                self.moodButtonHolderView.frame.size.width = 40
-                let array = [Date().getFormattedDate:mood]
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(array, forKey: "moodList")
             }
         }
         
@@ -737,43 +740,43 @@ class ViewController: UIViewController, MessagingDelegate {
                 VC.authorToShow = self.authorName.text
                 
                 /*
-                hiddenQuoteViewQuote.text = self.frontQuote.text
-                hiddenQuoteViewAuthor.text = self.authorName.text
-                hiddenQuoteViewFlower.text = self.nameOfFlower.text
-                hiddenQuoteViewFlowerImage.setImage(ImageOfFlower.image!)
-                
-                Analytics.logEvent("home_vc_share_tapped", parameters: ["Quote": frontQuote.text as Any, "Author": authorName.text as Any])
-                
-                
-                
-             //   backgroundHideenView.isHidden = false
-                
-                
-                if #available(iOS 14.0, *)
-                {
-                    // frontStackView.backgroundColor = .blue
-                    buttonView.isHidden = true
-                    Button_bookmark.isHidden = true
-                    quoteAndAuthorStackView.backgroundColor = backgroundColor
-                    let image = takeScreenshot(of: hiddenQuoteView)
-                    VC.imageToShow = image
-                    quoteAndAuthorStackView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.85)
-                    buttonView.isHidden = false
-                    Button_bookmark.isHidden = false
-                }else
-                {
-                    stack_action_controller.isHidden = true
-                    let image = screenView.takeScreenShot()
-                    VC.imageToShow = image
-                }
-                
-                
-               // backgroundHideenView.isHidden = true
-                stack_action_controller.isHidden = false
-                //   VC.screenshotPreview.image = image
-                
-                
-                */
+                 hiddenQuoteViewQuote.text = self.frontQuote.text
+                 hiddenQuoteViewAuthor.text = self.authorName.text
+                 hiddenQuoteViewFlower.text = self.nameOfFlower.text
+                 hiddenQuoteViewFlowerImage.setImage(ImageOfFlower.image!)
+                 
+                 Analytics.logEvent("home_vc_share_tapped", parameters: ["Quote": frontQuote.text as Any, "Author": authorName.text as Any])
+                 
+                 
+                 
+                 //   backgroundHideenView.isHidden = false
+                 
+                 
+                 if #available(iOS 14.0, *)
+                 {
+                 // frontStackView.backgroundColor = .blue
+                 buttonView.isHidden = true
+                 Button_bookmark.isHidden = true
+                 quoteAndAuthorStackView.backgroundColor = backgroundColor
+                 let image = takeScreenshot(of: hiddenQuoteView)
+                 VC.imageToShow = image
+                 quoteAndAuthorStackView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.85)
+                 buttonView.isHidden = false
+                 Button_bookmark.isHidden = false
+                 }else
+                 {
+                 stack_action_controller.isHidden = true
+                 let image = screenView.takeScreenShot()
+                 VC.imageToShow = image
+                 }
+                 
+                 
+                 // backgroundHideenView.isHidden = true
+                 stack_action_controller.isHidden = false
+                 //   VC.screenshotPreview.image = image
+                 
+                 
+                 */
                 //  VC.screenshotPreview.image = UIImage(named: "icon_notification")
             }
         }else if segue.identifier == "showTutorialSegue"
@@ -820,9 +823,9 @@ class ViewController: UIViewController, MessagingDelegate {
         return screenshot
     }
     /*
-    @objc func actionButtonTapped() {
-        takeScreenshot(of: backgroundHideenView)
-    }*/
+     @objc func actionButtonTapped() {
+     takeScreenshot(of: backgroundHideenView)
+     }*/
     
     
     
@@ -876,38 +879,38 @@ extension UIStackView {
 }
 
 extension UIView {
-
-
+    
+    
     func fadeIn(duration: TimeInterval = 0.3, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
         UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
-        self.alpha = 1.0
+            self.alpha = 1.0
         }, completion: completion)  }
-
+    
     func fadeOut(duration: TimeInterval = 0.3, delay: TimeInterval = 0.5, completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in}) {
         UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
-        self.alpha = 0.0
+            self.alpha = 0.0
         }, completion: completion)
-}
-
+    }
+    
 }
 
 
 extension UIImage {
-
+    
     func aspectFitImage(inRect rect: CGRect) -> UIImage? {
         let width = self.size.width
         let height = self.size.height
         let aspectWidth = rect.width / width
         let aspectHeight = rect.height / height
         let scaleFactor = aspectWidth > aspectHeight ? rect.size.height / height : rect.size.width / width
-
+        
         UIGraphicsBeginImageContextWithOptions(CGSize(width: width * scaleFactor, height: height * scaleFactor), false, 0.0)
         self.draw(in: CGRect(x: 0.0, y: 0.0, width: width * scaleFactor, height: height * scaleFactor))
-
+        
         defer {
             UIGraphicsEndImageContext()
         }
-
+        
         return UIGraphicsGetImageFromCurrentImageContext()
     }
 }

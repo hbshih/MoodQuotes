@@ -124,7 +124,8 @@ class ShareViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         print(quoteToShow)
-        quote.text = quoteToShow
+        //stringByReplacingOccurrencesOfString(", ", withString: "\n")
+        quote.text = quoteToShow.replacingOccurrences(of: "，", with: "\n")
         author.text = authorToShow
     }
     

@@ -130,7 +130,7 @@ struct SmallWidget_DateEntryView : View {
           // Widget Background Image
         //  Image(uiImage: #imageLiteral(resourceName: "Webp.net-compress-image-removebg-preview.png"))
           
-          Text(date.getDateDayOnly).font(Display_Font(font_size: Int(36)).getFont()).fontWeight(.light).multilineTextAlignment(.center
+          Text(date.getLunarDate).font(Display_Font(font_size: Int(36)).getFont()).fontWeight(.light).multilineTextAlignment(.center
           ).foregroundColor(.gray)
           
           //Image(uiImage: flowerImage).resizable().frame(width: 128, height: 128, alignment: .center)
@@ -169,8 +169,8 @@ struct SmallWidget_Date: Widget {
                 .background(Color(backgroundColor))
         }
         .supportedFamilies([.systemSmall])
-        .configurationDisplayName("句句 每日語錄")
-        .description("記得分享")
+        .configurationDisplayName("日期小視窗")
+        .description("常忘記今天幾號嗎？")
     }
 }
 

@@ -180,8 +180,8 @@ struct MediumWidget_Quote_3: Widget {
                 .background(Color(backgroundColor))
         }
         .supportedFamilies([.systemMedium])
-        .configurationDisplayName("句句 每日語錄")
-        .description("記得分享")
+        .configurationDisplayName("語錄")
+        .description("每天的能量來源")
     }
 }
 

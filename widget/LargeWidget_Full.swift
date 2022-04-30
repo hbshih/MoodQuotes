@@ -215,8 +215,8 @@ struct LargeWidget_Full: Widget {
                 .background(Color(backgroundColor))
         }
         .supportedFamilies([.systemLarge])
-        .configurationDisplayName("句句 每日語錄")
-        .description("記得分享")
+        .configurationDisplayName("佔滿你的頁面")
+        .description("語錄、日期一次滿足")
     }
 }
 
