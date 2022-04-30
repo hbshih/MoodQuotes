@@ -259,6 +259,7 @@ class ViewController: UIViewController, MessagingDelegate {
         var font = Display_Font(font_size: 18).getUIFont()
         frontQuote.font = font
         nameOfFlower.font = font
+        nameOfColorImage.font = font
         font = Display_Font(font_size: 16).getUIFont()
         authorName.font = font
         font = Display_Font(font_size: 12).getUIFont()
