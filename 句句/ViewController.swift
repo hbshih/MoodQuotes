@@ -70,16 +70,7 @@ class ViewController: UIViewController, MessagingDelegate {
         
         if bookmark_saved == false
         {
-            /*
-             self.bookmarkNotification.fadeIn(completion: {
-             (finished: Bool) -> Void in
-             self.bookmarkNotification.fadeOut()
-             })
-             Analytics.logEvent("Bookmarked_Quote", parameters: nil)
-             bookmark_saved = true
-             print("tapped")
-             */
-            
+
             bookmark_saved = true
             Button_bookmark.setTitle("已收藏", for: .normal)
             alertViewHandler().alert(title: "語錄已儲存", body: "", iconText: "📖")
@@ -254,6 +245,7 @@ class ViewController: UIViewController, MessagingDelegate {
     override func viewWillAppear(_ animated: Bool) {
         prepareView()
         loadNewQuotes()
+        
         //downloadFlowerImage()
         //UI
         var font = Display_Font(font_size: 18).getUIFont()

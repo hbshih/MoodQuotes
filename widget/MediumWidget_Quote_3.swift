@@ -22,8 +22,7 @@ struct MediumWidget_Quote_3Provider: TimelineProvider {
     func getSnapshot(in context: Context, completion: @escaping (MediumWidget_Quote_3Entry) -> Void) {
         
     
-        Analytics.logEvent("widget_got_installed", parameters: nil)
-        
+        Analytics.logEvent("widget_got_installed", parameters: ["type": "mediumwidget_3"])
         print("Widget got loaded")
         let quote = (MediumWidget_Quote_3Entry(date: Date(), quote: Quote(quote: "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星", author: "小王子"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "滿天星"))
         completion(quote)
