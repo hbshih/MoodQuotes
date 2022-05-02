@@ -82,9 +82,6 @@ class Onboarding_1ViewController: UIViewController {
     
     func saveTime()
     {
-
-        
-        
         
         if #available(iOS 14.0, *) {
             // Add next update date to user defaults

@@ -318,7 +318,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 print("counter is nil")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(1, forKey: "open_app_count")
                 
-                //handle new user
+
                 
             }
         }
@@ -345,6 +345,15 @@ class ViewController: UIViewController, MessagingDelegate {
             // New User
             self.onboardingTouchIcon.alpha = 0.0
             Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)
+            
+            //handle new user
+            
+            let setInitialUpdateDate = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
+            let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: setInitialUpdateDate)
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTimeForWidget")
+          //  print("Next update date \(pickeriOS14.date)")
+            print("Next update date \(updateTime)")
         }
     }
     
