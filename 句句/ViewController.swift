@@ -243,6 +243,9 @@ class ViewController: UIViewController, MessagingDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        print("view will appear called")
+        
         prepareView()
         loadNewQuotes()
         
@@ -557,6 +560,8 @@ class ViewController: UIViewController, MessagingDelegate {
     //load view
     func prepareView()
     {
+        
+        print("status of pay \(global_paid_user)")
         // Get Background Color
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor") as? UIColor
         {
@@ -569,11 +574,13 @@ class ViewController: UIViewController, MessagingDelegate {
         {
             coloredFlowerSectionView.isHidden = true
             blackwhiteFlowerSectionView.isHidden = false
+            flowerMeaning.isHidden = true
         }else
         {
             coloredFlowerSectionView.isHidden = false
             blackwhiteFlowerSectionView.isHidden = true
             trial_Button.isHidden = true
+            flowerMeaning.isHidden = false
         }
     }
     

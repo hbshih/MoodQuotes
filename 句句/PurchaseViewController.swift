@@ -44,9 +44,6 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
         
         policyDescription.delegate = self
         policyDescription.buildLink(originalText: "為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。條款及細則 隱私條款", hyperLinks: ["AppStore":"itms-apps://apps.apple.com/account/subscriptions", "條款及細則":"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/", "隱私條款": "https://pages.flycricket.io/ju-ju-moodquotes/privacy.html"])
-        
-        /*policyDescription.addHyperLinksToText(originalText: "為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。條款及細則 隱私條款", hyperLinks: ["條款及細則":"https://pages.flycricket.io/moodquotes/terms.html", "隱私條款": "https://pages.flycricket.io/ju-ju-moodquotes/privacy.html"])*/
-        
     }
     
     var loader: UIAlertController?
@@ -84,10 +81,12 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
                 global_paid_user = true
                 self.getColorImageHandler()
                 
-                self.dismiss(animated: true) {
-                    self.presentingViewController?.viewWillAppear(true)
-                }
-
+                // self.dismiss(animated: true)
+                
+                /*  self.dismiss(animated: true) {
+                 self.presentingViewController?.viewWillAppear(true)
+                 }
+                 */
                 print("Purchase Success: \(purchase.productId)")
                 
                 
@@ -165,8 +164,12 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
                         }
                     }
                 }
-                
-                alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
+                self.dismiss(animated: true) {
+                    global_paid_user = true
+                    print("dismiss view")
+                    alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
+                    self.presentingViewController?.viewWillAppear(true)
+                }
             }
         }
     }
@@ -188,10 +191,6 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
                 global_paid_user = true
                 self.getColorImageHandler()
-                
-                self.dismiss(animated: true) {
-                    self.presentingViewController?.viewWillAppear(true)
-                }
             }
             else {
                 print("Nothing to Restore")
@@ -231,26 +230,26 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
 }
 
 extension UITextView {
-
-  func buildLink(originalText: String, hyperLinks: [String: String]) {
     
-    let style = NSMutableParagraphStyle()
-    style.alignment = .center
-    let attributedOriginalText = NSMutableAttributedString(string: originalText)
-
-    for (hyperLink, urlString) in hyperLinks {
-        let linkRange = attributedOriginalText.mutableString.range(of: hyperLink)
-        let fullRange = NSRange(location: 0, length: attributedOriginalText.length)
-        attributedOriginalText.addAttribute(.font, value: UIFont.systemFont(ofSize: 10), range: linkRange) /// this is the non functioning line
-        attributedOriginalText.addAttribute(NSAttributedString.Key.link, value: urlString, range: linkRange)
-        attributedOriginalText.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: fullRange)
-        attributedOriginalText.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 10), range: fullRange)
-        attributedOriginalText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.darkText, range: fullRange)
+    func buildLink(originalText: String, hyperLinks: [String: String]) {
+        
+        let style = NSMutableParagraphStyle()
+        style.alignment = .center
+        let attributedOriginalText = NSMutableAttributedString(string: originalText)
+        
+        for (hyperLink, urlString) in hyperLinks {
+            let linkRange = attributedOriginalText.mutableString.range(of: hyperLink)
+            let fullRange = NSRange(location: 0, length: attributedOriginalText.length)
+            attributedOriginalText.addAttribute(.font, value: UIFont.systemFont(ofSize: 10), range: linkRange) /// this is the non functioning line
+            attributedOriginalText.addAttribute(NSAttributedString.Key.link, value: urlString, range: linkRange)
+            attributedOriginalText.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: fullRange)
+            attributedOriginalText.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 10), range: fullRange)
+            attributedOriginalText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.darkText, range: fullRange)
+        }
+        
+        self.linkTextAttributes = [
+            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
+        self.attributedText = attributedOriginalText
     }
-
-    self.linkTextAttributes = [
-        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue
-    ]
-    self.attributedText = attributedOriginalText
-  }
 }
