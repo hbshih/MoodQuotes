@@ -16,6 +16,7 @@ class NewSettingViewController: UIViewController {
     @IBOutlet weak var purchaseCell: UIView!
     @IBOutlet weak var notificationToggle: UISwitch!
     @IBOutlet weak var timePicker: UIDatePicker!
+    @IBOutlet weak var instructionsForOldUsers: UILabel!
     @IBOutlet weak var fontAppearanceButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,35 @@ class NewSettingViewController: UIViewController {
         {
             purchaseCell.isHidden = true
         }
+        
+        
+        var seeInstructionCount = 0
+        
+        if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "seeWidgetInstruction") as? Int
+        {
+            
+            if counter != nil
+            {
+                seeInstructionCount = counter
+                //old user
+                print("counter is \(counter)")
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set((counter + 1), forKey: "seeWidgetInstruction")
+            }else
+            {
+                //new user
+                print("counter is nil")
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(1, forKey: "seeWidgetInstruction")
+            }
+        }
+        
+        if global_counter > 5 && seeInstructionCount < 20
+        {
+            instructionsForOldUsers.isHidden = false
+        }else
+        {
+            instructionsForOldUsers.isHidden = true
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

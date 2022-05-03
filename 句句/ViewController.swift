@@ -17,6 +17,7 @@ import FirebaseAnalytics
 import PopupDialog
 
 var global_quote: String = ""
+var global_counter = 0
 
 class ViewController: UIViewController, MessagingDelegate {
     
@@ -296,6 +297,7 @@ class ViewController: UIViewController, MessagingDelegate {
             
             if counter != nil
             {
+                global_counter = counter
                 //old user
                 print("counter is \(counter)")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set((counter + 1), forKey: "open_app_count")
@@ -315,6 +317,7 @@ class ViewController: UIViewController, MessagingDelegate {
                     
                     trial_Button.isHidden = false
                 }
+                
                 
                 
             }else
