@@ -163,6 +163,8 @@ class ViewController: UIViewController, MessagingDelegate {
                                 // Fallback on earlier versions
                             }
                             checkIfBookmarked()
+                            
+                            
                         }
                     } else {
                         alertViewHandler().control(title: "無法更新語錄", body: "請確認手機是否連結到網路", iconText: "❗️")
@@ -196,6 +198,7 @@ class ViewController: UIViewController, MessagingDelegate {
                 //   self.hiddenAuthorName.text = A
                 global_quote = frontQuote.text!
                 checkIfBookmarked()
+                
             }
         }
         
@@ -246,8 +249,10 @@ class ViewController: UIViewController, MessagingDelegate {
         
         print("view will appear called")
         
-        prepareView()
         loadNewQuotes()
+        
+        prepareView()
+        
         
         //downloadFlowerImage()
         //UI

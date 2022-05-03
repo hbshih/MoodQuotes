@@ -148,6 +148,12 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
                         } else {
                             // Fallback on earlier versions
                         }
+                        self.dismiss(animated: true) {
+                            global_paid_user = true
+                            print("dismiss view")
+                            alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
+                            self.presentingViewController?.viewWillAppear(true)
+                        }
                     }else
                     {
                         
@@ -162,13 +168,14 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
                         } else {
                             // Fallback on earlier versions
                         }
+                        
+                        self.dismiss(animated: true) {
+                            global_paid_user = true
+                            print("dismiss view")
+                            alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
+                            self.presentingViewController?.viewWillAppear(true)
+                        }
                     }
-                }
-                self.dismiss(animated: true) {
-                    global_paid_user = true
-                    print("dismiss view")
-                    alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
-                    self.presentingViewController?.viewWillAppear(true)
                 }
             }
         }
