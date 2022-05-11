@@ -25,10 +25,6 @@ struct Display_Font
     {
        // if let array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
         
-        UIFont.familyNames.forEach({ familyName in
-            let fontNames = UIFont.fontNames(forFamilyName: familyName)
-            print(familyName, fontNames)
-        })
         
         if let font = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "userFont")
         {
@@ -47,11 +43,6 @@ struct Display_Font
        // return Font.custom(selected_font, size: CGFloat(font_size))
             
         // if let array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
-         
-         UIFont.familyNames.forEach({ familyName in
-             let fontNames = UIFont.fontNames(forFamilyName: familyName)
-             print(familyName, fontNames)
-         })
          
          if let font = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "userFont")
          {

@@ -72,7 +72,7 @@ class NewSettingViewController: UIViewController {
             }
         }
         
-        if global_counter > 5 && seeInstructionCount < 20
+        if appVersionNumberHandler().hasPreviousVersionInRecord() && seeInstructionCount < 20
         {
             instructionsForOldUsers.isHidden = false
         }else

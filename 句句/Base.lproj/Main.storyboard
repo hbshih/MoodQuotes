@@ -373,12 +373,26 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ix-GZ-rSU">
                                                 <rect key="frame" x="0.0" y="51" width="350" height="120"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko1-0S-tIj">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko1-0S-tIj">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="120"/>
-                                                        <string key="text">人生是一場兵荒馬亂，
-你是我的劫後餘生。</string>
-                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="22"/>
-                                                        <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment>
+                                                                <string key="content">人生是一場兵荒馬亂，
+</string>
+                                                                <attributes>
+                                                                    <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="22" name="jf-openhuninn-1.1"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="你是我的劫後餘生。">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="22" name="jf-openhuninn-1.1"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.25" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1566,14 +1580,21 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share_frame" translatesAutoresizingMaskIntoConstraints="NO" id="AhN-FD-EQ4">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="382"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="語錄載入中" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvY-7V-sUY">
-                                                        <rect key="frame" x="24" y="179" width="310" height="24"/>
-                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
-                                                        <color key="textColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvY-7V-sUY">
+                                                        <rect key="frame" x="24" y="176" width="310" height="30"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="語錄載入中">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="24" name="jf-openhuninn-1.1"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.25" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="載入中" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-yL-qjM">
-                                                        <rect key="frame" x="24" y="223" width="334" height="16"/>
+                                                        <rect key="frame" x="24" y="226" width="334" height="16"/>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="16"/>
                                                         <color key="textColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -4292,8 +4313,8 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Md-sC-qsK"/>
-        <segue reference="csP-yn-kmL"/>
-        <segue reference="OPy-tA-N0Q"/>
+        <segue reference="1c7-Jz-p97"/>
+        <segue reference="pIM-gP-oXb"/>
         <segue reference="hS7-Sl-5ah"/>
         <segue reference="gb2-6r-Z9B"/>
         <segue reference="1Gl-uz-PMa"/>

@@ -134,7 +134,7 @@ class ViewController: UIViewController, MessagingDelegate {
     
     @objc func loadNewQuotes() {
         // comment out for testing purpose
-        if SyncAppQuotes().checkIfUpdate() || self.frontQuote.text == "點開查看今日給你的話吧"
+        if SyncAppQuotes().checkIfUpdate() || self.frontQuote.text == "點開查看今日給你的話吧" || self.frontQuote.text == "今日沒有更新"
         {
             // Get From API
             DispatchQueue.main.async {
