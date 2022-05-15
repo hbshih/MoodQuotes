@@ -38,7 +38,7 @@ struct MediumWidget_FlowerProvider: TimelineProvider {
          print("update widget")
             
             DispatchQueue.main.async {
-                let entry = MediumWidget_FlowerEntry(date: Date(), quote: Quote(quote: "點開查看今日給你的話吧", author: "點開查看"), flowerImage: UIImage(named: "noun_seeds_184642")!, flowerName: "我是種子", flowerMeaning: "查看花語")
+                let entry = MediumWidget_FlowerEntry(date: Date(), quote: Quote(quote: "點開查看今日給你的話吧", author: "點開查看"), flowerImage: UIImage(named: "noun_seeds_184642")!, flowerName: "我是種子", flowerMeaning: "點開查看今日屬於你的植物和花語")
                 let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
                 flowerHandler().storeImage(image: UIImage(named: "noun_seeds_184642")!, forKey: "FlowerImage", withStorageType: .userDefaults)
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.flowerName, forKey: "FlowerName")
@@ -82,7 +82,9 @@ struct MediumWidget_FlowerProvider: TimelineProvider {
             
             FlowerImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "flower_10_babys breath_滿天星")!
             FlowerName = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName") ?? "滿天星"
-            FlowerMeaning = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerMeaning") ?? "升級完整版"
+            
+            FlowerMeaning = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerMeaning") ?? "升級完整版才看得見花語"
+
             let entry = MediumWidget_FlowerEntry(date: Date(), quote: Quote(quote: Q, author: A), flowerImage: FlowerImage, flowerName: FlowerName, flowerMeaning: FlowerMeaning)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
             completion(timeline)

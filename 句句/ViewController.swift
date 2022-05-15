@@ -182,7 +182,7 @@ class ViewController: UIViewController, MessagingDelegate {
             let A: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "Author")!
             let FlowerImage: UIImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "flower_10_babys breath_滿天星") as! UIImage
             let FlowerName: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName") ?? "滿天星"
-            let FlowerMeaningString: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerMeaning") ?? "滿天星"
+            let FlowerMeaningString: String = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerMeaning") ?? "滿天星的花語是思念、青春、夢境、真心喜歡。"
             
             print("flower meaning \(FlowerMeaningString)")
             
@@ -563,6 +563,7 @@ class ViewController: UIViewController, MessagingDelegate {
                         {
                             flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
                             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("升級完整版才看得見花語", forKey: "FlowerMeaning")
                             //更新Widget
                             if #available(iOS 14.0, *) {
                                 WidgetCenter.shared.reloadAllTimelines()
