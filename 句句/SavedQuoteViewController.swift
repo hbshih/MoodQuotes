@@ -9,14 +9,21 @@ import UIKit
 
 class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var savedQuotes: [String]?
+    var savedAuthor: [String]?
+    
     @IBOutlet weak var dismissTapped: UIButton!
     @IBAction func dismissTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+
+        if let array = savedQuotes as? [String]
         {
-            if array.count == 0
+            if array.contains("還沒有儲存任何語錄")
+            {
+                return 1
+            }else if array.count == 0
             {
                 return 1
             }else
@@ -33,23 +40,22 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "quote-cell", for: indexPath) as! QuoteTableViewCell
         
-            if let quote = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
-            {
-                if quote.count > 0
-                {
-                    let author = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
-                    cell.quoteLabel.text = quote[indexPath.item]
-                    cell.authorLabel.text = author![indexPath.item]
-                }else
-                {
-                    cell.quoteLabel.text = "還沒有儲存任何語錄"
-                }
-
-            }else
+        if let array = savedQuotes as? [String]
+        {
+            if array.contains("還沒有儲存任何語錄") || array.count == 0
             {
                 cell.quoteLabel.text = "還沒有儲存任何語錄"
+                cell.authorLabel.text = ""
+            }else
+            {
+                cell.quoteLabel.text = savedQuotes![indexPath.item]
+                cell.authorLabel.text = savedAuthor![indexPath.item]
             }
-            
+        }else
+        {
+            cell.textLabel!.text = "還沒有儲存任何語錄"
+            cell.detailTextLabel!.text = ""
+        }
         
 
         return cell
@@ -60,6 +66,12 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        savedQuotes = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String] ?? ["還沒有儲存任何語錄"]
+        
+        savedAuthor = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String] ?? [""]
+        
+        print("quote count \(savedQuotes?.count ?? 1)")
+        print("author count \(savedAuthor?.count ?? 1)")
     }
     
 

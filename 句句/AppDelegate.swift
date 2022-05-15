@@ -14,9 +14,8 @@ import WidgetKit
 //import UXCam
 //import GoogleMobileAds
 import AppTrackingTransparency
-//import FacebookCore
-//import FBSDKCoreKit
 import SwiftyStoreKit
+import CoreData
 
 var global_paid_user = false
 var global_paid_price = "$120"
@@ -26,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        //Migrating data from userdefaults to Coredata
+        
         
         global_paid_user = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isPaidUser")
         

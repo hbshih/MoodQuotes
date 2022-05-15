@@ -9,10 +9,20 @@ import UIKit
 import FirebaseAnalytics
 
 class SavedQuoteViewControllerTableViewController: UITableViewController {
+    
+    var savedQuotes: [String]?
+    var savedAuthor: [String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        savedQuotes = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String] ?? ["還沒有儲存任何語錄"]
+        
+        savedAuthor = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String] ?? [""]
+        
+        print("quote count \(savedQuotes?.count ?? 1)")
+        print("author count \(savedAuthor?.count ?? 1)")
+        
         self.tableView.register(CollectedQuoteTableViewCell.self, forCellReuseIdentifier: "savedQuoteCell")
         tableView.delegate = self
         tableView.dataSource = self
@@ -25,14 +35,17 @@ class SavedQuoteViewControllerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        if let array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+        if let array = savedQuotes as? [String]
         {
-            if array.count == 0
+            if array.contains("還沒有儲存任何語錄")
+            {
+                return 1
+            }else if array.count == 0
             {
                 return 1
             }else
             {
-                return array.count
+                return array.count - 1
             }
         }else
         {
@@ -51,23 +64,27 @@ class SavedQuoteViewControllerTableViewController: UITableViewController {
         
         cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.numberOfLines = 0
-      
-        if let quote = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
+        
+        if let array = savedQuotes as? [String]
         {
-            if quote.count > 0
-            {
-                let author = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
-                cell.textLabel!.text = quote[indexPath.item]
-                cell.detailTextLabel!.text = author![indexPath.item]
-            }else
+            if array.contains("還沒有儲存任何語錄") || array.count == 0
             {
                 cell.textLabel!.text = "還沒有儲存任何語錄"
+                cell.detailTextLabel!.text = ""
+            }else
+            {
+                cell.textLabel!.text = array[indexPath.item]
+                cell.detailTextLabel!.text = array[indexPath.item]
             }
-
         }else
         {
             cell.textLabel!.text = "還沒有儲存任何語錄"
+            cell.detailTextLabel!.text = ""
         }
+        
+
+            
+        
         return cell
     }
     

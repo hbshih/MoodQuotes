@@ -107,6 +107,10 @@
 		B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */; };
 		B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */; };
 		B5C321D92629685D00CB530C /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C321D82629685D00CB530C /* TutorialViewController.swift */; };
+		B5C76A122830D432004DE417 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A102830D432004DE417 /* Model.xcdatamodeld */; };
+		B5C76A132830D432004DE417 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A102830D432004DE417 /* Model.xcdatamodeld */; };
+		B5C76A152830D543004DE417 /* coreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A142830D543004DE417 /* coreDataHandler.swift */; };
+		B5C76A162830D543004DE417 /* coreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A142830D543004DE417 /* coreDataHandler.swift */; };
 		B5D04910280C3F9B00E6B0C9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */; };
 		B5D6071E27FF2BBD008B19D9 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */; };
 		B5D6072127FF2C5E008B19D9 /* JuiceUI in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6072027FF2C5E008B19D9 /* JuiceUI */; };
@@ -265,6 +269,8 @@
 		B5B4978B256A6DDE00570D84 /* Onboarding_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_2ViewController.swift; sourceTree = "<group>"; };
 		B5B49791256A6F2900570D84 /* Onboarding_3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_3ViewController.swift; sourceTree = "<group>"; };
 		B5C321D82629685D00CB530C /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		B5C76A112830D432004DE417 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B5C76A142830D543004DE417 /* coreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataHandler.swift; sourceTree = "<group>"; };
 		B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B5D6072227FF315C008B19D9 /* WidgetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGroup.swift; sourceTree = "<group>"; };
 		B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Plant.swift; sourceTree = "<group>"; };
@@ -462,6 +468,8 @@
 				B54344D927F705600071E367 /* AdjustBackgroundColorViewController.swift */,
 				B54344DB27F7056F0071E367 /* AdjustFontViewController.swift */,
 				B57203452813DAF100857571 /* appVersionNumber.swift */,
+				B5C76A102830D432004DE417 /* Model.xcdatamodeld */,
+				B5C76A142830D543004DE417 /* coreDataHandler.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -830,6 +838,7 @@
 				B59E213D256756CA003A5521 /* GeegeeWidgetView.swift in Sources */,
 				B5B49786256A6B1400570D84 /* Onboarding_1ViewController.swift in Sources */,
 				B5517C79255FAFC500E134CC /* ViewController.swift in Sources */,
+				B5C76A152830D543004DE417 /* coreDataHandler.swift in Sources */,
 				B58FD31E256B737100CBDAB6 /* RatingViewController.swift in Sources */,
 				B5D6072627FF3166008B19D9 /* SmallWidget_Plant.swift in Sources */,
 				B5D6072D27FFCAC0008B19D9 /* MediumWidget_Quote.swift in Sources */,
@@ -870,6 +879,7 @@
 				B5095675256DDD380075ACE9 /* Notification.swift in Sources */,
 				B563EB8827F3F31D003D0DD9 /* DIYExampleViewController.swift in Sources */,
 				B5D6073427FFE8FD008B19D9 /* MediumWidget_Quote_3.swift in Sources */,
+				B5C76A122830D432004DE417 /* Model.xcdatamodeld in Sources */,
 				B5807EFD25678043006052E2 /* firebaseService.swift in Sources */,
 				B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */,
 				B50374CD263310B5004E2F86 /* AdMobsViewController.swift in Sources */,
@@ -902,6 +912,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C76A162830D543004DE417 /* coreDataHandler.swift in Sources */,
 				B5D6073827FFE93C008B19D9 /* LargeWidget_Full.swift in Sources */,
 				B59E213325674D13003A5521 /* Quote.swift in Sources */,
 				B5D6073527FFE8FD008B19D9 /* MediumWidget_Quote_3.swift in Sources */,
@@ -911,6 +922,7 @@
 				B5DF562F256F2C01004A24D8 /* Date.swift in Sources */,
 				B563EBA827F4017A003D0DD9 /* UpdateMood.swift in Sources */,
 				B591B1802570A0C100C389D9 /* SyncAppQuotes.swift in Sources */,
+				B5C76A132830D432004DE417 /* Model.xcdatamodeld in Sources */,
 				B58E55352629BD9E009657E0 /* flowerHandler.swift in Sources */,
 				B5056D8C2573DCB300A8E79B /* DateHelper.swift in Sources */,
 				B5D6072427FF315D008B19D9 /* WidgetGroup.swift in Sources */,
@@ -1607,6 +1619,19 @@
 			productName = JuiceUI;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B5C76A102830D432004DE417 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5C76A112830D432004DE417 /* Model.xcdatamodel */,
+			);
+			currentVersion = B5C76A112830D432004DE417 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B5517C69255FAFC400E134CC /* Project object */;
 }
