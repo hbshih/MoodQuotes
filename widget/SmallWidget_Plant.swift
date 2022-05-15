@@ -25,7 +25,7 @@ struct SmallWidget_PlantProvider: TimelineProvider {
         Analytics.logEvent("widget_got_installed", parameters: ["type": "smallwidget_plant"])
         
         print("Widget got loaded")
-        let quote = (SmallWidget_PlantEntry(date: Date(), quote: Quote(quote: "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星", author: "小王子"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "滿天星"))
+        let quote = (SmallWidget_PlantEntry(date: Date(), quote: Quote(quote: "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星", author: "小王子"), flowerImage: UIImage(named: "Bellis_perennis")!, flowerName: "雛菊"))
         completion(quote)
     }
     

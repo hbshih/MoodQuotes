@@ -111,6 +111,8 @@
 		B5C76A132830D432004DE417 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A102830D432004DE417 /* Model.xcdatamodeld */; };
 		B5C76A152830D543004DE417 /* coreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A142830D543004DE417 /* coreDataHandler.swift */; };
 		B5C76A162830D543004DE417 /* coreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A142830D543004DE417 /* coreDataHandler.swift */; };
+		B5C76A182830F046004DE417 /* MediumWidget_Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A172830F046004DE417 /* MediumWidget_Flower.swift */; };
+		B5C76A192830F046004DE417 /* MediumWidget_Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A172830F046004DE417 /* MediumWidget_Flower.swift */; };
 		B5D04910280C3F9B00E6B0C9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */; };
 		B5D6071E27FF2BBD008B19D9 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */; };
 		B5D6072127FF2C5E008B19D9 /* JuiceUI in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6072027FF2C5E008B19D9 /* JuiceUI */; };
@@ -271,6 +273,7 @@
 		B5C321D82629685D00CB530C /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		B5C76A112830D432004DE417 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B5C76A142830D543004DE417 /* coreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataHandler.swift; sourceTree = "<group>"; };
+		B5C76A172830F046004DE417 /* MediumWidget_Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidget_Flower.swift; sourceTree = "<group>"; };
 		B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B5D6072227FF315C008B19D9 /* WidgetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGroup.swift; sourceTree = "<group>"; };
 		B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Plant.swift; sourceTree = "<group>"; };
@@ -509,6 +512,7 @@
 				B5D6073027FFE45A008B19D9 /* MediumWidget_Quote_2.swift */,
 				B5D6073327FFE8FD008B19D9 /* MediumWidget_Quote_3.swift */,
 				B5D6073627FFE93C008B19D9 /* LargeWidget_Full.swift */,
+				B5C76A172830F046004DE417 /* MediumWidget_Flower.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -871,6 +875,7 @@
 				B58E55342629BD9E009657E0 /* flowerHandler.swift in Sources */,
 				B5613ED1269BCC0F002EE2F4 /* SavedQuoteViewControllerTableViewController.swift in Sources */,
 				B59C53692622F1C5008BFB0A /* OnboardingStoryViewController.swift in Sources */,
+				B5C76A182830F046004DE417 /* MediumWidget_Flower.swift in Sources */,
 				B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */,
 				B5DF562E256F2C01004A24D8 /* Date.swift in Sources */,
 				B563EB9927F3FFA0003D0DD9 /* UpdateFontViewController.swift in Sources */,
@@ -927,6 +932,7 @@
 				B5056D8C2573DCB300A8E79B /* DateHelper.swift in Sources */,
 				B5D6072427FF315D008B19D9 /* WidgetGroup.swift in Sources */,
 				B552F4E0256D0449001013BA /* SyncAppWidget.swift in Sources */,
+				B5C76A192830F046004DE417 /* MediumWidget_Flower.swift in Sources */,
 				B59E20BD256698FC003A5521 /* widget.intentdefinition in Sources */,
 				B5D6073227FFE45A008B19D9 /* MediumWidget_Quote_2.swift in Sources */,
 				B5D6072B27FFB7EE008B19D9 /* SmallWidget_Date.swift in Sources */,
@@ -1116,7 +1122,7 @@
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 87;
+				CURRENT_PROJECT_VERSION = 88;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1128,7 +1134,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.3;
+				MARKETING_VERSION = 6.4;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1259,7 +1265,7 @@
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 87;
+				CURRENT_PROJECT_VERSION = 88;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1271,7 +1277,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.3;
+				MARKETING_VERSION = 6.4;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1484,7 +1490,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 87;
+				CURRENT_PROJECT_VERSION = 88;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1497,7 +1503,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 6.3;
+				MARKETING_VERSION = 6.4;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1515,7 +1521,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 87;
+				CURRENT_PROJECT_VERSION = 88;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1528,7 +1534,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 6.3;
+				MARKETING_VERSION = 6.4;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

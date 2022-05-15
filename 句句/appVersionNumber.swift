@@ -44,7 +44,7 @@ struct appVersionNumberHandler
         let defaults = UserDefaults.standard
         var array = defaults.array(forKey: "SavedIntArray")  as? [Double] ?? [Double]()
         
-        if array.contains(5.4) || array.contains(5.3) || array.contains(5.2) || array.contains(5.1) || array.contains(5.0) || array.contains(4.9) || array.contains(4.8) || array.contains(4.7)
+        if !array.contains(6.0) || !array.contains(6.1) || !array.contains(6.2) || !array.contains(6.3) || !array.contains(6.4)
         {
             return true
         }else

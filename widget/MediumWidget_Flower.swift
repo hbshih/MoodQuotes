@@ -11,24 +11,24 @@ import Firebase
 import FirebaseUI
 import FirebaseAnalytics
 
-struct MediumWidget_QuoteProvider: TimelineProvider {
+struct MediumWidget_FlowerProvider: TimelineProvider {
     
-    func placeholder(in context: Context) -> MediumWidget_QuoteEntry {
+    func placeholder(in context: Context) -> MediumWidget_FlowerEntry {
         print("Widget got loaded")
-        return (MediumWidget_QuoteEntry(date: Date(), quote: Quote(quote: "asdf", author: "adsf"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "asfd"))
+        return (MediumWidget_FlowerEntry(date: Date(), quote: Quote(quote: "asdf", author: "adsf"), flowerImage: UIImage(named: "flower_10_babys breath_滿天星")!, flowerName: "asfd", flowerMeaning: "花語"))
     }
     
     
-    func getSnapshot(in context: Context, completion: @escaping (MediumWidget_QuoteEntry) -> Void) {
+    func getSnapshot(in context: Context, completion: @escaping (MediumWidget_FlowerEntry) -> Void) {
         
     
-        Analytics.logEvent("widget_got_installed", parameters: ["type": "mediumwidget_quote"])
+        Analytics.logEvent("widget_got_installed", parameters: ["type": "MediumWidget_Flower"])
         print("Widget got loaded")
-        let quote = (MediumWidget_QuoteEntry(date: Date(), quote: Quote(quote: "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星", author: "小王子"), flowerImage: UIImage(named: "Bellis_perennis")!, flowerName: "雛菊"))
+        let quote = (MediumWidget_FlowerEntry(date: Date(), quote: Quote(quote: "星星發亮是為了讓每一個人有一天都能找到屬於自己的星星", author: "小王子"), flowerImage: UIImage(named: "Bellis_perennis")!, flowerName: "雛菊", flowerMeaning: "雛菊的花語：不能告白的隱忍的愛、深藏在心底的愛"))
         completion(quote)
     }
     
-    func getTimeline(in context: Context, completion: @escaping (Timeline<MediumWidget_QuoteEntry>) -> Void) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<MediumWidget_FlowerEntry>) -> Void) {
         let currentDate = Date()
         var refreshDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
         var quoteInfo: [Quote]?
@@ -38,10 +38,11 @@ struct MediumWidget_QuoteProvider: TimelineProvider {
          print("update widget")
             
             DispatchQueue.main.async {
-                let entry = MediumWidget_QuoteEntry(date: Date(), quote: Quote(quote: "點開查看今日給你的話吧", author: "點開查看"), flowerImage: UIImage(named: "noun_seeds_184642")!, flowerName: "我是種子")
+                let entry = MediumWidget_FlowerEntry(date: Date(), quote: Quote(quote: "點開查看今日給你的話吧", author: "點開查看"), flowerImage: UIImage(named: "noun_seeds_184642")!, flowerName: "我是種子", flowerMeaning: "查看花語")
                 let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
                 flowerHandler().storeImage(image: UIImage(named: "noun_seeds_184642")!, forKey: "FlowerImage", withStorageType: .userDefaults)
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.flowerName, forKey: "FlowerName")
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.flowerMeaning, forKey: "FlowerName")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.quote.quote, forKey: "Quote")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.quote.author, forKey: "Author")
                 
@@ -77,10 +78,12 @@ struct MediumWidget_QuoteProvider: TimelineProvider {
             
             var FlowerImage: UIImage = UIImage(named: "flower_10_babys breath_滿天星")!
             var FlowerName: String
+            var FlowerMeaning: String
             
             FlowerImage = flowerHandler().retrieveImage(forKey: "FlowerImage", inStorageType: .userDefaults) ?? UIImage(named: "flower_10_babys breath_滿天星")!
             FlowerName = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerName") ?? "滿天星"
-            let entry = MediumWidget_QuoteEntry(date: Date(), quote: Quote(quote: Q, author: A), flowerImage: FlowerImage, flowerName: FlowerName)
+            FlowerMeaning = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "FlowerMeaning") ?? "升級完整版"
+            let entry = MediumWidget_FlowerEntry(date: Date(), quote: Quote(quote: Q, author: A), flowerImage: FlowerImage, flowerName: FlowerName, flowerMeaning: FlowerMeaning)
             let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
             completion(timeline)
         }
@@ -89,14 +92,15 @@ struct MediumWidget_QuoteProvider: TimelineProvider {
     }
 }
 
-struct MediumWidget_QuoteEntry: TimelineEntry {
+struct MediumWidget_FlowerEntry: TimelineEntry {
     var date: Date
     let quote: Quote
     let flowerImage: UIImage
     let flowerName: String
+    let flowerMeaning: String
 }
 
-struct MediumWidget_QuoteEntryView : View {
+struct MediumWidget_FlowerEntryView : View {
 
     //let emojiDetails: EmojiDetails
       
@@ -104,9 +108,11 @@ struct MediumWidget_QuoteEntryView : View {
       let date: Date
       let quote: Quote
       let flowerImage: UIImage
+    let flowerMeaning: String
       let flowerName: String
       let quoteSize: Double
       let authorSize: Double
+        
       
       var backgroundColor: UIColor{
           if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.colorForKey(key: "BackgroundColor")
@@ -130,7 +136,7 @@ struct MediumWidget_QuoteEntryView : View {
           }
           // Widget Background Image
         //  Image(uiImage: #imageLiteral(resourceName: "Webp.net-compress-image-removebg-preview.png"))
-          HStack{
+          HStack(alignment: .center){
               VStack{
                   VStack{
                       Image(uiImage: flowerImage)
@@ -139,21 +145,13 @@ struct MediumWidget_QuoteEntryView : View {
                           .frame(width: 60, height: 60)
                           .clipped()
                       .frame(width: 60, height: 60)
-                      Text(flowerName).font(Display_Font(font_size: Int(12)).getFont()).multilineTextAlignment(.center).foregroundColor(.gray)
-                      Text(date.getTodayDate).font(.system(size: 8.0)).fontWeight(.light).multilineTextAlignment(.center).foregroundColor(.gray)
                   }
               }
               
-              
-              
-              VStack{
-                  VStack{
-                      Text(quote.quote).font(Display_Font(font_size: Int(18)).getFont()).foregroundColor(.gray).multilineTextAlignment(.center).padding(.leading,8).padding(.trailing,8).minimumScaleFactor(0.5)
-                      Text(quote.author)
-                          .font(Display_Font(font_size: Int(12)).getFont())
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 5)
-                          .foregroundColor(.gray)
+              VStack(alignment: .leading, spacing: 8){
+                  VStack(alignment: .leading, spacing: 8){
+                      Text(flowerName).font(Display_Font(font_size: Int(18)).getFont()).multilineTextAlignment(.leading).foregroundColor(.gray)
+                      Text(flowerMeaning).font(Display_Font(font_size: Int(12)).getFont()).multilineTextAlignment(.leading).foregroundColor(.gray)
                   }
               }
           }
@@ -163,8 +161,8 @@ struct MediumWidget_QuoteEntryView : View {
       }
 }
 
-struct MediumWidget_Quote: Widget {
-    private let kind = "MediumWidget_Quote"
+struct MediumWidget_Flower: Widget {
+    private let kind = "MediumWidget_Flower"
     
     init() {
         FirebaseApp.configure()
@@ -186,9 +184,9 @@ struct MediumWidget_Quote: Widget {
     public var body: some WidgetConfiguration {
         StaticConfiguration(
             kind: kind,
-            provider: MediumWidget_QuoteProvider()
+            provider: MediumWidget_FlowerProvider()
         ) { entry in
-            MediumWidget_QuoteEntryView(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)       .frame(maxWidth: .infinity, maxHeight: .infinity)    // << here !!
+            MediumWidget_FlowerEntryView(date: entry.date ,quote: entry.quote, flowerImage: entry.flowerImage, flowerMeaning: entry.flowerMeaning, flowerName: entry.flowerName, quoteSize: 20, authorSize: 14)       .frame(maxWidth: .infinity, maxHeight: .infinity)    // << here !!
                 .background(Color(backgroundColor))
         }
         .supportedFamilies([.systemMedium])
@@ -197,7 +195,7 @@ struct MediumWidget_Quote: Widget {
     }
 }
 
-struct MediumWidget_Quote_Previews: PreviewProvider {
+struct MediumWidget_Flower_Previews: PreviewProvider {
     static var previews: some View {
         /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
