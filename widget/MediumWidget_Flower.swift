@@ -42,7 +42,7 @@ struct MediumWidget_FlowerProvider: TimelineProvider {
                 let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
                 flowerHandler().storeImage(image: UIImage(named: "noun_seeds_184642")!, forKey: "FlowerImage", withStorageType: .userDefaults)
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.flowerName, forKey: "FlowerName")
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.flowerMeaning, forKey: "FlowerName")
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.flowerMeaning, forKey: "FlowerMeaning")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.quote.quote, forKey: "Quote")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.quote.author, forKey: "Author")
                 

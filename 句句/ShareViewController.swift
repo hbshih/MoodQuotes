@@ -18,6 +18,7 @@ class ShareViewController: UIViewController {
     @IBOutlet weak var quote: UILabel!
     @IBOutlet weak var author: UILabel!
     @IBOutlet weak var fullView: UIView!
+    @IBOutlet weak var share_frame: UIImageView!
     var imageToShow: UIImage!
     var quoteToShow: String!
     var authorToShow: String!
@@ -42,6 +43,16 @@ class ShareViewController: UIViewController {
         {
        //     screenshotPreview.image = UIImage(named: "icon_notification")
         }
+        
+        
+        
+        if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor")
+        {
+            fullView.backgroundColor = color
+        }
+        
+        author.textColor = UIColor(red: 187/255, green: 187/255, blue: 187/255, alpha: 1.0)
+        
         //StoreKit().requ
       //  SKStoreReviewController.requestReview()
         if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
@@ -125,7 +136,7 @@ class ShareViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         print(quoteToShow)
         //stringByReplacingOccurrencesOfString(", ", withString: "\n")
-        quote.text = quoteToShow.replacingOccurrences(of: "，", with: "\n")
+        quote.text = quoteToShow.replacingOccurrences(of: "，", with: "，\n")
         author.text = authorToShow
     }
     
@@ -141,7 +152,23 @@ class ShareViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+     */
+    @IBAction func templateTapped(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 0:
+            share_frame.isHidden = false
+            author.textColor = UIColor(red: 187/255, green: 187/255, blue: 187/255, alpha: 1.0)
+        case 1:
+            share_frame.isHidden = true
+            author.textColor = UIColor(red: 50/255, green: 50/255, blue: 50/255, alpha: 1.0)
+        default:
+            share_frame.isHidden = false
+        }
+        
+    }
+    
+     
     @IBOutlet weak var saveToAlbum: UIImageView!
     
     func takeScreenshot(of view: UIView) -> UIImage {
