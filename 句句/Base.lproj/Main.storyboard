@@ -2891,17 +2891,17 @@
             <objects>
                 <viewController id="vyl-c7-Mf0" customClass="TutorialViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owX-6V-3AJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1446"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtw-l1-1Wq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1402"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-Np-Gnd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1434.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2043.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="9rW-Mh-55K">
-                                                <rect key="frame" x="16" y="16" width="382" height="1257.5"/>
+                                                <rect key="frame" x="16" y="16" width="382" height="1791"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzp-e3-txs">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
@@ -2934,16 +2934,33 @@
                                                             <constraint firstAttribute="bottom" secondItem="bJ5-C5-c7B" secondAttribute="bottom" constant="5" id="QZA-dL-BDG"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVQ-tP-kZ7">
-                                                        <rect key="frame" x="0.0" y="76" width="382" height="38.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="讓手機桌面變得充滿句子和語錄的方法 👇" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVQ-tP-kZ7">
+                                                        <rect key="frame" x="0.0" y="76" width="382" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="promo_image_widget" translatesAutoresizingMaskIntoConstraints="NO" id="bpK-XX-bzw">
+                                                        <rect key="frame" x="0.0" y="127.5" width="382" height="450"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="450" id="Pkx-Po-4NK"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5I-s9-4dj">
+                                                        <rect key="frame" x="0.0" y="609.5" width="382" height="38.5"/>
                                                         <string key="text">1. 回到主頁面後，選個空白的地方長按。
 App們將會開始抖動。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 1" translatesAutoresizingMaskIntoConstraints="NO" id="bpK-XX-bzw">
-                                                        <rect key="frame" x="0.0" y="146.5" width="382" height="137"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 1" translatesAutoresizingMaskIntoConstraints="NO" id="Sb4-Or-Cze">
+                                                        <rect key="frame" x="0.0" y="680" width="382" height="137"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -2951,13 +2968,13 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 點選螢幕左上角的 + 字" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnA-0d-Vru">
-                                                        <rect key="frame" x="0.0" y="315.5" width="382" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="849" width="382" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 2" translatesAutoresizingMaskIntoConstraints="NO" id="559-20-7I7">
-                                                        <rect key="frame" x="0.0" y="367" width="382" height="133"/>
+                                                        <rect key="frame" x="0.0" y="900.5" width="382" height="133"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -2965,7 +2982,7 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fto-LE-hwf">
-                                                        <rect key="frame" x="0.0" y="532" width="382" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="1065.5" width="382" height="38.5"/>
                                                         <string key="text">3. 在搜尋的地方搜尋「植語錄」，
 並點選句句。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -2973,7 +2990,7 @@ App們將會開始抖動。</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 3" translatesAutoresizingMaskIntoConstraints="NO" id="07a-VG-8qF">
-                                                        <rect key="frame" x="0.0" y="602.5" width="382" height="132"/>
+                                                        <rect key="frame" x="0.0" y="1136" width="382" height="132"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -2981,13 +2998,13 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. 選擇適當的小工具大小後，點選「加入小工具」。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V3-aE-aCo">
-                                                        <rect key="frame" x="0.0" y="766.5" width="382" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="1300" width="382" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 4" translatesAutoresizingMaskIntoConstraints="NO" id="3zW-xf-dtR">
-                                                        <rect key="frame" x="0.0" y="818" width="382" height="128"/>
+                                                        <rect key="frame" x="0.0" y="1351.5" width="382" height="128"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -2995,7 +3012,7 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYx-71-sSi">
-                                                        <rect key="frame" x="0.0" y="978" width="382" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="1511.5" width="382" height="38.5"/>
                                                         <string key="text">5. 您可以隨意拖動小工具到任何位置，
 完成後請點選右上方「完成」。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -3003,7 +3020,7 @@ App們將會開始抖動。</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 5" translatesAutoresizingMaskIntoConstraints="NO" id="R87-mN-qAL">
-                                                        <rect key="frame" x="0.0" y="1048.5" width="382" height="209"/>
+                                                        <rect key="frame" x="0.0" y="1582" width="382" height="209"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -3031,7 +3048,7 @@ App們將會開始抖動。</string>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eA-ph-1Nd">
-                                <rect key="frame" x="16" y="1370" width="382" height="44"/>
+                                <rect key="frame" x="16" y="1390" width="382" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IzG-dl-Gov">
                                         <rect key="frame" x="131" y="0.0" width="120" height="44"/>
@@ -3090,7 +3107,7 @@ App們將會開始抖動。</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEe-9W-nDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2784.057971014493" y="-1204.0178571428571"/>
+            <point key="canvasLocation" x="-1572" y="-1556"/>
         </scene>
         <!--Purchase View Controller-->
         <scene sceneID="NJ8-ho-7mk">
@@ -4357,8 +4374,8 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Md-sC-qsK"/>
-        <segue reference="1c7-Jz-p97"/>
-        <segue reference="pIM-gP-oXb"/>
+        <segue reference="PWQ-xK-Ild"/>
+        <segue reference="7fH-0S-a6S"/>
         <segue reference="hS7-Sl-5ah"/>
         <segue reference="gb2-6r-Z9B"/>
         <segue reference="1Gl-uz-PMa"/>
@@ -4387,6 +4404,7 @@ App們將會開始抖動。</string>
         <image name="noun_instagram_3350460 (1) 1-1" width="30" height="30"/>
         <image name="onboarding-background" width="563" height="1218"/>
         <image name="promo_image" width="140" height="141"/>
+        <image name="promo_image_widget" width="1125" height="1471"/>
         <image name="share_frame" width="2343" height="2343"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

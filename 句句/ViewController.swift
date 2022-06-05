@@ -374,7 +374,7 @@ class ViewController: UIViewController, MessagingDelegate {
             var array = defaults.array(forKey: "SavedIntArray")  as? [Double] ?? [Double]()
             print("version list \(array)")
             
-            if !array.contains(6.0) || !array.contains(6.1) || !array.contains(6.2) || !array.contains(6.3) || !array.contains(6.4)
+            if !array.contains(6.0) || !array.contains(6.1) || !array.contains(6.2) || !array.contains(6.3) || !array.contains(6.4) || !array.contains(6.5)
             {
                 alertViewHandler().control(title: "歡迎使用全新介面", body: "新版介面除了讓介面更為簡潔，也增加了心情紀錄、更多字體和背景、以及付費版功能，讓你在欣賞語錄的當下可以獲得更多小知識。", iconText: "😎")
             }
