@@ -27,11 +27,11 @@ class ShareViewController: UIViewController {
         super.viewDidLoad()
         
         //set UI font
-        var font = Display_Font(font_size: 24).getUIFont()
+        var font = Display_Font(font_size: 18).getUIFont()
         
         quote.font = font
         
-        font = Display_Font(font_size: 16).getUIFont()
+        font = Display_Font(font_size: 14).getUIFont()
         
         author.font = font
         

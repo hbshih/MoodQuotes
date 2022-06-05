@@ -199,8 +199,8 @@ class NotificationTrigger : NSObject {
     {
         let identifier = "dailyNotifier"
         let content = UNMutableNotificationContent()
-        content.title = "每天進步一點點吧"
-        content.body = "語錄已經更新囉！打開看看吧！"
+        content.title = "看看今日給你的話 👀"
+        content.body = "點開查看屬於你的植物與花語吧！別忘了順便記錄今天的心情！"
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = "defaultNotifier"
         
