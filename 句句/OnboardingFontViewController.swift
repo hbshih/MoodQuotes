@@ -7,6 +7,7 @@
 
 import UIKit
 import WidgetKit
+import FirebaseAnalytics
 
 class OnboardingFontViewController: UIViewController {
 
@@ -20,6 +21,8 @@ class OnboardingFontViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Analytics.logEvent("view_font_page", parameters: nil)
         
         if let color = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.colorForKey(key: "BackgroundColor")
         {
@@ -61,6 +64,8 @@ class OnboardingFontViewController: UIViewController {
         default:
             print("null")
         }
+        
+        Analytics.logEvent("font_selected", parameters: ["font": selectedFont])
     }
     
     func checkIfPayFont() -> Bool
@@ -80,6 +85,7 @@ class OnboardingFontViewController: UIViewController {
     // need to pay
     if checkIfPayFont() && !global_paid_user
     {
+        
         performSegue(withIdentifier: "purchase_segue", sender: nil)
     }else
     {
