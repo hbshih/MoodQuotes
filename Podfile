@@ -30,6 +30,8 @@ target '句句' do
   pod 'GoogleUtilities'
   pod 'Firebase/CoreOnly'
   pod 'FSCalendar'
+  
+  #pod 'Storyly'
   #pod 'Google-Mobile-Ads-SDK'
   
 

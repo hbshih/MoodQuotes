@@ -16,6 +16,7 @@ import WidgetKit
 import AppTrackingTransparency
 import SwiftyStoreKit
 import CoreData
+import Survicate
 
 var global_paid_user = false
 var global_paid_price = "$120"
@@ -178,6 +179,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //self.submitBackgroundTasks()
             
         }*/
+        SurvicateSdk.shared.initialize()
         return true
     }
     

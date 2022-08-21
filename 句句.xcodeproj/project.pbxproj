@@ -23,6 +23,8 @@
 		B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
 		B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */; };
 		B51C61A4262C001800B5C6E8 /* textDirectionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */; };
+		B5252FC128B2262B00134879 /* Storyly in Frameworks */ = {isa = PBXBuildFile; productRef = B5252FC028B2262B00134879 /* Storyly */; };
+		B5252FC828B27D3100134879 /* Survicate in Frameworks */ = {isa = PBXBuildFile; productRef = B5252FC728B27D3100134879 /* Survicate */; };
 		B54344CF27F6F2930071E367 /* alertViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54344CE27F6F2930071E367 /* alertViewHandler.swift */; };
 		B54344DA27F705600071E367 /* AdjustBackgroundColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54344D927F705600071E367 /* AdjustBackgroundColorViewController.swift */; };
 		B54344DC27F7056F0071E367 /* AdjustFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54344DB27F7056F0071E367 /* AdjustFontViewController.swift */; };
@@ -196,6 +198,7 @@
 		B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTrigger.swift; sourceTree = "<group>"; };
 		B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = I.Ngaan.ttf; sourceTree = "<group>"; };
 		B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textDirectionModifier.swift; sourceTree = "<group>"; };
+		B5252FC228B279DE00134879 /* SurveySparrowSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SurveySparrowSdk.framework; path = "../../Downloads/surveysparrow-ios-sdk-master/SurveySparrowSdk.framework"; sourceTree = "<group>"; };
 		B54344CE27F6F2930071E367 /* alertViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertViewHandler.swift; sourceTree = "<group>"; };
 		B54344D927F705600071E367 /* AdjustBackgroundColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustBackgroundColorViewController.swift; sourceTree = "<group>"; };
 		B54344DB27F7056F0071E367 /* AdjustFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustFontViewController.swift; sourceTree = "<group>"; };
@@ -302,8 +305,10 @@
 				B547A84125870B0A00938A09 /* WebKit.framework in Frameworks */,
 				B547A83F25870B0400938A09 /* SystemConfiguration.framework in Frameworks */,
 				B547A83D25870AFD00938A09 /* QuartzCore.framework in Frameworks */,
+				B5252FC128B2262B00134879 /* Storyly in Frameworks */,
 				B547A83B25870AF800938A09 /* MobileCoreServices.framework in Frameworks */,
 				B547A83925870AF100938A09 /* CoreTelephony.framework in Frameworks */,
+				B5252FC828B27D3100134879 /* Survicate in Frameworks */,
 				B547A83725870AEA00938A09 /* CoreMedia.framework in Frameworks */,
 				B547A83525870AE300938A09 /* CoreGraphics.framework in Frameworks */,
 				B5D6072127FF2C5E008B19D9 /* JuiceUI in Frameworks */,
@@ -345,6 +350,7 @@
 		37481A9DF41FAD063C5AF12C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5252FC228B279DE00134879 /* SurveySparrowSdk.framework */,
 				B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */,
 				B547A84225870B1100938A09 /* libz.tbd */,
 				B547A84025870B0A00938A09 /* WebKit.framework */,
@@ -540,6 +546,8 @@
 			packageProductDependencies = (
 				B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */,
 				B5D6072027FF2C5E008B19D9 /* JuiceUI */,
+				B5252FC028B2262B00134879 /* Storyly */,
+				B5252FC728B27D3100134879 /* Survicate */,
 			);
 			productName = "句句";
 			productReference = B5517C71255FAFC500E134CC /* 句句.app */;
@@ -638,6 +646,8 @@
 			packageReferences = (
 				B5D6071C27FF2BBD008B19D9 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
 				B5D6071F27FF2C5E008B19D9 /* XCRemoteSwiftPackageReference "JuiceUI" */,
+				B5252FBF28B2262B00134879 /* XCRemoteSwiftPackageReference "storyly-ios" */,
+				B5252FC628B27D3100134879 /* XCRemoteSwiftPackageReference "survicate-ios-sdk" */,
 			);
 			productRefGroup = B5517C72255FAFC500E134CC /* Products */;
 			projectDirPath = "";
@@ -1122,7 +1132,7 @@
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 91;
+				CURRENT_PROJECT_VERSION = 92;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1134,7 +1144,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.6;
+				MARKETING_VERSION = 6.7;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1265,7 +1275,7 @@
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 91;
+				CURRENT_PROJECT_VERSION = 92;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1277,7 +1287,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.6;
+				MARKETING_VERSION = 6.7;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1490,7 +1500,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 91;
+				CURRENT_PROJECT_VERSION = 92;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1503,7 +1513,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 6.6;
+				MARKETING_VERSION = 6.7;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1521,7 +1531,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 91;
+				CURRENT_PROJECT_VERSION = 92;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1534,7 +1544,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 6.6;
+				MARKETING_VERSION = 6.7;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1595,6 +1605,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B5252FBF28B2262B00134879 /* XCRemoteSwiftPackageReference "storyly-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Netvent/storyly-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		B5252FC628B27D3100134879 /* XCRemoteSwiftPackageReference "survicate-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Survicate/survicate-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		B5D6071C27FF2BBD008B19D9 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
@@ -1614,6 +1640,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B5252FC028B2262B00134879 /* Storyly */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5252FBF28B2262B00134879 /* XCRemoteSwiftPackageReference "storyly-ios" */;
+			productName = Storyly;
+		};
+		B5252FC728B27D3100134879 /* Survicate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5252FC628B27D3100134879 /* XCRemoteSwiftPackageReference "survicate-ios-sdk" */;
+			productName = Survicate;
+		};
 		B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B5D6071C27FF2BBD008B19D9 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;

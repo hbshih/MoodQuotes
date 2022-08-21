@@ -15,11 +15,13 @@ import CoreText
 import StoreKit
 import FirebaseAnalytics
 import PopupDialog
+import Storyly
+import Survicate
 
 var global_quote: String = ""
 var global_counter = 0
 
-class ViewController: UIViewController, MessagingDelegate {
+class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     
     @IBOutlet weak var moodButton: UIButton!
     @IBOutlet weak var twDayLabel: UILabel!
@@ -129,6 +131,20 @@ class ViewController: UIViewController, MessagingDelegate {
             // Button_bookmark.setBackgroundImage(UIImage(named: "icon_unBookmarked"), for: .normal)
         }
     
+    }
+    
+    func storylyLoaded(_ storylyView: Storyly.StorylyView,
+                       storyGroupList: [Storyly.StoryGroup],
+                       dataSource: StorylyDataSource)
+    {
+        print("Storyly Executed")
+    }
+    
+    func storylyLoadFailed(_ storylyView: Storyly.StorylyView,
+                           errorMessage: String)
+    {
+        print("Storyly Failed")
+        print(errorMessage)
     }
     
     
@@ -376,8 +392,10 @@ class ViewController: UIViewController, MessagingDelegate {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willResignActiveNotification, object: nil)
@@ -687,7 +705,10 @@ class ViewController: UIViewController, MessagingDelegate {
     }
     override func viewDidAppear(_ animated: Bool) {
         
+        SurvicateSdk.shared.invokeEvent(name: "userPressedPurchase")
+        
         checkIfBookmarked()
+        
         
         /* Comment for now --- 4/17/2021
          //If no quote saved in local & time now >= update time

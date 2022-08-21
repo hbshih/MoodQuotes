@@ -10,7 +10,6 @@ import AVKit
 import Photos
 import StoreKit
 import FirebaseAnalytics
-
 class ShareViewController: UIViewController {
 
     //@IBOutlet weak var screenshotPreview: UIImageView!
@@ -133,11 +132,17 @@ class ShareViewController: UIViewController {
         UIApplication.shared.open(URL(string:"photos-redirect://")!)
     }
     
+
+    
     override func viewDidAppear(_ animated: Bool) {
         print(quoteToShow)
         //stringByReplacingOccurrencesOfString(", ", withString: "\n")
         quote.text = quoteToShow.replacingOccurrences(of: "，", with: "，\n")
         author.text = authorToShow
+        
+        
+        //storyly
+    
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
