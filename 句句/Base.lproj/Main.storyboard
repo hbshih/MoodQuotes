@@ -3346,7 +3346,7 @@ App們將會開始抖動。</string>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title="免費試用 30 天"/>
+                                                                <state key="normal" title="開始免費試用"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <integer key="value" value="15"/>
@@ -3412,9 +3412,11 @@ App們將會開始抖動。</string>
                     </view>
                     <navigationItem key="navigationItem" id="nVe-df-RBU"/>
                     <connections>
+                        <outlet property="Pricingdescription" destination="Dwd-Rb-aIt" id="EHD-yz-dhe"/>
                         <outlet property="buttonPricingDetail" destination="9oE-y9-xZe" id="icu-aT-Jox"/>
                         <outlet property="flowerImage" destination="f60-NW-oy6" id="Pub-en-S6z"/>
                         <outlet property="policyDescription" destination="3EX-f5-qz0" id="NEQ-Yv-lBk"/>
+                        <outlet property="price_description_below" destination="g1k-hK-P3A" id="ctO-IL-Djd"/>
                         <outlet property="promoPricingDetail" destination="2aW-qf-MLG" id="qiR-Jw-dpZ"/>
                         <outlet property="purchasePageDescription" destination="Dwd-Rb-aIt" id="BJe-tW-kbp"/>
                         <outlet property="purchasePageTitle" destination="jUl-XT-5c5" id="2qK-wU-XW9"/>

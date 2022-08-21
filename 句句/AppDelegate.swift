@@ -20,6 +20,8 @@ import Survicate
 
 var global_paid_user = false
 var global_paid_price = "$120"
+var global_intro_number_of_unit = 0
+var global_intro_unit = ""
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -63,6 +65,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let priceString = product.localizedPrice!
                 global_paid_price = product.localizedPrice!
                 print("Product: \(product.localizedDescription), price: \(priceString)")
+                print("introductory number \(product.introductoryPrice?.subscriptionPeriod.numberOfUnits)")
+                
+                if let period = product.introductoryPrice?.subscriptionPeriod {
+                    print("Start your \(period.numberOfUnits) \(self.unitName(unitRawValue: period.unit.rawValue)) free trial")
+                    
+                    global_intro_number_of_unit = period.numberOfUnits
+                    global_intro_unit = self.unitName(unitRawValue: period.unit.rawValue)
+                }
+                                                      
             }
             else if let invalidProductId = result.invalidProductIDs.first {
                 print("Invalid product identifier: \(invalidProductId)")
@@ -202,6 +213,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       //  handleNotificationUpdate()
       //  task.setTaskCompleted(success: true)
        // scheduleBackgroundPokemonFetch()
+    }
+    
+    func unitName(unitRawValue:UInt) -> String {
+        switch unitRawValue {
+        case 0: return "天"
+        case 1: return "週"
+        case 2: return "個月"
+        case 3: return "年"
+        default: return ""
+        }
     }
     
     func handleNotificationUpdate()
