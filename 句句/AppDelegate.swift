@@ -17,6 +17,7 @@ import AppTrackingTransparency
 import SwiftyStoreKit
 import CoreData
 import Survicate
+import Instabug
 
 var global_paid_user = false
 var global_paid_price = "$120"
@@ -190,6 +191,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //self.submitBackgroundTasks()
             
         }*/
+        Instabug.setLocale(.chineseTaiwan)
+        Instabug.start(withToken: "eaab24b8f676bca71995b8a2c28637d8", invocationEvents: .none)
         SurvicateSdk.shared.initialize()
         return true
     }

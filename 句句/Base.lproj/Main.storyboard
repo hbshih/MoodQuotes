@@ -838,7 +838,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6rf-WF-PpK">
-                                                <rect key="frame" x="16" y="240.5" width="382" height="443.5"/>
+                                                <rect key="frame" x="16" y="240.5" width="382" height="399.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJc-Pk-rda">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -1125,14 +1125,14 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzF-5T-yE3">
-                                                        <rect key="frame" x="0.0" y="368.5" width="382" height="75"/>
-                                                        <string key="text">
-若您於 2022 年 5 月前下載句句（植語錄），之前所安裝的小工具可能會無法使用。新版的 App 新增了更多供您選擇的小工具，因此請依造原安裝步驟重新安裝小工具（亦可查看上述小工具安裝教學）。</string>
-                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="15"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcF-Hq-pf6">
+                                                        <rect key="frame" x="0.0" y="368.5" width="382" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="回報問題"/>
+                                                        <connections>
+                                                            <action selector="feedback_button:" destination="MY9-5J-sNZ" eventType="touchUpInside" id="sRf-kt-7aG"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -1171,7 +1171,6 @@
                     <navigationItem key="navigationItem" id="s1p-ci-WBx"/>
                     <connections>
                         <outlet property="fontAppearanceButton" destination="qpw-bx-tI6" id="ysO-Wz-rKt"/>
-                        <outlet property="instructionsForOldUsers" destination="lzF-5T-yE3" id="yqe-w5-1Hf"/>
                         <outlet property="notificationToggle" destination="2zX-vq-5UR" id="TJe-wx-PaF"/>
                         <outlet property="purchaseCell" destination="enO-CQ-Fao" id="hC2-DD-JwI"/>
                         <outlet property="timePicker" destination="jYg-TR-ck8" id="fwK-KC-s7l"/>
@@ -4376,8 +4375,8 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Md-sC-qsK"/>
-        <segue reference="PWQ-xK-Ild"/>
-        <segue reference="pIM-gP-oXb"/>
+        <segue reference="csP-yn-kmL"/>
+        <segue reference="OPy-tA-N0Q"/>
         <segue reference="hS7-Sl-5ah"/>
         <segue reference="gb2-6r-Z9B"/>
         <segue reference="1Gl-uz-PMa"/>

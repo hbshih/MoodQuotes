@@ -10,16 +10,19 @@ import PopupDialog
 import SwiftyStoreKit
 import SwiftMessages
 import UserNotifications
+import Instabug
 
 class NewSettingViewController: UIViewController {
 
     @IBOutlet weak var purchaseCell: UIView!
     @IBOutlet weak var notificationToggle: UISwitch!
     @IBOutlet weak var timePicker: UIDatePicker!
-    @IBOutlet weak var instructionsForOldUsers: UILabel!
+    
     @IBOutlet weak var fontAppearanceButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Instabug.setLocale(.chineseTaiwan)
 
         // Do any additional setup after loading the view.
         
@@ -72,14 +75,10 @@ class NewSettingViewController: UIViewController {
             }
         }
         
-        if appVersionNumberHandler().hasPreviousVersionInRecord() && seeInstructionCount < 20
-        {
-            instructionsForOldUsers.isHidden = false
-        }else
-        {
-            instructionsForOldUsers.isHidden = true
-        }
         
+    }
+    @IBAction func feedback_button(_ sender: Any) {
+        Instabug.show()
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -87,6 +87,7 @@
 		B591B18A2570BE6200C389D9 /* HandleNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B591B1892570BE6200C389D9 /* HandleNewUserViewController.swift */; };
 		B594C19B27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */; };
 		B594C19C27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B594C19A27EC480A009895D7 /* jf-openhuninn-1.1.ttf */; };
+		B598C86A28B32196002555AF /* Instabug in Frameworks */ = {isa = PBXBuildFile; productRef = B598C86928B32196002555AF /* Instabug */; };
 		B59C53692622F1C5008BFB0A /* OnboardingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C53682622F1C5008BFB0A /* OnboardingStoryViewController.swift */; };
 		B59E20B4256698FB003A5521 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205425669862003A5521 /* WidgetKit.framework */; };
 		B59E20B5256698FB003A5521 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59E205625669862003A5521 /* SwiftUI.framework */; };
@@ -305,6 +306,7 @@
 				B547A84125870B0A00938A09 /* WebKit.framework in Frameworks */,
 				B547A83F25870B0400938A09 /* SystemConfiguration.framework in Frameworks */,
 				B547A83D25870AFD00938A09 /* QuartzCore.framework in Frameworks */,
+				B598C86A28B32196002555AF /* Instabug in Frameworks */,
 				B5252FC128B2262B00134879 /* Storyly in Frameworks */,
 				B547A83B25870AF800938A09 /* MobileCoreServices.framework in Frameworks */,
 				B547A83925870AF100938A09 /* CoreTelephony.framework in Frameworks */,
@@ -548,6 +550,7 @@
 				B5D6072027FF2C5E008B19D9 /* JuiceUI */,
 				B5252FC028B2262B00134879 /* Storyly */,
 				B5252FC728B27D3100134879 /* Survicate */,
+				B598C86928B32196002555AF /* Instabug */,
 			);
 			productName = "句句";
 			productReference = B5517C71255FAFC500E134CC /* 句句.app */;
@@ -648,6 +651,7 @@
 				B5D6071F27FF2C5E008B19D9 /* XCRemoteSwiftPackageReference "JuiceUI" */,
 				B5252FBF28B2262B00134879 /* XCRemoteSwiftPackageReference "storyly-ios" */,
 				B5252FC628B27D3100134879 /* XCRemoteSwiftPackageReference "survicate-ios-sdk" */,
+				B598C86828B32196002555AF /* XCRemoteSwiftPackageReference "Instabug-SP" */,
 			);
 			productRefGroup = B5517C72255FAFC500E134CC /* Products */;
 			projectDirPath = "";
@@ -1621,6 +1625,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		B598C86828B32196002555AF /* XCRemoteSwiftPackageReference "Instabug-SP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Instabug/Instabug-SP";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
 		B5D6071C27FF2BBD008B19D9 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
@@ -1649,6 +1661,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B5252FC628B27D3100134879 /* XCRemoteSwiftPackageReference "survicate-ios-sdk" */;
 			productName = Survicate;
+		};
+		B598C86928B32196002555AF /* Instabug */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B598C86828B32196002555AF /* XCRemoteSwiftPackageReference "Instabug-SP" */;
+			productName = Instabug;
 		};
 		B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */ = {
 			isa = XCSwiftPackageProductDependency;
