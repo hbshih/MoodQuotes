@@ -19,6 +19,8 @@
 		B509566F256DDCC30075ACE9 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509566E256DDCC30075ACE9 /* DateHelper.swift */; };
 		B5095675256DDD380075ACE9 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5095674256DDD380075ACE9 /* Notification.swift */; };
 		B509567B256DDD6B0075ACE9 /* NotificationTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */; };
+		B510EE0F28C48458004EC8C6 /* ChenYuluoyan-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B510EE0E28C48458004EC8C6 /* ChenYuluoyan-Thin.ttf */; };
+		B510EE1028C48458004EC8C6 /* ChenYuluoyan-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B510EE0E28C48458004EC8C6 /* ChenYuluoyan-Thin.ttf */; };
 		B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
 		B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
 		B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */; };
@@ -197,6 +199,7 @@
 		B509566E256DDCC30075ACE9 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		B5095674256DDD380075ACE9 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTrigger.swift; sourceTree = "<group>"; };
+		B510EE0E28C48458004EC8C6 /* ChenYuluoyan-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChenYuluoyan-Thin.ttf"; sourceTree = "<group>"; };
 		B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = I.Ngaan.ttf; sourceTree = "<group>"; };
 		B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textDirectionModifier.swift; sourceTree = "<group>"; };
 		B5252FC228B279DE00134879 /* SurveySparrowSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SurveySparrowSdk.framework; path = "../../Downloads/surveysparrow-ios-sdk-master/SurveySparrowSdk.framework"; sourceTree = "<group>"; };
@@ -419,6 +422,7 @@
 			children = (
 				B5613EC6269BCBF6002EE2F4 /* SavedQuoteViewController.swift */,
 				B5A32A24262C1F590057454E /* I-PenCrane-B-2.ttf */,
+				B510EE0E28C48458004EC8C6 /* ChenYuluoyan-Thin.ttf */,
 				B59E21C125676F85003A5521 /* GoogleService-Info.plist */,
 				B59E216625675E65003A5521 /* 句句.entitlements */,
 				B5517C74255FAFC500E134CC /* AppDelegate.swift */,
@@ -681,6 +685,7 @@
 				B506EBC325622FF800372198 /* UpdateTimeTableViewCell.xib in Resources */,
 				B503750026331882004E2F86 /* NativeAdView.xib in Resources */,
 				B563EBA927F4017A003D0DD9 /* UpdateMoodViewController.xib in Resources */,
+				B510EE0F28C48458004EC8C6 /* ChenYuluoyan-Thin.ttf in Resources */,
 				B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
 				B5582D4527A59A6A00D9F0E0 /* GenRyuMin-M.ttc in Resources */,
 				B5517C81255FAFC600E134CC /* LaunchScreen.storyboard in Resources */,
@@ -711,6 +716,7 @@
 				B563EB9F27F3FFA5003D0DD9 /* UpdateFontViewController.xib in Resources */,
 				B5A32A26262C1F590057454E /* I-PenCrane-B-2.ttf in Resources */,
 				B594C19C27EC480A009895D7 /* jf-openhuninn-1.1.ttf in Resources */,
+				B510EE1028C48458004EC8C6 /* ChenYuluoyan-Thin.ttf in Resources */,
 				B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */,
 				B59E21C325676F85003A5521 /* GoogleService-Info.plist in Resources */,
 				B5582D4627A59A6A00D9F0E0 /* GenRyuMin-M.ttc in Resources */,
@@ -1136,7 +1142,7 @@
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 94;
+				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1279,7 +1285,7 @@
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 94;
+				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1504,7 +1510,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 94;
+				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1535,7 +1541,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 94;
+				CURRENT_PROJECT_VERSION = 95;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

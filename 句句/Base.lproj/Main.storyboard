@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="ChenYuluoyan-Thin.ttf">
+            <string>ChenYuluoyan-Thin</string>
+        </array>
         <array key="GenRyuMin-M.ttc">
             <string>GenRyuMinTW-M</string>
         </array>
@@ -2129,7 +2132,7 @@
                                                                     <constraint firstItem="peU-XR-wfv" firstAttribute="top" secondItem="dSj-Vc-sNf" secondAttribute="top" id="RCM-tz-6lH"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPl-5C-Pdf">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免費字體" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPl-5C-Pdf">
                                                                 <rect key="frame" x="0.0" y="98.5" width="374" height="14"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2233,7 +2236,7 @@
                                                                     <constraint firstAttribute="height" constant="40" id="8Mo-DU-Kye"/>
                                                                 </constraints>
                                                             </stackView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z2-sQ-IQc">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付費字體" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z2-sQ-IQc">
                                                                 <rect key="frame" x="0.0" y="215" width="374" height="14"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3478,7 +3481,7 @@ App們將會開始抖動。</string>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv0-Le-JYC">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免費字體" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv0-Le-JYC">
                                                                                 <rect key="frame" x="0.0" y="40" width="374" height="13.5"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3490,7 +3493,7 @@ App們將會開始抖動。</string>
                                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmt-fP-4MB">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="60"/>
                                                                                         <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
-                                                                                        <state key="normal" title="南港">
+                                                                                        <state key="normal" title="南港車站">
                                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         </state>
                                                                                         <connections>
@@ -3500,7 +3503,7 @@ App們將會開始抖動。</string>
                                                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyX-zT-b7X">
                                                                                         <rect key="frame" x="187" y="0.0" width="187" height="60"/>
                                                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
-                                                                                        <state key="normal" title="蘭陽">
+                                                                                        <state key="normal" title="蘭陽平原">
                                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         </state>
                                                                                         <connections>
@@ -3512,7 +3515,7 @@ App們將會開始抖動。</string>
                                                                                     <constraint firstAttribute="height" constant="60" id="v20-Eq-t3e"/>
                                                                                 </constraints>
                                                                             </stackView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付費版" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR2-4S-blz">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付費字體" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR2-4S-blz">
                                                                                 <rect key="frame" x="0.0" y="145.5" width="374" height="12.5"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3522,9 +3525,9 @@ App們將會開始抖動。</string>
                                                                                 <rect key="frame" x="0.0" y="174" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdU-tY-tmP">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="60"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="60"/>
                                                                                         <fontDescription key="fontDescription" name="JasonHandwriting5" family="JasonHandwriting5" pointSize="17"/>
-                                                                                        <state key="normal" title="北投">
+                                                                                        <state key="normal" title="北投溫泉">
                                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         </state>
                                                                                         <connections>
@@ -3532,9 +3535,9 @@ App們將會開始抖動。</string>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdV-NQ-iRz">
-                                                                                        <rect key="frame" x="124.5" y="0.0" width="125" height="60"/>
+                                                                                        <rect key="frame" x="93.5" y="0.0" width="93.5" height="60"/>
                                                                                         <fontDescription key="fontDescription" name="I.Ngaan" family="I.Ngaan" pointSize="17"/>
-                                                                                        <state key="normal" title="新竹">
+                                                                                        <state key="normal" title="新竹貢丸">
                                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         </state>
                                                                                         <connections>
@@ -3542,13 +3545,23 @@ App們將會開始抖動。</string>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXA-xb-KXt">
-                                                                                        <rect key="frame" x="249.5" y="0.0" width="124.5" height="60"/>
+                                                                                        <rect key="frame" x="187" y="0.0" width="93.5" height="60"/>
                                                                                         <fontDescription key="fontDescription" name="GenRyuMinTW-M" family="GenRyuMin TW" pointSize="17"/>
-                                                                                        <state key="normal" title="安平">
+                                                                                        <state key="normal" title="安平古堡">
                                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         </state>
                                                                                         <connections>
                                                                                             <action selector="fontSelected:" destination="xvt-t3-Ix3" eventType="touchUpInside" id="fJx-wA-QN8"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfA-8w-sRE">
+                                                                                        <rect key="frame" x="280.5" y="0.0" width="93.5" height="60"/>
+                                                                                        <fontDescription key="fontDescription" name="ChenYuluoyan-Thin" family="Chenyuluoyan" pointSize="21"/>
+                                                                                        <state key="normal" title="辰宇落雁">
+                                                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                        <connections>
+                                                                                            <action selector="fontSelected:" destination="xvt-t3-Ix3" eventType="touchUpInside" id="URJ-3T-yIc"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                 </subviews>
@@ -4374,10 +4387,10 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Md-sC-qsK"/>
-        <segue reference="csP-yn-kmL"/>
+        <segue reference="jnJ-JQ-whF"/>
+        <segue reference="CVp-gb-ugn"/>
         <segue reference="OPy-tA-N0Q"/>
-        <segue reference="hS7-Sl-5ah"/>
+        <segue reference="qNS-Ny-zLV"/>
         <segue reference="gb2-6r-Z9B"/>
         <segue reference="1Gl-uz-PMa"/>
         <segue reference="1Hd-WS-sjP"/>

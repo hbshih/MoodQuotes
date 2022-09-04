@@ -19,7 +19,7 @@ struct Quote
 struct Display_Font
 {
     let selected_font = "I.PenCrane-B"
-    let font_size: Int
+    var font_size: Int
     
     func getUIFont() -> UIFont
     {
@@ -28,8 +28,13 @@ struct Display_Font
         
         if let font = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "userFont")
         {
+            var final_font_size = Double(font_size)
+            if font == "ChenYuluoyan-Thin"
+            {
+                final_font_size = Double(font_size) * 1.5
+            }
             print("current font \(font)")
-            return UIFont(name: font, size: CGFloat(font_size)) ?? UIFont(name: selected_font, size: CGFloat(font_size))!
+            return UIFont(name: font, size: CGFloat(final_font_size)) ?? UIFont(name: selected_font, size: CGFloat(final_font_size))!
         }
        // return UIFont.systemFont(ofSize: 30)
      //   return UIFont.systemFont(ofSize: 30)

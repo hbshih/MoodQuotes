@@ -32,10 +32,12 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>jf-liao-monospaced.ttf</string>
-		<string>qiji-combo.ttf</string>
+		<string>ChenYuluoyan-Thin.ttf</string>
 		<string>I.Ngaan.ttf</string>
 		<string>I-PenCrane-B-2.ttf</string>
+		<string>JasonHandwriting5.ttf</string>
+		<string>GenRyuMin-M.ttf</string>
+		<string>jf-openhuninn-1.1.ttf</string>
 	</array>
 </dict>
 </plist>

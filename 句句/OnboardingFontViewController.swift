@@ -61,6 +61,8 @@ class OnboardingFontViewController: UIViewController {
             selectedFont = "GenRyuMinTW-M"
         case 5:
             selectedFont = "jf-openhuninn-1.1"
+        case 6:
+            selectedFont = "ChenYuluoyan-Thin"
         default:
             print("null")
         }
@@ -110,7 +112,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? PurchaseViewController
         {
             vc.purchaseTitle = "獲得更多字體"
-            vc.purchaseDescription = "免費試用三十天，獲得更多功能"
+            vc.purchaseDescription = "免費試用七天，獲得更多功能"
         }
     }
     
