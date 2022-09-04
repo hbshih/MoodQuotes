@@ -27,6 +27,7 @@ struct WidgetGroup2: WidgetBundle {
         LargeWidget_Full()
         SmallWidget_Plant()
         SmallWidget_Date()
+        MediumWidget_OnlyQuote()
   //  MediumWidget_Quote_3()
     
     }

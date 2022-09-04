@@ -21,6 +21,8 @@
 		B509567B256DDD6B0075ACE9 /* NotificationTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */; };
 		B510EE0F28C48458004EC8C6 /* ChenYuluoyan-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B510EE0E28C48458004EC8C6 /* ChenYuluoyan-Thin.ttf */; };
 		B510EE1028C48458004EC8C6 /* ChenYuluoyan-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B510EE0E28C48458004EC8C6 /* ChenYuluoyan-Thin.ttf */; };
+		B510EE1228C4891D004EC8C6 /* MediumWidget_OnlyQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510EE1128C4891D004EC8C6 /* MediumWidget_OnlyQuote.swift */; };
+		B510EE1328C4891D004EC8C6 /* MediumWidget_OnlyQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510EE1128C4891D004EC8C6 /* MediumWidget_OnlyQuote.swift */; };
 		B51C619C262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
 		B51C619D262BF30C00B5C6E8 /* I.Ngaan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */; };
 		B51C61A3262C001800B5C6E8 /* textDirectionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */; };
@@ -200,6 +202,7 @@
 		B5095674256DDD380075ACE9 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		B509567A256DDD6B0075ACE9 /* NotificationTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTrigger.swift; sourceTree = "<group>"; };
 		B510EE0E28C48458004EC8C6 /* ChenYuluoyan-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChenYuluoyan-Thin.ttf"; sourceTree = "<group>"; };
+		B510EE1128C4891D004EC8C6 /* MediumWidget_OnlyQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidget_OnlyQuote.swift; sourceTree = "<group>"; };
 		B51C619B262BF30C00B5C6E8 /* I.Ngaan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = I.Ngaan.ttf; sourceTree = "<group>"; };
 		B51C61A2262C001800B5C6E8 /* textDirectionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textDirectionModifier.swift; sourceTree = "<group>"; };
 		B5252FC228B279DE00134879 /* SurveySparrowSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SurveySparrowSdk.framework; path = "../../Downloads/surveysparrow-ios-sdk-master/SurveySparrowSdk.framework"; sourceTree = "<group>"; };
@@ -525,6 +528,7 @@
 				B5D6073327FFE8FD008B19D9 /* MediumWidget_Quote_3.swift */,
 				B5D6073627FFE93C008B19D9 /* LargeWidget_Full.swift */,
 				B5C76A172830F046004DE417 /* MediumWidget_Flower.swift */,
+				B510EE1128C4891D004EC8C6 /* MediumWidget_OnlyQuote.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -910,6 +914,7 @@
 				B50374CD263310B5004E2F86 /* AdMobsViewController.swift in Sources */,
 				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
 				B563EBD027F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */,
+				B510EE1228C4891D004EC8C6 /* MediumWidget_OnlyQuote.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
 				B57203462813DAF100857571 /* appVersionNumber.swift in Sources */,
 				B5613EC1269BC81E002EE2F4 /* CollectedQuoteTableViewCell.swift in Sources */,
@@ -939,6 +944,7 @@
 			files = (
 				B5C76A162830D543004DE417 /* coreDataHandler.swift in Sources */,
 				B5D6073827FFE93C008B19D9 /* LargeWidget_Full.swift in Sources */,
+				B510EE1328C4891D004EC8C6 /* MediumWidget_OnlyQuote.swift in Sources */,
 				B59E213325674D13003A5521 /* Quote.swift in Sources */,
 				B5D6073527FFE8FD008B19D9 /* MediumWidget_Quote_3.swift in Sources */,
 				B59E20D8256741C3003A5521 /* GeegeeWidgetView.swift in Sources */,
