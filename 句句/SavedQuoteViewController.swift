@@ -54,7 +54,17 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
-    
+    var sharableQuote = ""
+    var sharableAuthor = ""
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let currentCell = tableView.cellForRow(at: indexPath) as! QuoteTableViewCell
+        sharableQuote = currentCell.quoteLabel!.text!
+        sharableAuthor = currentCell.authorLabel!.text!
+        
+        performSegue(withIdentifier: "shareSegue", sender: nil)
+        
+    }
     
 
     override func viewDidLoad() {
@@ -71,5 +81,18 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "shareSegue"
+        {
+            if let VC = segue.destination as? ShareViewController
+            {
+                
+                VC.quoteToShow = sharableQuote
+                VC.authorToShow = sharableAuthor
+                
+            }
+        }
+    }
 
 }

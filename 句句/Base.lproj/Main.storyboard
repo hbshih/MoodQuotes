@@ -1247,13 +1247,13 @@
                                                     <rect key="frame" x="24" y="16" width="366" height="168"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reG-vf-qek">
-                                                            <rect key="frame" x="16" y="0.0" width="334" height="138"/>
+                                                            <rect key="frame" x="16" y="0.0" width="334" height="108"/>
                                                             <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
                                                             <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCO-Qk-k9O">
-                                                            <rect key="frame" x="0.0" y="138" width="366" height="30"/>
+                                                            <rect key="frame" x="0.0" y="108" width="366" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="ruL-hU-JBI"/>
                                                             </constraints>
@@ -1261,14 +1261,36 @@
                                                             <color key="textColor" red="0.79607843137254897" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEk-Ib-Isp">
+                                                            <rect key="frame" x="16" y="138" width="334" height="30"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMG-zL-ZWX">
+                                                                    <rect key="frame" x="310" y="0.0" width="24" height="30"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="qNC-sK-ydu"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
+                                                                    <color key="textColor" red="0.79607843140000001" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="AmR-vt-ZUd"/>
+                                                                <constraint firstItem="rMG-zL-ZWX" firstAttribute="centerY" secondItem="MEk-Ib-Isp" secondAttribute="centerY" id="D2J-Fv-h7L"/>
+                                                                <constraint firstAttribute="trailing" secondItem="rMG-zL-ZWX" secondAttribute="trailing" id="Hk8-A1-p8U"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="reG-vf-qek" secondAttribute="trailing" constant="16" id="IQk-me-q4x"/>
+                                                        <constraint firstItem="MEk-Ib-Isp" firstAttribute="leading" secondItem="ou0-f3-lDM" secondAttribute="leading" constant="16" id="T6T-Io-cvK"/>
                                                         <constraint firstAttribute="height" constant="480" id="chJ-iJ-1UI"/>
                                                         <constraint firstItem="CCO-Qk-k9O" firstAttribute="leading" secondItem="ou0-f3-lDM" secondAttribute="leading" id="hTK-aa-Jfc"/>
                                                         <constraint firstItem="reG-vf-qek" firstAttribute="leading" secondItem="ou0-f3-lDM" secondAttribute="leading" constant="16" id="kYf-DB-TCb"/>
                                                         <constraint firstAttribute="trailing" secondItem="CCO-Qk-k9O" secondAttribute="trailing" id="sQg-9V-212"/>
+                                                        <constraint firstAttribute="trailing" secondItem="MEk-Ib-Isp" secondAttribute="trailing" constant="16" id="vet-fu-tMV"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderUIColor">
@@ -1315,6 +1337,7 @@
                     <navigationItem key="navigationItem" id="58d-uD-E3z"/>
                     <connections>
                         <outlet property="dismissTapped" destination="61u-zt-lMb" id="Lew-cM-fhb"/>
+                        <segue destination="s5y-0N-DVP" kind="show" identifier="shareSegue" id="dTi-rb-yE8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4y-2h-1fV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4387,12 +4410,13 @@ App們將會開始抖動。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Md-sC-qsK"/>
+        <segue reference="jnJ-JQ-whF"/>
         <segue reference="NC1-IV-Pt0"/>
-        <segue reference="OPy-tA-N0Q"/>
-        <segue reference="qNS-Ny-zLV"/>
+        <segue reference="pIM-gP-oXb"/>
+        <segue reference="hS7-Sl-5ah"/>
         <segue reference="gb2-6r-Z9B"/>
-        <segue reference="4en-fv-ImW"/>
+        <segue reference="dTi-rb-yE8"/>
+        <segue reference="1Gl-uz-PMa"/>
         <segue reference="kt7-Uw-zi2"/>
         <segue reference="iy1-p0-sRk"/>
     </inferredMetricsTieBreakers>
