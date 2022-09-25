@@ -23,6 +23,7 @@ var global_paid_user = false
 var global_paid_price = "$120"
 var global_intro_number_of_unit = 0
 var global_intro_unit = ""
+var global_savedQuotes = [0:["尚未儲存任何語錄":""]]
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Migrating data from userdefaults to Coredata
         
+        //load saved quotes
+        loadAllSavedQuotes()
         
         global_paid_user = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isPaidUser")
         
@@ -195,6 +198,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Instabug.start(withToken: "eaab24b8f676bca71995b8a2c28637d8", invocationEvents: .none)
         SurvicateSdk.shared.initialize()
         return true
+    }
+    
+    func loadAllSavedQuotes(){
+        
+        if let savedQuotes = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.array(forKey: "savedQuoteArray") as? [String]
+        {
+            if let savedAuthor = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.array(forKey: "savedAuthorArray") as? [String]
+            {
+                if savedQuotes.count >= 1 && savedQuotes.count == savedAuthor.count
+                {
+                    global_savedQuotes.removeAll()
+                    
+                    for i in 0...savedQuotes.count-1 {
+                      //  print(savedQuotes[i])
+                        global_savedQuotes[i] = [savedAuthor[i]:savedQuotes[i]]
+                       // global_savedQuotes[savedAuthor[i]] = savedQuotes[i]
+                    }
+                }else
+                {
+                    print("saved quotes count: \(savedQuotes.count), saved author count: \(savedAuthor.count)")
+                }
+            }else
+            {
+                print("saved author is not found")
+            }
+        }else
+        {
+            print("saved quote is not found")
+        }
+        
+        print("All saved quotes loaded \(global_savedQuotes)")
+        
     }
     
 

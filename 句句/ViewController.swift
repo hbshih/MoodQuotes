@@ -78,11 +78,14 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
             Button_bookmark.setTitle("已收藏", for: .normal)
             alertViewHandler().alert(title: "語錄已儲存", body: "", iconText: "📖")
             
+            global_savedQuotes[global_savedQuotes.count] = [authorName.text!: frontQuote.text!]
+            
             if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
             {
                 print("saved quote \(quoteArray)")
                 quoteArray.append(frontQuote.text!)
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
+
             }else
             {
                 print("saved quote is empty")
@@ -242,6 +245,16 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     
     func checkIfBookmarked()
     {
+        let array = Array(global_savedQuotes.values)
+        
+        if array.contains([authorName.text!:self.frontQuote.text!])
+            {
+                self.bookmark_saved = true
+                Button_bookmark.setTitle("已收藏", for: .normal)
+                //self.Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
+            }
+        
+        /*
         if let array = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
         {
             if array.contains(self.frontQuote.text!)
@@ -254,7 +267,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                 print("quote today \(self.frontQuote.text)")
                 print("quote array \(array)")
             }
-        }
+        }*/
     }
     
     @objc func homepageRefresh()

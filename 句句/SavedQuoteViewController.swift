@@ -16,29 +16,22 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
     @IBAction func dismissTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        if let array = savedQuotes as? [String]
-        {
-            if array.contains("還沒有儲存任何語錄")
-            {
-                return 1
-            }else if array.count == 0
-            {
-                return 1
-            }else
-            {
-                return array.count
-            }
-        }else
-        {
-            return 1
-        }
+        return global_savedQuotes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "quote-cell", for: indexPath) as! QuoteTableViewCell
+        
+        let quotes_and_author = global_savedQuotes[indexPath.row]
+        cell.authorLabel.text = quotes_and_author!.keys.first
+        cell.quoteLabel.text = quotes_and_author!.values.first
+
+        /*
+        cell.quoteLabel.text = [String] global_savedQuotes.keys[indexPath.row]
+        cell.authorLabel.text =
         
         if let array = savedQuotes as? [String]
         {
@@ -57,21 +50,13 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
             cell.detailTextLabel!.text = ""
         }
         
-
+*/
         return cell
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        savedQuotes = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String] ?? ["還沒有儲存任何語錄"]
-        
-        savedAuthor = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String] ?? [""]
-        
-        print("quote count \(savedQuotes?.count ?? 1)")
-        print("author count \(savedAuthor?.count ?? 1)")
     }
     
 
