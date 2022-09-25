@@ -1720,17 +1720,17 @@
                                                                 <rect key="frame" x="32" y="0.0" width="350" height="117"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="RSa-IB-Cs2">
-                                                                        <rect key="frame" x="0.0" y="34.5" width="96.5" height="48"/>
+                                                                        <rect key="frame" x="0.0" y="34.5" width="65" height="48"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8M-kQ-2Mq">
-                                                                                <rect key="frame" x="31" y="0.0" width="35" height="35"/>
+                                                                                <rect key="frame" x="15" y="0.0" width="35" height="35"/>
                                                                                 <state key="normal" image="noun_Save_2209758 1"/>
                                                                                 <connections>
                                                                                     <action selector="optionTapped:" destination="s5y-0N-DVP" eventType="touchUpInside" id="jAQ-gi-Yul"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="存入相簿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anR-i3-lTb">
-                                                                                <rect key="frame" x="28" y="36" width="41" height="12"/>
+                                                                                <rect key="frame" x="12" y="36" width="41" height="12"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                                 <color key="textColor" red="0.33725490196078434" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1738,36 +1738,55 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="e66-rM-k70">
-                                                                        <rect key="frame" x="126.5" y="37" width="97" height="43"/>
+                                                                        <rect key="frame" x="95" y="37" width="65" height="43"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikw-bP-mNB">
-                                                                                <rect key="frame" x="33.5" y="0.0" width="30" height="30"/>
+                                                                                <rect key="frame" x="17.5" y="0.0" width="30" height="30"/>
                                                                                 <color key="tintColor" red="0.92156862750000001" green="0.71483190720000001" blue="0.89072653580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <state key="normal" image="noun_instagram_3350460 (1) 1-1"/>
                                                                                 <connections>
                                                                                     <action selector="optionTapped:" destination="s5y-0N-DVP" eventType="touchUpInside" id="96Y-sY-4Ed"/>
                                                                                 </connections>
                                                                             </button>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IG分享" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dk-gS-IvQ">
-                                                                                <rect key="frame" x="33" y="31" width="31" height="12"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IG貼文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dk-gS-IvQ">
+                                                                                <rect key="frame" x="17" y="31" width="31" height="12"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                                 <color key="textColor" red="0.33725490196078434" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UGb-Zf-VRj">
-                                                                        <rect key="frame" x="253.5" y="34.5" width="96.5" height="48"/>
+                                                                    <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="4M3-S5-wg1">
+                                                                        <rect key="frame" x="190" y="37" width="65" height="43"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjT-AO-GZy">
-                                                                                <rect key="frame" x="30.5" y="0.0" width="35" height="35"/>
+                                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XsG-JF-ttJ">
+                                                                                <rect key="frame" x="17.5" y="0.0" width="30" height="30"/>
+                                                                                <color key="tintColor" red="0.92156862750000001" green="0.71483190720000001" blue="0.89072653580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <state key="normal" image="noun_instagram_3350460 (1) 1-1"/>
+                                                                                <connections>
+                                                                                    <action selector="optionTapped:" destination="s5y-0N-DVP" eventType="touchUpInside" id="y26-6U-jqG"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IG限時" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ux6-O5-ClH">
+                                                                                <rect key="frame" x="17" y="31" width="31" height="12"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                                <color key="textColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" tag="2" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UGb-Zf-VRj">
+                                                                        <rect key="frame" x="285" y="34.5" width="65" height="48"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjT-AO-GZy">
+                                                                                <rect key="frame" x="15" y="0.0" width="35" height="35"/>
                                                                                 <state key="normal" image="noun_Share_1058858 (2) 1"/>
                                                                                 <connections>
                                                                                     <action selector="optionTapped:" destination="s5y-0N-DVP" eventType="touchUpInside" id="cBZ-Cc-IEE"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其他" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1N-f3-fRL">
-                                                                                <rect key="frame" x="38" y="36" width="20.5" height="12"/>
+                                                                                <rect key="frame" x="22.5" y="36" width="20.5" height="12"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                                 <color key="textColor" red="0.33725490196078434" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>

@@ -10,7 +10,7 @@ import AVKit
 import Photos
 import StoreKit
 import FirebaseAnalytics
-class ShareViewController: UIViewController {
+class ShareViewController: UIViewController, UIDocumentInteractionControllerDelegate {
 
     //@IBOutlet weak var screenshotPreview: UIImageView!
     @IBOutlet weak var moreView: UIStackView!
@@ -71,10 +71,21 @@ class ShareViewController: UIViewController {
             
             let image = takeScreenshot(of: fullView)
             
-            UIImageWriteToSavedPhotosAlbum(image, self, #selector(imageWasSaved), nil)
+            alertViewHandler().alert(title: "已存至相簿", body: "", iconText: "📖")
             
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(imageWasSaved), nil)
         case 1:
-            print("save to ig")
+            print("save to ig post")
+            
+            let image = takeScreenshot(of: fullView)
+            
+            
+            
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(imageWasSaved_instagram), nil)
+            postImage(image: image)
+            
+        case 2:
+            print("save to ig post")
             
             Analytics.logEvent("share_vc_IG", parameters: nil)
             
@@ -100,7 +111,7 @@ class ShareViewController: UIViewController {
                UIPasteboard.general.setItems(itemsToShare, options: pasteboardOptions)
                UIApplication.shared.open(instagramStoryUrl, options: [:], completionHandler: nil)
             
-        case 2:
+        case 3:
             print("more")
             
             Analytics.logEvent("share_vc_more", parameters: nil)
@@ -129,7 +140,17 @@ class ShareViewController: UIViewController {
         }
 
         print("Image was saved in the photo gallery")
-        UIApplication.shared.open(URL(string:"photos-redirect://")!)
+        //UIApplication.shared.open(URL(string:"photos-redirect://")!)
+    }
+    
+    @objc func imageWasSaved_instagram(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+
+        postImage(image: image)
+        //UIApplication.shared.open(URL(string:"photos-redirect://")!)
     }
     
 
@@ -196,4 +217,41 @@ class ShareViewController: UIViewController {
         //   UIImageWriteToSavedPhotosAlbum(screenshot, self, #selector(imageWasSaved), nil)
         return screenshot
     }
+    
+    private let documentInteractionController = UIDocumentInteractionController()
+    private let kInstagramURL = "instagram://"
+    private let kUTI = "com.instagram.photo" //"com.instagram.exclusivegram"
+    private let kfileNameExtension = "instagram.ig"//"instagram.igo"
+    private let kAlertViewTitle = "Error"
+    private let kAlertViewMessage = "Please install the Instagram application"
+    
+    func postImage(image: UIImage, result:((Bool)->Void)? = nil) {
+         guard let instagramURL = NSURL(string: "instagram://app") else {
+             if let result = result {
+                 result(false)
+             }
+             return
+         }
+         
+         // let image = image.scaleImageWithAspectToWidth(640)
+         
+         do {
+             try PHPhotoLibrary.shared().performChangesAndWait {
+                 let request = PHAssetChangeRequest.creationRequestForAsset(from: image)
+                 
+                 let assetID = request.placeholderForCreatedAsset?.localIdentifier ?? ""
+                 let shareURL = "instagram://library?LocalIdentifier=" + assetID
+                 
+                 if UIApplication.shared.canOpenURL(instagramURL as URL) {
+                     if let urlForRedirect = NSURL(string: shareURL) {
+                         UIApplication.shared.open(URL(string: "\(urlForRedirect)")!)
+                     }
+                 }
+             }
+         } catch {
+             if let result = result {
+                 result(false)
+             }
+         }
+     }
 }
