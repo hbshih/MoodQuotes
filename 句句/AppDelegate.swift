@@ -23,7 +23,7 @@ var global_paid_user = false
 var global_paid_price = "$120"
 var global_intro_number_of_unit = 0
 var global_intro_unit = ""
-var global_savedQuotes = [0:["尚未儲存任何語錄":""]]
+var global_savedQuotes = [Int:[String:String]]()
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -202,14 +202,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func loadAllSavedQuotes(){
         
+        Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes")
+        
         if let savedQuotes = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.array(forKey: "savedQuoteArray") as? [String]
         {
+            Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint1")
             if let savedAuthor = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.array(forKey: "savedAuthorArray") as? [String]
             {
+                Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint2")
                 if savedQuotes.count >= 1 && savedQuotes.count == savedAuthor.count
                 {
-                    global_savedQuotes.removeAll()
-                    
+                    Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint3")
                     for i in 0...savedQuotes.count-1 {
                       //  print(savedQuotes[i])
                         global_savedQuotes[i] = [savedAuthor[i]:savedQuotes[i]]

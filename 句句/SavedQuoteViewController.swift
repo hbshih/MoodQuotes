@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Instabug
 
 class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -18,16 +19,45 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return global_savedQuotes.count
+        
+        Instabug.logUserEvent(withName: "SavedQuotesViewController_tableview_numberofrow")
+        
+        if global_savedQuotes.isEmpty
+        {
+            return 1
+        }else
+        {
+            return global_savedQuotes.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        Instabug.logUserEvent(withName: "SavedQuotesViewController_cellforrowat")
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "quote-cell", for: indexPath) as! QuoteTableViewCell
         
-        let quotes_and_author = global_savedQuotes[indexPath.row]
-        cell.authorLabel.text = quotes_and_author!.keys.first
-        cell.quoteLabel.text = quotes_and_author!.values.first
+        
+        print ("check count \(global_savedQuotes.count)")
+        
+        if global_savedQuotes.isEmpty
+        {
+            Instabug.logUserEvent(withName: "SavedQuotesViewController_emptyquotes")
+            cell.authorLabel.text = "尚未儲存任何語錄"
+            cell.quoteLabel.text = "尚未儲存任何語錄"
+        }else
+        {
+            Instabug.logUserEvent(withName: "SavedQuotesViewController_loadingquotes")
+            if let quotes_and_author = global_savedQuotes[indexPath.row]
+            {
+                cell.authorLabel.text = quotes_and_author.keys.first
+                cell.quoteLabel.text = quotes_and_author.values.first
+            }else
+            {
+                cell.authorLabel.text = "出現錯誤"
+                cell.quoteLabel.text = "出現錯誤"
+            }
+        }
 
         /*
         cell.quoteLabel.text = [String] global_savedQuotes.keys[indexPath.row]
@@ -69,6 +99,8 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Instabug.logUserEvent(withName: "SavedQuotesViewController_Viewdidload")
     }
     
 
@@ -83,6 +115,9 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
     */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        Instabug.logUserEvent(withName: "SavedQuotesViewController_Prepareforsegue")
+        
         if segue.identifier == "shareSegue"
         {
             if let VC = segue.destination as? ShareViewController

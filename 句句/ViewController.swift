@@ -73,19 +73,18 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         
         if bookmark_saved == false
         {
-
             bookmark_saved = true
             Button_bookmark.setTitle("已收藏", for: .normal)
             alertViewHandler().alert(title: "語錄已儲存", body: "", iconText: "📖")
             
             global_savedQuotes[global_savedQuotes.count] = [authorName.text!: frontQuote.text!]
             
+            
             if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
             {
                 print("saved quote \(quoteArray)")
                 quoteArray.append(frontQuote.text!)
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
-
             }else
             {
                 print("saved quote is empty")
@@ -109,15 +108,17 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
             
             Analytics.logEvent("Bookmarked_Quote", parameters: nil)
             
+            print(global_savedQuotes)
+            
             //Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
         }else
         {
             Analytics.logEvent("Unbookmarked_Quote", parameters: nil)
             bookmark_saved = false
+            global_savedQuotes.removeValue(forKey: global_savedQuotes.count-1)
+            
             if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
             {
-                // print(frontQuote.text!)
-                // in case remove other than today
                 if quoteArray.last == frontQuote.text!
                 {
                     quoteArray.removeLast()
@@ -132,6 +133,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
             }
             Button_bookmark.setTitle("收藏", for: .normal)
             // Button_bookmark.setBackgroundImage(UIImage(named: "icon_unBookmarked"), for: .normal)
+            print(global_savedQuotes)
         }
     
     }
