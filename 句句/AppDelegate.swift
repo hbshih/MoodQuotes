@@ -28,7 +28,7 @@ var global_savedQuotes = [Int:[String:String]]()
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //Migrating data from userdefaults to Coredata
@@ -39,30 +39,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         global_paid_user = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isPaidUser")
         
         // see notes below for the meaning of Atomic / Non-Atomic
-            SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
-                
-                print("checking if user is a paid user...")
-                
-                for purchase in purchases {
-                    switch purchase.transaction.transactionState {
-                    case .purchased, .restored:
-                        
-                        if purchase.needsFinishTransaction {
-                            // Deliver content from server, then:
-                            SwiftyStoreKit.finishTransaction(purchase.transaction)
-                        }
-                        // Unlock content
-                        print("this is paid user")
-                        global_paid_user = true
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
-                    case .failed, .purchasing, .deferred:
-                        print("no purchase")
-                        global_paid_user = false
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(false, forKey: "isPaidUser")
-                        break // do nothing
+        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+            
+            print("checking if user is a paid user...")
+            
+            for purchase in purchases {
+                switch purchase.transaction.transactionState {
+                case .purchased, .restored:
+                    
+                    if purchase.needsFinishTransaction {
+                        // Deliver content from server, then:
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
                     }
+                    // Unlock content
+                    print("this is paid user")
+                    global_paid_user = true
+                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "isPaidUser")
+                case .failed, .purchasing, .deferred:
+                    print("no purchase")
+                    global_paid_user = false
+                    UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(false, forKey: "isPaidUser")
+                    break // do nothing
                 }
             }
+        }
         
         SwiftyStoreKit.retrieveProductsInfo(["monthly_purchase"]) { result in
             if let product = result.retrievedProducts.first {
@@ -77,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     global_intro_number_of_unit = period.numberOfUnits
                     global_intro_unit = self.unitName(unitRawValue: period.unit.rawValue)
                 }
-                                                      
+                
             }
             else if let invalidProductId = result.invalidProductIDs.first {
                 print("Invalid product identifier: \(invalidProductId)")
@@ -103,7 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     inReceipt: receipt)
                 
                 print("results is \(purchaseResult)")
-                    
+                
                 switch purchaseResult {
                 case .purchased(let expiryDate, let items):
                     // Unlock content
@@ -120,49 +120,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(false, forKey: "isPaidUser")
                     print("The user has never purchased \(productId)")
                 }
-
+                
             case .error(let error):
                 print("Receipt verification failed: \(error)")
             }
         }
-
+        
         
         // Override point for customization after application launch.
         FirebaseApp.configure()
         if NSClassFromString("ATTrackingManager") == nil {
-          // Avoid showing the App Tracking Transparency explainer if the
-          // framework is not linked.
-          //InAppMessaging.inAppMessaging().messageDisplaySuppressed = true
+            // Avoid showing the App Tracking Transparency explainer if the
+            // framework is not linked.
+            //InAppMessaging.inAppMessaging().messageDisplaySuppressed = true
         }else
         {
             ATTrackingManager.requestTrackingAuthorization { status in
-              switch status {
-              case .authorized:
-                // Optionally, log an event when the user accepts.
-                Analytics.setUserID(UIDevice.current.identifierForVendor?.uuidString)
-                Analytics.logEvent("tracking_authorized", parameters: nil)
-              case _: break
-                
-                // Optionally, log an event here with the rejected value.
-              }
+                switch status {
+                case .authorized:
+                    // Optionally, log an event when the user accepts.
+                    Analytics.setUserID(UIDevice.current.identifierForVendor?.uuidString)
+                    Analytics.logEvent("tracking_authorized", parameters: nil)
+                case _: break
+                    
+                    // Optionally, log an event here with the rejected value.
+                }
             }
-
+            
         }
         
         
         
-      //  handleNotificationUpdate()
-
+        //  handleNotificationUpdate()
+        
         // Fetch data once an hour.
         UIApplication.shared.setMinimumBackgroundFetchInterval(3600)
-      
-       // UXCam.optIntoSchematicRecordings()
+        
+        // UXCam.optIntoSchematicRecordings()
         //UXCam.start(withKey:"6ffyck6abrvtjx0")
-//
+        //
         
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.moodquotes.fetchQuotes",
                                         using: nil) { (task) in
-          // ...
+            // ...
             print("Register for Background")
             self.handleAppRefreshTask(task: task as! BGAppRefreshTask)
         }
@@ -170,30 +170,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //registerBackgroundTasks()
         
         // Facebook Required
-      //  let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        //  let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         
         
         // GA
         /*
-        guard let gai = GAI.sharedInstance() else {
-          assert(false, "Google Analytics not configured correctly")
-        }
-        gai.tracker(withTrackingId: "YOUR_TRACKING_ID")
-        // Optional: automatically report uncaught exceptions.
-        gai.trackUncaughtExceptions = true
-
-        // Optional: set Logger to VERBOSE for debug information.
-        // Remove before app release.
-        gai.logger.logLevel = .verbose;
-        */
+         guard let gai = GAI.sharedInstance() else {
+         assert(false, "Google Analytics not configured correctly")
+         }
+         gai.tracker(withTrackingId: "YOUR_TRACKING_ID")
+         // Optional: automatically report uncaught exceptions.
+         gai.trackUncaughtExceptions = true
+         
+         // Optional: set Logger to VERBOSE for debug information.
+         // Remove before app release.
+         gai.logger.logLevel = .verbose;
+         */
         /*
-        NotificationCenter.default.addObserver(forName:UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { (_) in
-            // Your Code here
-            print("in background")
-            //self.submitBackgroundTasks()
-            
-        }*/
+         NotificationCenter.default.addObserver(forName:UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { (_) in
+         // Your Code here
+         print("in background")
+         //self.submitBackgroundTasks()
+         
+         }*/
         Instabug.setLocale(.chineseTaiwan)
         Instabug.start(withToken: "eaab24b8f676bca71995b8a2c28637d8", invocationEvents: .none)
         SurvicateSdk.shared.initialize()
@@ -204,56 +204,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes")
         
-        if let savedQuotes = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.array(forKey: "savedQuoteArray") as? [String]
+        if let savedQuotes = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.array(forKey: "savedQuoteArray") as? [String], let savedAuthor = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.array(forKey: "savedAuthorArray") as? [String]
         {
             Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint1")
-            if let savedAuthor = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.array(forKey: "savedAuthorArray") as? [String]
+            if savedQuotes.count >= 1 && savedAuthor.count >= 1 && savedQuotes.count == savedAuthor.count
             {
-                Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint2")
-                if savedQuotes.count >= 1 && savedQuotes.count == savedAuthor.count
-                {
-                    Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint3")
-                    for i in 0...savedQuotes.count-1 {
-                      //  print(savedQuotes[i])
-                        global_savedQuotes[i] = [savedAuthor[i]:savedQuotes[i]]
-                       // global_savedQuotes[savedAuthor[i]] = savedQuotes[i]
-                    }
-                }else
-                {
-                    print("saved quotes count: \(savedQuotes.count), saved author count: \(savedAuthor.count)")
+                Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint3")
+                for i in 0...savedQuotes.count-1 {
+                    //  print(savedQuotes[i])
+                    global_savedQuotes[i] = [savedAuthor[i]:savedQuotes[i]]
+                    // global_savedQuotes[savedAuthor[i]] = savedQuotes[i]
                 }
+                print("all saved quotes \(global_savedQuotes)")
+                Instabug.logUserEvent(withName: "AppDelegate-1 \(global_savedQuotes)")
             }else
             {
-                print("saved author is not found")
+                if savedQuotes.count >= 1
+                {
+                    Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint4")
+                    for i in 0...savedQuotes.count-1 {
+                        //  print(savedQuotes[i])
+                        global_savedQuotes[i] = ["":savedQuotes[i]]
+                        // global_savedQuotes[savedAuthor[i]] = savedQuotes[i]
+                    }
+                    Instabug.logUserEvent(withName: "AppDelegate-1 \(global_savedQuotes)")
+                }else
+                {
+                    // other errors
+                    Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint6")
+                    global_savedQuotes[global_savedQuotes.count] = ["":"顯示儲存語錄發生問題，請和開發團隊聯絡 (\(savedQuotes.count), \(savedAuthor.count))"]
+                    Instabug.logUserEvent(withName: "count \(savedQuotes), \(savedAuthor)")
+                }
             }
         }else
         {
-            print("saved quote is not found")
+            Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint5")
+            global_savedQuotes[global_savedQuotes.count] = ["":"尚未儲存任何語錄"]
         }
         
         print("All saved quotes loaded \(global_savedQuotes)")
         
     }
     
-
+    
     
     
     func scheduleBackgroundPokemonFetch() {
         let pokemonFetchTask = BGAppRefreshTaskRequest(identifier: "com.moodquotes.fetchQuotes")
         pokemonFetchTask.earliestBeginDate = Date(timeIntervalSinceNow: 1800)
         do {
-          try BGTaskScheduler.shared.submit(pokemonFetchTask)
+            try BGTaskScheduler.shared.submit(pokemonFetchTask)
             print("submitted task")
         } catch {
-          print("Unable to submit task: \(error.localizedDescription)")
+            print("Unable to submit task: \(error.localizedDescription)")
         }
     }
     
     func handleAppRefreshTask(task: BGAppRefreshTask) {
         
-      //  handleNotificationUpdate()
-      //  task.setTaskCompleted(success: true)
-       // scheduleBackgroundPokemonFetch()
+        //  handleNotificationUpdate()
+        //  task.setTaskCompleted(success: true)
+        // scheduleBackgroundPokemonFetch()
     }
     
     func unitName(unitRawValue:UInt) -> String {
@@ -297,10 +308,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                 content.body = "\(quoteInfo.first?.quote ?? "語錄已經更新啦") \n —\(quoteInfo.first?.author ?? "去看看吧")"
                                 content.sound = UNNotificationSound.default
                                 content.categoryIdentifier = "quotes_notification"
-                           /*
-                                // Update Local Data
-                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.quote, forKey: "Quote")
-                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.author, forKey: "Author")*/
+                                /*
+                                 // Update Local Data
+                                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.quote, forKey: "Quote")
+                                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(quoteInfo.first!.author, forKey: "Author")*/
                                 let cal = Calendar.current
                                 var components = cal.dateComponents([.hour, .minute], from: Date())
                                 components.hour = notificationDate.hour
@@ -323,7 +334,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                     if let error = error {
                                         // Something went wrong
                                         
-
+                                        
                                         
                                         print("ERROR ADDING NOTIFICATION TO CENTER \(error.localizedDescription)")
                                     } else
@@ -331,18 +342,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                         
                                         NotificationTrigger().notifyQuoteHasChanged(from: components.date!)
                                         /*
-                                        /* TESTING */
-                                        let content = UNMutableNotificationContent()
-                                        content.title = "新增了一個更新語錄的通知"
-                                        content.body = "下個更新時間會是\(components.date)"
-                                        content.sound = UNNotificationSound.default
-
-                                        let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-                                        let req  = UNNotificationRequest(identifier: "check_1", content: content, trigger: tri)
-
-                                        UNUserNotificationCenter.current().add(req) { (error) in
-                                            print("error\(error )")
-                                        }*/
+                                         /* TESTING */
+                                         let content = UNMutableNotificationContent()
+                                         content.title = "新增了一個更新語錄的通知"
+                                         content.body = "下個更新時間會是\(components.date)"
+                                         content.sound = UNNotificationSound.default
+                                         
+                                         let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                                         let req  = UNNotificationRequest(identifier: "check_1", content: content, trigger: tri)
+                                         
+                                         UNUserNotificationCenter.current().add(req) { (error) in
+                                         print("error\(error )")
+                                         }*/
                                         
                                         /*TESTING**/
                                         
@@ -365,17 +376,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 
                 
-            /*    // Add Notification
-                NotificationTrigger().notifyQuoteHasChanged()*/
+                /*    // Add Notification
+                 NotificationTrigger().notifyQuoteHasChanged()*/
             }
         }
     }
     
     
     /*
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return ApplicationDelegate.shared.application(app, open: url, options: options)
-    }*/
+     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+     return ApplicationDelegate.shared.application(app, open: url, options: options)
+     }*/
     
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -387,33 +398,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         handleNotificationUpdate()
         
-       // print("fetch for something")
+        // print("fetch for something")
         NSLog("fetch for something", String())
         /*
-        DispatchQueue.main.async{
-            SyncAppQuotes().handleLocalUpdate { (result) in
-                NotificationTrigger().getNotified()
- /*               /*For Testing*/
-                let content = UNMutableNotificationContent()
-                content.title = "test notifaction"
-                content.body = "Background Fetch Performing"
-                content.sound = UNNotificationSound.default
-
-                let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-                let req  = UNNotificationRequest(identifier: "test_background", content: content, trigger: tri)
-
-                UNUserNotificationCenter.current().add(req) { (error) in
-                    print("error\(error.debugDescription)")
-                    completionHandler(.failed)
-                }
-                /*Testing Ends*/*/
-                completionHandler(.newData)
-            }
-        }
+         DispatchQueue.main.async{
+         SyncAppQuotes().handleLocalUpdate { (result) in
+         NotificationTrigger().getNotified()
+         /*               /*For Testing*/
+          let content = UNMutableNotificationContent()
+          content.title = "test notifaction"
+          content.body = "Background Fetch Performing"
+          content.sound = UNNotificationSound.default
+          
+          let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+          let req  = UNNotificationRequest(identifier: "test_background", content: content, trigger: tri)
+          
+          UNUserNotificationCenter.current().add(req) { (error) in
+          print("error\(error.debugDescription)")
+          completionHandler(.failed)
+          }
+          /*Testing Ends*/*/
+         completionHandler(.newData)
+         }
+         }
+         
+         
+         */
         
-        
-*/
-
         
     }
     
@@ -485,7 +496,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 }
 
 extension Notification.Name {
-  static let newPokemonFetched = Notification.Name("com.moodquotes.fetchQuotes")
+    static let newPokemonFetched = Notification.Name("com.moodquotes.fetchQuotes")
 }
 
 extension UIApplication {
