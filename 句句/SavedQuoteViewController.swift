@@ -51,7 +51,14 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
             if let quotes_and_author = global_savedQuotes[indexPath.row]
             {
                 cell.authorLabel.text = quotes_and_author.keys.first
-                cell.quoteLabel.text = quotes_and_author.values.first
+                
+                if quotes_and_author.values.first == ""
+                {
+                    cell.quoteLabel.isHidden = true
+                }else
+                {
+                    cell.quoteLabel.text = quotes_and_author.values.first
+                }
             }else
             {
                 cell.authorLabel.text = "出現錯誤"
