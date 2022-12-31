@@ -80,36 +80,10 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
             global_savedQuotes[global_savedQuotes.count] = [authorName.text!: frontQuote.text!]
             
             
-            if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String]
-            {
-                print("saved quote \(quoteArray)")
-                quoteArray.append(frontQuote.text!)
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
-            }else
-            {
-                print("saved quote is empty")
-                var quoteArray = [String]()
-                quoteArray.append(frontQuote.text!)
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
-            }
-            
-            if var authorArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
-            {
-                print("saved author \(authorArray)")
-                authorArray.append(authorName.text!)
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
-            }else
-            {
-                print("saved author is empty")
-                var authorArray = [String]()
-                authorArray.append(authorName.text!)
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
-            }
+            //save to database
+            saveQuotes()
             
             Analytics.logEvent("Bookmarked_Quote", parameters: nil)
-            
-            print(global_savedQuotes)
-            
             //Button_bookmark.setBackgroundImage(UIImage(named: "icon_bookmarked"), for: .normal)
         }else
         {
@@ -123,19 +97,42 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                 {
                     quoteArray.removeLast()
                     UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
+                    
+                    if var authorArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
+                    {
+                        authorArray.removeLast()
+                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
+                    }
                 }
-            }
-            
-            if var authorArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
-            {
-                authorArray.removeLast()
-                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
             }
             Button_bookmark.setTitle("收藏", for: .normal)
             // Button_bookmark.setBackgroundImage(UIImage(named: "icon_unBookmarked"), for: .normal)
             print(global_savedQuotes)
         }
     
+    }
+    
+    private func saveQuotes()
+    {
+        
+        if var quoteArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedQuoteArray") as? [String], var authorArray = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.array(forKey: "savedAuthorArray") as? [String]
+        {
+            // save quote
+            quoteArray.append(frontQuote.text!)
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
+            authorArray.append(authorName.text!)
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
+        }else
+        {
+            //create new user default
+            var quoteArray = [String]()
+            quoteArray.append(frontQuote.text!)
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(quoteArray, forKey: "savedQuoteArray")
+            
+            var authorArray = [String]()
+            authorArray.append(authorName.text!)
+            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.set(authorArray, forKey: "savedAuthorArray")
+        }
     }
     
     
