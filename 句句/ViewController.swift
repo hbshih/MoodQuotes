@@ -138,20 +138,6 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     
     }
     
-    func storylyLoaded(_ storylyView: Storyly.StorylyView,
-                       storyGroupList: [Storyly.StoryGroup],
-                       dataSource: StorylyDataSource)
-    {
-        print("Storyly Executed")
-    }
-    
-    func storylyLoadFailed(_ storylyView: Storyly.StorylyView,
-                           errorMessage: String)
-    {
-        print("Storyly Failed")
-        print(errorMessage)
-    }
-    
     
     @objc func loadNewQuotes() {
         // comment out for testing purpose
