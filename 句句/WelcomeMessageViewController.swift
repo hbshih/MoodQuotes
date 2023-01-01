@@ -9,6 +9,7 @@ import UIKit
 
 class WelcomeMessageViewController: UIViewController {
     
+    @IBOutlet weak var buttonBackground: UIView!
     @IBOutlet weak var triggerButton: UIButton!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var explationMessage: UILabel!
@@ -44,6 +45,7 @@ class WelcomeMessageViewController: UIViewController {
                         UIView.animate(withDuration: 3.0) {
                             self.explationMessage.text = "在那之前，讓我好好認識你吧"
                             self.explationMessage.alpha = 1.0
+                            self.buttonBackground.alpha = 1.0
                             self.triggerButton.alpha = 1.0
                         }
                         

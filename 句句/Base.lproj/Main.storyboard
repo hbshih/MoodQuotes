@@ -4645,7 +4645,7 @@ App們將會開始抖動。</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="z5E-Tm-GP5"/>
                                         </constraints>
-                                        <state key="normal" title="認識自己">
+                                        <state key="normal" title="下一步">
                                             <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -4684,6 +4684,7 @@ App們將會開始抖動。</string>
                     <navigationItem key="navigationItem" id="8Jt-rt-1CT"/>
                     <connections>
                         <outlet property="backgroundView" destination="bps-it-yCL" id="YOS-qb-zo8"/>
+                        <outlet property="buttonBackground" destination="2b7-5g-K9X" id="fC8-Wx-ZBE"/>
                         <outlet property="explationMessage" destination="ceu-KZ-FVU" id="VwY-sH-mur"/>
                         <outlet property="triggerButton" destination="XSl-B2-MV1" id="4Pc-hh-HgJ"/>
                         <segue destination="1ea-df-IB1" kind="show" identifier="welcomeSegue" id="KzC-DQ-M5P"/>
