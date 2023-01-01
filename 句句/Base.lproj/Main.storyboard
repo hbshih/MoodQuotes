@@ -198,6 +198,7 @@
                         <outlet property="pickeriOS14" destination="3ed-32-dNf" id="abL-Hb-Igc"/>
                         <outlet property="timePIcker" destination="39S-JA-Hyg" id="36B-m4-CKa"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="homeSegue" id="iiW-8X-Mfm"/>
+                        <segue destination="Co0-l8-F4A" kind="show" identifier="continueOnboardingSegue" id="wid-oQ-Pin"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psp-Kx-3lM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2762,17 +2763,17 @@
             <objects>
                 <viewController id="Co0-l8-F4A" customClass="OnboardingStoryViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lh8-FB-PNB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqR-dP-uzr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding-background" translatesAutoresizingMaskIntoConstraints="NO" id="hMB-Ne-vyE">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                                     </imageView>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="cB3-ij-gdY">
-                                        <rect key="frame" x="16" y="298" width="382" height="300"/>
+                                        <rect key="frame" x="16" y="269" width="382" height="300"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5bj-L8-faE">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="300"/>
@@ -4703,8 +4704,9 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jnJ-JQ-whF"/>
-        <segue reference="oS8-Nr-0LU"/>
+        <segue reference="1c7-Jz-p97"/>
         <segue reference="pIM-gP-oXb"/>
+        <segue reference="wid-oQ-Pin"/>
         <segue reference="yDU-dm-Ia8"/>
         <segue reference="Bfe-pd-pBp"/>
         <segue reference="72x-P6-nEO"/>

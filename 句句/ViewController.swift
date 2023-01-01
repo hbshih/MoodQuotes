@@ -68,6 +68,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     
     
     
+    
     var bookmark_saved = false
     
     @IBAction func bookmark_tapped(_ sender: Any) {
@@ -373,12 +374,12 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
             
             //handle new user
             
-            let setInitialUpdateDate = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
+          /*  let setInitialUpdateDate = Calendar.current.date(bySettingHour: 9, minute: 00, second: 0, of: Date())!
             let updateTime = Calendar.current.date(byAdding: .day, value: 1, to: setInitialUpdateDate)
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTime")
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(updateTime, forKey: "updateTimeForWidget")
           //  print("Next update date \(pickeriOS14.date)")
-            print("Next update date \(updateTime)")
+            print("Next update date \(updateTime)")*/
         }
     }
     
@@ -419,6 +420,9 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         displayOnboardTips()
         appVersionUpdateHandler()
         
+        // Get next update time
+        getNextUpdateTime()
+        
         
         if global_paid_user
         {
@@ -448,6 +452,17 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         
         //If Screenshot get to share screen
         NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+    }
+    
+    func getNextUpdateTime()
+    {
+        if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
+        {
+            
+            let diffComponents = Calendar.current.dateComponents([.hour], from: notificationDate, to: Date.now)
+            let hours = diffComponents.hour
+            countdownLabel = "距離下次更新還有 \(hours) 小時"
+        }
     }
     
     

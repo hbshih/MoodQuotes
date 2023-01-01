@@ -74,6 +74,9 @@ class Onboarding_1ViewController: UIViewController {
         Analytics.logEvent("onboarding_1_next_tapped", parameters: nil)
         
         saveTime()
+        
+        performSegue(withIdentifier: "continueOnboardingSegue", sender: nil)
+        
     }
     @IBAction func skipTapped(_ sender: Any) {
          Analytics.logEvent("onboarding_1_skip_tapped", parameters: nil)
