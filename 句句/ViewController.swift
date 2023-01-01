@@ -33,6 +33,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     @IBOutlet weak var trial_Button: UIView!
     @IBOutlet weak var flowerMeaning: UILabel!
     @IBOutlet weak var onboardingTouchIcon: UIImageView!
+    @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var blackwhiteFlowerSectionView: UIStackView!
     @IBOutlet weak var todayDateLabel: UILabel!
     @IBOutlet weak var coloredFlowerSectionView: UIStackView!
@@ -281,9 +282,9 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         authorName.font = font
         font = Display_Font(font_size: 12).getUIFont()
         flowerMeaning.font = font
-        todayDateLabel.text = Date().getDateDayOnly
+       // todayDateLabel.text = Date().getDateDayOnly
         twDayLabel.text = Date().getTWday
-        dateLabel.text = Date().getTodayDate
+        //dateLabel.text = Date().getTodayDate
     }
     
     func setupMoodButton()
@@ -708,6 +709,13 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         SurvicateSdk.shared.invokeEvent(name: "userPressedPurchase")
         
         checkIfBookmarked()
+        
+        
+        
+        
+      //  countdownLabel.text =
+        
+        
         
         
         /* Comment for now --- 4/17/2021
