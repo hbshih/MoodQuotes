@@ -23,6 +23,8 @@ var global_counter = 0
 
 class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     
+    @IBOutlet weak var shareAndbookmarkStack: UIStackView!
+    @IBOutlet weak var installWidgetInstructionView: UIView!
     @IBOutlet weak var moodButton: UIButton!
     @IBOutlet weak var twDayLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -281,10 +283,11 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         nameOfColorImage.font = font
         font = Display_Font(font_size: 16).getUIFont()
         authorName.font = font
+        twDayLabel.font = font
         font = Display_Font(font_size: 12).getUIFont()
         flowerMeaning.font = font
        // todayDateLabel.text = Date().getDateDayOnly
-        twDayLabel.text = Date().getTWday
+        twDayLabel.text = Date().getMonthDay
         //dateLabel.text = Date().getTodayDate
     }
     
@@ -312,6 +315,9 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     {
         if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
         {
+            
+            installWidgetInstructionView.isHidden = true
+            shareAndbookmarkStack.isHidden = false
             
             if counter != nil
             {
@@ -344,6 +350,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                 print("counter is nil")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(1, forKey: "open_app_count")
                 
+                installWidgetInstructionView.isHidden = false
+                shareAndbookmarkStack.isHidden = true
 
                 
             }
