@@ -120,6 +120,7 @@
 		B5C76A162830D543004DE417 /* coreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A142830D543004DE417 /* coreDataHandler.swift */; };
 		B5C76A182830F046004DE417 /* MediumWidget_Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A172830F046004DE417 /* MediumWidget_Flower.swift */; };
 		B5C76A192830F046004DE417 /* MediumWidget_Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C76A172830F046004DE417 /* MediumWidget_Flower.swift */; };
+		B5CFD3062961BC9A00E2A9E0 /* OnboardingChooseQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFD3052961BC9A00E2A9E0 /* OnboardingChooseQuoteViewController.swift */; };
 		B5D04910280C3F9B00E6B0C9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */; };
 		B5D6071E27FF2BBD008B19D9 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6071D27FF2BBD008B19D9 /* SwiftyStoreKit */; };
 		B5D6072127FF2C5E008B19D9 /* JuiceUI in Frameworks */ = {isa = PBXBuildFile; productRef = B5D6072027FF2C5E008B19D9 /* JuiceUI */; };
@@ -285,6 +286,7 @@
 		B5C76A112830D432004DE417 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B5C76A142830D543004DE417 /* coreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataHandler.swift; sourceTree = "<group>"; };
 		B5C76A172830F046004DE417 /* MediumWidget_Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidget_Flower.swift; sourceTree = "<group>"; };
+		B5CFD3052961BC9A00E2A9E0 /* OnboardingChooseQuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingChooseQuoteViewController.swift; sourceTree = "<group>"; };
 		B5D0490F280C3F9B00E6B0C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B5D6072227FF315C008B19D9 /* WidgetGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGroup.swift; sourceTree = "<group>"; };
 		B5D6072527FF3166008B19D9 /* SmallWidget_Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget_Plant.swift; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				B5C76A102830D432004DE417 /* Model.xcdatamodeld */,
 				B5C76A142830D543004DE417 /* coreDataHandler.swift */,
 				B5FAF57A2961B826007E51E0 /* WelcomeMessageViewController.swift */,
+				B5CFD3052961BC9A00E2A9E0 /* OnboardingChooseQuoteViewController.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -881,6 +884,7 @@
 				B5A4D14027F2EDC90093CDD6 /* QuoteTableViewCell.swift in Sources */,
 				B5B4978C256A6DDE00570D84 /* Onboarding_2ViewController.swift in Sources */,
 				B506EBC225622FF800372198 /* UpdateTimeTableViewCell.swift in Sources */,
+				B5CFD3062961BC9A00E2A9E0 /* OnboardingChooseQuoteViewController.swift in Sources */,
 				B5C321D92629685D00CB530C /* TutorialViewController.swift in Sources */,
 				B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */,
 				B5517C75255FAFC500E134CC /* AppDelegate.swift in Sources */,

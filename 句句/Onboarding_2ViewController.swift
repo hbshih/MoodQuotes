@@ -11,11 +11,13 @@ import WidgetKit
 
 class Onboarding_2ViewController: UIViewController {
 
+    @IBOutlet weak var pageTitle: UILabel!
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var gray: UIButton!
     @IBOutlet weak var nav_view: UIView!
+    @IBOutlet weak var paidColorsStack: UIStackView!
     var currentSelectedTag = 0
     var fromSetting = false
     
@@ -25,11 +27,14 @@ class Onboarding_2ViewController: UIViewController {
         Analytics.logEvent("view_background_page", parameters: nil)
         
         nav_view.isHidden = true
+        paidColorsStack.isHidden = true
         
         if fromSetting
         {
+            pageTitle.text = "選擇背景顏色"
             skipButton.layer.opacity = 0.0
             nav_view.isHidden = false
+            paidColorsStack.isHidden = false
             actionButton.setTitle("儲存", for: .normal)
         }
     
@@ -51,7 +56,7 @@ class Onboarding_2ViewController: UIViewController {
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundView.backgroundColor, forKey: "BackgroundColor")
             if actionButton.currentTitle == "下一步"
             {
-                performSegue(withIdentifier: "selectedFont_segue", sender: nil)
+                performSegue(withIdentifier: "selectTime", sender: nil)
             }else
             {
                 alertViewHandler().alert(title: "背景更新完成", body: "", iconText: "🍻")
