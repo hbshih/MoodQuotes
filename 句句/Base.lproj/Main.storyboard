@@ -273,10 +273,10 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hci-gt-IHu">
-                                        <rect key="frame" x="20" y="56" width="374" height="720"/>
+                                        <rect key="frame" x="20" y="56" width="374" height="717.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eW8-Vf-e6m">
-                                                <rect key="frame" x="0.0" y="24" width="374" height="672"/>
+                                                <rect key="frame" x="0.0" y="24" width="374" height="669.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKH-KL-oRF">
                                                         <rect key="frame" x="8" y="24" width="358" height="64"/>
@@ -287,42 +287,34 @@
                                                                     <stackView hidden="YES" opaque="NO" contentMode="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ubq-qe-0Jx">
                                                                         <rect key="frame" x="0.0" y="0.0" width="278" height="64"/>
                                                                         <subviews>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfw-8G-YjK">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="72.5" height="64"/>
-                                                                                <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="Vernonia amygdalina.png" translatesAutoresizingMaskIntoConstraints="NO" id="gu2-iE-YJg">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="64"/>
-                                                                                        <constraints>
-                                                                                            <constraint firstAttribute="width" constant="48" id="0dd-n0-lHQ"/>
-                                                                                            <constraint firstAttribute="height" constant="64" id="Kkx-cU-nMd"/>
-                                                                                        </constraints>
-                                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                                                                        <userDefinedRuntimeAttributes>
-                                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="alignLeft" value="YES"/>
-                                                                                        </userDefinedRuntimeAttributes>
-                                                                                    </imageView>
-                                                                                </subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="Vernonia amygdalina.png" translatesAutoresizingMaskIntoConstraints="NO" id="gu2-iE-YJg">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="48" height="64"/>
                                                                                 <constraints>
-                                                                                    <constraint firstItem="gu2-iE-YJg" firstAttribute="centerY" secondItem="tfw-8G-YjK" secondAttribute="centerY" id="P4p-jQ-dAE"/>
-                                                                                    <constraint firstItem="gu2-iE-YJg" firstAttribute="leading" secondItem="tfw-8G-YjK" secondAttribute="leading" id="i1v-LW-f0j"/>
+                                                                                    <constraint firstAttribute="width" constant="48" id="0dd-n0-lHQ"/>
+                                                                                    <constraint firstAttribute="height" constant="64" id="Kkx-cU-nMd"/>
                                                                                 </constraints>
-                                                                            </view>
+                                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alignLeft" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </imageView>
                                                                             <stackView opaque="NO" contentMode="bottom" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wKS-xO-sB5">
-                                                                                <rect key="frame" x="80.5" y="0.0" width="197.5" height="64"/>
+                                                                                <rect key="frame" x="56" y="0.0" width="222" height="64"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="罌粟花" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icy-av-SWs">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="197.5" height="32"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="214" height="32"/>
                                                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="18"/>
                                                                                         <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" text="一種生長在海拔1040公尺的花，可以很浪漫的陪你成長。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNx-6R-ayd">
-                                                                                        <rect key="frame" x="0.0" y="32" width="197.5" height="32"/>
+                                                                                        <rect key="frame" x="0.0" y="32" width="214" height="32"/>
                                                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
                                                                                         <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
+                                                                                <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="8"/>
                                                                             </stackView>
                                                                         </subviews>
                                                                     </stackView>
@@ -354,9 +346,12 @@
                                                                     <constraint firstItem="ubq-qe-0Jx" firstAttribute="leading" secondItem="lgo-Yd-YXr" secondAttribute="leading" id="5ql-cz-gy3"/>
                                                                     <constraint firstItem="ubq-qe-0Jx" firstAttribute="top" secondItem="lgo-Yd-YXr" secondAttribute="top" id="SEg-xF-FZq"/>
                                                                     <constraint firstAttribute="trailing" secondItem="PD4-gn-IfJ" secondAttribute="trailing" id="UfO-13-xdF"/>
+                                                                    <constraint firstItem="ubq-qe-0Jx" firstAttribute="top" secondItem="lgo-Yd-YXr" secondAttribute="top" id="aTN-cr-5Uw"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="ubq-qe-0Jx" secondAttribute="bottom" id="c6c-BY-Coq"/>
                                                                     <constraint firstAttribute="trailing" secondItem="ubq-qe-0Jx" secondAttribute="trailing" id="ln7-Vx-SY2"/>
                                                                     <constraint firstAttribute="bottom" secondItem="PD4-gn-IfJ" secondAttribute="bottom" id="v40-Jq-2hD"/>
                                                                     <constraint firstAttribute="bottom" secondItem="ubq-qe-0Jx" secondAttribute="bottom" id="w2h-k1-6fD"/>
+                                                                    <constraint firstItem="ubq-qe-0Jx" firstAttribute="leading" secondItem="lgo-Yd-YXr" secondAttribute="leading" id="yfn-md-uIf"/>
                                                                     <constraint firstItem="PD4-gn-IfJ" firstAttribute="leading" secondItem="lgo-Yd-YXr" secondAttribute="leading" id="zhJ-2t-GaM"/>
                                                                 </constraints>
                                                             </view>
@@ -440,21 +435,24 @@
                                                         <constraints>
                                                             <constraint firstItem="lgo-Yd-YXr" firstAttribute="top" secondItem="xKH-KL-oRF" secondAttribute="top" id="1eV-yQ-752"/>
                                                             <constraint firstAttribute="bottom" secondItem="lgo-Yd-YXr" secondAttribute="bottom" id="629-wT-zh1"/>
+                                                            <constraint firstAttribute="bottom" secondItem="lgo-Yd-YXr" secondAttribute="bottom" id="C6O-FH-EJH"/>
                                                             <constraint firstItem="lgo-Yd-YXr" firstAttribute="leading" secondItem="xKH-KL-oRF" secondAttribute="leading" id="VJq-ay-HVf"/>
+                                                            <constraint firstItem="lgo-Yd-YXr" firstAttribute="leading" secondItem="xKH-KL-oRF" secondAttribute="leading" id="gvN-PO-KvM"/>
                                                             <constraint firstAttribute="height" constant="64" id="lpb-Ar-wXE"/>
+                                                            <constraint firstItem="lgo-Yd-YXr" firstAttribute="top" secondItem="xKH-KL-oRF" secondAttribute="top" id="pwl-64-buJ"/>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Ri-Os-ZOh">
-                                                        <rect key="frame" x="77" y="252.5" width="220" height="172"/>
+                                                        <rect key="frame" x="77" y="249.5" width="220" height="175.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6月15日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxx-iS-jBb">
-                                                                <rect key="frame" x="71.5" y="0.0" width="77" height="20"/>
+                                                                <rect key="frame" x="73.5" y="0.0" width="73.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
                                                                 <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ix-GZ-rSU">
-                                                                <rect key="frame" x="0.0" y="20" width="220" height="120"/>
+                                                                <rect key="frame" x="0.0" y="23.5" width="220" height="120"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko1-0S-tIj">
                                                                         <rect key="frame" x="0.0" y="0.0" width="220" height="120"/>
@@ -488,7 +486,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPg-sC-q64">
-                                                                <rect key="frame" x="47" y="140" width="126" height="32"/>
+                                                                <rect key="frame" x="47" y="143.5" width="126" height="32"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="林予晞" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFy-hP-jeV">
                                                                         <rect key="frame" x="0.0" y="0.0" width="126" height="32"/>
@@ -508,7 +506,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="ZRk-D7-nQt">
-                                                        <rect key="frame" x="127" y="432.5" width="120" height="0.0"/>
+                                                        <rect key="frame" x="127" y="433" width="120" height="0.0"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cn-Bv-QUs">
                                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="0.0"/>
@@ -536,7 +534,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xus-SA-myM">
-                                                        <rect key="frame" x="67" y="593" width="240" height="55"/>
+                                                        <rect key="frame" x="67" y="590.5" width="240" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSv-OP-NYy">
                                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="55"/>
@@ -578,7 +576,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="林予晞" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3G-Is-HKP">
-                                        <rect key="frame" x="20" y="776" width="374" height="14"/>
+                                        <rect key="frame" x="20" y="773.5" width="374" height="16.5"/>
                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                         <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -674,7 +672,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✨試用完整版" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhV-eR-KWp">
-                                                                <rect key="frame" x="16" y="21.5" width="107" height="17"/>
+                                                                <rect key="frame" x="16" y="20" width="107" height="20"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -761,7 +759,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收藏語錄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJI-xB-dsC">
-                                                                <rect key="frame" x="16" y="21.5" width="68" height="17"/>
+                                                                <rect key="frame" x="16" y="20" width="68" height="20"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <color key="textColor" red="0.1764705882352941" green="0.19215686274509802" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -814,7 +812,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心情紀錄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8A-MN-W2N">
-                                                                <rect key="frame" x="16" y="21.5" width="68" height="17"/>
+                                                                <rect key="frame" x="16" y="20" width="68" height="20"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -848,7 +846,7 @@
                                                         <rect key="frame" x="0.0" y="28.5" width="382" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hQ-ZT-Mjk">
-                                                                <rect key="frame" x="16" y="21.5" width="350" height="17"/>
+                                                                <rect key="frame" x="16" y="20" width="350" height="20"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -880,7 +878,7 @@
                                                         <rect key="frame" x="0.0" y="96.5" width="382" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9J-IF-dB5">
-                                                                <rect key="frame" x="16" y="21.5" width="68" height="17"/>
+                                                                <rect key="frame" x="16" y="20" width="68" height="20"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -914,7 +912,7 @@
                                                         <rect key="frame" x="0.0" y="164.5" width="382" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="背景" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlm-Pj-HXJ">
-                                                                <rect key="frame" x="16" y="21.5" width="34" height="17"/>
+                                                                <rect key="frame" x="16" y="20" width="34" height="20"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -968,7 +966,7 @@
                                                         <rect key="frame" x="0.0" y="232.5" width="382" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="字體" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXH-1l-sx5">
-                                                                <rect key="frame" x="16" y="21.5" width="34" height="17"/>
+                                                                <rect key="frame" x="16" y="20" width="34" height="20"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1022,7 +1020,7 @@
                                                         <rect key="frame" x="0.0" y="296.5" width="382" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自訂語錄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAv-Pv-BoX">
-                                                                <rect key="frame" x="16" y="21.5" width="68" height="17"/>
+                                                                <rect key="frame" x="16" y="20" width="68" height="20"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1075,7 +1073,7 @@
                                                         <rect key="frame" x="0.0" y="300.5" width="382" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小工具安裝教學" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8r-iy-xCP">
-                                                                <rect key="frame" x="16" y="21.5" width="119" height="17"/>
+                                                                <rect key="frame" x="16" y="20" width="119" height="20"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="17"/>
                                                                 <color key="textColor" red="0.1764705882" green="0.19215686269999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1580,7 +1578,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="382"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvY-7V-sUY">
-                                                        <rect key="frame" x="24" y="178.5" width="310" height="25"/>
+                                                        <rect key="frame" x="24" y="176.5" width="310" height="29.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="語錄載入中">
                                                                 <attributes>
@@ -1593,13 +1591,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="載入中" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-yL-qjM">
-                                                        <rect key="frame" x="24" y="223.5" width="334" height="16"/>
+                                                        <rect key="frame" x="24" y="226" width="334" height="19"/>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#植語錄 app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-5T-G9G">
-                                                        <rect key="frame" x="162.5" y="1" width="57" height="10"/>
+                                                        <rect key="frame" x="163" y="1" width="56" height="12"/>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="10"/>
                                                         <color key="textColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2587,16 +2585,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-qe-NEo">
-                                                        <rect key="frame" x="16" y="345" width="382" height="148"/>
+                                                        <rect key="frame" x="16" y="343" width="382" height="152"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新句子的時候需要通知你嗎？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
-                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="28"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkP-IQ-yWs">
-                                                                <rect key="frame" x="0.0" y="48" width="382" height="100"/>
+                                                                <rect key="frame" x="0.0" y="52" width="382" height="100"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I27-eA-JuC">
                                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
@@ -3243,20 +3241,14 @@ App們將會開始抖動。</string>
                                             <constraint firstItem="pal-qx-gC2" firstAttribute="top" secondItem="FQM-Me-g3r" secondAttribute="top" constant="5" id="jvs-MN-6vA"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="omB-P9-aEp">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="omB-P9-aEp">
                                         <rect key="frame" x="0.0" y="60" width="414" height="730"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qfV-lE-Jj8">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qfV-lE-Jj8">
+                                                <rect key="frame" x="0.0" y="24" width="414" height="48"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="promo_image" translatesAutoresizingMaskIntoConstraints="NO" id="f60-NW-oy6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="100" id="Ju9-Mr-hsM"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="獲得更多字體、顏色、植物" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUl-XT-5c5">
-                                                        <rect key="frame" x="0.0" y="108" width="414" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="升級句句完整版" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUl-XT-5c5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="IPd-Uc-ZC8"/>
                                                         </constraints>
@@ -3264,13 +3256,11 @@ App們將會開始抖動。</string>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwd-Rb-aIt">
-                                                        <rect key="frame" x="0.0" y="140" width="414" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="獲得比別人更多的正能量" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwd-Rb-aIt">
+                                                        <rect key="frame" x="0.0" y="24" width="414" height="24"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="hu5-YB-OIp"/>
+                                                            <constraint firstAttribute="height" constant="24" id="hu5-YB-OIp"/>
                                                         </constraints>
-                                                        <string key="text">完整版免費試用 30 天
-之後每月只要一杯咖啡的價格</string>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="16"/>
                                                         <color key="textColor" red="0.61176470588235299" green="0.61960784313725492" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -3278,84 +3268,195 @@ App們將會開始抖動。</string>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Uf4-em-KD0">
-                                                <rect key="frame" x="0.0" y="180" width="414" height="382"/>
+                                                <rect key="frame" x="0.0" y="96" width="414" height="320"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-A3-1jx">
-                                                        <rect key="frame" x="16" y="16" width="382" height="350"/>
+                                                        <rect key="frame" x="16" y="0.0" width="382" height="320"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QPd-88-czF">
-                                                                <rect key="frame" x="16" y="16" width="350" height="318"/>
+                                                                <rect key="frame" x="16" y="20" width="350" height="280"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="OPS-7b-ZXu">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="318"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OPS-7b-ZXu">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="280"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMg-QF-W0f">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="350" height="144"/>
-                                                                                <attributedString key="attributedText">
-                                                                                    <fragment>
-                                                                                        <string key="content">完整版包含：
-每日花語
-</string>
-                                                                                        <attributes>
-                                                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                            <font key="NSFont" size="16" name="jf-openhuninn-1.1"/>
-                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
-                                                                                        </attributes>
-                                                                                    </fragment>
-                                                                                    <fragment>
-                                                                                        <string key="content">每日彩色手繪植物
-</string>
-                                                                                        <attributes>
-                                                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                            <font key="NSFont" size="16" name="jf-openhuninn-1.1"/>
-                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                                                        </attributes>
-                                                                                    </fragment>
-                                                                                    <fragment>
-                                                                                        <string key="content">多種新字體
-多種背景顏色
-</string>
-                                                                                        <attributes>
-                                                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                            <font key="NSFont" size="16" name="jf-openhuninn-1.1"/>
-                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
-                                                                                        </attributes>
-                                                                                    </fragment>
-                                                                                    <fragment content="無限紀錄每日心情">
-                                                                                        <attributes>
-                                                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                            <font key="NSFont" size="16" name="jf-openhuninn-1.1"/>
-                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                                                        </attributes>
-                                                                                    </fragment>
-                                                                                </attributedString>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-aN-h6g">
-                                                                                <rect key="frame" x="0.0" y="278" width="350" height="40"/>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4Rw-QV-Z1V">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="350" height="58"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-hK-P3A">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="20"/>
-                                                                                        <attributedString key="attributedText">
-                                                                                            <fragment content="免費試用 30 天">
-                                                                                                <attributes>
-                                                                                                    <color key="NSColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                                    <font key="NSFont" size="12" name="jf-openhuninn-1.1"/>
-                                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                                </attributes>
-                                                                                            </fragment>
-                                                                                        </attributedString>
-                                                                                        <color key="highlightedColor" white="0.78000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                    </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="月付方案 $120 / 月" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-qf-MLG">
-                                                                                        <rect key="frame" x="0.0" y="20" width="350" height="20"/>
-                                                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
-                                                                                        <color key="textColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                        <color key="highlightedColor" white="0.78000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                    </label>
+                                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wvh-gh-ATd">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="58"/>
+                                                                                        <subviews>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="widget" translatesAutoresizingMaskIntoConstraints="NO" id="Rki-x3-dr1">
+                                                                                                <rect key="frame" x="0.0" y="17" width="24" height="24"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="width" constant="24" id="4Yh-3h-xdG"/>
+                                                                                                    <constraint firstAttribute="height" constant="24" id="ZE4-4K-gCt"/>
+                                                                                                </constraints>
+                                                                                            </imageView>
+                                                                                        </subviews>
+                                                                                        <constraints>
+                                                                                            <constraint firstItem="Rki-x3-dr1" firstAttribute="centerX" secondItem="wvh-gh-ATd" secondAttribute="centerX" id="P9t-qM-tWQ"/>
+                                                                                            <constraint firstAttribute="width" constant="24" id="fCl-7o-Wmd"/>
+                                                                                            <constraint firstItem="Rki-x3-dr1" firstAttribute="top" secondItem="wvh-gh-ATd" secondAttribute="top" constant="17" id="fc1-bo-Atj"/>
+                                                                                            <constraint firstItem="Rki-x3-dr1" firstAttribute="centerY" secondItem="wvh-gh-ATd" secondAttribute="centerY" id="t84-2g-gXI"/>
+                                                                                        </constraints>
+                                                                                    </view>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H8h-bv-ShY">
+                                                                                        <rect key="frame" x="40" y="0.0" width="310" height="58"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="獲得更多桌面小工具" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-5Z-Ujd" userLabel="完整版包含： 每日花語 每日彩色手繪植物 多種新字體 多種背景顏色 無限紀錄每日心情">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="43.5"/>
+                                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="7 種不同類型的桌面小工具讓你豐富你的桌面！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBl-jv-v45">
+                                                                                                <rect key="frame" x="0.0" y="43.5" width="310" height="14.5"/>
+                                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                <color key="highlightedColor" white="0.78000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
                                                                                 </subviews>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="40" id="kMi-DN-kju"/>
+                                                                                    <constraint firstAttribute="height" constant="56" id="QPE-OR-UyM"/>
+                                                                                </constraints>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="6cH-UB-U2A">
+                                                                                <rect key="frame" x="0.0" y="74" width="350" height="58"/>
+                                                                                <subviews>
+                                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0j-OL-iKh">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="58"/>
+                                                                                        <subviews>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="handwrite" translatesAutoresizingMaskIntoConstraints="NO" id="z5H-hl-RGL">
+                                                                                                <rect key="frame" x="0.0" y="17" width="24" height="24"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="24" id="Qju-yd-xUx"/>
+                                                                                                    <constraint firstAttribute="width" constant="24" id="eYw-6s-MJ0"/>
+                                                                                                </constraints>
+                                                                                            </imageView>
+                                                                                        </subviews>
+                                                                                        <constraints>
+                                                                                            <constraint firstItem="z5H-hl-RGL" firstAttribute="top" secondItem="L0j-OL-iKh" secondAttribute="top" constant="17" id="aYy-1e-nJQ"/>
+                                                                                            <constraint firstItem="z5H-hl-RGL" firstAttribute="centerX" secondItem="L0j-OL-iKh" secondAttribute="centerX" id="jsm-QT-KG2"/>
+                                                                                            <constraint firstItem="z5H-hl-RGL" firstAttribute="centerY" secondItem="L0j-OL-iKh" secondAttribute="centerY" id="wLC-Ue-x0O"/>
+                                                                                            <constraint firstAttribute="width" constant="24" id="zJZ-0z-WWz"/>
+                                                                                        </constraints>
+                                                                                    </view>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8SO-FO-WyI">
+                                                                                        <rect key="frame" x="40" y="0.0" width="310" height="58"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="獲得手寫與更多字體" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4X-iQ-CGO" userLabel="完整版包含： 每日花語 每日彩色手繪植物 多種新字體 多種背景顏色 無限紀錄每日心情">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="43.5"/>
+                                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="6 種不同字體，從手寫到草寫，應有盡有！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClY-gk-0MQ">
+                                                                                                <rect key="frame" x="0.0" y="43.5" width="310" height="14.5"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="14.5" id="Fvf-ur-yCc"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                <color key="highlightedColor" white="0.78000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="56" id="F6x-Yu-25r"/>
+                                                                                </constraints>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YG4-x9-1KL">
+                                                                                <rect key="frame" x="0.0" y="148" width="350" height="58"/>
+                                                                                <subviews>
+                                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nXT-kb-AZK">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="58"/>
+                                                                                        <subviews>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="eWG-AQ-1FK">
+                                                                                                <rect key="frame" x="0.0" y="17" width="24" height="24"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="24" id="R6U-Zr-pGA"/>
+                                                                                                    <constraint firstAttribute="width" constant="24" id="Rg9-L9-Wra"/>
+                                                                                                </constraints>
+                                                                                            </imageView>
+                                                                                        </subviews>
+                                                                                        <constraints>
+                                                                                            <constraint firstItem="eWG-AQ-1FK" firstAttribute="centerY" secondItem="nXT-kb-AZK" secondAttribute="centerY" id="7gy-uI-KjT"/>
+                                                                                            <constraint firstItem="eWG-AQ-1FK" firstAttribute="centerX" secondItem="nXT-kb-AZK" secondAttribute="centerX" id="DiY-Io-oWK"/>
+                                                                                            <constraint firstAttribute="width" constant="24" id="JlI-xJ-e9I"/>
+                                                                                            <constraint firstItem="eWG-AQ-1FK" firstAttribute="top" secondItem="nXT-kb-AZK" secondAttribute="top" constant="17" id="mhj-CM-gID"/>
+                                                                                        </constraints>
+                                                                                    </view>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="x44-62-ZB3">
+                                                                                        <rect key="frame" x="40" y="0.0" width="310" height="58"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="獲得更多背景顏色" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xr-fT-TFS" userLabel="完整版包含： 每日花語 每日彩色手繪植物 多種新字體 多種背景顏色 無限紀錄每日心情">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="43.5"/>
+                                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="15 種不同顏色的背景，什麼顏色通通有！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUP-6w-wvm">
+                                                                                                <rect key="frame" x="0.0" y="43.5" width="310" height="14.5"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="14.5" id="j6s-SG-PNE"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                <color key="highlightedColor" white="0.78000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="56" id="Bks-5C-SqD"/>
+                                                                                </constraints>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9LV-kp-Tbc">
+                                                                                <rect key="frame" x="0.0" y="222" width="350" height="58"/>
+                                                                                <subviews>
+                                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdO-Al-LUj">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="58"/>
+                                                                                        <subviews>
+                                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="rdL-Dx-ASW">
+                                                                                                <rect key="frame" x="0.0" y="17" width="24" height="24"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="24" id="9K2-tf-6dV"/>
+                                                                                                    <constraint firstAttribute="width" constant="24" id="pln-RS-02s"/>
+                                                                                                </constraints>
+                                                                                            </imageView>
+                                                                                        </subviews>
+                                                                                        <constraints>
+                                                                                            <constraint firstItem="rdL-Dx-ASW" firstAttribute="centerX" secondItem="mdO-Al-LUj" secondAttribute="centerX" id="KXU-en-DWK"/>
+                                                                                            <constraint firstAttribute="width" constant="24" id="cOi-oU-I43"/>
+                                                                                            <constraint firstItem="rdL-Dx-ASW" firstAttribute="centerY" secondItem="mdO-Al-LUj" secondAttribute="centerY" id="x1B-v2-QtF"/>
+                                                                                        </constraints>
+                                                                                    </view>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pfq-lP-3vh">
+                                                                                        <rect key="frame" x="40" y="0.0" width="310" height="58"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="獲得花語及彩色植物" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewh-Qp-Swu" userLabel="完整版包含： 每日花語 每日彩色手繪植物 多種新字體 多種背景顏色 無限紀錄每日心情">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="43.5"/>
+                                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="更深度的了解每株植物代表的意義！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndl-k4-pBT">
+                                                                                                <rect key="frame" x="0.0" y="43.5" width="310" height="14.5"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="14.5" id="uIE-uQ-5XV"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                                <color key="highlightedColor" white="0.78000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="56" id="7RP-ha-dCj"/>
                                                                                 </constraints>
                                                                             </stackView>
                                                                         </subviews>
@@ -3366,55 +3467,59 @@ App們將會開始抖動。</string>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="QPd-88-czF" firstAttribute="top" secondItem="K7D-A3-1jx" secondAttribute="top" constant="16" id="Ns3-3c-wgw"/>
-                                                            <constraint firstAttribute="bottom" secondItem="QPd-88-czF" secondAttribute="bottom" constant="16" id="Taw-bq-tEX"/>
+                                                            <constraint firstItem="QPd-88-czF" firstAttribute="top" secondItem="K7D-A3-1jx" secondAttribute="top" constant="20" id="9gN-r5-1zx"/>
+                                                            <constraint firstAttribute="bottom" secondItem="QPd-88-czF" secondAttribute="bottom" constant="20" id="MTx-ee-UHm"/>
                                                             <constraint firstItem="QPd-88-czF" firstAttribute="leading" secondItem="K7D-A3-1jx" secondAttribute="leading" constant="16" id="bGY-vQ-ip2"/>
                                                             <constraint firstAttribute="trailing" secondItem="QPd-88-czF" secondAttribute="trailing" constant="16" id="vti-8K-mFd"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="K7D-A3-1jx" firstAttribute="leading" secondItem="Uf4-em-KD0" secondAttribute="leading" constant="16" id="7yK-Cx-BKF"/>
-                                                    <constraint firstAttribute="bottom" secondItem="K7D-A3-1jx" secondAttribute="bottom" constant="16" id="8nG-jL-f0X"/>
-                                                    <constraint firstItem="K7D-A3-1jx" firstAttribute="top" secondItem="Uf4-em-KD0" secondAttribute="top" constant="16" id="HIx-wB-NIT"/>
+                                                    <constraint firstItem="K7D-A3-1jx" firstAttribute="top" secondItem="Uf4-em-KD0" secondAttribute="top" id="KEj-nB-de8"/>
                                                     <constraint firstAttribute="trailing" secondItem="K7D-A3-1jx" secondAttribute="trailing" constant="16" id="fkE-W2-hjv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="K7D-A3-1jx" secondAttribute="bottom" id="m5c-ce-MuT"/>
+                                                    <constraint firstAttribute="height" constant="320" id="vA5-BA-w1h"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v73-NA-VxR">
-                                                <rect key="frame" x="0.0" y="562" width="414" height="168"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wtr-pX-8ce">
+                                                <rect key="frame" x="0.0" y="440" width="414" height="69.5"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCb-Pz-HCo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安心使用，隨時取消" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="big-1K-s2F">
-                                                                <rect key="frame" x="16" y="0.0" width="382" height="14"/>
-                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
-                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。條款及細則" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3EX-f5-qz0">
-                                                                <rect key="frame" x="24" y="14" width="366" height="42"/>
-                                                                <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                                            </textView>
-                                                        </subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免費使用一週，之後每月 $300 元。" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyq-Ki-gB9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                        <color key="textColor" red="0.1764705882352941" green="0.19215686274509802" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。條款及細則" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vgj-3W-a0a">
+                                                        <rect key="frame" x="0.0" y="21.5" width="414" height="48"/>
                                                         <constraints>
-                                                            <constraint firstItem="3EX-f5-qz0" firstAttribute="top" secondItem="big-1K-s2F" secondAttribute="bottom" id="90k-mu-9hX"/>
-                                                            <constraint firstItem="big-1K-s2F" firstAttribute="leading" secondItem="lCb-Pz-HCo" secondAttribute="leading" constant="16" id="ALY-ta-Qcq"/>
-                                                            <constraint firstAttribute="height" constant="56" id="H98-8d-21p"/>
-                                                            <constraint firstAttribute="trailing" secondItem="big-1K-s2F" secondAttribute="trailing" constant="16" id="a6K-j7-YqA"/>
-                                                            <constraint firstItem="big-1K-s2F" firstAttribute="top" secondItem="lCb-Pz-HCo" secondAttribute="top" id="bBU-VF-E1Z"/>
-                                                            <constraint firstAttribute="trailing" secondItem="big-1K-s2F" secondAttribute="trailing" constant="16" id="bKp-MJ-NPV"/>
-                                                            <constraint firstAttribute="bottom" secondItem="3EX-f5-qz0" secondAttribute="bottom" id="hhe-1H-FzF"/>
-                                                            <constraint firstItem="3EX-f5-qz0" firstAttribute="leading" secondItem="lCb-Pz-HCo" secondAttribute="leading" constant="24" id="mvW-dt-Cap"/>
-                                                            <constraint firstAttribute="trailing" secondItem="3EX-f5-qz0" secondAttribute="trailing" constant="24" id="nea-8U-iBA"/>
-                                                            <constraint firstItem="big-1K-s2F" firstAttribute="leading" secondItem="lCb-Pz-HCo" secondAttribute="leading" constant="16" id="oAE-dh-ZZH"/>
+                                                            <constraint firstAttribute="height" constant="48" id="xfd-J8-H2C"/>
                                                         </constraints>
-                                                    </view>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="64" bottom="8" trailing="64"/>
+                                                        <color key="textColor" red="0.61176470588235299" green="0.61960784313725492" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="10"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v73-NA-VxR">
+                                                <rect key="frame" x="0.0" y="533.5" width="414" height="196.5"/>
+                                                <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHR-0x-j62">
-                                                        <rect key="frame" x="0.0" y="56" width="414" height="112"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="196.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jp-MY-Bwq">
                                                                 <rect key="frame" x="47" y="16" width="320" height="60"/>
@@ -3425,7 +3530,7 @@ App們將會開始抖動。</string>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title="開始免費試用"/>
+                                                                <state key="normal" title="開始免費使用 7 天"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <integer key="value" value="15"/>
@@ -3435,12 +3540,6 @@ App們將會開始抖動。</string>
                                                                     <action selector="purchaseTapped:" destination="ctx-cW-Iia" eventType="touchUpInside" id="c1b-rT-O90"/>
                                                                 </connections>
                                                             </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="後續每月只要 $120.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oE-y9-xZe">
-                                                                <rect key="frame" x="156" y="61" width="102.5" height="10"/>
-                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="10"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJS-iI-eIS">
                                                                 <rect key="frame" x="176" y="84" width="62" height="30"/>
                                                                 <state key="normal" title="恢復購買">
@@ -3457,16 +3556,12 @@ App們將會開始抖動。</string>
                                                             <constraint firstItem="9jp-MY-Bwq" firstAttribute="centerX" secondItem="AHR-0x-j62" secondAttribute="centerX" id="E4j-mT-gxG"/>
                                                             <constraint firstItem="dJS-iI-eIS" firstAttribute="centerX" secondItem="AHR-0x-j62" secondAttribute="centerX" id="GPP-dL-Ktb"/>
                                                             <constraint firstItem="9jp-MY-Bwq" firstAttribute="top" secondItem="AHR-0x-j62" secondAttribute="top" constant="16" id="Wy0-at-DDR"/>
-                                                            <constraint firstItem="9oE-y9-xZe" firstAttribute="centerY" secondItem="9jp-MY-Bwq" secondAttribute="centerY" constant="20" id="c0e-SC-7qo"/>
-                                                            <constraint firstItem="9oE-y9-xZe" firstAttribute="centerX" secondItem="9jp-MY-Bwq" secondAttribute="centerX" id="z2h-Kk-cW4"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="168" id="yWZ-ea-NaR"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="0.0" bottom="0.0" trailing="0.0"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -3492,11 +3587,11 @@ App們將會開始抖動。</string>
                     <navigationItem key="navigationItem" id="nVe-df-RBU"/>
                     <connections>
                         <outlet property="Pricingdescription" destination="Dwd-Rb-aIt" id="EHD-yz-dhe"/>
-                        <outlet property="buttonPricingDetail" destination="9oE-y9-xZe" id="icu-aT-Jox"/>
-                        <outlet property="flowerImage" destination="f60-NW-oy6" id="Pub-en-S6z"/>
-                        <outlet property="policyDescription" destination="3EX-f5-qz0" id="NEQ-Yv-lBk"/>
-                        <outlet property="price_description_below" destination="g1k-hK-P3A" id="ctO-IL-Djd"/>
-                        <outlet property="promoPricingDetail" destination="2aW-qf-MLG" id="qiR-Jw-dpZ"/>
+                        <outlet property="buttonPricingDetail" destination="9jp-MY-Bwq" id="niB-tN-vfA"/>
+                        <outlet property="featureDescriptionWrapper" destination="K7D-A3-1jx" id="Kir-BC-cFu"/>
+                        <outlet property="flowerImage" destination="Rki-x3-dr1" id="lkg-wB-5Lp"/>
+                        <outlet property="policyDescription" destination="vgj-3W-a0a" id="SN0-wJ-nAj"/>
+                        <outlet property="promoPricingDetail" destination="dyq-Ki-gB9" id="ZT3-S7-ykP"/>
                         <outlet property="purchasePageDescription" destination="Dwd-Rb-aIt" id="BJe-tW-kbp"/>
                         <outlet property="purchasePageTitle" destination="jUl-XT-5c5" id="2qK-wU-XW9"/>
                     </connections>
@@ -3553,19 +3648,19 @@ App們將會開始抖動。</string>
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="234"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇字體" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cda-zC-giG">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="26.5"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免費字體" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv0-Le-JYC">
-                                                                                <rect key="frame" x="0.0" y="40" width="374" height="13.5"/>
+                                                                                <rect key="frame" x="0.0" y="42.5" width="374" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E3B-mz-nKF">
-                                                                                <rect key="frame" x="0.0" y="69.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="74.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmt-fP-4MB">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="60"/>
@@ -3593,7 +3688,7 @@ App們將會開始抖動。</string>
                                                                                 </constraints>
                                                                             </stackView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付費字體" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR2-4S-blz">
-                                                                                <rect key="frame" x="0.0" y="145.5" width="374" height="12.5"/>
+                                                                                <rect key="frame" x="0.0" y="150.5" width="374" height="7.5"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -4753,7 +4848,10 @@ App們將會開始抖動。</string>
         <image name="Tutorial_Step 5" width="313" height="209"/>
         <image name="Vernonia amygdalina" width="256" height="427"/>
         <image name="Vernonia amygdalina.png" width="2340" height="3900"/>
+        <image name="background" width="24" height="24"/>
         <image name="background-2022" width="563" height="1218"/>
+        <image name="flower" width="24" height="24"/>
+        <image name="handwrite" width="24" height="24"/>
         <image name="icon_back" width="48" height="48"/>
         <image name="icon_back_2" width="50" height="50"/>
         <image name="icon_bookmark" width="48" height="48"/>
@@ -4764,9 +4862,9 @@ App們將會開始抖動。</string>
         <image name="noun_Share_1058858 (2) 1" width="35" height="35"/>
         <image name="noun_instagram_3350460 (1) 1-1" width="30" height="30"/>
         <image name="onboarding-background" width="563" height="1218"/>
-        <image name="promo_image" width="140" height="141"/>
         <image name="promo_image_widget" width="1125" height="1471"/>
         <image name="share_frame" width="2343" height="2343"/>
+        <image name="widget" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

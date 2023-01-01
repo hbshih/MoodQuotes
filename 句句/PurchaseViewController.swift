@@ -17,12 +17,13 @@ import FirebaseAnalytics
 class PurchaseViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var price_description_below: UILabel!
+    @IBOutlet weak var featureDescriptionWrapper: UIView!
     @IBOutlet weak var Pricingdescription: UILabel!
     @IBOutlet weak var purchasePageTitle: UILabel!
     @IBOutlet weak var flowerImage: UIImageView!
     @IBOutlet weak var purchasePageDescription: UILabel!
     @IBOutlet weak var promoPricingDetail: UILabel!
-    @IBOutlet weak var buttonPricingDetail: UILabel!
+    @IBOutlet weak var buttonPricingDetail: UIButton!
     @IBOutlet weak var policyDescription: UITextView!
     
     var purchaseTitle = ""
@@ -35,19 +36,21 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
         
         // Do any additional setup after loading the view.
         
+        featureDescriptionWrapper.layer.borderWidth = 1.0
+        featureDescriptionWrapper.layer.borderColor = CGColor(red: 86/255, green: 84/255, blue: 84/255, alpha: 1.0)
+
+        
         if purchaseTitle != ""
         {
             purchasePageTitle.text = purchaseTitle
             purchasePageDescription.text = purchaseDescription
         }
         
-        promoPricingDetail.text  = "月付方案 \(global_paid_price) / 月"
-        buttonPricingDetail.text = "後續只要 \(global_paid_price) / 月"
-        Pricingdescription.text = "完整版免費試用 \(global_intro_number_of_unit) \(global_intro_unit) \n之後每月只要一杯咖啡的價格"
-        price_description_below.text = "免費試用 \(global_intro_number_of_unit) \(global_intro_unit)"
+        promoPricingDetail.text  = "免費使用 \(global_intro_number_of_unit) \(global_intro_unit)，之後每月 \(global_paid_price)"
+        buttonPricingDetail.setTitle("開始免費使用 \(global_intro_number_of_unit) \(global_intro_unit)", for: .normal)
         
         policyDescription.delegate = self
-        policyDescription.buildLink(originalText: "為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。條款及細則 隱私條款", hyperLinks: ["AppStore":"itms-apps://apps.apple.com/account/subscriptions", "條款及細則":"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/", "隱私條款": "https://pages.flycricket.io/ju-ju-moodquotes/privacy.html"])
+        policyDescription.buildLink(originalText: "隨時可以透過 AppStore 取消訂閱。\n 詳請見 條款及細則 隱私條款", hyperLinks: ["AppStore":"itms-apps://apps.apple.com/account/subscriptions", "條款及細則":"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/", "隱私條款": "https://pages.flycricket.io/ju-ju-moodquotes/privacy.html"])
     }
     
     var loader: UIAlertController?
