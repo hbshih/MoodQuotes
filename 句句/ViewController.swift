@@ -51,7 +51,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         }else
         {
             print("touched")
-            onboardingTouchIcon.isHidden = true
+          //  onboardingTouchIcon.isHidden = true
             if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil
             {
                 // existing users
@@ -222,11 +222,13 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     var defaultFlowerImage = UIImage(named: "noun_seeds_184642")
     var defaultFlowerImageName = "正在載入中"
     
+    /*
     @objc func flashImageActive(){
         UIView.animate(withDuration: 0.7) {
             self.onboardingTouchIcon.alpha = self.onboardingTouchIcon.alpha == 1.0 ? 0.0 : 1.0
         }
     }
+    */
     
     func checkIfBookmarked()
     {
@@ -350,8 +352,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     {
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
         {
-            self.onboardingTouchIcon.alpha = 0.0
-            self.onboardingTouchIcon.isHidden = true
+           // self.onboardingTouchIcon.alpha = 0.0
+           // self.onboardingTouchIcon.isHidden = true
             // Existing User
             
             /*   if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "ShowNewUIUpdate_Ver6.0") != nil
@@ -365,8 +367,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         } else
         {
             // New User
-            self.onboardingTouchIcon.alpha = 0.0
-            Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)
+          //  self.onboardingTouchIcon.alpha = 0.0
+          //  Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)
             
             //handle new user
             
