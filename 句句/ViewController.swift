@@ -459,7 +459,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
         {
             
-            let diffComponents = Calendar.current.dateComponents([.hour], from: notificationDate, to: Date.now)
+            let diffComponents = Calendar.current.dateComponents([.hour], from: notificationDate, to: Date())
             let hours = diffComponents.hour
             countdownLabel.text = "距離下次更新還有 \(hours) 小時"
         }
