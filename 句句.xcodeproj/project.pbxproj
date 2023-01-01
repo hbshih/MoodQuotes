@@ -139,6 +139,7 @@
 		B5DF562E256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5DF562F256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
+		B5FAF57B2961B826007E51E0 /* WelcomeMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FAF57A2961B826007E51E0 /* WelcomeMessageViewController.swift */; };
 		BC58CA65A3C6C736913C09FC /* Pods______UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFD2C2C730397F8655D027A /* Pods______UITests.framework */; };
 		D73E671B225CA3AE85BB2AF6 /* Pods_widgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3507748D56C8ABB370227B /* Pods_widgetExtension.framework */; };
 /* End PBXBuildFile section */
@@ -296,6 +297,7 @@
 		B5DF1B3B257DDE5D001F95CC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B5DF562D256F2C01004A24D8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		B5E8973525655F1F00D470E2 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		B5FAF57A2961B826007E51E0 /* WelcomeMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageViewController.swift; sourceTree = "<group>"; };
 		C5A97FF5AD77BFDE853E4C05 /* Pods-句句.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句.debug.xcconfig"; path = "Target Support Files/Pods-句句/Pods-句句.debug.xcconfig"; sourceTree = "<group>"; };
 		D96199F7016054F573B667A8 /* Pods___Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B345AA234CD3BE84833252 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -488,6 +490,7 @@
 				B57203452813DAF100857571 /* appVersionNumber.swift */,
 				B5C76A102830D432004DE417 /* Model.xcdatamodeld */,
 				B5C76A142830D543004DE417 /* coreDataHandler.swift */,
+				B5FAF57A2961B826007E51E0 /* WelcomeMessageViewController.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -914,6 +917,7 @@
 				B50374CD263310B5004E2F86 /* AdMobsViewController.swift in Sources */,
 				B5B49792256A6F2900570D84 /* Onboarding_3ViewController.swift in Sources */,
 				B563EBD027F42657003D0DD9 /* OnboardingFontViewController.swift in Sources */,
+				B5FAF57B2961B826007E51E0 /* WelcomeMessageViewController.swift in Sources */,
 				B510EE1228C4891D004EC8C6 /* MediumWidget_OnlyQuote.swift in Sources */,
 				B506EBC92562306400372198 /* UpdateBackgroundColorTableViewCell.swift in Sources */,
 				B57203462813DAF100857571 /* appVersionNumber.swift in Sources */,

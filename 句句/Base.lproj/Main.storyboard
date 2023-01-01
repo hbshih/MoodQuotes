@@ -290,7 +290,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="278" height="64"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfw-8G-YjK">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="64"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="72.5" height="64"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="Vernonia amygdalina.png" translatesAutoresizingMaskIntoConstraints="NO" id="gu2-iE-YJg">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="48" height="64"/>
@@ -310,16 +310,16 @@
                                                                                 </constraints>
                                                                             </view>
                                                                             <stackView opaque="NO" contentMode="bottom" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wKS-xO-sB5">
-                                                                                <rect key="frame" x="68.5" y="0.0" width="209.5" height="64"/>
+                                                                                <rect key="frame" x="80.5" y="0.0" width="197.5" height="64"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="罌粟花" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icy-av-SWs">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="209.5" height="32"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="197.5" height="32"/>
                                                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="18"/>
                                                                                         <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" text="一種生長在海拔1040公尺的花，可以很浪漫的陪你成長。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNx-6R-ayd">
-                                                                                        <rect key="frame" x="0.0" y="32" width="209.5" height="32"/>
+                                                                                        <rect key="frame" x="0.0" y="32" width="197.5" height="32"/>
                                                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
                                                                                         <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
@@ -1403,7 +1403,7 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-kL-OCS">
-                                        <rect key="frame" x="179" y="8" width="56" height="28"/>
+                                        <rect key="frame" x="179" y="5.5" width="56" height="33"/>
                                         <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="28"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -1483,21 +1483,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedQuoteCell" textLabel="R76-T7-bFQ" detailTextLabel="TfX-5v-HaR" style="IBUITableViewCellStyleSubtitle" id="iaP-92-cxO" customClass="CollectedQuoteTableViewCell" customModule="句句" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="414" height="54.5"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="60.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iaP-92-cxO" id="gwY-hk-gR3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R76-T7-bFQ">
-                                            <rect key="frame" x="20" y="11" width="25" height="17"/>
+                                            <rect key="frame" x="20" y="8" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfX-5v-HaR">
-                                            <rect key="frame" x="20" y="28" width="40.5" height="17"/>
+                                            <rect key="frame" x="20" y="31" width="58" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -1840,16 +1840,16 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="35"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="P0B-cb-gLx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="35"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="35"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMi-bZ-LON">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="35"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="35"/>
                                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="32"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vhf-cO-Ndx">
-                                                                        <rect key="frame" x="55.5" y="0.0" width="46.5" height="35"/>
+                                                                        <rect key="frame" x="52" y="0.0" width="44.5" height="35"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="週二" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ur-NF-Rvd">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="17.5"/>
@@ -1858,7 +1858,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6月15日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuk-pf-twx">
-                                                                                <rect key="frame" x="0.0" y="17.5" width="46.5" height="17.5"/>
+                                                                                <rect key="frame" x="0.0" y="17.5" width="44.5" height="17.5"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2027,12 +2027,12 @@
                                                         <rect key="frame" x="270" y="0.0" width="80" height="216"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jU2-8b-mLj">
-                                                                <rect key="frame" x="0.0" y="192" width="40" height="24"/>
+                                                                <rect key="frame" x="0.0" y="190" width="40" height="26"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
                                                                 <state key="normal" title="分享"/>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPg-lN-uDh">
-                                                                <rect key="frame" x="40" y="192" width="40" height="24"/>
+                                                                <rect key="frame" x="40" y="190" width="40" height="26"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
                                                                 <state key="normal" title="收藏"/>
                                                             </button>
@@ -2118,7 +2118,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免費字體" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPl-5C-Pdf">
-                                                                <rect key="frame" x="0.0" y="98.5" width="374" height="14"/>
+                                                                <rect key="frame" x="0.0" y="97.5" width="374" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -2222,7 +2222,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付費字體" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z2-sQ-IQc">
-                                                                <rect key="frame" x="0.0" y="215" width="374" height="14"/>
+                                                                <rect key="frame" x="0.0" y="213.5" width="374" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -2488,16 +2488,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="814"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-qe-NEo">
-                                                        <rect key="frame" x="16" y="333" width="382" height="148"/>
+                                                        <rect key="frame" x="16" y="331" width="382" height="152"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新句子的時候需要通知你嗎？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
-                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="28"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkP-IQ-yWs">
-                                                                <rect key="frame" x="0.0" y="48" width="382" height="100"/>
+                                                                <rect key="frame" x="0.0" y="52" width="382" height="100"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I27-eA-JuC">
                                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
@@ -3123,7 +3123,7 @@ App們將會開始抖動。</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeX-jG-Uhq">
-                                                <rect key="frame" x="326" y="9" width="72" height="26"/>
+                                                <rect key="frame" x="326" y="8" width="72" height="28"/>
                                                 <color key="tintColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="折扣代碼">
@@ -3190,7 +3190,7 @@ App們將會開始抖動。</string>
                                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="318"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMg-QF-W0f">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="350" height="144"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="350" height="168"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment>
                                                                                         <string key="content">完整版包含：
@@ -3287,13 +3287,13 @@ App們將會開始抖動。</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安心使用，隨時取消" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="big-1K-s2F">
-                                                                <rect key="frame" x="16" y="0.0" width="382" height="14"/>
+                                                                <rect key="frame" x="16" y="0.0" width="382" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="為了保障您的權益，如果不滿意完整版的功能，在試用和付費期間皆可隨時透過 AppStore 取消訂閱。條款及細則" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3EX-f5-qz0">
-                                                                <rect key="frame" x="24" y="14" width="366" height="42"/>
+                                                                <rect key="frame" x="24" y="16.5" width="366" height="39.5"/>
                                                                 <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="12"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -3336,7 +3336,7 @@ App們將會開始抖動。</string>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="後續每月只要 $120.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oE-y9-xZe">
-                                                                <rect key="frame" x="156" y="61" width="102.5" height="10"/>
+                                                                <rect key="frame" x="157.5" y="60" width="99" height="12"/>
                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="10"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -3453,19 +3453,19 @@ App們將會開始抖動。</string>
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="234"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇字體" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cda-zC-giG">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="26.5"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免費字體" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv0-Le-JYC">
-                                                                                <rect key="frame" x="0.0" y="40" width="374" height="13.5"/>
+                                                                                <rect key="frame" x="0.0" y="42.5" width="374" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E3B-mz-nKF">
-                                                                                <rect key="frame" x="0.0" y="69.5" width="374" height="60"/>
+                                                                                <rect key="frame" x="0.0" y="74.5" width="374" height="60"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmt-fP-4MB">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="60"/>
@@ -3493,7 +3493,7 @@ App們將會開始抖動。</string>
                                                                                 </constraints>
                                                                             </stackView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付費字體" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR2-4S-blz">
-                                                                                <rect key="frame" x="0.0" y="145.5" width="374" height="12.5"/>
+                                                                                <rect key="frame" x="0.0" y="150.5" width="374" height="7.5"/>
                                                                                 <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="14"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -4367,20 +4367,20 @@ App們將會開始抖動。</string>
             <objects>
                 <viewController id="1ea-df-IB1" customClass="Onboarding_2ViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F7y-Jt-myU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gSb-cY-3Sp">
-                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="790"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mzK-TO-8Fd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="704"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbY-e7-Unc">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="704"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1vp-2k-kcL">
-                                                        <rect key="frame" x="20" y="202" width="374" height="300"/>
+                                                        <rect key="frame" x="20" y="190" width="374" height="300"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHi-Qz-Jbe">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
@@ -4491,7 +4491,7 @@ App們將會開始抖動。</string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T28-Bm-g6P">
-                                        <rect key="frame" x="0.0" y="704" width="414" height="110"/>
+                                        <rect key="frame" x="0.0" y="680" width="414" height="110"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ou-oa-vcU">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
@@ -4604,10 +4604,10 @@ App們將會開始抖動。</string>
             </objects>
             <point key="canvasLocation" x="-10255" y="-985"/>
         </scene>
-        <!--Onboarding Story View Controller-->
+        <!--Welcome Message View Controller-->
         <scene sceneID="j2x-aE-TC3">
             <objects>
-                <viewController id="ouz-kq-vtf" customClass="OnboardingStoryViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ouz-kq-vtf" customClass="WelcomeMessageViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bhw-OM-1MT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4621,15 +4621,8 @@ App們將會開始抖動。</string>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JQ7-mm-Q0o">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="300"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RtX-Mc-Cvq">
-                                                        <rect key="frame" x="116" y="0.0" width="150" height="150"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="150" id="d98-Ml-99U"/>
-                                                            <constraint firstAttribute="height" constant="150" id="uF9-gb-p8R"/>
-                                                        </constraints>
-                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceu-KZ-FVU">
-                                                        <rect key="frame" x="16" y="150" width="350" height="150"/>
+                                                        <rect key="frame" x="16" y="0.0" width="350" height="300"/>
                                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -4658,21 +4651,56 @@ App們將會開始抖動。</string>
                                     <constraint firstItem="RAn-L6-LYl" firstAttribute="centerX" secondItem="bps-it-yCL" secondAttribute="centerX" id="wNM-EW-XtU"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2b7-5g-K9X">
+                                <rect key="frame" x="147" y="759" width="120" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSl-B2-MV1">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="z5E-Tm-GP5"/>
+                                        </constraints>
+                                        <state key="normal" title="認識自己">
+                                            <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="triggerButton:" destination="ouz-kq-vtf" eventType="touchUpInside" id="opw-DB-7bc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="XSl-B2-MV1" firstAttribute="centerY" secondItem="2b7-5g-K9X" secondAttribute="centerY" id="9mq-CI-LHI"/>
+                                    <constraint firstAttribute="trailing" secondItem="XSl-B2-MV1" secondAttribute="trailing" id="eUu-9Z-bzQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="XSl-B2-MV1" secondAttribute="bottom" id="kJc-y2-qJQ"/>
+                                    <constraint firstItem="XSl-B2-MV1" firstAttribute="leading" secondItem="2b7-5g-K9X" secondAttribute="leading" id="nyO-z2-PYN"/>
+                                    <constraint firstItem="XSl-B2-MV1" firstAttribute="centerX" secondItem="2b7-5g-K9X" secondAttribute="centerX" id="qBe-ef-iNm"/>
+                                    <constraint firstItem="XSl-B2-MV1" firstAttribute="top" secondItem="2b7-5g-K9X" secondAttribute="top" id="vhy-aT-dLf"/>
+                                    <constraint firstAttribute="width" constant="120" id="yvS-BA-AnK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1AC-Fk-0cf"/>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.98039215686274506" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="1AC-Fk-0cf" firstAttribute="bottom" secondItem="2b7-5g-K9X" secondAttribute="bottom" constant="48" id="3hB-fr-St2"/>
                             <constraint firstAttribute="bottom" secondItem="bps-it-yCL" secondAttribute="bottom" id="CNt-ap-1Z0"/>
                             <constraint firstItem="bps-it-yCL" firstAttribute="trailing" secondItem="1AC-Fk-0cf" secondAttribute="trailing" id="Krg-NJ-fwA"/>
                             <constraint firstItem="bps-it-yCL" firstAttribute="top" secondItem="Bhw-OM-1MT" secondAttribute="top" id="Nfz-bl-v1r"/>
                             <constraint firstItem="bps-it-yCL" firstAttribute="leading" secondItem="1AC-Fk-0cf" secondAttribute="leading" id="VuF-ii-JtE"/>
+                            <constraint firstItem="2b7-5g-K9X" firstAttribute="centerX" secondItem="1AC-Fk-0cf" secondAttribute="centerX" id="nAc-7N-oR5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Jt-rt-1CT"/>
                     <connections>
-                        <outlet property="backgroundView" destination="bps-it-yCL" id="8af-IS-kdO"/>
+                        <outlet property="backgroundView" destination="bps-it-yCL" id="YOS-qb-zo8"/>
                         <outlet property="explationMessage" destination="ceu-KZ-FVU" id="VwY-sH-mur"/>
-                        <outlet property="imageView" destination="RtX-Mc-Cvq" id="fcS-wh-IjR"/>
+                        <outlet property="triggerButton" destination="XSl-B2-MV1" id="4Pc-hh-HgJ"/>
+                        <segue destination="1ea-df-IB1" kind="show" identifier="welcomeSegue" id="KzC-DQ-M5P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npg-0g-QYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4682,7 +4710,7 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jnJ-JQ-whF"/>
-        <segue reference="NC1-IV-Pt0"/>
+        <segue reference="oS8-Nr-0LU"/>
         <segue reference="pIM-gP-oXb"/>
         <segue reference="hS7-Sl-5ah"/>
         <segue reference="Kry-aX-KjD"/>
