@@ -73,7 +73,7 @@ class Onboarding_2ViewController: UIViewController {
             if let vc = segue.destination as? PurchaseViewController
             {
                 vc.purchaseTitle = "獲得更多背景顏色"
-                vc.purchaseDescription = "免費試用三十天，獲得更多功能"
+                vc.purchaseDescription = "比別人獲得更多正能量"
             }
         }
         

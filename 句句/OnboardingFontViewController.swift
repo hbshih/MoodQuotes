@@ -111,7 +111,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     {
         if let vc = segue.destination as? PurchaseViewController
         {
-            vc.purchaseTitle = "獲得更多字體"
+            vc.purchaseTitle = "獲得更多字體和其他功能"
             vc.purchaseDescription = "免費試用七天，獲得更多功能"
         }
     }
