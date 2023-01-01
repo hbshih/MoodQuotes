@@ -34,6 +34,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     @IBOutlet weak var screenView: UIView!
     @IBOutlet weak var trial_Button: UIView!
     @IBOutlet weak var flowerMeaning: UILabel!
+    @IBOutlet weak var trialButton: UIButton!
     @IBOutlet weak var onboardingTouchIcon: UIImageView!
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var blackwhiteFlowerSectionView: UIStackView!
@@ -427,6 +428,14 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         setupMoodButton()
         displayOnboardTips()
         appVersionUpdateHandler()
+        
+        let numbers = [1, 3, 10, 4]
+        let trialWords = ["獲得彩色植物", "試用其他字體", "查看植物花語","更多背景顏色"]
+        // get random elements
+        let randomTrialName = trialWords.randomElement()!
+        // print random elements
+        
+        trialButton.setTitle(randomTrialName, for: .normal)
         
         // Get next update time
         getNextUpdateTime()

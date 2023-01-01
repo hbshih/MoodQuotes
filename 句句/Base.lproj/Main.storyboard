@@ -615,6 +615,7 @@
                         <outlet property="nameOfFlower" destination="TLQ-V7-o7B" id="MoB-Sg-wdg"/>
                         <outlet property="screenView" destination="8bC-Xf-vdC" id="mEd-Oa-wt5"/>
                         <outlet property="shareAndbookmarkStack" destination="ZRk-D7-nQt" id="AN1-R9-B13"/>
+                        <outlet property="trialButton" destination="gpI-f1-D3E" id="hgP-OA-Ona"/>
                         <outlet property="trial_Button" destination="blB-C0-HSz" id="QDM-6Y-4Sc"/>
                         <outlet property="twDayLabel" destination="fxx-iS-jBb" id="rKx-iO-u60"/>
                         <segue destination="Krk-l6-7pi" kind="presentation" identifier="firstTimeSettingSegue" modalPresentationStyle="fullScreen" id="SFC-mq-IwF"/>
