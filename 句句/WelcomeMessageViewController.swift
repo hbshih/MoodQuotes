@@ -20,6 +20,8 @@ class WelcomeMessageViewController: UIViewController {
         
         triggerButton.alpha = 0.0
         
+        buttonBackground.alpha = 0.0
+        
         backgroundView.backgroundColor = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)
         self.explationMessage.alpha = 0.0
         
