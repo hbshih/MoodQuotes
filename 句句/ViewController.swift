@@ -461,7 +461,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
             
             let diffComponents = Calendar.current.dateComponents([.hour], from: notificationDate, to: Date.now)
             let hours = diffComponents.hour
-            countdownLabel = "距離下次更新還有 \(hours) 小時"
+            countdownLabel.text = "距離下次更新還有 \(hours) 小時"
         }
     }
     
