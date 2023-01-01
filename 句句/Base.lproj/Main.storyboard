@@ -61,7 +61,7 @@
                                                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="poJ-EG-VSE">
                                                                 <rect key="frame" x="0.0" y="87.5" width="382" height="112.5"/>
                                                                 <subviews>
-                                                                    <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39S-JA-Hyg">
+                                                                    <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39S-JA-Hyg">
                                                                         <rect key="frame" x="116" y="23" width="150" height="67"/>
                                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
@@ -77,7 +77,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </datePicker>
-                                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-32-dNf">
+                                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-32-dNf">
                                                                         <rect key="frame" x="146" y="41.5" width="90" height="30"/>
                                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
