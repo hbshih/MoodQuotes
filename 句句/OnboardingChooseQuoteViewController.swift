@@ -33,7 +33,8 @@ class OnboardingChooseQuoteViewController: UIViewController {
         }
         
         Analytics.logEvent("typeOfQuote", parameters: ["Type": val])
-        UserDefaults.setValue(val, forKey: "tyoeOfQuote")
+        
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(val, forKey: "typeOfQuote")
         
         performSegue(withIdentifier: "selectColorSegue", sender: nil)
         

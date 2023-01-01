@@ -24,7 +24,7 @@ class HandleNewUserViewController: UIViewController {
             performSegue(withIdentifier: "homeSegue", sender: nil)
         }else
         {
-            performSegue(withIdentifier: "onboardSegue", sender: nil)
+            performSegue(withIdentifier: "welcomeMessageSegue", sender: nil)
         }
         
         if appVersionNumberHandler().hasUpdatedSinceLastRun()
