@@ -437,9 +437,6 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         
         trialButton.setTitle(randomTrialName, for: .normal)
         
-        // Get next update time
-        getNextUpdateTime()
-        
         
         if global_paid_user
         {
@@ -742,6 +739,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         
         checkIfBookmarked()
         
+        // Get next update time
+        getNextUpdateTime()
         
         
         
