@@ -275,6 +275,9 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         
         prepareView()
         
+        // Get next update time
+        getNextUpdateTime()
+        
         
         //downloadFlowerImage()
         //UI
@@ -474,7 +477,13 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         {
             
             let diffComponents = Calendar.current.dateComponents([.hour], from: Date() , to: notificationDate)
-            let hours = diffComponents.hour
+            var hours = diffComponents.hour
+            
+            if hours == 0
+            {
+                hours = 23
+            }
+            
             countdownLabel.text = "距離下次更新還有 \(hours ?? 23) 小時"
         }
     }
@@ -638,7 +647,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         }
         
         // Check if user is a paid user
-        if global_paid_user
+        if !global_paid_user
         {
             coloredFlowerSectionView.isHidden = true
             blackwhiteFlowerSectionView.isHidden = false
@@ -740,8 +749,6 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         
         checkIfBookmarked()
         
-        // Get next update time
-        getNextUpdateTime()
         
         
         
