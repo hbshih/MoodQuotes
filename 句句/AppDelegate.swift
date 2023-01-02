@@ -230,16 +230,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     Instabug.logUserEvent(withName: "AppDelegate-1 \(global_savedQuotes)")
                 }else
                 {
-                    // other errors
-                    Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint6")
-                    global_savedQuotes[global_savedQuotes.count] = ["":"顯示儲存語錄發生問題，請和開發團隊聯絡 (\(savedQuotes.count), \(savedAuthor.count))"]
-                    Instabug.logUserEvent(withName: "count \(savedQuotes), \(savedAuthor)")
+                    if savedQuotes.count == 0 && savedAuthor.count == 0
+                    {
+                        
+                    }else
+                        
+                    {
+                        // other errors
+                        Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint6")
+                        global_savedQuotes[global_savedQuotes.count] = ["":"顯示儲存語錄發生問題，請和開發團隊聯絡 (\(savedQuotes.count), \(savedAuthor.count))"]
+                        Instabug.logUserEvent(withName: "count \(savedQuotes), \(savedAuthor)")
+                    }
                 }
             }
         }else
         {
             Instabug.logUserEvent(withName: "AppDelegate_loadallsavedquotes_checkpoint5")
-            global_savedQuotes[global_savedQuotes.count] = ["":"尚未儲存任何語錄"]
+            //global_savedQuotes[global_savedQuotes.count] = ["":"尚未儲存任何語錄"]
         }
         
         print("All saved quotes loaded \(global_savedQuotes)")

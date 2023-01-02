@@ -47,6 +47,7 @@ class SavedQuoteViewController: UIViewController, UITableViewDataSource, UITable
             cell.quoteLabel.text = "尚未儲存任何語錄"
         }else
         {
+            
             Instabug.logUserEvent(withName: "SavedQuotesViewController_loadingquotes")
             if let quotes_and_author = global_savedQuotes[indexPath.row]
             {
