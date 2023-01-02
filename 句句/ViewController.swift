@@ -638,7 +638,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         }
         
         // Check if user is a paid user
-        if !global_paid_user
+        if global_paid_user
         {
             coloredFlowerSectionView.isHidden = true
             blackwhiteFlowerSectionView.isHidden = false
@@ -647,7 +647,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         {
             coloredFlowerSectionView.isHidden = false
             blackwhiteFlowerSectionView.isHidden = true
-            trial_Button.isHidden = true
+            //trial_Button.isHidden = true
+            trial_Button.alpha = 0.0
             flowerMeaning.isHidden = false
         }
     }
