@@ -275,6 +275,15 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     
     func setupMoodButton()
     {
+        // UI
+        moodButtonHolderView.backgroundColor = UIColor(red: 254/255, green: 250/255, blue: 244/255, alpha: 1.0)
+        moodButtonHolderView.layer.borderWidth = 1.0
+        moodButtonHolderView.layer.borderColor = CGColor(red: 156/255, green: 158/255, blue: 185/255, alpha: 0.5)
+        // UI
+        moodButtonHolderView_text.backgroundColor = UIColor(red: 254/255, green: 250/255, blue: 244/255, alpha: 1.0)
+        moodButtonHolderView_text.layer.borderWidth = 1.0
+        moodButtonHolderView_text.layer.borderColor = CGColor(red: 156/255, green: 158/255, blue: 185/255, alpha: 0.5)
+        
         // load moodList
         if var moodList = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.dictionary(forKey: "moodList")
         {
