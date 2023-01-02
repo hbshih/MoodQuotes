@@ -199,8 +199,17 @@ class NotificationTrigger : NSObject {
     {
         let identifier = "dailyNotifier"
         let content = UNMutableNotificationContent()
-        content.title = "看看今日給你的話 👀"
-        content.body = "點開查看屬於你的植物與花語吧！別忘了順便記錄今天的心情！"
+        
+        let trialWords = ["你今天的專屬語錄準備好了，打開看看吧！", "今天心情好嗎？來看看專屬你的語錄吧！", "打開看看今天的語錄吧！","想看看今天的語錄嗎？","看完今天的語錄再出門吧！"]
+        // get random elements
+        let randomTrialName = trialWords.randomElement()!
+        
+        let titleList = ["你的專屬語錄來囉！", "早安！語錄準備好囉！", "你的植物想對你說⋯"]
+        // get random elements
+        let randomTitle = titleList.randomElement()!
+        
+        content.title = randomTitle
+        content.body = randomTrialName
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = "defaultNotifier"
         

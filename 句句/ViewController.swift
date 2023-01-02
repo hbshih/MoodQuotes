@@ -35,6 +35,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     @IBOutlet weak var trial_Button: UIView!
     @IBOutlet weak var flowerMeaning: UILabel!
     @IBOutlet weak var trialButton: UIButton!
+    @IBOutlet weak var flowerMeaningPlaceholder: UILabel!
     @IBOutlet weak var onboardingTouchIcon: UIImageView!
     
     @IBOutlet weak var countdownButton: UIButton!
@@ -436,6 +437,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         }
         
         // Handle UI
+        flowerMeaningPlaceholder.alpha = 0.0
+        
         trackAppOpenCount()
         setupMoodButton()
         displayOnboardTips()

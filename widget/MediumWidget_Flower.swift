@@ -45,8 +45,7 @@ struct MediumWidget_FlowerProvider: TimelineProvider {
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.flowerMeaning, forKey: "FlowerMeaning")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.quote.quote, forKey: "Quote")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.quote.author, forKey: "Author")
-                WidgetCenter.shared.reloadAllTimelines()
-                
+
                 firebaseService().getQuoteApiResponse { (result) in
                     if case .success(let fetchedData) = result {
                         quoteInfo = fetchedData
