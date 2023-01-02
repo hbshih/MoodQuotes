@@ -48,7 +48,7 @@ class OnboardingStoryViewController: UIViewController {
                 self.imageView.isHidden = false
             } completion: { (true) in
                 UIView.animate(withDuration: 3.0) {
-                    self.explationMessage.text = "準備好了!\n\n請搖搖手機。"
+                    self.explationMessage.text = "準備好了!\n請搖搖手機"
                     self.imageView.alpha = 1.0
                     self.explationMessage.alpha = 1.0
                 } completion: { (true) in
@@ -100,7 +100,7 @@ class OnboardingStoryViewController: UIViewController {
                     self.imageView.alpha = 1.0
                 }) { (true) in
                     UIView.animate(withDuration: 0.5, delay: 2.0, options: UIView.AnimationOptions.curveEaseIn) {
-                        self.explationMessage.text = "這是屬於您今日的植物，\n它想告訴您"
+                        self.explationMessage.text = "這是屬於你今天的植物，\n今天的語錄是⋯"
                         self.explationMessage.alpha = 1.0
                     } completion: { (true) in
                         sleep(4)

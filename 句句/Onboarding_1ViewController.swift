@@ -19,7 +19,7 @@ class Onboarding_1ViewController: UIViewController {
         
         
         if #available(iOS 14, *) {
-            self.timePIcker.preferredDatePickerStyle = .inline
+            self.timePIcker.preferredDatePickerStyle = .automatic
             self.timePIcker.layer.cornerRadius = timePIcker.layer.borderWidth / 2
             
         }else
@@ -44,8 +44,6 @@ class Onboarding_1ViewController: UIViewController {
         
         timePIcker.setDate(date, animated: false)
         pickeriOS14.setDate(date, animated: false)
-        
-        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet_Ver 3.0")
         
         
     }

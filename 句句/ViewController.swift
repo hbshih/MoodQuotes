@@ -348,7 +348,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     {
         if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
         {
-            if counter != nil
+            if counter != nil && counter >= 1
             {
                 global_counter = counter
                 //old user
@@ -370,23 +370,21 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                     
                     trial_Button.isHidden = false
                 }
-                
-                
-                
             }else
             {
                 //new user
                 print("counter is nil")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(1, forKey: "open_app_count")
-
-                
             }
         }
     }
     
     func displayOnboardTips()
     {
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
+        
+        print ("onboarding status \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0"))")
+        
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil && UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "widgetTutorialSeen") != nil
         {
             installWidgetInstructionView.isHidden = true
             shareAndbookmarkStack.isHidden = false
@@ -457,8 +455,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         displayOnboardTips()
         appVersionUpdateHandler()
         
-        let numbers = [1, 3, 10, 4]
-        let trialWords = ["獲得彩色植物", "試用其他字體", "查看植物花語","更多背景顏色"]
+        let trialWords = ["獲得彩色植物", "試用其他字體", "查看植物花語","更多背景顏色","試用植語錄完整版"]
         // get random elements
         let randomTrialName = trialWords.randomElement()!
         // print random elements
@@ -496,6 +493,13 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
        // NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
     }
     
+    @IBAction func installWidgetHintTapped(_ sender: Any) {
+        
+        installWidgetInstructionView.isHidden = true
+        shareAndbookmarkStack.isHidden = false
+        countdownButton.setTitle("更新語錄時，需要通知你嗎？", for: .normal)
+        
+    }
     func getNextUpdateTime()
     {
         if let notificationDate = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "updateTime") as? Date
@@ -514,7 +518,13 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                 countdownButton.setTitle("距離下次更新還有 \(hours ?? 23) 小時", for: .normal)
             }else
             {
-                countdownButton.setTitle("\(hours ?? 23) 小時後語錄會更新，需要通知你嗎？", for: .normal)
+                if (!installWidgetInstructionView.isHidden)
+                {
+                    countdownButton.setTitle("距離下次更新還有 \(hours ?? 23) 小時", for: .normal)
+                }else
+                {
+                    countdownButton.setTitle("\(hours ?? 23) 小時後語錄會更新，需要通知你嗎？", for: .normal)
+                }
             }
             
             

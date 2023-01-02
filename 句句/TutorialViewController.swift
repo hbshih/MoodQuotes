@@ -22,17 +22,8 @@ class TutorialViewController: UIViewController {
         
         Analytics.logEvent("tutorial_VC_closed", parameters: nil)
         
-        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet_Ver 3.0")
-        
-        if navigateToHomeAfterDismiss
-        {
-            self.performSegue(withIdentifier: "homepageSegue", sender: nil)
-           // navigationController?.popViewController(animated: true)
-        }
-        else
-        {
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "widgetTutorialSeen")
             self.dismiss(animated: true, completion: nil)
-        }
     }
     
     /*

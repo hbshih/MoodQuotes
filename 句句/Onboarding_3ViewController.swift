@@ -23,6 +23,8 @@ class Onboarding_3ViewController: UIViewController {
             backgroundColor.backgroundColor = UIColor(red: 239/255, green: 233/255, blue: 230/255, alpha: 1.0)
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setColor(color: backgroundColor.backgroundColor, forKey: "BackgroundColor")
         }
+        
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet_Ver 3.0")
             
         // Do any additional setup after loading the view.
     }
@@ -34,7 +36,7 @@ class Onboarding_3ViewController: UIViewController {
         
          Analytics.logEvent("onboarding_3_declined_notification", parameters: nil)
         
-        checkSegue()
+        self.dismiss(animated: true)
     }
     
     @IBAction func AcceptedNotification(_ sender: Any) {
@@ -42,6 +44,8 @@ class Onboarding_3ViewController: UIViewController {
          Analytics.logEvent("onboarding_3_accepted_notification", parameters: nil)
         
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(true, forKey: "isNotificationOn")
+        
+        self.dismiss(animated: true)
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
             (granted, error) in
@@ -52,18 +56,15 @@ class Onboarding_3ViewController: UIViewController {
                 let  aClass = NotificationTrigger()
                 aClass.setupNotifications()
                 
-                self.checkSegue()
+                //self.checkSegue()
+                
             }
         }
         
     }
     func checkSegue()
     {
-        if #available(iOS 14.0, *) {
-           performSegue(withIdentifier: "showTutorialSegue", sender: nil)
-        } else {
             performSegue(withIdentifier: "homeSegue", sender: nil)
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

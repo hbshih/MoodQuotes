@@ -209,11 +209,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="句句" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ytr-1n-hyb">
-                                <rect key="frame" x="0.0" y="48" width="414" height="790"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OlW-Ma-Unz">
                                         <rect key="frame" x="20" y="24" width="374" height="32"/>
@@ -545,6 +545,7 @@
                                                                     <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
+                                                                    <action selector="installWidgetHintTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Adl-Z7-sHl"/>
                                                                     <action selector="nextTapped:" destination="875-bS-vea" eventType="touchUpInside" id="xCX-Qk-PSP"/>
                                                                     <segue destination="vyl-c7-Mf0" kind="presentation" id="5vC-L9-wG1"/>
                                                                 </connections>
@@ -558,11 +559,12 @@
                                                             <constraint firstAttribute="width" constant="240" id="Mvg-g6-HkU"/>
                                                             <constraint firstItem="bSv-OP-NYy" firstAttribute="top" secondItem="Xus-SA-myM" secondAttribute="top" id="Xnj-5L-CrV"/>
                                                             <constraint firstItem="bSv-OP-NYy" firstAttribute="centerY" secondItem="Xus-SA-myM" secondAttribute="centerY" id="dRZ-Uh-VQO"/>
+                                                            <constraint firstAttribute="height" constant="55" id="gav-EV-Fqv"/>
                                                             <constraint firstAttribute="trailing" secondItem="bSv-OP-NYy" secondAttribute="trailing" id="owI-tK-uYU"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <integer key="value" value="8"/>
+                                                                <real key="value" value="27.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -579,7 +581,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzP-7H-cTw">
-                                        <rect key="frame" x="20" y="738" width="374" height="28"/>
+                                        <rect key="frame" x="20" y="738" width="374" height="52"/>
                                         <color key="tintColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="通知">
@@ -2594,18 +2596,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-qe-NEo">
-                                                        <rect key="frame" x="16" y="321" width="382" height="196"/>
+                                                        <rect key="frame" x="16" y="348" width="382" height="142"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
-                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="72"/>
-                                                                <string key="text">每天只會有一句語錄，
-所以還會需要一點時間才會更新。更新時需要通知你嗎？</string>
-                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="24"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="語錄更新時需要傳送通知給你嗎？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-jC-067">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="18"/>
+                                                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="18"/>
                                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkP-IQ-yWs">
-                                                                <rect key="frame" x="0.0" y="96" width="382" height="100"/>
+                                                                <rect key="frame" x="0.0" y="42" width="382" height="100"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I27-eA-JuC">
                                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
@@ -2637,7 +2637,7 @@
                                                                                 </constraints>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                        <integer key="value" value="30"/>
+                                                                                        <integer key="value" value="20"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
@@ -2913,7 +2913,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="homeSegue" modalPresentationStyle="fullScreen" id="htk-Qi-2dc"/>
                         <segue destination="Co0-l8-F4A" kind="presentation" identifier="onboardSegue" modalPresentationStyle="fullScreen" id="mTw-Mw-H14"/>
-                        <segue destination="ouz-kq-vtf" kind="presentation" identifier="welcomeMessageSegue" id="H2I-Ww-I1N"/>
+                        <segue destination="ouz-kq-vtf" kind="show" identifier="welcomeMessageSegue" id="H2I-Ww-I1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxo-Pz-jCN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2993,10 +2993,10 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="1418"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-Np-Gnd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2043.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2045.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="9rW-Mh-55K">
-                                                <rect key="frame" x="16" y="16" width="382" height="1791"/>
+                                                <rect key="frame" x="16" y="16" width="382" height="1793"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzp-e3-txs">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
@@ -3029,14 +3029,14 @@
                                                             <constraint firstAttribute="bottom" secondItem="bJ5-C5-c7B" secondAttribute="bottom" constant="5" id="QZA-dL-BDG"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="讓手機桌面變得充滿句子和語錄的方法 👇" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVQ-tP-kZ7">
-                                                        <rect key="frame" x="0.0" y="76" width="382" height="19.5"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="參考下列步驟將語錄裝在桌面上 👇" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVQ-tP-kZ7">
+                                                        <rect key="frame" x="0.0" y="76" width="382" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="promo_image_widget" translatesAutoresizingMaskIntoConstraints="NO" id="bpK-XX-bzw">
-                                                        <rect key="frame" x="0.0" y="127.5" width="382" height="450"/>
+                                                        <rect key="frame" x="0.0" y="129.5" width="382" height="450"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="450" id="Pkx-Po-4NK"/>
                                                         </constraints>
@@ -3047,7 +3047,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5I-s9-4dj">
-                                                        <rect key="frame" x="0.0" y="609.5" width="382" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="611.5" width="382" height="38.5"/>
                                                         <string key="text">1. 回到主頁面後，選個空白的地方長按。
 App們將會開始抖動。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -3055,7 +3055,7 @@ App們將會開始抖動。</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 1" translatesAutoresizingMaskIntoConstraints="NO" id="Sb4-Or-Cze">
-                                                        <rect key="frame" x="0.0" y="680" width="382" height="137"/>
+                                                        <rect key="frame" x="0.0" y="682" width="382" height="137"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -3063,13 +3063,13 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 點選螢幕左上角的 + 字" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnA-0d-Vru">
-                                                        <rect key="frame" x="0.0" y="849" width="382" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="851" width="382" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 2" translatesAutoresizingMaskIntoConstraints="NO" id="559-20-7I7">
-                                                        <rect key="frame" x="0.0" y="900.5" width="382" height="133"/>
+                                                        <rect key="frame" x="0.0" y="902.5" width="382" height="133"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -3077,7 +3077,7 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fto-LE-hwf">
-                                                        <rect key="frame" x="0.0" y="1065.5" width="382" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="1067.5" width="382" height="38.5"/>
                                                         <string key="text">3. 在搜尋的地方搜尋「植語錄」，
 並點選句句。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -3085,7 +3085,7 @@ App們將會開始抖動。</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 3" translatesAutoresizingMaskIntoConstraints="NO" id="07a-VG-8qF">
-                                                        <rect key="frame" x="0.0" y="1136" width="382" height="132"/>
+                                                        <rect key="frame" x="0.0" y="1138" width="382" height="132"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -3093,13 +3093,13 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. 選擇適當的小工具大小後，點選「加入小工具」。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V3-aE-aCo">
-                                                        <rect key="frame" x="0.0" y="1300" width="382" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="1302" width="382" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 4" translatesAutoresizingMaskIntoConstraints="NO" id="3zW-xf-dtR">
-                                                        <rect key="frame" x="0.0" y="1351.5" width="382" height="128"/>
+                                                        <rect key="frame" x="0.0" y="1353.5" width="382" height="128"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -3107,7 +3107,7 @@ App們將會開始抖動。</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYx-71-sSi">
-                                                        <rect key="frame" x="0.0" y="1511.5" width="382" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="1513.5" width="382" height="38.5"/>
                                                         <string key="text">5. 您可以隨意拖動小工具到任何位置，
 完成後請點選右上方「完成」。</string>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -3115,7 +3115,7 @@ App們將會開始抖動。</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial_Step 5" translatesAutoresizingMaskIntoConstraints="NO" id="R87-mN-qAL">
-                                                        <rect key="frame" x="0.0" y="1582" width="382" height="209"/>
+                                                        <rect key="frame" x="0.0" y="1584" width="382" height="209"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -3150,7 +3150,7 @@ App們將會開始抖動。</string>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ0-Mf-bhi">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
-                                                <state key="normal" title="我會安裝小工具">
+                                                <state key="normal" title="關閉教學">
                                                     <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
@@ -3158,7 +3158,7 @@ App們將會開始抖動。</string>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.97647058819999999" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="mQ0-Mf-bhi" firstAttribute="top" secondItem="IzG-dl-Gov" secondAttribute="top" id="6hO-6f-gL5"/>
                                             <constraint firstItem="mQ0-Mf-bhi" firstAttribute="leading" secondItem="IzG-dl-Gov" secondAttribute="leading" id="9c2-aq-H3u"/>
@@ -4726,7 +4726,7 @@ App們將會開始抖動。</string>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="M2B-Qb-JNt" kind="presentation" identifier="selectColorSegue" id="Bfe-pd-pBp"/>
+                        <segue destination="M2B-Qb-JNt" kind="show" identifier="selectColorSegue" id="Bfe-pd-pBp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4BR-hT-qP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4830,7 +4830,7 @@ App們將會開始抖動。</string>
                         <outlet property="buttonBackground" destination="2b7-5g-K9X" id="fC8-Wx-ZBE"/>
                         <outlet property="explationMessage" destination="ceu-KZ-FVU" id="VwY-sH-mur"/>
                         <outlet property="triggerButton" destination="XSl-B2-MV1" id="4Pc-hh-HgJ"/>
-                        <segue destination="1ea-df-IB1" kind="presentation" identifier="welcomeSegue" id="KzC-DQ-M5P"/>
+                        <segue destination="1ea-df-IB1" kind="show" identifier="welcomeSegue" id="KzC-DQ-M5P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npg-0g-QYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4840,14 +4840,14 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jnJ-JQ-whF"/>
-        <segue reference="oS8-Nr-0LU"/>
+        <segue reference="1c7-Jz-p97"/>
         <segue reference="7fH-0S-a6S"/>
         <segue reference="wid-oQ-Pin"/>
-        <segue reference="ly3-Ze-ofX"/>
+        <segue reference="09k-za-sKN"/>
         <segue reference="Bfe-pd-pBp"/>
         <segue reference="72x-P6-nEO"/>
         <segue reference="1Gl-uz-PMa"/>
-        <segue reference="iiW-8X-Mfm"/>
+        <segue reference="1Hd-WS-sjP"/>
         <segue reference="Ai6-5e-Z3l"/>
     </inferredMetricsTieBreakers>
     <resources>
