@@ -28,11 +28,12 @@ class Onboarding_2ViewController: UIViewController {
         
         nav_view.isHidden = true
         paidColorsStack.isHidden = true
+        skipButton.layer.opacity = 0.0
         
         if fromSetting
         {
             pageTitle.text = "選擇背景顏色"
-            skipButton.layer.opacity = 0.0
+            //skipButton.layer.opacity = 0.0
             nav_view.isHidden = false
             paidColorsStack.isHidden = false
             actionButton.setTitle("儲存", for: .normal)

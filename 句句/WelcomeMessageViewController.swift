@@ -43,7 +43,7 @@ class WelcomeMessageViewController: UIViewController {
                 self.explationMessage.alpha = 0.0
             } completion: { (true) in
                 UIView.animate(withDuration: 3.0) {
-                    self.explationMessage.text = "從今天起，\n你每天都將獲得一句語錄\n及一株陪伴你的植物。"
+                    self.explationMessage.text = "從今天起\n\n你每天都將獲得一句語錄\n\n及一株陪伴你的植物"
                     self.explationMessage.alpha = 1.0
                 } completion: { (true) in
                     UIView.animate(withDuration: 0.5, delay: 2.0) {

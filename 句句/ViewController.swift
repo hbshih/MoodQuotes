@@ -48,31 +48,6 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
-        {
-            // existing users
-            
-            var randomString = ["再等個幾小時才有新語錄喔！"]
-            alertViewHandler().control(title: randomString[0], body: "", iconText: "🐽")
-            
-        }else
-        {
-            print("touched")
-          //  onboardingTouchIcon.isHidden = true
-            if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil
-            {
-                
-            }else
-            {
-                performSegue(withIdentifier: "notifiicationSegue", sender: nil)
-            }
-            
-        }
-    }
-    
-    
     
     
     var bookmark_saved = false
@@ -337,6 +312,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                 
             }else
             {
+                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet_Ver 3.0")
+                getNextUpdateTime()
                 performSegue(withIdentifier: "notifiicationSegue", sender: nil)
                 //performSegue(withIdentifier: "notificationSegue", sender: nil)
             }
@@ -497,7 +474,14 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         
         installWidgetInstructionView.isHidden = true
         shareAndbookmarkStack.isHidden = false
-        countdownButton.setTitle("更新語錄時，需要通知你嗎？", for: .normal)
+        
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil && UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isNotificationOn") == true
+        {
+            
+        }else
+        {
+            countdownButton.setTitle("語錄更新時，傳送通知給我", for: .normal)
+        }
         
     }
     func getNextUpdateTime()
