@@ -51,8 +51,13 @@ struct Display_Font
          
          if let font = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.string(forKey: "userFont")
          {
-             print("current font \(font)")
-             return Font.custom(font, size: CGFloat(font_size))
+             var final_font_size = Double(font_size)
+             if font == "ChenYuluoyan-Thin"
+             {
+                 final_font_size = Double(font_size) * 1.25
+             }
+             print("current font \(final_font_size)")
+             return Font.custom(font, size: CGFloat(final_font_size))
              //UIFont(name: font, size: CGFloat(font_size)) ?? UIFont(name: selected_font, size: CGFloat(font_size))!
          }
         // return UIFont.systemFont(ofSize: 30)

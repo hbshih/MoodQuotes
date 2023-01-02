@@ -281,15 +281,15 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         
         //downloadFlowerImage()
         //UI
-        var font = Display_Font(font_size: 18).getUIFont()
+        var font = Display_Font(font_size: 20).getUIFont()
         frontQuote.font = font
-        nameOfFlower.font = font
-        nameOfColorImage.font = font
+        //nameOfFlower.font = font
+        //nameOfColorImage.font = font
         font = Display_Font(font_size: 16).getUIFont()
         authorName.font = font
         twDayLabel.font = font
         font = Display_Font(font_size: 12).getUIFont()
-        flowerMeaning.font = font
+        //flowerMeaning.font = font
        // todayDateLabel.text = Date().getDateDayOnly
         twDayLabel.text = Date().getMonthDay
         //dateLabel.text = Date().getTodayDate
