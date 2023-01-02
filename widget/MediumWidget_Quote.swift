@@ -44,6 +44,7 @@ struct MediumWidget_QuoteProvider: TimelineProvider {
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.flowerName, forKey: "FlowerName")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.quote.quote, forKey: "Quote")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(entry.quote.author, forKey: "Author")
+                WidgetCenter.shared.reloadAllTimelines()
                 
                 firebaseService().getQuoteApiResponse { (result) in
                     if case .success(let fetchedData) = result {
@@ -55,10 +56,6 @@ struct MediumWidget_QuoteProvider: TimelineProvider {
                         content.title = "看看屬於你今日的植物是什麼吧！"
                         content.body = "\(quoteInfo?.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo?.first?.author ?? "")"
                         content.sound = UNNotificationSound.default
-                        
-                        WidgetCenter.shared.reloadAllTimelines()
-                        
-                        
                         let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
                         let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
                         
