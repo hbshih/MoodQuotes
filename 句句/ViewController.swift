@@ -36,7 +36,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     @IBOutlet weak var flowerMeaning: UILabel!
     @IBOutlet weak var trialButton: UIButton!
     @IBOutlet weak var onboardingTouchIcon: UIImageView!
-    @IBOutlet weak var countdownLabel: UILabel!
+    
+    @IBOutlet weak var countdownButton: UIButton!
     @IBOutlet weak var blackwhiteFlowerSectionView: UIStackView!
     @IBOutlet weak var todayDateLabel: UILabel!
     @IBOutlet weak var coloredFlowerSectionView: UIStackView!
@@ -51,6 +52,10 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
         {
+            // existing users
+            
+            var randomString = ["再等個幾小時才有新語錄喔！"]
+            alertViewHandler().control(title: randomString[0], body: "", iconText: "🐽")
             
         }else
         {
@@ -58,16 +63,14 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
           //  onboardingTouchIcon.isHidden = true
             if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil
             {
-                // existing users
-                performSegue(withIdentifier: "showTutorialSegue", sender: nil)
+                
             }else
             {
-                performSegue(withIdentifier: "firstTimeSettingSegue", sender: nil)
+                performSegue(withIdentifier: "notifiicationSegue", sender: nil)
             }
             
         }
     }
-    
     
     
     
@@ -315,14 +318,36 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         }
     }
     
+    @IBAction func countdownButtonTapped(_ sender: Any) {
+        
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
+        {
+            // existing users
+            
+            var randomString = ["再等個幾小時才有新語錄喔！"]
+            
+            alertViewHandler().control(title: randomString[0], body: "", iconText: "🐽")
+            
+        }else
+        {
+            print("touched")
+          //  onboardingTouchIcon.isHidden = true
+            if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil
+            {
+                
+            }else
+            {
+                performSegue(withIdentifier: "notifiicationSegue", sender: nil)
+                //performSegue(withIdentifier: "notificationSegue", sender: nil)
+            }
+            
+        }
+        
+    }
     func trackAppOpenCount()
     {
         if let counter = UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.integer(forKey: "open_app_count") as? Int
         {
-            
-            installWidgetInstructionView.isHidden = true
-            shareAndbookmarkStack.isHidden = false
-            
             if counter != nil
             {
                 global_counter = counter
@@ -331,7 +356,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set((counter + 1), forKey: "open_app_count")
                 Analytics.logEvent("counter", parameters: ["counter": "\(counter)"])
                 
-                if counter > 3
+                if counter > 10
                 {
                     Analytics.logEvent("requested_review", parameters: nil)
                     if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
@@ -353,9 +378,6 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                 //new user
                 print("counter is nil")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(1, forKey: "open_app_count")
-                
-                installWidgetInstructionView.isHidden = false
-                shareAndbookmarkStack.isHidden = true
 
                 
             }
@@ -366,6 +388,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     {
         if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
         {
+            installWidgetInstructionView.isHidden = true
+            shareAndbookmarkStack.isHidden = false
            // self.onboardingTouchIcon.alpha = 0.0
            // self.onboardingTouchIcon.isHidden = true
             // Existing User
@@ -380,6 +404,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
              }*/
         } else
         {
+            installWidgetInstructionView.isHidden = false
+            shareAndbookmarkStack.isHidden = true
             // New User
           //  self.onboardingTouchIcon.alpha = 0.0
           //  Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(self.flashImageActive), userInfo: nil, repeats: true)
@@ -409,7 +435,6 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willResignActiveNotification, object: nil)
@@ -468,7 +493,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
          */
         
         //If Screenshot get to share screen
-        NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+       // NotificationCenter.default.addObserver(self, selector: #selector(screenshotTaken), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
     }
     
     func getNextUpdateTime()
@@ -484,7 +509,15 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                 hours = 23
             }
             
-            countdownLabel.text = "距離下次更新還有 \(hours ?? 23) 小時"
+            if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil
+            {
+                countdownButton.setTitle("距離下次更新還有 \(hours ?? 23) 小時", for: .normal)
+            }else
+            {
+                countdownButton.setTitle("\(hours ?? 23) 小時後語錄會更新，需要通知你嗎？", for: .normal)
+            }
+            
+            
         }
     }
     
@@ -748,14 +781,6 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         SurvicateSdk.shared.invokeEvent(name: "userPressedPurchase")
         
         checkIfBookmarked()
-        
-        
-        
-        
-      //  countdownLabel.text =
-        
-        
-        
         
         /* Comment for now --- 4/17/2021
          //If no quote saved in local & time now >= update time

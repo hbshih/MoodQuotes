@@ -25,13 +25,17 @@ class WelcomeMessageViewController: UIViewController {
         backgroundView.backgroundColor = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)
         self.explationMessage.alpha = 0.0
         
+        
+        // set default font
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("jf-openhuninn-1.1", forKey: "userFont")
+        
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 2.0, delay: 1.5, options: .curveLinear) {
             // imageView.image = UIImage(named: "icon_gesture")
-            self.explationMessage.text = "歡迎來到為你打造的語錄 app嗨"
+            self.explationMessage.text = "歡迎來到為你打造的語錄 App"
             self.explationMessage.alpha = 1.0
         } completion: { (true) in
             UIView.animate(withDuration: 0.5, delay: 2.0) {
@@ -45,7 +49,7 @@ class WelcomeMessageViewController: UIViewController {
                         self.explationMessage.alpha = 0.0
                     } completion: { (true) in
                         UIView.animate(withDuration: 3.0) {
-                            self.explationMessage.text = "在那之前，讓我好好認識你吧"
+                            self.explationMessage.text = "在那之前，我需要先好好認識你"
                             self.explationMessage.alpha = 1.0
                             self.buttonBackground.alpha = 1.0
                             self.triggerButton.alpha = 1.0

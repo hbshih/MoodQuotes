@@ -22,6 +22,7 @@ class OnboardingStoryViewController: UIViewController {
         
         backgroundView.backgroundColor = UIColor(red: 0.951708, green: 0.878031, blue: 0.87638, alpha: 1.0)
         self.imageView.alpha = 0.0
+        self.imageView.isHidden = true
         self.explationMessage.alpha = 0.0
         
         
@@ -44,6 +45,7 @@ class OnboardingStoryViewController: UIViewController {
         } completion: { (true) in
             UIView.animate(withDuration: 0.5, delay: 2.0) {
                 self.explationMessage.alpha = 0.0
+                self.imageView.isHidden = false
             } completion: { (true) in
                 UIView.animate(withDuration: 3.0) {
                     self.explationMessage.text = "準備好了!\n\n請搖搖手機。"

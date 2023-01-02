@@ -45,7 +45,7 @@ class Onboarding_1ViewController: UIViewController {
         timePIcker.setDate(date, animated: false)
         pickeriOS14.setDate(date, animated: false)
         
-        
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet_Ver 3.0")
         
         
     }

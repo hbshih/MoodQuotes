@@ -62,6 +62,6 @@ class NotificationTableViewCell: UITableViewCell {
             UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(false, forKey: "isNotificationOn")
             UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         }
-        
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "NewUserAllSet_Ver 3.0")
     }
 }
