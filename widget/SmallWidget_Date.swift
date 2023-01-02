@@ -56,6 +56,8 @@ struct SmallWidget_DateProvider: TimelineProvider {
                         content.body = "\(quoteInfo?.first?.quote ?? "語錄更新了！打開來看看今天給你的話是什麼吧！")\n—\(quoteInfo?.first?.author ?? "")"
                         content.sound = UNNotificationSound.default
                         
+                        WidgetCenter.shared.reloadAllTimelines()
+                        
                         
                         let tri = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
                         let req  = UNNotificationRequest(identifier: "widget_update", content: content, trigger: tri)
