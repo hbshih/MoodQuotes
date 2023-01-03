@@ -139,6 +139,7 @@
 		B5D6073827FFE93C008B19D9 /* LargeWidget_Full.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D6073627FFE93C008B19D9 /* LargeWidget_Full.swift */; };
 		B5DF562E256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
 		B5DF562F256F2C01004A24D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF562D256F2C01004A24D8 /* Date.swift */; };
+		B5E88C712964CA96001400CE /* SmartlookAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B5E88C702964CA96001400CE /* SmartlookAnalytics */; };
 		B5E8973625655F1F00D470E2 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E8973525655F1F00D470E2 /* ShareViewController.swift */; };
 		B5FAF57B2961B826007E51E0 /* WelcomeMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FAF57A2961B826007E51E0 /* WelcomeMessageViewController.swift */; };
 		BC58CA65A3C6C736913C09FC /* Pods______UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFD2C2C730397F8655D027A /* Pods______UITests.framework */; };
@@ -315,6 +316,7 @@
 				B5D6071E27FF2BBD008B19D9 /* SwiftyStoreKit in Frameworks */,
 				B547A84125870B0A00938A09 /* WebKit.framework in Frameworks */,
 				B547A83F25870B0400938A09 /* SystemConfiguration.framework in Frameworks */,
+				B5E88C712964CA96001400CE /* SmartlookAnalytics in Frameworks */,
 				B547A83D25870AFD00938A09 /* QuartzCore.framework in Frameworks */,
 				B598C86A28B32196002555AF /* Instabug in Frameworks */,
 				B5252FC128B2262B00134879 /* Storyly in Frameworks */,
@@ -565,6 +567,7 @@
 				B5252FC028B2262B00134879 /* Storyly */,
 				B5252FC728B27D3100134879 /* Survicate */,
 				B598C86928B32196002555AF /* Instabug */,
+				B5E88C702964CA96001400CE /* SmartlookAnalytics */,
 			);
 			productName = "句句";
 			productReference = B5517C71255FAFC500E134CC /* 句句.app */;
@@ -666,6 +669,7 @@
 				B5252FBF28B2262B00134879 /* XCRemoteSwiftPackageReference "storyly-ios" */,
 				B5252FC628B27D3100134879 /* XCRemoteSwiftPackageReference "survicate-ios-sdk" */,
 				B598C86828B32196002555AF /* XCRemoteSwiftPackageReference "Instabug-SP" */,
+				B5E88C6F2964CA96001400CE /* XCRemoteSwiftPackageReference "analytics-swift-package" */,
 			);
 			productRefGroup = B5517C72255FAFC500E134CC /* Products */;
 			projectDirPath = "";
@@ -1669,6 +1673,14 @@
 				kind = branch;
 			};
 		};
+		B5E88C6F2964CA96001400CE /* XCRemoteSwiftPackageReference "analytics-swift-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smartlook/analytics-swift-package";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1696,6 +1708,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B5D6071F27FF2C5E008B19D9 /* XCRemoteSwiftPackageReference "JuiceUI" */;
 			productName = JuiceUI;
+		};
+		B5E88C702964CA96001400CE /* SmartlookAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5E88C6F2964CA96001400CE /* XCRemoteSwiftPackageReference "analytics-swift-package" */;
+			productName = SmartlookAnalytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 

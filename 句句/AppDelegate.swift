@@ -18,6 +18,7 @@ import SwiftyStoreKit
 import CoreData
 import Survicate
 import Instabug
+import SmartlookAnalytics
 
 var global_paid_user = false
 var global_paid_price = "$120"
@@ -32,6 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //Migrating data from userdefaults to Coredata
+        
+        Smartlook.instance.preferences.projectKey = "34d17762259c3bf71e469d24adf9f9cea70a7052"
+        Smartlook.instance.start()
         
         //load saved quotes
         loadAllSavedQuotes()
