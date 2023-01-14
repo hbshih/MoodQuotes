@@ -5,7 +5,7 @@
 //  Created by Ben on 2021/4/23.
 //
 
-/*
+
 import UIKit
 import GoogleMobileAds
 
@@ -37,7 +37,7 @@ class AdMobsViewController: UIViewController {
     var nativeAdView: GADNativeAdView!
 
     /// The ad unit ID.
-    let adUnitID = "ca-app-pub-3940256099942544/2521693316"
+    let adUnitID = "ca-app-pub-3940256099942544/1712485313"
 
     override func viewDidLoad() {
       super.viewDidLoad()
@@ -226,4 +226,4 @@ class AdMobsViewController: UIViewController {
     }
   }
 
- */
+ 

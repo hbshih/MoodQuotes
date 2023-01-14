@@ -357,6 +357,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                     
                     trial_Button.isHidden = false
                 }
+                
+
             }else
             {
                 //new user
@@ -421,6 +423,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadNewQuotes), name: UIApplication.didBecomeActiveNotification, object: nil)
@@ -784,9 +787,17 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     }
     override func viewDidAppear(_ animated: Bool) {
         
+        
+        
         SurvicateSdk.shared.invokeEvent(name: "userPressedPurchase")
         
         checkIfBookmarked()
+        
+        //show advertisement
+        if global_counter > 10 && !global_paid_user
+        {
+            performSegue(withIdentifier: "showAdSegue", sender: nil)
+        }
         
         /* Comment for now --- 4/17/2021
          //If no quote saved in local & time now >= update time
