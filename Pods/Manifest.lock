@@ -26,6 +26,8 @@ PODS:
     - FBSDKShareKit/Share (= 5.15.1)
   - FBSDKShareKit/Share (5.15.1):
     - FBSDKCoreKit (~> 5.0)
+  - Firebase (7.10.0):
+    - Firebase/Core (= 7.10.0)
   - Firebase/Analytics (7.10.0):
     - Firebase/Core
   - Firebase/Core (7.10.0):
@@ -87,6 +89,9 @@ PODS:
     - Firebase/Storage
     - SDWebImage (~> 5.6)
   - FSCalendar (2.8.2)
+  - Google-Mobile-Ads-SDK (9.14.0):
+    - GoogleAppMeasurement (< 11.0, >= 7.0)
+    - GoogleUserMessagingPlatform (>= 1.1)
   - GoogleAnalytics (3.17.0)
   - GoogleAppMeasurement (7.10.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
@@ -98,6 +103,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
     - PromisesObjC (~> 1.2)
+  - GoogleUserMessagingPlatform (2.0.1)
   - GoogleUtilities (7.3.1):
     - GoogleUtilities/AppDelegateSwizzler (= 7.3.1)
     - GoogleUtilities/Environment (= 7.3.1)
@@ -159,6 +165,7 @@ DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FacebookShare
+  - Firebase
   - Firebase/Analytics
   - Firebase/CoreOnly
   - Firebase/Database
@@ -166,6 +173,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseUI/Storage
   - FSCalendar
+  - Google-Mobile-Ads-SDK
   - GoogleAnalytics
   - GoogleUtilities
   - Hero
@@ -197,9 +205,11 @@ SPEC REPOS:
     - FirebaseStorage
     - FirebaseUI
     - FSCalendar
+    - Google-Mobile-Ads-SDK
     - GoogleAnalytics
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleUserMessagingPlatform
     - GoogleUtilities
     - GTMSessionFetcher
     - Hero
@@ -234,9 +244,11 @@ SPEC CHECKSUMS:
   FirebaseStorage: d88ef8e9f152c6a17e44540ae2b93c3be74e9b60
   FirebaseUI: 59db3d833773f985550897d54ceb811ba37fb9a5
   FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  Google-Mobile-Ads-SDK: 4fe6304b771f8467d29978cb790ec1e56e646946
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleAppMeasurement: 1c863b1161fc3c8cf614a7460d1be6a7c262aab3
   GoogleDataTransport: cd9db2180fcecd8da1b561aea31e3e56cf834aa7
+  GoogleUserMessagingPlatform: 5f8b30daf181805317b6b985bb51c1ff3beca054
   GoogleUtilities: e1d9ed4e544fc32a93e00e721400cbc3f377200d
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
@@ -250,6 +262,6 @@ SPEC CHECKSUMS:
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftyGif: 5d4af95df24caf1c570dbbcb32a3b8a0763bc6d7
 
-PODFILE CHECKSUM: 1c35b50f80ba85fd357db8f1a1d727c84f2ea6e3
+PODFILE CHECKSUM: 222bc4c00926d0b606c21d5ad9ab04db8c7a4e40
 
 COCOAPODS: 1.11.3

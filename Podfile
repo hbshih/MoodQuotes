@@ -9,7 +9,7 @@ target '句句' do
   pod 'BulletinBoard'
   pod 'DateTimePicker'
   pod 'MASegmentedControl'
- # pod 'Firebase'
+  pod 'Firebase'
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
   pod 'GoogleAnalytics'
@@ -32,7 +32,7 @@ target '句句' do
   pod 'FSCalendar'
   
   #pod 'Storyly'
-  #pod 'Google-Mobile-Ads-SDK'
+  pod 'Google-Mobile-Ads-SDK'
   
 
   target '句句Tests' do
@@ -56,6 +56,6 @@ target 'widgetExtension' do
   pod 'FirebaseUI/Storage'
   pod 'SDWebImageSwiftUI'
   pod 'GoogleUtilities'
-  #pod 'Google-Mobile-Ads-SDK'
+  pod 'Google-Mobile-Ads-SDK'
   
 end

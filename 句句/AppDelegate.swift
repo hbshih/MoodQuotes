@@ -12,7 +12,7 @@ import BackgroundTasks
 //import UXCam
 import WidgetKit
 //import UXCam
-//import GoogleMobileAds
+import GoogleMobileAds
 import AppTrackingTransparency
 import SwiftyStoreKit
 import CoreData
@@ -198,6 +198,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          //self.submitBackgroundTasks()
          
          }*/
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
         Instabug.setLocale(.chineseTaiwan)
         Instabug.start(withToken: "eaab24b8f676bca71995b8a2c28637d8", invocationEvents: .none)
         SurvicateSdk.shared.initialize()
