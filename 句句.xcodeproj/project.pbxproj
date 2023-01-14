@@ -1175,6 +1175,8 @@
 					"$(PROJECT_DIR)/句句",
 				);
 				INFOPLIST_FILE = "句句/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "植語錄";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1318,6 +1320,8 @@
 					"$(PROJECT_DIR)/句句",
 				);
 				INFOPLIST_FILE = "句句/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "植語錄";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

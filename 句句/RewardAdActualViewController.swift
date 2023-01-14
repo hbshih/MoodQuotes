@@ -13,7 +13,7 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 //
-
+/*
 import GoogleMobileAds
 import UIKit
 
@@ -87,3 +87,4 @@ class RewardedAdActualViewController: UIViewController, GADFullScreenContentDele
       name: UIApplication.didBecomeActiveNotification, object: nil)
   }
 }
+*/

@@ -35,7 +35,7 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
     super.viewDidLoad()
       
       GADRewardedAd.load(
-        withAdUnitID: "ca-app-pub-3940256099942544/1712485313", request: GADRequest()
+        withAdUnitID: "ca-app-pub-5153344112585383/5827472367", request: GADRequest()
       ) { (ad, error) in
         if let error = error {
           print("Rewarded ad failed to load with error: \(error.localizedDescription)")
