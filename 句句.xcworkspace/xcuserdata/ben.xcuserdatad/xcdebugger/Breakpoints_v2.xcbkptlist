@@ -30,8 +30,8 @@
             filePath = "&#x53e5;&#x53e5;/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "529"
-            endingLineNumber = "529"
+            startingLineNumber = "535"
+            endingLineNumber = "535"
             landmarkName = "getNextUpdateTime()"
             landmarkType = "7">
          </BreakpointContent>
