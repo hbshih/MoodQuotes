@@ -215,7 +215,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     */
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        var randomString = ["一天只會有一句語錄，還要再等個幾小時才下一個語錄喔！"]
+        var randomString = ["一天只會有一句語錄，\n請再等一下下！"]
         
         alertViewHandler().control(title: randomString[0], body: "", iconText: "🐽")
     }
