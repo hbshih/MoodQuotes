@@ -4844,64 +4844,76 @@ App們將會開始抖動。</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="廣告即將播放，這個廣告讓植語錄維持免費" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-d9-MBh">
-                                <rect key="frame" x="6.6666666666666572" y="381.66666666666669" width="380" height="20"/>
-                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gY-Iz-QEa">
-                                <rect key="frame" x="121.66666666666669" y="648" width="150" height="55"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Sn-jD-dyz">
+                                <rect key="frame" x="0.0" y="59" width="393" height="690"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1k-MV-Fch">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="55"/>
-                                        <state key="normal" title="關閉">
-                                            <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="closeButton:" destination="IW1-b5-FkZ" eventType="touchUpInside" id="oBK-xZ-S5G"/>
-                                            <action selector="fontSelectedTapped:" destination="TJL-HM-7s1" eventType="touchUpInside" id="py2-hB-4JA"/>
-                                        </connections>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="廣告即將播放，這個廣告讓植語錄維持免費" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-d9-MBh">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="20"/>
+                                        <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-Gf-t9G">
+                                        <rect key="frame" x="0.0" y="20" width="393" height="585"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A3M-bn-o4c">
+                                        <rect key="frame" x="0.0" y="605" width="393" height="85"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gY-Iz-QEa">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1k-MV-Fch">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>
+                                                        <state key="normal" title="關閉">
+                                                            <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="closeButton:" destination="IW1-b5-FkZ" eventType="touchUpInside" id="oBK-xZ-S5G"/>
+                                                            <action selector="fontSelectedTapped:" destination="TJL-HM-7s1" eventType="touchUpInside" id="py2-hB-4JA"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="1dr-za-A0C"/>
+                                                    <constraint firstItem="i1k-MV-Fch" firstAttribute="centerY" secondItem="2gY-Iz-QEa" secondAttribute="centerY" id="40L-TB-41w"/>
+                                                    <constraint firstItem="i1k-MV-Fch" firstAttribute="centerX" secondItem="2gY-Iz-QEa" secondAttribute="centerX" id="NYg-JB-M79"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Pe1-fS-YOC"/>
+                                                    <constraint firstItem="i1k-MV-Fch" firstAttribute="top" secondItem="2gY-Iz-QEa" secondAttribute="top" id="Spx-k2-te4"/>
+                                                    <constraint firstAttribute="bottom" secondItem="i1k-MV-Fch" secondAttribute="bottom" id="l2u-tT-KRM"/>
+                                                    <constraint firstAttribute="height" constant="55" id="lCH-XC-WFB"/>
+                                                    <constraint firstItem="i1k-MV-Fch" firstAttribute="leading" secondItem="2gY-Iz-QEa" secondAttribute="leading" id="uNN-Lr-ogv"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caP-1K-8iJ">
+                                                <rect key="frame" x="0.0" y="55" width="393" height="30"/>
+                                                <state key="normal" title="不要再顯示廣告">
+                                                    <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="restoreSubscription:" destination="ctx-cW-Iia" eventType="touchUpInside" id="SNd-fm-5Ka"/>
+                                                    <action selector="skip:" destination="xvt-t3-Ix3" eventType="touchUpInside" id="PX5-H0-DHf"/>
+                                                    <segue destination="ctx-cW-Iia" kind="show" id="RPt-pX-Gna"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.91372549020000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="1dr-za-A0C"/>
-                                    <constraint firstItem="i1k-MV-Fch" firstAttribute="centerY" secondItem="2gY-Iz-QEa" secondAttribute="centerY" id="40L-TB-41w"/>
-                                    <constraint firstItem="i1k-MV-Fch" firstAttribute="centerX" secondItem="2gY-Iz-QEa" secondAttribute="centerX" id="NYg-JB-M79"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Pe1-fS-YOC"/>
-                                    <constraint firstItem="i1k-MV-Fch" firstAttribute="top" secondItem="2gY-Iz-QEa" secondAttribute="top" id="Spx-k2-te4"/>
-                                    <constraint firstAttribute="bottom" secondItem="i1k-MV-Fch" secondAttribute="bottom" id="l2u-tT-KRM"/>
-                                    <constraint firstAttribute="height" constant="55" id="lCH-XC-WFB"/>
-                                    <constraint firstItem="i1k-MV-Fch" firstAttribute="leading" secondItem="2gY-Iz-QEa" secondAttribute="leading" id="uNN-Lr-ogv"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caP-1K-8iJ">
-                                <rect key="frame" x="142.66666666666666" y="735" width="108" height="30"/>
-                                <state key="normal" title="不要再顯示廣告">
-                                    <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="restoreSubscription:" destination="ctx-cW-Iia" eventType="touchUpInside" id="SNd-fm-5Ka"/>
-                                    <action selector="skip:" destination="xvt-t3-Ix3" eventType="touchUpInside" id="PX5-H0-DHf"/>
-                                    <segue destination="ctx-cW-Iia" kind="show" id="RPt-pX-Gna"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="olG-KW-n1h"/>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.98039215686274506" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="olG-KW-n1h" firstAttribute="bottom" secondItem="2gY-Iz-QEa" secondAttribute="bottom" constant="80" id="DoO-Io-uGu"/>
-                            <constraint firstItem="fM8-d9-MBh" firstAttribute="centerY" secondItem="SbM-cb-r6i" secondAttribute="centerY" id="TJo-5Q-t1a"/>
-                            <constraint firstItem="2gY-Iz-QEa" firstAttribute="centerX" secondItem="olG-KW-n1h" secondAttribute="centerX" id="bbd-Ho-Ta6"/>
-                            <constraint firstItem="caP-1K-8iJ" firstAttribute="centerX" secondItem="olG-KW-n1h" secondAttribute="centerX" id="fh1-eB-CTa"/>
-                            <constraint firstItem="caP-1K-8iJ" firstAttribute="top" secondItem="i1k-MV-Fch" secondAttribute="bottom" constant="32" id="x4n-8C-og8"/>
-                            <constraint firstItem="fM8-d9-MBh" firstAttribute="centerX" secondItem="SbM-cb-r6i" secondAttribute="centerX" id="z7w-AD-ibz"/>
+                            <constraint firstItem="2Sn-jD-dyz" firstAttribute="top" secondItem="olG-KW-n1h" secondAttribute="top" id="7g8-5K-9iW"/>
+                            <constraint firstItem="wUP-Ly-tZb" firstAttribute="top" secondItem="2Sn-jD-dyz" secondAttribute="bottom" id="Fsm-Zt-ctm"/>
+                            <constraint firstItem="2Sn-jD-dyz" firstAttribute="leading" secondItem="olG-KW-n1h" secondAttribute="leading" id="h8x-Y0-k3I"/>
+                            <constraint firstItem="olG-KW-n1h" firstAttribute="trailing" secondItem="2Sn-jD-dyz" secondAttribute="trailing" id="muu-s8-tNI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QVt-Re-sTW"/>
@@ -4909,6 +4921,7 @@ App們將會開始抖動。</string>
                         <outlet property="button" destination="i1k-MV-Fch" id="Whh-Ay-E8A"/>
                         <outlet property="buttonView" destination="2gY-Iz-QEa" id="IGO-p0-wgW"/>
                         <outlet property="explationMessage" destination="fM8-d9-MBh" id="tZt-Fa-w3I"/>
+                        <outlet property="nativeAdPlaceholder" destination="eX6-Gf-t9G" id="neC-b3-f7n"/>
                         <outlet property="noAdsButton" destination="caP-1K-8iJ" id="cQH-bD-sfb"/>
                         <segue destination="HKe-EK-5Kv" kind="show" identifier="AdSegue" id="NQ9-iq-f9w"/>
                     </connections>
@@ -4955,7 +4968,7 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jnJ-JQ-whF"/>
-        <segue reference="NC1-IV-Pt0"/>
+        <segue reference="RPt-pX-Gna"/>
         <segue reference="pIM-gP-oXb"/>
         <segue reference="mTw-Mw-H14"/>
         <segue reference="09k-za-sKN"/>

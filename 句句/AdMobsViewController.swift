@@ -5,7 +5,7 @@
 //  Created by Ben on 2021/4/23.
 //
 
-/*
+
 import UIKit
 import GoogleMobileAds
 
@@ -49,7 +49,6 @@ class AdMobsViewController: UIViewController {
         assert(false, "Could not load nib file for adView")
       }
       setAdView(adView)
-      refreshAd(nil)
     }
 
     func setAdView(_ view: GADNativeAdView) {
@@ -73,17 +72,6 @@ class AdMobsViewController: UIViewController {
       )
     }
 
-    // MARK: - Actions
-    /// Refreshes the native ad.
-    @IBAction func refreshAd(_ sender: AnyObject!) {
-      refreshAdButton.isEnabled = false
-      videoStatusLabel.text = ""
-      adLoader = GADAdLoader(
-        adUnitID: adUnitID, rootViewController: self,
-        adTypes: [.native], options: nil)
-      adLoader.delegate = self
-      adLoader.load(GADRequest())
-    }
 
     /// Returns a `UIImage` representing the number of stars from the given star rating; returns `nil`
     /// if the star rating is less than 3.5 stars.
@@ -227,4 +215,4 @@ class AdMobsViewController: UIViewController {
   }
 
  
-*/
+
