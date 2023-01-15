@@ -28,6 +28,9 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
     @IBOutlet weak var explationMessage: UILabel!
     @IBOutlet weak var nativeAdPlaceholder: UIView!
     var played = false
+    var timer: Timer?
+    /// The game counter.
+    var counter = 10
     
     var adLoader: GADAdLoader!
     /// The height constraint applied to the ad view, where necessary.
@@ -38,9 +41,22 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
     
     /// The native ad view that is being presented.
     var nativeAdView: GADNativeAdView!
+    
+    let nativeAdUnitID = "ca-app-pub-3940256099942544/3986624511"
 
   override func viewDidLoad() {
     super.viewDidLoad()
+      
+      //prepare view
+      let trialWords = ["這個廣告讓植語錄維持免費", "看個廣告讓植語錄維持免費", "感謝接下來的廣告\n讓植語錄多活三天","請您看個廣告\n讓植語錄繼續維持免費","即將播放廣告\n這樣植語錄才能繼續免費下去"]
+      // get random elements
+      let randomTrialName = trialWords.randomElement()!
+      
+      // imageView.image = UIImage(named: "icon_gesture")
+      self.explationMessage.text = randomTrialName
+      self.explationMessage.alpha = 1.0
+      self.button.isUserInteractionEnabled = false
+      self.noAdsButton.alpha = 0.0
       
       //Native ad
       //versionLabel.text = GADMobileAds.sharedInstance().sdkVersion
@@ -52,9 +68,16 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
       }
       setAdView(adView)
       
+      adLoader = GADAdLoader(
+          adUnitID: nativeAdUnitID, rootViewController: self,
+          adTypes: [.native], options: nil)
+      adLoader.delegate = self
+      adLoader.load(GADRequest())
+      
+      
       // Reward ad
       GADRewardedAd.load(
-        withAdUnitID: "ca-app-pub-5153344112585383/5827472367", request: GADRequest()
+        withAdUnitID: "ca-app-pub-3940256099942544/1712485313", request: GADRequest()
       ) { (ad, error) in
         if let error = error {
           print("Rewarded ad failed to load with error: \(error.localizedDescription)")
@@ -65,10 +88,13 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
         self.rewardedAd?.fullScreenContentDelegate = self
       }
    
-      explationMessage.alpha = 0.0
-      button.alpha = 0.0
-      buttonView.alpha  = 0.0
-      noAdsButton.alpha  = 0.0
+
+      timer = Timer.scheduledTimer(
+        timeInterval: 1.0,
+        target: self,
+        selector: #selector(RewardedAdViewController.timerFireMethod(_:)),
+        userInfo: nil,
+        repeats: true)
       
       
   }
@@ -111,65 +137,50 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
       }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    @objc func timerFireMethod(_ timer: Timer) {
+      counter -= 1
+      if counter > 0 {
+        //gameText.text = String(counter)
+          button.setTitle("還有 \(self.counter) 秒", for: .normal)
+      } else {
+          button.setTitle("關閉廣告", for: .normal)
+          self.button.isUserInteractionEnabled = true
+          self.noAdsButton.alpha = 1.0
+      }
+    }
+    
+    
+    @IBAction func oneMoreAdTapped(_ sender: Any) {
         
-        let trialWords = ["廣告即將播放\n這個廣告讓植語錄維持免費", "看個廣告讓植語錄維持免費", "感謝接下來的廣告\n讓植語錄多活三天","抱歉\n要讓你看個廣告\n植語錄才能維持免費。","即將播放廣告\n這樣植語錄才能繼續免費下去"]
-        // get random elements
-        let randomTrialName = trialWords.randomElement()!
         
         if !played
         {
-            UIView.animate(withDuration: 2.0, delay: 0.0, options: .curveLinear) {
-                // imageView.image = UIImage(named: "icon_gesture")
-                self.explationMessage.text = "廣告即將播放\n這個廣告讓植語錄維持免費"
-                self.explationMessage.alpha = 1.0
-            } completion: { (true) in
-                UIView.animate(withDuration: 0.5, delay: 2.0) {
-                    self.explationMessage.alpha = 0.0
-                } completion: { [self] (true) in
-                    self.played = true
-                    
-                   // refreshAdButton.isEnabled = false
-                   // videoStatusLabel.text = ""
-                    adLoader = GADAdLoader(
-                      adUnitID: "ca-app-pub-3940256099942544/3986624511", rootViewController: self,
-                      adTypes: [.native], options: nil)
-                    adLoader.delegate = self
-                    adLoader.load(GADRequest())
-                    
-                    /*
-                    if let ad = rewardedAd {
-                        ad.present(fromRootViewController: self) {
-                            let reward = ad.adReward
-                            print("Reward received with currency \(reward.amount), amount \(reward.amount.doubleValue)")
-                            //self.earnCoins(NSInteger(truncating: reward.amount))
-                            // TODO: Reward the user.
-                            self.explationMessage.alpha = 1.0
-                            self.explationMessage.text = "語錄準備好囉！"
-                            self.button.alpha = 1.0
-                            self.buttonView.alpha = 1.0
-                            self.noAdsButton.alpha = 1.0
-                        }
-                    } else {
-                        print("reward not ready")
-                        //closeButton.isHidden = false
-                        self.explationMessage.alpha = 1.0
-                        self.explationMessage.text = "語錄準備好囉！"
-                        button.alpha = 1.0
-                        buttonView.alpha = 1.0
-                        noAdsButton.alpha = 1.0
-                    }
-                     */
-                }
+            
+            if let ad = rewardedAd {
+              ad.present(fromRootViewController: self) {
+                let reward = ad.adReward
+                print("Reward received with currency \(reward.amount), amount \(reward.amount.doubleValue)")
                 
+                // TODO: Reward the user.
+              }
+            } else {
+                adLoader = GADAdLoader(
+                    adUnitID: nativeAdUnitID, rootViewController: self,
+                  adTypes: [.native], options: nil)
+                adLoader.delegate = self
+                adLoader.load(GADRequest())
             }
             
+            played = true
+            noAdsButton.setTitle("以後不要再顯示廣告", for: .normal)
+        }else
+        {
+            //noAdsButton.setTitle("以後不要再顯示廣告", for: .normal)
+            performSegue(withIdentifier: "promotionSegue", sender: .none)
         }
         
     }
     
-    
-
     @IBAction func closeButton(_ sender: Any) {
         self.dismiss(animated: true)
     }

@@ -1534,14 +1534,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R76-T7-bFQ">
-                                            <rect key="frame" x="20" y="11" width="25" height="17"/>
+                                            <rect key="frame" x="20" y="8" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfX-5v-HaR">
-                                            <rect key="frame" x="20.000000000000004" y="31" width="40.333333333333336" height="17"/>
+                                            <rect key="frame" x="20" y="31" width="58" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="I.PenCrane-B" family="I.PenCrane-B" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -3233,7 +3233,7 @@ App們將會開始抖動。</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeX-jG-Uhq">
-                                                <rect key="frame" x="305" y="9" width="72" height="26"/>
+                                                <rect key="frame" x="305" y="8" width="72" height="28"/>
                                                 <color key="tintColor" red="0.24313725489999999" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="折扣代碼">
@@ -4844,28 +4844,28 @@ App們將會開始抖動。</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Sn-jD-dyz">
-                                <rect key="frame" x="0.0" y="59" width="393" height="690"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2Sn-jD-dyz">
+                                <rect key="frame" x="0.0" y="79" width="393" height="670"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="廣告即將播放，這個廣告讓植語錄維持免費" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-d9-MBh">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="這個廣告讓植語錄維持免費" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-d9-MBh">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="23.333333333333332"/>
                                         <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-Gf-t9G">
-                                        <rect key="frame" x="0.0" y="20" width="393" height="585"/>
+                                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-Gf-t9G">
+                                        <rect key="frame" x="0.0" y="39.333333333333343" width="393" height="509.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A3M-bn-o4c">
-                                        <rect key="frame" x="0.0" y="605" width="393" height="85"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A3M-bn-o4c">
+                                        <rect key="frame" x="0.0" y="565" width="393" height="105"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gY-Iz-QEa">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>
+                                                <rect key="frame" x="121.66666666666669" y="0.0" width="150" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1k-MV-Fch">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>
-                                                        <state key="normal" title="關閉">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="55"/>
+                                                        <state key="normal" title="關閉廣告">
                                                             <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
@@ -4892,14 +4892,12 @@ App們將會開始抖動。</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caP-1K-8iJ">
-                                                <rect key="frame" x="0.0" y="55" width="393" height="30"/>
-                                                <state key="normal" title="不要再顯示廣告">
+                                                <rect key="frame" x="89" y="75" width="215" height="30"/>
+                                                <state key="normal" title="再看一則廣告讓植語錄多活三天">
                                                     <color key="titleColor" red="0.33725490200000002" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="restoreSubscription:" destination="ctx-cW-Iia" eventType="touchUpInside" id="SNd-fm-5Ka"/>
-                                                    <action selector="skip:" destination="xvt-t3-Ix3" eventType="touchUpInside" id="PX5-H0-DHf"/>
-                                                    <segue destination="ctx-cW-Iia" kind="show" id="RPt-pX-Gna"/>
+                                                    <action selector="oneMoreAdTapped:" destination="IW1-b5-FkZ" eventType="touchUpInside" id="IKx-io-heG"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -4910,7 +4908,7 @@ App們將會開始抖動。</string>
                         <viewLayoutGuide key="safeArea" id="olG-KW-n1h"/>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.98039215686274506" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2Sn-jD-dyz" firstAttribute="top" secondItem="olG-KW-n1h" secondAttribute="top" id="7g8-5K-9iW"/>
+                            <constraint firstItem="2Sn-jD-dyz" firstAttribute="top" secondItem="olG-KW-n1h" secondAttribute="top" constant="20" id="7g8-5K-9iW"/>
                             <constraint firstItem="wUP-Ly-tZb" firstAttribute="top" secondItem="2Sn-jD-dyz" secondAttribute="bottom" id="Fsm-Zt-ctm"/>
                             <constraint firstItem="2Sn-jD-dyz" firstAttribute="leading" secondItem="olG-KW-n1h" secondAttribute="leading" id="h8x-Y0-k3I"/>
                             <constraint firstItem="olG-KW-n1h" firstAttribute="trailing" secondItem="2Sn-jD-dyz" secondAttribute="trailing" id="muu-s8-tNI"/>
@@ -4924,6 +4922,7 @@ App們將會開始抖動。</string>
                         <outlet property="nativeAdPlaceholder" destination="eX6-Gf-t9G" id="neC-b3-f7n"/>
                         <outlet property="noAdsButton" destination="caP-1K-8iJ" id="cQH-bD-sfb"/>
                         <segue destination="HKe-EK-5Kv" kind="show" identifier="AdSegue" id="NQ9-iq-f9w"/>
+                        <segue destination="ctx-cW-Iia" kind="show" identifier="promotionSegue" id="byX-O3-5N4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xi-C8-ERF" sceneMemberID="firstResponder"/>
@@ -4968,7 +4967,7 @@ App們將會開始抖動。</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jnJ-JQ-whF"/>
-        <segue reference="RPt-pX-Gna"/>
+        <segue reference="byX-O3-5N4"/>
         <segue reference="pIM-gP-oXb"/>
         <segue reference="mTw-Mw-H14"/>
         <segue reference="09k-za-sKN"/>
