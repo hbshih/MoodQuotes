@@ -801,7 +801,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         checkIfBookmarked()
         
         //show advertisement
-        if global_counter > 6 && !global_paid_user
+        if global_counter > 15 && !global_paid_user
         {
             performSegue(withIdentifier: "showAdSegue", sender: nil)
         }
