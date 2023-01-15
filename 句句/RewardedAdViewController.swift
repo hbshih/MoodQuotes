@@ -43,9 +43,9 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
     /// The native ad view that is being presented.
     var nativeAdView: GADNativeAdView!
     
-    let nativeAdUnitID = "ca-app-pub-3940256099942544/3986624511"
+    let nativeAdUnitID = "ca-app-pub-5153344112585383/8768404430"
     //real ID = ca-app-pub-5153344112585383/8768404430
-    let rewardAdUnitID = "ca-app-pub-3940256099942544/1712485313"
+    let rewardAdUnitID = "ca-app-pub-5153344112585383/5827472367"
     // readl ID = "ca-app-pub-5153344112585383/5827472367"
     
     override func viewDidLoad() {
