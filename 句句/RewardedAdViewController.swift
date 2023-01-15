@@ -16,6 +16,7 @@
 
 import GoogleMobileAds
 import UIKit
+import FirebaseAnalytics
 
 class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
     /// The rewarded video ad.
@@ -30,7 +31,7 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
     var played = false
     var timer: Timer?
     /// The game counter.
-    var counter = 10
+    var counter = 5
     
     var adLoader: GADAdLoader!
     /// The height constraint applied to the ad view, where necessary.
@@ -43,7 +44,9 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
     var nativeAdView: GADNativeAdView!
     
     let nativeAdUnitID = "ca-app-pub-3940256099942544/3986624511"
-    let rewardAdUnitID = ""
+    //real ID = ca-app-pub-5153344112585383/8768404430
+    let rewardAdUnitID = "ca-app-pub-3940256099942544/1712485313"
+    // readl ID = "ca-app-pub-5153344112585383/5827472367"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +55,7 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
         self.button.alpha = 0.0
         self.button.isUserInteractionEnabled = false
         self.noAdsButton.alpha = 0.0
-        button.setTitle("還有 10 秒", for: .normal)
+        button.setTitle("還有 5 秒", for: .normal)
         
         // Reward ad
         GADRewardedAd.load(
@@ -167,10 +170,15 @@ func imageOfStars(from starRating: NSDecimalNumber?) -> UIImage? {
     if counter > 0 {
         //gameText.text = String(counter)
         button.setTitle("還有 \(self.counter) 秒", for: .normal)
+        
+        if counter <= 3
+        {
+            self.noAdsButton.alpha = 1.0
+        }
+        
     } else {
         button.setTitle("關閉廣告", for: .normal)
         self.button.isUserInteractionEnabled = true
-        self.noAdsButton.alpha = 1.0
     }
 }
 
@@ -180,6 +188,7 @@ func imageOfStars(from starRating: NSDecimalNumber?) -> UIImage? {
     
     if !played
     {
+        Analytics.logEvent("clickOn_RewardedAd_OneMoreAd", parameters: nil)
         
         if let ad = rewardedAd {
             ad.present(fromRootViewController: self) {
@@ -200,6 +209,7 @@ func imageOfStars(from starRating: NSDecimalNumber?) -> UIImage? {
         noAdsButton.setTitle("以後不要再顯示廣告", for: .normal)
     }else
     {
+        Analytics.logEvent("clickOn_RewardedAd_NoMoreAd", parameters: nil)
         //noAdsButton.setTitle("以後不要再顯示廣告", for: .normal)
         performSegue(withIdentifier: "promotionSegue", sender: .none)
     }
@@ -207,6 +217,8 @@ func imageOfStars(from starRating: NSDecimalNumber?) -> UIImage? {
 }
 
 @IBAction func closeButton(_ sender: Any) {
+    
+    Analytics.logEvent("clickOn_RewardedAd_Close", parameters: nil)
     
     self.dismiss(animated: true)
     //}
