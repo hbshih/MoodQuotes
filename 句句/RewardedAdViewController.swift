@@ -100,6 +100,8 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
                     let adView = nibObjects.first as? GADNativeAdView
                 else {
                     assert(false, "Could not load nib file for adView")
+                    self.dismiss(animated: true)
+                    return
                 }
                 self.setAdView(adView)
                 
