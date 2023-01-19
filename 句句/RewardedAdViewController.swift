@@ -53,8 +53,10 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
         
         self.explationMessage.alpha = 0.0
         self.button.alpha = 0.0
+        self.buttonView.alpha = 0.0
         self.button.isUserInteractionEnabled = false
         self.noAdsButton.alpha = 0.0
+        self.nativeAdPlaceholder.alpha = 0.0
         button.setTitle("還有 5 秒", for: .normal)
         
         // Reward ad
@@ -82,14 +84,17 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
         // get random elements
         let randomTrialName = trialWords.randomElement()!
         
-        UIView.animate(withDuration: 2.0, delay: 0.5, options: .curveLinear) {
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: .curveLinear) {
             // imageView.image = UIImage(named: "icon_gesture")
             self.explationMessage.text = randomTrialName
             self.explationMessage.alpha = 1.0
+            self.nativeAdPlaceholder.alpha = 1.0
             self.button.alpha = 1.0
+            self.buttonView.alpha = 1.0
             
         } completion: { (true) in
             UIView.animate(withDuration: 0.5, delay: 2.0) { [self] in
+                
                 
                 
                 
