@@ -23,6 +23,7 @@ var global_counter = 0
 
 class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     
+    @IBOutlet weak var OnboardingTrialButton: UIButton!
     @IBOutlet weak var shareAndbookmarkStack: UIStackView!
     @IBOutlet weak var installWidgetInstructionView: UIView!
     @IBOutlet weak var moodButton: UIButton!
@@ -375,15 +376,39 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         }
     }
     
+    func blinkAnimation() -> CABasicAnimation {
+        let animation = CABasicAnimation(keyPath: "opacity")
+        animation.fromValue = 1.0
+        animation.toValue = 0.1
+        animation.duration = 0.5
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        animation.autoreverses = true
+        animation.repeatCount = Float.infinity
+        return animation
+    }
+
+    
+    
     func displayOnboardTips()
     {
         
         print ("onboarding status \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0"))")
         
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil && UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "widgetTutorialSeen") != nil
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil && UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "paymentPageSeen") != nil && !global_paid_user
         {
+            
             installWidgetInstructionView.isHidden = true
             shareAndbookmarkStack.isHidden = false
+            
+            let trialWords = ["獲得彩色植物", "試用其他字體", "查看植物花語","更多背景顏色","試用植語錄完整版"]
+            // get random elements
+            let randomTrialName = trialWords.randomElement()!
+            // print random elements
+            
+            OnboardingTrialButton.setTitle(randomTrialName, for: .normal)
+            
+            
+            
            // self.onboardingTouchIcon.alpha = 0.0
            // self.onboardingTouchIcon.isHidden = true
             // Existing User
@@ -794,14 +819,14 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     }
     override func viewDidAppear(_ animated: Bool) {
         
-        
+        //installWidgetInstructionView.blink()
         
         SurvicateSdk.shared.invokeEvent(name: "userPressedPurchase")
         
         checkIfBookmarked()
         
         //show advertisement
-        if global_counter > 15 && !global_paid_user
+        if global_counter > 7 && !global_paid_user
         {
             performSegue(withIdentifier: "showAdSegue", sender: nil)
         }
@@ -1050,4 +1075,11 @@ extension UIImage {
         
         return UIGraphicsGetImageFromCurrentImageContext()
     }
+}
+
+extension UIView{
+     func blink() {
+         self.alpha = 0.2
+         UIView.animate(withDuration: 1, delay: 0.0, options: [.curveLinear, .repeat, .autoreverse], animations: {self.alpha = 1.0}, completion: nil)
+     }
 }

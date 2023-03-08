@@ -18,6 +18,8 @@ class Onboarding_1ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
+        
+        
         if #available(iOS 14, *) {
             self.timePIcker.preferredDatePickerStyle = .automatic
             self.timePIcker.layer.cornerRadius = timePIcker.layer.borderWidth / 2

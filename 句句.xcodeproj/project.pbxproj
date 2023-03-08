@@ -12,6 +12,7 @@
 		B50374CD263310B5004E2F86 /* AdMobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50374CC263310B5004E2F86 /* AdMobsViewController.swift */; };
 		B503750026331882004E2F86 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50374FF26331882004E2F86 /* NativeAdView.xib */; };
 		B5056D8C2573DCB300A8E79B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509566E256DDCC30075ACE9 /* DateHelper.swift */; };
+		B505AF1429B8B46400A598FE /* PreWidgetInstallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505AF1329B8B46400A598FE /* PreWidgetInstallViewController.swift */; };
 		B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBB125622E0700372198 /* NotificationTableViewCell.swift */; };
 		B506EBB425622E0700372198 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B506EBB225622E0700372198 /* NotificationTableViewCell.xib */; };
 		B506EBC225622FF800372198 /* UpdateTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B506EBC025622FF800372198 /* UpdateTimeTableViewCell.swift */; };
@@ -198,6 +199,7 @@
 		A41D5FD63FC3C9B7C9355E2A /* Pods-句句-句句UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-句句-句句UITests.debug.xcconfig"; path = "Target Support Files/Pods-句句-句句UITests/Pods-句句-句句UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B50374CC263310B5004E2F86 /* AdMobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobsViewController.swift; sourceTree = "<group>"; };
 		B50374FF26331882004E2F86 /* NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
+		B505AF1329B8B46400A598FE /* PreWidgetInstallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreWidgetInstallViewController.swift; sourceTree = "<group>"; };
 		B506EBB125622E0700372198 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		B506EBB225622E0700372198 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		B506EBC025622FF800372198 /* UpdateTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTimeTableViewCell.swift; sourceTree = "<group>"; };
@@ -502,6 +504,7 @@
 				B5CFD3052961BC9A00E2A9E0 /* OnboardingChooseQuoteViewController.swift */,
 				B55D279A2972A76800E03EC3 /* RewardedAdViewController.swift */,
 				B55D279C2972CAAB00E03EC3 /* RewardAdActualViewController.swift */,
+				B505AF1329B8B46400A598FE /* PreWidgetInstallViewController.swift */,
 			);
 			path = "句句";
 			sourceTree = "<group>";
@@ -900,6 +903,7 @@
 				B506EBB325622E0700372198 /* NotificationTableViewCell.swift in Sources */,
 				B5517C75255FAFC500E134CC /* AppDelegate.swift in Sources */,
 				B509566F256DDCC30075ACE9 /* DateHelper.swift in Sources */,
+				B505AF1429B8B46400A598FE /* PreWidgetInstallViewController.swift in Sources */,
 				B59E212E25674D0A003A5521 /* Quote.swift in Sources */,
 				B55D279B2972A76800E03EC3 /* RewardedAdViewController.swift in Sources */,
 				B55B06B927F32CE500B7AAEC /* NewSettingViewController.swift in Sources */,
@@ -1168,7 +1172,7 @@
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1182,7 +1186,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 7.2;
+				MARKETING_VERSION = 7.3;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1313,7 +1317,7 @@
 				CODE_SIGN_ENTITLEMENTS = "句句/句句.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1327,7 +1331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 7.2;
+				MARKETING_VERSION = 7.3;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1540,7 +1544,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1553,7 +1557,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 7.2;
+				MARKETING_VERSION = 7.3;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1571,7 +1575,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = widgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 64KKU33NVH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1584,7 +1588,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 7.2;
+				MARKETING_VERSION = 7.3;
 				PRODUCT_BUNDLE_IDENTIFIER = BSStudio.MoodQuotes.ios.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -133,6 +133,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
         if NSClassFromString("ATTrackingManager") == nil {
             // Avoid showing the App Tracking Transparency explainer if the
             // framework is not linked.

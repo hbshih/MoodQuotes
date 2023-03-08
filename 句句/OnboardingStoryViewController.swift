@@ -100,11 +100,11 @@ class OnboardingStoryViewController: UIViewController {
                     self.imageView.alpha = 1.0
                 }) { (true) in
                     UIView.animate(withDuration: 0.5, delay: 2.0, options: UIView.AnimationOptions.curveEaseIn) {
-                        self.explationMessage.text = "這是屬於你今天的植物\n今天的語錄是⋯"
+                        self.explationMessage.text = "這是屬於你今天的植物\n\n正在產生屬於你的語錄"
                         self.explationMessage.alpha = 1.0
                     } completion: { (true) in
                         sleep(4)
-                        self.performSegue(withIdentifier: "homepageSegue", sender: nil)
+                        self.performSegue(withIdentifier: "bufferSegue", sender: nil)
                     }
                     
                 }

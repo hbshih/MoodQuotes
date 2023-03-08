@@ -33,6 +33,8 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
         Analytics.logEvent("view_purchase_page", parameters: nil)
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(true, forKey: "paymentPageSeen")
+            self.dismiss(animated: true, completion: nil)
         
         // Do any additional setup after loading the view.
         
