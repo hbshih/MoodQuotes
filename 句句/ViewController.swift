@@ -393,10 +393,11 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     
     func displayOnboardTips()
     {
+        print ("status - \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.bool(forKey: "paymentPageSeen"))")
         
-        print ("onboarding status \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0"))")
+       // print ("onboarding status \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0"))")
         
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil && UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.bool(forKey: "paymentPageSeen") == false && !global_paid_user
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.bool(forKey: "paymentPageSeen") == true && !global_paid_user
         {
             
             installWidgetInstructionView.isHidden = true
@@ -418,7 +419,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
              }*/
         } else
         {
-            
+            // new user
             let trialWords = ["查看植物花語","取得更多字體","升級植語錄完整版"]
             // get random elements
             let randomTrialName = trialWords.randomElement()!
