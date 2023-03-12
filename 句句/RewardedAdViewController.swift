@@ -51,21 +51,6 @@ class RewardedAdViewController: UIViewController, GADFullScreenContentDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Disable swipe down gesture on RewardedAdViewController
-        if let popupView = self.presentedViewController?.view {
-            // Disable user interaction on the superview to prevent swiping the popup view down
-            popupView.superview?.isUserInteractionEnabled = true
-            
-            // Remove the swipe gesture recognizer from the superview
-            if let gestureRecognizers = popupView.superview?.gestureRecognizers {
-                for recognizer in gestureRecognizers {
-                    if recognizer is UISwipeGestureRecognizer {
-                        popupView.superview?.removeGestureRecognizer(recognizer)
-                    }
-                }
-            }
-        }
-        
         self.explationMessage.alpha = 0.0
         self.button.alpha = 0.0
         self.buttonView.alpha = 0.0
@@ -196,16 +181,6 @@ func imageOfStars(from starRating: NSDecimalNumber?) -> UIImage? {
         if counter <= 3
         {
             self.noAdsButton.alpha = 1.0
-            // Enable swipe down gesture on RewardedAdViewController
-            if let popupView = self.presentedViewController?.view {
-                // Enable user interaction on the superview to allow swiping the popup view down again
-                popupView.superview?.isUserInteractionEnabled = false
-                
-                // Add a swipe gesture recognizer to the superview
-                let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(dismissRewardedAd(_:)))
-                swipeGesture.direction = .down
-                popupView.superview?.addGestureRecognizer(swipeGesture)
-            }
         }
         
     } else {

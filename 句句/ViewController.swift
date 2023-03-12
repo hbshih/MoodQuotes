@@ -400,13 +400,6 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
             installWidgetInstructionView.isHidden = true
             shareAndbookmarkStack.isHidden = false
             
-            let trialWords = ["獲得彩色植物", "試用其他字體", "查看植物花語","更多背景顏色","試用植語錄完整版"]
-            // get random elements
-            let randomTrialName = trialWords.randomElement()!
-            // print random elements
-            
-            OnboardingTrialButton.setTitle(randomTrialName, for: .normal)
-            
             
             
            // self.onboardingTouchIcon.alpha = 0.0
@@ -423,6 +416,14 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
              }*/
         } else
         {
+            
+            let trialWords = ["查看植物花語","取得更多字體","升級植語錄完整版"]
+            // get random elements
+            let randomTrialName = trialWords.randomElement()!
+            // print random elements
+            
+            OnboardingTrialButton.setTitle(randomTrialName, for: .normal)
+            
             installWidgetInstructionView.isHidden = false
             shareAndbookmarkStack.isHidden = true
             // New User
