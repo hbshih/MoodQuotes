@@ -23,6 +23,8 @@ var global_counter = 0
 
 class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
     
+    var adplayed = false
+    
     @IBOutlet weak var OnboardingTrialButton: UIButton!
     @IBOutlet weak var shareAndbookmarkStack: UIStackView!
     @IBOutlet weak var installWidgetInstructionView: UIView!
@@ -394,7 +396,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         
         print ("onboarding status \(UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0"))")
         
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil && UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "paymentPageSeen") != nil && !global_paid_user
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "NewUserAllSet_Ver 3.0") != nil && UserDefaults(suiteName: "group.BSStudio.Geegee.ios")?.bool(forKey: "paymentPageSeen") == false && !global_paid_user
         {
             
             installWidgetInstructionView.isHidden = true
@@ -827,8 +829,9 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         checkIfBookmarked()
         
         //show advertisement
-        if global_counter > 7 && !global_paid_user
+        if global_counter > 7 && !global_paid_user && !adplayed
         {
+            adplayed = true
             performSegue(withIdentifier: "showAdSegue", sender: nil)
         }
         
