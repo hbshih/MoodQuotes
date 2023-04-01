@@ -52,7 +52,7 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>我們需要權限才能將截圖放入您的手機中</string>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>我們需要權限才能推薦給您適合您的句子</string>
+	<string>為了提供更適合您的語錄和體驗，請授權我們進行追蹤。</string>
 	<key>Survicate</key>
 	<dict>
 		<key>WorkspaceKey</key>

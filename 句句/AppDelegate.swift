@@ -13,7 +13,6 @@ import BackgroundTasks
 import WidgetKit
 //import UXCam
 import GoogleMobileAds
-import AppTrackingTransparency
 import SwiftyStoreKit
 import CoreData
 import Survicate
@@ -158,11 +157,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //  let _ = ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         func applicationDidBecomeActive(_ application: UIApplication) {
-            if #available(iOS 15.0, *) {
-                ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                    
-                })
-            }
         }
         
         

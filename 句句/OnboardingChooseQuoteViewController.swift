@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAnalytics
 import Firebase
+import AppTrackingTransparency
 
 class OnboardingChooseQuoteViewController: UIViewController {
 
@@ -37,6 +38,30 @@ class OnboardingChooseQuoteViewController: UIViewController {
         UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(val, forKey: "typeOfQuote")
         
         performSegue(withIdentifier: "selectColorSegue", sender: nil)
+        
+        if #available(iOS 14.5, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                case .authorized:
+                    // User has authorized tracking
+                    break
+                case .denied:
+                    // User has denied tracking
+                    break
+                case .notDetermined:
+                    // Tracking authorization has not yet been determined
+                    break
+                case .restricted:
+                    // Tracking authorization is restricted
+                    break
+                @unknown default:
+                    // Handle any future cases
+                    break
+                }
+            }
+        } else {
+            // Handle older iOS versions
+        }
         
     }
     
