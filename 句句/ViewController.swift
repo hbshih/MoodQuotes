@@ -17,6 +17,7 @@ import FirebaseAnalytics
 import PopupDialog
 import Storyly
 import Survicate
+import AppTrackingTransparency
 
 var global_quote: String = ""
 var global_counter = 0
@@ -372,6 +373,31 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
             }else
             {
                 //new user
+                
+                if #available(iOS 14.5, *) {
+                    ATTrackingManager.requestTrackingAuthorization { status in
+                        switch status {
+                        case .authorized:
+                            // User has authorized tracking
+                            break
+                        case .denied:
+                            // User has denied tracking
+                            break
+                        case .notDetermined:
+                            // Tracking authorization has not yet been determined
+                            break
+                        case .restricted:
+                            // Tracking authorization is restricted
+                            break
+                        @unknown default:
+                            // Handle any future cases
+                            break
+                        }
+                    }
+                } else {
+                    // Handle older iOS versions
+                }
+                
                 print("counter is nil")
                 UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(1, forKey: "open_app_count")
             }
@@ -526,7 +552,7 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         installWidgetInstructionView.isHidden = true
         shareAndbookmarkStack.isHidden = false
         
-        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil && UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isNotificationOn") == true
+        if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.object(forKey: "isNotificationOn") != nil || UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isNotificationOn") == true
         {
             
         }else
@@ -558,7 +584,13 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                     countdownButton.setTitle("距離下次更新還有 \(hours ?? 23) 小時", for: .normal)
                 }else
                 {
-                    countdownButton.setTitle("\(hours ?? 23) 小時後語錄會更新，需要通知你嗎？", for: .normal)
+                    if UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.bool(forKey: "isNotificationOn") == false
+                    {
+                        countdownButton.setTitle("\(hours ?? 23) 小時後語錄會更新，需要通知你嗎？", for: .normal)
+                    }else
+                    {
+                        countdownButton.setTitle("距離下次更新還有 \(hours ?? 23) 小時", for: .normal)
+                    }
                 }
             }
             

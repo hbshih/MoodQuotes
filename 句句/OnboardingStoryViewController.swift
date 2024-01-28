@@ -40,7 +40,7 @@ class OnboardingStoryViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 2.0, delay: 0.2, options: .curveLinear) {
             // imageView.image = UIImage(named: "icon_gesture")
-            self.explationMessage.text = "正在準備你的語錄⋯"
+            self.explationMessage.text = "正在準備你今日的語錄和植物⋯"
             self.explationMessage.alpha = 1.0
         } completion: { (true) in
             UIView.animate(withDuration: 0.5, delay: 2.0) {
@@ -48,7 +48,7 @@ class OnboardingStoryViewController: UIViewController {
                 self.imageView.isHidden = false
             } completion: { (true) in
                 UIView.animate(withDuration: 3.0) {
-                    self.explationMessage.text = "語錄準備好了!\n請搖搖手機"
+                    self.explationMessage.text = "語錄和植物準備好了!\n請搖搖手機"
                     self.imageView.alpha = 1.0
                     self.explationMessage.alpha = 1.0
                 } completion: { (true) in
