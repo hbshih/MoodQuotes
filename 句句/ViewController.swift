@@ -833,7 +833,8 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
         if global_counter > 7 && !global_paid_user && !adplayed
         {
             adplayed = true
-            performSegue(withIdentifier: "showAdSegue", sender: nil)
+            //performSegue(withIdentifier: "showAdSegue", sender: nil)
+            // Not showing ads now
         }
         
         /* Comment for now --- 4/17/2021

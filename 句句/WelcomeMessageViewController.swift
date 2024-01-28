@@ -50,7 +50,7 @@ class WelcomeMessageViewController: UIViewController {
                         self.explationMessage.alpha = 0.0
                     } completion: { (true) in
                         UIView.animate(withDuration: 3.0) {
-                            self.explationMessage.text = "在那之前，我需要先好好認識你"
+                            self.explationMessage.text = "在那之前，我需要先了解你的喜好"
                             self.explationMessage.alpha = 1.0
                             self.buttonBackground.alpha = 1.0
                             self.triggerButton.alpha = 1.0

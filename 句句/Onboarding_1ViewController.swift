@@ -75,6 +75,19 @@ class Onboarding_1ViewController: UIViewController {
         
         saveTime()
         
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+            guard granted else { return }
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+              //  let  aClass = NotificationTrigger()
+              //  aClass.setupNotifications()
+                
+                NotificationTrigger().notifyQuoteHasChanged()
+            }
+        }
+        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.setValue(true, forKey: "isNotificationOn")
+        
         performSegue(withIdentifier: "continueOnboardingSegue", sender: nil)
         
     }
