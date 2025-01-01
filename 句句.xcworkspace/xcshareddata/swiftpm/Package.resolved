@@ -1,0 +1,60 @@
+{
+  "originHash" : "f7491bc2bdffbb06bc4e97e5a6d5a388c88a2a3943b000e57d162e8a3f3f5f51",
+  "pins" : [
+    {
+      "identity" : "analytics-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/smartlook/analytics-swift-package",
+      "state" : {
+        "revision" : "d02582ad6d583495d9072c0ac0bfa411c842084b",
+        "version" : "2.1.1"
+      }
+    },
+    {
+      "identity" : "instabug-sp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Instabug/Instabug-SP",
+      "state" : {
+        "revision" : "ed14eeaa9db3f9c71a833125e2b34f9aa2af6b00",
+        "version" : "11.6.0"
+      }
+    },
+    {
+      "identity" : "juiceui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mattwyskiel/JuiceUI.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "e4a309336393fd544a4297ba295a8631a02845f4"
+      }
+    },
+    {
+      "identity" : "storyly-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Netvent/storyly-ios.git",
+      "state" : {
+        "revision" : "aced2bfb0a06fc966b45f4412953a3fca6cab635",
+        "version" : "1.29.0"
+      }
+    },
+    {
+      "identity" : "survicate-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Survicate/survicate-ios-sdk.git",
+      "state" : {
+        "revision" : "463178565a366e181ede102724bfba1424bf57de",
+        "version" : "1.8.8"
+      }
+    },
+    {
+      "identity" : "swiftystorekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bizz84/SwiftyStoreKit.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "f3265c7c211907ad913102c61c3972b880f0675c"
+      }
+    }
+  ],
+  "version" : 3
+}

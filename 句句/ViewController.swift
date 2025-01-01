@@ -10,7 +10,7 @@ import FirebaseDatabase
 import UserNotifications
 import Firebase
 import WidgetKit
-import FirebaseUI
+import FirebaseStorage
 import CoreText
 import StoreKit
 import FirebaseAnalytics
@@ -655,37 +655,44 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                     // Placeholder image
                     let placeholderImage = UIImage(named: "placeholder.jpg")
                     
-                    
-                    // Load the image using SDWebImage
-                    self.imageOfColorFlower.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
-                        if error != nil
-                        {
-                            print("unable to load new image \(error)")
-                            flowerHandler().storeImage(image: UIImage(named: "Vernonia amygdalina")!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("三色菫", forKey: "FlowerName")
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("沉思，快樂，請思念我，白日夢，思慕，快樂，讓我們交往。", forKey: "FlowerMeaning")
-                            //更新Widget
-                            if #available(iOS 14.0, *) {
-                                WidgetCenter.shared.reloadAllTimelines()
-                            } else {
-                                // Fallback on earlier versions
-                            }
-                        }else
-                        {
-                            flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(meaning, forKey: "FlowerMeaning")
-                            //更新Widget
-                            if #available(iOS 14.0, *) {
-                                WidgetCenter.shared.reloadAllTimelines()
-                            } else {
-                                // Fallback on earlier versions
+                    // Get download URL first
+                    reference.downloadURL { [weak self] (url, error) in
+                        guard let self = self, let downloadURL = url else {
+                            print("Error getting download URL: \(error?.localizedDescription ?? "unknown error")")
+                            return
+                        }
+                        
+                        // Load the image using SDWebImage with the download URL
+                        self.imageOfColorFlower.sd_setImage(with: downloadURL, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+                            if error != nil
+                            {
+                                print("unable to load new image \(error)")
+                                flowerHandler().storeImage(image: UIImage(named: "Vernonia amygdalina")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("三色菫", forKey: "FlowerName")
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("沉思，快樂，請思念我，白日夢，思慕，快樂，讓我們交往。", forKey: "FlowerMeaning")
+                                //更新Widget
+                                if #available(iOS 14.0, *) {
+                                    WidgetCenter.shared.reloadAllTimelines()
+                                } else {
+                                    // Fallback on earlier versions
+                                }
+                            }else
+                            {
+                                flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(meaning, forKey: "FlowerMeaning")
+                                //更新Widget
+                                if #available(iOS 14.0, *) {
+                                    WidgetCenter.shared.reloadAllTimelines()
+                                } else {
+                                    // Fallback on earlier versions
+                                }
                             }
                         }
+                        //self.nameOfFlower.text = name
+                        self.nameOfColorImage.text = name
+                        self.flowerMeaning.text = meaning
                     }
-                    //self.nameOfFlower.text = name
-                    self.nameOfColorImage.text = name
-                    self.flowerMeaning.text = meaning
                 }
             }
         }else
@@ -707,36 +714,43 @@ class ViewController: UIViewController, MessagingDelegate, StorylyDelegate {
                     // Placeholder image
                     let placeholderImage = UIImage(named: "placeholder.jpg")
                     
-                    
-                    // Load the image using SDWebImage
-                    self.ImageOfFlower.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
-                        if error != nil
-                        {
-                            print("unable to load new image \(error)")
-                            flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
-                            //更新Widget
-                            if #available(iOS 14.0, *) {
-                                WidgetCenter.shared.reloadAllTimelines()
-                            } else {
-                                // Fallback on earlier versions
-                            }
-                        }else
-                        {
-                            flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
-                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("升級完整版才看得見花語", forKey: "FlowerMeaning")
-                            //更新Widget
-                            if #available(iOS 14.0, *) {
-                                WidgetCenter.shared.reloadAllTimelines()
-                            } else {
-                                // Fallback on earlier versions
+                    // Get download URL first
+                    reference.downloadURL { [weak self] (url, error) in
+                        guard let self = self, let downloadURL = url else {
+                            print("Error getting download URL: \(error?.localizedDescription ?? "unknown error")")
+                            return
+                        }
+                        
+                        // Load the image using SDWebImage with the download URL
+                        self.ImageOfFlower.sd_setImage(with: downloadURL, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+                            if error != nil
+                            {
+                                print("unable to load new image \(error)")
+                                flowerHandler().storeImage(image: UIImage(named: "flower_10_babys breath_滿天星")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("滿天星", forKey: "FlowerName")
+                                //更新Widget
+                                if #available(iOS 14.0, *) {
+                                    WidgetCenter.shared.reloadAllTimelines()
+                                } else {
+                                    // Fallback on earlier versions
+                                }
+                            }else
+                            {
+                                flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                                UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("升級完整版才看得見花語", forKey: "FlowerMeaning")
+                                //更新Widget
+                                if #available(iOS 14.0, *) {
+                                    WidgetCenter.shared.reloadAllTimelines()
+                                } else {
+                                    // Fallback on earlier versions
+                                }
                             }
                         }
+                        self.nameOfFlower.text = name
+                        //  self.nameOfColorImage.text = name
+                        self.flowerMeaning.isHidden = true
                     }
-                    self.nameOfFlower.text = name
-                    //  self.nameOfColorImage.text = name
-                    self.flowerMeaning.isHidden = true
                 }
             }
         }

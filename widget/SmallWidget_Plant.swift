@@ -8,7 +8,7 @@
 import WidgetKit
 import SwiftUI
 import Firebase
-import FirebaseUI
+import FirebaseStorage
 import FirebaseAnalytics
 
 struct SmallWidget_PlantProvider: TimelineProvider {

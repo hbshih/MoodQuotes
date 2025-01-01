@@ -8,7 +8,7 @@
 import WidgetKit
 import SwiftUI
 import Firebase
-import FirebaseUI
+import FirebaseStorage
 import FirebaseAnalytics
 
 struct MediumWidget_Quote_3Provider: TimelineProvider {

@@ -140,49 +140,54 @@ class PurchaseViewController: UIViewController, UITextViewDelegate {
                 // Placeholder image
                 let placeholderImage = UIImage(named: "placeholder.jpg")
                 
-                
-                
-                
-                // Load the image using SDWebImage
-                self.flowerImage.sd_setImage(with: reference, placeholderImage: placeholderImage) { (image, error, cache, ref) in
-                    if error != nil
-                    {
-                        print("unable to load new image \(error)")
-                        flowerHandler().storeImage(image: UIImage(named: "Vernonia amygdalina")!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("三色菫", forKey: "FlowerName")
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("沉思，快樂，請思念我，白日夢，思慕，快樂，讓我們交往。", forKey: "FlowerMeaning")
-                        //更新Widget
-                        if #available(iOS 14.0, *) {
-                            WidgetCenter.shared.reloadAllTimelines()
-                        } else {
-                            // Fallback on earlier versions
-                        }
-                        self.dismiss(animated: true) {
-                            global_paid_user = true
-                            print("dismiss view")
-                            alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
-                            self.presentingViewController?.viewWillAppear(true)
-                        }
-                    }else
-                    {
-                        
-                        print("Paid Plan updated - Get Color Image")
-                        
-                        flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
-                        UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(meaning, forKey: "FlowerMeaning")
-                        //更新Widget
-                        if #available(iOS 14.0, *) {
-                            WidgetCenter.shared.reloadAllTimelines()
-                        } else {
-                            // Fallback on earlier versions
-                        }
-                        
-                        self.dismiss(animated: true) {
-                            global_paid_user = true
-                            print("dismiss view")
-                            alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
-                            self.presentingViewController?.viewWillAppear(true)
+                // Get download URL first
+                reference.downloadURL { [weak self] (url, error) in
+                    guard let self = self, let downloadURL = url else {
+                        print("Error getting download URL: \(error?.localizedDescription ?? "unknown error")")
+                        return
+                    }
+                    
+                    // Load the image using SDWebImage with the download URL
+                    self.flowerImage.sd_setImage(with: downloadURL, placeholderImage: placeholderImage) { (image, error, cache, ref) in
+                        if error != nil
+                        {
+                            print("unable to load new image \(error)")
+                            flowerHandler().storeImage(image: UIImage(named: "Vernonia amygdalina")!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("三色菫", forKey: "FlowerName")
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set("沉思，快樂，請思念我，白日夢，思慕，快樂，讓我們交往。", forKey: "FlowerMeaning")
+                            //更新Widget
+                            if #available(iOS 14.0, *) {
+                                WidgetCenter.shared.reloadAllTimelines()
+                            } else {
+                                // Fallback on earlier versions
+                            }
+                            self.dismiss(animated: true) {
+                                global_paid_user = true
+                                print("dismiss view")
+                                alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
+                                self.presentingViewController?.viewWillAppear(true)
+                            }
+                        }else
+                        {
+                            
+                            print("Paid Plan updated - Get Color Image")
+                            
+                            flowerHandler().storeImage(image: image!, forKey: "FlowerImage", withStorageType: .userDefaults)
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(name, forKey: "FlowerName")
+                            UserDefaults(suiteName: "group.BSStudio.Geegee.ios")!.set(meaning, forKey: "FlowerMeaning")
+                            //更新Widget
+                            if #available(iOS 14.0, *) {
+                                WidgetCenter.shared.reloadAllTimelines()
+                            } else {
+                                // Fallback on earlier versions
+                            }
+                            
+                            self.dismiss(animated: true) {
+                                global_paid_user = true
+                                print("dismiss view")
+                                alertViewHandler().control(title: "購買成功", body: "開始使用完整版的植語錄吧！", iconText: "🍻")
+                                self.presentingViewController?.viewWillAppear(true)
+                            }
                         }
                     }
                 }
